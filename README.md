@@ -70,6 +70,7 @@ Initial Release.
 
 #####I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
+- [Plugin Update Checker Library](http://w-shadow.com)
 - [tinyColorPicker](https://github.com/PitPik/tinyColorPicker)
 - [Sweetalert](http://t4t5.github.io/sweetalert/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
