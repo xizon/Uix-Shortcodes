@@ -1,0 +1,36 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'usage' ) {
+?>
+
+
+        <p>
+           <?php _e( '<h4 class="uix-bg-custom-title">1. After activating your theme, you can see a prompt pointed out as absolutely critical. Go to <strong>"Appearance -> Install Plugins"</strong>.
+Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/plugins/) And upload files there.)</h4>', 'uix-shortcodes' ); ?>
+        </p>  
+        <p>
+           <img src="<?php echo UixShortcodes::plug_directory(); ?>helper/img/plug.jpg" alt="">
+        </p> 
+        <p>
+           <?php _e( '<h4 class="uix-bg-custom-title">2. Go to your WordPress admin panel, edit or create a new post (or page). You’ll see our tiny little button in the toolbar, preceded by a separator:</h4>', 'uix-shortcodes' ); ?>
+  
+        </p>  
+        <p>
+           <img src="<?php echo UixShortcodes::plug_directory(); ?>helper/img/button.jpg" alt="">
+        </p> 
+        <p>
+           <?php _e( '<h4 class="uix-bg-custom-title">3. You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original <code>.css</code> files. Go to <strong>"Uix Shortcodes"</strong> in the WordPress Administration Screens, then link to a specific tab like <strong>"Custom CSS"</strong>. <br><a class="button button-primary" href="' . admin_url( "options-general.php?page=".UixShortcodes::CUSPAGE ) . '&tab=custom-css">Add custom stylesheets by clicking here</a></h4>', 'uix-shortcodes' ); ?>
+  
+        </p> 
+        
+        <p>
+           <?php _e( '<h4 class="uix-bg-custom-title">4. There is a second way, make a new Cascading Style Sheet (CSS) document which name to <code>uix-shortcodes-style.css</code> to your templates directory. You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (<strong>uix-shortcodes-style.css</strong>), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes\'s function of <strong>"Custom CSS"</strong> is still valid.</h4>', 'uix-shortcodes' ); ?>
+  
+        </p>      
+        
+        
+       
+<?php } ?>
