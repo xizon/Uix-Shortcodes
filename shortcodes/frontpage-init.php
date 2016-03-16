@@ -530,7 +530,9 @@ function uix_sc_fun_code( $atts, $content = null ){
 	
 	add_action( 'wp_footer', 'uix_sc_fun_syntaxhighlighter', 100 );
 	
-	$return_string = $content;
+	$return_string = str_replace( ']', '&#93;', str_replace( '[', '&#91;', $content ) );
+	
+	
 
    return UixShortcodes::do_callback( $return_string );
    
