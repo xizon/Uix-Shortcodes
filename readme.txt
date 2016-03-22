@@ -1,7 +1,7 @@
 === Uix Shortcodes ===
 Contributors: UIUX Lab
-Author URI: http://uiux.cc
-Plugin URL: http://uiux.cc/wp-plugins/uix-shortcodes/
+Author URI: https://uiux.cc
+Plugin URL: https://uiux.cc/wp-plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.4.2

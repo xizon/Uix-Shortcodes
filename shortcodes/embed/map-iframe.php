@@ -1,9 +1,9 @@
 <?php
 /**
  * Google Map
- * Plugin URI: http://uiux.cc/wp-plugins/uix-shortcodes/
+ * Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
  * Author: UIUX Lab
- * Author URI: http://uiux.cc
+ * Author URI: https://uiux.cc
  * License: GPLv2 or later
 
  */

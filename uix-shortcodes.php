@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Uix Shortcodes
-Plugin URI: http://uiux.cc/wp-plugins/uix-shortcodes/
+Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
 Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
 Author: UIUX Lab
-Author URI: http://uiux.cc
+Author URI: https://uiux.cc
 Version: 1.0.0
 Text Domain: uix-shortcodes
 License: GPLv2 or later
@@ -153,7 +153,7 @@ class UixShortcodes {
 	
 		require_once 'inc/plugin-update-checker.php';
 		$myUpdateChecker = PucFactory::buildUpdateChecker(
-			'http://uiux.cc/wp-plugins/'.self::get_slug().'/update/info.json',
+			'https://uiux.cc/wp-plugins/'.self::get_slug().'/update/info.json',
 			__FILE__
 		);
 
