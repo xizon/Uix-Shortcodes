@@ -266,7 +266,7 @@ var style=
 
 
 	</script>
-    <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?sensor=true&#038;ver=4.2.2'></script>
+    <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?key=AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk'></script>
 
 </body>
 </html>
