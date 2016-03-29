@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Sun Mar 13 2016 17:17:34 GMT+0800 (CST)\n"
+"POT-Revision-Date: Tue Mar 29 2016 20:32:20 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "Uix Shortcodes"
 msgstr ""
 
 #. URI of the plugin
-msgid "http://uiux.cc/wp-plugins/uix-shortcodes"
+msgid "https://uiux.cc/wp-plugins/uix-shortcodes"
 msgstr ""
 
 #. Description of the plugin
@@ -43,36 +43,36 @@ msgid "UIUX Lab"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "http://uiux.cc"
+msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:167
+#: ../uix-shortcodes.php:170
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:168 ../helper/settings.php:74
+#: ../uix-shortcodes.php:171 ../helper/settings.php:74
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:246 ../helper/settings.php:52
+#: ../uix-shortcodes.php:278 ../helper/settings.php:52
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:510
+#: ../uix-shortcodes.php:542
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-shortcodes.php:845
+#: ../uix-shortcodes.php:891
 msgid "Cancel"
 msgstr ""
 
-#: ../uix-shortcodes.php:846
+#: ../uix-shortcodes.php:892
 msgid "Insert into"
 msgstr ""
 
-#: ../uix-shortcodes.php:865
+#: ../uix-shortcodes.php:911
 msgid "Using the shortcodes successfully."
 msgstr ""
 
@@ -104,8 +104,9 @@ msgid ""
 "<code>\"list of members(such as team with lightbox)\"</code>, <code>\"list of "
 "clients\"</code>, <code>\"responsive video\"</code>, <code>\"audio\"</code>, "
 "<code>\"accordion\"</code>, <code>\"dividing line\"</code>, <code>\"tabs\"</code>, "
-"<code>\"code with highlighter\"</code>, <code>\"share buttons\"</code> and "
-"<code>\"recent posts with custom template\"</code>."
+"<code>\"code with highlighter\"</code>, <code>\"share buttons\"</code>, "
+"<code>\"contact form(use commenting form template)\"</code>, and <code>\"recent "
+"posts with custom template\"</code>."
 msgstr ""
 
 #: ../helper/tabs/about.php:14
@@ -192,7 +193,7 @@ msgstr ""
 msgid "Unknown update checker status \"%s\""
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:702
+#: ../shortcodes/frontpage-init.php:704
 msgid "Description:"
 msgstr ""
 
@@ -433,6 +434,14 @@ msgstr ""
 
 #: ../shortcodes/panel/col-average-4.php:58
 msgid "Column One Fourth"
+msgstr ""
+
+#: ../shortcodes/panel/contact-form.php:19
+msgid "Tips: Output a complete commenting form for use within a template. "
+msgstr ""
+
+#: ../shortcodes/panel/contact-form.php:47
+msgid "Insert Contact Form"
 msgstr ""
 
 #: ../shortcodes/panel/dividing-line.php:20

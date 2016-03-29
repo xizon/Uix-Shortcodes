@@ -10,7 +10,6 @@ Text Domain: uix-shortcodes
 License: GPLv2 or later
 */
 
-
 class UixShortcodes {
 
 	const PREFIX   = 'uix';
@@ -31,6 +30,8 @@ class UixShortcodes {
 	 *
 	 */
 	public static function init() {
+		
+		
 	
 
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'actions_links' ), -10 );
@@ -46,11 +47,13 @@ class UixShortcodes {
 		add_action( 'wp_head', array( __CLASS__, 'do_my_shortcodes' ) );
 		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
 		add_filter( 'mce_css', array( __CLASS__, 'mce_css' ) );
-	
+		add_filter( 'comments_open', array( __CLASS__, 'comments_open' ), 10, 2 );
+		
 
+	
 	}
-	
-	
+
+
 	
 	/*
 	 * Enqueue scripts and styles.
@@ -187,6 +190,35 @@ class UixShortcodes {
 	
 
 	}
+	
+	/**
+	 * check the current post for the existence of a short code
+	  * Note: The function will be used to .php file of theme when get_header() exist. The code could also be sought for header.php file.
+	  *
+	 */
+	public static function has_shortcode( $shortcode = NULL ) {
+	    
+		
+		$post_to_check = get_post( get_the_ID() );
+	
+		// false because we have to search through the post content first
+		$found = false;
+	
+		// if no short code was provided, return false
+		if ( ! $shortcode ) {
+			return $found;
+		}
+		// check the post content for the short code
+		if ( stripos( $post_to_check->post_content, '[' . $shortcode) !== FALSE ) {
+			// we have found the short code
+			$found = TRUE;
+		}
+	
+		// return our final results
+		return $found;
+	}
+	
+		
 	
 	/*
 	 * Register shortcodes of front-end
@@ -636,6 +668,20 @@ class UixShortcodes {
 
 	}
 	
+	
+	/*
+	 * Enable comments on pages.
+	 *
+	 *
+	 */
+	public static function comments_open( $open, $post_id ) {
+
+		$post = get_post( $post_id );
+		if ( 'page' == $post->post_type )
+			$open = true;
+		return $open;
+		
+	}
 	
 
 
@@ -1232,5 +1278,4 @@ class UixShortcodes {
 }
 
 add_action( 'plugins_loaded', array( 'UixShortcodes', 'init' ) );
-
 

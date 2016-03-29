@@ -1138,7 +1138,7 @@ add_shortcode( 'uix_dividing_line', 'uix_sc_fun_dividing_line' );
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_contact_form( $atts, $content = null ) {
 	
-	
+
     // capture output from the widgets
 	ob_start();
 	
@@ -1154,6 +1154,3 @@ function uix_sc_fun_contact_form( $atts, $content = null ) {
 }
 
 add_shortcode( 'uix_contact_form', 'uix_sc_fun_contact_form' );
-
-
-
