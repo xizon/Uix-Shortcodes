@@ -328,7 +328,13 @@
 								}
 							},			
 							
-		
+							{
+								text: 'Contact Form',
+								onclick: function() {
+									jQuery( '#uix_sc_contact_form' ).trigger( 'click' );
+								}
+							},			
+							
 							
 							
 						]

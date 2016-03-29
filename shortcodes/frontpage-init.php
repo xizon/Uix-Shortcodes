@@ -1131,3 +1131,29 @@ function uix_sc_fun_dividing_line( $atts, $content = null ) {
 add_shortcode( 'uix_dividing_line', 'uix_sc_fun_dividing_line' );
 
 
+
+
+//----------------------------------------------------------------------------------------------------
+// Contact Form
+//----------------------------------------------------------------------------------------------------
+function uix_sc_fun_contact_form( $atts, $content = null ) {
+	
+	
+    // capture output from the widgets
+	ob_start();
+	
+	   comment_form();
+		
+		$out = ob_get_contents();
+	ob_end_clean();
+	 
+	
+   $return_string = $out;
+   
+   return UixShortcodes::do_callback( $return_string );
+}
+
+add_shortcode( 'uix_contact_form', 'uix_sc_fun_contact_form' );
+
+
+

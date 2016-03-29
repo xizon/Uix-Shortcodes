@@ -13,7 +13,7 @@ Uix Shortcodes brings an amazing set of beautiful and useful elements to your si
 
 == Description ==
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It currently supports "columns", "buttons", "google maps", "special heading", "pricing table", "icons", "features boxes", "testimonials carousel", "list of members(such as team with lightbox)", "list of clients", "responsive video", "audio", "accordion", "dividing line", "tabs", "code with highlighter", "share buttons" and "recent posts with custom template".
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It currently supports "columns", "buttons", "google maps", "special heading", "pricing table", "icons", "features boxes", "testimonials carousel", "list of members(such as team with lightbox)", "list of clients", "responsive video", "audio", "accordion", "dividing line", "tabs", "code with highlighter", "share buttons", "contact form(use commenting form template)" and "recent posts with custom template".
 
 The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. "Content Shortcode", "Column Shortcode", "Web Elements Shortcode", "Icon Shortcode", and so on. They could be used together.
 
