@@ -38,7 +38,9 @@ $args =
                       <code>[uix_recent_posts_date_M]</code> --&gt;  Month display in English<br>
                       <code>[uix_recent_posts_date_d]</code> --&gt;  Day<br>
                       <code>[uix_recent_posts_date_y]</code> --&gt;  Year<br>
-                      <code>[uix_recent_posts_excerpt]</code> --&gt;  Excerpt
+                      <code>[uix_recent_posts_excerpt]</code> --&gt;  Excerpt<br>
+					  <code>[uix_recent_posts_thumbnail]</code> --&gt;  Featured image
+					  
                   </strong>
 			', 'uix-shortcodes' ),
 			'value'          => '&lt;li&gt;&lt;a href="[uix_recent_posts_link]"&gt;[uix_recent_posts_title]&lt;/a&gt;&lt;/li&gt;',

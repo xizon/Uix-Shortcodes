@@ -99,6 +99,13 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 	if ( have_posts() ) :
 	  while ( have_posts() ) : the_post();
 	  
+		//featured image
+		$thumbnail_src  =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
+		$post_thumbnail_src  =  $thumbnail_src[0];  
+		$post_thumbnail = '<img class="uix-sc-recent-posts-thumbnail" src="'.$post_thumbnail_src.'" alt="'.esc_attr( get_the_title() ).'">';
+		if ( empty( $post_thumbnail_src ) ) $post_thumbnail = '';
+	  
+	  
 		$return_string .= str_replace( '[uix_recent_posts_link]', get_permalink(),
 		           str_replace( '[uix_recent_posts_title]', esc_attr( get_the_title() ),
 				   str_replace( '[uix_recent_posts_date_m]', get_the_time('m'),
@@ -106,8 +113,9 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 				   str_replace( '[uix_recent_posts_date_d]', get_the_time('d'),
 				   str_replace( '[uix_recent_posts_date_y]', get_the_time('y'),
 				   str_replace( '[uix_recent_posts_excerpt]', get_the_excerpt(),
+				   str_replace( '[uix_recent_posts_thumbnail]', $post_thumbnail,
 				   UixShortcodes::decode( $content )
-				   )))))))
+				   ))))))))
 				   ."\n";
 	
 	
