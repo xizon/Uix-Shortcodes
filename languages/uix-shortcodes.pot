@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Tue Mar 29 2016 20:32:20 GMT+0800 (CST)\n"
+"POT-Revision-Date: Fri Apr 01 2016 16:17:16 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Unknown update checker status \"%s\""
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:704
+#: ../shortcodes/frontpage-init.php:712
 msgid "Description:"
 msgstr ""
 
@@ -522,7 +522,7 @@ msgstr ""
 #: /shortcodes/panel/pricing-3-col.php:172 ../shortcodes/panel/pricing-3-col.php:
 #: 323 ../shortcodes/panel/pricing-4-col.php:21 ../shortcodes/panel/pricing-4-col.
 #: php:171 ../shortcodes/panel/pricing-4-col.php:322 ../shortcodes/panel/pricing-
-#: 4-col.php:472
+#: 4-col.php:472 ../shortcodes/panel/recent-posts.php:36
 msgid "Title"
 msgstr ""
 
@@ -980,39 +980,50 @@ msgstr ""
 msgid "Loop Template"
 msgstr ""
 
-#: ../shortcodes/panel/recent-posts.php:32
+#: ../shortcodes/panel/recent-posts.php:33
 msgid ""
-"\n"
-"                  Use this template to display content on your website. You "
-"can use the following placeholders in the message templates, which will be "
-"replaced by the actual values when the content is displayed:<br>\n"
-"                  <strong>                  \n"
-"                    <code>[uix_recent_posts_link]</code> --&gt;  "
-"Permalink<br>\n"
-"                      <code>[uix_recent_posts_title]</code> --&gt;  "
-"Title<br>\n"
-"                      <code>[uix_recent_posts_date_m]</code> --&gt;  "
-"Month<br>\n"
-"                      <code>[uix_recent_posts_date_M]</code> --&gt;  Month "
-"display in English<br>\n"
-"                      <code>[uix_recent_posts_date_d]</code> --&gt;  Day<br>\n"
-"                      <code>[uix_recent_posts_date_y]</code> --&gt;  "
-"Year<br>\n"
-"                      <code>[uix_recent_posts_excerpt]</code> --&gt;  "
-"Excerpt\n"
-"                  </strong>\n"
-"			"
+"Use this template to display content on your website. You can use the "
+"following placeholders in the message templates, which will be replaced by "
+"the actual values when the content is displayed"
 msgstr ""
 
-#: ../shortcodes/panel/recent-posts.php:56
+#: ../shortcodes/panel/recent-posts.php:35
+msgid "Permalink"
+msgstr ""
+
+#: ../shortcodes/panel/recent-posts.php:37
+msgid "Month"
+msgstr ""
+
+#: ../shortcodes/panel/recent-posts.php:38
+msgid "Month display in English"
+msgstr ""
+
+#: ../shortcodes/panel/recent-posts.php:39
+msgid "Day"
+msgstr ""
+
+#: ../shortcodes/panel/recent-posts.php:40
+msgid "Year"
+msgstr ""
+
+#: ../shortcodes/panel/recent-posts.php:41
+msgid "Excerpt"
+msgstr ""
+
+#: ../shortcodes/panel/recent-posts.php:42
+msgid "Featured image"
+msgstr ""
+
+#: ../shortcodes/panel/recent-posts.php:58
 msgid "Output text before the &lt;a&gt; of the link"
 msgstr ""
 
-#: ../shortcodes/panel/recent-posts.php:66
+#: ../shortcodes/panel/recent-posts.php:68
 msgid "Output text after the &lt;/a&gt; of the link"
 msgstr ""
 
-#: ../shortcodes/panel/recent-posts.php:96
+#: ../shortcodes/panel/recent-posts.php:98
 msgid "Insert Recent Posts"
 msgstr ""
 

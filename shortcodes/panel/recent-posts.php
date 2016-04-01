@@ -29,20 +29,20 @@ $args =
 		array(
 			'id'             => 'uix_sc_rposts_looptemp',
 			'title'          => __( 'Loop Template', 'uix-shortcodes' ),
-			'desc'           => __( '
-                  Use this template to display content on your website. You can use the following placeholders in the message templates, which will be replaced by the actual values when the content is displayed:<br>
+			'desc'           => '
+                  '.__( 'Use this template to display content on your website. You can use the following placeholders in the message templates, which will be replaced by the actual values when the content is displayed', 'uix-shortcodes' ).':<br>
                   <strong>                  
-                    <code>[uix_recent_posts_link]</code> --&gt;  Permalink<br>
-                      <code>[uix_recent_posts_title]</code> --&gt;  Title<br>
-                      <code>[uix_recent_posts_date_m]</code> --&gt;  Month<br>
-                      <code>[uix_recent_posts_date_M]</code> --&gt;  Month display in English<br>
-                      <code>[uix_recent_posts_date_d]</code> --&gt;  Day<br>
-                      <code>[uix_recent_posts_date_y]</code> --&gt;  Year<br>
-                      <code>[uix_recent_posts_excerpt]</code> --&gt;  Excerpt<br>
-					  <code>[uix_recent_posts_thumbnail]</code> --&gt;  Featured image
+                    <code>[uix_recent_posts_link]</code> --&gt;  '.__( 'Permalink', 'uix-shortcodes' ).'<br>
+                      <code>[uix_recent_posts_title]</code> --&gt;  '.__( 'Title', 'uix-shortcodes' ).'<br>
+                      <code>[uix_recent_posts_date_m]</code> --&gt;  '.__( 'Month', 'uix-shortcodes' ).'<br>
+                      <code>[uix_recent_posts_date_M]</code> --&gt;  '.__( 'Month display in English', 'uix-shortcodes' ).'<br>
+                      <code>[uix_recent_posts_date_d]</code> --&gt;  '.__( 'Day', 'uix-shortcodes' ).'<br>
+                      <code>[uix_recent_posts_date_y]</code> --&gt;  '.__( 'Year', 'uix-shortcodes' ).'<br>
+                      <code>[uix_recent_posts_excerpt]</code> --&gt;  '.__( 'Excerpt', 'uix-shortcodes' ).'<br>
+					  <code>[uix_recent_posts_thumbnail]</code> --&gt;  '.__( 'Featured image', 'uix-shortcodes' ).'
 					  
                   </strong>
-			', 'uix-shortcodes' ),
+			',
 			'value'          => '&lt;li&gt;&lt;a href="[uix_recent_posts_link]"&gt;[uix_recent_posts_title]&lt;/a&gt;&lt;/li&gt;',
 			'placeholder'    => '',
 			'type'           => 'textarea',
