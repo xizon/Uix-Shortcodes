@@ -187,6 +187,7 @@ function uix_sc_fun_pricing_item( $atts, $content = null ){
 					'.UixShortcodes::get_subtags( 'uix_pricing_item_detail', $content ).'
 				</div>
 		   </div>
+		   
 		</div>
 	</div>    
 	<script>(function($) {$(document).ready(function() { $.uix_sc_tableHover({id: "#uix-sc-col-js-'.$id.'", tcolor: "'.$imcolor.'"})  });})(jQuery);</script>               

@@ -157,7 +157,7 @@
 	$.fn.uix_sc_initPricing = function(options){
 
 		this.each(function(){
-			
+			    
 				//returns new id
 				var $this = $( this );
 					
@@ -173,18 +173,23 @@
 					var tempheight_excerpt = $( this ).find( '.uix-sc-price-excerpt' ).height();
 					priceBGH.push( tempheight );
 					priceBGH_excerpt.push( tempheight_excerpt );
+				
 			
 				} );
 				var priceBGH_Max = Math.max.apply( Math, priceBGH );
 				var priceBGH_Max_excerpt = Math.max.apply( Math, priceBGH_excerpt );
 		
 				
-				if ( $( document.body ).width() > 768 ){
-					$initHeight.find( '.uix-sc-price-border' ).css( 'height', priceBGH_Max + 'px' );
-					$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css( 'height', priceBGH_Max + 80 + 'px' );
 				
-				} else {
-					$initHeight.find( '.uix-sc-price-border' ).css( 'height', 'auto' );	
+				if ( priceBGH_Max > 0 ) {
+					if ( $( document.body ).width() > 768 ){
+						$initHeight.find( '.uix-sc-price-border' ).css( 'height', priceBGH_Max + 'px' );
+						$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css( 'height', priceBGH_Max + 80 + 'px' );
+					
+					} else {
+						$initHeight.find( '.uix-sc-price-border' ).css( 'height', 'auto' );	
+					}
+	
 				}
 				
 

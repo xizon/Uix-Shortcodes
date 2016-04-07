@@ -10,6 +10,7 @@
  *  Common
  * ----------------------------------------------------------------------------
  */
+
 .uix-sc-row {
 
 }
@@ -569,7 +570,6 @@ img.uix-sc-img,
 	
 }
 
-
 	.uix-sc-price ul,
 	.uix-sc-price ol{
 		/*default*/
@@ -599,7 +599,7 @@ img.uix-sc-img,
 		padding-top:1em;
 		border:1px solid #090909;
 		margin-bottom:1.4em;
-
+	
 	}
 	
 	.uix-sc-price-border,
