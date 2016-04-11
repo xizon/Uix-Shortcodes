@@ -915,7 +915,7 @@ function uix_sc_fun_testimonials_wrapper( $atts, $content = null ){
 	
 
    $return_string = '
-   <div class="uix-sc-testimonials">
+   <div class="uix-sc-testimonials" id="uix-testimonials-'.uniqid().'">
 		<div class="uix-sc-testimonials-container">
 			<div class="flexslider">
 				<ul class="slides">
@@ -951,8 +951,8 @@ function uix_sc_fun_testimonials_item( $atts, $content = null ){
         <li>
            '.$desc.'
 		   <div class="uix-sc-testimonials-signature">
-		       <img class="uix-sc-testimonials-avatar" src="'.$avatar.'" alt="'.$name.'" />
-		       <strong>'.$name.'</strong> - '.$position.'
+		       '.( !empty( $avatar )  ? '<img class="uix-sc-testimonials-avatar" src="'.$avatar.'" alt="'.$name.'" />': '<span class="uix-sc-testimonials-no-avatar"></span>' ).'
+		       <strong '.( !empty( $avatar )  ? '': 'class="uix-sc-testimonials-pure-text"' ).'>'.$name.'</strong> - '.$position.'
 		   </div>														                                                    
         </li>    
    ';

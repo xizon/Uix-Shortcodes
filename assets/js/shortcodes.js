@@ -87,7 +87,6 @@
 				animationSpeed    : 600,
 				slideshowSpeed    : 7000,
 				selector          : ".slides > li",
-				controlsContainer : ".uix-sc-testimonials-container",
 				start: function(slider) {
 					
 				}
