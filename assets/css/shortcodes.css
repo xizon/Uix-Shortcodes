@@ -702,6 +702,22 @@ img.uix-sc-img,
 	}
 	
 	
+
+/* ----------  */
+
+
+@media (max-width: 767px){
+	
+	.uix-sc-price-border.uix-sc-price-important{
+		
+		-webkit-transform:translateY(0);
+		-ms-transform:translateY(0);
+		transform:translateY(0);
+		background: rgba(204,255,0,.1);
+		
+	
+	}
+}
 	
 
 
@@ -1211,7 +1227,7 @@ img.uix-sc-img,
 /* ----------  */
 
 
-@media (max-width: 768px){
+@media (max-width: 767px){
  
 	.uix-sc-card {
 		text-align:center;
