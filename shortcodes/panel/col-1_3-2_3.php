@@ -53,7 +53,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 	$( document ).ready( function() {
 		
 		 /* Callback before custom javascript of sweetalert */
-		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Column One Third', 'uix-shortcodes' ) ); ?>
+		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Column Two Third (last)', 'uix-shortcodes' ) ); ?>
 		
 	
 			

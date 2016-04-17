@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Fri Apr 01 2016 16:17:16 GMT+0800 (CST)\n"
+"POT-Revision-Date: Sun Apr 17 2016 22:44:33 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Unknown update checker status \"%s\""
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:712
+#: ../shortcodes/frontpage-init.php:713
 msgid "Description:"
 msgstr ""
 
@@ -408,8 +408,8 @@ msgid ""
 " Measurement units is pixels (px)."
 msgstr ""
 
-#: ../shortcodes/panel/col-1_3-2_3.php:56 ../shortcodes/panel/col-average-3.php:58
-msgid "Column One Third"
+#: ../shortcodes/panel/col-1_3-2_3.php:56
+msgid "Column Two Third (last)"
 msgstr ""
 
 #: ../shortcodes/panel/col-1_4-3_4.php:19
@@ -421,7 +421,7 @@ msgid "Column Three Fourth (last)"
 msgstr ""
 
 #: ../shortcodes/panel/col-2_3-1_3.php:57
-msgid "Column One Third (last)"
+msgid "Column Two Third"
 msgstr ""
 
 #: ../shortcodes/panel/col-3_4-1_4.php:57
@@ -430,6 +430,10 @@ msgstr ""
 
 #: ../shortcodes/panel/col-average-2.php:58
 msgid "Column One Half"
+msgstr ""
+
+#: ../shortcodes/panel/col-average-3.php:58
+msgid "Column One Third"
 msgstr ""
 
 #: ../shortcodes/panel/col-average-4.php:58
