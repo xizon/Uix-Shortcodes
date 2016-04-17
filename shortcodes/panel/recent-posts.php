@@ -30,7 +30,7 @@ $args =
 			'id'             => 'uix_sc_rposts_looptemp',
 			'title'          => __( 'Loop Template', 'uix-shortcodes' ),
 			'desc'           => '
-                  '.__( 'Use this template to display content on your website. You can use the following placeholders in the message templates, which will be replaced by the actual values when the content is displayed', 'uix-shortcodes' ).':<br>
+                  '.__( 'Use this template to display content on your website. You can use the following placeholders in the post list item templates, which will be replaced by the actual values when the content is displayed', 'uix-shortcodes' ).':<br>
                   <strong>                  
                     <code>[uix_recent_posts_link]</code> --&gt;  '.__( 'Permalink', 'uix-shortcodes' ).'<br>
                       <code>[uix_recent_posts_title]</code> --&gt;  '.__( 'Title', 'uix-shortcodes' ).'<br>
