@@ -126,7 +126,14 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		 /* Callback before custom javascript of sweetalert */
 		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Add a Responsive audio', 'uix-shortcodes' ) ); ?>
 		
-		        
+					if ( uix_sc_audio_soundcloud === true ) {
+						uix_sc_audio_autoplay = uix_sc_audio_loop = 'null';
+					}
+					if ( uix_sc_audio_soundcloud === false ) {
+						uix_sc_audio_height = 'null';
+					}
+				
+				
 			
 				window.send_to_editor( "[uix_audio width='"+uix_sc_audio_width+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']" );
 				

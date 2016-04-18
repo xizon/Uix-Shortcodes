@@ -509,25 +509,19 @@ function uix_sc_fun_audio( $atts, $content = null ){
 		'autoplay' => 'false',
 		'width' => '100%',
 		'soundcloud' => 'false',
-		'height' => '150px',
+		'height' => '150',
 		'loop' => 'false',
 	 ), $atts ) );
-	 
-	$attr = array(
+	
+	$return_string = '<div style="width:'.$width.';">'.wp_audio_shortcode( array(
 			'src'      => $url,
 			'loop'     => ( $loop == 'true' ) ? 1 : 0,
 			'autoplay' => ( $autoplay == 'true' ) ? 1 : 0,
 			'preload' => 'none'
-			);
-		
-	
-	$before = '<div style="width:'.$width.';height:'.$height.'px">';
-	$end = '</div>';
-	
-	$return_string = $before.wp_audio_shortcode( $attr ).$end;
+			) ).'</div>';
 	
 	if ( $soundcloud == 'true' ) {
-		$return_string = $before.preg_replace( '/(width|height)=\"\d*\"\s/', '', wp_oembed_get( $url ) ).$end;
+		$return_string = '<div style="width:'.$width.';height:'.$height.'px">'.preg_replace( '/(width|height)=\"\d*\"\s/', '', wp_oembed_get( $url ) ).'</div>';
 		$return_string = str_replace( 'scrolling', 'style="width:100%;height:'.$height.'px" scrolling', $return_string );
 	}
 
