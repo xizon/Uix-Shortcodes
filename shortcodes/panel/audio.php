@@ -22,12 +22,55 @@ $args =
 		array(
 			'id'             => 'uix_sc_audio_url',
 			'title'          => __( 'Audio URL', 'uix-shortcodes' ),
-			'desc'           => __( 'Just enter the MP3 audio URL. <br>e.g., <strong>http://example.com/my-audiofile.mp3</strong>', 'uix-shortcodes' ),
+			'desc'           => __( 'Just enter the MP3, SoundCloud or Audiomack URL. If you are using SoundCloud or Audiomack, the following <strong>"Enable SoundCloud"</strong> checkbox should be checked.', 'uix-shortcodes' ),
 			'value'          => '',
 			'placeholder'    => '',
 			'type'           => 'text'
 		
 		),
+		
+		array(
+			'id'             => 'uix_sc_audio_soundcloud',
+			'title'          => __( 'Enable SoundCloud', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'checkbox',
+			'default'        => array(
+									'checked'  => false
+				                )
+		
+		
+		),	
+		
+		
+	    array(
+			'id'             => 'uix_sc_audio_width',
+			'title'          => __( 'Player Width', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '100',
+			'placeholder'    => '',
+			'type'           => 'short-units-text',
+			'default'        => array(
+									'units'  => [ '%', 'px' ],
+									'units_id'  => 'uix_sc_audio_width_units'
+				                )
+		
+		),
+		
+	    array(
+			'id'             => 'uix_sc_audio_height',
+			'title'          => __( 'Player Height', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '150',
+			'placeholder'    => '',
+			'type'           => 'short-text',
+			'default'        => array(
+									'units'  => 'px'
+								)
+		
+		),
+		
 		
 		array(
 			'id'             => 'uix_sc_audio_autoplay',
@@ -85,7 +128,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		
 		        
 			
-				window.send_to_editor( "[uix_audio autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']" );
+				window.send_to_editor( "[uix_audio width='"+uix_sc_audio_width+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']" );
 				
 				
 				

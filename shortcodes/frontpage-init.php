@@ -507,6 +507,9 @@ function uix_sc_fun_audio( $atts, $content = null ){
 	extract( shortcode_atts( array( 
 		'url' => '',
 		'autoplay' => 'false',
+		'width' => '100%',
+		'soundcloud' => 'false',
+		'height' => '150px',
 		'loop' => 'false',
 	 ), $atts ) );
 	 
@@ -516,11 +519,21 @@ function uix_sc_fun_audio( $atts, $content = null ){
 			'autoplay' => ( $autoplay == 'true' ) ? 1 : 0,
 			'preload' => 'none'
 			);
-			
-			
-			
+		
+	
+	$before = '<div style="width:'.$width.';height:'.$height.'px">';
+	$end = '</div>';
+	
+	$return_string = $before.wp_audio_shortcode( $attr ).$end;
+	
+	if ( $soundcloud == 'true' ) {
+		$return_string = $before.preg_replace( '/(width|height)=\"\d*\"\s/', '', wp_oembed_get( $url ) ).$end;
+		$return_string = str_replace( 'scrolling', 'style="width:100%;height:'.$height.'px" scrolling', $return_string );
+	}
 
-   return UixShortcodes::do_callback( wp_audio_shortcode( $attr ) );
+  
+
+   return UixShortcodes::do_callback( $return_string );
    
 }
 add_shortcode( 'uix_audio', 'uix_sc_fun_audio' );

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Mon Apr 18 2016 19:13:48 GMT+0800 (CST)\n"
+"POT-Revision-Date: Mon Apr 18 2016 23:01:37 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,33 +46,33 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:170
+#: ../uix-shortcodes.php:168
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:171 ../helper/settings.php:74
+#: ../uix-shortcodes.php:169 ../helper/settings.php:74
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:278 ../helper/settings.php:52
+#: ../uix-shortcodes.php:276 ../helper/settings.php:52
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:542
+#: ../uix-shortcodes.php:540
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-shortcodes.php:891
+#: ../uix-shortcodes.php:889
 msgid "Cancel"
 msgstr ""
 
-#: ../uix-shortcodes.php:892
+#: ../uix-shortcodes.php:890
 msgid "Insert into"
 msgstr ""
 
-#: ../uix-shortcodes.php:911
+#: ../uix-shortcodes.php:909
 msgid "Using the shortcodes successfully."
 msgstr ""
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Unknown update checker status \"%s\""
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:723
+#: ../shortcodes/frontpage-init.php:736
 msgid "Description:"
 msgstr ""
 
@@ -253,19 +253,32 @@ msgstr ""
 
 #: ../shortcodes/panel/audio.php:25
 msgid ""
-"Just enter the MP3 audio URL. <br>e.g., <strong>http://example.com/my-"
-"audiofile.mp3</strong>"
+"Just enter the MP3, SoundCloud or Audiomack URL. If you are using SoundCloud "
+"or Audiomack, the following <strong>\"Enable SoundCloud\"</strong> checkbox "
+"should be checked."
 msgstr ""
 
 #: ../shortcodes/panel/audio.php:34
+msgid "Enable SoundCloud"
+msgstr ""
+
+#: ../shortcodes/panel/audio.php:49
+msgid "Player Width"
+msgstr ""
+
+#: ../shortcodes/panel/audio.php:63
+msgid "Player Height"
+msgstr ""
+
+#: ../shortcodes/panel/audio.php:77
 msgid "Autoplay"
 msgstr ""
 
-#: ../shortcodes/panel/audio.php:48
+#: ../shortcodes/panel/audio.php:91
 msgid "Loop"
 msgstr ""
 
-#: ../shortcodes/panel/audio.php:84
+#: ../shortcodes/panel/audio.php:127
 msgid "Add a Responsive audio"
 msgstr ""
 

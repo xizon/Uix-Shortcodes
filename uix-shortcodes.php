@@ -9,7 +9,7 @@ Version: 1.0.0
 Text Domain: uix-shortcodes
 License: GPLv2 or later
 */
-
+			
 class UixShortcodes {
 
 	const PREFIX   = 'uix';
@@ -49,11 +49,9 @@ class UixShortcodes {
 		add_filter( 'mce_css', array( __CLASS__, 'mce_css' ) );
 		add_filter( 'comments_open', array( __CLASS__, 'comments_open' ), 10, 2 );
 		
-
-	
 	}
 
-
+	
 	
 	/*
 	 * Enqueue scripts and styles.
