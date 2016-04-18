@@ -64,9 +64,6 @@
 			 
 			 //Accordion
 			 $( '.uix-sc-accordion' ).uix_sc_initAccordion(); 
-			 
-			 //Gallery list
-			 $( '.uix-sc-gallery' ).uix_sc_initGallerylist(); 
 			
 			 // prettyPhoto
 			 $( "a[rel^='uix-sc-prettyPhoto']" ).prettyPhoto({
@@ -107,42 +104,6 @@
 	
 } ) ( jQuery );
 
-/*! 
- *************************************
- * Initialize Gallery list
- *************************************
- */
-( function( $ ) {
-	$.fn.uix_sc_initGallerylist = function(options){
-
-		this.each(function(){
-			
-				//returns new id
-				var $this = $( this ),
-				    itemImgHeight = Array(),
-				    itemBox = $this.find( '.uix-sc-gallery-list .uix-sc-gallery-list-imgbox a' ),
-					itemImg = $this.find( '.uix-sc-gallery-list .uix-sc-gallery-list-imgbox a img' );
-					
-				itemImg.each( function( index ) {
-					var tempheight = $( this ).height();
-					
-					itemImgHeight.push( tempheight );
-				} );
-				
-				var itemImgHeight_min = Math.min.apply( Math, itemImgHeight );
-	
-				
-				if ( itemBox.height() > itemImg.height() ){
-					itemBox.css( 'height', itemImgHeight_min + 'px' );
-				
-				} 
-
-			
-		} );
-
-	
-  };
-} )( jQuery );
 
 
 

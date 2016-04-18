@@ -519,6 +519,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 					if ( uix_sc_pricing_col3_two_btn_win === true ) _p_btn_target_2 = '_blank';
 					if ( uix_sc_pricing_col3_three_btn_win === true ) _p_btn_target_3 = '_blank';
 					
+					
 					/* Mark a pricing as important */
 					var _p_class_1 = _p_class_2 = _p_class_3 = '';
 					if ( uix_sc_pricing_col3_one_active === true ) _p_class_1 = 'uix-sc-price-important';

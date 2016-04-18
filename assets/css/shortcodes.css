@@ -898,6 +898,10 @@ img.uix-sc-img,
 	float:left;	
 }
 
+	.uix-sc-gallery-list img{
+		width:100%;
+	}
+	
 .uix-sc-gallery-list-lightbox-info{
 	color:#fff;
 }
@@ -960,11 +964,11 @@ img.uix-sc-img,
 		overflow:hidden;
 	}
 	
-
 	
 	.uix-sc-gallery-list .uix-sc-gallery-list-imgbox{
 		padding:7px;
 	}
+	
 	
 	
 		.uix-sc-gallery-list .uix-sc-gallery-list-imgbox a{
@@ -988,11 +992,6 @@ img.uix-sc-img,
 			opacity: 0.4;
 		}
 			
-	
-	.uix-sc-gallery-list img{
-		width:100%;
-	
-	}
 	
 	
 	.uix-sc-gallery-list .uix-sc-gallery-list-info{

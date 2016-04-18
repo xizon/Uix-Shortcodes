@@ -224,7 +224,7 @@
 			}
 		
 		a.pp_next {
-			background: url(prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+			background: url(prettyPhoto/jquery-prettyPhoto-btnNext.png) center right  no-repeat;
 			display: block;
 			float: right;
 			height: 100%;
@@ -233,7 +233,7 @@
 		}
 			
 		a.pp_previous {
-			background: url(prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+			background: url(prettyPhoto/jquery-prettyPhoto-btnPrevious.png) center left  no-repeat;
 			display: block;
 			float: left;
 			height: 100%;
