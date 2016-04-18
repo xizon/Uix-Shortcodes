@@ -607,6 +607,7 @@ function uix_sc_fun_team_wrapper( $atts, $content = null ){
 	extract( shortcode_atts( array( 
 		  'avatarfillet' => '0%',
 		  'gray' => 'false',
+		  'avatarheight'  => '',
 		  'col' => 'fullwidth',
 	 ), $atts ) );
 	 
@@ -628,9 +629,18 @@ function uix_sc_fun_team_wrapper( $atts, $content = null ){
 	   ';
    
    }
+  
+   if ( isset( $avatarheight ) && !empty( $avatarheight ) ) {
+	   $cus_height = 'style="height:'.$avatarheight.';"';
+   } else {
+	   $cus_height = '';
+   }
+   
    
    $return_string = UixShortcodes::do_callback( $return_string );
    $return_string = str_replace( '{avatarfillet}', 'style="-webkit-border-radius: '.$avatarfillet.'; -moz-border-radius: '.$avatarfillet.'; border-radius: '.$avatarfillet.';"', $return_string );
+   $return_string = str_replace( '{avatarheight}', $cus_height, $return_string );
+   
    
    if ( $gray == 'false' ) {
 	   $return_string = str_replace( 'uix-sc-gray', '', $return_string );
@@ -679,7 +689,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 	   $return_string = '
 		<div class="uix-sc-card-item">
 		  <div class="uix-sc-card-item-left uix-sc-gray">
-					<div class="uix-sc-card-item-left-imgbox">
+					<div class="uix-sc-card-item-left-imgbox" {avatarheight}>
 						<a href="'.$avatarURL.'" rel="uix-sc-prettyPhoto[unusual]" title="'.$name.' - '.$position.'"><img src="'.$avatarURL.'" alt="" {avatarfillet}></a>
 					</div>
 		  </div>
@@ -707,7 +717,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 	   $return_string = '
 		<div class="uix-sc-gallery-list uix-sc-gallery-list-small uix-sc-gray">
 			<div class="uix-sc-gallery-list-imgbox">
-				<a href="'.$avatarURL.'" rel="uix-sc-prettyPhoto[unusual-4]" title="
+				<a {avatarheight} href="'.$avatarURL.'" rel="uix-sc-prettyPhoto[unusual-4]" title="
 				    <div class=\'uix-sc-gallery-list-lightbox-info\'>
 							<strong>'.$name.' - '.$position.'</strong>
 							<span class=\'uix-sc-gallery-list-lightbox-info-desc\'>'.__( 'Description:', 'uix-shortcodes' ).'</span>

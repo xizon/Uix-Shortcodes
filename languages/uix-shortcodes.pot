@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Mon Apr 18 2016 03:16:48 GMT+0800 (CST)\n"
+"POT-Revision-Date: Mon Apr 18 2016 19:13:48 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Unknown update checker status \"%s\""
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:713
+#: ../shortcodes/frontpage-init.php:723
 msgid "Description:"
 msgstr ""
 
@@ -221,7 +221,7 @@ msgstr ""
 #: /shortcodes/panel/client-4-col.php:28 ../shortcodes/panel/features-2-col.php:
 #: 27 ../shortcodes/panel/features-2-col.php:184 ../shortcodes/panel/features-3-
 #: col.php:27 ../shortcodes/panel/hello.php:338 ../shortcodes/panel/tabs.php:38 ..
-#: /shortcodes/panel/team-1-col.php:52 ../shortcodes/panel/team-4-col.php:50 ..
+#: /shortcodes/panel/team-1-col.php:67 ../shortcodes/panel/team-4-col.php:65 ..
 #: /shortcodes/panel/testimonials.php:21
 msgid "List Item"
 msgstr ""
@@ -230,7 +230,7 @@ msgstr ""
 #: /shortcodes/panel/client-4-col.php:34 ../shortcodes/panel/features-2-col.php:
 #: 33 ../shortcodes/panel/features-2-col.php:190 ../shortcodes/panel/features-3-
 #: col.php:33 ../shortcodes/panel/hello.php:344 ../shortcodes/panel/tabs.php:44 ..
-#: /shortcodes/panel/team-1-col.php:58 ../shortcodes/panel/team-4-col.php:56 ..
+#: /shortcodes/panel/team-1-col.php:73 ../shortcodes/panel/team-4-col.php:71 ..
 #: /shortcodes/panel/testimonials.php:27
 msgid "click here to add an item"
 msgstr ""
@@ -352,7 +352,7 @@ msgstr ""
 #: ../shortcodes/panel/client-3-col.php:64 ../shortcodes/panel/client-4-col.php:
 #: 64 ../shortcodes/panel/heading.php:59 ../shortcodes/panel/hello.php:121 ..
 #: /shortcodes/panel/hello.php:400 ../shortcodes/panel/map.php:122 ..
-#: /shortcodes/panel/team-1-col.php:102 ../shortcodes/panel/team-4-col.php:100 ..
+#: /shortcodes/panel/team-1-col.php:117 ../shortcodes/panel/team-4-col.php:115 ..
 #: /shortcodes/panel/testimonials.php:67
 msgid "Remove image"
 msgstr ""
@@ -362,7 +362,7 @@ msgid "Upload Logo"
 msgstr ""
 
 #: ../shortcodes/panel/client-3-col.php:76 ../shortcodes/panel/client-4-col.php:
-#: 76 ../shortcodes/panel/team-1-col.php:135 ../shortcodes/panel/team-4-col.php:133
+#: 76 ../shortcodes/panel/team-1-col.php:150 ../shortcodes/panel/team-4-col.php:148
 msgid "The Introduction of this member."
 msgstr ""
 
@@ -544,7 +544,7 @@ msgstr ""
 
 #: ../shortcodes/panel/heading.php:60 ../shortcodes/panel/hello.php:122 ..
 #: /shortcodes/panel/hello.php:401 ../shortcodes/panel/map.php:123 ..
-#: /shortcodes/panel/team-1-col.php:103 ../shortcodes/panel/team-4-col.php:101 ..
+#: /shortcodes/panel/team-1-col.php:118 ../shortcodes/panel/team-4-col.php:116 ..
 #: /shortcodes/panel/testimonials.php:68
 msgid "Upload"
 msgstr ""
@@ -1067,54 +1067,64 @@ msgstr ""
 msgid "Gray Avatar"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:99 ../shortcodes/panel/team-4-col.php:97 ..
-#: /shortcodes/panel/testimonials.php:64
+#: ../shortcodes/panel/team-1-col.php:51 ../shortcodes/panel/team-4-col.php:49
+msgid "Height of Grid"
+msgstr ""
+
+#: ../shortcodes/panel/team-1-col.php:52 ../shortcodes/panel/team-4-col.php:50
+msgid ""
+"Set height of grid so that it will fit its avatar photo. Browsers use a "
+"default stylesheet to render webpages if  the value is <strong>\"0\"</strong>."
+msgstr ""
+
+#: ../shortcodes/panel/team-1-col.php:114 ../shortcodes/panel/team-4-col.php:112 .
+#: ./shortcodes/panel/testimonials.php:64
 msgid "Avatar URL"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:112 ../shortcodes/panel/team-4-col.php:110 .
+#: ../shortcodes/panel/team-1-col.php:127 ../shortcodes/panel/team-4-col.php:125 .
 #: ./shortcodes/panel/testimonials.php:76
 msgid "Name"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:123 ../shortcodes/panel/team-4-col.php:121 .
+#: ../shortcodes/panel/team-1-col.php:138 ../shortcodes/panel/team-4-col.php:136 .
 #: ./shortcodes/panel/testimonials.php:87
 msgid "Position"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:157 ../shortcodes/panel/team-4-col.php:155
+#: ../shortcodes/panel/team-1-col.php:172 ../shortcodes/panel/team-4-col.php:170
 msgid "set up links with social network"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:169 ../shortcodes/panel/team-4-col.php:167
+#: ../shortcodes/panel/team-1-col.php:184 ../shortcodes/panel/team-4-col.php:182
 msgid "Your Social Network Page URL 1"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:181 ../shortcodes/panel/team-4-col.php:179
+#: ../shortcodes/panel/team-1-col.php:196 ../shortcodes/panel/team-4-col.php:194
 msgid "Choose Social Icon 1"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:196 ../shortcodes/panel/team-4-col.php:194
+#: ../shortcodes/panel/team-1-col.php:211 ../shortcodes/panel/team-4-col.php:209
 msgid "Your Social Network Page URL 2"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:208 ../shortcodes/panel/team-4-col.php:206
+#: ../shortcodes/panel/team-1-col.php:223 ../shortcodes/panel/team-4-col.php:221
 msgid "Choose Social Icon 2"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:223 ../shortcodes/panel/team-4-col.php:221
+#: ../shortcodes/panel/team-1-col.php:238 ../shortcodes/panel/team-4-col.php:236
 msgid "Your Social Network Page URL 3"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:235 ../shortcodes/panel/team-4-col.php:233
+#: ../shortcodes/panel/team-1-col.php:250 ../shortcodes/panel/team-4-col.php:248
 msgid "Choose Social Icon 3"
 msgstr ""
 
-#: ../shortcodes/panel/team-1-col.php:282
+#: ../shortcodes/panel/team-1-col.php:297
 msgid "Insert Team (fullwidth)"
 msgstr ""
 
-#: ../shortcodes/panel/team-4-col.php:280
+#: ../shortcodes/panel/team-4-col.php:295
 msgid "Insert Team (4 Column)"
 msgstr ""
 

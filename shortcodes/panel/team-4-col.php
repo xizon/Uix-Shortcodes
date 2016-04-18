@@ -42,6 +42,21 @@ $args =
 		
 		
 		),	
+		
+		
+		array(
+			'id'             => 'uix_sc_team_col4_listitem_list_height',
+			'title'          => __( 'Height of Grid', 'uix-shortcodes' ),
+			'desc'           => __( 'Set height of grid so that it will fit its avatar photo. Browsers use a default stylesheet to render webpages if  the value is <strong>"0"</strong>.', 'uix-shortcodes' ),
+			'value'          => '0',
+			'placeholder'    => '',
+			'type'           => 'short-text',
+			'default'        => array(
+									'units'  => 'px'
+								)
+		
+		
+		),		
 
 	 
 		//------list begin
@@ -321,12 +336,18 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 						show_list_item += "<br>[/uix_team_item]";
 	
 					}
-						
 					
+			
 				}
+				
+				/* Height of grid */
+				var photobox_height = "avatarheight='"+uix_sc_team_col4_listitem_list_height+"px'";
+				if ( uix_sc_team_col4_listitem_list_height == 0 )  photobox_height = '';	
+
+
 	
 	
-				window.send_to_editor( "[uix_team col='4' avatarfillet='"+uix_sc_team_col4_listitem_avatar_fillet+"%' gray='"+uix_sc_team_col4_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]" );
+				window.send_to_editor( "[uix_team col='4' "+photobox_height+" avatarfillet='"+uix_sc_team_col4_listitem_avatar_fillet+"%' gray='"+uix_sc_team_col4_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]" );
 				
 				
 				

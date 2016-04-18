@@ -99,10 +99,22 @@
 					}
 					
 					
-					//fix Sweet Alert top			
-					var ah = ( jQuery( document.body ).height() - jQuery( '.sweet-alert' ).height() )/2;
-					if ( sweetWrapperinnerHeight < jQuery( document.body ).height()*0.67 ) {
-						jQuery( '.sweet-alert' ).animate( { top: ah + 200 + "px" }, 300 );
+					//Fix Sweet Alert top			
+					var ah = ( jQuery( document.body ).height() - jQuery( '.sweet-alert' ).height() )/2,
+					    ad = jQuery( document.body ).height()*0.67,
+						mt = 200;
+					
+					if ( sweetWrapperinnerHeight < ad && jQuery( document.body ).height() >=560 ) {
+						
+						var dis = ad - sweetWrapperinnerHeight;
+						
+						
+						if ( dis >= 1 && dis < 60 ) mt = mt + 120;
+						if ( dis >= 60 && dis < 120 ) mt = mt + 45;
+						if ( dis >= 120 && dis < 150 ) mt = mt + 75;
+						
+						
+						jQuery( '.sweet-alert' ).animate( { top: ah + mt + "px" }, 300 );
 					}
 				    
 					
@@ -265,14 +277,26 @@
 					}
 					
 					
-					//fix Sweet Alert top			
-					var ah = ( jQuery( document.body ).height() - jQuery( '.sweet-alert' ).height() )/2;
-					if ( sweetWrapperinnerHeight < jQuery( document.body ).height()*0.67 ) {
-						jQuery( '.sweet-alert' ).animate( { top: ah + 200 + "px" }, 300 );
-					}
-					
-					
-				} );	
+					//Fix Sweet Alert top			
+					var ah = ( jQuery( document.body ).height() - jQuery( '.sweet-alert' ).height() )/2,
+							ad = jQuery( document.body ).height()*0.67,
+							mt = 200;
+						
+						if ( sweetWrapperinnerHeight < ad && jQuery( document.body ).height() >=560 ) {
+							
+							var dis = ad - sweetWrapperinnerHeight;
+							
+							
+							if ( dis >= 1 && dis < 60 ) mt = mt + 120;
+							if ( dis >= 60 && dis < 120 ) mt = mt + 45;
+							if ( dis >= 120 && dis < 150 ) mt = mt + 75;
+							
+							
+							jQuery( '.sweet-alert' ).animate( { top: ah + mt + "px" }, 300 );
+						}				
+						
+						
+					} );	
 	
 	
 	
