@@ -1174,7 +1174,10 @@ function uix_sc_fun_contact_form( $atts, $content = null ) {
 	ob_end_clean();
 	 
 	
-   $return_string = $out;
+    preg_match_all( "/<h3.+class=\"comment-reply-title\".*?>.*?<\/h3>/ism", $out, $match );
+	
+	
+   $return_string = str_replace( $match[0][0], '', $out );
    
    return UixShortcodes::do_callback( $return_string );
 }
