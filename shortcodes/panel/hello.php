@@ -162,7 +162,7 @@ $args =
 			'default'        => array(
 			                        //'btn_textclass' => 'table-link-attr',
 			                        'btn_text'      => __( 'set up links with toggle', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_toggle_url_class', 'uix_sc_toggle_url2_class' ]
+									'toggle_class'  => [ 'uix_sc_toggle_url_class', 'uix_sc_toggle_url2_class', 'uix_sc_toggle_urlalign_class' ]
 				                )
 		
 		),	
@@ -193,6 +193,9 @@ $args =
 									)
 			
 			),
+	
+			
+			
 		
 		//------toggle end
 		
@@ -308,7 +311,13 @@ $args =
 			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_checkbox_toggle', /* {item id}-{option id} */
-									'toggle_class'  => [ 'uix_sc_checkbox_toggle_text_class' ]
+									'toggle_class'  => [ 'uix_sc_checkbox_toggle_text_class' ],
+									
+									/* if this toggle contains another toggle, please specifies "toggle_not_class" in order that default hiding form is still valid . */
+									/*
+									'toggle_not_class'  => [ '' ]
+									*/
+									
 				                )	
 		
 		
@@ -528,7 +537,7 @@ $args =
 										)
 				
 				),
-		
+
 			
 			//------toggle end
 			

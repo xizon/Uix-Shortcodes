@@ -1,0 +1,267 @@
+.uix-documentation h2{
+	line-height:1.3;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	background:#FFFFFF;
+	padding:.5em 1em;
+	color:#32373C;
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 1px;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 1px;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 1px;
+	font-size:2em;
+}
+
+.uix-documentation .show-image{
+	margin:1em;
+}
+
+.uix-documentation strong{
+	font-weight:bold;
+	color:#000;
+	background:rgba(0,0,0,.1);
+}
+
+.uix-documentation em{
+	color:#DB2427;
+}
+
+
+
+/* ----------------------------------------------------------------  
+   table
+---------------------------------------------------------------- */
+
+.uix-list-title{
+	display:block;
+	font-size:1.5em;
+	font-weight:bold;
+	padding:1em 0 0 0;
+	color: #0085BA;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+
+}
+
+.uix-list-title:before{
+	content:'●';
+	padding-right:5px;
+}
+
+.uix-list-content {
+	padding:.7em 0;
+	
+}
+
+.uix-list-content:after{
+  display: table;
+  content: "";
+  line-height: 0;
+}
+	
+	
+	
+.uix-table-all {
+	width:100%;
+	margin:1em 0;
+	border:1px solid #D9D9D9;
+	font-size:12px;
+}
+.uix-table-all table{
+	width:100%;
+}
+
+.uix-table-all tr {
+	border-bottom:1px solid #ddd;
+}
+
+.uix-table-all td,
+.uix-table-all th {
+	border-right:1px solid #E4E4E4;
+	
+}
+
+
+.uix-table-all tr:last-child,
+.uix-table-all td:last-child,
+.uix-table-all th:last-child {
+	border:none;
+}
+
+.uix-table-all tr:nth-child(odd) {
+	background-color:#fff
+}
+.uix-table-all tr:nth-child(even) {
+	background-color:#F6F6F6;
+}
+
+.uix-table-all td,
+.uix-table-all th {
+	padding:6px 8px;
+	display:table-cell;
+	text-align:left;
+	vertical-align:top;
+	padding-left:20px;
+	line-height:1.6;
+}
+.uix-table-all th{
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+}
+.uix-table-all td{
+	vertical-align:middle;
+}
+
+.uix-table-all .depend{
+	display:block;
+	color:#E8841B;
+	font-style:italic;
+}
+.uix-table-all .depend code{
+	padding:0 3px;
+	background:#FCF0DC;
+	border:none;	
+	color:#E8841B;
+	font-weight:bold;
+	
+}
+
+.uix-table-all td img{
+    border:none;
+    padding: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+
+.uix-table-all th:first-child,
+.uix-table-all td:first-child,
+.uix-table-all th:nth-child(2),
+.uix-table-all td:nth-child(2),
+.uix-table-all th:nth-child(3),
+.uix-table-all td:nth-child(3) {
+	text-align:center;
+	
+}
+
+
+/* ----------------------------------------------------------------  
+   jQuery Accessible Tabs
+---------------------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+	
+	
+	.js-tabs {
+		margin: 1em 0;
+	}
+	
+	/* Tabs control text */
+	.js-tabs_control-text {
+		direction: ltr;
+		left: -999em;
+		position: absolute;
+	}
+	
+	/* Tabs control */
+	.js-tabs .js-tabs_control {
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		z-index: 1000;
+	}
+	
+	.js-tabs .js-tabs_control li {
+		background: #FFFFFF;
+		border-width: 1px 1px 0;
+		float: left;
+		margin: 0 10px 0 0;
+		padding: 0;
+		position: relative;
+	}
+	
+	.js-tabs .js-tabs_control button {
+		background: transparent;
+		cursor: pointer;
+		padding: 8px 1em 10px;
+		position: relative;
+		outline: 0;
+		font-size:14px;
+		font-weight:normal;
+		color:#CECECE;
+		border:none;
+		border-left: 1px solid #E5E5E5;
+		border-right: 1px solid #E5E5E5;
+		border-top: 1px solid #E5E5E5;
+	
+	}
+	
+	.js-tabs .js-tabs_control button:hover,
+	.js-tabs .js-tabs_control button:focus,
+	.js-tabs .js-tabs_control button:active {
+		color:#333;
+	}
+	
+	
+	/* Selected tabs control */
+	.js-tabs .js-tabs_control .js-tabs_control-item--active,
+	.js-tabs .js-tabs_control .js-tabs_control-item--active:focus,
+	.js-tabs .js-tabs_control .js-tabs_control-item--active:active {
+		background: #FFFFFF;
+		border: 1px solid #CCCCCC;
+		border-bottom: none;
+		color:#333;
+		top: 1px;
+		z-index: 1000;
+	}
+	.js-tabs .js-tabs_control .js-tabs_control-item--active button{
+		color:#333;
+		font-weight:bold;
+		border:none;
+	}
+	
+	
+	
+	/* Tabs panel */
+	.js-tabs .js-tabs_panel {
+		background-color: #FFFFFF;
+		border: 1px solid #CCCCCC;
+		color: #333;
+		clear: left;
+		display: block;
+		position: relative;
+		padding: .3em 1em .3em;
+		visibility: visible;
+		z-index: 5;
+	}
+	
+	.js-tabs .js-tabs_panel p{
+		display: block;
+		margin: 1em 0;
+	
+	}
+	
+	.js-tabs .js-tabs_panel:focus {
+		outline: 1px dotted #CCCCCC;
+	}
+
+
+}
+
+
+
+@media(max-width:767px) {
+	
+	.uix-d-tabs h3{
+		font-weight:bold;
+		padding:.6em 0;
+	}
+	
+	.uix-table-all,
+	.uix-d-tabs .arg{
+		display:none;
+	}
+
+	
+}

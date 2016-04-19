@@ -19,6 +19,8 @@ class UixShortcodesForm_Radio {
 		$jscode = '';
 		$jscode_vars = '';
 		
+		$toggleForRadioClass = 'toggle-radio-options-'.$id;
+		
 		
         if ( $type == 'radio' ) {
             
@@ -35,9 +37,8 @@ class UixShortcodesForm_Radio {
                         $selected = '  active'; 
 						$radiofirst = $select_key;	
 					} 
-                    
-					
-                    $optionlist .= '<span data-value="'.$select_key.'" id="'.$id.'-'.$select_key.'" class="toggle-radio-options '.$selected.'">'.$select_value.'</span>'."\n";	
+                 
+                    $optionlist .= '<span data-value="'.$select_key.'" id="'.$id.'-'.$select_key.'" class="'.$toggleForRadioClass.' '.$selected.'">'.$select_value.'</span>'."\n";	
                     $optionloop ++;
                 }	
 		
@@ -103,7 +104,7 @@ class UixShortcodesForm_Radio {
 			if ( !empty( $toggle_class ) ) {
 				$jscode_tog = '
 					/*-- Toggle for radio  --*/
-					$( document ).uix_divToggle( { checkbox: 1, btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );
+					$( document ).uix_divToggle( { checkbox: 1, checkboxToggleClass: ".'.$toggleForRadioClass.'", btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );
 				';	
 				
 				//inscure browser

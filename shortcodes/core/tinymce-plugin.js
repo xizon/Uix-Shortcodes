@@ -16,9 +16,10 @@
          */
         init : function(ed, url) {
 			
+			
 			ed.addButton( 'uix_shortcode_btn', {
 				text: '',
-				title: 'Uix Shortcodes',
+				title: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_1' ),
 				icon: 'mce-i-icon uix-shortcodes-icon',
 				type: 'menubutton',
 				onclick: function() { 
@@ -34,11 +35,11 @@
 					
 					/*
 					{
-						text: 'Demo',
+						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_demo_4' ),
 						icon: 'icon dashicons-search',
 						menu: [
 							{
-								text: 'Hello Form',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_demo_1' ),
 								onclick: function() {
 					
 									jQuery( '#uix_sc_form_hello' ).trigger( 'click' );
@@ -48,14 +49,14 @@
 								}
 							},
 							{
-								text: 'Column Form',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_demo_2' ),
 								onclick: function() {
 									
 									jQuery( '#uix_sc_form_hello2' ).trigger( 'click' );
 								}
 							},
 							{
-								text: 'Text',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_demo_3' ),
 								onclick: function() {
 					
 									ed.insertContent('Hello World!');
@@ -74,28 +75,28 @@
 					
 					{
 						
-						text: 'Content',
+						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_2' ),
 						icon: 'icon dashicons-editor-kitchensink',
 						menu: [
 							
 							{
-								text: 'Recent Posts',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_3' ),
 								onclick: function() {
 									
 									jQuery( '#uix_sc_form_recent_posts' ).trigger( 'click' );
 								}
 							},
 							{
-								text: 'Pricing',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_4' ),
 								menu: [
 									{
-										text: 'Pricing 3 Column',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_5' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_pricing_col3' ).trigger( 'click' );
 										}
 									},
 									{
-										text: 'Pricing 4 Column',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_6' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_pricing_col4' ).trigger( 'click' );
 										}
@@ -107,30 +108,30 @@
 							},
 					
 							{
-								text: 'Accordion',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_7' ),
 								onclick: function() {
 									jQuery( '#uix_sc_form_accordion' ).trigger( 'click' );
 								}
 							},	
 										
 							{
-								text: 'Tabs',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_8' ),
 								onclick: function() {
 									jQuery( '#uix_sc_form_tabs' ).trigger( 'click' );
 								}
 							},	
 							
 							{
-								text: 'Team',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_9' ),
 								menu: [
 									{
-										text: 'Team Full Width',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_10' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_team_fullwidth' ).trigger( 'click' );
 										}
 									},
 									{
-										text: 'Team 4 Column',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_11' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_team_col4' ).trigger( 'click' );
 										}
@@ -142,16 +143,16 @@
 							},
 							
 							{
-								text: 'Features',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_12' ),
 								menu: [
 									{
-										text: 'Features 2 Column',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_13' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_features_col2' ).trigger( 'click' );
 										}
 									},
 									{
-										text: 'Features 3 Column',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_14' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_features_col3' ).trigger( 'click' );
 										}
@@ -163,16 +164,16 @@
 							},	
 							
 							{
-								text: 'Client',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_15' ),
 								menu: [
 									{
-										text: 'Client 3 Column',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_16' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_client_col3' ).trigger( 'click' );
 										}
 									},
 									{
-										text: 'Client 4 Column',
+										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_17' ),
 										onclick: function() {
 											jQuery( '#uix_sc_form_client_col4' ).trigger( 'click' );
 										}
@@ -184,7 +185,7 @@
 							},	
 							
 							{
-								text: 'Testimonials',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_18' ),
 								onclick: function() {
 									jQuery( '#uix_sc_testimonials' ).trigger( 'click' );
 								}
@@ -192,14 +193,14 @@
 									
 							
 							{
-								text: 'Responsive Video',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_19' ),
 								onclick: function() {
 									jQuery( '#uix_sc_form_video' ).trigger( 'click' );
 								}
 							},				
 							
 							{
-								text: 'Audio',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_20' ),
 								onclick: function() {
 									jQuery( '#uix_sc_form_audio' ).trigger( 'click' );
 								}
@@ -214,7 +215,7 @@
 					
 					{
 						
-						text: 'Column',
+						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_21' ),
 						icon: 'icon dashicons-text',
 						menu: [
 							
@@ -282,19 +283,19 @@
 				    /* -----------   */
 				
 					{
-						text: 'Web Elements',
+						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_22' ),
 						icon: 'icon dashicons-admin-customizer',
 						menu: [
 						
 							{
-								text: 'Special Heading',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_23' ),
 								onclick: function() {
 									jQuery( '#uix_sc_heading' ).trigger( 'click' );
 								}
 							},	
 					
 							{
-								text: 'Dividing Line',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_24' ),
 								onclick: function() {
 									jQuery( '#uix_sc_dividing_line' ).trigger( 'click' );
 								}
@@ -302,34 +303,34 @@
 						
 												
 							{
-								text: 'Button',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_25' ),
 								onclick: function() {
 									jQuery( '#uix_sc_form_button' ).trigger( 'click' );
 								}
 							},
 							{
-								text: 'Share Buttons',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_26' ),
 								onclick: function() {
 									jQuery( '#uix_sc_form_share_buttons' ).trigger( 'click' );
 								}
 							},	
 							
 							{
-								text: 'Icon',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_27' ),
 								onclick: function() {
 									jQuery( '#uix_sc_form_icon' ).trigger( 'click' );
 								}
 							},
 							
 							{
-								text: 'Google Map',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_28' ),
 								onclick: function() {
 									jQuery( '#uix_sc_map' ).trigger( 'click' );
 								}
 							},			
 							
 							{
-								text: 'Contact Form',
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_29' ),
 								onclick: function() {
 									jQuery( '#uix_sc_contact_form' ).trigger( 'click' );
 								}
@@ -343,7 +344,7 @@
 				    /* -----------   */
 				
 					{
-						text: 'Code',
+						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_30' ),
 						icon: 'icon dashicons-editor-code',
 						onclick: function() {
 							jQuery( '#uix_sc_form_code' ).trigger( 'click' );

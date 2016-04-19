@@ -38,9 +38,14 @@ function uix_sc_form_output(){
 add_action( 'admin_footer', 'uix_sc_form_output' );
 
 
-
-
-
-
-
-
+/**
+ * To internationalize a TinyMCE button/plugin within a WordPress plugin
+ * @link: https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_external_languages
+ *
+ */
+ 
+function uix_sc_custom_tinymce_plugin_add_locale( $locales ) {
+    $locales [ 'uix_sc_custom_tinymce_plugin' ] = plugin_dir_path ( __FILE__ ) . 'core/tinymce-plugin-lang.php';
+    return $locales;
+}
+add_filter( 'mce_external_languages', 'uix_sc_custom_tinymce_plugin_add_locale' );

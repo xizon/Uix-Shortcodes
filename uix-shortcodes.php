@@ -122,6 +122,26 @@ class UixShortcodes {
 				}
   
 		  } 
+		  
+		  if ( isset( $_GET[ 'tab' ] ) && isset( $_GET[ 'page' ] ) ) {
+			  if( $_GET[ 'tab' ] == 'documentation' && $_GET[ 'page' ] == self::CUSPAGE ) {
+				  
+					if ( is_admin()) {
+					
+							//jQuery Accessible Tabs
+							wp_enqueue_script( self::PREFIX . '-shortcodes-accTabs-js', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1');
+							wp_enqueue_style( self::PREFIX . '-shortcodes-accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all');
+								
+							// SyntaxHighlighter
+							wp_enqueue_script( self::PREFIX . '-shortcodes-js-syntaxhighlighter-core-3.0.83', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shCore.js', false, '3.0.83', true );
+							wp_enqueue_script( self::PREFIX . '-shortcodes-js-syntaxhighlighter-autoloader-3.0.83', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
+							wp_enqueue_style( self::PREFIX . '-shortcodes-syntaxhighlighter-3.0.83', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all');	
+												
+								
+					}
+	  
+			  }  
+		  }
 	
 
 	}

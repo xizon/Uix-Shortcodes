@@ -19,6 +19,8 @@ class UixShortcodesForm_RadioImage {
 		$jscode = '';
 		$jscode_vars = '';
 		
+		$toggleForRadioClass = 'toggle-radio-options-'.$id;
+		
 		
         if ( $type == 'radio-image' ) {
             
@@ -35,9 +37,9 @@ class UixShortcodesForm_RadioImage {
                         $selected = '  active'; 
 						$radiofirst = $select_key;	
 					} 
-                    
+                  
 					
-                    $optionlist .= '<span data-value="'.$select_key.'" id="'.$id.'-'.$select_key.'"  class="toggle-radio-options img'.$selected.'"><img alt="" title="'.$select_key.'" src="'.$select_value.'"></span>'."\n";	
+                    $optionlist .= '<span data-value="'.$select_key.'" id="'.$id.'-'.$select_key.'"  class="'.$toggleForRadioClass.' img'.$selected.'"><img alt="" title="'.$select_key.'" src="'.$select_value.'"></span>'."\n";	
                     $optionloop ++;
                 }	
 			
@@ -104,7 +106,7 @@ class UixShortcodesForm_RadioImage {
 			if ( !empty( $toggle_class ) ) {
 				$jscode_tog = '
 					/*-- Toggle for radio-image  --*/
-					$( document ).uix_divToggle( { checkbox: 1, btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );
+					$( document ).uix_divToggle( { checkbox: 1, checkboxToggleClass: ".'.$toggleForRadioClass.'", btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );
 				';	
 				
 				//inscure browser

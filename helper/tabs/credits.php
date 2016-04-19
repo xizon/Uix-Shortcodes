@@ -17,10 +17,12 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'credits' ) {
             <li><a href="https://github.com/PitPik/tinyColorPicker" target="_blank" rel="nofollow">tinyColorPicker</a></li>
             <li><a href="http://t4t5.github.io/sweetalert" target="_blank" rel="nofollow">Sweetalert</a></li>
             <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank" rel="nofollow">Font Awesome</a></li>
+            <li><a href="https://github.com/nomensa/jquery.accessible-tabs.git" target="_blank" rel="nofollow">jQuery Accessible Tabs</a></li>
             <li><a href="http://codecanyon.net/user/flGravity" target="_blank" rel="nofollow">jQuery ScrollBar Plugin 1.0</a></li>
             <li><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/#prettyPhoto" target="_blank" rel="nofollow">prettyPhoto</a></li>
             <li><a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank" rel="nofollow">SyntaxHighlighter</a></li>
             <li><a href="https://github.com/woothemes/FlexSlider" target="_blank" rel="nofollow">Flexslider</a></li>
+            
 
         </ul>
         

@@ -63,9 +63,10 @@ function uix_sc_fun_icons( $atts, $content = null ){
 		'name' => '',
 	 ), $atts ) );
 	   
-	 $size == '' ? $sizeclass = '' : $sizeclass = "font-size:{$size}{$units};";
-	 $color == '' ? $colorclass = '' : $colorclass = "color:{$color};";
- 
+	 $sizeclass = ( empty( $size ) ) ? '' : "font-size:{$size}{$units};";
+	 $colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
+	 
+
 	$return_string = '<i class="fa fa-'.$name.'" style="'.$sizeclass.' '.$colorclass.'"></i>';
 
    
@@ -1022,12 +1023,17 @@ function uix_sc_fun_heading( $atts, $content = null ) {
 		'size' => '58.5px',
 		'uppercase' => 'true',
 		'spacing' => '2px',
+		'color' => '',
 		'align'=> 'center',
 		'fillbg'=> '',
 
 	 ), $atts ) );
 	
+	
+	$colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
 	$fillcss = ( !empty( $fillbg ) ) ? 'style="background: -webkit-linear-gradient(transparent, transparent), url('.$fillbg.') repeat;background: -o-linear-gradient(transparent, transparent);-webkit-background-clip: text;-webkit-text-fill-color: transparent;-moz-background-clip: text;-moz-text-fill-color: transparent;"' : '';
+	
+	
 	$transform = ( $uppercase == 'true' ) ? 'uppercase' : 'none';
 	$alignment = '';
 	if ( $align == 'center' ) $alignment = 'uix-sc-tc';
@@ -1036,8 +1042,7 @@ function uix_sc_fun_heading( $atts, $content = null ) {
 	
 	
 	
-	
-	$textcss = 'style="font-size:'.$size.';text-transform:'.$transform.';letter-spacing:'.$spacing.';"';
+	$textcss = 'style="'.$colorclass.'font-size:'.$size.';text-transform:'.$transform.';letter-spacing:'.$spacing.';"';
 	
 	if ( $style == 'grand-fill-yellow' ) {
 	   $return_string = '
@@ -1048,7 +1053,7 @@ function uix_sc_fun_heading( $atts, $content = null ) {
 	
 	}
 	
-	if ( $style == 'grand' ) {
+	if ( $style == 'grand' || !empty( $color ) ) {
 	   $return_string = '
 		 <div class="uix-sc-heading '.$alignment.'" '.$textcss.'>
 			 '.$content.'
@@ -1056,7 +1061,7 @@ function uix_sc_fun_heading( $atts, $content = null ) {
 	   ';
 	
 	}
-	
+
 
 	
 	
@@ -1090,18 +1095,20 @@ function uix_sc_fun_subheading( $atts, $content = null ) {
 		'size' => '58.5px',
 		'opacity' => '65',
 		'spacing' => '2px',
+		'color' => '',
 		'uppercase' => 'true',
 		'align'=> 'center',
 		
 	 ), $atts ) );
 	 
+	$colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
 	$transform = ( $uppercase == 'true' ) ? 'uppercase' : 'none';
 	$alignment = '';
 	if ( $align == 'center' ) $alignment = 'uix-sc-tc';
 	if ( $align == 'left' ) $alignment = 'uix-sc-tl';
 	if ( $align == 'right' ) $alignment = 'uix-sc-tr';
 	
-	$textcss = 'style="font-size:'.$size.';filter:alpha(opacity='.$opacity.');-moz-opacity:'.($opacity/100).';opacity: '.($opacity/100).';letter-spacing:'.$spacing.';text-transform:'.$transform.';"';
+	$textcss = 'style="'.$colorclass.'font-size:'.$size.';filter:alpha(opacity='.$opacity.');-moz-opacity:'.($opacity/100).';opacity: '.($opacity/100).';letter-spacing:'.$spacing.';text-transform:'.$transform.';"';
 	
    $return_string = '
 	 <div class="uix-sc-subheading '.$alignment.'" '.$textcss.'>

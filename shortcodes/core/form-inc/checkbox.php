@@ -19,6 +19,8 @@ class UixShortcodesForm_Checkbox {
 		$jscode = '';
 		$jscode_vars = '';
 		
+		$toggleForRadioClass = 'toggle-radio-options-'.$id;
+		
         if ( $type == 'checkbox' ) {
             
             $checked = false;
@@ -41,6 +43,9 @@ class UixShortcodesForm_Checkbox {
 			$toggle_class = '';
 			$target_id = '';
 			$toggle_trigger_id = '';
+			$toggle_no_id = '';
+			$toggle_no_js = '';
+			
 			
             if ( is_array( $toggle ) && !empty( $toggle ) ) {
              
@@ -53,6 +58,18 @@ class UixShortcodesForm_Checkbox {
 					}	
 	
 				}
+				
+				//if this toggle contains another toggle, please specifies "toggle_not_class" in order that default hiding form is still valid
+				if ( isset( $toggle[ 'toggle_not_class' ] ) && !empty( $toggle[ 'toggle_not_class' ] ) ) {
+					foreach ( $toggle[ 'toggle_not_class' ] as $tid_value2 ) {
+						$toggle_no_id .= '.'.$tid_value2.','; 		
+					}	
+					
+					$toggle_no_js = ', noToggleID: "'.rtrim( $toggle_no_id, ',' ).'"';
+					
+						
+				}
+				
 				
             }
 			
@@ -88,11 +105,12 @@ class UixShortcodesForm_Checkbox {
                 
             ';						
                 
+			
 			$jscode_tog = '';
 			if ( !empty( $toggle_class ) ) {
 				$jscode_tog = '
 					/*-- Toggle for checkbox  --*/
-					$( document ).uix_divToggle( { checkbox: 1, btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );
+					$( document ).uix_divToggle( { checkbox: 1, checkboxToggleClass: ".'.$toggleForRadioClass.'", btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" '.$toggle_no_js.' } );
 				';	
 				
 				//inscure browser

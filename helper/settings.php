@@ -75,6 +75,12 @@ function uix_sc_options_page(){
 	];
 	
 	$tabs[] = [
+	    'tab'     =>  'documentation', 
+		'title'   =>  __( 'Documentation', 'uix-shortcodes' )
+	];
+	
+	
+	$tabs[] = [
 	    'tab'     =>  'credits', 
 		'title'   =>  __( 'Credits', 'uix-shortcodes' )
 	];

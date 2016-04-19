@@ -109,7 +109,8 @@
 						var dis = ad - sweetWrapperinnerHeight;
 						
 						
-						if ( dis >= 1 && dis < 60 ) mt = mt + 120;
+						if ( dis >= 1 && dis < 40 ) mt = mt + 120;
+						if ( dis >= 40 && dis < 60 ) mt = mt + 85;
 						if ( dis >= 60 && dis < 120 ) mt = mt + 45;
 						if ( dis >= 120 && dis < 150 ) mt = mt + 75;
 						
@@ -177,6 +178,8 @@
 			'btnID':'.social_toggle',
 			'targetID':'.social_box',
 			'checkbox': 0,
+			'checkboxToggleClass' : '',
+			'noToggleID' : '',
 			'list': 0
 		}
 		,options );
@@ -185,26 +188,27 @@
 			
 			
 			    //Toggle for radio
-			    jQuery( '.toggle-radio-options' ).live( 'click',function(){
-					
-					if ( settings.checkbox == 1 ) { 
+				if ( settings.checkbox == 1 ) { 
+				
+					jQuery( settings.checkboxToggleClass ).live( 'click',function(){
 						
-						if ( settings.list == 1 ) {
-						
-							jQuery( settings.targetID ).parent().parent( '.toggle-row' ).hide();
-							jQuery( settings.targetID ).parent().parent( '.toggle-row' ).find( '.sweet-box' ).hide();
-
-						} else {
+							if ( settings.list == 1 ) {
 							
-							jQuery( settings.targetID ).hide();
-							jQuery( settings.targetID ).find( 'th' ).find( 'label' ).hide();
-							jQuery( settings.targetID ).find( 'td' ).find( '.sweet-box' ).hide();
-					
-						}
-
-					}
+								jQuery( settings.targetID ).parent().parent( '.toggle-row' ).hide();
+								jQuery( settings.targetID ).parent().parent( '.toggle-row' ).find( '.sweet-box' ).hide();
 	
-				});
+							} else {
+								
+								jQuery( settings.targetID ).hide();
+								jQuery( settings.targetID ).find( 'th' ).find( 'label' ).hide();
+								jQuery( settings.targetID ).find( 'td' ).find( '.sweet-box' ).hide();
+						
+							}
+	
+					});
+
+				
+				}
 			
 			
 	
@@ -245,6 +249,7 @@
 								trid.find( 'td' ).find( '.sweet-box' ).show();
 								trid.addClass( 'active' );
 								
+
 							} else {
 								
 								trid.hide();
@@ -252,9 +257,16 @@
 								trid.find( 'td' ).find( '.sweet-box' ).hide();
 
 							}
-						
+			
 	
 						}
+
+
+						//if this toggle contains another toggle, please specifies "toggle_not_class" in order that default hiding form is still valid
+						if ( settings.noToggleID != '' ) {
+							jQuery( settings.noToggleID ).hide();
+						}
+
 
 					
 					} else {
@@ -286,8 +298,8 @@
 							
 							var dis = ad - sweetWrapperinnerHeight;
 							
-							
-							if ( dis >= 1 && dis < 60 ) mt = mt + 120;
+							if ( dis >= 1 && dis < 40 ) mt = mt + 120;
+							if ( dis >= 40 && dis < 60 ) mt = mt + 75;
 							if ( dis >= 60 && dis < 120 ) mt = mt + 45;
 							if ( dis >= 120 && dis < 150 ) mt = mt + 75;
 							

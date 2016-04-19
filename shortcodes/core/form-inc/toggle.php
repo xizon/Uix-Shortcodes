@@ -25,6 +25,7 @@ class UixShortcodesForm_Toggle {
             $btn_text = '';
 			$target_id = '';
 			$link_class = '';
+
 	
             if ( is_array( $default ) && !empty( $default ) ) {
                 $btn_text = $default[ 'btn_text' ];
@@ -34,6 +35,7 @@ class UixShortcodesForm_Toggle {
                 foreach ( $default[ 'toggle_class' ] as $tid_value ) {
 					$target_id .= '.'.$tid_value.','; 		
                 }	
+		
 				
             }
 			
@@ -68,6 +70,8 @@ class UixShortcodesForm_Toggle {
             $jscode_vars = '
                 '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
             ';
+			
+
 			
             $jscode = '
 			    /*-- Toggle  --*/

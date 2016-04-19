@@ -121,8 +121,6 @@ class PluginUpdateChecker_3_0 {
 		//Rename the update directory to be the same as the existing directory.
 		add_filter('upgrader_source_selection', array($this, 'fixDirectoryName'), 10, 3);
 
-		//Enable language support (i18n).
-		load_plugin_textdomain('plugin-update-checker', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
 		//Allow HTTP requests to the metadata URL even if it's on a local host.
 		$this->metadataHost = @parse_url($this->metadataUrl, PHP_URL_HOST);
@@ -634,7 +632,7 @@ class PluginUpdateChecker_3_0 {
 				'puc_check_for_updates'
 			);
 
-			$linkText = apply_filters('puc_manual_check_link-' . $this->slug, __('Check for updates', 'plugin-update-checker'));
+			$linkText = apply_filters('puc_manual_check_link-' . $this->slug, __('Check for updates', 'uix-shortcodes'));
 			if ( !empty($linkText) ) {
 				$pluginMeta[] = sprintf('<a href="%s">%s</a>', esc_attr($linkUrl), $linkText);
 			}
@@ -678,11 +676,11 @@ class PluginUpdateChecker_3_0 {
 		if ( isset($_GET['puc_update_check_result'], $_GET['puc_slug']) && ($_GET['puc_slug'] == $this->slug) ) {
 			$status = strval($_GET['puc_update_check_result']);
 			if ( $status == 'no_update' ) {
-				$message = __('This plugin is up to date.', 'plugin-update-checker');
+				$message = __('This plugin is up to date.', 'uix-shortcodes');
 			} else if ( $status == 'update_available' ) {
-				$message = __('A new version of this plugin is available.', 'plugin-update-checker');
+				$message = __('A new version of this plugin is available.', 'uix-shortcodes');
 			} else {
-				$message = sprintf(__('Unknown update checker status "%s"', 'plugin-update-checker'), htmlentities($status));
+				$message = sprintf(__('Unknown update checker status "%s"', 'uix-shortcodes'), htmlentities($status));
 			}
 			printf(
 				'<div class="updated notice is-dismissible"><p>%s</p></div>',
