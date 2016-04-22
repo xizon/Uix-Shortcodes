@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Wed Apr 20 2016 02:39:14 GMT+0800 (CST)\n"
+"POT-Revision-Date: Fri Apr 22 2016 20:12:37 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1604,6 +1604,10 @@ msgstr ""
 
 #: ../shortcodes/frontpage-init.php:731
 msgid "Description:"
+msgstr ""
+
+#: ../shortcodes/frontpage-init.php:1195
+msgid "Comments are closed."
 msgstr ""
 
 #: ../shortcodes/core/tinymce-plugin-lang.php:12

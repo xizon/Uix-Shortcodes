@@ -47,7 +47,7 @@ class UixShortcodes {
 		add_action( 'wp_head', array( __CLASS__, 'do_my_shortcodes' ) );
 		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
 		add_filter( 'mce_css', array( __CLASS__, 'mce_css' ) );
-		add_filter( 'comments_open', array( __CLASS__, 'comments_open' ), 10, 2 );
+		
 		
 	}
 

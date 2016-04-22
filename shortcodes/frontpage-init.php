@@ -1171,7 +1171,7 @@ add_shortcode( 'uix_dividing_line', 'uix_sc_fun_dividing_line' );
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_contact_form( $atts, $content = null ) {
 	
-
+	
     // capture output from the widgets
 	ob_start();
 	
@@ -1180,11 +1180,22 @@ function uix_sc_fun_contact_form( $atts, $content = null ) {
 		$out = ob_get_contents();
 	ob_end_clean();
 	 
+	$return_string = '';
 	
-    preg_match_all( "/<h3.+class=\"comment-reply-title\".*?>.*?<\/h3>/ism", $out, $match );
+	$pattern = "/<h3.+class=\"comment-reply-title\".*?>.*?<\/h3>/ism";
+   
+	$matchCount = preg_match_all( $pattern, $out, $match ); 
+	if ( $matchCount > 0 ) {
+		$return_string = str_replace( $match[0][0], '', $out );
+	}
 	
+
+	// If comments are closed and there are comments,let's leave a little note,shall we?
+	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) {
+		$return_string = '<p class="no-comments uix-sc-no-comments">'.__( 'Comments are closed.', 'uix-shortcodes' ).'</p>';
+	} 
+
 	
-   $return_string = str_replace( $match[0][0], '', $out );
    
    return UixShortcodes::do_callback( $return_string );
 }
