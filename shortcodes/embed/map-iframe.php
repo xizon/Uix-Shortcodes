@@ -8,6 +8,7 @@
 
  */
 
+
 //Map root path
 $map_rootpath = ( isset( $_GET[ 'rootpath' ] ) && !empty( $_GET[ 'rootpath' ] ) ) ? $_GET[ 'rootpath' ] : '../../';
 
@@ -33,7 +34,8 @@ $map_name = ( isset( $_GET[ 'name' ] ) && !empty( $_GET[ 'name' ] ) ) ? $_GET[ '
 				
 //Map height
 $map_height = ( isset( $_GET[ 'height' ] ) && !empty( $_GET[ 'height' ] ) ) ? $_GET[ 'height' ] : '285';	
-				
+if ( isset( $_GET[ 'cusheight' ] ) && !empty( $_GET[ 'cusheight' ] ) && $_GET[ 'cusheight' ] != 0 ) $map_height  = 	$_GET[ 'cusheight' ];		
+
 
 //Map marker
 $map_marker = ( isset( $_GET[ 'marker' ] ) && !empty( $_GET[ 'marker' ] ) ) ? $_GET[ 'marker' ] : $map_rootpath.'assets/images/map/map-location.png';
@@ -114,6 +116,13 @@ $map_marker = ( isset( $_GET[ 'marker' ] ) && !empty( $_GET[ 'marker' ] ) ) ? $_
 				var latitude = <?php echo $map_latitude;?>,
 					longitude = <?php echo $map_longitude;?>,
 					map_zoom = <?php echo $map_zoom;?>;
+					
+					
+					<?php if ( $map_height == '100%' ) { ?>
+					$( '#google-container' ).css( 'height', $( document.body ).height() + 'px' );
+					<?php } ?>
+					
+					
 
 
 				//google map custom marker icon - .png fallback for IE11

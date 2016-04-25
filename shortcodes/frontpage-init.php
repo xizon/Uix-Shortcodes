@@ -1003,7 +1003,7 @@ function uix_sc_fun_map( $atts, $content = null ) {
    $return_string = '
 		<!--  Google map show  begin -->
 		<section class="site-google-map">
-			<iframe  frameborder="0" style="width:'.$width.';height:'.$height.'" hspace="0" vspace="0" scrolling="no"  allowTransparency="true" src="'.UixShortcodes::plug_directory().'shortcodes/embed/map-iframe.php?rootpath='.UixShortcodes::plug_directory().'&style='.$style.'&height='.str_replace( 'px', '', $height ).'&latitude='.$latitude.'&longitude='.$longitude.'&zoom='.$zoom.'&name='.$name.'&marker='.$marker.'"></iframe>	
+			<iframe  frameborder="0" style="width:'.$width.';height:'.$height.'" hspace="0" vspace="0" scrolling="no"  allowTransparency="true" src="'.UixShortcodes::plug_directory().'shortcodes/embed/map-iframe.php?cusheight=0&rootpath='.UixShortcodes::plug_directory().'&style='.$style.'&height='.str_replace( 'px', '', $height ).'&latitude='.$latitude.'&longitude='.$longitude.'&zoom='.$zoom.'&name='.$name.'&marker='.$marker.'"></iframe>	
 		</section>
 		<!--  Google map show  end -->
    ';
