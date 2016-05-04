@@ -15,7 +15,20 @@ $form_type = [
 $args = 
 	[
 	
-	
+		array(
+			'id'             => 'uix_sc_tabs_style',
+			'title'          => __( 'Choose Style', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 'horizontal',
+			'placeholder'    => '',
+			'type'           => 'radio',
+			'default'        => array(
+									'vertical'  => 'vertical',
+									'horizontal'  => 'horizontal',
+								)
+		
+		),	
+		
 		array(
 			'id'             => 'uix_sc_tabs_effect',
 			'title'          => __( 'Transition Effect', 'uix-shortcodes' ),
@@ -159,7 +172,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				show_list_item += "<br>[/uix_toggle_group]";	
 	
 	
-				window.send_to_editor( "[uix_toggle tabs='1' effect='"+uix_sc_tabs_effect+"']"+show_list_tabs+show_list_item+"<br>[/uix_toggle]" );
+				window.send_to_editor( "[uix_toggle style='"+uix_sc_tabs_style+"' tabs='1' effect='"+uix_sc_tabs_effect+"']"+show_list_tabs+show_list_item+"<br>[/uix_toggle]" );
 				
 				
 				

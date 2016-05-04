@@ -49,6 +49,7 @@ class UixShortcodesForm_Checkbox {
 			
             if ( is_array( $toggle ) && !empty( $toggle ) ) {
              
+			 
 				$toggle_class = ( isset( $toggle[ 'toggle_class' ] ) ) ? $toggle[ 'toggle_class' ] : '';
 				$toggle_trigger_id = ( isset( $toggle[ 'trigger_id' ] ) ) ? $toggle[ 'trigger_id' ] : '';
 				
@@ -93,7 +94,7 @@ class UixShortcodesForm_Checkbox {
 
                              </span>
                              
-                             '.( !empty( $desc ) ? '<p class="info">'.$desc.'</p>' : '' ).' 
+                             '.( !empty( $desc ) ? '<span class="info info-checkbox">'.$desc.'</span>' : '' ).' 
          
                             </div>
                         </td>

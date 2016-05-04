@@ -46,7 +46,7 @@ class UixShortcodesForm_Margin {
 								   ' : '' ).' 	
 								   
 								   <div class="desc">
-								   '.( !empty( $desc ) ? '<p class="info">'.$desc.'</p>' : '' ).' 
+								   '.( !empty( $desc ) ? '<p class="info info-margin">'.$desc.'</p>' : '' ).' 
 								   </div>
 							   
 							   </div>

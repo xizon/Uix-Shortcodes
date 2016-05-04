@@ -120,6 +120,16 @@ $args =
 			'default'        => array(
 									'remove_btn_text'  => __( 'Remove image', 'uix-shortcodes' ),
 									'upload_btn_text'  => __( 'Upload', 'uix-shortcodes' ),
+									
+									/* Show image properties 
+									 * Javascript Vars:
+									 
+									   {item id}_repeat
+									   {item id}_position
+									   {item id}_attachment
+									   {item id}_size
+									*/
+									//'prop'  => true,
 				                )
 		
 		),	
@@ -208,7 +218,7 @@ $args =
 			'value'          => '#333333',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#0000cd', '#007fff', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#cc8899', '#e0b0ff', '#b57edc', '#843179', '#4b0082', '#800000', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ]
+			'default'        => [ '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#007fff', '#0E90D2', '#4BB1CF', '#5F9EA0', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#a2bf2f', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#e0b0ff', '#b57edc', '#843179', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ,'#800000' ]
 		
 		),
 		array(
@@ -681,7 +691,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				_vhtml += '<hr>Checkbox: '+show_checkbox+'<br>';
 			
 
-				window.send_to_editor( "[uix_hello color='"+uix_sc_single_color+"']" + _vhtml + "[/uix_hello]" );
+				window.send_to_editor( "[uix_hello color='"+uix_sc_single_color+"']<p>" + _vhtml + "</p>[/uix_hello]" );
 				
 				
 				

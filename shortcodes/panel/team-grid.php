@@ -2,7 +2,7 @@
 /**
  * Form ID
  */
-$form_id = 'uix_sc_form_team_col4';
+$form_id = 'uix_sc_form_team_grid';
 
 /**
  * Form Type
@@ -15,22 +15,23 @@ $form_type = [
 $args = 
 	[
 	
-	
 		array(
-			'id'             => 'uix_sc_team_col4_listitem_avatar_fillet',
-			'title'          => __( 'Radius of Fillet Avatar', 'uix-shortcodes' ),
+			'id'             => 'uix_sc_team_grid_listitem_col',
+			'title'          => __( 'Column', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => '0',
+			'value'          => 4,
 			'placeholder'    => '',
-			'type'           => 'short-text',
+			'type'           => 'radio',
 			'default'        => array(
-									'units'  => '%'
+									'4'  => '4',
+									'3'  => '3',
+									'2'  => '2',
 								)
 		
-		),	
+		),
 		
 		array(
-			'id'             => 'uix_sc_team_col4_listitem_avatar_gray',
+			'id'             => 'uix_sc_team_grid_listitem_avatar_gray',
 			'title'          => __( 'Gray Avatar', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
@@ -43,9 +44,21 @@ $args =
 		
 		),	
 		
-		
 		array(
-			'id'             => 'uix_sc_team_col4_listitem_list_height',
+			'id'             => 'uix_sc_team_grid_listitem_avatar_fillet',
+			'title'          => __( 'Radius of Fillet Avatar', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '0',
+			'placeholder'    => '',
+			'type'           => 'short-text',
+			'default'        => array(
+									'units'  => '%'
+								)
+		
+		),	
+			
+		array(
+			'id'             => 'uix_sc_team_grid_listitem_list_height',
 			'title'          => __( 'Height of Grid', 'uix-shortcodes' ),
 			'desc'           => __( 'Set height of grid so that it will fit its avatar photo. Browsers use a default stylesheet to render webpages if  the value is <strong>"0"</strong>.', 'uix-shortcodes' ),
 			'value'          => '0',
@@ -59,9 +72,11 @@ $args =
 		),		
 
 	 
+	 
+	 
 		//------list begin
 		array(
-			'id'             => 'uix_sc_team_col4_list',
+			'id'             => 'uix_sc_team_grid_list',
 			'title'          => __( 'List Item', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
@@ -72,28 +87,28 @@ $args =
 									'clone_class'               => [ 
 									
 										array(
-											'id'        => 'dynamic-row-uix_sc_team_col4_listitem_avatar',
+											'id'        => 'dynamic-row-uix_sc_team_grid_listitem_avatar',
 											'type'      => 'image'
 										), 
 									
 										array(
-											'id'        => 'dynamic-row-uix_sc_team_col4_listitem_name',
+											'id'        => 'dynamic-row-uix_sc_team_grid_listitem_name',
 											'type'      => 'text'
 										), 
 										array(
-											'id'        => 'dynamic-row-uix_sc_team_col4_listitem_position',
+											'id'        => 'dynamic-row-uix_sc_team_grid_listitem_position',
 											'type'      => 'text'
 										), 										
 										
 										array(
-											'id'        => 'dynamic-row-uix_sc_team_col4_listitem_intro',
+											'id'        => 'dynamic-row-uix_sc_team_grid_listitem_intro',
 											'type'      => 'textarea'
 										), 
 										
 										array(
-											'id'              => 'dynamic-row-uix_sc_team_col4_listitem_toggle',
+											'id'              => 'dynamic-row-uix_sc_team_grid_listitem_toggle',
 											'type'            => 'toggle',
-											'toggle_class'    => [ 'dynamic-row-uix_sc_team_col4_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_col4_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_col4_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_col4_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_col4_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_col4_listitem_toggle_3_icon', 'dynamic-row-uix_sc_team_col4_listitem_toggle_4_url', 'dynamic-row-uix_sc_team_col4_listitem_toggle_4_icon' ]
+											'toggle_class'    => [ 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_4_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_4_icon' ]
 										), 	
 
 									 ],
@@ -104,11 +119,11 @@ $args =
 		
 		
 			array(
-				'id'             => 'uix_sc_team_col4_listitem_avatar',
+				'id'             => 'uix_sc_team_grid_listitem_avatar',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_team_col4_listitem_avatar', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_team_grid_listitem_avatar', /*class of list item */
 				'placeholder'    => __( 'Avatar URL', 'uix-shortcodes' ),
 				'type'           => 'image',
 				'default'        => array(
@@ -119,22 +134,22 @@ $args =
 			),	
 			
 			array(
-				'id'             => 'uix_sc_team_col4_listitem_name',
+				'id'             => 'uix_sc_team_grid_listitem_name',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => __( 'Name', 'uix-shortcodes' ),
-				'class'          => 'dynamic-row-uix_sc_team_col4_listitem_name', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_team_grid_listitem_name', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'text'
 			
 			),
 			
 			array(
-				'id'             => 'uix_sc_team_col4_listitem_position',
+				'id'             => 'uix_sc_team_grid_listitem_position',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => __( 'Position', 'uix-shortcodes' ),
-				'class'          => 'dynamic-row-uix_sc_team_col4_listitem_position', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_team_grid_listitem_position', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'text'
 			
@@ -142,11 +157,11 @@ $args =
 			
 			
 			array(
-				'id'             => 'uix_sc_team_col4_listitem_intro',
+				'id'             => 'uix_sc_team_grid_listitem_intro',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => __( 'The Introduction of this member.', 'uix-shortcodes' ),
-				'class'          => 'dynamic-row-uix_sc_team_col4_listitem_intro', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_team_grid_listitem_intro', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'textarea',
 				'default'        => array(
@@ -159,26 +174,26 @@ $args =
 	
 			//------toggle begin
 			array(
-				'id'             => 'uix_sc_team_col4_listitem_toggle',
+				'id'             => 'uix_sc_team_grid_listitem_toggle',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_team_col4_listitem_toggle', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_team_grid_listitem_toggle', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'toggle',
 				'default'        => array(
 										'btn_text'      => __( 'set up links with social network', 'uix-shortcodes' ),
-										'toggle_class'  => [ 'dynamic-row-uix_sc_team_col4_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_col4_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_col4_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_col4_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_col4_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_col4_listitem_toggle_3_icon' ]
+										'toggle_class'  => [ 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon' ]
 									)
 			
 			),	
 	
 				array(
-					'id'             => 'uix_sc_team_col4_listitem_toggle_1_url',
+					'id'             => 'uix_sc_team_grid_listitem_toggle_1_url',
 					'title'          => '',
 					'desc'           => '',
 					'value'          => '',
-					'class'          => 'toggle-row dynamic-row-uix_sc_team_col4_listitem_toggle_1_url', /*class of toggle item */
+					'class'          => 'toggle-row dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', /*class of toggle item */
 					'placeholder'    => __( 'Your Social Network Page URL 1', 'uix-shortcodes' ),
 					'type'           => 'text',
 					'default'        => ''
@@ -186,11 +201,11 @@ $args =
 				),
 				
 				array(
-					'id'             => 'uix_sc_team_col4_listitem_toggle_1_icon',
+					'id'             => 'uix_sc_team_grid_listitem_toggle_1_icon',
 					'title'          => '',
 					'desc'           => '',
 					'value'          => '',
-					'class'          => 'toggle-row dynamic-row-uix_sc_team_col4_listitem_toggle_1_icon',/*class of toggle item */
+					'class'          => 'toggle-row dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon',/*class of toggle item */
 					'placeholder'    => __( 'Choose Social Icon 1', 'uix-shortcodes' ),
 					'type'           => 'icon',
 					'default'        => array(
@@ -201,11 +216,11 @@ $args =
 				
 				
 				array(
-					'id'             => 'uix_sc_team_col4_listitem_toggle_2_url',
+					'id'             => 'uix_sc_team_grid_listitem_toggle_2_url',
 					'title'          => '',
 					'desc'           => '',
 					'value'          => '',
-					'class'          => 'toggle-row dynamic-row-uix_sc_team_col4_listitem_toggle_2_url', /*class of toggle item */
+					'class'          => 'toggle-row dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', /*class of toggle item */
 					'placeholder'    => __( 'Your Social Network Page URL 2', 'uix-shortcodes' ),
 					'type'           => 'text',
 					'default'        => ''
@@ -213,11 +228,11 @@ $args =
 				),
 				
 				array(
-					'id'             => 'uix_sc_team_col4_listitem_toggle_2_icon',
+					'id'             => 'uix_sc_team_grid_listitem_toggle_2_icon',
 					'title'          => '',
 					'desc'           => '',
 					'value'          => '',
-					'class'          => 'toggle-row dynamic-row-uix_sc_team_col4_listitem_toggle_2_icon',/*class of toggle item */
+					'class'          => 'toggle-row dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon',/*class of toggle item */
 					'placeholder'    => __( 'Choose Social Icon 2', 'uix-shortcodes' ),
 					'type'           => 'icon',
 					'default'        => array(
@@ -228,11 +243,11 @@ $args =
 					
 				
 				array(
-					'id'             => 'uix_sc_team_col4_listitem_toggle_3_url',
+					'id'             => 'uix_sc_team_grid_listitem_toggle_3_url',
 					'title'          => '',
 					'desc'           => '',
 					'value'          => '',
-					'class'          => 'toggle-row dynamic-row-uix_sc_team_col4_listitem_toggle_3_url', /*class of toggle item */
+					'class'          => 'toggle-row dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', /*class of toggle item */
 					'placeholder'    => __( 'Your Social Network Page URL 3', 'uix-shortcodes' ),
 					'type'           => 'text',
 					'default'        => ''
@@ -240,11 +255,11 @@ $args =
 				),
 				
 				array(
-					'id'             => 'uix_sc_team_col4_listitem_toggle_3_icon',
+					'id'             => 'uix_sc_team_grid_listitem_toggle_3_icon',
 					'title'          => '',
 					'desc'           => '',
 					'value'          => '',
-					'class'          => 'toggle-row dynamic-row-uix_sc_team_col4_listitem_toggle_3_icon',/*class of toggle item */
+					'class'          => 'toggle-row dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon',/*class of toggle item */
 					'placeholder'    => __( 'Choose Social Icon 3', 'uix-shortcodes' ),
 					'type'           => 'icon',
 					'default'        => array(
@@ -287,12 +302,12 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		
 		
 		/* List Item ( step 1) */
-		var dynamic_append_box_content = '<?php echo UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_avatar', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_name', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_position', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_intro', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_toggle', $form_html, 'toggle' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_toggle_1_url', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_toggle_1_icon', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_toggle_2_url', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_toggle_2_icon', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_toggle_3_url', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_col4_listitem_toggle_3_icon', $form_html, 'toggle-row' ); ?>';
+		var dynamic_append_box_content = '<?php echo UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_avatar', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_name', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_position', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_intro', $form_html ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle', $form_html, 'toggle' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', $form_html, 'toggle-row' ).UixShortcodes::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon', $form_html, 'toggle-row' ); ?>';
 			
 		
 		
 		 /* Callback before custom javascript of sweetalert */
-		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Insert Team (4 Column)', 'uix-shortcodes' ) ); ?>
+		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Insert Team Grid', 'uix-shortcodes' ) ); ?>
 		
 		        
 				/* List Item ( step 2)  */
@@ -303,16 +318,16 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				for ( var i=0; i<=list_num; i++ ){
 					
 			        var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-					    _avatar = $( _uid+'uix_sc_team_col4_listitem_avatar' ).val(),
-					    _name = $( _uid+'uix_sc_team_col4_listitem_name' ).val(),
-						_position = $( _uid+'uix_sc_team_col4_listitem_position' ).val(),
-						_desc = $( _uid+'uix_sc_team_col4_listitem_intro' ).val(),
-					    _social_url_1 = $( _uid+'uix_sc_team_col4_listitem_toggle_1_url' ).val(),
-						_social_icon_1 = $( _uid+'uix_sc_team_col4_listitem_toggle_1_icon' ).val(),
-					    _social_url_2 = $( _uid+'uix_sc_team_col4_listitem_toggle_2_url' ).val(),
-						_social_icon_2 = $( _uid+'uix_sc_team_col4_listitem_toggle_2_icon' ).val(),
-					    _social_url_3 = $( _uid+'uix_sc_team_col4_listitem_toggle_3_url' ).val(),
-						_social_icon_3 = $( _uid+'uix_sc_team_col4_listitem_toggle_3_icon' ).val();
+					    _avatar = $( _uid+'uix_sc_team_grid_listitem_avatar' ).val(),
+					    _name = $( _uid+'uix_sc_team_grid_listitem_name' ).val(),
+						_position = $( _uid+'uix_sc_team_grid_listitem_position' ).val(),
+						_desc = $( _uid+'uix_sc_team_grid_listitem_intro' ).val(),
+					    _social_url_1 = $( _uid+'uix_sc_team_grid_listitem_toggle_1_url' ).val(),
+						_social_icon_1 = $( _uid+'uix_sc_team_grid_listitem_toggle_1_icon' ).val(),
+					    _social_url_2 = $( _uid+'uix_sc_team_grid_listitem_toggle_2_url' ).val(),
+						_social_icon_2 = $( _uid+'uix_sc_team_grid_listitem_toggle_2_icon' ).val(),
+					    _social_url_3 = $( _uid+'uix_sc_team_grid_listitem_toggle_3_url' ).val(),
+						_social_icon_3 = $( _uid+'uix_sc_team_grid_listitem_toggle_3_icon' ).val();
 						
 						
 						
@@ -331,7 +346,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				
 					
 					if ( _name != undefined ) {
-						show_list_item += "<br>[uix_team_item col='4' name='"+_item_v_name+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
+						show_list_item += "<br>[uix_team_item col='"+uix_sc_team_grid_listitem_col+"' name='"+uix_htmlencodeToShortcodeFormat( _item_v_name )+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
 						show_list_item += "<br>[uix_team_item_desc]"+ _item_v_desc +"[/uix_team_item_desc]";					
 						show_list_item += "<br>[/uix_team_item]";
 	
@@ -341,13 +356,13 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				}
 				
 				/* Height of grid */
-				var photobox_height = "avatarheight='"+uix_sc_team_col4_listitem_list_height+"px'";
-				if ( uix_sc_team_col4_listitem_list_height == 0 )  photobox_height = '';	
+				var photobox_height = "avatarheight='"+uix_sc_team_grid_listitem_list_height+"px'";
+				if ( uix_sc_team_grid_listitem_list_height == 0 )  photobox_height = '';	
 
 
 	
 	
-				window.send_to_editor( "[uix_team col='4' "+photobox_height+" avatarfillet='"+uix_sc_team_col4_listitem_avatar_fillet+"%' gray='"+uix_sc_team_col4_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]" );
+				window.send_to_editor( "[uix_team col='"+uix_sc_team_grid_listitem_col+"' "+photobox_height+" avatarfillet='"+uix_sc_team_grid_listitem_avatar_fillet+"%' gray='"+uix_sc_team_grid_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]" );
 				
 				
 				

@@ -99,26 +99,10 @@
 					}
 					
 					
-					//Fix Sweet Alert top			
-					var ah = ( jQuery( document.body ).height() - jQuery( '.sweet-alert' ).height() )/2,
-					    ad = jQuery( document.body ).height()*0.67,
-						mt = 200;
-					
-					if ( sweetWrapperinnerHeight < ad && jQuery( document.body ).height() >=560 ) {
-						
-						var dis = ad - sweetWrapperinnerHeight;
-						
-						
-						if ( dis >= 1 && dis < 40 ) mt = mt + 120;
-						if ( dis >= 40 && dis < 60 ) mt = mt + 85;
-						if ( dis >= 60 && dis < 120 ) mt = mt + 45;
-						if ( dis >= 120 && dis < 150 ) mt = mt + 75;
-						
-						
-						jQuery( '.sweet-alert' ).animate( { top: ah + mt + "px" }, 300 );
-					}
-				    
-					
+					//Fix Sweet Alert position of top
+					$( document ).uix_fixedWinTop( { oheight: sweetWrapperinnerHeight } );
+	
+				  
 					 
 					//focus
 					var srow = '.sweet-alert .dynamic-row';
@@ -289,27 +273,10 @@
 					}
 					
 					
-					//Fix Sweet Alert top			
-					var ah = ( jQuery( document.body ).height() - jQuery( '.sweet-alert' ).height() )/2,
-							ad = jQuery( document.body ).height()*0.67,
-							mt = 200;
-						
-						if ( sweetWrapperinnerHeight < ad && jQuery( document.body ).height() >=560 ) {
-							
-							var dis = ad - sweetWrapperinnerHeight;
-							
-							if ( dis >= 1 && dis < 40 ) mt = mt + 120;
-							if ( dis >= 40 && dis < 60 ) mt = mt + 75;
-							if ( dis >= 60 && dis < 120 ) mt = mt + 45;
-							if ( dis >= 120 && dis < 150 ) mt = mt + 75;
-							
-							
-							jQuery( '.sweet-alert' ).animate( { top: ah + mt + "px" }, 300 );
-						}				
-						
-						
-					} );	
-	
+					//Fix Sweet Alert position of top
+					$( document ).uix_fixedWinTop( { oheight: sweetWrapperinnerHeight } );
+					
+				} );
 	
 	
 		  
@@ -397,11 +364,17 @@
 
 ( function( $ ) {
   jQuery.fn.uix_uploadMediaCustom = function( options ) {
-	   var settings = $.extend( {}, {open: false}, options );
+		var settings=$.extend( {
+			'prop': false
+		}
+		,options );
 		return this.each( function() {
 			
-				var upload_frame;
-				var value_id;
+				var upload_frame,
+				    value_id,
+					propIDPrefix = settings.btnID.replace( '#', '' );
+					
+					
 				jQuery( settings.btnID ).live( 'click',function( event ){
 					
 					var _targetImgContainer = jQuery( this ).attr( "data-insert-img" );
@@ -428,14 +401,28 @@
 						jQuery( "#" + _targetPreviewContainer ).show();
 						
 						//Upload container
-						if ( _targetPreviewContainer != '' && _targetPreviewContainer != 'none' )
+						if ( _targetPreviewContainer != '' && _targetPreviewContainer != 'none' ) {
 						    jQuery( settings.btnID ).parent( '.sweet-upbtn-container' ).css( 'height','150px' );
+						}
 						
 						
 						if ( settings.closebtnID ){
 							jQuery( settings.closebtnID ).show();
 						}
-
+						
+						//Fix Sweet Alert position of top
+						$( document ).uix_fixedWinTop( { oheight: jQuery( '.sweet-table-wrapper' ).innerHeight() + 24 } );		
+						
+						//Show image properties
+						if ( settings.prop ) {
+							jQuery( "." + propIDPrefix + '_repeat' ).show();
+							jQuery( "." + propIDPrefix + '_position' ).show();
+							jQuery( "." + propIDPrefix + '_attachment' ).show();
+							jQuery( "." + propIDPrefix + '_size' ).show();
+						
+	
+						}
+	
 						
 						
 					} );
@@ -456,11 +443,21 @@
 						jQuery( "#" + _targetPreviewContainer ).hide();
 						
 						//Upload container
-						if ( _targetPreviewContainer != '' && _targetPreviewContainer != 'none' )
+						if ( _targetPreviewContainer != '' && _targetPreviewContainer != 'none' ) {
 						    jQuery( settings.btnID ).parent( '.sweet-upbtn-container' ).css( 'height','40px' );
+						}
 						
 						
 						jQuery( this ).hide();
+						
+						//Hide image properties
+						if ( settings.prop ) {
+							jQuery( "." + propIDPrefix + '_repeat' ).hide();
+							jQuery( "." + propIDPrefix + '_position' ).hide();
+							jQuery( "." + propIDPrefix + '_attachment' ).hide();
+							jQuery( "." + propIDPrefix + '_size' ).hide();
+						}
+						
 						
 					} );		
 	 
@@ -865,4 +862,44 @@ function uix_htmlEncode( s ) {
                     });  
 };
 
+
+/*! 
+ * ************************************
+ * Fix Sweet Alert position of top	
+ *************************************
+ */	
+( function( $ ) {
+  jQuery.fn.uix_fixedWinTop = function( options ) {
+		var settings=$.extend( {
+			'oheight':0
+		}
+		,options );
+		return this.each( function() {
+			
+			var sweetWrapperinnerHeight = settings.oheight,
+				win = jQuery( '.sweet-alert' ),
+				ah = ( jQuery( document.body ).height() - win.height() )/2,
+				ad = jQuery( document.body ).height()*0.67,
+				mt = 200;
+			
+			if ( sweetWrapperinnerHeight < ad && jQuery( document.body ).height() >=560 ) {
+				
+				var dis = ad - sweetWrapperinnerHeight;
+				
+				
+				if ( dis >= 1 && dis < 40 ) mt = mt + 120;
+				if ( dis >= 40 && dis < 60 ) mt = mt + 85;
+				if ( dis >= 60 && dis < 120 ) mt = mt + 45;
+				if ( dis >= 120 && dis < 150 ) mt = mt + 75;
+				
+				
+				win.animate( { top: ah + mt + "px" }, 300 );
+			} 		
+				
+				
+		} );
+	
+	
+  };
+} )( jQuery );
 

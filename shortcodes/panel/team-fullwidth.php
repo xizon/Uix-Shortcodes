@@ -15,22 +15,6 @@ $form_type = [
 $args = 
 	[
 	
-	
-
-	
-		array(
-			'id'             => 'uix_sc_team_fullwidth_listitem_avatar_fillet',
-			'title'          => __( 'Radius of Fillet Avatar', 'uix-shortcodes' ),
-			'desc'           => '',
-			'value'          => '0',
-			'placeholder'    => '',
-			'type'           => 'short-text',
-			'default'        => array(
-									'units'  => '%'
-								)
-		
-		),	
-		
 		array(
 			'id'             => 'uix_sc_team_fullwidth_listitem_avatar_gray',
 			'title'          => __( 'Gray Avatar', 'uix-shortcodes' ),
@@ -44,7 +28,20 @@ $args =
 		
 		
 		),	
+
+		array(
+			'id'             => 'uix_sc_team_fullwidth_listitem_avatar_fillet',
+			'title'          => __( 'Radius of Fillet Avatar', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '0',
+			'placeholder'    => '',
+			'type'           => 'short-text',
+			'default'        => array(
+									'units'  => '%'
+								)
 		
+		),	
+	
 		
 		array(
 			'id'             => 'uix_sc_team_fullwidth_listitem_list_height',
@@ -294,7 +291,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		
 		
 		 /* Callback before custom javascript of sweetalert */
-		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Insert Team (fullwidth)', 'uix-shortcodes' ) ); ?>
+		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Insert Team Fullwidth', 'uix-shortcodes' ) ); ?>
 		
 		        
 				/* List Item ( step 2)  */
@@ -333,7 +330,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				
 					
 					if ( _name != undefined ) {
-						show_list_item += "<br>[uix_team_item col='fullwidth' name='"+_item_v_name+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
+						show_list_item += "<br>[uix_team_item col='fullwidth' name='"+uix_htmlencodeToShortcodeFormat( _item_v_name )+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
 						show_list_item += "<br>[uix_team_item_desc]"+ _item_v_desc +"[/uix_team_item_desc]";					
 						show_list_item += "<br>[/uix_team_item]";
 	

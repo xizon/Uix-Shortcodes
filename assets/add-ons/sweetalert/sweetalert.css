@@ -90,8 +90,24 @@ body.stop-scrolling {
 	font-size:12px;
 	padding:7px 0;
 	color:#AF7342;
+	display:block;
+	clear:both;
+	width:780px;
 	
 }
+
+.sweet-alert .info.info-checkbox{
+	position:absolute;
+	top:2px;
+	left:30px;
+}
+
+.sweet-table-cols-wrapper .info,
+.sweet-alert .info.info-margin{
+	width:auto;
+}
+
+
 
 /* Code */
 .sweet-alert code{
@@ -147,7 +163,9 @@ body.stop-scrolling {
 
 .sweet-alert .radio{
 	height:30px;
-	display:inline-block;	
+	display:inline-block;
+	max-width:780px;
+	margin-left:-4px;
 }
 .sweet-alert .radio span{
 	display:inline-block;
@@ -1054,7 +1072,7 @@ body.stop-scrolling {
 
 .sweet-table tr th{
   width:150px;
-  font-size:14px;
+  font-size:13px;
   font-weight:normal;
   vertical-align:top;
   padding-top:7px;
@@ -1062,6 +1080,7 @@ body.stop-scrolling {
   text-align:left;
   line-height:15px;
   min-height:45px;
+  letter-spacing:-0.2px;
   
 }
 
@@ -1260,6 +1279,11 @@ body.stop-scrolling {
 		width:650px;
 	}
 	
+	/* Radio */
+	.sweet-alert .radio{
+		max-width:650px;
+	}
+	
 	
 	/* Delete Block From Full Table
 	-------------------------------------------------------------- */
@@ -1303,12 +1327,27 @@ body.stop-scrolling {
 		
 	 }
 		 
-	/*Upload*/
+	/*Upload*/	
+	
 	.sweet-alert .sweet-upbtn-container:before {
 		width:615px;
 	}
 	 
-		 
+	/* Note */
+	.sweet-alert .info{
+		width:615px;
+	}
+	
+	.sweet-table-cols-wrapper .info,
+	.sweet-alert .info.info-margin{
+		width:auto;
+	}
+		
+	 
+	/* Radio */
+	.sweet-alert .radio{
+		max-width:615px;
+	}
 	
 	 
 	/* Table Column List
@@ -1357,6 +1396,22 @@ body.stop-scrolling {
 		 margin-left:-250px;
 		 
 	 }
+		 
+	/* Note */
+	.sweet-alert .info{
+		width:265px;  
+	}	
+	
+	.sweet-table-cols-wrapper .info,
+	.sweet-alert .info.info-margin{
+		width:auto;
+	}
+	
+	/* Radio */
+	.sweet-alert .radio{
+		max-width:265px;
+	}
+	 
 		 
      /* Input & Textarea*/
 	.sweet-alert .sweet-input-text
@@ -1500,6 +1555,21 @@ body.stop-scrolling {
 		  left: 15px;
 		  right: 15px; 
 	 } 
+	 
+	/* Note */
+	.sweet-alert .info{
+		width:260px;  
+	}	
+	
+	.sweet-table-cols-wrapper .info,
+	.sweet-alert .info.info-margin{
+		width:auto;
+	}
+	 
+	/* Radio */
+	.sweet-alert .radio{
+		max-width:260px;
+	} 
 	 
 
      /* Input & Textarea*/

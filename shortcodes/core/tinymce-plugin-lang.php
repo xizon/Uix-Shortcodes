@@ -23,7 +23,7 @@ function uix_sc_custom_tinymce_plugin_translation() {
 		'lang_8' => __( 'Tabs', 'uix-shortcodes' ),
 		'lang_9' => __( 'Team', 'uix-shortcodes' ),
 		'lang_10' => __( 'Team Full Width', 'uix-shortcodes' ),
-		'lang_11' => __( 'Team 4 Column', 'uix-shortcodes' ),
+		'lang_11' => __( 'Team Grid', 'uix-shortcodes' ),
 		'lang_12' => __( 'Features', 'uix-shortcodes' ),
 		'lang_13' => __( 'Features 2 Column', 'uix-shortcodes' ),
 		'lang_14' => __( 'Features 3 Column', 'uix-shortcodes' ),
@@ -43,6 +43,9 @@ function uix_sc_custom_tinymce_plugin_translation() {
 		'lang_28' => __( 'Google Map', 'uix-shortcodes' ),
 		'lang_29' => __( 'Contact Form', 'uix-shortcodes' ),
 		'lang_30' => __( 'Code', 'uix-shortcodes' ),
+		'lang_31' => __( 'Portfolio', 'uix-shortcodes' ),
+		'lang_32' => __( 'Container', 'uix-shortcodes' ),
+		'lang_33' => __( 'Progress Bar', 'uix-shortcodes' ),
 		
 		
 		

@@ -140,7 +140,7 @@ $args =
 		
 		array(
 			'id'             => 'uix_sc_btn_target',
-			'title'          => __( 'Open Link in New Window', 'uix-shortcodes' ),
+			'title'          => __( 'Open link in new tab', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
 			'placeholder'    => '',

@@ -11,6 +11,197 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
 
         <ul class="uix-documentation">
 
+
+                <li>
+                    <h2><?php _e( 'Container Builder', 'uix-shortcodes' ); ?></h2>
+                   <div class="uix-documentation-content" >
+  
+                           <p><?php _e( 'This shortcode required when you create content as container or mark the specific content. It allows you use 100% width, background customization, color diversification, parallax background, banner or header customization, and so on.', 'uix-shortcodes' ); ?><br>
+
+<strong>"<?php _e( 'Content Shortcode', 'uix-shortcodes' ); ?>"</strong>, <strong>"<?php _e( 'Column Shortcode', 'uix-shortcodes' ); ?>"</strong>, <strong>"<?php _e( 'Web Elements Shortcode', 'uix-shortcodes' ); ?>"</strong> and <strong>"<?php _e( 'Container Shortcode', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'could be used together to divide the page into sections.', 'uix-shortcodes' ); ?>
+
+                            </p>
+                            
+                            <div class="uix-d-tabs">
+                                <h3><?php _e( 'Admin Screenshots', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-container-1.jpg" alt="" />
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-container-2.jpg" alt="" />
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-container-3.jpg" alt="" />
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-container-5.jpg" alt="" />
+                                    
+                                </div>
+
+                                
+                                <h3 class="arg">Options</h3>
+                                <div>
+                                    <div class="uix-table-all">
+                                        <table>
+                                            <tr>
+                                                <th><?php _e( 'Name', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Type', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Default', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Description', 'uix-shortcodes' ); ?></th>
+                                            </tr>
+                         
+                            
+                                            <tr>
+                                                <td><?php _e( 'Choose Layout', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-container-4.jpg" alt="" /></td>
+                                                <td><?php _e( 'This option will be useful if you use 100% width page template. Otherwise, the container will be center.', 'uix-shortcodes' ); ?><br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-container-6.jpg" alt="" /></td>
+                                            </tr>  
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Width', 'uix-shortcodes' ); ?> (px)<?php _e( 'Period', 'uix-shortcodes' ); ?><span class="depend"><?php _e( 'depends on', 'uix-shortcodes' ); ?> <code><?php _e( 'Choose Layout', 'uix-shortcodes' ); ?></code> <?php _e( 'option', 'uix-shortcodes' ); ?></span></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>1200</td>
+                                                <td><?php _e( 'It will determine the width of the container in pixels if the', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'Choose Layout', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'value is', 'uix-shortcodes' ); ?> <code>center</code> .</td>
+                                            </tr>  
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Height', 'uix-shortcodes' ); ?> (px)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>0</td>
+                                                <td><?php _e( 'It will determine the height of the container in pixels. The browser automatically calculates the container height if the value is', 'uix-shortcodes' ); ?> <code>0</code>.</td>
+                                            </tr>  
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Background Image', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Background image URL. The CSS properties for the background appear after upload.', 'uix-shortcodes' ); ?><br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-container-7.jpg" alt="" />
+                                                </td>
+                                            </tr>                                    
+                                           
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Background Color', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Set a color for the container background. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
+                                            </tr>      
+                                           
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Parallax', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>0</td>
+                                                <td><?php _e( 'Add a parallax scrolling effect of the container on your pages. You need value', 'uix-shortcodes' ); ?> > 0.</td>
+                                            </tr>         
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Class', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Additional class for container.', 'uix-shortcodes' ); ?></td>
+                                            </tr>  
+                                            
+                            
+                                            <tr>
+                                                <td><?php _e( 'Wrapper Margin', 'uix-shortcodes' ); ?> (px)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>margin-top:<code>25</code>px<br>margin-bottom:<code>25</code>px<br>margin-left:<code>0</code><br>margin-right:<code>0</code><br> </td>
+                                                <td><?php _e( 'Use the input fields below to customize the margin of container wrapper.', 'uix-shortcodes' ); ?></td>
+                                            </tr>  
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Content Padding', 'uix-shortcodes' ); ?> (px)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>padding-top:<code>0</code>px<br>padding-bottom:<code>0</code>px<br>padding-left:<code>25</code><br>padding-right:<code>25</code><br> </td>
+                                                <td><?php _e( 'Use the input fields below to customize the padding of content from container.', 'uix-shortcodes' ); ?></td>
+                                            </tr>  
+                                                                               
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Border', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
+                                                <td>false</td>
+                                                <td><?php _e( 'When enabled, it will add a custom border for container.', 'uix-shortcodes' ); ?></td>
+                                            </tr> 
+                                            
+                                            
+                                            <tr>
+                                                <td colspan="4">
+                                                <p>
+                                                <?php _e( 'To set up the following properties, the ', 'uix-shortcodes' ); ?><strong class="txt">"<?php _e( 'Border', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'checkbox should be checked.', 'uix-shortcodes' ); ?>
+                                                </p>
+                                             
+                                               </td>
+                                            </tr>        
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Border Width', 'uix-shortcodes' ); ?> (px)<span class="depend"><?php _e( 'depends on', 'uix-shortcodes' ); ?> <code><?php _e( 'Border', 'uix-shortcodes' ); ?></code> <?php _e( 'option', 'uix-shortcodes' ); ?></span></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>1</td>
+                                                <td><?php _e( 'It will determine the width of the container border in pixels.', 'uix-shortcodes' ); ?></td>
+                                            </tr>    
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Border Color', 'uix-shortcodes' ); ?><span class="depend"><?php _e( 'depends on', 'uix-shortcodes' ); ?> <code><?php _e( 'Border', 'uix-shortcodes' ); ?></code> <?php _e( 'option', 'uix-shortcodes' ); ?></span></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Set a color for the container border. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
+                                            </tr>                                             
+                                           
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Border Style', 'uix-shortcodes' ); ?><span class="depend"><?php _e( 'depends on', 'uix-shortcodes' ); ?> <code><?php _e( 'Border', 'uix-shortcodes' ); ?></code> <?php _e( 'option', 'uix-shortcodes' ); ?></span></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>solid</td> 
+                                                <td><?php _e( 'The option allows you to specify the style of a container border. The following values are allowed:', 'uix-shortcodes' ); ?> <code>solid</code>, <code>double</code>, <code>dashed</code>, <code>dotted</code>.</td>
+                                            </tr> 
+                                           
+                                          
+                                           
+                                             
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                
+                                <h3><?php _e( 'Example', 'uix-shortcodes' ); ?></h3>
+                                <div>
+<pre class="brush: css;">
+&nbsp;
+[uix_container parallax='0.2' class='' height='350px' margin_top='25' margin_bottom='25' margin_left='0' margin_right='0' padding_top='70' padding_bottom='0' padding_left='45' padding_right='45' bgimage='http://your.website.com/test-img.jpg' bgimage_repeat='no-repeat' bgimage_position='left' bgimage_attachment='scroll' bgimage_size='cover' bgcolor='' layout='fullwidth' ]
+&lt;h2&gt;&lt;span style="color: #ffffff;"&gt;Section Title&lt;/span&gt;&lt;/h2&gt;
+&lt;span style="color: #ffffff;"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Teneo, inquit, finem illi videri nihil dolere. Esse enim, nisi eris, non potes.&lt;/span&gt;
+
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Try It[/uix_button]
+
+[/uix_container]
+
+[uix_container parallax='0' class='' height='auto' margin_top='25' margin_bottom='25' margin_left='0' margin_right='0' padding_top='40' padding_bottom='40' padding_left='125' padding_right='125' borderwidth='3px' borderstyle='solid' bordercolor='rgb(226, 226, 226)' bgcolor='rgb(234, 234, 234)' layout='fullwidth' ]
+&lt;h4 style="text-align: center;"&gt;Center Text &amp; Auto Height&lt;/h4&gt;
+&lt;p style="text-align: center;"&gt;[uix_dividing_line style='gradient' color='dark' width='100%' opacity='17']&lt;/p&gt;
+
+&lt;h6 style="text-align: center;"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Teneo, inquit, finem illi videri nihil dolere. Esse enim, nisi eris, non potes. Cum audissem Antiochum, Brute, ut solebam, cum M. Dolor ergo, id est summum malum, metuetur semper, etiamsi non aderit; Duo Reges: constructio interrete. Nam si propter voluptatem, quae est ista laus, quae possit e macello peti? Respondeat totidem verbis. Sic enim censent, oportunitatis esse beate vivere.&lt;/h6&gt;
+[/uix_container]
+&nbsp;
+&nbsp;
+</pre>
+                                </div>
+                                
+                      
+                                
+                                       
+                                <h3><?php _e( 'Preview', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                   <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-container-8.jpg" alt="" />
+                                </div>
+                                   
+                                
+                            </div><!-- .uix-d-tabs -->
+
+                    </div> <!-- /.uix-documentation-content -->
+                </li>                    
+                
+                
+                
+
                 <li>
                     <h2><?php _e( 'Content Builder', 'uix-shortcodes' ); ?></h2>
                    <div class="uix-documentation-content" >
@@ -92,7 +283,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-2.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
             
             
 
@@ -186,15 +377,15 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                             <tr>
                                                 <td><?php _e( 'Button Color', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
-                                                <td><img src="<?php echo $imgpath; ?>sc-preview-content-8.jpg" alt="" /></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-elements-13.jpg" alt="" /></td>
                                                 <td><?php _e( 'You want for the text color of price.', 'uix-shortcodes' ); ?></td>
                                             </tr>   
    
                                             <tr>
-                                                <td><?php _e( 'Open in New Window', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Open in new tab', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
                                                 <td>false</td>
-                                                <td><?php _e( 'When enabled, the button link to open in a new window.', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'When enabled, the button link to open in a new tab.', 'uix-shortcodes' ); ?></td>
                                             </tr>
                                             
                                             <tr>
@@ -303,7 +494,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-5.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-6.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
             
                        
                        </div><!-- /.uix-list-content -->
@@ -340,7 +531,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td><?php _e( 'Transition Effect', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a Number', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td>1</td>
-                                                <td><?php _e( 'Controls the animation type, ', 'uix-shortcodes' ); ?><code>slide</code> or <code>none</code>. </td>
+                                                <td><?php _e( 'Controls the animation type. The following values are allowed:', 'uix-shortcodes' ); ?><code>slide</code>, <code>none</code>. </td>
                                             </tr> 
                                             
                                             
@@ -355,7 +546,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Per group contains custom title and content within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
+                                                <td><?php _e( 'Per group contains <code>Accordion Title</code> and <code>Accordion Content</code> within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.<br>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-11.jpg" alt="" />
                                                 </td>
@@ -395,7 +586,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-10.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        </div><!-- /.uix-list-content -->
                        
@@ -432,14 +623,14 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td><?php _e( 'Transition Effect', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a Number', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td>3</td>
-                                                <td><?php _e( 'Controls the animation type, ', 'uix-shortcodes' ); ?><code>slide</code>, <code>fade</code> or <code>none</code>.</td>
+                                                <td><?php _e( 'Controls the animation type. The following values are allowed:', 'uix-shortcodes' ); ?><code>slide</code>, <code>fade</code>, <code>none</code>.</td>
                                             </tr> 
                             
                                             <tr>
                                                 <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Per group contains title and content within each sub-group. The textarea is supported by HTML tags.', 'uix-shortcodes' ); ?><br>
+                                                <td><?php _e( 'Per group contains <code>Tab Title</code> and <code>Tab Content</code> within each sub-group. The textarea is supported by HTML tags.', 'uix-shortcodes' ); ?><br>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.<br>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-14.jpg" alt="" />
                                                 </td>
@@ -457,14 +648,29 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                 <div>
 <pre class="brush: css;">
 &nbsp;
-[uix_toggle tabs='1' effect='3']
+[uix_toggle style='vertical' tabs='1' effect='2']
 [uix_toggle_item tabs='1']
 [uix_toggle_item_title]Tab Title 1[/uix_toggle_item_title]
 [uix_toggle_item_title]Tab Title 2[/uix_toggle_item_title]
+[uix_toggle_item_title]Tab Title 3[/uix_toggle_item_title]
 [/uix_toggle_item]
 [uix_toggle_group]
-[uix_toggle_item_content][p]This is content 1 of the tab.[/p][/uix_toggle_item_content]
-[uix_toggle_item_content][p]This is content 2 of the tab.[/p][/uix_toggle_item_content]
+[uix_toggle_item_content][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duarum enim vitarum nobis erunt instituta capienda. Tamen aberramus a proposito, et, ne longius, prorsus, inquam, Piso, si ista mala sunt, placet. Quae fere omnia appellantur uno ingenii nomine, easque virtutes qui habent, ingeniosi vocantur. Ut proverbia non nulla veriora sint quam vestra dogmata.[/p][/uix_toggle_item_content]
+[uix_toggle_item_content][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duarum enim vitarum nobis erunt instituta capienda. Tamen aberramus a proposito, et, ne longius, prorsus, inquam, Piso, si ista mala sunt, placet. Quae fere omnia appellantur uno ingenii nomine, easque virtutes qui habent, ingeniosi vocantur. Ut proverbia non nulla veriora sint quam vestra dogmata. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Duo Reges: constructio interrete. Obsecro, inquit, Torquate, haec dicit Epicurus? Sunt enim prima elementa naturae, quibus auctis vírtutis quasi germen efficitur.[/p][/uix_toggle_item_content]
+[uix_toggle_item_content][p]Obsecro, inquit, Torquate, haec dicit Epicurus? Sunt enim prima elementa naturae, quibus auctis vírtutis quasi germen efficitur.[/p][/uix_toggle_item_content]
+[/uix_toggle_group]
+[/uix_toggle]
+
+[uix_toggle  style='horizontal' tabs='1' effect='1']
+[uix_toggle_item tabs='1']
+[uix_toggle_item_title]Tab Title 1[/uix_toggle_item_title]
+[uix_toggle_item_title]Tab Title 2[/uix_toggle_item_title]
+[uix_toggle_item_title]Tab Title 3[/uix_toggle_item_title]
+[/uix_toggle_item]
+[uix_toggle_group]
+[uix_toggle_item_content][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duarum enim vitarum nobis erunt instituta capienda. Tamen aberramus a proposito, et, ne longius, prorsus, inquam, Piso, si ista mala sunt, placet. Quae fere omnia appellantur uno ingenii nomine, easque virtutes qui habent, ingeniosi vocantur. Ut proverbia non nulla veriora sint quam vestra dogmata.[/p][/uix_toggle_item_content]
+[uix_toggle_item_content][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duarum enim vitarum nobis erunt instituta capienda. Tamen aberramus a proposito, et, ne longius, prorsus, inquam, Piso, si ista mala sunt, placet. Quae fere omnia appellantur uno ingenii nomine, easque virtutes qui habent, ingeniosi vocantur. Ut proverbia non nulla veriora sint quam vestra dogmata. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Duo Reges: constructio interrete. Obsecro, inquit, Torquate, haec dicit Epicurus? Sunt enim prima elementa naturae, quibus auctis vírtutis quasi germen efficitur.[/p][/uix_toggle_item_content]
+[uix_toggle_item_content][p]Obsecro, inquit, Torquate, haec dicit Epicurus? Sunt enim prima elementa naturae, quibus auctis vírtutis quasi germen efficitur.[/p][/uix_toggle_item_content]
 [/uix_toggle_group]
 [/uix_toggle]
 &nbsp;
@@ -475,9 +681,179 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-13.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        </div><!-- /.uix-list-content -->
+                       
+                       
+                       
+                       <!-- ````````````````````````````````````````````````````````````````` -->
+                       
+                       <div class="uix-list-title"><?php _e( 'Portfolio', 'uix-shortcodes' ); ?></div>
+                       <div class="uix-list-content">
+                           <p><?php _e( 'This shortcode allows you to easily present portfolio section. The shortcode will display projects in different ways, depending on how you use the optional attributes to customize the portfolio layout. ', 'uix-shortcodes' ); ?><br><?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to unlimited add items.', 'uix-shortcodes' ); ?> <?php _e( 'Upload a thumbnail as cover. You can also upload a full preview image that it is an optional choice. ', 'uix-shortcodes' ); ?><?php _e( 'To set up the project destination URL by clicking ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'set up destination URL with this project', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link on the content of the popup window.', 'uix-shortcodes' ); ?><br>
+                           
+                            </p>
+                            
+                            <div class="uix-d-tabs">
+                                <h3><?php _e( 'Admin Screenshots', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-43.jpg" alt="" />
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-44.jpg" alt="" />
+                                </div>
+
+                                
+                                <h3 class="arg"><?php _e( 'Options', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                    <div class="uix-table-all">
+                                        <table>
+                                            <tr>
+                                                <th><?php _e( 'Name', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Type', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Default', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Description', 'uix-shortcodes' ); ?></th>
+                                            </tr>
+                         
+                                            <tr>
+                                                <td><?php _e( 'Column', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>3</td>
+                                                <td><?php _e( 'Way of a grid list for presenting homogenous data and typically images. Allows 2, 3 and 4 columns across the page.', 'uix-shortcodes' ); ?></td>
+                                            </tr> 
+                         
+                                            <tr>
+                                                <td><?php _e( 'Filterable by Category', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
+                                                <td>false</td>
+                                                <td><?php _e( 'When enabled, you can add a filterable portfolio to your site to showcase your content. If a particular category is selected, the list of projects is instantly regenerated with a new list of projects from the selected category. <br><em>Note: you need fill the <strong class="txt">"Category Name"</strong> input for per project.</em><br>', 'uix-shortcodes' ); ?>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-45.jpg" alt="" />
+
+
+</td>
+                                            </tr>                  
+                         
+                                            <tr>
+                                                <td><?php _e( 'Open link in new tab', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
+                                                <td>false</td>
+                                                <td><?php _e( 'When enabled, the project destination link to open in a new tab.', 'uix-shortcodes' ); ?>
+                                                <br><em><?php _e( 'This option is valid when you use ', 'uix-shortcodes' ); ?><strong class="txt">"<?php _e( 'Destination URL', 'uix-shortcodes' ); ?>"</strong>.</em><br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-48.jpg" alt="" />
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Radius of Fillet Image', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>0</td>
+                                                <td><?php _e( 'To set the fillet radius in pixels for project picture.', 'uix-shortcodes' ); ?></td>
+                                            </tr> 
+                                            
+                         
+                                            <tr>
+                                                <td><?php _e( 'Class Prefix', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>uix-sc-portfolio-</td>
+                                                <td><?php _e( 'Prefix string attached to the classes of all elements generated by the portfolio, the default value is ', 'uix-shortcodes' ); ?><strong>"uix-sc-portfolio-"</strong>.
+                                                <br>
+                                                <blockquote class="info">
+<pre class="sc-code">/*-- <?php _e( 'Example generated elements class name', 'uix-shortcodes' ); ?> --*/
+
+.<em class="normal">uix-sc-portfolio-</em>tiles { ... }
+.<em class="normal">uix-sc-portfolio-</em>tiles .<em class="normal">uix-sc-portfolio-</em>item { ... }
+.<em class="normal">uix-sc-portfolio-</em>tiles .<em class="normal">uix-sc-portfolio-</em>item > .<em class="normal">uix-sc-portfolio-</em>image { ... }
+.<em class="normal">uix-sc-portfolio-</em>tiles .<em class="normal">uix-sc-portfolio-</em>item > .<em class="normal">uix-sc-portfolio-</em>image img { ... }
+...
+</pre>
+</blockquote>                                          
+                                                </td>
+                                            </tr>     
+                                            
+                         
+
+                                            <tr>
+                                                <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Per group contains <code>Thumbnail</code>, <code>Full Preview</code>, <code>Project Title</code>, <code>Category Name</code>, <code>Description of Project</code> and <code>Destination URL</code> within each sub-group. Upload a thumbnail as cover. You can also upload a full preview image that it is an optional choice. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
+                                                <?php _e( 'You can click ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item.', 'uix-shortcodes' ); ?> <br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-47.jpg" alt="" /><br>
+                                                <?php _e( 'To set up the project destination URL by clicking ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'set up destination URL with this project', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link on the content of the popup window.', 'uix-shortcodes' ); ?><br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-46.jpg" alt="" /><br>
+                                                
+                                                </td>
+                                            </tr>  
+                                           
+                                          
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                             
+                                <h3><?php _e( 'Example (3, 4 and 2 col)', 'uix-shortcodes' ); ?></h3>
+                                <div>
+<pre class="brush: css;">
+&nbsp;
+[uix_portfolio filterable='1' classprefix='uix-sc-portfolio-' col='3' imagefillet='0%']
+[uix_portfolio_item type='Web Design' title='Project Title 1' image='http://your.website.com/list-demo-3.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso igitur hoc modo, vir optimus tuique, ut scis, amantissimus. [/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='Painting' title='Project Title 2' image='http://your.website.com/list-demo-2.jpg' fullimage='http://your.website.com/list-demo-2.jpg' target='0' url='']
+[uix_portfolio_item_desc][p]The description of this project.[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='Web Design' title='Project Title 3' image='http://your.website.com/list-demo-1.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]Tanti autem aderant vesicae et torminum morbi, ut nihil ad eorum magnitudinem posset accedere. Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Aut unde est hoc contritum vetustate proverbium: quicum in tenebris? Atque ab isto capite fluere necesse est omnem rationem bonorum et malorum. Quia dolori non voluptas contraria est, sed doloris privatio. Invidiosum nomen est, infame, suspectum.[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='' title='Project Title 4' image='http://your.website.com/list-demo-2.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]The description of this project.[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='3D' title='Project Title 5' image='http://your.website.com/list-demo-3.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]anti autem aderant vesicae et torminum morbi, ut nihil ad eorum magnitudinem posset accedere. Tu autem negas fortem esse quemquam posse,[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[/uix_portfolio]
+
+
+[uix_portfolio filterable='0' classprefix='uix-sc-portfolio-' col='4' imagefillet='0%']
+[uix_portfolio_item type='Web Design' title='Project Title 1' image='http://your.website.com/list-demo-3.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso igitur hoc modo, vir optimus tuique, ut scis, amantissimus. [/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='Painting' title='Project Title 2' image='http://your.website.com/list-demo-2.jpg' fullimage='http://your.website.com/list-demo-2.jpg' target='0' url='']
+[uix_portfolio_item_desc][p]The description of this project.[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='Web Design' title='Project Title 3' image='http://your.website.com/list-demo-1.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]Tanti autem aderant vesicae et torminum morbi, ut nihil ad eorum magnitudinem posset accedere. Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Aut unde est hoc contritum vetustate proverbium: quicum in tenebris? Atque ab isto capite fluere necesse est omnem rationem bonorum et malorum. Quia dolori non voluptas contraria est, sed doloris privatio. Invidiosum nomen est, infame, suspectum.[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='' title='Project Title 4' image='http://your.website.com/list-demo-2.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]The description of this project.[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='3D' title='Project Title 5' image='http://your.website.com/list-demo-3.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]anti autem aderant vesicae et torminum morbi, ut nihil ad eorum magnitudinem posset accedere. Tu autem negas fortem esse quemquam posse,[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[/uix_portfolio]
+
+
+[uix_portfolio filterable='1' classprefix='uix-sc-portfolio-' col='2' imagefillet='0%']
+[uix_portfolio_item type='Web Design' title='Project Title 1' image='http://your.website.com/list-demo-3.jpg' fullimage='' target='0' url='']
+[uix_portfolio_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso igitur hoc modo, vir optimus tuique, ut scis, amantissimus. [/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[uix_portfolio_item type='Painting' title='Project Title 2' image='http://your.website.com/list-demo-2.jpg' fullimage='http://your.website.com/list-demo-2.jpg' target='0' url='']
+[uix_portfolio_item_desc][p]The description of this project.[/p][/uix_portfolio_item_desc]
+[/uix_portfolio_item]
+[/uix_portfolio]
+&nbsp;
+</pre>
+                                </div>
+                                             
+           
+                                <h3><?php _e( 'Preview', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                   <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-49.jpg" alt="" />
+                                </div>
+                            </div><!-- .uix-d-tabs -->
+                       
+                       </div><!-- /.uix-list-content -->
+                         
+                       
                        
                        <!-- ````````````````````````````````````````````````````````````````` -->
                        
@@ -515,7 +891,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Per group contains title, content and icon within each sub-group, and you can create your own custom color palette. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
+                                                <td><?php _e( 'Per group contains <code>Feature Title</code>, <code>Description</code> and <code>Feature Icon</code> within each sub-group, and you can create your own custom color palette. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <?php _e( 'Multiple items per column.<br>', 'uix-shortcodes' ); ?>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-19.jpg" alt="" />
                                                 </td>
@@ -608,7 +984,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-17.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-18.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->                     
+                            </div><!-- .uix-d-tabs -->                     
                        
                        </div><!-- /.uix-list-content -->
                        
@@ -646,8 +1022,8 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Per group contains avatar photo, name, position and details for the customer giving within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
-                                                <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <?php _e( 'Multiple items per column.<br>', 'uix-shortcodes' ); ?>
+                                                <td><?php _e( 'Per group contains <code>Avatar</code>, <code>Name</code>, <code>Position</code> and <code>Details</code> for the customer giving within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
+                                                <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.<br>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-24.jpg" alt="" />
                                                 </td>
                                             </tr>  
@@ -663,10 +1039,10 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 <pre class="brush: css;">
 &nbsp;
 [uix_testimonials]
-[uix_testimonials_item name='Name' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-1.jpg' position='Position']
+[uix_testimonials_item name='Name' avatar='http://your.website.com/demo-1.jpg' position='Position']
 [uix_testimonials_item_desc][p]Enter some details for the customer giving this testimonial., E.g., Thank you from the bottom of our hearts.[/p][/uix_testimonials_item_desc]
 [/uix_testimonials_item]
-[uix_testimonials_item name='Name' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-2.jpg' position='Position']
+[uix_testimonials_item name='Name' avatar='http://your.website.com/demo-2.jpg' position='Position']
 [uix_testimonials_item_desc][p]Enter some details for the customer giving this testimonial., E.g., Thank you from the bottom of our hearts.[/p][/uix_testimonials_item_desc]
 [/uix_testimonials_item]
 [/uix_testimonials]
@@ -680,15 +1056,15 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-23.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        </div><!-- /.uix-list-content -->
                        
                        <!-- ````````````````````````````````````````````````````````````````` -->
                        
-                       <div class="uix-list-title"><?php _e( 'List Of Members(Such As Team With Lightbox)', 'uix-shortcodes' ); ?></div>
+                       <div class="uix-list-title"><?php _e( 'Team', 'uix-shortcodes' ); ?></div>
                        <div class="uix-list-content">
-                           <p><?php _e( 'This shortcode allows you to easily present your team members. You\'ll see the best results with fullwidth and 4 columns when you want them evenly spaced. <br>', 'uix-shortcodes' ); ?><?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to unlimited add items. Upload an avatar and write a short bio so members can get a better feel for who you are and what you\'re about.', 'uix-shortcodes' ); ?> <?php _e( 'To set up the member social media links by clicking', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'set up links with social network', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link on the content of the popup window.', 'uix-shortcodes' ); ?><br>
+                           <p><?php _e( 'This shortcode allows you to easily present your team members. You\'ll see the best results with fullwidth, 2, 3 and 4 columns when you want them evenly spaced. <br>', 'uix-shortcodes' ); ?><?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to unlimited add items. Upload an avatar and write a short bio so members can get a better feel for who you are and what you\'re about.', 'uix-shortcodes' ); ?> <?php _e( 'To set up the member social media links by clicking', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'set up links with social network', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link on the content of the popup window.', 'uix-shortcodes' ); ?><br>
                            
                             </p>
                             
@@ -712,6 +1088,15 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <th><?php _e( 'Default', 'uix-shortcodes' ); ?></th>
                                                 <th><?php _e( 'Description', 'uix-shortcodes' ); ?></th>
                                             </tr>
+
+                         
+                                            <tr>
+                                                <td><?php _e( 'Column', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>4</td>
+                                                <td><?php _e( 'Way of a grid list for presenting homogenous data and typically images. Allows 2, 3 and 4 columns across the page.', 'uix-shortcodes' ); ?></td>
+                                            </tr>
+
                          
                                             <tr>
                                                 <td><?php _e( 'Radius of Fillet Avatar', 'uix-shortcodes' ); ?></td>
@@ -720,18 +1105,12 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td><?php _e( 'To set the fillet radius in pixels for avatar photo.', 'uix-shortcodes' ); ?></td>
                                             </tr>
                          
-                                            <tr>
-                                                <td><?php _e( 'Gray Avatar', 'uix-shortcodes' ); ?></td>
-                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
-                                                <td>false</td>
-                                                <td><?php _e( 'When enabled, this group converts all avatar photos to grayscale in CSS3.', 'uix-shortcodes' ); ?></td>
-                                            </tr>
                                             
                                             <tr>
                                                 <td><?php _e( 'Height of Grid', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
                                                 <td>0</td>
-                                                <td><?php _e( 'Set height of grid so that it will fit its avatar photo. Browsers use a default stylesheet to render webpages if the value is <strong>"0"</strong>.', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Set height of grid so that it will fit its avatar photo. Browsers use a default stylesheet to render webpages if the value is <code>0</code>.', 'uix-shortcodes' ); ?></td>
                                             </tr>
                                                 
                             
@@ -739,8 +1118,8 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Per group contains avatar photo, name, position, social network and introduction of your team member within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
-                                                <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <?php _e( 'Multiple items per column.<br>', 'uix-shortcodes' ); ?>
+                                                <td><?php _e( 'Per group contains <code>Avatar</code>, <code>Name</code>, <code>Position</code>, <code>Introduction</code> and <code>Social Network</code> of your team member within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
+                                                <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <br>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-29.jpg" alt="" /><br>
                                                 <?php _e( 'To set up the member social media links by clicking ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'set up links with social network', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link on the content of the popup window.<br>', 'uix-shortcodes' ); ?>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-30.jpg" alt="" /><br>
@@ -759,22 +1138,22 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 <pre class="brush: css;">
 &nbsp;
 [uix_team col='fullwidth' avatarfillet='0%' gray='true']
-[uix_team_item col='fullwidth' name='Jone Smmith' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-1.jpg' position='CEO' social_1='twitter|#' social_2='facebook|#' social_3='|']
+[uix_team_item col='fullwidth' name='Jone Smmith' avatar='http://your.website.com/demo-1.jpg' position='CEO' social_1='twitter|#' social_2='facebook|#' social_3='|']
 [uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. Ergo hoc quidem apparet, nos ad agendum esse natos.[/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='fullwidth' name='Donny Kiu' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-2.jpg' position='Photographer' social_1='twitter|#' social_2='|' social_3='|']
+[uix_team_item col='fullwidth' name='Donny Kiu' avatar='http://your.website.com/demo-2.jpg' position='Photographer' social_1='twitter|#' social_2='|' social_3='|']
 [uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. Ergo hoc quidem apparet, nos ad agendum esse natos. Utrum igitur tibi litteram videor an totas paginas commovere? Duo Reges: constructio interrete.[/p][p]Estne, quaeso, inquam, sitienti in bibendo voluptas? Nos commodius agimus. Semper enim ex eo, quod maximas partes continet latissimeque funditur, tota res appellatur. At quicum ioca seria, ut dicitur, quicum arcana, quicum occulta omnia? Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero satis. Itaque in rebus minime obscuris non multus est apud eos disserendi labor. Haec bene dicuntur, nec ego repugno, sed inter sese ipsa pugnant. Non autem hoc: igitur ne illud quidem.[/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='fullwidth' name='Doky' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-3.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
+[uix_team_item col='fullwidth' name='Doky' avatar='http://your.website.com/demo-3.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
 [uix_team_item_desc][p]The Introduction of this member.[/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='fullwidth' name='Haec Linla' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-4.jpg' position='UI Designer' social_1='facebook|#' social_2='|' social_3='|']
+[uix_team_item col='fullwidth' name='Haec Linla' avatar='http://your.website.com/demo-4.jpg' position='UI Designer' social_1='facebook|#' social_2='|' social_3='|']
 [uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. [/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='fullwidth' name='Tery David' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-5.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
+[uix_team_item col='fullwidth' name='Tery David' avatar='http://your.website.com/demo-5.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
 [uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. [/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='fullwidth' name='Jimmy' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-6.jpg' position='Photographer' social_1='twitter|#' social_2='git|#' social_3='linkedin|#']
+[uix_team_item col='fullwidth' name='Jimmy' avatar='http://your.website.com/demo-6.jpg' position='Photographer' social_1='twitter|#' social_2='git|#' social_3='linkedin|#']
 [uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. [br]Ergo hoc quidem apparet, nos ad agendum esse natos. Utrum igitur tibi litteram videor an totas paginas commovere? Duo Reges: constructio interrete.[/p][/uix_team_item_desc]
 [/uix_team_item]
 [uix_team_item col='fullwidth' name='You are here' avatar='' position='Position' social_1='|' social_2='|' social_3='|']
@@ -785,31 +1164,52 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 </pre>
                                 </div>
                                 
-                                <h3><?php _e( 'Example (4 col)', 'uix-shortcodes' ); ?></h3>
+                                <h3><?php _e( 'Example (4, 3 and 2 col)', 'uix-shortcodes' ); ?></h3>
                                 <div>
 <pre class="brush: css;">
 &nbsp;
 [uix_team col='4' avatarfillet='0%' gray='true']
-[uix_team_item col='4' name='Jone Smmith' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-1.jpg' position='CEO' social_1='twitter|#' social_2='facebook|#' social_3='|']
-[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. Ergo hoc quidem apparet, nos ad agendum esse natos.[/p][/uix_team_item_desc]
+[uix_team_item col='4' name='Jone Smmith' avatar='http://your.website.com/demo-1.jpg' position='CEO' social_1='twitter|#' social_2='facebook|#' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles.[/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='4' name='Donny Kiu' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-2.jpg' position='Photographer' social_1='twitter|#' social_2='|' social_3='|']
-[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. Ergo hoc quidem apparet, nos ad agendum esse natos. Utrum igitur tibi litteram videor an totas paginas commovere? Duo Reges: constructio interrete.[/p][p]Estne, quaeso, inquam, sitienti in bibendo voluptas? Nos commodius agimus. Semper enim ex eo, quod maximas partes continet latissimeque funditur, tota res appellatur. At quicum ioca seria, ut dicitur, quicum arcana, quicum occulta omnia? Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero satis. Itaque in rebus minime obscuris non multus est apud eos disserendi labor. Haec bene dicuntur, nec ego repugno, sed inter sese ipsa pugnant. Non autem hoc: igitur ne illud quidem.[/p][/uix_team_item_desc]
+[uix_team_item col='4' name='Donny Kiu' avatar='http://your.website.com/demo-2.jpg' position='Photographer' social_1='twitter|#' social_2='|' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit.[/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='4' name='Doky' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-3.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
+[uix_team_item col='4' name='Doky' avatar='http://your.website.com/demo-3.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
 [uix_team_item_desc][p]The Introduction of this member.[/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='4' name='Haec Linla' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-4.jpg' position='UI Designer' social_1='facebook|#' social_2='|' social_3='|']
-[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. [/p][/uix_team_item_desc]
+[uix_team_item col='4' name='Haec Linla' avatar='http://your.website.com/demo-4.jpg' position='UI Designer' social_1='facebook|#' social_2='|' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. [/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='4' name='Tery David' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-5.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
-[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. [/p][/uix_team_item_desc]
+[uix_team_item col='4' name='Tery David' avatar='http://your.website.com/demo-5.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
+[uix_team_item_desc][p]Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. [/p][/uix_team_item_desc]
 [/uix_team_item]
-[uix_team_item col='4' name='Jimmy' avatar='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-6.jpg' position='Photographer' social_1='twitter|#' social_2='git|#' social_3='linkedin|#']
-[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. [br]Ergo hoc quidem apparet, nos ad agendum esse natos. Utrum igitur tibi litteram videor an totas paginas commovere? Duo Reges: constructio interrete.[/p][/uix_team_item_desc]
+[uix_team_item col='4' name='Jimmy' avatar='http://your.website.com/demo-6.jpg' position='Photographer' social_1='twitter|#' social_2='git|#' social_3='linkedin|#']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet.[/p][/uix_team_item_desc]
 [/uix_team_item]
 [uix_team_item col='4' name='You are here' avatar='' position='Position' social_1='|' social_2='|' social_3='|']
 [uix_team_item_desc][p]The Introduction of this member.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[/uix_team]
+
+[uix_team col='3' avatarfillet='0%' gray='false']
+[uix_team_item col='3' name='Jone Smmith' avatar='http://your.website.com/demo-1.jpg' position='CEO' social_1='twitter|#' social_2='facebook|#' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[uix_team_item col='3' name='Donny Kiu' avatar='http://your.website.com/demo-2.jpg' position='Photographer' social_1='twitter|#' social_2='|' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[uix_team_item col='3' name='Doky' avatar='http://your.website.com/demo-3.jpg' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
+[uix_team_item_desc][p]The Introduction of this member.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[/uix_team]
+
+[uix_team col='2' avatarfillet='0%' gray='false']
+[uix_team_item col='2' name='Jone Smmith' avatar='http://your.website.com/demo-1.jpg' position='CEO' social_1='twitter|#' social_2='facebook|#' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[uix_team_item col='2' name='Donny Kiu' avatar='http://your.website.com/demo-2.jpg' position='Photographer' social_1='twitter|#' social_2='|' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit.[/p][/uix_team_item_desc]
 [/uix_team_item]
 [/uix_team]
 &nbsp;
@@ -822,7 +1222,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-32.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-31.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs --> 
+                            </div><!-- .uix-d-tabs --> 
                        
                        </div><!-- /.uix-list-content -->
                        
@@ -860,7 +1260,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Per group contains LOGO and introduction of your client member within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
+                                                <td><?php _e( 'Per group contains <code>LOGO</code> and <code>Introduction</code> of your client member within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <?php _e( 'Multiple items per column.<br>', 'uix-shortcodes' ); ?>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-35.jpg" alt="" />
                                                 
@@ -879,34 +1279,34 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 <pre class="brush: css;">
 &nbsp;
 [uix_client]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-1.jpg' ]
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-1.jpg' ]
 [uix_client_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Quamquam te quidem video minime esse deterritum. Ita multa dicunt, quae vix intellegam. Ergo hoc quidem apparet, nos ad agendum esse natos.[/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-2.jpg' ]
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-2.jpg' ]
 [uix_client_item_desc][p]Estne, quaeso, inquam, sitienti in bibendo voluptas? Nos commodius agimus. Semper enim ex eo, quod maximas partes continet latissimeque funditur, tota res appellatur. At quicum ioca seria, ut dicitur, quicum arcan.[/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-3.jpg' last='1']
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-3.jpg' last='1']
 [uix_client_item_desc][p]Ergo hoc quidem apparet, nos ad agendum esse natos. Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Videamus igitur sententias eorum, tum ad verba redeamus. [/p][/uix_client_item_desc]
 [/uix_client_item]
 [/uix_client]
 
 [uix_client]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-4.jpg' ]
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-4.jpg' ]
 [uix_client_item_desc][p] Videamus igitur sententias eorum, tum ad verba redeamus. Incommoda autem et commoda-ita enim estmata et dustmata appello-communia esse voluerunt.[/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-5.jpg' ]
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-5.jpg' ]
 [uix_client_item_desc][p]Dic in quovis conventu te omnia facere, ne doleas. Eadem fortitudinis ratio reperietur. Huic mori optimum esse propter desperationem sapientiae, illi propter spem vivere. [/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-6.jpg' last='1']
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-6.jpg' last='1']
 [uix_client_item_desc][p]Estne, quaeso, inquam, sitienti in bibendo voluptas? Nos commodius agimus. Semper enim ex eo, quod maximas partes continet latissimeque funditur, tota res appellatur. At quicum ioca seria, ut dicitur, quicum arcana, quicum occulta omnia?[/p][/uix_client_item_desc]
 [/uix_client_item]
 [/uix_client]
 
 [uix_client]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-7.jpg' ]
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-7.jpg' ]
 [uix_client_item_desc][p]Ergo hoc quidem apparet, nos ad agendum esse natos. Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. [/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='3' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-8.jpg' ]
+[uix_client_item col='3' logo='http://your.website.com/demo-logo-8.jpg' ]
 [uix_client_item_desc][p]Videamus igitur sententias eorum, tum ad verba redeamus. Incommoda autem et commoda-ita enim estmata et dustmata appello-communia esse voluerunt, paria noluerunt. Suo genere perveniant ad extremum.[/p][/uix_client_item_desc]
 [/uix_client_item]
 [/uix_client]
@@ -919,30 +1319,30 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 <pre class="brush: css;">
 &nbsp;
 [uix_client]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-1.jpg' ]
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-1.jpg' ]
 [uix_client_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. [/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-2.jpg' ]
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-2.jpg' ]
 [uix_client_item_desc][p]Estne, quaeso, inquam, sitienti in bibendo voluptas? Nos commodius agimus.[/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-3.jpg']
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-3.jpg']
 [uix_client_item_desc][p]Ergo hoc quidem apparet, nos ad agendum esse natos. Ego quoque, inquit, didicerim libentius si quid attuleris. [/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-4.jpg' last='1']
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-4.jpg' last='1']
 [uix_client_item_desc][p] Videamus igitur sententias eorum, tum ad verba redeamus. [/p][/uix_client_item_desc]
 [/uix_client_item]
 [/uix_client]
 [uix_client]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-5.jpg' ]
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-5.jpg' ]
 [uix_client_item_desc][p]Dic in quovis conventu te omnia facere, ne doleas. Eadem fortitudinis ratio reperietur. [/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-6.jpg']
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-6.jpg']
 [uix_client_item_desc][p]At quicum ioca seria, ut dicitur, quicum arcana, quicum occulta omnia?[/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-7.jpg' ]
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-7.jpg' ]
 [uix_client_item_desc][p]Ergo hoc quidem apparet, nos ad agendum esse natos. [/p][/uix_client_item_desc]
 [/uix_client_item]
-[uix_client_item col='4' logo='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/demo-logo-8.jpg' last='1']
+[uix_client_item col='4' logo='http://your.website.com/demo-logo-8.jpg' last='1']
 [uix_client_item_desc][p]Videamus igitur sententias eorum, tum ad verba redeamus. [/p][/uix_client_item_desc]
 [/uix_client_item]
 [/uix_client]
@@ -956,7 +1356,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-36.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-37.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs --> 
+                            </div><!-- .uix-d-tabs --> 
                        
                        </div><!-- /.uix-list-content -->
                        
@@ -1042,7 +1442,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-39.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        </div><!-- /.uix-list-content -->
                        
@@ -1149,7 +1549,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-41.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-42.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        </div><!-- /.uix-list-content -->
                        
                        <!-- ````````````````````````````````````````````````````````````````` -->
@@ -1157,7 +1557,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
   
      
 
-                    </div> <!-- /.helper-content -->
+                    </div> <!-- /.uix-documentation-content -->
                 </li>        
                           
            
@@ -1194,7 +1594,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                             <tr>
                                                 <td><?php _e( 'Padding (px)', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
-                                                <td><?php _e( 'padding-top:<code>20</code>px<br>padding-bottom:<code>20</code>px<br>padding-left:<code>0</code><br>padding-right:<code>0</code><br>', 'uix-shortcodes' ); ?> </td>
+                                                <td>padding-top:<code>20</code>px<br>padding-bottom:<code>20</code>px<br>padding-left:<code>0</code><br>padding-right:<code>0</code><br></td>
                                                 <td><?php _e( 'Use the input fields below to customize the padding of your column shortcode. Measurement units is pixels (px).', 'uix-shortcodes' ); ?></td>
                                             </tr>  
                                            
@@ -1210,108 +1610,108 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 &nbsp;
 [uix_column_wrapper top='20' bottom='20' left='0' right='0']
 [uix_column grid='3']
+&lt;h4&gt;One Fourth (1)&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Fourth (1)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='3']
+&lt;h4&gt;One Fourth (2)&lt;/h4&gt;
+Aliquam congue dignissim tellus, vel eleifend urna rutrum nec. Morbi et mauris vitae quam venenatis imperdiet. Proin et rutrum magna. Nulla sed venenatis leo. Suspendisse potenti. Proin faucibus cursus luctus.
 
-One Fourth (2)
-
-Aliquam congue dignissim tellus, vel eleifend urna rutrum nec. Morbi et mauris vitae quam venenatis imperdiet. Proin et rutrum magna. Nulla sed venenatis leo. Suspendisse potenti. Proin faucibus cursus luctus.[/uix_column]
+[/uix_column]
 [uix_column grid='3']
+&lt;h4&gt;One Fourth (3)&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Fourth (3)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='3' last='1']
+&lt;h4&gt;One Fourth (4)&lt;/h4&gt;
+Morbi et mauris vitae quam venenatis imperdiet. Proin et rutrum magna. Nulla sed venenatis leo. Suspendisse potenti. Proin faucibus cursus luctus.
 
-One Fourth (4)
-
-Morbi et mauris vitae quam venenatis imperdiet. Proin et rutrum magna. Nulla sed venenatis leo. Suspendisse potenti. Proin faucibus cursus luctus.[/uix_column]
+[/uix_column]
 [/uix_column_wrapper]
 
 [uix_column_wrapper top='20' bottom='20' left='0' right='0']
 [uix_column grid='4']
+&lt;h4&gt;One Third&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Third
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='4']
+&lt;h4&gt;One Third&lt;/h4&gt;
+Aliquam congue dignissim tellus, vel eleifend urna rutrum nec. Morbi et mauris vitae quam venenatis imperdiet. Proin et rutrum magna. Nulla sed venenatis leo. Suspendisse potenti. Proin faucibus cursus luctus.
 
-One Third
-
-Aliquam congue dignissim tellus, vel eleifend urna rutrum nec. Morbi et mauris vitae quam venenatis imperdiet. Proin et rutrum magna. Nulla sed venenatis leo. Suspendisse potenti. Proin faucibus cursus luctus.[/uix_column]
+[/uix_column]
 [uix_column grid='4' last='1']
+&lt;h4&gt;One Third&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Third
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [/uix_column_wrapper]
 
 [uix_column_wrapper top='20' bottom='20' left='0' right='0']
 [uix_column grid='6']
+&lt;h4&gt;One Half&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Half
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='6' last='1']
+&lt;h4&gt;One Half&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Half
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [/uix_column_wrapper]
 
 [uix_column_wrapper top='20' bottom='20' left='0' right='0']
 [uix_column grid='3']
+&lt;h4&gt;One Third&lt;/h4&gt;
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Third
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='9' last='1']
+&lt;h4&gt;Two Third&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Two Third
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [/uix_column_wrapper]
 
 [uix_column_wrapper top='20' bottom='20' left='0' right='0']
 [uix_column grid='9']
+&lt;h4&gt;Two Third&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Two Third
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='3' last='1']
+&lt;h4&gt;One Third&lt;/h4&gt;
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Third
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [/uix_column_wrapper]
 
 [uix_column_wrapper top='20' bottom='20' left='0' right='0']
 [uix_column grid='4']
+&lt;h4&gt;One Fourth&lt;/h4&gt;
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Fourth
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='8' last='1']
+&lt;h4&gt;Three Fourth&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Three Fourth
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [/uix_column_wrapper]
 
 [uix_column_wrapper top='20' bottom='20' left='0' right='0']
 [uix_column grid='8']
+&lt;h4&gt;Three Fourth&lt;/h4&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Three Fourth
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a mi ac diam varius commodo sit amet a eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [uix_column grid='4' last='1']
+&lt;h4&gt;One Fourth&lt;/h4&gt;
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-One Fourth
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.[/uix_column]
+[/uix_column]
 [/uix_column_wrapper]
 &nbsp;
 </pre>
@@ -1330,9 +1730,9 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-col-7.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-col-8.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
 
-                    </div> <!-- /.helper-content -->
+                    </div> <!-- /.uix-documentation-content -->
                 </li>          
                 
                 
@@ -1375,7 +1775,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 <td><?php _e( 'Button Color', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td><img src="<?php echo $imgpath; ?>sc-preview-elements-13.jpg" alt="" /></td>
-                                                <td><?php _e( 'Set a color for the button. You can add a custom color with color palette. Click on the', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-elements-14.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the button. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
                                             </tr>  
                                             
                             
@@ -1383,7 +1783,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 <td><?php _e( 'Text Color', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td><img src="<?php echo $imgpath; ?>sc-preview-elements-15.jpg" alt="" /></td>
-                                                <td><?php _e( 'Set a color for the text. You can add a custom color with color palette. Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-elements-16.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the text. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
                                             </tr>  
                                             
                                             <tr>
@@ -1411,10 +1811,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                             
                                             
                                             <tr>
-                                                <td><?php _e( 'Open Link in New Window', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Open link in new tab', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
                                                 <td>false</td>
-                                                <td><?php _e( 'When enabled, the button link to open in a new window.', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'When enabled, the button link to open in a new tab.', 'uix-shortcodes' ); ?></td>
                                             </tr>
                                              
                               
@@ -1464,19 +1864,23 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                 <div>
 <pre class="brush: css;">
 &nbsp;
-[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Default Button[/uix_button]
-
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='3' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Small[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='2' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Medium[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Large[/uix_button]
 [uix_button icon='briefcase' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Icon Button[/uix_button]
+[uix_button icon='briefcase' fontsize='16px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Icon Button[/uix_button]
 
-[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='red' txtcolor='#ffffff' url='#']Red Button[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='0' paddingspacing='3' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Small[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='0' paddingspacing='2' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Medium[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='0' paddingspacing='1' target='0' bgcolor='green' txtcolor='#ffffff' url='#']Large[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='0' paddingspacing='1' target='0' bgcolor='green' txtcolor='rgb(255, 246, 26)' url='#'][uix_icons size='16' units='px' color='rgb(255, 246, 26)' name='anchor']Custom Icon[/uix_button]
+[uix_button icon='' fontsize='16px' letterspacing='2px' fillet='0' paddingspacing='1' target='0' bgcolor='green' txtcolor='#333' url='#'][uix_icons size='16' units='px' color='#333' name='anchor']Custom Icon[/uix_button]
 
-[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='yellow' txtcolor='#ffffff' url='#']Orange Button[/uix_button]
-
-[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='darkblue' txtcolor='#ffffff' url='#']Blue Button[/uix_button]
-
-[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='0' paddingspacing='1' target='0' bgcolor='darkblue' txtcolor='#ffffff' url='#']Square Button[/uix_button]
-
-[uix_button icon='' fontsize='14px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='cadetblue' txtcolor='#ffffff' url='#'][uix_icons size='20' units='px' color='#fffff0' name='gear']Embed a icon shortcode[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='3' target='0' bgcolor='red' txtcolor='#ffffff' url='#']RED[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='2' target='0' bgcolor='yellow' txtcolor='#ffffff' url='#']ORANGE[/uix_button]
+[uix_button icon='' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='darkblue' txtcolor='#ffffff' url='#']DARKBLUE[/uix_button]
+[uix_button icon='briefcase' fontsize='12px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='cadetblue' txtcolor='#ffffff' url='#']CADETBLUE  BUTTON[/uix_button]
+[uix_button icon='briefcase' fontsize='16px' letterspacing='2px' fillet='50px' paddingspacing='1' target='0' bgcolor='black' txtcolor='#ffffff' url='#']BLACK BUTTON[/uix_button]
 &nbsp;
 </pre>
                                 </div>
@@ -1489,7 +1893,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-11.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-18.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        </div><!-- /.list-content -->
                        
                        <!-- ````````````````````````````````````````````````````````````````` -->
@@ -1599,9 +2003,9 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                 <div>
 <pre class="brush: css;">
 &nbsp;
-[uix_map style='normal' width='100%' height='285px' latitude='37.7770776' longitude='-122.4414289' zoom='14' name='SEO San Francisco, CA, Gough Street, San Francisco, CA' marker='https://uiux.cc/wp-theme-demo/nailme/wp-content/plugins/uix-shortcodes/assets/images/map/map-location.png' ]
+[uix_map style='normal' width='100%' height='285px' latitude='37.7770776' longitude='-122.4414289' zoom='14' name='SEO San Francisco, CA, Gough Street, San Francisco, CA' marker='http://your.website.com/map-location.png' ]
 
-[uix_map style='dark-blue' width='100%' height='285px' latitude='37.7770776' longitude='-122.4414289' zoom='14' name='SEO San Francisco, CA, Gough Street, San Francisco, CA' marker='https://uiux.cc/wp-theme-demo/nailme/wp-content/plugins/uix-shortcodes/assets/images/map/map-location.png' ]
+[uix_map style='dark-blue' width='100%' height='285px' latitude='37.7770776' longitude='-122.4414289' zoom='14' name='SEO San Francisco, CA, Gough Street, San Francisco, CA' marker='http://your.website.com/map-location.png' ]
 &nbsp;
 </pre>
                                 </div>
@@ -1613,7 +2017,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-20.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        
                        </div><!-- /.list-content -->
@@ -1662,13 +2066,15 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 <td><?php _e( 'Choose Title Style', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td><img src="<?php echo $imgpath; ?>sc-preview-elements-26.jpg" alt="" /></td>
-                                                <td><?php _e( 'Using background clip for text with CSS fallback if select the first one. You can select a background image from the WordPress Media Library, could also upload a new image.', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Using background clip for text with CSS fallback if select the first one. You can select a background image from the WordPress Media Library, could also upload a new image.', 'uix-shortcodes' ); ?><br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-elements-33.jpg" alt="" />
+                                                </td>
                                             </tr>  
                                             
                                             <tr>
                                                 <td><?php _e( 'Size', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
-                                                <td>58.5</td>
+                                                <td>52</td>
                                                 <td><?php _e( 'The heading size in pixels.', 'uix-shortcodes' ); ?></td>
                                             </tr>  
                                             
@@ -1676,7 +2082,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 <td><?php _e( 'Heading Color', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Set a color for the heading. You can add a custom color with color palette. Browsers use a default stylesheet to render webpages if the value is empty. Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-elements-29.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the heading. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. Browsers use a default stylesheet to render webpages if the value is empty. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
                                             </tr>  
                                             
 
@@ -1684,7 +2090,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 <td><?php _e( 'Alignment', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td>center</td>
-                                                <td><?php _e( 'Specifies the horizontal alignment of text in an element, ', 'uix-shortcodes' ); ?><code>left</code>, <code>center</code> or <code>right</code>.</td>
+                                                <td><?php _e( 'Specifies the horizontal alignment of text in an element. The following values are allowed:', 'uix-shortcodes' ); ?><code>left</code>, <code>center</code>, <code>right</code>.</td>
                                             </tr> 
                                             
                                             <tr>
@@ -1761,7 +2167,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                             <tr>
                                                 <td><?php _e( 'Font Size', 'uix-shortcodes' ); ?><span class="depend"><?php _e( 'depends on', 'uix-shortcodes' ); ?> <code><?php _e( 'Description', 'uix-shortcodes' ); ?></code> <?php _e( 'option', 'uix-shortcodes' ); ?></span></td>
                                                 <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
-                                                <td>14</td>
+                                                <td>12</td>
                                                 <td><?php _e( 'The description font size in pixels.', 'uix-shortcodes' ); ?></td>
                                             </tr>  
                                             
@@ -1769,7 +2175,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 <td><?php _e( 'Description Color', 'uix-shortcodes' ); ?><span class="depend"><?php _e( 'depends on', 'uix-shortcodes' ); ?> <code><?php _e( 'Description', 'uix-shortcodes' ); ?></code> <?php _e( 'option', 'uix-shortcodes' ); ?></span></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Set a color for the description of heading. You can add a custom color with color palette. Browsers use a default stylesheet to render webpages if the value is empty. Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-elements-29.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the description of heading. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. Browsers use a default stylesheet to render webpages if the value is empty. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
                                             </tr>  
                                             
                                             
@@ -1792,23 +2198,23 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                 <div>
 <pre class="brush: css;">
 &nbsp;
-[uix_heading color='' style='grand-fill-yellow' align='center' size='58.5px' uppercase='true' spacing='2px' fillbg='']No change test[/uix_heading][uix_heading_line line='false' width='100%' height='1px']
+[uix_heading color='' style='grand-fill-yellow' align='center' size='52px' uppercase='true' spacing='2px' fillbg='']No change test[/uix_heading][uix_heading_line line='false' width='100%' height='1px']
 
-[uix_heading color='' style='grand' align='center' size='58.5px' uppercase='true' spacing='2px' fillbg='']No background[/uix_heading][uix_heading_line line='false' width='100%' height='1px']
+[uix_heading color='' style='grand' align='center' size='52px' uppercase='true' spacing='2px' fillbg='']No background[/uix_heading][uix_heading_line line='false' width='100%' height='1px']
 
-[uix_heading color='' style='grand-fill-yellow' align='center' size='58.5px' uppercase='true' spacing='2px' fillbg='']Background + Desc[/uix_heading][uix_heading_sub color='' align='center' size='14px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='35%' height='4px']
-
-
+[uix_heading color='' style='grand-fill-yellow' align='center' size='52px' uppercase='true' spacing='2px' fillbg='']Background + Desc[/uix_heading][uix_heading_sub color='' align='center' size='12px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='35%' height='4px']
 
 
 
-[uix_heading color='' style='grand-fill-yellow' align='left' size='58.5px' uppercase='true' spacing='2px' fillbg='https://uiux.cc/wp-theme-demo/nailme/wp-content/uploads/2016/04/text-fill2.jpg']Left Background Text[/uix_heading][uix_heading_sub color='' align='left' size='14px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. Do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='1px']
 
-[uix_heading color='' style='grand' align='left' size='58.5px' uppercase='true' spacing='2px' fillbg='']Left Text[/uix_heading][uix_heading_sub color='' align='left' size='14px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. Do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='3px']
 
-[uix_heading color='#DD514C' style='grand' align='left' size='58.5px' uppercase='true' spacing='2px' fillbg='']Red text[/uix_heading][uix_heading_sub color='#d59a3e' align='left' size='14px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. Do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='1px']
+[uix_heading color='' style='grand-fill-yellow' align='left' size='52px' uppercase='true' spacing='2px' fillbg='http://your.website.com/text-fill2.jpg']Left Background Text[/uix_heading][uix_heading_sub color='' align='left' size='12px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. Do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='1px']
 
-[uix_heading color='' style='grand' align='left' size='58.5px' uppercase='false' spacing='2px' fillbg='']Normal case[/uix_heading][uix_heading_sub color='' align='left' size='14px' uppercase='false' spacing='2px' opacity='65'][p]This is a description for heading. do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='1px']
+[uix_heading color='' style='grand' align='left' size='52px' uppercase='true' spacing='2px' fillbg='']Left Text[/uix_heading][uix_heading_sub color='' align='left' size='12px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. Do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='3px']
+
+[uix_heading color='#DD514C' style='grand' align='left' size='52px' uppercase='true' spacing='2px' fillbg='']Red text[/uix_heading][uix_heading_sub color='#d59a3e' align='left' size='12px' uppercase='true' spacing='2px' opacity='65'][p]This is a description for heading. Do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='1px']
+
+[uix_heading color='' style='grand' align='left' size='52px' uppercase='false' spacing='2px' fillbg='']Normal case[/uix_heading][uix_heading_sub color='' align='left' size='12px' uppercase='false' spacing='2px' opacity='65'][p]This is a description for heading. do you like it?[/p][/uix_heading_sub][uix_heading_line line='true' width='100%' height='1px']
 &nbsp;
 </pre>
                                 </div>
@@ -1821,7 +2227,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-25.jpg" alt="" />
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-27.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        
                        </div><!-- /.list-content -->
@@ -1860,7 +2266,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 <td><?php _e( 'Color', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td><img src="<?php echo $imgpath; ?>sc-preview-elements-1.jpg" alt="" /></td>
-                                                <td><?php _e( 'Set a color for the icon. You can add a custom color with color palette. Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-elements-5.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the icon. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
                                             </tr>  
                                             
                                             
@@ -1892,12 +2298,14 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 <pre class="brush: css;">
 &nbsp;
 [uix_icons size='14' units='px' color='#333333' name='area-chart']
+[uix_icons size='34' units='px' color='#333333' name='area-chart']
+[uix_icons size='54' units='px' color='#333333' name='area-chart']
+[uix_icons size='74' units='px' color='#333333' name='area-chart']
 
-[uix_icons size='34' units='px' color='#dc143c' name='area-chart']
-
-[uix_icons size='54' units='px' color='#990002' name='briefcase']
-
-[uix_icons size='74' units='px' color='#333333' name='cloud-download']
+[uix_icons size='14' units='px' color='#a2bf2f' name='briefcase']
+[uix_icons size='34' units='px' color='#daa520' name='briefcase']
+[uix_icons size='54' units='px' color='#4BB1CF' name='briefcase']
+[uix_icons size='74' units='px' color='#dc143c' name='briefcase']
 &nbsp;
 </pre>
                                 </div>
@@ -1909,9 +2317,205 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-3.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->                    
+                            </div><!-- .uix-d-tabs -->                    
                        
                        </div><!-- /.list-content -->
+                       
+                       <!-- ````````````````````````````````````````````````````````````````` -->
+                       
+                       
+                       <div class="uix-list-title"><?php _e( 'Progress Bar', 'uix-shortcodes' ); ?></div>
+                       <div class="uix-list-content">
+                       
+                           <p><?php _e( 'This shortcode allows you add progress bars. Choose unlimited colors for each individual progress segment. Animate the segment and/or text. Customize any sizes. It is great for displaying varying types of data and content to your viewers. The progress bar include Circular and Square types for easy customization.', 'uix-shortcodes' ); ?>
+                            </p>
+                            
+                            <div class="uix-d-tabs">
+                                <h3><?php _e( 'Admin Screenshots', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-34.jpg" alt="" />
+                                    
+                                </div>
+
+                                
+                                <h3 class="arg"><?php _e( 'Options', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                    <div class="uix-table-all">
+                                        <table>
+                                            <tr>
+                                                <th><?php _e( 'Name', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Type', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Default', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Description', 'uix-shortcodes' ); ?></th>
+                                            </tr>
+                                                
+                    
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Choose Style', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>circular</td>
+                                                <td><?php _e( 'You can choose vertical tabs or horizontal tabs. ', 'uix-shortcodes' ); ?><?php _e( 'The following values are allowed:', 'uix-shortcodes' ); ?> <code>circular</code>, <code>square</code>.</td>
+                                            </tr>  
+                                            
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Bar Size', 'uix-shortcodes' ); ?> (px)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>120</td>
+                                                <td><?php _e( 'Size of the bar in px.', 'uix-shortcodes' ); ?></td>
+                                            </tr>      
+                                            
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Percent', 'uix-shortcodes' ); ?> (%)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>75</td>
+                                                <td><?php _e( 'The percent number the progress bar should have. Should be a number from 0 – 100.', 'uix-shortcodes' ); ?></td>
+                                            </tr>                                            
+                                            
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Percentage & Icon Size', 'uix-shortcodes' ); ?> (px)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>12</td>
+                                                <td><?php _e( 'Size of the percentage or icon in px.', 'uix-shortcodes' ); ?></td>
+                                            </tr>                                    
+                                            
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Line Width', 'uix-shortcodes' ); ?> (px)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>3</td>
+                                                <td><?php _e( 'Width of the bar line in px.', 'uix-shortcodes' ); ?></td>
+                                            </tr>                                              
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Icon', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?> & <?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Using Icon instead of percentage. Default value is empty.', 'uix-shortcodes' ); ?></td>
+                                            </tr>   
+                                            
+                                              
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Bar Color', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-elements-13.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the bar. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
+                                            </tr>  
+                                   
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Track Color', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-elements-32.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the track for the bar. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
+                                            </tr>                       
+                                            
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Percentage & Icon Color', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-elements-1.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the displayed percentage or icon. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
+                                            </tr>                       
+                                                                       
+      
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Title', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'The progress bar\'s title/name. Could be left blank.', 'uix-shortcodes' ); ?></td>
+                                            </tr>   
+      
+                                            <tr>
+                                                <td><?php _e( 'Description', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'The progress bar\'s description. Could be left blank.', 'uix-shortcodes' ); ?></td>
+                                            </tr>   
+                                                   
+                                            <tr>
+                                                <td><?php _e( 'Displayed Units', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>%</td>
+                                                <td><?php _e( 'The progress bar\'s displayed units. Could be left blank.', 'uix-shortcodes' ); ?></td>
+                                            </tr>                                                   
+                                                      
+                                                      
+                                            <tr>
+                                                <td><?php _e( 'Margin', 'uix-shortcodes' ); ?> (px)</td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>margin-top:<code>25</code>px<br>margin-bottom:<code>0</code>px<br>margin-left:<code>25</code><br>margin-right:<code>25</code><br> </td>
+                                                <td><?php _e( 'Use the input fields below to customize the margin of progress bar.', 'uix-shortcodes' ); ?></td>
+                                            </tr>           
+                                                         
+                                          
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                
+                                <h3><?php _e( 'Example', 'uix-shortcodes' ); ?></h3>
+                                <div>
+<pre class="brush: css;">
+&nbsp;
+[uix_progress_bar barcolor='#a2bf2f' trackcolor='#f1f1f1' preccolor='#473f3f' size='120px' shape='circular' percent='75' units='%' linewidth='3' precsize='12px' title='' top='25' bottom='0' left='25' right='25' ][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#a2bf2f' trackcolor='#dcdcdc' preccolor='#bebebe' size='120px' shape='circular' percent='55' units='%' linewidth='3' precsize='12px' title='Web Design' top='25' bottom='0' left='25' right='25' ][p]This is a description.[/p][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#daa520' trackcolor='#f1f1f1' preccolor='#473f3f' size='200px' shape='circular' percent='66' units='%' linewidth='8' precsize='28px' title='Clock' icon='clock-o'][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#dc143c' trackcolor='#f1f1f1' preccolor='#473f3f' size='120px' shape='circular' percent='75' units='%' linewidth='8' precsize='18px' title='Shop' icon='cart-plus'][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#dc143c' trackcolor='#dcdcdc' preccolor='#bebebe' size='120px' shape='circular' percent='100' units='%' linewidth='3' precsize='12px' title='Painter' top='25' bottom='0' left='25' right='25' ][p]This is a description.[/p][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#a2bf2f' trackcolor='#f1f1f1' preccolor='#473f3f' size='100%' shape='square' percent='75' units='%' linewidth='3' precsize='12px' title='Painter' top='25' bottom='0' left='25' right='25' ][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#a2bf2f' trackcolor='#f1f1f1' preccolor='#473f3f' size='100%' shape='square' percent='35' units='%' linewidth='3' precsize='12px' title='Android Development' top='25' bottom='0' left='25' right='25' ][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#DD514C' trackcolor='rgb(222, 156, 142)' preccolor='#473f3f' size='100%' shape='square' percent='75' units='%' linewidth='15' precsize='12px' title='Painter' top='25' bottom='0' left='25' right='25' ][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#DD514C' trackcolor='#f1f1f1' preccolor='#473f3f' size='100%' shape='square' percent='35' units='%' linewidth='15' precsize='12px' title='Android Development' top='25' bottom='0' left='25' right='25' ][/uix_progress_bar]
+
+[uix_column_wrapper top='20' bottom='20' left='0' right='0']
+[uix_column grid='6']
+
+[uix_progress_bar barcolor='#4BB1CF' trackcolor='#f1f1f1' preccolor='#473f3f' size='100%' shape='square' percent='75' units='%' linewidth='3' precsize='12px' title='Photoshop' top='25' bottom='0' left='25' right='25' ][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#4BB1CF' trackcolor='#f1f1f1' preccolor='#473f3f' size='100%' shape='square' percent='23' units='%' linewidth='3' precsize='12px' title='Front-End' top='25' bottom='0' left='25' right='0' ][p]This is a description.[/p][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#4BB1CF' trackcolor='#f1f1f1' preccolor='#dcdcdc' size='100%' shape='square' percent='100' units='%' linewidth='3' precsize='16px' title='Clock' top='25' bottom='0' left='25' right='25' icon='clock-o'][/uix_progress_bar]
+
+[/uix_column]
+[uix_column grid='6' last='1']
+
+[uix_progress_bar barcolor='#4BB1CF' trackcolor='#f1f1f1' preccolor='#473f3f' size='100%' shape='square' percent='88' units='%' linewidth='3' precsize='12px' title='User Interface' top='25' bottom='0' left='25' right='25' ][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#4BB1CF' trackcolor='#f1f1f1' preccolor='#473f3f' size='100%' shape='square' percent='23' units='%' linewidth='3' precsize='12px' title='Web Design' top='25' bottom='0' left='25' right='0' ][p]This is a description.[/p][/uix_progress_bar]
+
+[uix_progress_bar barcolor='#4BB1CF' trackcolor='#f1f1f1' preccolor='#dcdcdc' size='100%' shape='square' percent='98' units='%' linewidth='3' precsize='16px' title='Shop' top='25' bottom='0' left='25' right='25' icon='cart-plus'][/uix_progress_bar]
+
+[/uix_column]
+[/uix_column_wrapper]
+&nbsp;
+</pre>
+                                </div>
+                                
+                      
+                                
+                                       
+                                <h3><?php _e( 'Preview', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                   <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-35.jpg" alt="" />
+                                </div>
+                            </div><!-- .uix-d-tabs -->
+                       </div><!-- /.list-content --> 
+                       
+                       
                        
                        <!-- ````````````````````````````````````````````````````````````````` -->
                        
@@ -1955,7 +2559,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                             <tr>
                                                 <td><?php _e( 'Color', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
-                                                <td><img src="<?php echo $imgpath; ?>sc-preview-elements-32.jpg" alt="" /></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-elements-1.jpg" alt="" /></td>
                                                 <td><?php _e( 'Set a color for the separator. There are two colors of line:', 'uix-shortcodes' ); ?> <code>dark</code> and <code>light</code>.</td>
                                             </tr>  
                                             
@@ -2012,7 +2616,7 @@ gradient line
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-31.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        </div><!-- /.list-content -->
                        
@@ -2088,14 +2692,12 @@ gradient line
 <pre class="brush: css;">
 &nbsp;
 [uix_share_buttons color='1' size='1' fillet='25px' show='facebook,twitter,google_plus,pinterest']
+[uix_share_buttons color='1' size='2' fillet='25px' show='facebook,twitter,google_plus,pinterest']
+[uix_share_buttons color='1' size='2' fillet='0' show='facebook,twitter,google_plus,pinterest']
 
-[uix_share_buttons color='2' size='1' fillet='25px' show='facebook,twitter,google_plus']
-
-[uix_share_buttons color='1' size='2' fillet='25px' show='facebook,twitter,google_plus']
-
+[uix_share_buttons color='2' size='1' fillet='25px' show='facebook,twitter,google_plus,pinterest']
 [uix_share_buttons color='2' size='2' fillet='25px' show='facebook,twitter,google_plus,pinterest']
-
-[uix_share_buttons color='2' size='2' fillet='0px' show='facebook,twitter,google_plus']
+[uix_share_buttons color='2' size='2' fillet='0px' show='facebook,twitter,google_plus,pinterest']
 &nbsp;
 </pre>
                                 </div>
@@ -2107,7 +2709,7 @@ gradient line
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-9.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        </div><!-- /.list-content -->
                        
                        
@@ -2170,7 +2772,7 @@ gradient line
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-elements-7.jpg" alt="" />
                                 </div>
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
                        
                        </div><!-- /.list-content -->
                        
@@ -2179,7 +2781,7 @@ gradient line
      
      
 
-                    </div> <!-- /.helper-content -->
+                    </div> <!-- /.uix-documentation-content -->
                 </li>         
                 
            
@@ -2279,9 +2881,9 @@ gradient line
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-code-3.jpg" alt="" />
                                 </div>                          
                                 
-                            </div><!-- .tabs -->
+                            </div><!-- .uix-d-tabs -->
 
-                    </div> <!-- /.helper-content -->
+                    </div> <!-- /.uix-documentation-content -->
                 </li>                       
                                     
                 

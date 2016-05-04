@@ -108,7 +108,7 @@ $args_1 =
 		
 		array(
 			'id'             => 'uix_sc_pricing_col3_one_btn_win',
-			'title'          => __( 'Open in New Window', 'uix-shortcodes' ),
+			'title'          => __( 'Open in new tab', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
 			'placeholder'    => '',
@@ -259,7 +259,7 @@ $args_2 =
 		
 		array(
 			'id'             => 'uix_sc_pricing_col3_two_btn_win',
-			'title'          => __( 'Open in New Window', 'uix-shortcodes' ),
+			'title'          => __( 'Open in new tab', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
 			'placeholder'    => '',
@@ -410,7 +410,7 @@ $args_3 =
 		
 		array(
 			'id'             => 'uix_sc_pricing_col3_three_btn_win',
-			'title'          => __( 'Open in New Window', 'uix-shortcodes' ),
+			'title'          => __( 'Open in new tab', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
 			'placeholder'    => '',

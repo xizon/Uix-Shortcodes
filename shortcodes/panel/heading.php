@@ -37,13 +37,16 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'radio-image',
 			'default'        => array(
-									'grand-fill-yellow'   => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-1.png',
-									'grand'               => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-2.png',
+									'grand-fill-yellow'   => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-1.jpg',
+									'grand'               => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-2.jpg',
 				                ),
 			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
 			'toggle'        => array(
-									'trigger_id'  => 'uix_sc_heading_style-grand-fill-yellow', /* {item id}-{option id} */
-									'toggle_class'  => [ 'uix_sc_heading_fillbg_toggle_class' ]
+			                        array(
+										'trigger_id'    => 'uix_sc_heading_style-grand-fill-yellow', /* {item id}-{option id} */
+										'toggle_class'  => [ 'uix_sc_heading_fillbg_toggle_class' ]
+
+									),
 				                )	
 								
 		
@@ -68,7 +71,7 @@ $args =
 			'id'             => 'uix_sc_heading_size',
 			'title'          => __( 'Size', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => 58.5,
+			'value'          => 52,
 			'placeholder'    => '',
 			'type'           => 'short-text',
 			'default'        => array(
@@ -230,7 +233,7 @@ $args =
 			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_heading_desc_toggle', /* {item id}-{option id} */
-									'toggle_class'  => [ 'uix_sc_heading_desc_toggle_text_class', 'uix_sc_heading_desc_size_toggle_class', 'uix_sc_heading_desc_color_toggle_class', 'uix_sc_heading_desc_color_toggle_toggle_class', 'uix_sc_heading_desc_color_other_class_class', 'uix_sc_heading_desc_opacity_toggle_class' ],
+									'toggle_class'  => [ 'uix_sc_heading_desc_toggle_class', 'uix_sc_heading_desc_size_toggle_class', 'uix_sc_heading_desc_color_toggle_class', 'uix_sc_heading_desc_color_toggle_toggle_class', 'uix_sc_heading_desc_color_other_class_class', 'uix_sc_heading_desc_opacity_toggle_class' ],
 									
 									/* if this toggle contains another toggle, please specifies "toggle_not_class" in order that default hiding form is still valid . */
 									'toggle_not_class'  => [ 'uix_sc_heading_desc_color_other_class_class' ]
@@ -246,7 +249,7 @@ $args =
 				'title'          => __( 'Displayed Text', 'uix-shortcodes' ),
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'toggle-row uix_sc_heading_desc_toggle_text_class', /*class of toggle item */
+				'class'          => 'toggle-row uix_sc_heading_desc_toggle_class', /*class of toggle item */
 				'placeholder'    => '',
 				'type'           => 'textarea',
 				'default'        => array(
@@ -261,7 +264,7 @@ $args =
 				'id'             => 'uix_sc_heading_desc_size',
 				'title'          => __( 'Font Size', 'uix-shortcodes' ),
 				'desc'           => '',
-				'value'          => 14,
+				'value'          => 12,
 				'class'          => 'toggle-row uix_sc_heading_desc_size_toggle_class', /*class of toggle item */
 				'placeholder'    => '',
 				'type'           => 'short-text',

@@ -12,10 +12,10 @@ Licensed under the [GPL3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ### Description
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It currently supports `columns`, `buttons`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `list of members(such as team with lightbox)`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)` and `recent posts with custom template`.
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: `container`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)` and `recent posts with custom template`.
 
 
-The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Icon Shortcode"**, and so on. They could be used together.
+The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
 
 #####Very easy to use :)
 
@@ -33,7 +33,7 @@ Initial Release.
 - WP 4.4.1
 - WP 4.4.2
 - WP 4.5
-
+- WP 4.5.1
 
 ###Screenshot
 
@@ -75,10 +75,16 @@ Initial Release.
 - [tinyColorPicker](https://github.com/PitPik/tinyColorPicker)
 - [Sweetalert](http://t4t5.github.io/sweetalert/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+- [jQuery Accessible Tabs](https://github.com/nomensa/jquery.accessible-tabs.git)
 - [jQuery ScrollBar Plugin 1.0 ](http://codecanyon.net/user/flGravity)
 - [prettyPhoto](http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/#prettyPhoto)
 - [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/)
 - [Flexslider](http://flexslider.woothemes.com/)
+- [jQuery Parallax](https://github.com/IanLunn/jQuery-Parallax)
+- [Shuffle](https://github.com/Vestride/Shuffle)
+- [waitForImages](https://github.com/alexanderdickson/waitForImages)
+- [Easy Pie Chart](https://github.com/xizon/easy-pie-chart)
+
 
 
 ###How to use?

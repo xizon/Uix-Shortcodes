@@ -48,7 +48,65 @@
 		} 
 	}); 
 
+	/*! 
+	 *************************************
+	 *  Filterable
+	 *************************************
+	 */
 
+	$.extend({ 
+		uix_sc_filterable:function ( options ) { 
+
+			var settings=$.extend({
+				"classprefix": 'uix-sc-portfolio-',
+				"ID": ''
+			}
+			,options);
+
+			var filterBox = $( '#'+settings.classprefix+'filter-stage-'+settings.ID+'' ),
+				filterNav = $( '#'+settings.classprefix+'cat-list-'+settings.ID+'' ),
+				filterItemSelector = '.'+settings.classprefix+'item';
+			
+			
+			 filterBox.shuffle({
+				itemSelector: filterItemSelector,
+				speed: 550, // Transition/animation speed (milliseconds).
+				easing: 'ease-out', // CSS easing function to use.
+				sizer: null // Sizer element. Use an element to determine the size of columns and gutters.
+			  });
+			  
+			//init
+			$( '#'+settings.classprefix+'filter-stage-'+settings.ID+'' ).waitForImages(function() {
+				 $( '#'+settings.classprefix+'cat-list-'+settings.ID+' li:first a' ).trigger( 'click' ); 
+			 });
+			  
+			
+			filterNav.find( 'li > a' ).unbind( 'click' ).click( function(){
+				
+				  var thisBtn = $( this ),
+					  activeClass = 'current',
+					  isActive = thisBtn.hasClass( activeClass ),
+					  group = isActive ? 'all' : thisBtn.data( 'group' );
+			
+				  // Hide current label, show current label in title
+				  if ( !isActive ) {
+					filterNav.find( '.' + activeClass ).removeClass( activeClass );
+				  }
+			
+				  thisBtn.toggleClass( activeClass );
+			
+				  // Filter elements
+				  filterBox.shuffle( 'shuffle', group );
+				  
+				  return false;
+				  
+				  
+			} ); 
+		
+			
+		} 
+	}); 
+	
 	
 	/*! 
 	 *************************************
@@ -89,11 +147,58 @@
 				}
 	
 			} ); 
-			 
 			
+			// Progress Bar
+			$( '.uix-sc-bar-box-square' ).each(function() {
+				var perc  = $( '.uix-sc-bar', this).data( 'percent' ),
+				    size  = $( '.uix-sc-bar', this).data( 'size' ),
+				    linewidth  = $( '.uix-sc-bar', this).data( 'linewidth' ),
+					trackcolor  = $( '.uix-sc-bar', this).data( 'trackcolor' ),
+					barcolor  = $( '.uix-sc-bar', this).data( 'barcolor' ),
+					units  = $( '.uix-sc-bar', this).data( 'units' ),
+					iconName  = $( '.uix-sc-bar', this).data( 'icon' ),
+					boxheight  = $( '.uix-sc-bar-info', this).height();
+					
+				if ( boxheight > 0 ) $( this ).css( { 'height': linewidth + boxheight + 'px' } );
+				$( '.uix-sc-bar', this).css( { 'height': linewidth + 'px', 'width': '100%', 'background': trackcolor } );
+				$( '.uix-sc-bar .uix-sc-bar-percent', this).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } ).animate( { percentage: perc, width: perc + '%' }, {duration: 1000 } );
+				$( '.uix-sc-bar .uix-sc-bar-text', this).uix_sc_progress( { percentage: perc, units: units, icon: iconName } ); 
+				
+				
+			});
+			
+			
+			$( '.uix-sc-bar-box-circular' ).each(function() {
+				var perc  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'percent' ),
+				    size  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'size' ),
+					sizeNum  = size.replace( 'px', '' ),
+				    linewidth  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'linewidth' ),
+					trackcolor  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'trackcolor' ),
+					barcolor  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'barcolor' ),
+					units  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'units' ),
+					icon  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'icon' );
+				
+				$( '.uix-sc-bar', this ).easyPieChart({
+					onStep: function(from, to, percent) { 
+					    var txtShow = ( icon != '' ) ? '<i class="fa fa-'+icon+'"></i>' : Math.round( percent ) + units;
+						$( this.el ).find( '.uix-sc-bar-percent' ).html( txtShow ).css( { 'line-height': size, 'width': size } ); 
+					},
+					barColor: barcolor,
+					trackColor: trackcolor,
+					scaleLength: 0,
+					lineWidth: linewidth,
+					size: sizeNum
+				});
+
+			});
+	
+		
 			 
 		} 
 	}); 
+
+
+
 
 
 
@@ -306,6 +411,61 @@
 				}
 				
 				
+
+			
+		} );
+
+	
+  };
+} )( jQuery );
+
+
+
+/*! 
+ *************************************
+ * Number Incrementers of Progress Bar 
+ *************************************
+ */
+( function( $ ) {
+	$.fn.uix_sc_progress = function(options){
+
+		var settings=$.extend({
+			"percentage": 75,
+			"speed": 1000,
+			"units": '%',
+			"icon": ''
+		}
+		,options);
+		
+		this.each(function(){
+			    
+			var $el = $( this ),
+				value = settings.percentage;
+		
+			$( { percentage: 0 } ).stop(true).animate( { percentage: value }, {
+				duration : settings.speed,
+				step: function () {
+					// percentage with 1 decimal;
+					var percentageVal = parseInt( Math.round(this.percentage * 10) / 10 );
+					
+					if ( settings.icon != '' ) {
+						$el.html( '<i class="fa fa-'+settings.icon+'"></i>' );
+					} else {
+						$el.html( percentageVal + settings.units );
+					}
+					
+				}
+			}).promise().done(function () {
+				// hard set the value after animation is done to be
+				// sure the value is correct
+				if ( settings.icon != '' ) {
+					$el.html( '<i class="fa fa-'+settings.icon+'"></i>' );
+				} else {
+					$el.html( value + settings.units );
+				}			
+				
+				
+			});
 
 			
 		} );

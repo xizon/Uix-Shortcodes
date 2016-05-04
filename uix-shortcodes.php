@@ -63,6 +63,18 @@ class UixShortcodes {
 		//Add Icons(font-awesome)
 		wp_enqueue_style( 'font-awesome-4.5.0', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
 		
+		// Shuffle
+		wp_enqueue_script( 'js-shuffle-3.1.1', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );
+		
+		// Easing
+		wp_enqueue_script( 'jquery-easing-1.3', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
+
+		// Waitforimages
+		wp_enqueue_script( 'js-waitforimages-1.4', self::plug_directory() .'assets/add-ons/preload/jquery.waitforimages.js', array( 'jquery' ), '1.4', true );
+
+		//Easy Pie Chart
+		wp_enqueue_script( 'js-easypiechart-2.1.7', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );
+
 		//flexslider
 		wp_enqueue_script( 'js-flexslider-2.5.0', self::plug_directory() .'assets/add-ons/flexslider/jquery.flexslider.min.js', array( 'jquery' ), '2.5.0', true );	
 		wp_enqueue_style( 'flexslider-2.5.0', self::plug_directory() .'assets/add-ons/flexslider/flexslider.css', false, '2.5.0', 'all' );
@@ -76,7 +88,9 @@ class UixShortcodes {
 		wp_enqueue_script( 'js-syntaxhighlighter-autoloader-3.0.83', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
 		wp_enqueue_style( 'syntaxhighlighter-3.0.83', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all');
 					
-						
+		//Parallax
+		wp_enqueue_script( 'js-bgParallax-1.1.3', self::plug_directory() .'assets/add-ons/parallax/jquery.bgParallax.js', array( 'jquery' ), '1.1.3', true );		
+								
 		//Add shortcodes style to Front-End
 		wp_enqueue_style( self::PREFIX . '-shortcodes-frontend-style', self::sc_css_file(), false, self::ver(), 'all');
 	
@@ -444,6 +458,78 @@ class UixShortcodes {
 
 
 	}
+	
+	/*
+	 * Transform string to slug for filterable categories
+	 *
+	 *
+	 */
+	public static function transform_slug( $str ) {
+	
+		return str_replace( ' ', '-', strtolower( $str ) );
+
+	}
+
+	/*
+	 * Display categories on page
+	 *
+	 *
+	 */
+	public static function cat_list( $str, $classprefix = 'uix-sc-portfolio-' ) {
+
+		$list = array();  
+		$c = preg_match_all( '/\<div class="'.$classprefix.'type">(.*?)\<\/div\>/', $str, $m ); 
+		$code = '';
+		if( count( $m[1] ) > 0 ) { 
+			for( $i=0; $i < $c; $i++ ) { 
+			
+				$new = !empty($m[1][$i]) ? $m[1][$i] : '';
+				array_push( $list, array(
+				    'slug' => self::transform_slug( $new ),
+					'name' => $new
+				));
+				
+			}  
+			
+			foreach ( $list as $key ) {
+				$code .= '<li><a href="javascript:" data-group="'.$key[ 'slug' ].'">'.$key[ 'name' ].'</a></li>';
+			}	
+			
+			return $code;
+
+		} else {
+			return '';
+		}
+	
+	}
+
+
+	
+	/*
+	 * Get attachment ID
+	 *
+	 *
+	 */	
+	public static function get_attachment_id( $img_url ) {
+		$cache_key	= md5($img_url);
+		$post_id	= wp_cache_get($cache_key, 'wpjam_attachment_id' );
+		if($post_id == false){
+	
+			$attr		= wp_upload_dir();
+			$base_url	= $attr['baseurl']."/";
+			$path = str_replace($base_url, "", $img_url);
+			if($path){
+				global $wpdb;
+				$post_id	= $wpdb->get_var("SELECT post_id FROM $wpdb->postmeta WHERE meta_value = '{$path}'");
+				$post_id	= $post_id?$post_id:''; 
+			}else{
+				$post_id	= '';
+			}
+	
+			wp_cache_set( $cache_key, $post_id, 'get_attachment_id', 86400);
+		}
+		return $post_id;
+	}
 
 
 	/*
@@ -495,7 +581,7 @@ class UixShortcodes {
 	}
 	
 	/*
-	 * Get plugin slug
+	 * Returns plugin slug
 	 *
 	 *
 	 */
@@ -504,6 +590,8 @@ class UixShortcodes {
          return dirname( plugin_basename( __FILE__ ) );
 	
 	}
+	
+	
 	
 	/**
 	 * Initialize the WP_Filesystem
@@ -682,7 +770,7 @@ class UixShortcodes {
 		$value = str_replace( $searcharray[ 'sc_str' ], $replacearray[ 'sc_str' ], $value );
 		
 
-	    return $value;
+	    return  $value;
 
 	}
 	

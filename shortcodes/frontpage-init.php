@@ -52,6 +52,136 @@ add_shortcode( 'uix_hello2', 'uix_sc_fun_hello2' );
 
 
 
+
+
+//----------------------------------------------------------------------------------------------------
+// Container
+//----------------------------------------------------------------------------------------------------
+function uix_sc_fun_container( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		  'bgimage' => '',
+          'bgimage_repeat' => '',
+          'bgimage_position' => '',
+          'bgimage_attachment' => '',
+          'bgimage_size' => '',
+		  'bgcolor' => '',
+		  'layout' => 'fullwidth',
+		  'margin_top' => 25,
+		  'margin_bottom' => 25,
+		  'margin_left' => 0,
+		  'margin_right' => 0,
+		  'padding_top' => 0,
+		  'padding_bottom' => 0,
+		  'padding_left' => 0,
+		  'padding_right' => 0,
+		  'height' => 'auto',
+		  'class' => '',
+		  'parallax' => 0,
+		  'width' => '1200px',
+		  'borderwidth' => '1px',
+		  'bordercolor' => '',
+		  'borderstyle' => 'solid',
+	
+	 ), $atts ) );
+	 
+	 
+	$id = uniqid(); 
+	$bgimage_css = '';
+	$bgcolor_css = '';
+	$width_css = '';
+	$border_css = '';
+	
+	if ( isset( $bgimage ) && !empty( $bgimage ) ) $bgimage_css = 'background:url('.$bgimage.') '.( $parallax > 0 ? '50%' : 'top' ).' '.( $parallax > 0 ? 0 : $bgimage_position ).' '.$bgimage_repeat.' '.( $parallax > 0 ? 'fixed' : $bgimage_attachment ).';background-size:'.$bgimage_size.';';
+	
+	if ( isset( $bgcolor ) && !empty( $bgcolor ) ) $bgcolor_css = 'background-color:'.$bgcolor.';';
+
+	if ( $layout == 'center' ) $width_css = 'width:calc(100% - '.( $padding_right + $padding_left ).'px);max-width:'.$width.';';
+	
+	if ( !empty( $bordercolor ) ) $border_css = 'border-color:'.$bordercolor.';border-width:'.$borderwidth.';border-style:'.$borderstyle.';';
+	
+
+  
+   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" class="uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : '' ).' '.$class.'" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;height:'.$height.';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'">'.$content.'</div></div>
+        '.( $parallax > 0 ? '
+		<script>
+		( function($) {
+			"use strict";
+			$( function() { $( "#uix-sc-container-'.$id.'" ).bgParallax( "50%", '.$parallax.' ); } ); 
+		} ) ( jQuery );
+		</script>
+		' : '' ).'
+
+   ';	
+		
+	
+	return UixShortcodes::do_callback( $return_string );
+   
+}
+add_shortcode( 'uix_container', 'uix_sc_fun_container' );
+
+
+
+//----------------------------------------------------------------------------------------------------
+// Progress Bar
+//----------------------------------------------------------------------------------------------------
+function uix_sc_fun_progress_bar( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		  'barcolor' => '',
+          'trackcolor' => '',
+          'preccolor' => '',
+          'size' => '',
+          'shape' => '',
+		  'percent' => '',
+		  'units' => '%',
+		  'linewidth' => 3,
+		  'precsize' => '12px',
+		  'title' => '',
+		  'icon' => '',
+		  'top' => 25,
+		  'bottom' => 0,
+		  'left' => 25,
+		  'right' => 25  
+	
+	 ), $atts ) );
+	 
+	 
+	$id = uniqid(); 
+	$icon_name = ( isset( $icon ) && !empty( $icon ) )  ? $icon : '';
+
+
+   $return_string = '
+   
+        '.( $shape == 'square' ? '
+			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-square" style="margin:'.$top.'px '.$right.'px '.$bottom.'px '.$left.'px; width:'.$size.';">
+				<div class="uix-sc-bar-info">
+					<h3 class="uix-sc-bar-title">'.$title.'</h3>
+					<div class="uix-sc-bar-desc">'.$content.'</div>
+				</div>
+				<div class="uix-sc-bar" data-percent="'.$percent.'" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'" data-icon="'.$icon_name.'">
+					<span class="uix-sc-bar-percent"></span>
+					<span class="uix-sc-bar-placeholder">0</span>
+					<span class="uix-sc-bar-text"  style="color:'.$preccolor.';font-size:'.$precsize.';">'.( !empty( $icon_name )  ? '<i class="fa fa-'.$icon_name.'"></i>' : ''.$percent.''.$units.'' ).'</span>
+				</div>
+			</div><!-- /.uix-sc-bar-box-square -->
+		' : '
+			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-circular" style="margin: '.$top.'px '.$right.'px '.$bottom.'px '.$left.'px; width:'.$size.';">
+				<div class="uix-sc-bar" data-percent="'.$percent.'">
+					<span class="uix-sc-bar-percent" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'"  data-icon="'.$icon_name.'" style="color:'.$preccolor.';font-size:'.$precsize.';"></span>
+				</div>
+				<h3 class="uix-sc-bar-title">'.$title.'</h3>
+				<div class="uix-sc-bar-desc">'.$content.'</div>
+			</div><!-- /.uix-sc-bar-box-circular -->
+		' ).'
+   ';	
+		
+	
+	return UixShortcodes::do_callback( $return_string );
+   
+}
+add_shortcode( 'uix_progress_bar', 'uix_sc_fun_progress_bar' );
+
+
+
 //----------------------------------------------------------------------------------------------------
 // Icons
 //----------------------------------------------------------------------------------------------------
@@ -191,7 +321,7 @@ function uix_sc_fun_pricing_item( $atts, $content = null ){
 		   
 		</div>
 	</div>    
-	<script>(function($) {$(document).ready(function() { $.uix_sc_tableHover({id: "#uix-sc-col-js-'.$id.'", tcolor: "'.$imcolor.'"})  });})(jQuery);</script>               
+	<script>(function($) { "use strict"; $(document).ready(function() { $.uix_sc_tableHover({id: "#uix-sc-col-js-'.$id.'", tcolor: "'.$imcolor.'"})  });})(jQuery);</script>               
    ';
 
    return UixShortcodes::do_callback( $return_string );
@@ -364,11 +494,12 @@ function uix_sc_fun_toggle( $atts, $content = null ){
 	extract( shortcode_atts( array( 
 		'tabs' => 0, 
 		'effect' => 'slide', 
+		'style' => 'horizontal', 
 		
 	 ), $atts ) );
 	 
 	
-	 $tabclass = ( $tabs == 1 ) ? ' uix-sc-tabs' : '';
+	 $tabclass = ( $tabs == 1 ) ? ' uix-sc-tabs '.( isset( $style ) && $style == 'vertical' ? 'uix-sc-tabs-vertical' : '' ).'' : '';
 	 $transeffect = 'slide';
 	 if ( $effect == 1 ) $transeffect = 'slide';
 	 if ( $effect == 2 ) $transeffect = 'fade';
@@ -565,9 +696,10 @@ function uix_sc_fun_syntaxhighlighter(){
 			function uix_syntaxhighlighter_path() {
 				var args = arguments,
 				result = [];
-				for (var i = 0; i < args.length; i++)
+				for (var i = 0; i < args.length; i++) {
 					result.push(args[i].replace("$", "'.UixShortcodes::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/"));
-				return result
+				}
+				return result;
 			}
 	
 			$(function () {
@@ -609,6 +741,129 @@ function uix_sc_fun_syntaxhighlighter(){
 
 
 //----------------------------------------------------------------------------------------------------
+// Portfolio
+//----------------------------------------------------------------------------------------------------
+function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		  'imagefillet' => '0%',
+		  'classprefix' => 'uix-sc-portfolio-',
+		  'col' => '3',
+		  'filterable' => 1,
+          
+	 ), $atts ) );
+	 
+	
+   $id = uniqid(); 
+   $col_class = '';
+    switch ( $col ) {
+        case 4:
+            $col_class = '{classprefix}col4';
+            break;
+        case 3:
+            $col_class = '{classprefix}col3';
+            break;
+        case 2:
+            $col_class = '{classprefix}col2';
+            break;
+    }
+   
+   
+
+   $return_string = '
+
+   <div class="'.$classprefix.'tiles '.$col_class.'" id="'.$classprefix.'filter-stage-'.$id.'">
+          '.$content.'
+    </div><!-- /.'.$classprefix.'tiles -->                                   
+   ';
+  
+   
+   $return_string = UixShortcodes::do_callback( $return_string );
+   $return_string = str_replace( '{imagefillet}', 'style="-webkit-border-radius: '.$imagefillet.'; -moz-border-radius: '.$imagefillet.'; border-radius: '.$imagefillet.';"', $return_string );
+   $return_string = str_replace( '{classprefix}', $classprefix, $return_string );
+  
+   //Display categories on page
+   $catlist = '';
+   
+   if ( $filterable == 1 ) {
+	   $catlist = '
+		<div class="'.$classprefix.'cat-list" id="'.$classprefix.'cat-list-'.$id.'">
+			<ul>
+				<li class="current"><a href="javascript:" data-group="all">'.__( 'All', 'uix-shortcodes' ).'</a></li>
+				'.UixShortcodes::cat_list( $return_string, $classprefix ).'
+			</ul>
+		</div> <!-- /.'.$classprefix.'cat-list -->
+		<script>(function($) { "use strict"; $(document).ready(function() { $.uix_sc_filterable({ID: "'.$id.'", classprefix: "'.$classprefix.'"})  });})(jQuery);</script>  
+	   ';  
+   }
+   
+
+  
+
+   return $catlist.$return_string;
+   
+}
+add_shortcode( 'uix_portfolio', 'uix_sc_fun_portfolio_wrapper' );
+
+//-----
+function uix_sc_fun_portfolio_item( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		  'title' => '',
+		  'type' => '',
+		  'image' => '',
+          'fullimage' => '',
+		  'desc' => '',
+          'url' => '',
+          'target' => 1,
+	 ), $atts ) );
+	 
+
+ 
+	//target
+    $targetcode = '';
+    if ( !empty( $url ) ) {
+	    $targetcode = ( $target == 1 ) ? ' target="_blank"' : '';
+    } else {
+        $targetcode = 'rel="uix-sc-prettyPhoto"';
+		if ( empty( $image ) ) $targetcode = '';
+    }
+    
+    //fullimgURL
+    $fullimgURL = ( empty( $fullimage ) ) ? $image : $fullimage;
+	if ( !empty( $url ) ) {
+		$fullimgURL = $url;
+	}
+    
+
+   $return_string = '
+        <div class="{classprefix}item" data-groups=\'["'.UixShortcodes::transform_slug( $type ).'"]\'>
+            <span class="{classprefix}image" {imagefillet}>
+                <a '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'">
+                <img src="'.$image.'" id="'.UixShortcodes::get_attachment_id( $image ).'" alt="" {imagefillet}>
+                </a>
+            </span>
+            <h3><a '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'">'.$title.'</a></h3>
+			'.( !empty( $type ) ? '<div class="{classprefix}type">'.$type.'</div>' : '' ).'
+            <div class="{classprefix}content">
+                '.str_replace( '[uix_portfolio_item_desc]', '',
+                  str_replace( '[/uix_portfolio_item_desc]', '',
+                   $content
+                   ) ).'
+				<a class="{classprefix}link" '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'"></a>
+            </div>
+    
+        </div><!-- /.{classprefix}item -->          
+   ';
+
+  
+  
+
+   return UixShortcodes::do_callback( $return_string );
+}
+add_shortcode( 'uix_portfolio_item', 'uix_sc_fun_portfolio_item' );
+
+
+
+//----------------------------------------------------------------------------------------------------
 // Team
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_team_wrapper( $atts, $content = null ){
@@ -619,7 +874,7 @@ function uix_sc_fun_team_wrapper( $atts, $content = null ){
 		  'col' => 'fullwidth',
 	 ), $atts ) );
 	 
-	
+
    if ( $col == 'fullwidth' ) {
 	   $return_string = '
 	   <div class="uix-sc-card">
@@ -629,7 +884,7 @@ function uix_sc_fun_team_wrapper( $atts, $content = null ){
    
    }
    
-   if ( $col == 4 ) {
+   if ( $col == 4 || $col == 3 || $col == 2 ) {
 	   $return_string = '
 	   <div class="uix-sc-gallery">
 			  '.$content.'
@@ -698,7 +953,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 		<div class="uix-sc-card-item">
 		  <div class="uix-sc-card-item-left uix-sc-gray">
 					<div class="uix-sc-card-item-left-imgbox" {avatarheight}>
-						<a href="'.$avatarURL.'" rel="uix-sc-prettyPhoto[unusual]" title="'.$name.' - '.$position.'"><img src="'.$avatarURL.'" alt="" {avatarfillet}></a>
+						<img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
 					</div>
 		  </div>
 		  <div class="uix-sc-card-item-body">
@@ -721,30 +976,43 @@ function uix_sc_fun_team_item( $atts, $content = null ){
    
    }
    
-   if ( $col == 4 ) {
-	   $return_string = '
-		<div class="uix-sc-gallery-list uix-sc-gallery-list-small uix-sc-gray">
-			<div class="uix-sc-gallery-list-imgbox">
-				<a {avatarheight} href="'.$avatarURL.'" rel="uix-sc-prettyPhoto[unusual-4]" title="
-				    <div class=\'uix-sc-gallery-list-lightbox-info\'>
-							<strong>'.$name.' - '.$position.'</strong>
-							<span class=\'uix-sc-gallery-list-lightbox-info-desc\'>'.__( 'Description:', 'uix-shortcodes' ).'</span>
-							'.str_replace( '[uix_team_item_desc]', '<span class=\'uix-sc-gallery-list-lightbox-info-p\'>',
-								   str_replace( '[/uix_team_item_desc]', '</span>',
-							   $content
-							   ) ).'
-							'.$social_out_1.'
-							'.$social_out_2.'
-							'.$social_out_3.'
-				    </div>
-				">
-				<img src="'.$avatarURL.'" alt="" {avatarfillet}>
-				</a>
+   if ( $col == 4 || $col == 3 || $col == 2 ) {
+	   
+	   
+	   $col_class = '';
+		switch ( $col ) {
+			case 4:
+				$col_class = 'uix-sc-gallery-list-col4';
+				break;
+			case 3:
+				$col_class = 'uix-sc-gallery-list-col3';
+				break;
+			case 2:
+				$col_class = 'uix-sc-gallery-list-col2';
+				break;
+		}
 
+	   $return_string = '
+		<div class="uix-sc-gallery-list '.$col_class.' uix-sc-gray">
+			<div class="uix-sc-gallery-list-imgbox" {avatarheight}>
+				<img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
+				<span class="uix-sc-gallery-list-position">'.$position.'</span>
 			</div>
 			<div class="uix-sc-gallery-list-info">
-				<h3 class="uix-sc-gallery-list-title">'.$name.'</h3>
-				<p class="uix-sc-gallery-list-desc">'.$position.'</p>
+				<h3 class="uix-sc-gallery-list-title">'.$name.'</h3>	
+				<div class="uix-sc-gallery-list-desc">
+							'.str_replace( '[uix_team_item_desc]', '<span class=\'uix-sc-gallery-list-desc-p\'>',
+							  str_replace( '[/uix_team_item_desc]', '</span>',
+							   $content
+							   ) ).'
+				</div>
+				<div class="uix-sc-gallery-list-social">
+					&nbsp;&nbsp;
+					'.$social_out_1.'
+					'.$social_out_2.'
+					'.$social_out_3.'									
+				
+				</div>
 				
 			</div>
 		</div>            

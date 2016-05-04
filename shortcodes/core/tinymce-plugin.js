@@ -70,6 +70,16 @@
 					*/
 					
 					
+				    /* -----------   */
+				
+					{
+						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_32' ),
+						icon: 'icon dashicons-desktop',
+						onclick: function() {
+							jQuery( '#uix_sc_container' ).trigger( 'click' );
+						}
+					},
+					
 					
 					/* -----------   */
 					
@@ -122,6 +132,13 @@
 							},	
 							
 							{
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_31' ),
+								onclick: function() {
+									jQuery( '#uix_sc_form_portfolio_grid' ).trigger( 'click' );
+								}
+							},						
+							
+							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_9' ),
 								menu: [
 									{
@@ -133,7 +150,7 @@
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_11' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_team_col4' ).trigger( 'click' );
+											jQuery( '#uix_sc_form_team_grid' ).trigger( 'click' );
 										}
 									},
 								
@@ -321,6 +338,14 @@
 									jQuery( '#uix_sc_form_icon' ).trigger( 'click' );
 								}
 							},
+							
+							{
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_33' ),
+								onclick: function() {
+									jQuery( '#uix_sc_form_bar' ).trigger( 'click' );
+								}
+							},						
+							
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_28' ),

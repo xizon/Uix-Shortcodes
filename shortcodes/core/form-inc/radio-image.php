@@ -20,6 +20,7 @@ class UixShortcodesForm_RadioImage {
 		$jscode_vars = '';
 		
 		$toggleForRadioClass = 'toggle-radio-options-'.$id;
+		$toggleForRadioJS = '';
 		
 		
         if ( $type == 'radio-image' ) {
@@ -46,23 +47,34 @@ class UixShortcodesForm_RadioImage {
 				
             }
 			
-			//Toggle
+			//Toggle for radio options
 			$toggle_class = '';
 			$target_id = '';
 			$toggle_trigger_id = '';
 			
             if ( is_array( $toggle ) && !empty( $toggle ) ) {
              
-				$toggle_class = ( isset( $toggle[ 'toggle_class' ] ) ) ? $toggle[ 'toggle_class' ] : '';
-				$toggle_trigger_id = ( isset( $toggle[ 'trigger_id' ] ) ) ? $toggle[ 'trigger_id' ] : '';
-				
-				if ( isset( $toggle[ 'toggle_class' ] ) ) {
-					foreach ( $toggle[ 'toggle_class' ] as $tid_value ) {
-						$target_id .= '.'.$tid_value.','; 	
-					}	
+				foreach ( $toggle as $toggleArr ) {
+			
+					/* ------------  */
+					$toggle_class = ( isset( $toggleArr[ 'toggle_class' ] ) ) ? $toggleArr[ 'toggle_class' ] : '';
+					$toggle_trigger_id = ( isset( $toggleArr[ 'trigger_id' ] ) ) ? $toggleArr[ 'trigger_id' ] : '';
+					$target_id = '';
+					
+					if ( isset( $toggleArr[ 'toggle_class' ] ) ) {
+						foreach ( $toggleArr[ 'toggle_class' ] as $tid_value ) {
+							$target_id .= '.'.$tid_value.','; 	
+						}
+						
+						$toggleForRadioJS .= '$( document ).uix_divToggle( { checkbox: 1, checkboxToggleClass: ".'.$toggleForRadioClass.'", btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );'."\n";
+		
+					}
+					/* ------------  */	
+					
 	
-				}
-				
+					
+				}	
+		
             }
 			
 	
@@ -106,7 +118,7 @@ class UixShortcodesForm_RadioImage {
 			if ( !empty( $toggle_class ) ) {
 				$jscode_tog = '
 					/*-- Toggle for radio-image  --*/
-					$( document ).uix_divToggle( { checkbox: 1, checkboxToggleClass: ".'.$toggleForRadioClass.'", btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );
+					'.$toggleForRadioJS.'
 				';	
 				
 				//inscure browser

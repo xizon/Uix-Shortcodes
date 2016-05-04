@@ -162,8 +162,8 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 						
 						
 					var _item_v_avatar = ( _avatar != undefined ) ? _avatar : '',
-					    _item_v_name = ( _name != undefined ) ? uix_htmlencodeToShortcodeFormat ( _name ) : '',
-						_item_v_position = ( _position != undefined ) ? uix_htmlencodeToShortcodeFormat ( _position ) : '',
+					    _item_v_name = ( _name != undefined ) ? uix_htmlencodeToShortcodeFormat( _name ) : '',
+						_item_v_position = ( _position != undefined ) ? uix_htmlencodeToShortcodeFormat( _position ) : '',
 					    _item_v_desc = ( _desc != undefined ) ? uix_formatTextarea( _desc ) : '';
 						
 					

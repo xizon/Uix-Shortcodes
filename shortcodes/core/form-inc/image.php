@@ -26,12 +26,21 @@ class UixShortcodesForm_Image {
                                 
             $remove_btn_text = '';
             $upload_btn_text = '';
+			$image_prop = false;
             if ( is_array( $default ) && !empty( $default ) ) {
                 $remove_btn_text = $default[ 'remove_btn_text' ];
                 $upload_btn_text = $default[ 'upload_btn_text' ];
+				
+				//Image properties
+				if ( isset( $default[ 'prop' ] ) && $default[ 'prop' ] ) {
+					$image_prop = true;	
+				}				
+				
+				
             }
-            
-            $field = '
+			
+     
+            $field .= '
 			
 			
                     <tr'.$class.'>
@@ -62,14 +71,134 @@ class UixShortcodesForm_Image {
                     </tr> 
                 '."\n";	
                 
+				
+			if ( $image_prop ) {	
+				$field .= '
+						<tr class="trigger_id_'.$id.'_repeat" style="display:none">
+							<th scope="row"><label>'.__( 'Background Repeat', 'uix-shortcodes' ).'</label></th>
+							<td>
+							
+								<div class="sweet-box">
+								   
+									  <div class="radio" id="radio-selector-'.$id.'_repeat">	
+										  <span data-value="no-repeat" class="active">'.__( 'No Repeat', 'uix-shortcodes' ).'</span>
+										  <span data-value="repeat" >'.__( 'Tile', 'uix-shortcodes' ).'</span>
+										  <span data-value="repeat-x" >'.__( 'Tile Horizontally', 'uix-shortcodes' ).'</span>
+										  <span data-value="repeat-y" >'.__( 'Tile Vertically', 'uix-shortcodes' ).'</span>
+									   </div>
+									   '.( !empty( $id ) ? '<input type="hidden" id="'.$id.'_repeat" value="no-repeat">' : '' ).' 
+								
+								</div>
+							</td>
+						</tr> 
+					'."\n";	
+				$jscode .= '
+				$( document ).uix_radioSelector({
+						containerID: "#radio-selector-'.$id.'_repeat",
+						targetID: "#'.$id.'_repeat"
+					});		
+						
+				'."\n";	
+				
+				/* ------------ */
+				
+				$field .= '
+						<tr class="trigger_id_'.$id.'_position" style="display:none">
+							<th scope="row"><label>'.__( 'Background Position', 'uix-shortcodes' ).'</label></th>
+							<td>
+							
+								<div class="sweet-box">
+								   
+									  <div class="radio" id="radio-selector-'.$id.'_position">	
+										  <span data-value="left" class="active">'.__( 'Left', 'uix-shortcodes' ).'</span>
+										  <span data-value="center" >'.__( 'Center', 'uix-shortcodes' ).'</span>
+										  <span data-value="right" >'.__( 'Right', 'uix-shortcodes' ).'</span>
+									   </div>
+									   '.( !empty( $id ) ? '<input type="hidden" id="'.$id.'_position" value="left">' : '' ).' 
+								
+								</div>
+							</td>
+						</tr> 
+					'."\n";	
+				$jscode .= '
+				$( document ).uix_radioSelector({
+						containerID: "#radio-selector-'.$id.'_position",
+						targetID: "#'.$id.'_position"
+					});		
+						
+				'."\n";	
+				
+				/* ------------ */
+				
+				$field .= '
+						<tr class="trigger_id_'.$id.'_attachment" style="display:none">
+							<th scope="row"><label>'.__( 'Background Attachment', 'uix-shortcodes' ).'</label></th>
+							<td>
+							
+								<div class="sweet-box">
+								   
+									  <div class="radio" id="radio-selector-'.$id.'_attachment">	
+										  <span data-value="scroll" class="active">'.__( 'Scroll', 'uix-shortcodes' ).'</span>
+										  <span data-value="fixed" >'.__( 'Fixed', 'uix-shortcodes' ).'</span>
+									   </div>
+									   '.( !empty( $id ) ? '<input type="hidden" id="'.$id.'_attachment" value="scroll">' : '' ).' 
+								
+								</div>
+							</td>
+						</tr> 
+					'."\n";	
+				$jscode .= '
+				$( document ).uix_radioSelector({
+						containerID: "#radio-selector-'.$id.'_attachment",
+						targetID: "#'.$id.'_attachment"
+					});		
+						
+				'."\n";	
+				
+				/* ------------ */
+				
+				$field .= '
+						<tr class="trigger_id_'.$id.'_size" style="display:none">
+							<th scope="row"><label>'.__( 'Background Size', 'uix-shortcodes' ).'</label></th>
+							<td>
+							
+								<div class="sweet-box">
+								   
+									  <div class="radio" id="radio-selector-'.$id.'_size">	
+									      <span data-value="cover" class="active">'.__( 'Cover', 'uix-shortcodes' ).'</span>
+									      <span data-value="auto">'.__( 'Auto', 'uix-shortcodes' ).'</span>
+										  <span data-value="contain">'.__( 'Contain', 'uix-shortcodes' ).'</span>
+									   </div>
+									   '.( !empty( $id ) ? '<input type="hidden" id="'.$id.'_size" value="cover">' : '' ).' 
+								
+								</div>
+							</td>
+						</tr> 
+					'."\n";	
+				$jscode .= '
+				$( document ).uix_radioSelector({
+						containerID: "#radio-selector-'.$id.'_size",
+						targetID: "#'.$id.'_size"
+					});		
+						
+				'."\n";	
+				
+				/* ------------ */
+						
+				
+	
+					
+			}
                 
+				
             $jscode_vars = '
                 '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
+				'.( $image_prop ? 'var '.$id.'_repeat = $( "#'.$id.'_repeat" ).val(); var '.$id.'_position = $( "#'.$id.'_position" ).val(); var '.$id.'_attachment = $( "#'.$id.'_attachment" ).val(); var '.$id.'_size = $( "#'.$id.'_size" ).val();'."\n" : '' ).'
             ';
-            $jscode = '
+            $jscode .= '
 
                 /*-- Insert media  --*/
-                $( document ).uix_uploadMediaCustom( { btnID: "#trigger_id_'.$id.'", closebtnID: "#drop_trigger_id_'.$id.'" } );
+                $( document ).uix_uploadMediaCustom( { '.( $image_prop ? 'prop: true,' : '' ).'btnID: "#trigger_id_'.$id.'", closebtnID: "#drop_trigger_id_'.$id.'" } );
             ';	
                 
 

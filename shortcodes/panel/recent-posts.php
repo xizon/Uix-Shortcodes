@@ -98,9 +98,9 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Insert Recent Posts', 'uix-shortcodes' ) ); ?>
 	
 				
-				var before = uix_htmlencodeToShortcodeFormat ( uix_sc_rposts_before );
-				var after = uix_htmlencodeToShortcodeFormat ( uix_sc_rposts_after );
-				var temp = uix_htmlencodeToShortcodeFormat ( uix_sc_rposts_looptemp );
+				var before = uix_htmlencodeToShortcodeFormat( uix_sc_rposts_before );
+				var after = uix_htmlencodeToShortcodeFormat( uix_sc_rposts_after );
+				var temp = uix_htmlencodeToShortcodeFormat( uix_sc_rposts_looptemp );
 				
 				
 		
