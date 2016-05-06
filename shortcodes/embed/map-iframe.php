@@ -73,7 +73,10 @@ $map_marker = ( isset( $_GET[ 'marker' ] ) && !empty( $_GET[ 'marker' ] ) ) ? $_
 		  cursor: pointer;
 		  margin-left: 10px;
 		  background-repeat: no-repeat;
+		  -webkit-background-size: 32px 64px;
+		  -moz-background-size: 32px 64px;
 		  background-size: 32px 64px;
+		  
 		  opacity:.7;
 		  z-index:3;
 		  font-size:30px;

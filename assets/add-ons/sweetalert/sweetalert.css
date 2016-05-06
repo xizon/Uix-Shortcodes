@@ -2029,7 +2029,10 @@ body.stop-scrolling {
 	transform: rotate(-45deg);
 }
 .sweet-alert .sa-icon.sa-custom {
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
 	background-size: contain;
+	
 	border-radius: 0;
 	border: none;
 	background-position: center center;
