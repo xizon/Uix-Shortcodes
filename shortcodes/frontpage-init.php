@@ -166,8 +166,8 @@ function uix_sc_fun_progress_bar( $atts, $content = null ){
 				</div>
 			</div><!-- /.uix-sc-bar-box-square -->
 		' : '
-			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-circular" style="margin: '.$top.'px '.$right.'px '.$bottom.'px '.$left.'px; width:'.$size.';">
-				<div class="uix-sc-bar" data-percent="'.$percent.'">
+			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-circular" style="margin: '.$top.'px '.$right.'px '.$bottom.'px '.$left.'px;">
+				<div class="uix-sc-bar" data-percent="'.$percent.'" style="width:'.$size.';">
 					<span class="uix-sc-bar-percent" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'"  data-icon="'.$icon_name.'" style="color:'.$preccolor.';font-size:'.$precsize.';"></span>
 				</div>
 				<h3 class="uix-sc-bar-title">'.$title.'</h3>
@@ -527,9 +527,11 @@ function uix_sc_fun_toggle( $atts, $content = null ){
 	
 	
    $return_string = '
-   <div class="uix-sc-accordion'.$tabclass.'" data-effect="'.$transeffect.'">
-		  '.$content.'
-	</div><!-- /.uix-sc-accordion, .uix-sc-tabs -->                                   
+   <div class="uix-sc-accordion-box">
+	   <div class="uix-sc-accordion'.$tabclass.'" data-effect="'.$transeffect.'">
+			  '.$content.'
+		</div><!-- /.uix-sc-accordion, .uix-sc-tabs -->
+	</div><!-- /.uix-sc-accordion-box -->                              
    ';
  
    
@@ -1331,9 +1333,6 @@ function uix_sc_fun_heading( $atts, $content = null ) {
 	   ';
 	
 	}
-
-
-	
 	
 	return UixShortcodes::do_callback( $return_string );
 }
