@@ -114,7 +114,8 @@ function uix_sc_fun_container( $atts, $content = null ){
 		' : '' ).'
 
    ';	
-		
+	
+
 	
 	return UixShortcodes::do_callback( $return_string );
    
