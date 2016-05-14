@@ -76,7 +76,7 @@
 			  });
 			  
 			//init
-			$( '#'+settings.classprefix+'filter-stage-'+settings.ID+'' ).waitForImages(function() {
+			$( '#'+settings.classprefix+'filter-stage-'+settings.ID+'' ).imagesLoaded(function() {
 				 $( '#'+settings.classprefix+'cat-list-'+settings.ID+' li:first a' ).trigger( 'click' ); 
 			 });
 			  

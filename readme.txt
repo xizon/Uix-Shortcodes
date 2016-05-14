@@ -30,7 +30,7 @@ The content elements are the heart of any page builder. These are the elements s
  - Flexslider (http://flexslider.woothemes.com/)
  - jQuery Parallax (https://github.com/IanLunn/jQuery-Parallax)
  - Shuffle (https://github.com/Vestride/Shuffle)
- - waitForImages (https://github.com/alexanderdickson/waitForImages)
+ - imagesloaded (https://github.com/desandro/imagesloaded)
  - Easy Pie Chart (https://github.com/xizon/easy-pie-chart)
 
  

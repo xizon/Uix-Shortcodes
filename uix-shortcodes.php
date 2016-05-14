@@ -69,8 +69,9 @@ class UixShortcodes {
 		// Easing
 		wp_enqueue_script( 'jquery-easing-1.3', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
 
-		// Waitforimages
-		wp_enqueue_script( 'js-waitforimages-1.4', self::plug_directory() .'assets/add-ons/preload/jquery.waitforimages.js', array( 'jquery' ), '1.4', true );
+
+		// imagesloaded
+		wp_enqueue_script( 'js-imagesloaded-4.1.0', self::plug_directory() .'assets/add-ons/preload/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
 
 		//Easy Pie Chart
 		wp_enqueue_script( 'js-easypiechart-2.1.7', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );

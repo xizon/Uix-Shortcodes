@@ -34,6 +34,8 @@ Initial Release.
 - WP 4.4.2
 - WP 4.5
 - WP 4.5.1
+- WP 4.5.2
+
 
 ###Screenshot
 
@@ -82,7 +84,7 @@ Initial Release.
 - [Flexslider](http://flexslider.woothemes.com/)
 - [jQuery Parallax](https://github.com/IanLunn/jQuery-Parallax)
 - [Shuffle](https://github.com/Vestride/Shuffle)
-- [waitForImages](https://github.com/alexanderdickson/waitForImages)
+- [imagesloaded](https://github.com/desandro/imagesloaded)
 - [Easy Pie Chart](https://github.com/xizon/easy-pie-chart)
 
 
