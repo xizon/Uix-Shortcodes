@@ -16,7 +16,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                     <h2><?php _e( 'Container Builder', 'uix-shortcodes' ); ?></h2>
                    <div class="uix-documentation-content" >
   
-                           <p><?php _e( 'This shortcode required when you create content as container or mark the specific content. It allows you use 100% width, background customization, color diversification, parallax background, banner or header customization, and so on.', 'uix-shortcodes' ); ?><br>
+                           <p><?php _e( 'This shortcode required when you create content as container or mark the specific content. "<strong>Container</strong>" shortcode allows you use 100% width or boxed layout. You can customize background, height, border, color diversification, parallax background, wrapper margin, content padding for sections.<br>', 'uix-shortcodes' ); ?><br>
 
 <strong>"<?php _e( 'Content Shortcode', 'uix-shortcodes' ); ?>"</strong>, <strong>"<?php _e( 'Column Shortcode', 'uix-shortcodes' ); ?>"</strong>, <strong>"<?php _e( 'Web Elements Shortcode', 'uix-shortcodes' ); ?>"</strong> and <strong>"<?php _e( 'Container Shortcode', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'could be used together to divide the page into sections.', 'uix-shortcodes' ); ?>
 
@@ -162,7 +162,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                 </div>
                                 
                                 
-                                <h3><?php _e( 'Example', 'uix-shortcodes' ); ?></h3>
+                                <h3><?php _e( 'Example(header)', 'uix-shortcodes' ); ?></h3>
                                 <div>
 <pre class="brush: css;">
 &nbsp;
@@ -186,13 +186,139 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                 </div>
                                 
                       
+                                <h3><?php _e( 'Example(page)', 'uix-shortcodes' ); ?></h3>
+                                <div>
+<pre class="brush: css;">
+&nbsp;
+[uix_container parallax='0' class='' width='1200px' height='auto' margin_top='25' margin_bottom='25' margin_left='0' margin_right='0' padding_top='0' padding_bottom='0' padding_left='25' padding_right='25' bgcolor='' layout='center' ]
+
+[uix_features col='3']
+[uix_features_item col='3' icon='binoculars' iconcolor='' titlecolor='' desccolor='' ]
+[uix_features_item_title]Creative WordPress Theme[/uix_features_item_title]
+[uix_features_item_desc][p]Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.[/p][/uix_features_item_desc]
+[/uix_features_item]
+[uix_features_item col='3' icon='anchor' iconcolor='' titlecolor='' desccolor='' ]
+[uix_features_item_title]Interactive Creative[/uix_features_item_title]
+[uix_features_item_desc][p]Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.[/p][/uix_features_item_desc]
+[/uix_features_item]
+[uix_features_item col='3' icon='adjust' iconcolor='' titlecolor='' desccolor='' last='1']
+[uix_features_item_title]Premium Templates[/uix_features_item_title]
+[uix_features_item_desc][p]DThe first approach uses Bootstraps own offset classes so it requires no change in markup and no extra CSS. The key is to set an offset equal to half of the remaining size of the row. So for example, a column of size 2 would be centered by adding an offset of 5.[/p][/uix_features_item_desc]
+[/uix_features_item]
+[/uix_features]
+
+[uix_features col='3']
+[uix_features_item col='3' icon='cubes' iconcolor='' titlecolor='' desccolor='' ]
+[uix_features_item_title]Multiple layouts[/uix_features_item_title]
+[uix_features_item_desc][p]Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.[/p][/uix_features_item_desc]
+[/uix_features_item]
+[uix_features_item col='3' icon='coffee' iconcolor='' titlecolor='' desccolor='' ]
+[uix_features_item_title]Search Engine Optimization[/uix_features_item_title]
+[uix_features_item_desc][p]Aenean congue molestie sapien, nec convallis lectus interdum ut. Vestibulum facilisis, sem eu lobortis pulvinar, dui dui ornare erat, nec porta nunc quam a metus. Fusce eget consequat purus. Sed magna odio, rhoncus eget diam fermentum, mattis porttitor dolor.[/p][/uix_features_item_desc]
+[/uix_features_item]
+[uix_features_item col='3' icon='cloud-download' iconcolor='' titlecolor='' desccolor='' last='1']
+[uix_features_item_title]Freebies[/uix_features_item_title]
+[uix_features_item_desc][p]Nam et vestibulum odio. Aliquam auctor ac velit sit amet pretium. Maecenas pulvinar egestas rutrum. Nam et elit faucibus nunc euismod fringilla eu iaculis mi.[br]Vitiosum est enim in dividendo partem in genere numerare. Paulum, cum regem Persem captum adduceret, eodem flumine invectio[/p][/uix_features_item_desc]
+[/uix_features_item]
+[/uix_features]
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+[uix_heading color='' style='grand' align='center' size='45px' uppercase='true' spacing='2px' fillbg='']Our Team[/uix_heading][uix_heading_line line='true' width='182px' height='5px']
+&lt;p style="text-align: center;"&gt;&lt;span style="color: #808080;"&gt;Summum a vobis bonum voluptas dicitur.&lt;/span&gt;&lt;/p&gt;
+[uix_team col='4' avatarfillet='0%' gray='true']
+[uix_team_item col='4' name='Jone Smmith' avatar='http://your.website.com/photo.png' position='CEO' social_1='twitter|#' social_2='facebook|#' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[uix_team_item col='4' name='Donny Kiu' avatar='http://your.website.com/photo.png' position='Photographer' social_1='twitter|#' social_2='|' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[uix_team_item col='4' name='Doky' avatar='http://your.website.com/photo.png' position='Andriod Developer' social_1='|' social_2='|' social_3='|']
+[uix_team_item_desc][p]The Introduction of this member.[/p][/uix_team_item_desc]
+[/uix_team_item]
+[uix_team_item col='4' name='Haec Linla' avatar='http://your.website.com/photo.png' position='UI Designer' social_1='facebook|#' social_2='|' social_3='|']
+[uix_team_item_desc][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. [/p][/uix_team_item_desc]
+[/uix_team_item]
+[/uix_team]
+
+[/uix_container]
+
+[uix_container parallax='0.4' class='' height='315px' margin_top='25' margin_bottom='25' margin_left='0' margin_right='0' padding_top='135' padding_bottom='0' padding_left='25' padding_right='25' bgimage='http://your.website.com/bg1.jpg' bgimage_repeat='no-repeat' bgimage_position='left' bgimage_attachment='scroll' bgimage_size='cover' bgcolor='' layout='fullwidth' ]
+&lt;p style="text-align: center;"&gt;&lt;span style="color: #ffffff;"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si verbum sequimur, primum longius verbum praepositum quam bonum.&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;span style="color: #ffffff;"&gt;Summum a vobis bonum voluptas dicitur.&lt;/span&gt;&lt;/p&gt;
+[/uix_container]
+
+[uix_container parallax='0' class='' width='1200px' height='auto' margin_top='25' margin_bottom='0' margin_left='0' margin_right='0' padding_top='0' padding_bottom='0' padding_left='25' padding_right='25' bgcolor='' layout='center' ]
+
+[uix_column_wrapper top='20' bottom='20' left='0' right='0']
+[uix_column grid='3']
+
+[uix_progress_bar barcolor='#a2bf2f' trackcolor='#f1f1f1' preccolor='#473f3f' size='120px' shape='circular' percent='75' units='%' linewidth='3' precsize='12px' title='Multiple layouts' top='25' bottom='0' left='25' right='25'][p]Duis mollis, est non commodo luctus[/p][/uix_progress_bar]
+
+[/uix_column]
+[uix_column grid='3']
+
+[uix_progress_bar barcolor='#fa8072' trackcolor='#f1f1f1' preccolor='#473f3f' size='120px' shape='circular' percent='99' units='%' linewidth='3' precsize='12px' title='Full PJAX' top='25' bottom='0' left='25' right='25'][p]Donec sed odio dui.[/p][/uix_progress_bar]
+
+[/uix_column]
+[uix_column grid='3']
+
+[uix_progress_bar barcolor='#ffd700' trackcolor='#f1f1f1' preccolor='#473f3f' size='120px' shape='circular' percent='88' units='%' linewidth='3' precsize='12px' title='Search Engine Optimization' top='25' bottom='0' left='25' right='25'][p]Lorem ipsum dolor sit amet, consectetur adipiscing elit[/p][/uix_progress_bar]
+
+[/uix_column]
+[uix_column grid='3' last='1']
+
+[uix_progress_bar barcolor='#4BB1CF' trackcolor='#f1f1f1' preccolor='#473f3f' size='120px' shape='circular' percent='35' units='%' linewidth='3' precsize='12px' title='Creative WordPress Theme' top='25' bottom='0' left='25' right='25'][p]Duis mollis, est non commodo luctus[/p][/uix_progress_bar]
+
+[/uix_column]
+[/uix_column_wrapper]
+
+&amp;nbsp;
+
+[uix_heading color='' style='grand' align='center' size='45px' uppercase='true' spacing='2px' fillbg='']Pricing[/uix_heading][uix_heading_line line='true' width='182px' height='5px']
+&lt;p style="text-align: center;"&gt;&lt;span style="color: #808080;"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si verbum sequimur.&lt;/span&gt;&lt;/p&gt;
+[uix_pricing]
+[uix_pricing_item target='_blank' class='' url='#' period='per month' bcolor='green' imcolor='#d59a3e' col='3']
+[uix_pricing_item_level]free[/uix_pricing_item_level]
+[uix_pricing_item_price]$49[/uix_pricing_item_price]
+[uix_pricing_item_desc][p]Quis animo aequo videt eum, quem inpure ac flagitiose putet vivere?[/p][/uix_pricing_item_desc]
+[uix_pricing_item_button]TRY FOR FREE[/uix_pricing_item_button]
+[uix_pricing_item_detail][ul][li]Feature Description[/li][li]Another Feature Description[/li][li]UX prototyping engaging[/li][li]For years is now over[/li][li]That search is now over[/li][/ul][/uix_pricing_item_detail]
+[/uix_pricing_item]
+[uix_pricing_item target='_blank' class='uix-sc-price-important' url='#' period='per month' bcolor='green' imcolor='#d59a3e' col='3']
+[uix_pricing_item_level]premium[/uix_pricing_item_level]
+[uix_pricing_item_price]$69[/uix_pricing_item_price]
+[uix_pricing_item_desc][p]Maximas animo voluptates percipiat omnibusque partibus maiores quam corpore, quid occurrat non videtis.[/p][/uix_pricing_item_desc]
+[uix_pricing_item_button]BUY[/uix_pricing_item_button]
+[uix_pricing_item_detail][ul][li]Feature Description[/li][li]Another Feature Description[/li][li]Another Feature Description[/li][li]UX prototyping engaging[/li][li]For years is now over[/li][li]That search is now over[/li][/ul][/uix_pricing_item_detail]
+[/uix_pricing_item]
+[uix_pricing_item target='_blank' class='' url='#' period='per month' bcolor='green' imcolor='#d59a3e' col='3' last='1']
+[uix_pricing_item_level]professional[/uix_pricing_item_level]
+[uix_pricing_item_price]$109[/uix_pricing_item_price]
+[uix_pricing_item_desc][p]Neminem videbis ita laudatum, ut artifex callidus.[/p][/uix_pricing_item_desc]
+[uix_pricing_item_button]BUY[/uix_pricing_item_button]
+[uix_pricing_item_detail][ul][li]&lt;s&gt;Invalid Feature Description&lt;/s&gt;[/li][li]&lt;s&gt;Invalid Feature Description 2&lt;/s&gt;[/li][li]Feature Description[/li][li]Another Feature Description[/li][li]Another Feature Description[/li][li]UX prototyping engaging[/li][li]For years is now over[/li][li]That search is now over[/li][li]Design is the method[/li][li]Look SEO[/li][/ul][/uix_pricing_item_detail]
+[/uix_pricing_item]
+[/uix_pricing]
+
+[/uix_container]
+
+[uix_container parallax='0' class='' height='5px' margin_top='0' margin_bottom='0' margin_left='0' margin_right='0' padding_top='0' padding_bottom='0' padding_left='25' padding_right='25' bgimage='http://your.website.com/bg2.jpg' bgimage_repeat='no-repeat' bgimage_position='left' bgimage_attachment='scroll' bgimage_size='cover' bgcolor='' layout='fullwidth' ][/uix_container]
+</pre>
+                                </div>
                                 
                                        
-                                <h3><?php _e( 'Preview', 'uix-shortcodes' ); ?></h3>
+                                <h3><?php _e( 'Preview(header)', 'uix-shortcodes' ); ?></h3>
                                 <div>
                                    <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-container-8.jpg" alt="" />
                                 </div>
-                                   
+                                
+                                <h3><?php _e( 'Preview(page)', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                   <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-container-8_2.jpg" alt="" />
+                                </div>                                 
                                 
                             </div><!-- .uix-d-tabs -->
 
