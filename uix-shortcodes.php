@@ -760,11 +760,11 @@ class UixShortcodes {
 		$value = do_shortcode( $str );
 		
 		 $searcharray[ 'sc_str' ] = array(
-		   '[li]', '[/li]', '[ul]', '[/ul]', '[ol]', '[/ol]', '[p]', '[/p]', '[br]'
+		   '[li]', '[/li]', '[ul]', '[/ul]', '[ol]', '[/ol]', '[p]', '[/p]', '[br]', '&#8243;', '&#8242;'
 		
 		  );
 		  $replacearray[ 'sc_str' ] = array(
-		   '<li>', '</li>', '<ul>', '</ul>', '<ol>', '</ol>', '<p>', '</p>', '<br>'
+		   '<li>', '</li>', '<ul>', '</ul>', '<ol>', '</ol>', '<p>', '</p>', '<br>', '"', "'"
 		  );  
 		
 		$value = preg_replace( '/(<br\s*\/>)+/', '', $value );
