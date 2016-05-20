@@ -310,9 +310,7 @@ function uix_sc_fun_pricing_item( $atts, $content = null ){
 				<h2 class="uix-sc-price-num" style="color:'.$imcolor.'">'.UixShortcodes::get_subtags( 'uix_pricing_item_price', $content ).' <span class="uix-sc-price-period">'.$period.'</span></h2>
 				
 				<div class="uix-sc-price-excerpt">
-					<p>
 					'.UixShortcodes::get_subtags( 'uix_pricing_item_desc', $content ).'
-					</p>
 				</div>
 				<a href="'.$url.'" target="'.$target.'" class="uix-sc-btn uix-sc-btn-'.$bcolor.'">'.UixShortcodes::get_subtags( 'uix_pricing_item_button', $content ).'</a>
 				
@@ -1006,8 +1004,8 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 			<div class="uix-sc-gallery-list-info">
 				<h3 class="uix-sc-gallery-list-title">'.$name.'</h3>	
 				<div class="uix-sc-gallery-list-desc">
-							'.str_replace( '[uix_team_item_desc]', '<span class=\'uix-sc-gallery-list-desc-p\'>',
-							  str_replace( '[/uix_team_item_desc]', '</span>',
+							'.str_replace( '[uix_team_item_desc]', '<div class=\'uix-sc-gallery-list-desc-p\'>',
+							  str_replace( '[/uix_team_item_desc]', '</div>',
 							   $content
 							   ) ).'
 				</div>

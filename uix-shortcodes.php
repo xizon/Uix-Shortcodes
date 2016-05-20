@@ -756,8 +756,11 @@ class UixShortcodes {
 	 *
 	 */
 	public static function do_callback( $str ) {
-		
+	
+	    $str = str_replace( '<p>[', "[", $str );
+		$str = str_replace( ']</p>', "]", $str );
 		$value = do_shortcode( $str );
+
 		
 		 $searcharray[ 'sc_str' ] = array(
 		   '[li]', '[/li]', '[ul]', '[/ul]', '[ol]', '[/ol]', '[p]', '[/p]', '[br]', '&#8243;', '&#8242;'
@@ -767,7 +770,13 @@ class UixShortcodes {
 		   '<li>', '</li>', '<ul>', '</ul>', '<ol>', '</ol>', '<p>', '</p>', '<br>', '"', "'"
 		  );  
 		
+		//remove <br> or <br /> tags
 		$value = preg_replace( '/(<br\s*\/>)+/', '', $value );
+		
+		//remove empty paragraph tags
+		$value = preg_replace( '/<div(.*?)>([\s]*)<\/p>/', "<div$1>", $value );
+		$value = preg_replace( '/<p>([\s]*)<\/div>/', "</div>", $value );
+		
 		$value = str_replace( $searcharray[ 'sc_str' ], $replacearray[ 'sc_str' ], $value );
 		
 
