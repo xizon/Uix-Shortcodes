@@ -190,11 +190,13 @@ img.uix-sc-img,
 	display:table;
 	text-align:center;
 	min-height:inherit;
+	width:100%;
 }
 .uix-sc-container .uix-sc-container-table .uix-sc-container-content-box{
 	display:table-cell;
 	vertical-align:middle;
 	height:auto;
+	
 }
 
 /**
