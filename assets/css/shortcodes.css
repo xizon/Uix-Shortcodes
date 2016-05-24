@@ -188,7 +188,6 @@ img.uix-sc-img,
 
 .uix-sc-container .uix-sc-container-table{
 	display:table;
-	text-align:center;
 	min-height:inherit;
 	width:100%;
 }
