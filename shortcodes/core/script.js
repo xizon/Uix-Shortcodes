@@ -865,6 +865,16 @@ function uix_htmlEncode( s ) {
 
 /*! 
  * ************************************
+ * Insert value to textarea
+ *************************************
+ */	
+function uix_insertToTextarea( s ) {
+      return (typeof s != "string") ? s :  
+          s.replace(/<br>/g, "\n");  
+};
+
+/*! 
+ * ************************************
  * Fix Sweet Alert position of top	
  *************************************
  */	

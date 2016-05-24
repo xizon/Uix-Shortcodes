@@ -171,7 +171,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				}
 	
 	
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_toggle tabs='0' effect='"+uix_sc_accordion_effect+"']"+show_list_item+"<br>[/uix_toggle]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_toggle tabs='0' effect='"+uix_sc_accordion_effect+"']"+show_list_item+"<br>[/uix_toggle]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

@@ -151,7 +151,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		
 		      
 			
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_map style='"+uix_sc_map_style+"' width='"+uix_sc_map_width+uix_sc_map_width_units+"' height='"+uix_sc_map_height+"px' latitude='"+uix_sc_map_latitude+"' longitude='"+uix_sc_map_longitude+"' zoom='"+uix_sc_map_zoom+"' name='"+uix_htmlencodeToShortcodeFormat( uix_sc_map_name )+"' marker='"+uix_sc_map_marker+"' ]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_map style='"+uix_sc_map_style+"' width='"+uix_sc_map_width+uix_sc_map_width_units+"' height='"+uix_sc_map_height+"px' latitude='"+uix_sc_map_latitude+"' longitude='"+uix_sc_map_longitude+"' zoom='"+uix_sc_map_zoom+"' name='"+uix_htmlencodeToShortcodeFormat( uix_sc_map_name )+"' marker='"+uix_sc_map_marker+"' ]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 	
 				

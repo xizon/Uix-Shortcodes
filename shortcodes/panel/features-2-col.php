@@ -457,7 +457,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				show_list_item_2 = "<br>[uix_features_col_right]"+show_list_item_2+"<br>[/uix_features_col_right]<br>";
 				
 			
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_features col='2']"+show_list_item_1+show_list_item_2+"[/uix_features]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_features col='2']"+show_list_item_1+show_list_item_2+"[/uix_features]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

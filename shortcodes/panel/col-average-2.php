@@ -65,7 +65,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				_vhtml += "<br>[uix_column grid='6' last='1']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]<br>";
 				
 
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_column_wrapper top='"+uix_sc_col_average_2_padding_top+"' bottom='"+uix_sc_col_average_2_padding_bottom+"' left='"+uix_sc_col_average_2_padding_left+"' right='"+uix_sc_col_average_2_padding_right+"']" + _vhtml + "[/uix_column_wrapper]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_column_wrapper top='"+uix_sc_col_average_2_padding_top+"' bottom='"+uix_sc_col_average_2_padding_bottom+"' left='"+uix_sc_col_average_2_padding_left+"' right='"+uix_sc_col_average_2_padding_right+"']" + _vhtml + "[/uix_column_wrapper]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

@@ -110,7 +110,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				if ( uix_sc_dividing_line_color == '#333' ) uix_sc_dividing_line_result_color = 'dark';
 		      
 			
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_dividing_line style='"+uix_sc_dividing_line_style+"' color='"+uix_sc_dividing_line_result_color+"' width='"+uix_sc_dividing_line_width+uix_sc_dividing_line_width_units+"' opacity='"+uix_sc_dividing_line_opacity+"']" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_dividing_line style='"+uix_sc_dividing_line_style+"' color='"+uix_sc_dividing_line_result_color+"' width='"+uix_sc_dividing_line_width+uix_sc_dividing_line_width_units+"' opacity='"+uix_sc_dividing_line_opacity+"']" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 	
 				

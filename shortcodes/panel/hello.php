@@ -691,7 +691,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				_vhtml += '<hr>Checkbox: '+show_checkbox+'<br>';
 			
 
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_hello color='"+uix_sc_single_color+"']<p>" + _vhtml + "</p>[/uix_hello]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_hello color='"+uix_sc_single_color+"']<p>" + _vhtml + "</p>[/uix_hello]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

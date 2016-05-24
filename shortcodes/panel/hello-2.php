@@ -251,7 +251,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Demo Form 2', 'uix-shortcodes' ) ); ?>
 	
 		
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_hello2][/uix_hello2]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_hello2][/uix_hello2]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

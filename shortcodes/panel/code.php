@@ -101,7 +101,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		
 		        
 			
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_code language='"+uix_sc_code_lan+"']<pre class='brush: "+uix_sc_code_lan+";'>"+uix_htmlEncode( uix_sc_code_content )+"</pre>[/uix_code]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_code language='"+uix_sc_code_lan+"']<pre class='brush: "+uix_sc_code_lan+";'>"+uix_htmlEncode( uix_sc_code_content )+"</pre>[/uix_code]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

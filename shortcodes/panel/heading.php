@@ -372,7 +372,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 			   var subhtml = ( uix_sc_heading_desc != '' ) ? "[uix_heading_sub color='"+uix_sc_heading_desc_result_color+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_desc_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' opacity='"+uix_sc_heading_desc_opacity+"']"+uix_sc_heading_desc+"[/uix_heading_sub]" : "";
 			   
 			 
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_heading color='"+uix_sc_heading_result_color+"' style='"+uix_sc_heading_style+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' fillbg='"+uix_sc_heading_fillbg+"']"+uix_sc_heading_title+"[/uix_heading]"+subhtml+"[uix_heading_line line='"+uix_sc_heading_line+"' width='"+uix_sc_heading_line_width+uix_sc_heading_line_width_units+"' height='"+uix_sc_heading_line_height+"px']" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_heading color='"+uix_sc_heading_result_color+"' style='"+uix_sc_heading_style+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' fillbg='"+uix_sc_heading_fillbg+"']"+uix_sc_heading_title+"[/uix_heading]"+subhtml+"[uix_heading_line line='"+uix_sc_heading_line+"' width='"+uix_sc_heading_line_width+uix_sc_heading_line_width_units+"' height='"+uix_sc_heading_line_height+"px']" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 	
 				

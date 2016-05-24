@@ -362,7 +362,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 
 	
 	
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_team col='"+uix_sc_team_grid_listitem_col+"' "+photobox_height+" avatarfillet='"+uix_sc_team_grid_listitem_avatar_fillet+"%' gray='"+uix_sc_team_grid_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_team col='"+uix_sc_team_grid_listitem_col+"' "+photobox_height+" avatarfillet='"+uix_sc_team_grid_listitem_avatar_fillet+"%' gray='"+uix_sc_team_grid_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

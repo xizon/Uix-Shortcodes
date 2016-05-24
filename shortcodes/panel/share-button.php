@@ -148,7 +148,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				 
 				
 			
-				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_share_buttons color='"+uix_sc_share_btn_color+"' size='"+uix_sc_share_btn_size+"' fillet='"+uix_sc_share_btn_fillet+"px' show='"+show_checkboxes+"']" );
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_share_buttons color='"+uix_sc_share_btn_color+"' size='"+uix_sc_share_btn_size+"' fillet='"+uix_sc_share_btn_fillet+"px' show='"+show_checkboxes+"']" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 				
 				

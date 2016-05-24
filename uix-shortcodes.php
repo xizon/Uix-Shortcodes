@@ -113,7 +113,7 @@ class UixShortcodes {
 	 */
 	public static function backstage_scripts() {
 	
-		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  //Check if screen ID
 		  $currentScreen = get_current_screen();
 		  
 		  
@@ -177,7 +177,7 @@ class UixShortcodes {
 	 */
 	public static function call_form( $name ) {
 		
-		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  //Check if screen ID
 		  $currentScreen = get_current_screen();
 	
 		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
@@ -237,7 +237,7 @@ class UixShortcodes {
 	 */
 	public static function do_register_shortcodes() {
 	
-		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  //Check if screen ID
 		  $currentScreen = get_current_screen();
 	
 		  if( $currentScreen->base === "post" || self::inc_str( $currentScreen->base, '_page_' ) ) {
@@ -1011,13 +1011,13 @@ class UixShortcodes {
 	}
 	
 	/*
-	 * Callback before custom javascript of sweetalert
+	 * Callback before javascript of sweetalert
 	 *
 	 *
 	 */
 	public static function sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, $title ) {
 		
-		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  //Check if screen ID
 		  $currentScreen = get_current_screen();
 	
 		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
@@ -1054,7 +1054,7 @@ class UixShortcodes {
 	
 	
 	/*
-	 * Callback after custom javascript of sweetalert
+	 * Callback after javascript of sweetalert
 	 *
 	 *
 	 */
@@ -1070,18 +1070,45 @@ class UixShortcodes {
 		";
 
 	}
-	public static function send_to_editor( $tid = '' ) {
+	
+	
+	/*
+	 * Callback before javascript of push to editor/textarea
+	 *
+	 *
+	 */
+	public static function send_to_editor_before( $tid = '' ) {
 		
-		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  //Check if screen ID
 		  $currentScreen = get_current_screen();
 	
 		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
-			  return "$( '#' + widget_conID ).val( $( '#' + widget_conID ).val() + ";
+			  return "$( '#' + widget_conID ).val( $( '#' + widget_conID ).val() + uix_insertToTextarea( ";
 		  } else {
 			  return 'window.send_to_editor(';
 		  }
 	
 	}
+	
+	
+	/*
+	 * Callback after javascript of push to editor/textarea
+	 *
+	 *
+	 */
+	public static function send_to_editor_after() {
+		
+		  //Check if screen ID
+		  $currentScreen = get_current_screen();
+	
+		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
+			  return ") );";
+		  } else {
+			  return ');';
+		  }
+	
+	}
+
 	
      /*
 	 * Returns dynamic form
