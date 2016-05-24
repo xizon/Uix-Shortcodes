@@ -358,7 +358,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 					 uix_sc_bar_result_size = ( uix_sc_bar_shape == 'circular' ) ? "size='"+uix_sc_bar_circular_size+"px'" : "size='"+uix_sc_bar_square_size+""+uix_sc_bar_square_size_units+"'";
 				
 	
-				window.send_to_editor( "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uix_sc_bar_percent+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uix_sc_bar_linewidth+"' precsize='"+uix_sc_bar_perc_icons_size+"px' title='"+uix_htmlencodeToShortcodeFormat( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+" top='"+uix_sc_bar_margin_top+"' bottom='"+uix_sc_bar_margin_bottom+"' left='"+uix_sc_bar_margin_left+"' right='"+uix_sc_bar_margin_right+"']"+uix_sc_bar_desc+"[/uix_progress_bar]" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uix_sc_bar_percent+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uix_sc_bar_linewidth+"' precsize='"+uix_sc_bar_perc_icons_size+"px' title='"+uix_htmlencodeToShortcodeFormat( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+" top='"+uix_sc_bar_margin_top+"' bottom='"+uix_sc_bar_margin_bottom+"' left='"+uix_sc_bar_margin_left+"' right='"+uix_sc_bar_margin_right+"']"+uix_sc_bar_desc+"[/uix_progress_bar]" );
 				
 				
 				

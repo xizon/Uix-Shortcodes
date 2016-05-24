@@ -105,7 +105,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				
 		
 			
-				window.send_to_editor( "[uix_recent_posts show='"+uix_sc_rposts_num+"' before='"+before+"' after='"+after+"']"+temp+"[/uix_recent_posts]" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_recent_posts show='"+uix_sc_rposts_num+"' before='"+before+"' after='"+after+"']"+temp+"[/uix_recent_posts]" );
 				
 				
 				

@@ -135,7 +135,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				
 				
 			
-				window.send_to_editor( "[uix_audio width='"+uix_sc_audio_width+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_audio width='"+uix_sc_audio_width+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']" );
 				
 				
 				

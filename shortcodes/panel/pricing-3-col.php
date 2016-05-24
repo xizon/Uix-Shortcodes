@@ -563,7 +563,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 					
 					
 										
-				window.send_to_editor("[uix_pricing]" + _vhtml_1 + _vhtml_2 + _vhtml_3 + "[/uix_pricing]");
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?>"[uix_pricing]" + _vhtml_1 + _vhtml_2 + _vhtml_3 + "[/uix_pricing]");
 				
 				
 				

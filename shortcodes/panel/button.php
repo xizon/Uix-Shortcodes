@@ -269,7 +269,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 	
 	
 			
-				window.send_to_editor( "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uix_sc_btn_fontsize+"px' letterspacing='"+uix_sc_btn_letterspacing+"px' fillet='"+uix_sc_btn_fillet+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uix_sc_btn_fontsize+"px' letterspacing='"+uix_sc_btn_letterspacing+"px' fillet='"+uix_sc_btn_fillet+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]" );
 				
 				
 				

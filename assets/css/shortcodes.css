@@ -186,6 +186,17 @@ img.uix-sc-img,
 }
 
 
+.uix-sc-container .uix-sc-container-table{
+	display:table;
+	text-align:center;
+	min-height:inherit;
+}
+.uix-sc-container .uix-sc-container-table .uix-sc-container-content-box{
+	display:table-cell;
+	vertical-align:middle;
+	height:auto;
+}
+
 /**
  *  Portfolio
  * ----------------------------------------------------------------------------
@@ -589,7 +600,7 @@ img.uix-sc-img,
 	font-family:Arial, Helvetica, sans-serif;
 	line-height:1;
 	font-weight:bold;
-	margin: .37em 0 .1em;	
+	margin: .37em 0 .1em;
 }
 .uix-sc-heading {
 	margin-bottom:.5em;

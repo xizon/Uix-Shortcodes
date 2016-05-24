@@ -81,7 +81,8 @@ function uix_sc_fun_container( $atts, $content = null ){
 		  'borderwidth' => '1px',
 		  'bordercolor' => '',
 		  'borderstyle' => 'solid',
-	
+		  'vertical_center' => 'true',
+		 
 	 ), $atts ) );
 	 
 	 
@@ -101,9 +102,14 @@ function uix_sc_fun_container( $atts, $content = null ){
 	
 	if ( !empty( $bordercolor ) ) $border_css = 'border-color:'.$bordercolor.';border-width:'.$borderwidth.';border-style:'.$borderstyle.';';
 	
+	if ( isset( $vertical_center ) &&  $vertical_center == 'false' ) {
+		$now_content = $content;
+	} else {
+		$now_content = '<div class="uix-sc-container-table"><div class="uix-sc-container-content-box">'.$content.'</div></div>';
+	}
 
   
-   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" class="uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : '' ).' '.$class.'" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;'.( $height != 'auto' ? 'min-height:'.$height.'' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'">'.$content.'</div></div>
+   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" class="uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : '' ).' '.$class.'" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;'.( $height != 'auto' ? 'min-height:'.$height.'' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'">'.$now_content.'</div></div>
         '.( $parallax > 0 ? '
 		<script>
 		( function($) {

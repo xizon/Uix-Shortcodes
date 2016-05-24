@@ -69,6 +69,20 @@ $args =
 		
 		
 		),	
+		
+		array(
+			'id'             => 'uix_sc_container_vertical_center',
+			'title'          => __( 'Vertically Center Content', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'checkbox',
+			'default'        => array(
+									'checked'  => true
+				                ),
+		
+		
+		),	
 			
 			
 		array(
@@ -331,7 +345,8 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		<?php echo UixShortcodes::sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, __( 'Add a Container', 'uix-shortcodes' ) ); ?>
 		       
 			   
-			   var uix_sc_container_result_bgcolor = ( uix_sc_container_bgcolor_other != '' ) ? "bgcolor='"+uix_sc_container_bgcolor_other+"'" : "bgcolor='"+uix_sc_container_bgcolor+"'",
+			   var uix_sc_container_result_vertical_center = ( uix_sc_container_vertical_center === false ) ? "vertical_center='"+uix_sc_container_vertical_center+"'" : '',
+			       uix_sc_container_result_bgcolor = ( uix_sc_container_bgcolor_other != '' ) ? "bgcolor='"+uix_sc_container_bgcolor_other+"'" : "bgcolor='"+uix_sc_container_bgcolor+"'",
 			       uix_sc_container_result_bgimage = ( uix_sc_container_bgimage != '' ) ? "bgimage='"+uix_sc_container_bgimage+"' bgimage_repeat='"+uix_sc_container_bgimage_repeat+"' bgimage_position='"+uix_sc_container_bgimage_position+"' bgimage_attachment='"+uix_sc_container_bgimage_attachment+"' bgimage_size='"+uix_sc_container_bgimage_size+"'" : "",
 				   uix_sc_container_result_bgcolor,
 				   uix_sc_container_result_height = ( uix_sc_container_height != '' && uix_sc_container_height != 0 ) ? uix_sc_container_height + 'px' : 'auto',
@@ -342,7 +357,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				
 				
 				  
-				window.send_to_editor( "[uix_container parallax='"+uix_sc_container_parallax+"' class='"+uix_sc_container_class+"' "+uix_sc_container_result_width+" height='"+uix_sc_container_result_height+"' margin_top='"+uix_sc_container_layout_margin_top+"' margin_bottom='"+uix_sc_container_layout_margin_bottom+"' margin_left='"+uix_sc_container_layout_margin_left+"' margin_right='"+uix_sc_container_layout_margin_right+"' padding_top='"+uix_sc_container_layout_padding_top+"' padding_bottom='"+uix_sc_container_layout_padding_bottom+"' padding_left='"+uix_sc_container_layout_padding_left+"' padding_right='"+uix_sc_container_layout_padding_right+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_container "+uix_sc_container_result_vertical_center+" parallax='"+uix_sc_container_parallax+"' class='"+uix_sc_container_class+"' "+uix_sc_container_result_width+" height='"+uix_sc_container_result_height+"' margin_top='"+uix_sc_container_layout_margin_top+"' margin_bottom='"+uix_sc_container_layout_margin_bottom+"' margin_left='"+uix_sc_container_layout_margin_left+"' margin_right='"+uix_sc_container_layout_margin_right+"' padding_top='"+uix_sc_container_layout_padding_top+"' padding_bottom='"+uix_sc_container_layout_padding_bottom+"' padding_left='"+uix_sc_container_layout_padding_left+"' padding_right='"+uix_sc_container_layout_padding_right+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>" );
 				
 	
 				

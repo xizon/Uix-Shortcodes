@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Mon May 16 2016 11:25:15 GMT+0800 (CST)\n"
+"POT-Revision-Date: Tue May 24 2016 21:26:21 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,33 +46,33 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:203
+#: ../uix-shortcodes.php:228
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:204 ../helper/settings.php:74
+#: ../uix-shortcodes.php:229 ../helper/settings.php:74
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:311 ../helper/settings.php:52
+#: ../uix-shortcodes.php:336 ../helper/settings.php:52
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:649
+#: ../uix-shortcodes.php:674
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-shortcodes.php:998
+#: ../uix-shortcodes.php:1045
 msgid "Cancel"
 msgstr ""
 
-#: ../uix-shortcodes.php:999
+#: ../uix-shortcodes.php:1046
 msgid "Insert into"
 msgstr ""
 
-#: ../uix-shortcodes.php:1018
+#: ../uix-shortcodes.php:1065
 msgid "Using the shortcodes successfully."
 msgstr ""
 
@@ -183,79 +183,79 @@ msgstr ""
 msgid "could be used together to divide the page into sections."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:26 ../helper/tabs/documentation.php:342 ..
-#: /helper/tabs/documentation.php:428 ../helper/tabs/documentation.php:639 ..
-#: /helper/tabs/documentation.php:731 ../helper/tabs/documentation.php:825 ..
-#: /helper/tabs/documentation.php:995 ../helper/tabs/documentation.php:1129 ..
-#: /helper/tabs/documentation.php:1198 ../helper/tabs/documentation.php:1366 ..
-#: /helper/tabs/documentation.php:1499 ../helper/tabs/documentation.php:1586 ..
-#: /helper/tabs/documentation.php:1701 ../helper/tabs/documentation.php:1880 ..
-#: /helper/tabs/documentation.php:2039 ../helper/tabs/documentation.php:2161 ..
-#: /helper/tabs/documentation.php:2370 ../helper/tabs/documentation.php:2460 ..
-#: /helper/tabs/documentation.php:2656 ../helper/tabs/documentation.php:2759 ..
-#: /helper/tabs/documentation.php:2851 ../helper/tabs/documentation.php:2927
+#: ../helper/tabs/documentation.php:26 ../helper/tabs/documentation.php:350 ..
+#: /helper/tabs/documentation.php:436 ../helper/tabs/documentation.php:647 ..
+#: /helper/tabs/documentation.php:739 ../helper/tabs/documentation.php:833 ..
+#: /helper/tabs/documentation.php:1003 ../helper/tabs/documentation.php:1137 ..
+#: /helper/tabs/documentation.php:1206 ../helper/tabs/documentation.php:1374 ..
+#: /helper/tabs/documentation.php:1507 ../helper/tabs/documentation.php:1594 ..
+#: /helper/tabs/documentation.php:1709 ../helper/tabs/documentation.php:1888 ..
+#: /helper/tabs/documentation.php:2047 ../helper/tabs/documentation.php:2169 ..
+#: /helper/tabs/documentation.php:2378 ../helper/tabs/documentation.php:2468 ..
+#: /helper/tabs/documentation.php:2664 ../helper/tabs/documentation.php:2767 ..
+#: /helper/tabs/documentation.php:2859 ../helper/tabs/documentation.php:2935
 msgid "Admin Screenshots"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:41 ../helper/tabs/documentation.php:352 ..
-#: /helper/tabs/documentation.php:440 ../helper/tabs/documentation.php:650 ..
-#: /helper/tabs/documentation.php:742 ../helper/tabs/documentation.php:837 ..
-#: /helper/tabs/documentation.php:1009 ../helper/tabs/documentation.php:1140 ..
-#: /helper/tabs/documentation.php:1212 ../helper/tabs/documentation.php:1378 ..
-#: /helper/tabs/documentation.php:1511 ../helper/tabs/documentation.php:1598 ..
-#: /helper/tabs/documentation.php:1713 ../helper/tabs/documentation.php:1893 ..
-#: /helper/tabs/documentation.php:2051 ../helper/tabs/documentation.php:2175 ..
-#: /helper/tabs/documentation.php:2383 ../helper/tabs/documentation.php:2472 ..
-#: /helper/tabs/documentation.php:2668 ../helper/tabs/documentation.php:2771 ..
-#: /helper/tabs/documentation.php:2863 ../helper/tabs/documentation.php:2939 ..
+#: ../helper/tabs/documentation.php:41 ../helper/tabs/documentation.php:360 ..
+#: /helper/tabs/documentation.php:448 ../helper/tabs/documentation.php:658 ..
+#: /helper/tabs/documentation.php:750 ../helper/tabs/documentation.php:845 ..
+#: /helper/tabs/documentation.php:1017 ../helper/tabs/documentation.php:1148 ..
+#: /helper/tabs/documentation.php:1220 ../helper/tabs/documentation.php:1386 ..
+#: /helper/tabs/documentation.php:1519 ../helper/tabs/documentation.php:1606 ..
+#: /helper/tabs/documentation.php:1721 ../helper/tabs/documentation.php:1901 ..
+#: /helper/tabs/documentation.php:2059 ../helper/tabs/documentation.php:2183 ..
+#: /helper/tabs/documentation.php:2391 ../helper/tabs/documentation.php:2480 ..
+#: /helper/tabs/documentation.php:2676 ../helper/tabs/documentation.php:2779 ..
+#: /helper/tabs/documentation.php:2871 ../helper/tabs/documentation.php:2947 ..
 #: /shortcodes/panel/team-fullwidth.php:124 ../shortcodes/panel/team-grid.php:140 
 #: ../shortcodes/panel/testimonials.php:76
 msgid "Name"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:42 ../helper/tabs/documentation.php:353 ..
-#: /helper/tabs/documentation.php:441 ../helper/tabs/documentation.php:651 ..
-#: /helper/tabs/documentation.php:743 ../helper/tabs/documentation.php:838 ..
-#: /helper/tabs/documentation.php:1010 ../helper/tabs/documentation.php:1141 ..
-#: /helper/tabs/documentation.php:1213 ../helper/tabs/documentation.php:1379 ..
-#: /helper/tabs/documentation.php:1512 ../helper/tabs/documentation.php:1599 ..
-#: /helper/tabs/documentation.php:1714 ../helper/tabs/documentation.php:1894 ..
-#: /helper/tabs/documentation.php:2052 ../helper/tabs/documentation.php:2176 ..
-#: /helper/tabs/documentation.php:2384 ../helper/tabs/documentation.php:2473 ..
-#: /helper/tabs/documentation.php:2669 ../helper/tabs/documentation.php:2772 ..
-#: /helper/tabs/documentation.php:2864 ../helper/tabs/documentation.php:2940
+#: ../helper/tabs/documentation.php:42 ../helper/tabs/documentation.php:361 ..
+#: /helper/tabs/documentation.php:449 ../helper/tabs/documentation.php:659 ..
+#: /helper/tabs/documentation.php:751 ../helper/tabs/documentation.php:846 ..
+#: /helper/tabs/documentation.php:1018 ../helper/tabs/documentation.php:1149 ..
+#: /helper/tabs/documentation.php:1221 ../helper/tabs/documentation.php:1387 ..
+#: /helper/tabs/documentation.php:1520 ../helper/tabs/documentation.php:1607 ..
+#: /helper/tabs/documentation.php:1722 ../helper/tabs/documentation.php:1902 ..
+#: /helper/tabs/documentation.php:2060 ../helper/tabs/documentation.php:2184 ..
+#: /helper/tabs/documentation.php:2392 ../helper/tabs/documentation.php:2481 ..
+#: /helper/tabs/documentation.php:2677 ../helper/tabs/documentation.php:2780 ..
+#: /helper/tabs/documentation.php:2872 ../helper/tabs/documentation.php:2948
 msgid "Type"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:43 ../helper/tabs/documentation.php:354 ..
-#: /helper/tabs/documentation.php:442 ../helper/tabs/documentation.php:652 ..
-#: /helper/tabs/documentation.php:744 ../helper/tabs/documentation.php:839 ..
-#: /helper/tabs/documentation.php:1011 ../helper/tabs/documentation.php:1142 ..
-#: /helper/tabs/documentation.php:1214 ../helper/tabs/documentation.php:1380 ..
-#: /helper/tabs/documentation.php:1513 ../helper/tabs/documentation.php:1600 ..
-#: /helper/tabs/documentation.php:1715 ../helper/tabs/documentation.php:1895 ..
-#: /helper/tabs/documentation.php:2053 ../helper/tabs/documentation.php:2177 ..
-#: /helper/tabs/documentation.php:2385 ../helper/tabs/documentation.php:2474 ..
-#: /helper/tabs/documentation.php:2670 ../helper/tabs/documentation.php:2773 ..
-#: /helper/tabs/documentation.php:2865 ../helper/tabs/documentation.php:2941
+#: ../helper/tabs/documentation.php:43 ../helper/tabs/documentation.php:362 ..
+#: /helper/tabs/documentation.php:450 ../helper/tabs/documentation.php:660 ..
+#: /helper/tabs/documentation.php:752 ../helper/tabs/documentation.php:847 ..
+#: /helper/tabs/documentation.php:1019 ../helper/tabs/documentation.php:1150 ..
+#: /helper/tabs/documentation.php:1222 ../helper/tabs/documentation.php:1388 ..
+#: /helper/tabs/documentation.php:1521 ../helper/tabs/documentation.php:1608 ..
+#: /helper/tabs/documentation.php:1723 ../helper/tabs/documentation.php:1903 ..
+#: /helper/tabs/documentation.php:2061 ../helper/tabs/documentation.php:2185 ..
+#: /helper/tabs/documentation.php:2393 ../helper/tabs/documentation.php:2482 ..
+#: /helper/tabs/documentation.php:2678 ../helper/tabs/documentation.php:2781 ..
+#: /helper/tabs/documentation.php:2873 ../helper/tabs/documentation.php:2949
 msgid "Default"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:44 ../helper/tabs/documentation.php:355 ..
-#: /helper/tabs/documentation.php:443 ../helper/tabs/documentation.php:483 ..
-#: /helper/tabs/documentation.php:653 ../helper/tabs/documentation.php:745 ..
-#: /helper/tabs/documentation.php:840 ../helper/tabs/documentation.php:1012 ..
-#: /helper/tabs/documentation.php:1143 ../helper/tabs/documentation.php:1215 ..
-#: /helper/tabs/documentation.php:1381 ../helper/tabs/documentation.php:1514 ..
-#: /helper/tabs/documentation.php:1601 ../helper/tabs/documentation.php:1716 ..
-#: /helper/tabs/documentation.php:1896 ../helper/tabs/documentation.php:2054 ..
-#: /helper/tabs/documentation.php:2178 ../helper/tabs/documentation.php:2270 ..
-#: /helper/tabs/documentation.php:2279 ../helper/tabs/documentation.php:2287 ..
-#: /helper/tabs/documentation.php:2294 ../helper/tabs/documentation.php:2301 ..
-#: /helper/tabs/documentation.php:2309 ../helper/tabs/documentation.php:2386 ..
-#: /helper/tabs/documentation.php:2475 ../helper/tabs/documentation.php:2561 ..
-#: /helper/tabs/documentation.php:2671 ../helper/tabs/documentation.php:2774 ..
-#: /helper/tabs/documentation.php:2866 ../helper/tabs/documentation.php:2942 ..
+#: ../helper/tabs/documentation.php:44 ../helper/tabs/documentation.php:363 ..
+#: /helper/tabs/documentation.php:451 ../helper/tabs/documentation.php:491 ..
+#: /helper/tabs/documentation.php:661 ../helper/tabs/documentation.php:753 ..
+#: /helper/tabs/documentation.php:848 ../helper/tabs/documentation.php:1020 ..
+#: /helper/tabs/documentation.php:1151 ../helper/tabs/documentation.php:1223 ..
+#: /helper/tabs/documentation.php:1389 ../helper/tabs/documentation.php:1522 ..
+#: /helper/tabs/documentation.php:1609 ../helper/tabs/documentation.php:1724 ..
+#: /helper/tabs/documentation.php:1904 ../helper/tabs/documentation.php:2062 ..
+#: /helper/tabs/documentation.php:2186 ../helper/tabs/documentation.php:2278 ..
+#: /helper/tabs/documentation.php:2287 ../helper/tabs/documentation.php:2295 ..
+#: /helper/tabs/documentation.php:2302 ../helper/tabs/documentation.php:2309 ..
+#: /helper/tabs/documentation.php:2317 ../helper/tabs/documentation.php:2394 ..
+#: /helper/tabs/documentation.php:2483 ../helper/tabs/documentation.php:2569 ..
+#: /helper/tabs/documentation.php:2679 ../helper/tabs/documentation.php:2782 ..
+#: /helper/tabs/documentation.php:2874 ../helper/tabs/documentation.php:2950 ..
 #: /shortcodes/panel/heading.php:225 ../shortcodes/panel/pricing-3-col.php:69 ..
 #: /shortcodes/panel/pricing-3-col.php:219 ../shortcodes/panel/pricing-3-col.php:
 #: 370 ../shortcodes/panel/pricing-4-col.php:69 ../shortcodes/panel/pricing-4-col.
@@ -269,34 +269,34 @@ msgstr ""
 msgid "Choose Layout"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:50 ../helper/tabs/documentation.php:82 ..
-#: /helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:152 ..
-#: /helper/tabs/documentation.php:463 ../helper/tabs/documentation.php:505 ..
-#: /helper/tabs/documentation.php:658 ../helper/tabs/documentation.php:750 ..
-#: /helper/tabs/documentation.php:1902 ../helper/tabs/documentation.php:1910 ..
-#: /helper/tabs/documentation.php:1960 ../helper/tabs/documentation.php:2060 ..
-#: /helper/tabs/documentation.php:2193 ../helper/tabs/documentation.php:2209 ..
-#: /helper/tabs/documentation.php:2217 ../helper/tabs/documentation.php:2302 ..
-#: /helper/tabs/documentation.php:2393 ../helper/tabs/documentation.php:2401 ..
-#: /helper/tabs/documentation.php:2482 ../helper/tabs/documentation.php:2530 ..
-#: /helper/tabs/documentation.php:2538 ../helper/tabs/documentation.php:2546 ..
-#: /helper/tabs/documentation.php:2678 ../helper/tabs/documentation.php:2687 ..
-#: /helper/tabs/documentation.php:2797 ../helper/tabs/documentation.php:2804
+#: ../helper/tabs/documentation.php:50 ../helper/tabs/documentation.php:90 ..
+#: /helper/tabs/documentation.php:152 ../helper/tabs/documentation.php:160 ..
+#: /helper/tabs/documentation.php:471 ../helper/tabs/documentation.php:513 ..
+#: /helper/tabs/documentation.php:666 ../helper/tabs/documentation.php:758 ..
+#: /helper/tabs/documentation.php:1910 ../helper/tabs/documentation.php:1918 ..
+#: /helper/tabs/documentation.php:1968 ../helper/tabs/documentation.php:2068 ..
+#: /helper/tabs/documentation.php:2201 ../helper/tabs/documentation.php:2217 ..
+#: /helper/tabs/documentation.php:2225 ../helper/tabs/documentation.php:2310 ..
+#: /helper/tabs/documentation.php:2401 ../helper/tabs/documentation.php:2409 ..
+#: /helper/tabs/documentation.php:2490 ../helper/tabs/documentation.php:2538 ..
+#: /helper/tabs/documentation.php:2546 ../helper/tabs/documentation.php:2554 ..
+#: /helper/tabs/documentation.php:2686 ../helper/tabs/documentation.php:2695 ..
+#: /helper/tabs/documentation.php:2805 ../helper/tabs/documentation.php:2812
 msgid "Selector"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:50 ../helper/tabs/documentation.php:82 ..
-#: /helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:152 ..
-#: /helper/tabs/documentation.php:463 ../helper/tabs/documentation.php:505 ..
-#: /helper/tabs/documentation.php:1902 ../helper/tabs/documentation.php:1910 ..
-#: /helper/tabs/documentation.php:1960 ../helper/tabs/documentation.php:2060 ..
-#: /helper/tabs/documentation.php:2193 ../helper/tabs/documentation.php:2209 ..
-#: /helper/tabs/documentation.php:2217 ../helper/tabs/documentation.php:2302 ..
-#: /helper/tabs/documentation.php:2393 ../helper/tabs/documentation.php:2401 ..
-#: /helper/tabs/documentation.php:2482 ../helper/tabs/documentation.php:2530 ..
-#: /helper/tabs/documentation.php:2538 ../helper/tabs/documentation.php:2546 ..
-#: /helper/tabs/documentation.php:2678 ../helper/tabs/documentation.php:2687 ..
-#: /helper/tabs/documentation.php:2782
+#: ../helper/tabs/documentation.php:50 ../helper/tabs/documentation.php:90 ..
+#: /helper/tabs/documentation.php:152 ../helper/tabs/documentation.php:160 ..
+#: /helper/tabs/documentation.php:471 ../helper/tabs/documentation.php:513 ..
+#: /helper/tabs/documentation.php:1910 ../helper/tabs/documentation.php:1918 ..
+#: /helper/tabs/documentation.php:1968 ../helper/tabs/documentation.php:2068 ..
+#: /helper/tabs/documentation.php:2201 ../helper/tabs/documentation.php:2217 ..
+#: /helper/tabs/documentation.php:2225 ../helper/tabs/documentation.php:2310 ..
+#: /helper/tabs/documentation.php:2401 ../helper/tabs/documentation.php:2409 ..
+#: /helper/tabs/documentation.php:2490 ../helper/tabs/documentation.php:2538 ..
+#: /helper/tabs/documentation.php:2546 ../helper/tabs/documentation.php:2554 ..
+#: /helper/tabs/documentation.php:2686 ../helper/tabs/documentation.php:2695 ..
+#: /helper/tabs/documentation.php:2790
 msgid "Returns a String"
 msgstr ""
 
@@ -306,12 +306,12 @@ msgid ""
 "the container will be center."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:2693 ..
+#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:2701 ..
 #: /shortcodes/panel/container.php:46 ../shortcodes/panel/dividing-line.php:50
 msgid "Width"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:476 ..
+#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:484 ..
 #: /shortcodes/panel/pricing-3-col.php:60 ../shortcodes/panel/pricing-3-col.php:
 #: 210 ../shortcodes/panel/pricing-3-col.php:361 ../shortcodes/panel/pricing-4-
 #: col.php:60 ../shortcodes/panel/pricing-4-col.php:209 ..
@@ -320,43 +320,43 @@ msgstr ""
 msgid "Period"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:136 ..
-#: /helper/tabs/documentation.php:143 ../helper/tabs/documentation.php:151 ..
-#: /helper/tabs/documentation.php:2254 ../helper/tabs/documentation.php:2261 ..
-#: /helper/tabs/documentation.php:2287 ../helper/tabs/documentation.php:2294 ..
-#: /helper/tabs/documentation.php:2301 ../helper/tabs/documentation.php:2309
+#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:144 ..
+#: /helper/tabs/documentation.php:151 ../helper/tabs/documentation.php:159 ..
+#: /helper/tabs/documentation.php:2262 ../helper/tabs/documentation.php:2269 ..
+#: /helper/tabs/documentation.php:2295 ../helper/tabs/documentation.php:2302 ..
+#: /helper/tabs/documentation.php:2309 ../helper/tabs/documentation.php:2317
 msgid "depends on"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:136 ..
-#: /helper/tabs/documentation.php:143 ../helper/tabs/documentation.php:151 ..
-#: /helper/tabs/documentation.php:2254 ../helper/tabs/documentation.php:2261 ..
-#: /helper/tabs/documentation.php:2287 ../helper/tabs/documentation.php:2294 ..
-#: /helper/tabs/documentation.php:2301 ../helper/tabs/documentation.php:2309
+#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:144 ..
+#: /helper/tabs/documentation.php:151 ../helper/tabs/documentation.php:159 ..
+#: /helper/tabs/documentation.php:2262 ../helper/tabs/documentation.php:2269 ..
+#: /helper/tabs/documentation.php:2295 ../helper/tabs/documentation.php:2302 ..
+#: /helper/tabs/documentation.php:2309 ../helper/tabs/documentation.php:2317
 msgid "option"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:58 ../helper/tabs/documentation.php:65 ..
-#: /helper/tabs/documentation.php:90 ../helper/tabs/documentation.php:105 ..
-#: /helper/tabs/documentation.php:112 ../helper/tabs/documentation.php:137 ..
-#: /helper/tabs/documentation.php:359 ../helper/tabs/documentation.php:456 ..
-#: /helper/tabs/documentation.php:845 ../helper/tabs/documentation.php:873 ..
-#: /helper/tabs/documentation.php:1221 ../helper/tabs/documentation.php:1229 ..
-#: /helper/tabs/documentation.php:1237 ../helper/tabs/documentation.php:1529 ..
-#: /helper/tabs/documentation.php:1536 ../helper/tabs/documentation.php:1623 ..
-#: /helper/tabs/documentation.php:1630 ../helper/tabs/documentation.php:1722 ..
-#: /helper/tabs/documentation.php:1933 ../helper/tabs/documentation.php:1969 ..
-#: /helper/tabs/documentation.php:1976 ../helper/tabs/documentation.php:2068 ..
-#: /helper/tabs/documentation.php:2075 ../helper/tabs/documentation.php:2093 ..
-#: /helper/tabs/documentation.php:2102 ../helper/tabs/documentation.php:2109 ..
-#: /helper/tabs/documentation.php:2202 ../helper/tabs/documentation.php:2224 ..
-#: /helper/tabs/documentation.php:2255 ../helper/tabs/documentation.php:2262 ..
-#: /helper/tabs/documentation.php:2295 ../helper/tabs/documentation.php:2310 ..
-#: /helper/tabs/documentation.php:2409 ../helper/tabs/documentation.php:2490 ..
-#: /helper/tabs/documentation.php:2498 ../helper/tabs/documentation.php:2506 ..
-#: /helper/tabs/documentation.php:2514 ../helper/tabs/documentation.php:2577 ..
-#: /helper/tabs/documentation.php:2694 ../helper/tabs/documentation.php:2702 ..
-#: /helper/tabs/documentation.php:2790
+#: /helper/tabs/documentation.php:98 ../helper/tabs/documentation.php:113 ..
+#: /helper/tabs/documentation.php:120 ../helper/tabs/documentation.php:145 ..
+#: /helper/tabs/documentation.php:367 ../helper/tabs/documentation.php:464 ..
+#: /helper/tabs/documentation.php:853 ../helper/tabs/documentation.php:881 ..
+#: /helper/tabs/documentation.php:1229 ../helper/tabs/documentation.php:1237 ..
+#: /helper/tabs/documentation.php:1245 ../helper/tabs/documentation.php:1537 ..
+#: /helper/tabs/documentation.php:1544 ../helper/tabs/documentation.php:1631 ..
+#: /helper/tabs/documentation.php:1638 ../helper/tabs/documentation.php:1730 ..
+#: /helper/tabs/documentation.php:1941 ../helper/tabs/documentation.php:1977 ..
+#: /helper/tabs/documentation.php:1984 ../helper/tabs/documentation.php:2076 ..
+#: /helper/tabs/documentation.php:2083 ../helper/tabs/documentation.php:2101 ..
+#: /helper/tabs/documentation.php:2110 ../helper/tabs/documentation.php:2117 ..
+#: /helper/tabs/documentation.php:2210 ../helper/tabs/documentation.php:2232 ..
+#: /helper/tabs/documentation.php:2263 ../helper/tabs/documentation.php:2270 ..
+#: /helper/tabs/documentation.php:2303 ../helper/tabs/documentation.php:2318 ..
+#: /helper/tabs/documentation.php:2417 ../helper/tabs/documentation.php:2498 ..
+#: /helper/tabs/documentation.php:2506 ../helper/tabs/documentation.php:2514 ..
+#: /helper/tabs/documentation.php:2522 ../helper/tabs/documentation.php:2585 ..
+#: /helper/tabs/documentation.php:2702 ../helper/tabs/documentation.php:2710 ..
+#: /helper/tabs/documentation.php:2798
 msgid "Number"
 msgstr ""
 
@@ -378,241 +378,250 @@ msgid ""
 "automatically calculates the container height if the value is"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/container.php:76
-msgid "Background Image"
+#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/container.php:75
+msgid "Vertically Center Content"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:72 ../helper/tabs/documentation.php:97 ..
-#: /helper/tabs/documentation.php:448 ../helper/tabs/documentation.php:470 ..
-#: /helper/tabs/documentation.php:477 ../helper/tabs/documentation.php:484 ..
-#: /helper/tabs/documentation.php:491 ../helper/tabs/documentation.php:498 ..
-#: /helper/tabs/documentation.php:881 ../helper/tabs/documentation.php:1521 ..
-#: /helper/tabs/documentation.php:1608 ../helper/tabs/documentation.php:1917 ..
-#: /helper/tabs/documentation.php:1925 ../helper/tabs/documentation.php:2084 ..
-#: /helper/tabs/documentation.php:2116 ../helper/tabs/documentation.php:2185 ..
-#: /helper/tabs/documentation.php:2288 ../helper/tabs/documentation.php:2521 ..
-#: /helper/tabs/documentation.php:2555 ../helper/tabs/documentation.php:2562 ..
-#: /helper/tabs/documentation.php:2569 ../helper/tabs/documentation.php:2949 ..
-#: /helper/tabs/documentation.php:2958
-msgid "String"
+#: ../helper/tabs/documentation.php:72 ../helper/tabs/documentation.php:128 ..
+#: /helper/tabs/documentation.php:520 ../helper/tabs/documentation.php:535 ..
+#: /helper/tabs/documentation.php:545 ../helper/tabs/documentation.php:674 ..
+#: /helper/tabs/documentation.php:860 ../helper/tabs/documentation.php:871 ..
+#: /helper/tabs/documentation.php:1551 ../helper/tabs/documentation.php:1624 ..
+#: /helper/tabs/documentation.php:1646 ../helper/tabs/documentation.php:1653 ..
+#: /helper/tabs/documentation.php:1949 ../helper/tabs/documentation.php:2239 ..
+#: /helper/tabs/documentation.php:2246 ../helper/tabs/documentation.php:2279 ..
+#: /helper/tabs/documentation.php:2529
+msgid "Boolean"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:74
+msgid "When enabled, the content of container is placed in the middle."
+msgstr ""
+
+#: ../helper/tabs/documentation.php:79 ../shortcodes/panel/container.php:90
+msgid "Background Image"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:80 ../helper/tabs/documentation.php:105 ..
+#: /helper/tabs/documentation.php:456 ../helper/tabs/documentation.php:478 ..
+#: /helper/tabs/documentation.php:485 ../helper/tabs/documentation.php:492 ..
+#: /helper/tabs/documentation.php:499 ../helper/tabs/documentation.php:506 ..
+#: /helper/tabs/documentation.php:889 ../helper/tabs/documentation.php:1529 ..
+#: /helper/tabs/documentation.php:1616 ../helper/tabs/documentation.php:1925 ..
+#: /helper/tabs/documentation.php:1933 ../helper/tabs/documentation.php:2092 ..
+#: /helper/tabs/documentation.php:2124 ../helper/tabs/documentation.php:2193 ..
+#: /helper/tabs/documentation.php:2296 ../helper/tabs/documentation.php:2529 ..
+#: /helper/tabs/documentation.php:2563 ../helper/tabs/documentation.php:2570 ..
+#: /helper/tabs/documentation.php:2577 ../helper/tabs/documentation.php:2957 ..
+#: /helper/tabs/documentation.php:2966
+msgid "String"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:82
 msgid ""
 "Background image URL. The CSS properties for the background appear after "
 "upload."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:81 ../shortcodes/panel/container.php:100
+#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/container.php:114
 msgid "Background Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:84
+#: ../helper/tabs/documentation.php:92
 msgid "Set a color for the container background. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:84 ../helper/tabs/documentation.php:146 ..
-#: /helper/tabs/documentation.php:1904 ../helper/tabs/documentation.php:1912 ..
-#: /helper/tabs/documentation.php:2395 ../helper/tabs/documentation.php:2532 ..
-#: /helper/tabs/documentation.php:2540 ../helper/tabs/documentation.php:2548
+#: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
+#: /helper/tabs/documentation.php:1912 ../helper/tabs/documentation.php:1920 ..
+#: /helper/tabs/documentation.php:2403 ../helper/tabs/documentation.php:2540 ..
+#: /helper/tabs/documentation.php:2548 ../helper/tabs/documentation.php:2556
 msgid "You can add a custom color with color palette. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:84 ../helper/tabs/documentation.php:146 ..
-#: /helper/tabs/documentation.php:1904 ../helper/tabs/documentation.php:1912 ..
-#: /helper/tabs/documentation.php:2211 ../helper/tabs/documentation.php:2304 ..
-#: /helper/tabs/documentation.php:2395 ../helper/tabs/documentation.php:2532 ..
-#: /helper/tabs/documentation.php:2540 ../helper/tabs/documentation.php:2548
+#: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
+#: /helper/tabs/documentation.php:1912 ../helper/tabs/documentation.php:1920 ..
+#: /helper/tabs/documentation.php:2219 ../helper/tabs/documentation.php:2312 ..
+#: /helper/tabs/documentation.php:2403 ../helper/tabs/documentation.php:2540 ..
+#: /helper/tabs/documentation.php:2548 ../helper/tabs/documentation.php:2556
 msgid "Click on the "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:84 ../helper/tabs/documentation.php:146 ..
-#: /helper/tabs/documentation.php:1904 ../helper/tabs/documentation.php:1912 ..
-#: /helper/tabs/documentation.php:2211 ../helper/tabs/documentation.php:2304 ..
-#: /helper/tabs/documentation.php:2395 ../helper/tabs/documentation.php:2532 ..
-#: /helper/tabs/documentation.php:2540 ../helper/tabs/documentation.php:2548 ..
+#: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
+#: /helper/tabs/documentation.php:1912 ../helper/tabs/documentation.php:1920 ..
+#: /helper/tabs/documentation.php:2219 ../helper/tabs/documentation.php:2312 ..
+#: /helper/tabs/documentation.php:2403 ../helper/tabs/documentation.php:2540 ..
+#: /helper/tabs/documentation.php:2548 ../helper/tabs/documentation.php:2556 ..
 #: /shortcodes/panel/button.php:40 ../shortcodes/panel/button.php:83 ..
-#: /shortcodes/panel/container.php:118 ../shortcodes/panel/container.php:202 ..
+#: /shortcodes/panel/container.php:132 ../shortcodes/panel/container.php:216 ..
 #: /shortcodes/panel/heading.php:104 ../shortcodes/panel/heading.php:301 ..
 #: /shortcodes/panel/icons.php:39 ../shortcodes/panel/progress-bar.php:171 ..
 #: /shortcodes/panel/progress-bar.php:213 ../shortcodes/panel/progress-bar.php:255
 msgid "other color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:84 ../helper/tabs/documentation.php:146 ..
-#: /helper/tabs/documentation.php:1904 ../helper/tabs/documentation.php:1912 ..
-#: /helper/tabs/documentation.php:2211 ../helper/tabs/documentation.php:2304 ..
-#: /helper/tabs/documentation.php:2395 ../helper/tabs/documentation.php:2532 ..
-#: /helper/tabs/documentation.php:2540 ../helper/tabs/documentation.php:2548
+#: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
+#: /helper/tabs/documentation.php:1912 ../helper/tabs/documentation.php:1920 ..
+#: /helper/tabs/documentation.php:2219 ../helper/tabs/documentation.php:2312 ..
+#: /helper/tabs/documentation.php:2403 ../helper/tabs/documentation.php:2540 ..
+#: /helper/tabs/documentation.php:2548 ../helper/tabs/documentation.php:2556
 msgid "link at the bottom of the color selector."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/container.php:245
+#: ../helper/tabs/documentation.php:97 ../shortcodes/panel/container.php:259
 msgid "Parallax"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:92
+#: ../helper/tabs/documentation.php:100
 msgid ""
 "Add a parallax scrolling effect of the container on your pages. You need "
 "value"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:96 ../shortcodes/panel/container.php:263
+#: ../helper/tabs/documentation.php:104 ../shortcodes/panel/container.php:277
 msgid "Class"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:99
+#: ../helper/tabs/documentation.php:107
 msgid "Additional class for container."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:104
+#: ../helper/tabs/documentation.php:112
 msgid "Wrapper Margin"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:107 ../shortcodes/panel/container.php:275
+#: ../helper/tabs/documentation.php:115 ../shortcodes/panel/container.php:289
 msgid "Use the input fields below to customize the margin of container wrapper."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:111
+#: ../helper/tabs/documentation.php:119
 msgid "Content Padding"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:114 ../shortcodes/panel/container.php:294
+#: ../helper/tabs/documentation.php:122 ../shortcodes/panel/container.php:308
 msgid ""
 "Use the input fields below to customize the padding of content from "
 "container."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:119 ../helper/tabs/documentation.php:129 ..
-#: /helper/tabs/documentation.php:136 ../helper/tabs/documentation.php:143 ..
-#: /helper/tabs/documentation.php:151 ../shortcodes/panel/container.php:145
+#: ../helper/tabs/documentation.php:127 ../helper/tabs/documentation.php:137 ..
+#: /helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
+#: /helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:159
 msgid "Border"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:120 ../helper/tabs/documentation.php:512 ..
-#: /helper/tabs/documentation.php:527 ../helper/tabs/documentation.php:537 ..
-#: /helper/tabs/documentation.php:666 ../helper/tabs/documentation.php:852 ..
-#: /helper/tabs/documentation.php:863 ../helper/tabs/documentation.php:1543 ..
-#: /helper/tabs/documentation.php:1616 ../helper/tabs/documentation.php:1638 ..
-#: /helper/tabs/documentation.php:1645 ../helper/tabs/documentation.php:1941 ..
-#: /helper/tabs/documentation.php:2231 ../helper/tabs/documentation.php:2238 ..
-#: /helper/tabs/documentation.php:2271 ../helper/tabs/documentation.php:2521
-msgid "Boolean"
-msgstr ""
-
-#: ../helper/tabs/documentation.php:122
+#: ../helper/tabs/documentation.php:130
 msgid "When enabled, it will add a custom border for container."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:129 ../helper/tabs/documentation.php:2279
+#: ../helper/tabs/documentation.php:137 ../helper/tabs/documentation.php:2287
 msgid "To set up the following properties, the "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:129 ../helper/tabs/documentation.php:2247 ..
-#: /helper/tabs/documentation.php:2279
+#: ../helper/tabs/documentation.php:137 ../helper/tabs/documentation.php:2255 ..
+#: /helper/tabs/documentation.php:2287
 msgid "checkbox should be checked."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:136 ../shortcodes/panel/container.php:167
+#: ../helper/tabs/documentation.php:144 ../shortcodes/panel/container.php:181
 msgid "Border Width"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:139
+#: ../helper/tabs/documentation.php:147
 msgid "It will determine the width of the container border in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:143 ../shortcodes/panel/container.php:182
+#: ../helper/tabs/documentation.php:151 ../shortcodes/panel/container.php:196
 msgid "Border Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:146
+#: ../helper/tabs/documentation.php:154
 msgid "Set a color for the container border. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:151 ../shortcodes/panel/container.php:225
+#: ../helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:239
 msgid "Border Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:154
+#: ../helper/tabs/documentation.php:162
 msgid ""
 "The option allows you to specify the style of a container border. The "
 "following values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:165
+#: ../helper/tabs/documentation.php:173
 msgid "Example(header)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:189
+#: ../helper/tabs/documentation.php:197
 msgid "Example(page)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:313
+#: ../helper/tabs/documentation.php:321
 msgid "Preview(header)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:318
+#: ../helper/tabs/documentation.php:326
 msgid "Preview(page)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:332
+#: ../helper/tabs/documentation.php:340
 msgid "Content Builder"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:335
+#: ../helper/tabs/documentation.php:343
 msgid "Recent Posts With Custom Template"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:337
+#: ../helper/tabs/documentation.php:345
 msgid ""
 "This shortcode allows you to fine-tune the posts you wish to display on a "
 "page. You can use the following placeholders in the post list item templates,"
 " which will be replaced by the actual values when the content is displayed."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:347 ../helper/tabs/documentation.php:435 ..
-#: /helper/tabs/documentation.php:645 ../helper/tabs/documentation.php:737 ..
-#: /helper/tabs/documentation.php:832 ../helper/tabs/documentation.php:1004 ..
-#: /helper/tabs/documentation.php:1135 ../helper/tabs/documentation.php:1207 ..
-#: /helper/tabs/documentation.php:1373 ../helper/tabs/documentation.php:1506 ..
-#: /helper/tabs/documentation.php:1593 ../helper/tabs/documentation.php:1708 ..
-#: /helper/tabs/documentation.php:1888 ../helper/tabs/documentation.php:2046 ..
-#: /helper/tabs/documentation.php:2170 ../helper/tabs/documentation.php:2378 ..
-#: /helper/tabs/documentation.php:2467 ../helper/tabs/documentation.php:2663 ..
-#: /helper/tabs/documentation.php:2766 ../helper/tabs/documentation.php:2858 ..
-#: /helper/tabs/documentation.php:2934
+#: ../helper/tabs/documentation.php:355 ../helper/tabs/documentation.php:443 ..
+#: /helper/tabs/documentation.php:653 ../helper/tabs/documentation.php:745 ..
+#: /helper/tabs/documentation.php:840 ../helper/tabs/documentation.php:1012 ..
+#: /helper/tabs/documentation.php:1143 ../helper/tabs/documentation.php:1215 ..
+#: /helper/tabs/documentation.php:1381 ../helper/tabs/documentation.php:1514 ..
+#: /helper/tabs/documentation.php:1601 ../helper/tabs/documentation.php:1716 ..
+#: /helper/tabs/documentation.php:1896 ../helper/tabs/documentation.php:2054 ..
+#: /helper/tabs/documentation.php:2178 ../helper/tabs/documentation.php:2386 ..
+#: /helper/tabs/documentation.php:2475 ../helper/tabs/documentation.php:2671 ..
+#: /helper/tabs/documentation.php:2774 ../helper/tabs/documentation.php:2866 ..
+#: /helper/tabs/documentation.php:2942
 msgid "Options"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:358 ../shortcodes/panel/recent-posts.php:19
+#: ../helper/tabs/documentation.php:366 ../shortcodes/panel/recent-posts.php:19
 msgid "Number of posts to show"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:361
+#: ../helper/tabs/documentation.php:369
 msgid "Set the number of posts to display per page there."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:364 ../shortcodes/panel/recent-posts.php:31
+#: ../helper/tabs/documentation.php:372 ../shortcodes/panel/recent-posts.php:31
 msgid "Loop Template"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:365 ../helper/tabs/documentation.php:382 ..
-#: /helper/tabs/documentation.php:388 ../helper/tabs/documentation.php:519
+#: ../helper/tabs/documentation.php:373 ../helper/tabs/documentation.php:390 ..
+#: /helper/tabs/documentation.php:396 ../helper/tabs/documentation.php:527
 msgid "HTML|String"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:367
+#: ../helper/tabs/documentation.php:375
 msgid ""
 "You can use the following placeholders in the post list item templates, "
 "which will be replaced by the actual values when the content is displayed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:369 ../shortcodes/panel/recent-posts.php:35
+#: ../helper/tabs/documentation.php:377 ../shortcodes/panel/recent-posts.php:35
 msgid "Permalink"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:370 ../helper/tabs/documentation.php:447 ..
-#: /helper/tabs/documentation.php:2184 ../helper/tabs/documentation.php:2554 ..
+#: ../helper/tabs/documentation.php:378 ../helper/tabs/documentation.php:455 ..
+#: /helper/tabs/documentation.php:2192 ../helper/tabs/documentation.php:2562 ..
 #: /shortcodes/panel/heading.php:23 ../shortcodes/panel/pricing-3-col.php:21 ..
 #: /shortcodes/panel/pricing-3-col.php:172 ../shortcodes/panel/pricing-3-col.php:
 #: 323 ../shortcodes/panel/pricing-4-col.php:21 ../shortcodes/panel/pricing-4-col.
@@ -622,87 +631,87 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:371 ../shortcodes/panel/recent-posts.php:37
+#: ../helper/tabs/documentation.php:379 ../shortcodes/panel/recent-posts.php:37
 msgid "Month"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:372 ../shortcodes/panel/recent-posts.php:38
+#: ../helper/tabs/documentation.php:380 ../shortcodes/panel/recent-posts.php:38
 msgid "Month display in English"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:373 ../shortcodes/panel/recent-posts.php:39
+#: ../helper/tabs/documentation.php:381 ../shortcodes/panel/recent-posts.php:39
 msgid "Day"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:374 ../shortcodes/panel/recent-posts.php:40
+#: ../helper/tabs/documentation.php:382 ../shortcodes/panel/recent-posts.php:40
 msgid "Year"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:375 ../shortcodes/panel/recent-posts.php:41
+#: ../helper/tabs/documentation.php:383 ../shortcodes/panel/recent-posts.php:41
 msgid "Excerpt"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:376 ../shortcodes/panel/recent-posts.php:42
+#: ../helper/tabs/documentation.php:384 ../shortcodes/panel/recent-posts.php:42
 msgid "Featured image"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:381 ../shortcodes/panel/recent-posts.php:58
+#: ../helper/tabs/documentation.php:389 ../shortcodes/panel/recent-posts.php:58
 msgid "Output text before the &lt;a&gt; of the link"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:384
+#: ../helper/tabs/documentation.php:392
 msgid ""
 "You can create custom tags for html and assign specific class name. For "
 "example:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:387 ../shortcodes/panel/recent-posts.php:68
+#: ../helper/tabs/documentation.php:395 ../shortcodes/panel/recent-posts.php:68
 msgid "Output text after the &lt;/a&gt; of the link"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:390
+#: ../helper/tabs/documentation.php:398
 msgid "The HTML tag should have a corresponding ending tag.<"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:398 ../helper/tabs/documentation.php:689 ..
-#: /helper/tabs/documentation.php:773 ../helper/tabs/documentation.php:1163 ..
-#: /helper/tabs/documentation.php:1555 ../helper/tabs/documentation.php:1659 ..
-#: /helper/tabs/documentation.php:1733 ../helper/tabs/documentation.php:1989 ..
-#: /helper/tabs/documentation.php:2128 ../helper/tabs/documentation.php:2323 ..
-#: /helper/tabs/documentation.php:2422 ../helper/tabs/documentation.php:2588 ..
-#: /helper/tabs/documentation.php:2713 ../helper/tabs/documentation.php:2816 ..
-#: /helper/tabs/documentation.php:2885 ../helper/tabs/documentation.php:2970
+#: ../helper/tabs/documentation.php:406 ../helper/tabs/documentation.php:697 ..
+#: /helper/tabs/documentation.php:781 ../helper/tabs/documentation.php:1171 ..
+#: /helper/tabs/documentation.php:1563 ../helper/tabs/documentation.php:1667 ..
+#: /helper/tabs/documentation.php:1741 ../helper/tabs/documentation.php:1997 ..
+#: /helper/tabs/documentation.php:2136 ../helper/tabs/documentation.php:2331 ..
+#: /helper/tabs/documentation.php:2430 ../helper/tabs/documentation.php:2596 ..
+#: /helper/tabs/documentation.php:2721 ../helper/tabs/documentation.php:2824 ..
+#: /helper/tabs/documentation.php:2893 ../helper/tabs/documentation.php:2978
 msgid "Example"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:408 ../helper/tabs/documentation.php:618 ..
-#: /helper/tabs/documentation.php:711 ../helper/tabs/documentation.php:806 ..
-#: /helper/tabs/documentation.php:974 ../helper/tabs/documentation.php:1108 ..
-#: /helper/tabs/documentation.php:1181 ../helper/tabs/documentation.php:1346 ..
-#: /helper/tabs/documentation.php:1480 ../helper/tabs/documentation.php:1567 ..
-#: /helper/tabs/documentation.php:1673 ../helper/tabs/documentation.php:1849 ..
-#: /helper/tabs/documentation.php:2017 ../helper/tabs/documentation.php:2142 ..
-#: /helper/tabs/documentation.php:2351 ../helper/tabs/documentation.php:2442 ..
-#: /helper/tabs/documentation.php:2637 ../helper/tabs/documentation.php:2741 ..
-#: /helper/tabs/documentation.php:2834 ../helper/tabs/documentation.php:2897
+#: ../helper/tabs/documentation.php:416 ../helper/tabs/documentation.php:626 ..
+#: /helper/tabs/documentation.php:719 ../helper/tabs/documentation.php:814 ..
+#: /helper/tabs/documentation.php:982 ../helper/tabs/documentation.php:1116 ..
+#: /helper/tabs/documentation.php:1189 ../helper/tabs/documentation.php:1354 ..
+#: /helper/tabs/documentation.php:1488 ../helper/tabs/documentation.php:1575 ..
+#: /helper/tabs/documentation.php:1681 ../helper/tabs/documentation.php:1857 ..
+#: /helper/tabs/documentation.php:2025 ../helper/tabs/documentation.php:2150 ..
+#: /helper/tabs/documentation.php:2359 ../helper/tabs/documentation.php:2450 ..
+#: /helper/tabs/documentation.php:2645 ../helper/tabs/documentation.php:2749 ..
+#: /helper/tabs/documentation.php:2842 ../helper/tabs/documentation.php:2905
 msgid "Preview"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:421
+#: ../helper/tabs/documentation.php:429
 msgid "Pricing Table"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:423
+#: ../helper/tabs/documentation.php:431
 msgid ""
 "This shortcode allows you to add a new 3 or 4 column pricing section from "
 "your editor toolbar."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:450
+#: ../helper/tabs/documentation.php:458
 msgid "A title for the pricing table."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:455 ../shortcodes/panel/pricing-3-col.php:30 .
+#: ../helper/tabs/documentation.php:463 ../shortcodes/panel/pricing-3-col.php:30 .
 #: ./shortcodes/panel/pricing-3-col.php:181 ../shortcodes/panel/pricing-3-col.php:
 #: 332 ../shortcodes/panel/pricing-4-col.php:30 ../shortcodes/panel/pricing-4-col.
 #: php:180 ../shortcodes/panel/pricing-4-col.php:331 ../shortcodes/panel/pricing-
@@ -710,11 +719,11 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:458
+#: ../helper/tabs/documentation.php:466
 msgid "You want for the price."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:462 ../shortcodes/panel/pricing-3-col.php:39 .
+#: ../helper/tabs/documentation.php:470 ../shortcodes/panel/pricing-3-col.php:39 .
 #: ./shortcodes/panel/pricing-3-col.php:190 ../shortcodes/panel/pricing-3-col.php:
 #: 341 ../shortcodes/panel/pricing-4-col.php:39 ../shortcodes/panel/pricing-4-col.
 #: php:189 ../shortcodes/panel/pricing-4-col.php:340 ../shortcodes/panel/pricing-
@@ -722,11 +731,11 @@ msgstr ""
 msgid "Price Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:465 ../helper/tabs/documentation.php:507
+#: ../helper/tabs/documentation.php:473 ../helper/tabs/documentation.php:515
 msgid "You want for the text color of price."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:469 ../shortcodes/panel/pricing-3-col.php:51 .
+#: ../helper/tabs/documentation.php:477 ../shortcodes/panel/pricing-3-col.php:51 .
 #: ./shortcodes/panel/pricing-3-col.php:201 ../shortcodes/panel/pricing-3-col.php:
 #: 352 ../shortcodes/panel/pricing-4-col.php:51 ../shortcodes/panel/pricing-4-col.
 #: php:200 ../shortcodes/panel/pricing-4-col.php:351 ../shortcodes/panel/pricing-
@@ -734,11 +743,11 @@ msgstr ""
 msgid "Currency"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:472
+#: ../helper/tabs/documentation.php:480
 msgid "Your desired currency sign."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:478 ../shortcodes/panel/pricing-3-col.php:62 .
+#: ../helper/tabs/documentation.php:486 ../shortcodes/panel/pricing-3-col.php:62 .
 #: ./shortcodes/panel/pricing-3-col.php:212 ../shortcodes/panel/pricing-3-col.php:
 #: 363 ../shortcodes/panel/pricing-4-col.php:62 ../shortcodes/panel/pricing-4-col.
 #: php:211 ../shortcodes/panel/pricing-4-col.php:362 ../shortcodes/panel/pricing-
@@ -746,15 +755,15 @@ msgstr ""
 msgid "per month"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:479
+#: ../helper/tabs/documentation.php:487
 msgid "The period (time span) for the price."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:486
+#: ../helper/tabs/documentation.php:494
 msgid "Description of this pricing table."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:490 ../shortcodes/panel/pricing-3-col.php:82 .
+#: ../helper/tabs/documentation.php:498 ../shortcodes/panel/pricing-3-col.php:82 .
 #: ./shortcodes/panel/pricing-3-col.php:232 ../shortcodes/panel/pricing-3-col.php:
 #: 383 ../shortcodes/panel/pricing-4-col.php:82 ../shortcodes/panel/pricing-4-col.
 #: php:231 ../shortcodes/panel/pricing-4-col.php:382 ../shortcodes/panel/pricing-
@@ -762,11 +771,11 @@ msgstr ""
 msgid "Button Label"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:493 ../helper/tabs/documentation.php:1919
+#: ../helper/tabs/documentation.php:501 ../helper/tabs/documentation.php:1927
 msgid "That is the text you would like displayed on the button."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:497 ../shortcodes/panel/pricing-3-col.php:91 .
+#: ../helper/tabs/documentation.php:505 ../shortcodes/panel/pricing-3-col.php:91 .
 #: ./shortcodes/panel/pricing-3-col.php:241 ../shortcodes/panel/pricing-3-col.php:
 #: 392 ../shortcodes/panel/pricing-4-col.php:91 ../shortcodes/panel/pricing-4-col.
 #: php:240 ../shortcodes/panel/pricing-4-col.php:391 ../shortcodes/panel/pricing-
@@ -774,12 +783,12 @@ msgstr ""
 msgid "Button Link"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:500 ../helper/tabs/documentation.php:1927
+#: ../helper/tabs/documentation.php:508 ../helper/tabs/documentation.php:1935
 msgid "A destination link for the button."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:504 ../helper/tabs/documentation.php:1901 ..
-#: /helper/tabs/documentation.php:2796 ../shortcodes/panel/button.php:22 ..
+#: ../helper/tabs/documentation.php:512 ../helper/tabs/documentation.php:1909 ..
+#: /helper/tabs/documentation.php:2804 ../shortcodes/panel/button.php:22 ..
 #: /shortcodes/panel/pricing-3-col.php:100 ../shortcodes/panel/pricing-3-col.php:
 #: 251 ../shortcodes/panel/pricing-3-col.php:402 ../shortcodes/panel/pricing-4-
 #: col.php:100 ../shortcodes/panel/pricing-4-col.php:250 ..
@@ -788,7 +797,7 @@ msgstr ""
 msgid "Button Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:511 ../shortcodes/panel/pricing-3-col.php:111 
+#: ../helper/tabs/documentation.php:519 ../shortcodes/panel/pricing-3-col.php:111 
 #: ../shortcodes/panel/pricing-3-col.php:262 ../shortcodes/panel/pricing-3-col.
 #: php:413 ../shortcodes/panel/pricing-4-col.php:111 ../shortcodes/panel/pricing-
 #: 4-col.php:261 ../shortcodes/panel/pricing-4-col.php:412 ..
@@ -796,11 +805,11 @@ msgstr ""
 msgid "Open in new tab"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:514 ../helper/tabs/documentation.php:1943
+#: ../helper/tabs/documentation.php:522 ../helper/tabs/documentation.php:1951
 msgid "When enabled, the button link to open in a new tab."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:518 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:526 ../shortcodes/core/tinymce-plugin-lang.
 #: php:27 ../shortcodes/panel/pricing-3-col.php:123 ../shortcodes/panel/pricing-3-
 #: col.php:274 ../shortcodes/panel/pricing-3-col.php:425 ..
 #: /shortcodes/panel/pricing-4-col.php:123 ../shortcodes/panel/pricing-4-col.php:
@@ -809,13 +818,13 @@ msgstr ""
 msgid "Features"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:521
+#: ../helper/tabs/documentation.php:529
 msgid ""
 "Your pricing table content. Type one word or sentence per line when press "
 "<strong>\"ENTER\"</strong>. The textarea is supported by HTML tags."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:526 ../shortcodes/panel/pricing-3-col.php:139 
+#: ../helper/tabs/documentation.php:534 ../shortcodes/panel/pricing-3-col.php:139 
 #: ../shortcodes/panel/pricing-3-col.php:289 ../shortcodes/panel/pricing-3-col.
 #: php:440 ../shortcodes/panel/pricing-4-col.php:138 ../shortcodes/panel/pricing-
 #: 4-col.php:288 ../shortcodes/panel/pricing-4-col.php:439 ..
@@ -823,7 +832,7 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:529
+#: ../helper/tabs/documentation.php:537
 msgid ""
 "When enabled, this pricing table to be marked as active (highlighted by "
 "default). <br>\n"
@@ -832,15 +841,15 @@ msgid ""
 "parameter of shortcode. <br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:531
+#: ../helper/tabs/documentation.php:539
 msgid "Default: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:532
+#: ../helper/tabs/documentation.php:540
 msgid "Example: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:536 ../shortcodes/panel/pricing-3-col.php:151 
+#: ../helper/tabs/documentation.php:544 ../shortcodes/panel/pricing-3-col.php:151 
 #: ../shortcodes/panel/pricing-3-col.php:301 ../shortcodes/panel/pricing-3-col.
 #: php:452 ../shortcodes/panel/pricing-4-col.php:150 ../shortcodes/panel/pricing-
 #: 4-col.php:300 ../shortcodes/panel/pricing-4-col.php:451 ..
@@ -848,48 +857,48 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:539
+#: ../helper/tabs/documentation.php:547
 msgid "When enabled, this pricing table will hide."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:549 ../helper/tabs/documentation.php:1071 ..
-#: /helper/tabs/documentation.php:1403
+#: ../helper/tabs/documentation.php:557 ../helper/tabs/documentation.php:1079 ..
+#: /helper/tabs/documentation.php:1411
 msgid "Example (3 col)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:580 ../helper/tabs/documentation.php:1443
+#: ../helper/tabs/documentation.php:588 ../helper/tabs/documentation.php:1451
 msgid "Example (4 col)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:631 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:639 ../shortcodes/core/tinymce-plugin-lang.
 #: php:22
 msgid "Accordion"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:633
+#: ../helper/tabs/documentation.php:641
 msgid ""
 "Accordions are extremely useful for organizing and displaying large amounts "
 "of content without cluttering the page, and make it easy for the user to "
 "find what they’re looking for."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:634 ../helper/tabs/documentation.php:676 ..
-#: /helper/tabs/documentation.php:726 ../helper/tabs/documentation.php:760 ..
-#: /helper/tabs/documentation.php:820 ../helper/tabs/documentation.php:990 ..
-#: /helper/tabs/documentation.php:1021 ../helper/tabs/documentation.php:1124 ..
-#: /helper/tabs/documentation.php:1152 ../helper/tabs/documentation.php:1193 ..
-#: /helper/tabs/documentation.php:1248 ../helper/tabs/documentation.php:1361 ..
-#: /helper/tabs/documentation.php:1390
+#: ../helper/tabs/documentation.php:642 ../helper/tabs/documentation.php:684 ..
+#: /helper/tabs/documentation.php:734 ../helper/tabs/documentation.php:768 ..
+#: /helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:998 ..
+#: /helper/tabs/documentation.php:1029 ../helper/tabs/documentation.php:1132 ..
+#: /helper/tabs/documentation.php:1160 ../helper/tabs/documentation.php:1201 ..
+#: /helper/tabs/documentation.php:1256 ../helper/tabs/documentation.php:1369 ..
+#: /helper/tabs/documentation.php:1398
 msgid "You can click"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:634 ../helper/tabs/documentation.php:676 ..
-#: /helper/tabs/documentation.php:726 ../helper/tabs/documentation.php:760 ..
-#: /helper/tabs/documentation.php:820 ../helper/tabs/documentation.php:905 ..
-#: /helper/tabs/documentation.php:990 ../helper/tabs/documentation.php:1021 ..
-#: /helper/tabs/documentation.php:1124 ../helper/tabs/documentation.php:1152 ..
-#: /helper/tabs/documentation.php:1193 ../helper/tabs/documentation.php:1248 ..
-#: /helper/tabs/documentation.php:1361 ../helper/tabs/documentation.php:1390 ..
+#: ../helper/tabs/documentation.php:642 ../helper/tabs/documentation.php:684 ..
+#: /helper/tabs/documentation.php:734 ../helper/tabs/documentation.php:768 ..
+#: /helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:913 ..
+#: /helper/tabs/documentation.php:998 ../helper/tabs/documentation.php:1029 ..
+#: /helper/tabs/documentation.php:1132 ../helper/tabs/documentation.php:1160 ..
+#: /helper/tabs/documentation.php:1201 ../helper/tabs/documentation.php:1256 ..
+#: /helper/tabs/documentation.php:1369 ../helper/tabs/documentation.php:1398 ..
 #: /shortcodes/panel/accordion.php:58 ../shortcodes/panel/client-3-col.php:34 ..
 #: /shortcodes/panel/client-4-col.php:34 ../shortcodes/panel/features-2-col.php:
 #: 33 ../shortcodes/panel/features-2-col.php:190 ../shortcodes/panel/features-3-
@@ -899,40 +908,40 @@ msgstr ""
 msgid "click here to add an item"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:634 ../helper/tabs/documentation.php:676 ..
-#: /helper/tabs/documentation.php:726 ../helper/tabs/documentation.php:760 ..
-#: /helper/tabs/documentation.php:990 ../helper/tabs/documentation.php:1021 ..
-#: /helper/tabs/documentation.php:1124 ../helper/tabs/documentation.php:1152 ..
-#: /helper/tabs/documentation.php:1248 ../helper/tabs/documentation.php:1390
+#: ../helper/tabs/documentation.php:642 ../helper/tabs/documentation.php:684 ..
+#: /helper/tabs/documentation.php:734 ../helper/tabs/documentation.php:768 ..
+#: /helper/tabs/documentation.php:998 ../helper/tabs/documentation.php:1029 ..
+#: /helper/tabs/documentation.php:1132 ../helper/tabs/documentation.php:1160 ..
+#: /helper/tabs/documentation.php:1256 ../helper/tabs/documentation.php:1398
 msgid "button to add a new item"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:657 ../helper/tabs/documentation.php:749 ..
+#: ../helper/tabs/documentation.php:665 ../helper/tabs/documentation.php:757 ..
 #: /shortcodes/panel/accordion.php:21 ../shortcodes/panel/tabs.php:34
 msgid "Transition Effect"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:658 ../helper/tabs/documentation.php:750 ..
-#: /helper/tabs/documentation.php:2797 ../helper/tabs/documentation.php:2804
+#: ../helper/tabs/documentation.php:666 ../helper/tabs/documentation.php:758 ..
+#: /helper/tabs/documentation.php:2805 ../helper/tabs/documentation.php:2812
 msgid "Returns a Number"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:660 ../helper/tabs/documentation.php:752
+#: ../helper/tabs/documentation.php:668 ../helper/tabs/documentation.php:760
 msgid "Controls the animation type. The following values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:665 ../shortcodes/panel/accordion.php:36
+#: ../helper/tabs/documentation.php:673 ../shortcodes/panel/accordion.php:36
 msgid "Open The First One Automatically"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:668
+#: ../helper/tabs/documentation.php:676
 msgid "When enabled, it will open the first element."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:672 ../helper/tabs/documentation.php:756 ..
-#: /helper/tabs/documentation.php:901 ../helper/tabs/documentation.php:1017 ..
-#: /helper/tabs/documentation.php:1148 ../helper/tabs/documentation.php:1244 ..
-#: /helper/tabs/documentation.php:1386 ../shortcodes/panel/accordion.php:52 ..
+#: ../helper/tabs/documentation.php:680 ../helper/tabs/documentation.php:764 ..
+#: /helper/tabs/documentation.php:909 ../helper/tabs/documentation.php:1025 ..
+#: /helper/tabs/documentation.php:1156 ../helper/tabs/documentation.php:1252 ..
+#: /helper/tabs/documentation.php:1394 ../shortcodes/panel/accordion.php:52 ..
 #: /shortcodes/panel/client-3-col.php:28 ../shortcodes/panel/client-4-col.php:28 .
 #: ./shortcodes/panel/features-2-col.php:27 ../shortcodes/panel/features-2-col.
 #: php:184 ../shortcodes/panel/features-3-col.php:27 ../shortcodes/panel/hello.
@@ -942,90 +951,90 @@ msgstr ""
 msgid "List Item"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:673 ../helper/tabs/documentation.php:757 ..
-#: /helper/tabs/documentation.php:902 ../helper/tabs/documentation.php:1018 ..
-#: /helper/tabs/documentation.php:1149 ../helper/tabs/documentation.php:1245 ..
-#: /helper/tabs/documentation.php:1387
+#: ../helper/tabs/documentation.php:681 ../helper/tabs/documentation.php:765 ..
+#: /helper/tabs/documentation.php:910 ../helper/tabs/documentation.php:1026 ..
+#: /helper/tabs/documentation.php:1157 ../helper/tabs/documentation.php:1253 ..
+#: /helper/tabs/documentation.php:1395
 msgid "Group"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:675
+#: ../helper/tabs/documentation.php:683
 msgid ""
 "Per group contains <code>Accordion Title</code> and <code>Accordion "
 "Content</code> within each sub-group. The textarea is supported by HTML tags."
 "<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:722 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:730 ../shortcodes/core/tinymce-plugin-lang.
 #: php:23
 msgid "Tabs"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:725
+#: ../helper/tabs/documentation.php:733
 msgid ""
 "Tabs allow you to organize your content and display only what is necessary "
 "at a particular moment. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:759
+#: ../helper/tabs/documentation.php:767
 msgid ""
 "Per group contains <code>Tab Title</code> and <code>Tab Content</code> "
 "within each sub-group. The textarea is supported by HTML tags."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:818 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:826 ../shortcodes/core/tinymce-plugin-lang.
 #: php:46
 msgid "Portfolio"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:820
+#: ../helper/tabs/documentation.php:828
 msgid ""
 "This shortcode allows you to easily present portfolio section. The shortcode "
 "will display projects in different ways, depending on how you use the "
 "optional attributes to customize the portfolio layout. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:820 ../helper/tabs/documentation.php:1361
+#: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:1369
 msgid "button to unlimited add items."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:820
+#: ../helper/tabs/documentation.php:828
 msgid ""
 "Upload a thumbnail as cover. You can also upload a full preview image that "
 "it is an optional choice. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:820 ../helper/tabs/documentation.php:907
+#: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:915
 msgid "To set up the project destination URL by clicking "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:820 ../helper/tabs/documentation.php:907 ..
+#: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:915 ..
 #: /shortcodes/panel/portfolio-grid.php:224
 msgid "set up destination URL with this project"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:820 ../helper/tabs/documentation.php:907 ..
-#: /helper/tabs/documentation.php:1193
+#: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:915 ..
+#: /helper/tabs/documentation.php:1201
 msgid "link on the content of the popup window."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:844 ../helper/tabs/documentation.php:1220 ..
+#: ../helper/tabs/documentation.php:852 ../helper/tabs/documentation.php:1228 ..
 #: /shortcodes/core/tinymce-plugin-lang.php:36 ../shortcodes/panel/portfolio-grid.
 #: php:21 ../shortcodes/panel/team-grid.php:20
 msgid "Column"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:847 ../helper/tabs/documentation.php:1223
+#: ../helper/tabs/documentation.php:855 ../helper/tabs/documentation.php:1231
 msgid ""
 "Way of a grid list for presenting homogenous data and typically images. "
 "Allows 2, 3 and 4 columns across the page."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:851 ../shortcodes/panel/portfolio-grid.php:36
+#: ../helper/tabs/documentation.php:859 ../shortcodes/panel/portfolio-grid.php:36
 msgid "Filterable by Category"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:854
+#: ../helper/tabs/documentation.php:862
 msgid ""
 "When enabled, you can add a filterable portfolio to your site to showcase "
 "your content. If a particular category is selected, the list of projects is "
@@ -1034,47 +1043,47 @@ msgid ""
 "Name\"</strong> input for per project.</em><br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:862 ../helper/tabs/documentation.php:1940 ..
+#: ../helper/tabs/documentation.php:870 ../helper/tabs/documentation.php:1948 ..
 #: /shortcodes/panel/button.php:143 ../shortcodes/panel/portfolio-grid.php:51
 msgid "Open link in new tab"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:865
+#: ../helper/tabs/documentation.php:873
 msgid "When enabled, the project destination link to open in a new tab."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:866
+#: ../helper/tabs/documentation.php:874
 msgid "This option is valid when you use "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:866 ../helper/tabs/documentation.php:1924 ..
+#: ../helper/tabs/documentation.php:874 ../helper/tabs/documentation.php:1932 ..
 #: /shortcodes/panel/button.php:118 ../shortcodes/panel/portfolio-grid.php:236
 msgid "Destination URL"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:872 ../shortcodes/panel/portfolio-grid.php:66
+#: ../helper/tabs/documentation.php:880 ../shortcodes/panel/portfolio-grid.php:66
 msgid "Radius of Fillet Image"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:875
+#: ../helper/tabs/documentation.php:883
 msgid "To set the fillet radius in pixels for project picture."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:880 ../shortcodes/panel/portfolio-grid.php:79
+#: ../helper/tabs/documentation.php:888 ../shortcodes/panel/portfolio-grid.php:79
 msgid "Class Prefix"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:883
+#: ../helper/tabs/documentation.php:891
 msgid ""
 "Prefix string attached to the classes of all elements generated by the "
 "portfolio, the default value is "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:886
+#: ../helper/tabs/documentation.php:894
 msgid "Example generated elements class name"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:904
+#: ../helper/tabs/documentation.php:912
 msgid ""
 "Per group contains <code>Thumbnail</code>, <code>Full Preview</code>, "
 "<code>Project Title</code>, <code>Category Name</code>, <code>Description of "
@@ -1083,23 +1092,23 @@ msgid ""
 "it is an optional choice. The textarea is supported by HTML tags.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:905
+#: ../helper/tabs/documentation.php:913
 msgid "You can click "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:905
+#: ../helper/tabs/documentation.php:913
 msgid "button to add a new item."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:919
+#: ../helper/tabs/documentation.php:927
 msgid "Example (3, 4 and 2 col)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:986
+#: ../helper/tabs/documentation.php:994
 msgid "Features Boxes"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:988
+#: ../helper/tabs/documentation.php:996
 msgid ""
 "This shortcode will add a new  features or services section from your editor "
 "toolbar.<br>\n"
@@ -1110,86 +1119,86 @@ msgid ""
 "procedure to insert more sections.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1020
+#: ../helper/tabs/documentation.php:1028
 msgid ""
 "Per group contains <code>Feature Title</code>, <code>Description</code> and "
 "<code>Feature Icon</code> within each sub-group, and you can create your own "
 "custom color palette. The textarea is supported by HTML tags.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1021 ../helper/tabs/documentation.php:1390
+#: ../helper/tabs/documentation.php:1029 ../helper/tabs/documentation.php:1398
 msgid "Multiple items per column.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1032
+#: ../helper/tabs/documentation.php:1040
 msgid "Example (2 col)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1120
+#: ../helper/tabs/documentation.php:1128
 msgid "Testimonials Carousel"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1123
+#: ../helper/tabs/documentation.php:1131
 msgid ""
 "This shortcode gives you ability to show your client testimonial in your web "
 "page. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1151
+#: ../helper/tabs/documentation.php:1159
 msgid ""
 "Per group contains <code>Avatar</code>, <code>Name</code>, "
 "<code>Position</code> and <code>Details</code> for the customer giving "
 "within each sub-group. The textarea is supported by HTML tags.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1191 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:1199 ../shortcodes/core/tinymce-plugin-lang.
 #: php:24
 msgid "Team"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1193
+#: ../helper/tabs/documentation.php:1201
 msgid ""
 "This shortcode allows you to easily present your team members. You'll see "
 "the best results with fullwidth, 2, 3 and 4 columns when you want them "
 "evenly spaced. <br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1193
+#: ../helper/tabs/documentation.php:1201
 msgid ""
 "button to unlimited add items. Upload an avatar and write a short bio so "
 "members can get a better feel for who you are and what you're about."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1193
+#: ../helper/tabs/documentation.php:1201
 msgid "To set up the member social media links by clicking"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1193 ../helper/tabs/documentation.php:1250 ..
+#: ../helper/tabs/documentation.php:1201 ../helper/tabs/documentation.php:1258 ..
 #: /shortcodes/panel/team-fullwidth.php:169 ../shortcodes/panel/team-grid.php:185
 msgid "set up links with social network"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1228 ../shortcodes/panel/team-fullwidth.php:
+#: ../helper/tabs/documentation.php:1236 ../shortcodes/panel/team-fullwidth.php:
 #: 34 ../shortcodes/panel/team-grid.php:49
 msgid "Radius of Fillet Avatar"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1231
+#: ../helper/tabs/documentation.php:1239
 msgid "To set the fillet radius in pixels for avatar photo."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1236 ../shortcodes/panel/team-fullwidth.php:
+#: ../helper/tabs/documentation.php:1244 ../shortcodes/panel/team-fullwidth.php:
 #: 48 ../shortcodes/panel/team-grid.php:62
 msgid "Height of Grid"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1239
+#: ../helper/tabs/documentation.php:1247
 msgid ""
 "Set height of grid so that it will fit its avatar photo. Browsers use a "
 "default stylesheet to render webpages if the value is <code>0</code>."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1247
+#: ../helper/tabs/documentation.php:1255
 msgid ""
 "Per group contains <code>Avatar</code>, <code>Name</code>, "
 "<code>Position</code>, <code>Introduction</code> and <code>Social "
@@ -1197,46 +1206,46 @@ msgid ""
 "supported by HTML tags.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1250
+#: ../helper/tabs/documentation.php:1258
 msgid "To set up the member social media links by clicking "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1250
+#: ../helper/tabs/documentation.php:1258
 msgid "link on the content of the popup window.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1262
+#: ../helper/tabs/documentation.php:1270
 msgid "Example (fullwidth)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1293
+#: ../helper/tabs/documentation.php:1301
 msgid "Example (4, 3 and 2 col)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1358
+#: ../helper/tabs/documentation.php:1366
 msgid "List Of Clients"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1361
+#: ../helper/tabs/documentation.php:1369
 msgid ""
 "This shortcode allows you to add a new client section of 3 or 4 column. Per "
 "section insert \"for a maximum of 3 or 4\" and you can repeat the same "
 "procedure to insert more sections. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1389
+#: ../helper/tabs/documentation.php:1397
 msgid ""
 "Per group contains <code>LOGO</code> and <code>Introduction</code> of your "
 "client member within each sub-group. The textarea is supported by HTML tags."
 "<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1492 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:1500 ../shortcodes/core/tinymce-plugin-lang.
 #: php:34
 msgid "Responsive Video"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1495
+#: ../helper/tabs/documentation.php:1503
 msgid ""
 "This shortcode allows you to add a responsive video. Here you can enter your "
 "video links. You can link videos from YouTube or Vimeo, or alternatively, "
@@ -1248,134 +1257,134 @@ msgid ""
 "background image that will be visible while the video is loading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1520 ../shortcodes/panel/video.php:24
+#: ../helper/tabs/documentation.php:1528 ../shortcodes/panel/video.php:24
 msgid "Video URL"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1523
+#: ../helper/tabs/documentation.php:1531
 msgid ""
 "The video's URL from your web browser's address bar. <br>e.g.,<strong>https:"
 "//www.youtube.com/watch?v=abc</strong>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1528
+#: ../helper/tabs/documentation.php:1536
 msgid "Display Width (px)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1531
+#: ../helper/tabs/documentation.php:1539
 msgid "Defines width of the media. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1535
+#: ../helper/tabs/documentation.php:1543
 msgid "Display Height (px)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1538
+#: ../helper/tabs/documentation.php:1546
 msgid "Defines height of the media. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1542 ../shortcodes/panel/video.php:62
+#: ../helper/tabs/documentation.php:1550 ../shortcodes/panel/video.php:62
 msgid "Responsive of Display"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1545
+#: ../helper/tabs/documentation.php:1553
 msgid "When enabled, using responsive video embedding."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1578 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:1586 ../shortcodes/core/tinymce-plugin-lang.
 #: php:35
 msgid "Audio"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1581
+#: ../helper/tabs/documentation.php:1589
 msgid ""
 "This shortcode allows you to add a audio. You can paste the URL of "
 "SoundCloud or Audiomack, .mp3, .ogg format, and so on."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1582
+#: ../helper/tabs/documentation.php:1590
 msgid "If you are using SoundCloud or Audiomack, the "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1582 ../helper/tabs/documentation.php:1615 ..
-#: /helper/tabs/documentation.php:1632 ../helper/tabs/documentation.php:1640 ..
-#: /helper/tabs/documentation.php:1647 ../shortcodes/panel/audio.php:34
+#: ../helper/tabs/documentation.php:1590 ../helper/tabs/documentation.php:1623 ..
+#: /helper/tabs/documentation.php:1640 ../helper/tabs/documentation.php:1648 ..
+#: /helper/tabs/documentation.php:1655 ../shortcodes/panel/audio.php:34
 msgid "Enable SoundCloud"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1582
+#: ../helper/tabs/documentation.php:1590
 msgid "checkbox should be checked on the content of the popup window."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1607 ../shortcodes/panel/audio.php:24
+#: ../helper/tabs/documentation.php:1615 ../shortcodes/panel/audio.php:24
 msgid "Audio URL"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1610
+#: ../helper/tabs/documentation.php:1618
 msgid ""
 "The MP3 audio URL. <br>e.g.,<strong>http://example.com/my-audiofile."
 "mp3</strong>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1618
+#: ../helper/tabs/documentation.php:1626
 msgid "Add Soundcloud audio format support to your WordPress site."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1622
+#: ../helper/tabs/documentation.php:1630
 msgid "Player Width (%)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1625
+#: ../helper/tabs/documentation.php:1633
 msgid ""
 "It will determine the width of the player in pixels or relative percentage "
 "to the parent container. There are two types of length units: <code>%</code> "
 "and <code>px</code>."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1629
+#: ../helper/tabs/documentation.php:1637
 msgid "Player Height (px)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1632
+#: ../helper/tabs/documentation.php:1640
 msgid ""
 "It will determine the height of the player in pixels or relative percentage "
 "to the parent container. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1632 ../helper/tabs/documentation.php:1640 ..
-#: /helper/tabs/documentation.php:1647
+#: ../helper/tabs/documentation.php:1640 ../helper/tabs/documentation.php:1648 ..
+#: /helper/tabs/documentation.php:1655
 msgid "This is an invalid option if the "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1632
+#: ../helper/tabs/documentation.php:1640
 msgid "checkbox is <strong>unchecked</strong>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1637 ../shortcodes/panel/audio.php:77
+#: ../helper/tabs/documentation.php:1645 ../shortcodes/panel/audio.php:77
 msgid "Autoplay"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1640
+#: ../helper/tabs/documentation.php:1648
 msgid "When enabled, the audio will begin to play once it is ready. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1640 ../helper/tabs/documentation.php:1647
+#: ../helper/tabs/documentation.php:1648 ../helper/tabs/documentation.php:1655
 msgid "checkbox is <strong>checked</strong>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1644 ../shortcodes/panel/audio.php:91
+#: ../helper/tabs/documentation.php:1652 ../shortcodes/panel/audio.php:91
 msgid "Loop"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1647
+#: ../helper/tabs/documentation.php:1655
 msgid "When enabled, the audio will loop and play again once it has finished."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1693
+#: ../helper/tabs/documentation.php:1701
 msgid "Column Builder"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1697
+#: ../helper/tabs/documentation.php:1705
 msgid ""
 "Uix Shortcodes plugin comes with 7 sample columns. You can use the layout of "
 "columns shortcode to create a beautiful showcase. Click shortcodes and add "
@@ -1383,14 +1392,14 @@ msgid ""
 "columns tag <code>[uix_column] ... [/uix_column]</code>."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1721 ../shortcodes/panel/col-1_3-2_3.php:19 ..
+#: ../helper/tabs/documentation.php:1729 ../shortcodes/panel/col-1_3-2_3.php:19 ..
 #: /shortcodes/panel/col-2_3-1_3.php:19 ../shortcodes/panel/col-3_4-1_4.php:19 ..
 #: /shortcodes/panel/col-average-2.php:19 ../shortcodes/panel/col-average-3.php:
 #: 19 ../shortcodes/panel/col-average-4.php:19 ../shortcodes/panel/hello.php:65
 msgid "Padding (px)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1724 ../shortcodes/panel/col-1_3-2_3.php:20 ..
+#: ../helper/tabs/documentation.php:1732 ../shortcodes/panel/col-1_3-2_3.php:20 ..
 #: /shortcodes/panel/col-1_4-3_4.php:20 ../shortcodes/panel/col-2_3-1_3.php:20 ..
 #: /shortcodes/panel/col-3_4-1_4.php:20 ../shortcodes/panel/col-average-2.php:20 .
 #: ./shortcodes/panel/col-average-3.php:20 ../shortcodes/panel/col-average-4.php:
@@ -1400,345 +1409,345 @@ msgid ""
 " Measurement units is pixels (px)."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1868
+#: ../helper/tabs/documentation.php:1876
 msgid "Web Elements Builder"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1872
+#: ../helper/tabs/documentation.php:1880
 msgid "Buttons"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1875
+#: ../helper/tabs/documentation.php:1883
 msgid ""
 "This shortcode enables you to add flat buttons to all of your posts and/or "
 "pages.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1876
+#: ../helper/tabs/documentation.php:1884
 msgid "To set up the more properties by clicking"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1876 ../helper/tabs/documentation.php:1951 ..
+#: ../helper/tabs/documentation.php:1884 ../helper/tabs/documentation.php:1959 ..
 #: /shortcodes/panel/button.php:169
 msgid "click on the set more attributes"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1876
+#: ../helper/tabs/documentation.php:1884
 msgid "button on the content of the popup window."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1904
+#: ../helper/tabs/documentation.php:1912
 msgid "Set a color for the button. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1909 ../shortcodes/panel/button.php:64
+#: ../helper/tabs/documentation.php:1917 ../shortcodes/panel/button.php:64
 msgid "Text Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1912
+#: ../helper/tabs/documentation.php:1920
 msgid "Set a color for the text. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1916 ../shortcodes/panel/button.php:108
+#: ../helper/tabs/documentation.php:1924 ../shortcodes/panel/button.php:108
 msgid "Link Text"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1918 ../helper/tabs/documentation.php:2085 ..
+#: ../helper/tabs/documentation.php:1926 ../helper/tabs/documentation.php:2093 ..
 #: /shortcodes/panel/button.php:110
 msgid "Link to"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1932 ../helper/tabs/documentation.php:2789 ..
+#: ../helper/tabs/documentation.php:1940 ../helper/tabs/documentation.php:2797 ..
 #: /shortcodes/panel/button.php:129 ../shortcodes/panel/share-button.php:40
 msgid "Fillet Radius"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1935
+#: ../helper/tabs/documentation.php:1943
 msgid "To set the fillet radius in pixels for button appearance."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1951
+#: ../helper/tabs/documentation.php:1959
 msgid "To set up the following properties by clicking"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1951
+#: ../helper/tabs/documentation.php:1959
 msgid "button."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1959 ../helper/tabs/documentation.php:2400
+#: ../helper/tabs/documentation.php:1967 ../helper/tabs/documentation.php:2408
 msgid "Icon's Name"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1962 ../helper/tabs/documentation.php:2403
+#: ../helper/tabs/documentation.php:1970 ../helper/tabs/documentation.php:2411
 msgid "Returns the Font Awesome library for each icon's"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1962 ../helper/tabs/documentation.php:2403
+#: ../helper/tabs/documentation.php:1970 ../helper/tabs/documentation.php:2411
 msgid "suffix text."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1962 ../helper/tabs/documentation.php:2403
+#: ../helper/tabs/documentation.php:1970 ../helper/tabs/documentation.php:2411
 msgid "Like this:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1962
+#: ../helper/tabs/documentation.php:1970
 msgid "Note: that will be pure text button if icon does not choose."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1968 ../shortcodes/panel/button.php:192
+#: ../helper/tabs/documentation.php:1976 ../shortcodes/panel/button.php:192
 msgid "Font-Size for Button"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1971
+#: ../helper/tabs/documentation.php:1979
 msgid "The font size of button in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1975 ../helper/tabs/documentation.php:2223 ..
+#: ../helper/tabs/documentation.php:1983 ../helper/tabs/documentation.php:2231 ..
 #: /shortcodes/panel/button.php:206 ../shortcodes/panel/heading.php:146
 msgid "Letter Spacing"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1978
+#: ../helper/tabs/documentation.php:1986
 msgid "The letter spacing of button in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2028
+#: ../helper/tabs/documentation.php:2036
 msgid "Google Maps"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2031
+#: ../helper/tabs/documentation.php:2039
 msgid ""
 "You can use this shortcode to display a Google Map anywhere on the page. "
 "Customize the style of your map if you like. It provides a variety of out-of-"
 "the-box image styles to choose from. And you can upload a custom marker icon."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2033
+#: ../helper/tabs/documentation.php:2041
 msgid "Get Latitude and Longitude:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2033
+#: ../helper/tabs/documentation.php:2041
 msgid "Get Latitude Longitude"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2059 ../shortcodes/panel/map.php:21
+#: ../helper/tabs/documentation.php:2067 ../shortcodes/panel/map.php:21
 msgid "Map Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2062
+#: ../helper/tabs/documentation.php:2070
 msgid "Create your own Google Maps style."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2067 ../shortcodes/panel/map.php:43
+#: ../helper/tabs/documentation.php:2075 ../shortcodes/panel/map.php:43
 msgid "Map Width"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2070
+#: ../helper/tabs/documentation.php:2078
 msgid ""
 "It will determine the width of the map in pixels or relative percentage. "
 "There are two types of length units:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2074 ../shortcodes/panel/map.php:57
+#: ../helper/tabs/documentation.php:2082 ../shortcodes/panel/map.php:57
 msgid "Map Height"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2077
+#: ../helper/tabs/documentation.php:2085
 msgid "Defines height of the map in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2083 ../shortcodes/panel/map.php:70
+#: ../helper/tabs/documentation.php:2091 ../shortcodes/panel/map.php:70
 msgid "Place Name"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2086
+#: ../helper/tabs/documentation.php:2094
 msgid "Input an address to show on the map."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2092 ../shortcodes/panel/map.php:80
+#: ../helper/tabs/documentation.php:2100 ../shortcodes/panel/map.php:80
 msgid "Latitude"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2095
+#: ../helper/tabs/documentation.php:2103
 msgid "Input a separate latitude value."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2101 ../shortcodes/panel/map.php:90
+#: ../helper/tabs/documentation.php:2109 ../shortcodes/panel/map.php:90
 msgid "Longitude"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2104
+#: ../helper/tabs/documentation.php:2112
 msgid "Input a separate longitude value."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2108 ../shortcodes/panel/map.php:101
+#: ../helper/tabs/documentation.php:2116 ../shortcodes/panel/map.php:101
 msgid "Zoom"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2111
+#: ../helper/tabs/documentation.php:2119
 msgid "Map scale at various zoom levels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2115 ../shortcodes/panel/map.php:116
+#: ../helper/tabs/documentation.php:2123 ../shortcodes/panel/map.php:116
 msgid "Marker"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2118
+#: ../helper/tabs/documentation.php:2126
 msgid "Custom a pin (location marker) to be used on the map."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2154 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2162 ../shortcodes/core/tinymce-plugin-lang.
 #: php:38
 msgid "Special Heading"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2157
+#: ../helper/tabs/documentation.php:2165
 msgid "This shortcode lets you add a special heading into your page."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2186 ../shortcodes/panel/heading.php:25
+#: ../helper/tabs/documentation.php:2194 ../shortcodes/panel/heading.php:25
 msgid "Text Here"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2187
+#: ../helper/tabs/documentation.php:2195
 msgid "The heading title."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2192 ../shortcodes/panel/heading.php:34
+#: ../helper/tabs/documentation.php:2200 ../shortcodes/panel/heading.php:34
 msgid "Choose Title Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2195
+#: ../helper/tabs/documentation.php:2203
 msgid ""
 "Using background clip for text with CSS fallback if select the first one. "
 "You can select a background image from the WordPress Media Library, could "
 "also upload a new image."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2201 ../helper/tabs/documentation.php:2408 ..
+#: ../helper/tabs/documentation.php:2209 ../helper/tabs/documentation.php:2416 ..
 #: /shortcodes/panel/heading.php:72 ../shortcodes/panel/icons.php:74
 msgid "Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2204
+#: ../helper/tabs/documentation.php:2212
 msgid "The heading size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2208 ../shortcodes/panel/heading.php:86
+#: ../helper/tabs/documentation.php:2216 ../shortcodes/panel/heading.php:86
 msgid "Heading Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2211
+#: ../helper/tabs/documentation.php:2219
 msgid "Set a color for the heading. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2211 ../helper/tabs/documentation.php:2304
+#: ../helper/tabs/documentation.php:2219 ../helper/tabs/documentation.php:2312
 msgid ""
 "You can add a custom color with color palette. Browsers use a default "
 "stylesheet to render webpages if the value is empty. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2216 ../shortcodes/panel/heading.php:131
+#: ../helper/tabs/documentation.php:2224 ../shortcodes/panel/heading.php:131
 msgid "Alignment"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2219
+#: ../helper/tabs/documentation.php:2227
 msgid ""
 "Specifies the horizontal alignment of text in an element. The following "
 "values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2226
+#: ../helper/tabs/documentation.php:2234
 msgid "The letter spacing of heading in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2230 ../shortcodes/panel/heading.php:161
+#: ../helper/tabs/documentation.php:2238 ../shortcodes/panel/heading.php:161
 msgid "Uppercase of Text"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2233
+#: ../helper/tabs/documentation.php:2241
 msgid "When enabled, controls text to upper case."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2237 ../helper/tabs/documentation.php:2247 ..
-#: /helper/tabs/documentation.php:2254 ../helper/tabs/documentation.php:2261 ..
+#: ../helper/tabs/documentation.php:2245 ../helper/tabs/documentation.php:2255 ..
+#: /helper/tabs/documentation.php:2262 ../helper/tabs/documentation.php:2269 ..
 #: /shortcodes/panel/heading.php:176
 msgid "Underline"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2240
+#: ../helper/tabs/documentation.php:2248
 msgid "When enabled, it will add a horizontal line for heading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2247
+#: ../helper/tabs/documentation.php:2255
 msgid "To set up the following properties, the"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2254 ../helper/tabs/documentation.php:2513 ..
+#: ../helper/tabs/documentation.php:2262 ../helper/tabs/documentation.php:2521 ..
 #: /shortcodes/panel/heading.php:195 ../shortcodes/panel/progress-bar.php:107
 msgid "Line Width"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2257
+#: ../helper/tabs/documentation.php:2265
 msgid ""
 "It will determine the width of the horizontal line in pixels to the heading. "
 "There are two types of length units: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2261 ../shortcodes/panel/heading.php:210
+#: ../helper/tabs/documentation.php:2269 ../shortcodes/panel/heading.php:210
 msgid "Line Height"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2264
+#: ../helper/tabs/documentation.php:2272
 msgid "It will determine the height of the horizontal line in pixels to the heading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2273
+#: ../helper/tabs/documentation.php:2281
 msgid "When enabled, you can set more properties for Description."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2287
+#: ../helper/tabs/documentation.php:2295
 msgid "isplayed Text"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2290
+#: ../helper/tabs/documentation.php:2298
 msgid "Some relevant text for the heading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2294 ../shortcodes/panel/heading.php:265
+#: ../helper/tabs/documentation.php:2302 ../shortcodes/panel/heading.php:265
 msgid "Font Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2297
+#: ../helper/tabs/documentation.php:2305
 msgid "The description font size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2301 ../shortcodes/panel/features-2-col.php:
+#: ../helper/tabs/documentation.php:2309 ../shortcodes/panel/features-2-col.php:
 #: 121 ../shortcodes/panel/features-2-col.php:278 ../shortcodes/panel/features-3-
 #: col.php:120 ../shortcodes/panel/heading.php:281
 msgid "Description Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2304
+#: ../helper/tabs/documentation.php:2312
 msgid "Set a color for the description of heading. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2309 ../helper/tabs/documentation.php:2701 ..
+#: ../helper/tabs/documentation.php:2317 ../helper/tabs/documentation.php:2709 ..
 #: /shortcodes/panel/dividing-line.php:64 ../shortcodes/panel/heading.php:326
 msgid "Opacity"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2312
+#: ../helper/tabs/documentation.php:2320
 msgid ""
 "The description transparency. It inherits the color of the heading in order "
 "that showes the difference between them two."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2364
+#: ../helper/tabs/documentation.php:2372
 msgid "Icons"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2366
+#: ../helper/tabs/documentation.php:2374
 msgid ""
 "This shortcode implements the Font Awesome icon font in WordPress through "
 "shortcodes. Add icons in the form of single icons, sets, lists, buttons and "
@@ -1747,26 +1756,26 @@ msgid ""
 "method and the resulting image style."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2392 ../helper/tabs/documentation.php:2686 ..
+#: ../helper/tabs/documentation.php:2400 ../helper/tabs/documentation.php:2694 ..
 #: /shortcodes/panel/dividing-line.php:39 ../shortcodes/panel/hello.php:216 ..
 #: /shortcodes/panel/icons.php:21
 msgid "Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2395
+#: ../helper/tabs/documentation.php:2403
 msgid "Set a color for the icon. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2411
+#: ../helper/tabs/documentation.php:2419
 msgid "The icon size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2453 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2461 ../shortcodes/core/tinymce-plugin-lang.
 #: php:48
 msgid "Progress Bar"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2456
+#: ../helper/tabs/documentation.php:2464
 msgid ""
 "This shortcode allows you add progress bars. Choose unlimited colors for "
 "each individual progress segment. Animate the segment and/or text. Customize "
@@ -1775,224 +1784,224 @@ msgid ""
 "customization."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2481 ../shortcodes/panel/progress-bar.php:20 .
+#: ../helper/tabs/documentation.php:2489 ../shortcodes/panel/progress-bar.php:20 .
 #: ./shortcodes/panel/tabs.php:20
 msgid "Choose Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2484
+#: ../helper/tabs/documentation.php:2492
 msgid "You can choose vertical tabs or horizontal tabs. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2484
+#: ../helper/tabs/documentation.php:2492
 msgid "The following values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2489 ../shortcodes/panel/progress-bar.php:49 .
+#: ../helper/tabs/documentation.php:2497 ../shortcodes/panel/progress-bar.php:49 .
 #: ./shortcodes/panel/progress-bar.php:63
 msgid "Bar Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2492
+#: ../helper/tabs/documentation.php:2500
 msgid "Size of the bar in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2497 ../shortcodes/panel/progress-bar.php:80
+#: ../helper/tabs/documentation.php:2505 ../shortcodes/panel/progress-bar.php:80
 msgid "Percent"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2500
+#: ../helper/tabs/documentation.php:2508
 msgid ""
 "The percent number the progress bar should have. Should be a number from 0 – "
 "100."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2505 ../shortcodes/panel/progress-bar.php:94
+#: ../helper/tabs/documentation.php:2513 ../shortcodes/panel/progress-bar.php:94
 msgid "Percentage & Icon Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2508
+#: ../helper/tabs/documentation.php:2516
 msgid "Size of the percentage or icon in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2516
+#: ../helper/tabs/documentation.php:2524
 msgid "Width of the bar line in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2520 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2528 ../shortcodes/core/tinymce-plugin-lang.
 #: php:42 ../shortcodes/panel/progress-bar.php:120
 msgid "Icon"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2523
+#: ../helper/tabs/documentation.php:2531
 msgid "Using Icon instead of percentage. Default value is empty."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2529 ../shortcodes/panel/progress-bar.php:153
+#: ../helper/tabs/documentation.php:2537 ../shortcodes/panel/progress-bar.php:153
 msgid "Bar Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2532
+#: ../helper/tabs/documentation.php:2540
 msgid "Set a color for the bar. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2537
+#: ../helper/tabs/documentation.php:2545
 msgid "Track Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2540
+#: ../helper/tabs/documentation.php:2548
 msgid "Set a color for the track for the bar. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2545 ../shortcodes/panel/progress-bar.php:237
+#: ../helper/tabs/documentation.php:2553 ../shortcodes/panel/progress-bar.php:237
 msgid "Percentage & Icon Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2548
+#: ../helper/tabs/documentation.php:2556
 msgid "Set a color for the displayed percentage or icon. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2557
+#: ../helper/tabs/documentation.php:2565
 msgid "The progress bar's title/name. Could be left blank."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2564
+#: ../helper/tabs/documentation.php:2572
 msgid "The progress bar's description. Could be left blank."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2568 ../shortcodes/panel/progress-bar.php:302
+#: ../helper/tabs/documentation.php:2576 ../shortcodes/panel/progress-bar.php:302
 msgid "Displayed Units"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2571
+#: ../helper/tabs/documentation.php:2579
 msgid "The progress bar's displayed units. Could be left blank."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2576
+#: ../helper/tabs/documentation.php:2584
 msgid "Margin"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2579 ../shortcodes/panel/progress-bar.php:313
+#: ../helper/tabs/documentation.php:2587 ../shortcodes/panel/progress-bar.php:313
 msgid "Use the input fields below to customize the margin of progress bar."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2649 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2657 ../shortcodes/core/tinymce-plugin-lang.
 #: php:39
 msgid "Dividing Line"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2652
+#: ../helper/tabs/documentation.php:2660
 msgid ""
 "This shortcode lets you create a visual divider between elements and "
 "sections on your pages."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2677 ../shortcodes/panel/dividing-line.php:20
+#: ../helper/tabs/documentation.php:2685 ../shortcodes/panel/dividing-line.php:20
 msgid "Choose Line Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2680
+#: ../helper/tabs/documentation.php:2688
 msgid "Choose a type for your separator."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2689
+#: ../helper/tabs/documentation.php:2697
 msgid "Set a color for the separator. There are two colors of line:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2696
+#: ../helper/tabs/documentation.php:2704
 msgid "Set a width for the separator. There are two types of length units: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2704
+#: ../helper/tabs/documentation.php:2712
 msgid "The separator transparency. It inherits your choice of color."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2752 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2760 ../shortcodes/core/tinymce-plugin-lang.
 #: php:41
 msgid "Share Buttons"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2755
+#: ../helper/tabs/documentation.php:2763
 msgid ""
 "This shortcode enables you to add share buttons to all of your posts and/or "
 "pages. It takes that unique url and share it on the social page "
 "automagically."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2781 ../shortcodes/panel/share-button.php:22
+#: ../helper/tabs/documentation.php:2789 ../shortcodes/panel/share-button.php:22
 msgid "Choose Type of Button"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2782 ../shortcodes/panel/hello.php:243
+#: ../helper/tabs/documentation.php:2790 ../shortcodes/panel/hello.php:243
 msgid "Multiple Selector"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2784
+#: ../helper/tabs/documentation.php:2792
 msgid ""
 "There are many different types of social media. You can choose custom button "
 "types."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2792
+#: ../helper/tabs/documentation.php:2800
 msgid "To set the fillet radius in pixels for social share buttons."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2799
+#: ../helper/tabs/documentation.php:2807
 msgid "Set a color for social share buttons."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2803 ../shortcodes/panel/share-button.php:69
+#: ../helper/tabs/documentation.php:2811 ../shortcodes/panel/share-button.php:69
 msgid "Button Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2806
+#: ../helper/tabs/documentation.php:2814
 msgid "Set a size for social share buttons."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2845
+#: ../helper/tabs/documentation.php:2853
 msgid "Contact Form(Use Commenting Form Template)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2847
+#: ../helper/tabs/documentation.php:2855
 msgid ""
 "This shortcode allows page embed a contact form which take your WordPress "
 "comment template."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2918
+#: ../helper/tabs/documentation.php:2926
 msgid "Code Highlight Builder"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2923
+#: ../helper/tabs/documentation.php:2931
 msgid ""
 "This shortcode allows you to easily post syntax-highlighted code to your "
 "site without losing it's formatting."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2948 ../shortcodes/panel/code.php:20
+#: ../helper/tabs/documentation.php:2956 ../shortcodes/panel/code.php:20
 msgid "Language"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2951
+#: ../helper/tabs/documentation.php:2959
 msgid ""
 "Syntax highlighting has become pretty standard on most tutorial sites (as "
 "you can see below) and there are many options available, all depending on "
 "what languages you use and how you want your code snippets to be displayed."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2957 ../shortcodes/panel/code.php:65
+#: ../helper/tabs/documentation.php:2965 ../shortcodes/panel/code.php:65
 msgid "Source code"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2960
+#: ../helper/tabs/documentation.php:2968
 msgid "Copying code into textarea."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3000
+#: ../helper/tabs/documentation.php:3008
 msgid "Preview (editor)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3005
+#: ../helper/tabs/documentation.php:3013
 msgid "Preview (output)"
 msgstr ""
 
@@ -2045,11 +2054,11 @@ msgstr ""
 msgid "Unknown update checker status \"%s\""
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:796
+#: ../shortcodes/frontpage-init.php:800
 msgid "All"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1465
+#: ../shortcodes/frontpage-init.php:1469
 msgid "Comments are closed."
 msgstr ""
 
@@ -2285,7 +2294,7 @@ msgid "Logo URL"
 msgstr ""
 
 #: ../shortcodes/panel/client-3-col.php:64 ../shortcodes/panel/client-4-col.php:
-#: 64 ../shortcodes/panel/container.php:82 ../shortcodes/panel/heading.php:64 ..
+#: 64 ../shortcodes/panel/container.php:96 ../shortcodes/panel/heading.php:64 ..
 #: /shortcodes/panel/hello.php:121 ../shortcodes/panel/hello.php:419 ..
 #: /shortcodes/panel/map.php:122 ../shortcodes/panel/portfolio-grid.php:148 ..
 #: /shortcodes/panel/portfolio-grid.php:163 ../shortcodes/panel/team-fullwidth.
@@ -2380,7 +2389,7 @@ msgid ""
 "<strong>\"0\"</strong>."
 msgstr ""
 
-#: ../shortcodes/panel/container.php:83 ../shortcodes/panel/heading.php:65 ..
+#: ../shortcodes/panel/container.php:97 ../shortcodes/panel/heading.php:65 ..
 #: /shortcodes/panel/hello.php:122 ../shortcodes/panel/hello.php:420 ..
 #: /shortcodes/panel/map.php:123 ../shortcodes/panel/portfolio-grid.php:149 ..
 #: /shortcodes/panel/portfolio-grid.php:164 ../shortcodes/panel/team-fullwidth.
@@ -2389,19 +2398,19 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:274
+#: ../shortcodes/panel/container.php:288
 msgid "Wrapper Margin (px)"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:293
+#: ../shortcodes/panel/container.php:307
 msgid "Content Padding (px)"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:331
+#: ../shortcodes/panel/container.php:345
 msgid "Add a Container"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:345
+#: ../shortcodes/panel/container.php:360
 msgid "Content here..."
 msgstr ""
 

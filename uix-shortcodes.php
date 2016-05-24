@@ -35,7 +35,7 @@ class UixShortcodes {
 	
 
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'actions_links' ), -10 );
-		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ) );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ), 999 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_custom_stylesheet' ) );
 		add_action( 'current_screen', array( __CLASS__, 'do_register_shortcodes' ) );
@@ -63,6 +63,9 @@ class UixShortcodes {
 		//Add Icons(font-awesome)
 		wp_enqueue_style( 'font-awesome-4.5.0', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
 		
+		// Modernizr.
+		wp_enqueue_script( 'modernizr-3.3.1', self::plug_directory() .'assets/js/modernizr.min.js', false, '3.3.1', false );
+	
 		// Shuffle
 		wp_enqueue_script( 'js-shuffle-3.1.1', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );
 		
@@ -112,8 +115,9 @@ class UixShortcodes {
 	
 		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
 		  $currentScreen = get_current_screen();
-	
-		  if( $currentScreen->base === "post" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+		  
+		  
+		  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 			  
 				if ( is_admin()) {
 					
@@ -123,6 +127,11 @@ class UixShortcodes {
 			
 						//Sweetalert
 						wp_enqueue_style( self::PREFIX . '-shortcodes-sweetalert-css', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
+						if( $currentScreen->base === "customize" ) {
+							wp_enqueue_style( self::PREFIX . '-shortcodes-sweetalert-css-depth', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert-depth.css', false,'1.0.0', 'all');
+						}
+						
+						
 						wp_enqueue_script( self::PREFIX . '-shortcodes-sweetalert-js', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.min.js', array( 'jquery' ), '1.0.0');
 				
 						//Colorpicker
@@ -161,6 +170,22 @@ class UixShortcodes {
 
 	}
 	
+	/*
+	 * Call the specified form
+	 *
+	 *
+	 */
+	public static function call_form( $name ) {
+		
+		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  $currentScreen = get_current_screen();
+	
+		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
+				$folder = WP_PLUGIN_DIR.'/'.self::get_slug().'/shortcodes/panel/';
+				require_once $folder.''.$name.'.php';
+  
+		  }
+	}
 
 	/*
 	 * Returns current plugin version.
@@ -992,11 +1017,24 @@ class UixShortcodes {
 	 */
 	public static function sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, $title ) {
 		
+		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  $currentScreen = get_current_screen();
+	
+		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
+			  $formid = '.'.$form_id.'-widget_btn';
+			  $widget_content_id = "var widget_conID = $( this ).data( 'target' )";
+			  
+		  } else {
+			  $formid = '#'.$form_id;
+			  $widget_content_id = '';
+		  }
+		  
 		return "
 		
 		{$form_js}
 		
-		$( '#{$form_id}' ).click( function() {
+		$( '{$formid}' ).live( 'click',function(){
+			{$widget_content_id}
 			swal({   
 				title: '{$title}',
 				text: '{$form_html}',   
@@ -1008,7 +1046,7 @@ class UixShortcodes {
 				confirmButtonText: '".__( 'Insert into', 'uix-shortcodes' )."'
 			}, 
 			function(){ 
-			
+			    
 			    {$form_js_vars}
 		";
 
@@ -1031,6 +1069,18 @@ class UixShortcodes {
 		});
 		";
 
+	}
+	public static function send_to_editor( $tid = '' ) {
+		
+		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  $currentScreen = get_current_screen();
+	
+		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
+			  return "$( '#' + widget_conID ).val( $( '#' + widget_conID ).val() + ";
+		  } else {
+			  return 'window.send_to_editor(';
+		  }
+	
 	}
 	
      /*

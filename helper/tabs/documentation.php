@@ -66,6 +66,14 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td>0</td>
                                                 <td><?php _e( 'It will determine the height of the container in pixels. The browser automatically calculates the container height if the value is', 'uix-shortcodes' ); ?> <code>0</code>.</td>
                                             </tr>  
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Vertically Center Content', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
+                                                <td>true</td>
+                                                <td><?php _e( 'When enabled, the content of container is placed in the middle.', 'uix-shortcodes' ); ?></td>
+                                            </tr>    
+                                            
                                            
                                             <tr>
                                                 <td><?php _e( 'Background Image', 'uix-shortcodes' ); ?></td>

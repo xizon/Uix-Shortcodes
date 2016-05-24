@@ -172,7 +172,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				show_list_item += "<br>[/uix_toggle_group]";	
 	
 	
-				window.send_to_editor( "[uix_toggle style='"+uix_sc_tabs_style+"' tabs='1' effect='"+uix_sc_tabs_effect+"']"+show_list_tabs+show_list_item+"<br>[/uix_toggle]" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_toggle style='"+uix_sc_tabs_style+"' tabs='1' effect='"+uix_sc_tabs_effect+"']"+show_list_tabs+show_list_item+"<br>[/uix_toggle]" );
 				
 				
 				

@@ -321,7 +321,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				}
 	
 	
-				window.send_to_editor( "[uix_portfolio filterable='"+_item_v_filterable+"' classprefix='"+uix_sc_portfolio_grid_listitem_class_prefix+"' col='"+uix_sc_portfolio_grid_listitem_col+"' imagefillet='"+uix_sc_portfolio_grid_listitem_image_fillet+"%']"+show_list_item+"<br>[/uix_portfolio]" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_portfolio filterable='"+_item_v_filterable+"' classprefix='"+uix_sc_portfolio_grid_listitem_class_prefix+"' col='"+uix_sc_portfolio_grid_listitem_col+"' imagefillet='"+uix_sc_portfolio_grid_listitem_image_fillet+"%']"+show_list_item+"<br>[/uix_portfolio]" );
 				
 				
 				

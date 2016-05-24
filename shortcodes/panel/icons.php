@@ -110,7 +110,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				var uix_sc_icon_result_color = ( uix_sc_icon_color_other != '' ) ? uix_sc_icon_color_other : uix_sc_icon_color;
 	
 			
-				window.send_to_editor( "[uix_icons size='"+uix_sc_icon_size+"' units='px' color='"+uix_sc_icon_result_color+"' name='"+uix_sc_icon_name+"']" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_icons size='"+uix_sc_icon_size+"' units='px' color='"+uix_sc_icon_result_color+"' name='"+uix_sc_icon_name+"']" );
 				
 				
 				

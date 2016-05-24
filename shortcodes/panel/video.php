@@ -99,7 +99,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		
 		        
 			
-				window.send_to_editor( "[uix_video width='"+uix_sc_video_w+"' height='"+uix_sc_video_h+"' responsive='"+uix_sc_video_responsive+"' url='"+uix_sc_video_url+"']" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_video width='"+uix_sc_video_w+"' height='"+uix_sc_video_h+"' responsive='"+uix_sc_video_responsive+"' url='"+uix_sc_video_url+"']" );
 				
 				
 				

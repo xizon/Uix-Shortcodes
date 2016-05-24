@@ -156,7 +156,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				}
 	
 	
-				window.send_to_editor( "[uix_client]"+show_list_item+"<br>[/uix_client]" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_client]"+show_list_item+"<br>[/uix_client]" );
 				
 				
 				

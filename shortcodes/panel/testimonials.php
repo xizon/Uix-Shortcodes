@@ -178,7 +178,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				}
 	
 	
-				window.send_to_editor( "[uix_testimonials]"+show_list_item+"<br>[/uix_testimonials]" );
+				<?php echo UixShortcodes::send_to_editor( $form_id ); ?> "[uix_testimonials]"+show_list_item+"<br>[/uix_testimonials]" );
 				
 				
 				
