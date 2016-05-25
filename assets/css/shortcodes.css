@@ -185,6 +185,24 @@ img.uix-sc-img,
 	width: 100%;
 }
 
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+   .uix-sc-container.uix-sc-container-boxed{
+	   max-width:980px!important;
+   }   
+}
+
+@media screen and (min-width: 767px) and (max-width: 980px) {
+   .uix-sc-container.uix-sc-container-boxed{
+	   max-width:755px!important;
+   }   
+}
+
+@media (max-width: 767px){
+   .uix-sc-container.uix-sc-container-boxed{
+	   max-width:none!important;
+   }  	
+}
+
 
 .uix-sc-container .uix-sc-container-table{
 	display:table;
