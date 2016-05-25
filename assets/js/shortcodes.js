@@ -249,8 +249,6 @@
 				if ( priceBGH_Max > 0 ) {
 					if ( $( document.body ).width() > 768 ){
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', priceBGH_Max + 'px' );
-						$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css( 'height', priceBGH_Max + 80 + 'px' );
-					
 					} else {
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', 'auto' );	
 					}
