@@ -248,7 +248,12 @@
 				
 				if ( priceBGH_Max > 0 ) {
 					if ( $( document.body ).width() > 768 ){
+						var ty = Math.abs(parseInt($initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css('transform').split(',')[5]));
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', priceBGH_Max + 'px' );
+						if ( !isNaN(ty) ) {
+							$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css( 'height', priceBGH_Max + ty*2 + 'px' );
+						} 
+						
 					} else {
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', 'auto' );	
 					}
