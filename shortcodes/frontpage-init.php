@@ -968,7 +968,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 		  <div class="uix-sc-card-item-body">
 			<h3 class="uix-sc-card-item-heading">'.$name.'</h3>
 			<div class="uix-sc-card-item-social">
-			   <em>'.$position.'</em>
+			   '.( !empty( $position )  ? '<em>'.$position.'</em>' : '' ).'
 				&nbsp;&nbsp;
 				'.$social_out_1.'
 				'.$social_out_2.'
@@ -1005,7 +1005,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 		<div class="uix-sc-gallery-list '.$col_class.' uix-sc-gray">
 			<div class="uix-sc-gallery-list-imgbox" {avatarheight}>
 				<img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
-				<span class="uix-sc-gallery-list-position">'.$position.'</span>
+				'.( !empty( $position )  ? '<span class="uix-sc-gallery-list-position">'.$position.'</span>' : '' ).'
 			</div>
 			<div class="uix-sc-gallery-list-info">
 				<h3 class="uix-sc-gallery-list-title">'.$name.'</h3>	
