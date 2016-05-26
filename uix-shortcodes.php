@@ -177,14 +177,9 @@ class UixShortcodes {
 	 */
 	public static function call_form( $name ) {
 		
-		  //Check if screen ID
-		  $currentScreen = get_current_screen();
-	
-		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
-				$folder = WP_PLUGIN_DIR.'/'.self::get_slug().'/shortcodes/panel/';
-				require_once $folder.''.$name.'.php';
+		$folder = WP_PLUGIN_DIR.'/'.self::get_slug().'/shortcodes/panel/';
+		require_once $folder.''.$name.'.php';
   
-		  }
 	}
 
 	/*
