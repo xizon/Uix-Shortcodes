@@ -26,6 +26,8 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'credits' ) {
             <li><a href="https://github.com/Vestride/Shuffle" target="_blank" rel="nofollow">Shuffle (filtering and sorting)</a></li>
             <li><a href="https://github.com/desandro/imagesloaded" target="_blank" rel="nofollow">imagesloaded</a></li>
             <li><a href="https://github.com/xizon/easy-pie-chart" target="_blank" rel="nofollow">Easy Pie Chart</a></li>
+            <li><a href="http://www.flaticon.com" target="_blank" rel="nofollow">Flaticon</a></li>
+        
          
 
         </ul>

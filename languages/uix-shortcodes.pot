@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Wed May 25 2016 17:03:20 GMT+0800 (CST)\n"
+"POT-Revision-Date: Fri Aug 12 2016 14:04:37 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,18 +24,8 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#. Name of the plugin
-msgid "Uix Shortcodes"
-msgstr ""
-
 #. URI of the plugin
 msgid "https://uiux.cc/wp-plugins/uix-shortcodes"
-msgstr ""
-
-#. Description of the plugin
-msgid ""
-"Uix Shortcodes brings an amazing set of beautiful and useful elements to "
-"your site that lets you do nifty things with very little effort."
 msgstr ""
 
 #. Author of the plugin
@@ -46,54 +36,36 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:228
-msgid "Settings"
-msgstr ""
-
-#: ../uix-shortcodes.php:229 ../helper/settings.php:74
-msgid "How to use?"
-msgstr ""
-
-#: ../uix-shortcodes.php:336 ../helper/settings.php:52
-msgid "Uix Shortcodes Settings"
-msgstr ""
-
-#: ../uix-shortcodes.php:674
-msgid ""
-"<div class=\"notice notice-success\"><p>Operation successfully completed!"
-"</p></div>"
-msgstr ""
-
-#: ../uix-shortcodes.php:1045
-msgid "Cancel"
-msgstr ""
-
-#: ../uix-shortcodes.php:1046
-msgid "Insert into"
-msgstr ""
-
-#: ../uix-shortcodes.php:1065
-msgid "Using the shortcodes successfully."
-msgstr ""
-
 #: ../helper/settings.php:8
 msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../helper/settings.php:52 ../uix-shortcodes.php:334
+msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #: ../helper/settings.php:66
 msgid "About"
 msgstr ""
 
-#: ../helper/settings.php:70
-msgid "Custom CSS"
+#: ../helper/settings.php:71 ../uix-shortcodes.php:227
+msgid "How to use?"
 msgstr ""
 
-#: ../helper/settings.php:79
+#: ../helper/settings.php:76
 msgid "Documentation"
 msgstr ""
 
-#: ../helper/settings.php:85
+#: ../helper/settings.php:82
 msgid "Credits"
+msgstr ""
+
+#: ../helper/settings.php:87
+msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
+msgstr ""
+
+#: ../helper/settings.php:92
+msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
 #: ../helper/tabs/about.php:11
@@ -131,7 +103,7 @@ msgid ""
 "the list of credits for this plugin:"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:25
+#: ../helper/tabs/custom-css.php:25 ../helper/tabs/general-settings.php:26
 msgid "Settings saved."
 msgstr ""
 
@@ -140,6 +112,10 @@ msgid ""
 "You can overview the original styles to overwrite it. It will be on creating "
 "new styles to your website, without modifying original <code>.css</code> "
 "files."
+msgstr ""
+
+#: ../helper/tabs/custom-css.php:44
+msgid "Paste your CSS code"
 msgstr ""
 
 #: ../helper/tabs/custom-css.php:87 ../helper/tabs/custom-css.php:124
@@ -2005,6 +1981,10 @@ msgstr ""
 msgid "Preview (output)"
 msgstr ""
 
+#: ../helper/tabs/general-settings.php:43
+msgid "Icon Types"
+msgstr ""
+
 #: ../helper/tabs/usage.php:11
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">1. After activating your theme, you can see "
@@ -2054,12 +2034,80 @@ msgstr ""
 msgid "Unknown update checker status \"%s\""
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:800
-msgid "All"
+#: ../shortcodes/core/form-inc/color-map.php:48
+msgid "Add Custom Color"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1469
-msgid "Comments are closed."
+#: ../shortcodes/core/form-inc/icon.php:22
+msgid "Select from the following list of icons: "
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:78
+msgid "Background Repeat"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:84
+msgid "No Repeat"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:85
+msgid "Tile"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:86
+msgid "Tile Horizontally"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:87
+msgid "Tile Vertically"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:107
+msgid "Background Position"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:113
+msgid "Left"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:114
+msgid "Center"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:115
+msgid "Right"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:135
+msgid "Background Attachment"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:141
+msgid "Scroll"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:142
+msgid "Fixed"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:162
+msgid "Background Size"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:168
+msgid "Cover"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:169
+msgid "Auto"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/image.php:170
+msgid "Contain"
+msgstr ""
+
+#: ../shortcodes/core/form-inc/multiselect.php:56
+msgid "Must use the array for \"value\"."
 msgstr ""
 
 #: ../shortcodes/core/tinymce-plugin-lang.php:12
@@ -2077,6 +2125,11 @@ msgstr ""
 
 #: ../shortcodes/core/tinymce-plugin-lang.php:15
 msgid "Demo"
+msgstr ""
+
+#. Name of the plugin
+#: ../shortcodes/core/tinymce-plugin-lang.php:16 ../uix-shortcodes.php:335
+msgid "Uix Shortcodes"
 msgstr ""
 
 #: ../shortcodes/core/tinymce-plugin-lang.php:17
@@ -2155,80 +2208,12 @@ msgstr ""
 msgid "Container"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/color-map.php:48
-msgid "Add Custom Color"
+#: ../shortcodes/frontpage-init.php:793
+msgid "All"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/icon.php:22
-msgid "Select from the following list of icons: "
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:78
-msgid "Background Repeat"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:84
-msgid "No Repeat"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:85
-msgid "Tile"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:86
-msgid "Tile Horizontally"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:87
-msgid "Tile Vertically"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:107
-msgid "Background Position"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:113
-msgid "Left"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:114
-msgid "Center"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:115
-msgid "Right"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:135
-msgid "Background Attachment"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:141
-msgid "Scroll"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:142
-msgid "Fixed"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:162
-msgid "Background Size"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:168
-msgid "Cover"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:169
-msgid "Auto"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:170
-msgid "Contain"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/multiselect.php:56
-msgid "Must use the array for \"value\"."
+#: ../shortcodes/frontpage-init.php:1461
+msgid "Comments are closed."
 msgstr ""
 
 #: ../shortcodes/panel/accordion.php:80
@@ -2891,4 +2876,32 @@ msgstr ""
 
 #: ../shortcodes/panel/video.php:98
 msgid "Add a Responsive Video"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Uix Shortcodes brings an amazing set of beautiful and useful elements to "
+"your site that lets you do nifty things with very little effort."
+msgstr ""
+
+#: ../uix-shortcodes.php:226
+msgid "Settings"
+msgstr ""
+
+#: ../uix-shortcodes.php:672
+msgid ""
+"<div class=\"notice notice-success\"><p>Operation successfully completed!"
+"</p></div>"
+msgstr ""
+
+#: ../uix-shortcodes.php:1048
+msgid "Cancel"
+msgstr ""
+
+#: ../uix-shortcodes.php:1049
+msgid "Insert into"
+msgstr ""
+
+#: ../uix-shortcodes.php:1068
+msgid "Using the shortcodes successfully."
 msgstr ""

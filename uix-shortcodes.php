@@ -60,8 +60,10 @@ class UixShortcodes {
 	 */
 	public static function frontpage_scripts() {
 	
-		//Add Icons(font-awesome)
+		//Add Icons
 		wp_enqueue_style( 'font-awesome-4.5.0', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
+		wp_enqueue_style( 'flaticon-1.0', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
+		
 		
 		// Modernizr.
 		wp_enqueue_script( 'modernizr-3.3.1', self::plug_directory() .'assets/js/modernizr.min.js', false, '3.3.1', false );
@@ -122,8 +124,9 @@ class UixShortcodes {
 				if ( is_admin()) {
 					
 					
-						//Add Icons(font-awesome)
+						//Add Icons
 						wp_enqueue_style( 'font-awesome-4.5.0', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
+						wp_enqueue_style( 'flaticon-1.0', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
 			
 						//Sweetalert
 						wp_enqueue_style( self::PREFIX . '-shortcodes-sweetalert-css', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
@@ -977,7 +980,12 @@ class UixShortcodes {
 			$class = '';
 		}
 		
-		return '<iframe  frameborder="0" class="sweet-icon-selector-iframe '.$class.'" hspace="0" vspace="0" scrolling="no"  allowTransparency="true" src="'.self::plug_directory().'assets/add-ons/fontawesome/font-awesome-custom.php?pushinputID='.$id.''.$para.'"></iframe>';
+		// Icon type
+		$icontype = get_option( 'uix_sc_opt_icontype', 'fontawesome' );
+		if ( $icontype == 'fontawesome' ) $iconpath = 'fontawesome/font-awesome-custom.php';
+		if ( $icontype == 'flaticon' ) $iconpath = 'flaticon/font-flaticon-custom.php';
+		
+		return '<iframe  frameborder="0" class="sweet-icon-selector-iframe '.$class.'" hspace="0" vspace="0" scrolling="no"  allowTransparency="true" src="'.self::plug_directory().'assets/add-ons/'.$iconpath.'?pushinputID='.$id.''.$para.'"></iframe>';
 
 
 	}

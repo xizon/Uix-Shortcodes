@@ -65,10 +65,7 @@ function uix_sc_options_page(){
 	    'tab'     =>  'about', 
 		'title'   =>  __( 'About', 'uix-shortcodes' )
 	];
-	$tabs[] = [
-	    'tab'     =>  'custom-css', 
-		'title'   =>  __( 'Custom CSS', 'uix-shortcodes' )
-	];
+
 	$tabs[] = [
 	    'tab'     =>  'usage', 
 		'title'   =>  __( 'How to use?', 'uix-shortcodes' )
@@ -84,6 +81,17 @@ function uix_sc_options_page(){
 	    'tab'     =>  'credits', 
 		'title'   =>  __( 'Credits', 'uix-shortcodes' )
 	];
+	
+	$tabs[] = [
+	    'tab'     =>  'general-settings', 
+		'title'   =>  __( '<i class="dashicons dashicons-admin-generic"></i> General Settings', 'uix-shortcodes' )
+	];
+	
+	$tabs[] = [
+	    'tab'     =>  'custom-css', 
+		'title'   =>  __( '<i class="dashicons dashicons-welcome-view-site"></i> Custom CSS', 'uix-shortcodes' )
+	];	
+	
 
 	
 	?>

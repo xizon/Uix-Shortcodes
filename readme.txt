@@ -32,6 +32,8 @@ The content elements are the heart of any page builder. These are the elements s
  - Shuffle (https://github.com/Vestride/Shuffle)
  - imagesloaded (https://github.com/desandro/imagesloaded)
  - Easy Pie Chart (https://github.com/xizon/easy-pie-chart)
+ - Flaticon (http://www.flaticon.com)
+
 
  
 Once you have created or opened an existing CSS file, you can edit in in the code editor. 

@@ -195,8 +195,12 @@ function uix_sc_fun_icons( $atts, $content = null ){
 	 $sizeclass = ( empty( $size ) ) ? '' : "font-size:{$size}{$units};";
 	 $colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
 	 
-
-	$return_string = '<i class="fa fa-'.$name.'" style="'.$sizeclass.' '.$colorclass.'"></i>';
+    if( UixShortcodes::inc_str( $name, 'flaticon-' ) ) { 
+	    $return_string = '<i class="flaticon '.$name.'" style="'.$sizeclass.' '.$colorclass.'"></i>';
+	} else {
+		$return_string = '<i class="fa fa-'.$name.'" style="'.$sizeclass.' '.$colorclass.'"></i>';
+	}
+	
 
    
    return UixShortcodes::do_callback( $return_string );

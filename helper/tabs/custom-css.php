@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // variables for the field and option names 
-$hidden_field_name = 'submit_hidden';
+$hidden_field_name = 'submit_hidden_customcss';
 
 //---
 $uix_sc_opt_cssnewcode = 'uix_sc_opt_cssnewcode';
@@ -22,7 +22,7 @@ if( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' )
 
 
 	// Put a "settings saved" message on the screen
-	echo '<div class="updated"><p><strong>'.__('Settings saved.', 'menu-test' ).'</strong></p></div>';
+	echo '<div class="updated"><p><strong>'.__('Settings saved.', 'uix-shortcodes' ).'</strong></p></div>';
 
  }  
 
@@ -41,7 +41,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
         <table class="form-table">
           <tr>
             <th scope="row">
-              Paste your CSS code
+              <?php _e( 'Paste your CSS code', 'uix-shortcodes' ); ?>
             </th>
             <td>
               <textarea name="uix_sc_opt_cssnewcode" class="regular-text" rows="25" style="width:98%;"><?php echo $style_code_uix_shortcodes; ?></textarea>

@@ -86,6 +86,7 @@ Initial Release.
 - [Shuffle](https://github.com/Vestride/Shuffle)
 - [imagesloaded](https://github.com/desandro/imagesloaded)
 - [Easy Pie Chart](https://github.com/xizon/easy-pie-chart)
+- [Flaticon](http://www.flaticon.com)
 
 
 
