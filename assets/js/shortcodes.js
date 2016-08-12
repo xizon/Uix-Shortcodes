@@ -29,14 +29,14 @@
 			,options);
 
  			$( settings.id ).hover(function() {
-				$(this).find(".uix-sc-price-border").css({
+				$(this).find( '.uix-sc-price-border' ).css({
 					"border-color": settings.tcolor,
 					"-webkit-box-shadow": "inset 0 0px 0px 6px " + settings.tcolor,
 					"-moz-box-shadow": "inset 0 0px 0px 6px " + settings.tcolor,
 					"box-shadow": "inset 0 0px 0px 6px " + settings.tcolor
 				});
 			},function() {
-				$(this).find(".uix-sc-price-border").css({
+				$(this).find( '.uix-sc-price-border' ).css({
 					"border-color": settings.dcolor,
 					"-webkit-box-shadow": "none",
 					"-moz-box-shadow": "none",
@@ -118,7 +118,26 @@
 		uix_sc_init:function () { 
 	
 	         //Pricing
-			 $( '.uix-sc-price' ).uix_sc_initPricing(); 
+			 $( '.uix-sc-price' ).uix_sc_initPricing();
+			 $( '.uix-sc-price-border-hover' ).each(function() {
+				 if ( $( this ).css( 'top' ) != '0px' ) {
+					 $.uix_sc_tableHover({
+						 id: '#' + $( this ).attr( 'id' ),
+						 tcolor: $( this ).data( 'tcolor' )
+					  });
+				 }
+	 
+			 });
+			
+			
+			 //Filterable
+			 $( '.uix-sc-filterable' ).each(function() {
+				 $.uix_sc_filterable({
+					 ID: $( this ).data( 'filter-id' ),
+					 classprefix: $( this ).data( 'classprefix' )
+				})
+			 });
+			 
 			 
 			 //Accordion
 			 $( '.uix-sc-accordion' ).uix_sc_initAccordion(); 
@@ -130,6 +149,12 @@
 				 slideshow:3000,
 				 utoplay_slideshow: false
 			 });
+			 
+			 //Parallax
+			$( '.uix-sc-parallax' ).each(function() {
+				$( this ).bgParallax( "50%", $( this ).data( 'parallax' ) );
+			});
+			 
 			 
 			 // Testimonials
 			$( '.uix-sc-testimonials-container .flexslider' ).flexslider( {

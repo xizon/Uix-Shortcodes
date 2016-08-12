@@ -109,17 +109,7 @@ function uix_sc_fun_container( $atts, $content = null ){
 	}
 
   
-   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" class="uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).' '.$class.'" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;'.( $height != 'auto' ? 'min-height:'.$height.'' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'">'.$now_content.'</div></div>
-        '.( $parallax > 0 ? '
-		<script>
-		( function($) {
-			"use strict";
-			$( function() { $( "#uix-sc-container-'.$id.'" ).bgParallax( "50%", '.$parallax.' ); } ); 
-		} ) ( jQuery );
-		</script>
-		' : '' ).'
-
-   ';	
+   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).' '.$class.'" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;'.( $height != 'auto' ? 'min-height:'.$height.'' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'">'.$now_content.'</div></div>';	
 	
 
 	
@@ -309,7 +299,7 @@ function uix_sc_fun_pricing_item( $atts, $content = null ){
    $col_num = ( $col == 4 ) ? 'uix-sc-col-3' : 'uix-sc-col-4';
  
    $return_string = '
-   <div class="'.$col_num.' '.$col_last.'" id="uix-sc-col-js-'.$id.'">
+   <div class="'.$col_num.' '.$col_last.' uix-sc-price-border-hover" data-tcolor="'.$imcolor.'" id="uix-sc-col-js-'.$id.'">
        <div class="uix-sc-price-bg-hover uix-sc-price-init-height">
 	       <div class="uix-sc-price-border '.$class.'">
 				<h5 class="uix-sc-price-level">'.UixShortcodes::get_subtags( 'uix_pricing_item_level', $content ).'</h5>
@@ -327,8 +317,7 @@ function uix_sc_fun_pricing_item( $atts, $content = null ){
 		   </div>
 		   
 		</div>
-	</div>    
-	<script>(function($) { "use strict"; $(document).ready(function() { $.uix_sc_tableHover({id: "#uix-sc-col-js-'.$id.'", tcolor: "'.$imcolor.'"})  });})(jQuery);</script>               
+	</div>          
    ';
 
    return UixShortcodes::do_callback( $return_string );
@@ -795,13 +784,12 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
    
    if ( $filterable == 1 ) {
 	   $catlist = '
-		<div class="'.$classprefix.'cat-list" id="'.$classprefix.'cat-list-'.$id.'">
+		<div class="'.$classprefix.'cat-list uix-sc-filterable" data-classprefix="'.$classprefix.'" data-filter-id="'.$id.'" id="'.$classprefix.'cat-list-'.$id.'">
 			<ul>
 				<li class="current"><a href="javascript:" data-group="all">'.__( 'All', 'uix-shortcodes' ).'</a></li>
 				'.UixShortcodes::cat_list( $return_string, $classprefix ).'
 			</ul>
 		</div> <!-- /.'.$classprefix.'cat-list -->
-		<script>(function($) { "use strict"; $(document).ready(function() { $.uix_sc_filterable({ID: "'.$id.'", classprefix: "'.$classprefix.'"})  });})(jQuery);</script>  
 	   ';  
    }
    

@@ -1054,6 +1054,11 @@ img.uix-sc-img,
 		border:1px solid #090909;
 	}
 	
+	/* Remove border hover effect when top is "0" */
+	.uix-sc-price-border-hover {
+		/*top: 0;*/
+	}
+	
 	.uix-sc-price-border,
 	.uix-sc-price-border hr{
 		-moz-transition:.2s ease-in-out; 
@@ -1151,6 +1156,7 @@ img.uix-sc-img,
 		
 	}
 	
+
 	
 
 /* ----------  */
