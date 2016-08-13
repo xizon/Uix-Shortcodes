@@ -101,7 +101,7 @@ class UixShortcodes {
 		wp_enqueue_style( self::PREFIX . '-shortcodes-frontend-style', self::sc_css_file(), false, self::ver(), 'all');
 	
 		//Main stylesheets and scripts to Front-End
-		wp_enqueue_script( self::PREFIX . '-shortcodes-frontend-js', self::plug_directory() .'assets/js/shortcodes.js', array( 'jquery' ), self::ver());
+		wp_enqueue_script( self::PREFIX . '-shortcodes-frontend-js', self::sc_js_file(), array( 'jquery' ), self::ver());
 
 	}
 	
@@ -840,6 +840,24 @@ class UixShortcodes {
 		return $validPath;
 		
 	}
+	
+	/**
+	 * Returns .js file name of custom shortcodes script 
+	 *
+	 */
+	public static function sc_js_file() {
+		
+		$validPath = self::plug_directory() .'assets/js/shortcodes.js';
+		$newFilePath = get_stylesheet_directory() . '/uix-shortcodes-custom.js';
+	
+		if ( file_exists( $newFilePath ) ) {
+			$validPath = get_template_directory_uri() . '/uix-shortcodes-custom.js';
+		}
+		
+		return $validPath;
+		
+	}
+	
 	
 	/*
 	 * Returns readable Colour

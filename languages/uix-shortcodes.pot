@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Fri Aug 12 2016 14:04:37 GMT+0800 (CST)\n"
+"POT-Revision-Date: Sat Aug 13 2016 11:30:34 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2005,12 +2005,22 @@ msgstr ""
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">4. There is a second way, make a new "
 "Cascading Style Sheet (CSS) document which name to <code>uix-shortcodes-"
-"style.css</code> to your templates directory. You can connect to your site "
-"via an FTP client, make the changes and then upload the file back to the "
-"server. Once you have created an existing CSS file (<strong>uix-shortcodes-"
-"style.css</strong>), Uix Shortcodes will use it as a default style sheet to "
-"your WordPress Theme. Of course, Uix Shortcodes's function of "
-"<strong>\"Custom CSS\"</strong> is still valid.</h4>"
+"style.css</code> to your templates directory <code>/wp-content/themes/{your-"
+"theme}/</code>. You can connect to your site via an FTP client, make the "
+"changes and then upload the file back to the server. Once you have created "
+"an existing CSS file (<strong>uix-shortcodes-style.css</strong>), Uix "
+"Shortcodes will use it as a default style sheet to your WordPress Theme. Of "
+"course, Uix Shortcodes's function of <strong>\"Custom CSS\"</strong> is still "
+"valid.</h4>"
+msgstr ""
+
+#: ../helper/tabs/usage.php:34
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">Note: Making a new javascrpt (.js) document "
+"which name to <code>uix-shortcodes-custom.js</code> to your templates "
+"directory. Once you have created an existing JS file (<strong>uix-shortcodes-"
+"custom.js</strong>), Uix Shortcodes will use it as a default script to your "
+"WordPress Theme.</h4>"
 msgstr ""
 
 #: ../inc/github-checker.php:120
@@ -2894,14 +2904,14 @@ msgid ""
 "</p></div>"
 msgstr ""
 
-#: ../uix-shortcodes.php:1048
+#: ../uix-shortcodes.php:1066
 msgid "Cancel"
 msgstr ""
 
-#: ../uix-shortcodes.php:1049
+#: ../uix-shortcodes.php:1067
 msgid "Insert into"
 msgstr ""
 
-#: ../uix-shortcodes.php:1068
+#: ../uix-shortcodes.php:1086
 msgid "Using the shortcodes successfully."
 msgstr ""

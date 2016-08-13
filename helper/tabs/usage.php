@@ -27,10 +27,14 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
         </p> 
         
         <p>
-           <?php _e( '<h4 class="uix-bg-custom-title">4. There is a second way, make a new Cascading Style Sheet (CSS) document which name to <code>uix-shortcodes-style.css</code> to your templates directory. You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (<strong>uix-shortcodes-style.css</strong>), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes\'s function of <strong>"Custom CSS"</strong> is still valid.</h4>', 'uix-shortcodes' ); ?>
+           <?php _e( '<h4 class="uix-bg-custom-title">4. There is a second way, make a new Cascading Style Sheet (CSS) document which name to <code>uix-shortcodes-style.css</code> to your templates directory <code>/wp-content/themes/{your-theme}/</code>. You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (<strong>uix-shortcodes-style.css</strong>), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes\'s function of <strong>"Custom CSS"</strong> is still valid.</h4>', 'uix-shortcodes' ); ?>
   
-        </p>      
+        </p>    
+        <p>
+           <?php _e( '<h4 class="uix-bg-custom-title">Note: Making a new javascrpt (.js) document which name to <code>uix-shortcodes-custom.js</code> to your templates directory. Once you have created an existing JS file (<strong>uix-shortcodes-custom.js</strong>), Uix Shortcodes will use it as a default script to your WordPress Theme.</h4>', 'uix-shortcodes' ); ?>
+  
+        </p>        
         
-        
+      
        
 <?php } ?>
