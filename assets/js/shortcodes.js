@@ -9,134 +9,18 @@
 
 ( function($) {
     'use strict';
-	
 
-	/*! 
-	 *************************************
-	 *  Table hover
-	 *************************************
-	 */
-
-	$.extend({ 
-		uix_sc_tableHover:function ( options ) { 
-
-			var settings=$.extend({
-				"id": '56d7d83e3edda',
-				"tcolor": '#77a43a',
-				"dcolor": '#090909'
-				
-			}
-			,options);
-
- 			$( settings.id ).hover(function() {
-				$(this).find( '.uix-sc-price-border' ).css({
-					"border-color": settings.tcolor,
-					"-webkit-box-shadow": "inset 0 0px 0px 6px " + settings.tcolor,
-					"-moz-box-shadow": "inset 0 0px 0px 6px " + settings.tcolor,
-					"box-shadow": "inset 0 0px 0px 6px " + settings.tcolor
-				});
-			},function() {
-				$(this).find( '.uix-sc-price-border' ).css({
-					"border-color": settings.dcolor,
-					"-webkit-box-shadow": "none",
-					"-moz-box-shadow": "none",
-					"box-shadow": "none"
-				});
-			});
-		
-			
-		} 
-	}); 
-
-	/*! 
-	 *************************************
-	 *  Filterable
-	 *************************************
-	 */
-
-	$.extend({ 
-		uix_sc_filterable:function ( options ) { 
-
-			var settings=$.extend({
-				"classprefix": 'uix-sc-portfolio-',
-				"ID": ''
-			}
-			,options);
-
-			var filterBox = $( '#'+settings.classprefix+'filter-stage-'+settings.ID+'' ),
-				filterNav = $( '#'+settings.classprefix+'cat-list-'+settings.ID+'' ),
-				filterItemSelector = '.'+settings.classprefix+'item';
-			
-			
-			 filterBox.shuffle({
-				itemSelector: filterItemSelector,
-				speed: 550, // Transition/animation speed (milliseconds).
-				easing: 'ease-out', // CSS easing function to use.
-				sizer: null // Sizer element. Use an element to determine the size of columns and gutters.
-			  });
-			  
-			//init
-			imagesLoaded( '#'+settings.classprefix+'filter-stage-'+settings.ID+'' ).on( 'always', function() {
-				 $( '#'+settings.classprefix+'cat-list-'+settings.ID+' li:first a' ).trigger( 'click' ); 
-			 });
-			  
-			
-			filterNav.find( 'li > a' ).unbind( 'click' ).click( function(){
-				
-				  var thisBtn = $( this ),
-					  activeClass = 'current',
-					  isActive = thisBtn.hasClass( activeClass ),
-					  group = isActive ? 'all' : thisBtn.data( 'group' );
-			
-				  // Hide current label, show current label in title
-				  if ( !isActive ) {
-					filterNav.find( '.' + activeClass ).removeClass( activeClass );
-				  }
-			
-				  thisBtn.toggleClass( activeClass );
-			
-				  // Filter elements
-				  filterBox.shuffle( 'shuffle', group );
-				  
-				  return false;
-				  
-				  
-			} ); 
-		
-			
-		} 
-	}); 
-	
-	
-	/*! 
-	 *************************************
-	 * Initialize Uix Shortcodes
-	 *************************************
-	 */
 
 	$.extend({ 
 		uix_sc_init:function () { 
 	
 	         //Pricing
 			 $( '.uix-sc-price' ).uix_sc_initPricing();
-			 $( '.uix-sc-price-border-hover' ).each(function() {
-				 if ( $( this ).css( 'top' ) != '0px' ) {
-					 $.uix_sc_tableHover({
-						 id: '#' + $( this ).attr( 'id' ),
-						 tcolor: $( this ).data( 'tcolor' )
-					  });
-				 }
-	 
-			 });
+			 $( '.uix-sc-price-border-hover' ).uix_sc_pricingHover();
 			
 			
 			 //Filterable
-			 $( '.uix-sc-filterable' ).each(function() {
-				 $.uix_sc_filterable({
-					 ID: $( this ).data( 'filter-id' ),
-					 classprefix: $( this ).data( 'classprefix' )
-				})
-			 });
+			 $( '.uix-sc-filterable' ).uix_sc_filterable();
 			 
 			 
 			 //Accordion
@@ -223,10 +107,6 @@
 	}); 
 
 
-
-
-
-
 	$( function() {  
 			 $.uix_sc_init();
 			
@@ -273,11 +153,16 @@
 				
 				if ( priceBGH_Max > 0 ) {
 					if ( $( document.body ).width() > 768 ){
-						var ty = Math.abs(parseInt($initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css('transform').split(',')[5]));
+						
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', priceBGH_Max + 'px' );
-						if ( !isNaN(ty) ) {
-							$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css( 'height', priceBGH_Max + ty*2 + 'px' );
-						} 
+						if ( $initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).length > 0 ) {
+							var ty = Math.abs(parseInt($initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css('transform').split(',')[5]));
+							if ( !isNaN(ty) ) {
+								$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css( 'height', priceBGH_Max + ty*2 + 'px' );
+							} 
+	
+						}
+						
 						
 					} else {
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', 'auto' );	
@@ -293,6 +178,52 @@
   };
 } )( jQuery );
 
+
+
+/*! 
+ *************************************
+ * Pricing Hover Effect 
+ *************************************
+ */
+( function( $ ) {
+	$.fn.uix_sc_pricingHover = function(options){
+
+		var settings=$.extend({
+			"enable":  true,
+			"width":  6
+		}
+		,options);
+		
+		this.each(function(){
+			    
+			var $this = $( this ),
+			    defaultColor = $this.find( '.uix-sc-price-border' ).css( 'border-color' );
+			
+			if ( settings.enable || $this.css( 'top' ) != '0px' ) {
+				$this.hover(function() {
+					$(this).find( '.uix-sc-price-border' ).css({
+						"border-color": $this.data( 'tcolor' ),
+						"-webkit-box-shadow": "inset 0 0px 0px "+settings.width+"px " + $this.data( 'tcolor' ),
+						"-moz-box-shadow": "inset 0 0px 0px "+settings.width+"px " + $this.data( 'tcolor' ),
+						"box-shadow": "inset 0 0px 0px "+settings.width+"px " + $this.data( 'tcolor' )
+					});
+				},function() {
+					$(this).find( '.uix-sc-price-border' ).css({
+						"border-color": defaultColor,
+						"-webkit-box-shadow": "none",
+						"-moz-box-shadow": "none",
+						"box-shadow": "none"
+					});
+				});		
+	
+			}
+
+			
+		} );
+
+	
+  };
+} )( jQuery );
 
 
 
@@ -503,3 +434,65 @@
 } )( jQuery );
 
 
+
+
+/*! 
+ *************************************
+ *  Filterable
+ *************************************
+ */
+ ( function( $ ) {
+	$.fn.uix_sc_filterable = function(options){
+
+		this.each(function(){
+			
+			var $this = $( this ),
+			    classprefix = $this.data( 'classprefix' ),
+				fid = $this.data( 'filter-id' );
+			    
+			var filterBox = $( '#'+classprefix+'filter-stage-'+fid+'' ),
+				filterNav = $( '#'+classprefix+'cat-list-'+fid+'' ),
+				filterItemSelector = '.'+classprefix+'item';
+			
+			
+			 filterBox.shuffle({
+				itemSelector: filterItemSelector,
+				speed: 550, // Transition/animation speed (milliseconds).
+				easing: 'ease-out', // CSS easing function to use.
+				sizer: null // Sizer element. Use an element to determine the size of columns and gutters.
+			  });
+			  
+			//init
+			imagesLoaded( '#'+classprefix+'filter-stage-'+fid+'' ).on( 'always', function() {
+				 $( '#'+classprefix+'cat-list-'+fid+' li:first a' ).trigger( 'click' ); 
+			 });
+			  
+			
+			filterNav.find( 'li > a' ).unbind( 'click' ).click( function(){
+				
+				  var thisBtn = $( this ),
+					  activeClass = 'current',
+					  isActive = thisBtn.hasClass( activeClass ),
+					  group = isActive ? 'all' : thisBtn.data( 'group' );
+			
+				  // Hide current label, show current label in title
+				  if ( !isActive ) {
+					filterNav.find( '.' + activeClass ).removeClass( activeClass );
+				  }
+			
+				  thisBtn.toggleClass( activeClass );
+			
+				  // Filter elements
+				  filterBox.shuffle( 'shuffle', group );
+				  
+				  return false;
+				  
+				  
+			} ); 		
+		
+			
+		} );
+
+	
+  };
+} )( jQuery );
