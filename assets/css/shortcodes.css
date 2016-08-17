@@ -2086,6 +2086,17 @@ img.uix-sc-img,
 	
 }
 
+
+@media (max-width: 767px) {
+
+	.uix-sc-bar-box {
+		margin: .5em !important;
+		
+	}
+	
+}
+
+
 .uix-sc-row .uix-sc-bar-box{
 	width: 100%;
 }
