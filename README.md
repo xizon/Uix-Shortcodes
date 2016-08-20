@@ -38,37 +38,38 @@ Initial Release.
 - WP 4.5
 - WP 4.5.1
 - WP 4.5.2
-
+- WP 4.5.3
+- WP 4.6
 
 ###Screenshot
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss3.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-3.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss9.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-9.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss8.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-8.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss1.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-1.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss2.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-2.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss4.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-4.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss5.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-5.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss6.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-6.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss7.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-7.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss10.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-10.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss11.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-11.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss12.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-12.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss13.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-13.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshot/ss14.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-14.jpg)
 
 
 

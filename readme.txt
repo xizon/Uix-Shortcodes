@@ -1,11 +1,9 @@
 === Uix Shortcodes ===
 Contributors: uiuxlab
-Donate link: https://www.paypal.me/uiuxlab
-Author URI: https://uiux.cc
-Plugin URL: https://uiux.cc/wp-plugins/uix-shortcodes/
+Donate link: https:/uiux.cc
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
-Tested up to: 4.5
+Tested up to: 4.6
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -67,15 +65,21 @@ You can go to "Uix Shortcodes" in the WordPress Administration Screens, then lin
 There is a second way, make a new Cascading Style Sheet (CSS) document which name to uix-shortcodes-style.css to your templates directory /wp-content/themes/{your-theme}/. You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (uix-shortcodes-style.css), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
 
 
-
 == Screenshots ==
-
-1. Uix Shortcodes toolbar for TinyMCE
-2. Uix Shortcode editor 1
-3. Uix Shortcode editor 2
-4. Uix Shortcode editor 3
-5. Uix Shortcode editor 4
-
+1. screenshot-1.jpg
+2. screenshot-2.jpg
+3. screenshot-3.jpg
+4. screenshot-4.jpg
+5. screenshot-5.jpg
+6. screenshot-6.jpg
+7. screenshot-7.jpg
+8. screenshot-8.jpg
+9. screenshot-9.jpg
+10. screenshot-10.jpg
+11. screenshot-11.jpg
+12. screenshot-12.jpg
+13. screenshot-13.jpg
+14. screenshot-14.jpg
 
 == Upgrade Notice ==
 
