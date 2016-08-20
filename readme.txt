@@ -1,5 +1,6 @@
 === Uix Shortcodes ===
-Contributors: UIUX Lab
+Contributors: uiuxlab
+Donate link: https://www.paypal.me/uiuxlab
 Author URI: https://uiux.cc
 Plugin URL: https://uiux.cc/wp-plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
@@ -52,9 +53,41 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
 Note: Making a new javascrpt (.js) document which name to "uix-shortcodes-custom.js" to your templates directory. Once you have created an existing JS file (uix-shortcodes-custom.js), Uix Shortcodes will use it as a default script to your WordPress Theme.
 
 
+
+== Frequently Asked Questions ==
+
+= What's with the version numbers? =
+
+The version number is the date of the revision of the [guidelines](https://make.wordpress.org/themes/handbook/review/) used to create it.
+
+= How to customize Uix Shortcode? =
+
+You can go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS". 
+
+There is a second way, make a new Cascading Style Sheet (CSS) document which name to uix-shortcodes-style.css to your templates directory /wp-content/themes/{your-theme}/. You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (uix-shortcodes-style.css), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
+
+
+
+== Screenshots ==
+
+1. Uix Shortcodes toolbar for TinyMCE
+2. Uix Shortcode editor 1
+3. Uix Shortcode editor 2
+4. Uix Shortcode editor 3
+5. Uix Shortcode editor 4
+
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+* Bug fixes and improvements.
+
+
 == Changelog ==
 
 = 1.0.0 =
 *Release Date - 1st February, 2016*
 
 * First release.
+
+
