@@ -71,6 +71,12 @@ Initial Release.
 
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-14.jpg)
 
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-15.jpg)
+
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-16.jpg)
+
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-17.jpg)
+
 
 
 ###Credits

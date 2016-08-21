@@ -79,6 +79,9 @@ There is a second way, make a new Cascading Style Sheet (CSS) document which nam
 12. screenshot-12.jpg
 13. screenshot-13.jpg
 14. screenshot-14.jpg
+15. screenshot-15.jpg
+16. screenshot-16.jpg
+17. screenshot-17.jpg
 
 == Upgrade Notice ==
 
