@@ -1,14 +1,20 @@
 <?php
-/*
-Plugin Name: Uix Shortcodes
-Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
-Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
-Author: UIUX Lab
-Author URI: https://uiux.cc
-Version: 1.0.0
-Text Domain: uix-shortcodes
-License: GPLv2 or later
-*/
+/**
+ * Uix Shortcodes
+ *
+ * @author UIUX Lab <uiuxlab@gmail.com>
+ *
+ *
+ * Plugin name: Uix Shortcodes
+ * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
+ * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
+ * Version:     1.0.0
+ * Author:      UIUX Lab
+ * Author URI:  https://uiux.cc
+ * License:     GPLv2 or later
+ * Text Domain: uix-shortcodes
+ * Domain Path: /languages
+ */
 			
 class UixShortcodes {
 
@@ -39,7 +45,6 @@ class UixShortcodes {
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_custom_stylesheet' ) );
 		add_action( 'current_screen', array( __CLASS__, 'do_register_shortcodes' ) );
-		add_action( 'admin_init', array( __CLASS__, 'check_update' ) );
 		add_action( 'admin_init', array( __CLASS__, 'tc_i18n' ) );
 		add_action( 'admin_init', array( __CLASS__, 'load_form_core' ) );
 		add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
@@ -203,20 +208,6 @@ class UixShortcodes {
 	}
 
 
-	/*
-	 * Enable update check on every request.
-	 *
-	 *
-	 */
-	public static function check_update() {
-	
-		require_once 'inc/plugin-update-checker.php';
-		$myUpdateChecker = PucFactory::buildUpdateChecker(
-			'https://uiux.cc/wp-plugins/'.self::get_slug().'/update/info.json',
-			__FILE__
-		);
-
-	}
 	
 	
 	/**

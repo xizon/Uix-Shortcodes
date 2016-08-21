@@ -13,7 +13,6 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'credits' ) {
         <p>
         
         <ul>
-            <li><a href="http://w-shadow.com" target="_blank" rel="nofollow">Plugin Update Checker Library</a></li>
             <li><a href="https://github.com/PitPik/tinyColorPicker" target="_blank" rel="nofollow">tinyColorPicker</a></li>
             <li><a href="http://t4t5.github.io/sweetalert" target="_blank" rel="nofollow">Sweetalert</a></li>
             <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank" rel="nofollow">Font Awesome</a></li>

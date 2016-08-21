@@ -1,14 +1,4 @@
 <?php
-/**
- * Google Map
- * Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
- * Author: UIUX Lab
- * Author URI: https://uiux.cc
- * License: GPLv2 or later
-
- */
-
-
 //Map root path
 $map_rootpath = ( isset( $_GET[ 'rootpath' ] ) && !empty( $_GET[ 'rootpath' ] ) ) ? $_GET[ 'rootpath' ] : '../../';
 

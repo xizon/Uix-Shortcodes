@@ -1,16 +1,3 @@
-<?php
-/**
- * Custom Icons and List Shortcodes
- * Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
- * Author: UIUX Lab
- * Author URI: https://uiux.cc
- * License: GPLv2 or later
-
- */
- 
- 
-
-?>
 <!doctype html>
 <html>
 <head>

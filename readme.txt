@@ -19,7 +19,6 @@ The content elements are the heart of any page builder. These are the elements s
 
 
 = Credits and Special Thanks =
- - Plugin Update Checker Library (http://w-shadow.com)
  - tinyColorPicker (https://github.com/PitPik/tinyColorPicker)
  - Sweetalert (http://t4t5.github.io/sweetalert/)
  - Font Awesome (https://fortawesome.github.io/Font-Awesome/)
