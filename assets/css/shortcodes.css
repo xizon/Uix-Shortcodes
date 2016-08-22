@@ -2166,7 +2166,7 @@ img.uix-sc-img,
  * ----------------------------------------------------------------------------
  */ 	
 .uix-sc-map-output .full-map  {
-	height: 100% !important;
+	height: 100vh !important;
 }
 .google-map-zoom-in, 
 .google-map-zoom-out {

@@ -1286,7 +1286,7 @@ function uix_sc_fun_map( $atts, $content = null ) {
     <!--  Google map show  begin -->
     <section class="uix-sc-map-output site-google-map" id="uix-sc-map-output-<?php echo $id; ?>">
     
-        <div id="google-map">
+        <div class="google-map-area">
             <div id="google-container-<?php echo $id; ?>" style="position: relative; width: 100%; height: <?php echo $map_height;?>;"></div>
             <div class="google-map-zoom-in" id="google-map-zoom-in-<?php echo $id; ?>"><?php _e( '+', 'uix-shortcodes' ); ?></div>
             <div class="google-map-zoom-out" id="google-map-zoom-out-<?php echo $id; ?>"><?php _e( '-', 'uix-shortcodes' ); ?></div>
