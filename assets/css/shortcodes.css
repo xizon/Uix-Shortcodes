@@ -2159,4 +2159,52 @@ img.uix-sc-img,
 		}
 		
 		
+
+
+/**
+ *  Google Map
+ * ----------------------------------------------------------------------------
+ */ 	
+.uix-sc-map-output .full-map  {
+	height: 100% !important;
+}
+.google-map-zoom-in, 
+.google-map-zoom-out {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 32px 64px;
+    -moz-background-size: 32px 64px;
+    background-size: 32px 64px;
+    opacity: .7;
+    z-index: 3;
+    font-size: 30px;
+    color: #fff;
+}
+
+.no-touch .google-map-zoom-in:hover, 
+.no-touch .google-map-zoom-out:hover {
+    opacity: 1;
+}
+
+.google-map-zoom-in:hover, 
+.google-map-zoom-out:hover {
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .google-map-zoom-in, 
+	.google-map-zoom-out {
+        margin-left: 50px;
+    }
+}
+
+.google-map-zoom-in {
+    margin-top: 50px;
+    margin-bottom: 1px;
+}	  
+		  
+		  
 		  

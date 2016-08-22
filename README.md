@@ -87,7 +87,6 @@ Initial Release.
 - [Sweetalert](http://t4t5.github.io/sweetalert/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [jQuery Accessible Tabs](https://github.com/nomensa/jquery.accessible-tabs.git)
-- [jQuery ScrollBar Plugin 1.0 ](http://codecanyon.net/user/flGravity)
 - [prettyPhoto](http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/#prettyPhoto)
 - [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/)
 - [Flexslider](http://flexslider.woothemes.com/)

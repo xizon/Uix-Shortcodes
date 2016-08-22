@@ -64,18 +64,20 @@ class UixShortcodes {
 	 *
 	 */
 	public static function frontpage_scripts() {
-	
+		
+
+		
 		//Add Icons
 		wp_enqueue_style( 'font-awesome-4.5.0', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
 		wp_enqueue_style( 'flaticon-1.0', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
-		
-		
-		// Modernizr.
-		wp_enqueue_script( 'modernizr-3.3.1', self::plug_directory() .'assets/js/modernizr.min.js', false, '3.3.1', false );
+	
 	
 		// Shuffle
 		wp_enqueue_script( 'js-shuffle-3.1.1', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );
 		
+		// Shuffle.js requires Modernizr..
+		wp_enqueue_script( 'modernizr-3.3.1', self::plug_directory() .'assets/add-ons/HTML5/modernizr.min.js', false, '3.3.1', false );
+			
 		// Easing
 		wp_enqueue_script( 'jquery-easing-1.3', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
 
@@ -132,7 +134,9 @@ class UixShortcodes {
 						//Add Icons
 						wp_enqueue_style( 'font-awesome-4.5.0', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
 						wp_enqueue_style( 'flaticon-1.0', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
-			
+						
+					
+						
 						//Sweetalert
 						wp_enqueue_style( self::PREFIX . '-shortcodes-sweetalert-css', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
 						if( $currentScreen->base === "customize" ) {
@@ -177,6 +181,8 @@ class UixShortcodes {
 	
 
 	}
+	
+
 	
 	/*
 	 * Call the specified form
@@ -309,8 +315,7 @@ class UixShortcodes {
 	 }
 
 
-
-
+	
 	
 	/*
 	 * Create customizable menu in backstage  panel
@@ -953,6 +958,25 @@ class UixShortcodes {
 	
 	}
 	
+	/*
+	 * Returns correctly icon class name of frond-end output
+	 *
+	 *
+	 */
+	public static function output_icon_class( $str ) {
+
+		//Icon tyle
+		if( self::inc_str( $str, 'flaticon-' ) ) { 
+			$newstr = 'flaticon '.$str.'';
+		} else {
+			$newstr = 'fa fa-'.$str.'';
+		}
+
+		return $newstr;
+
+
+	}
+	
 	
 	/*
 	 * Callback code of form
@@ -971,34 +995,7 @@ class UixShortcodes {
 
 	}
 	
-	/*
-	 * Callback list of icon
-	 *
-	 *
-	 */
-	public static function iconlist( $id = '', $type = 'all' ) {
-		
-		if ( $type == 'social' ) {
 
-			$para = '&p=1&type=social';
-			$class = 'sweet-icon-selector-iframe-social';
-
-		} else {
-			
-			$para = '';
-			$class = '';
-		}
-		
-		// Icon type
-		$icontype = get_option( 'uix_sc_opt_icontype', 'fontawesome' );
-		if ( $icontype == 'fontawesome' ) $iconpath = 'fontawesome/font-awesome-custom.php';
-		if ( $icontype == 'flaticon' ) $iconpath = 'flaticon/font-flaticon-custom.php';
-		
-		return '<iframe  frameborder="0" class="sweet-icon-selector-iframe '.$class.'" hspace="0" vspace="0" scrolling="no"  allowTransparency="true" src="'.self::plug_directory().'assets/add-ons/'.$iconpath.'?pushinputID='.$id.''.$para.'"></iframe>';
-
-
-	}
-	
 	
 	/*
 	 * Callback before tag of form
@@ -1047,6 +1044,7 @@ class UixShortcodes {
 		
 		$( '{$formid}' ).live( 'click',function(){
 			{$widget_content_id}
+			
 			swal({   
 				title: '{$title}',
 				text: '{$form_html}',   
@@ -1078,6 +1076,10 @@ class UixShortcodes {
 
 				
 			});
+			
+			/*-- Icon list with the jQuery AJAX method --*/
+			$( '.icon-selector' ).uix_iconSelector();
+		
 		});
 		";
 

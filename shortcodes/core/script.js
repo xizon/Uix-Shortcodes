@@ -17,12 +17,76 @@
 		$( '.sweet-alert button' ).live( 'click',function(){
 			$( '.sweet-alert' ).css({ top: '50%' });
 		});　
-
+		
 		
 
 	} ); 
 
 } ) ( jQuery );
+
+
+
+/*! 
+ * ************************************
+ * Icon Selector
+ *************************************
+ */	
+( function( $ ) {
+  jQuery.fn.uix_iconSelector = function( options ) {
+	
+		return this.each( function() {
+			
+			var $this = $( this ),
+			    containerID = '#' + $this.attr( 'contain-id' ),
+				iconURL = $this.attr( 'list-url' ),
+				targetID = '#' + $this.attr( 'target-id' ),
+				previewID = '#' + $this.attr( 'preview-id' ),
+				listContainerID = 'icon-list-' + $this.attr( 'target-id' );
+				
+			
+			//Icon list with the jQuery AJAX method.
+			jQuery.ajax({
+				url: iconURL, 
+				type: "GET",
+				success: function( result ){
+					jQuery( containerID ).html( '<div id="' + listContainerID + '">' + result + '</div>' );
+				}
+			});
+			
+			
+			//Click event for icon type: Font Awesome
+			jQuery( '#' + listContainerID ).find( '.b.fontawesome' ).live( 'click',function(){
+				var _v = jQuery(this).find( '.fa' ).attr("class");
+				jQuery( '.b.fontawesome' ).removeClass('active');
+				jQuery( this ).addClass( 'active' );
+				
+				
+				_v = _v.replace( 'fa fa-', '' );
+				jQuery( targetID ).val(_v);
+				jQuery( previewID ).html( '<i class="fa fa-'+_v+'"></i>' );
+				
+			});
+			
+		    
+			//Click event for icon type: Flaticon
+			jQuery( '#' + listContainerID ).find( '.b.flaticon' ).live( 'click',function(){
+				var _v = jQuery(this).find( '.flaticon' ).attr( 'class' );
+				jQuery( '.b.flaticon' ).removeClass( 'active' );
+				jQuery( this ).addClass( 'active' );
+				
+				
+				_v = _v.replace( 'flaticon ', '' );
+				jQuery( targetID ).val( _v );
+				jQuery( previewID ).html( '<i class="flaticon '+_v+'"></i>' );
+			
+			});	
+			
+	
+ 
+		} );
+	
+  };
+} )( jQuery );
 
 
 /*! 
@@ -102,7 +166,9 @@
 					//Fix Sweet Alert position of top
 					$( document ).uix_fixedWinTop( { oheight: sweetWrapperinnerHeight } );
 	
-				  
+					//Icon list
+					$( '.icon-selector' ).uix_iconSelector();
+						  
 					 
 					//focus
 					var srow = '.sweet-alert .dynamic-row';

@@ -94,6 +94,8 @@ $form_js_vars = UixShortcodes::add_form( $form_id, $form_type, $args, 'js_vars' 
  * Add simulation buttons
  */
 echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
+
+
 ?>		
 
 
@@ -109,6 +111,7 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 		        
 				var uix_sc_icon_result_color = ( uix_sc_icon_color_other != '' ) ? uix_sc_icon_color_other : uix_sc_icon_color;
 	
+	
 			
 				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_icons size='"+uix_sc_icon_size+"' units='px' color='"+uix_sc_icon_result_color+"' name='"+uix_sc_icon_name+"']" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
@@ -116,8 +119,9 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 				
 		   /* Callback after custom javascript of sweetalert */
 		  <?php echo UixShortcodes::sweetalert_after(); ?>
-				
-
+		  
+		  
+		  
 
 	} ); 
 

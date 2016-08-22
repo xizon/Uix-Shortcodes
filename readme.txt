@@ -22,7 +22,6 @@ The content elements are the heart of any page builder. These are the elements s
  - tinyColorPicker (https://github.com/PitPik/tinyColorPicker)
  - Sweetalert (http://t4t5.github.io/sweetalert/)
  - Font Awesome (https://fortawesome.github.io/Font-Awesome/)
- - jQuery ScrollBar Plugin 1.0 (http://codecanyon.net/user/flGravity)
  - prettyPhoto (http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/#prettyPhoto)
  - SyntaxHighlighter (http://alexgorbatchev.com/SyntaxHighlighter/)
  - Flexslider (http://flexslider.woothemes.com/)

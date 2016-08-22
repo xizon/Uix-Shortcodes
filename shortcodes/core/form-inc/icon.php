@@ -20,16 +20,22 @@ class UixShortcodesForm_Icon {
 		$jscode_vars = '';
 		
 		$tips = ( !empty( $placeholder ) ) ? $placeholder : __( 'Select from the following list of icons: ', 'uix-shortcodes' );
+		$icontype = get_option( 'uix_sc_opt_icontype', 'fontawesome' );
+		if ( $icontype == 'fontawesome' ) $iconselector = 'fontawesome/font-awesome-custom.php';
+		if ( $icontype == 'flaticon' ) $iconselector = 'flaticon/font-flaticon-custom.php';
+		
 		
 		if ( $type == 'icon' ) {
 			
 			$social = false;
-			$iconlist = UixShortcodes::iconlist( $id );
+			$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixShortcodes::plug_directory().'assets/add-ons/'.$iconselector.'" target-id="'.$id.'" preview-id="'.$id.'-preview" class="icon-selector" id="icon-selector-'.$id.'"></span>';
 			if ( is_array( $default ) && !empty( $default ) ) {
 				$social = $default[ 'social' ];
 				
+				if ( $social ) $iconselector = 'fontawesome/font-awesome-social.php';
+				
 				if ( $social ) {
-					$iconlist = UixShortcodes::iconlist( $id, 'social' );
+					$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixShortcodes::plug_directory().'assets/add-ons/'.$iconselector.'" target-id="'.$id.'" preview-id="'.$id.'-preview" class="icon-selector" id="icon-selector-'.$id.'-social"></span>';
 				} 
 			}
 			
@@ -56,6 +62,9 @@ class UixShortcodesForm_Icon {
 				'.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
 				
 			';	
+					
+		
+			
 			
 		}	
 		

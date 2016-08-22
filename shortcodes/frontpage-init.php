@@ -159,7 +159,7 @@ function uix_sc_fun_progress_bar( $atts, $content = null ){
 				<div class="uix-sc-bar" data-percent="'.$percent.'" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'" data-icon="'.$icon_name.'">
 					<span class="uix-sc-bar-percent"></span>
 					<span class="uix-sc-bar-placeholder">0</span>
-					<span class="uix-sc-bar-text"  style="color:'.$preccolor.';font-size:'.$precsize.';">'.( !empty( $icon_name )  ? '<i class="fa fa-'.$icon_name.'"></i>' : ''.$percent.''.$units.'' ).'</span>
+					<span class="uix-sc-bar-text"  style="color:'.$preccolor.';font-size:'.$precsize.';">'.( !empty( $icon_name )  ? '<i class="'.UixShortcodes::output_icon_class( $icon_name ).'"></i>' : ''.$percent.''.$units.'' ).'</span>
 				</div>
 			</div><!-- /.uix-sc-bar-box-square -->
 		' : '
@@ -195,11 +195,9 @@ function uix_sc_fun_icons( $atts, $content = null ){
 	 $sizeclass = ( empty( $size ) ) ? '' : "font-size:{$size}{$units};";
 	 $colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
 	 
-    if( UixShortcodes::inc_str( $name, 'flaticon-' ) ) { 
-	    $return_string = '<i class="flaticon '.$name.'" style="'.$sizeclass.' '.$colorclass.'"></i>';
-	} else {
-		$return_string = '<i class="fa fa-'.$name.'" style="'.$sizeclass.' '.$colorclass.'"></i>';
-	}
+	
+	
+	$return_string = '<i class="'.UixShortcodes::output_icon_class( $name ).'" style="'.$sizeclass.' '.$colorclass.'"></i>';
 	
 
    
@@ -400,7 +398,7 @@ function uix_sc_fun_button( $atts, $content = null ) {
 	$targetcode = ( $target == 1 ) ? ' target="_blank"' : '';
 	
 	//icon
-	$iconshow = ( !empty( $icon ) ) ? '<i class="fa fa-'.$icon.'"></i>' : '';
+	$iconshow = ( !empty( $icon ) ) ? '<i class="'.UixShortcodes::output_icon_class( $icon ).'"></i>' : '';
 	
 	//button common css
 	$commoncss = 'font-size:'.$fontsize.';letter-spacing:'.$letterspacing.';-webkit-border-radius: '.$fillet.'; -moz-border-radius: '.$fillet.'; border-radius: '.$fillet.';color:'.$txtcolor.';';
@@ -944,9 +942,9 @@ function uix_sc_fun_team_item( $atts, $content = null ){
    $social_icon_3 = ( !empty( $social_arr_3[0] ) ) ? $social_arr_3[0] : 'link'; 
    
    
-   $social_out_1 = ( !empty( $social_arr_1[1] ) ) ? '<a href=\''.$social_url_1.'\' target=\'_blank\'><i class=\'fa fa-'.$social_icon_1.'\'></i></a>' : '';
-   $social_out_2 = ( !empty( $social_arr_2[1] ) ) ? '<a href=\''.$social_url_2.'\' target=\'_blank\'><i class=\'fa fa-'.$social_icon_2.'\'></i></a>' : '';
-   $social_out_3 = ( !empty( $social_arr_3[1] ) ) ? '<a href=\''.$social_url_3.'\' target=\'_blank\'><i class=\'fa fa-'.$social_icon_3.'\'></i></a>' : '';
+   $social_out_1 = ( !empty( $social_arr_1[1] ) ) ? '<a href=\''.$social_url_1.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_1 ).'\'></i></a>' : '';
+   $social_out_2 = ( !empty( $social_arr_2[1] ) ) ? '<a href=\''.$social_url_2.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_2 ).'\'></i></a>' : '';
+   $social_out_3 = ( !empty( $social_arr_3[1] ) ) ? '<a href=\''.$social_url_3.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_3 ).'\'></i></a>' : '';
 
 
    if ( $col == 'fullwidth' ) {
@@ -1090,7 +1088,8 @@ function uix_sc_fun_features_item( $atts, $content = null ){
 
    if ( $col == 2 ) {
 	   
-		$content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature-title" '.( !empty( $titlecolor ) ? 'style="color:'.$titlecolor.'"' : '' ).'><span class="uix-sc-feature-icon-side"><i class="fa fa-'.( !empty( $icon ) ? $icon : 'check' ).'" '.( !empty( $iconcolor ) ? 'style="border-color:'.$iconcolor.';color:'.$iconcolor.'"' : '' ).'></i></span>',
+	 
+		$content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature-title" '.( !empty( $titlecolor ) ? 'style="color:'.$titlecolor.'"' : '' ).'><span class="uix-sc-feature-icon-side"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class( $icon ) : 'fa fa-check' ).'" '.( !empty( $iconcolor ) ? 'style="border-color:'.$iconcolor.';color:'.$iconcolor.'"' : '' ).'></i></span>',
 				   str_replace( '[/uix_features_item_title]', '</h3>',
 				   str_replace( '[uix_features_item_desc]', '<div class="uix-sc-feature-desc uix-sc-feature-desc-singlerow" '.( !empty( $desccolor ) ? 'style="color:'.$desccolor.'"' : '' ).'>',
 				   str_replace( '[/uix_features_item_desc]', '</div>',
@@ -1119,7 +1118,7 @@ function uix_sc_fun_features_item( $atts, $content = null ){
 	   $return_string = '
 		<div class="uix-sc-col-4 '.$col_last.'">
 			<div class="uix-sc-feature-li">
-				  <p class="uix-sc-feature-icon"><i class="fa fa-'.( !empty( $icon ) ? $icon : 'check' ).'" '.( !empty( $iconcolor ) ? 'style="border-color:'.$iconcolor.';color:'.$iconcolor.'"' : '' ).'></i></p>
+				  <p class="uix-sc-feature-icon"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class( $icon ) : 'fa fa-check' ).'" '.( !empty( $iconcolor ) ? 'style="border-color:'.$iconcolor.';color:'.$iconcolor.'"' : '' ).'></i></p>
 				  '.$content.'
 			 </div>
 		</div>          
@@ -1251,7 +1250,6 @@ function uix_sc_fun_testimonials_item( $atts, $content = null ){
 
 add_shortcode( 'uix_testimonials_item', 'uix_sc_fun_testimonials_item' );
 
-
 //----------------------------------------------------------------------------------------------------
 // Map
 //----------------------------------------------------------------------------------------------------
@@ -1268,19 +1266,218 @@ function uix_sc_fun_map( $atts, $content = null ) {
 		
 	 ), $atts ) );
 	 
+	$id = uniqid(); 
+    $map_style = $style;  //Map style
+    $map_latitude = $latitude;    //Map latitude              
+    $map_longitude = $longitude; //Map longitude
+    $map_zoom = $zoom;	 //Map zoom
+    $map_name = $name;	 //Map place name
+    $map_height = $height;	 //Map height
+    $map_marker = UixShortcodes::plug_directory().'assets/images/map/map-location.png'; //Map marker 
+	 
 	
-   $return_string = '
-		<!--  Google map show  begin -->
-		<section class="site-google-map">
-			<iframe  frameborder="0" style="width:'.$width.';height:'.$height.'" hspace="0" vspace="0" scrolling="no"  allowTransparency="true" src="'.UixShortcodes::plug_directory().'shortcodes/embed/map-iframe.php?cusheight=0&rootpath='.UixShortcodes::plug_directory().'&style='.$style.'&height='.str_replace( 'px', '', $height ).'&latitude='.$latitude.'&longitude='.$longitude.'&zoom='.$zoom.'&name='.$name.'&marker='.$marker.'"></iframe>	
-		</section>
-		<!--  Google map show  end -->
-   ';
+    $return_string = '';
+   
+    // capture output
+	ob_start();
+
+    ?>
 	
-	return UixShortcodes::do_callback( $return_string );
+    <!--  Google map show  begin -->
+    <section class="uix-sc-map-output site-google-map" id="uix-sc-map-output-<?php echo $id; ?>">
+    
+        <div id="google-map">
+            <div id="google-container-<?php echo $id; ?>" style="position: relative; width: 100%; height: <?php echo $map_height;?>;"></div>
+            <div class="google-map-zoom-in" id="google-map-zoom-in-<?php echo $id; ?>"><?php _e( '+', 'uix-shortcodes' ); ?></div>
+            <div class="google-map-zoom-out" id="google-map-zoom-out-<?php echo $id; ?>"><?php _e( '-', 'uix-shortcodes' ); ?></div>
+        </div>	
+    
+        <script type="text/javascript">
+            (function($) { 
+			   "use strict";
+    
+                /*set your google maps parameters*/
+                jQuery(document).ready(function($){
+                    var latitude = <?php echo $map_latitude;?>,
+                        longitude = <?php echo $map_longitude;?>,
+                        map_zoom = <?php echo $map_zoom;?>;
+                        
+                        
+                        <?php if ( $map_height == '100%' ) { ?>
+                        $( '#google-container-<?php echo $id; ?>' ).css( 'height', $( document.body ).height() + 'px' );
+                        <?php } ?>
+                        
+                        
+    
+    
+                    /*google map custom marker icon - .png fallback for IE11*/
+                    var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+                    var marker_url = '<?php echo $map_marker;?>';
+    
+                    /*define the basic color of your map, plus a value for saturation and brightness*/
+                    var	 main_color = '#e67e22',
+                        saturation_value= -50,
+                        brightness_value= 14;
+    
+                    /*we define here the style of the map*/
+                    <?php if ( $map_style == 'normal'){ ?>
+                    var style= '';
+                    <?php } ?>
+                    
+                    <?php if ( $map_style == 'gray'){ ?>
+        
+    var style=[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#ffffff"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#333333"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#C9C9C9"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#C9C9C9"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#C9C9C9"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#333333"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#333333"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#333333"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#333333"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#333333"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#333333"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#333333"},{"lightness":17}]}];
+                    
+                    
+                    <?php } ?>
+                    
+                    <?php if ( $map_style == 'black'){ ?>
+                    
+    
+    var style=[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];				
+                    
+                    <?php } ?>
+                    
+                    <?php if ( $map_style == 'real'){ ?>
+                    var style= '';
+                    <?php } ?>
+                    
+                    <?php if ( $map_style == 'terrain'){ ?>
+                    var style= '';
+                    <?php } ?>
+                                    
+                    <?php if ( $map_style == 'white'){ ?>
+        
+    var style=[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":7}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#eeeeee"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#d1d1d1"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#eeeeee"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#b3b3b3"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#d1d1d1"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#d1d1d1"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#d1d1d1"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#d1d1d1"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#d1d1d1"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#d1d1d1"},{"lightness":17}]}];
+                    
+                    <?php } ?>
+                                    
+    
+                    
+                    <?php if ( $map_style == 'dark-blue'){ ?>
+                    
+    
+    var style=[{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}];
+                        
+                        
+                        <?php } ?> 
+                    
+                    
+                <?php if ( $map_style == 'dark-blue-2'){ ?>
+                    
+    
+    var style=[{"featureType":"water","stylers":[{"color":"#021019"}]},{"featureType":"landscape","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"transit","stylers":[{"color":"#146474"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]}];
+                            
+                    <?php } ?>
+                                            
+                <?php if ( $map_style == 'blue'){ ?>
+    
+    var style=
+    [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}];
+                            
+                    <?php } ?>
+                    
+                <?php if ( $map_style == 'flat'){ ?>
+    
+    var style=
+    [{"elementType":"geometry","stylers":[{"hue":"#ff4400"},{"saturation":-68},{"lightness":-4},{"gamma":0.72}]},{"featureType":"road","elementType":"labels.icon"},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"hue":"#0077ff"},{"gamma":3.1}]},{"featureType":"water","stylers":[{"hue":"#00ccff"},{"gamma":0.44},{"saturation":-33}]},{"featureType":"poi.park","stylers":[{"hue":"#44ff00"},{"saturation":-23}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#007fff"},{"gamma":0.77},{"saturation":65},{"lightness":99}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"gamma":0.11},{"weight":5.6},{"saturation":99},{"hue":"#0091ff"},{"lightness":-86}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"lightness":-48},{"hue":"#ff5e00"},{"gamma":1.2},{"saturation":-23}]},{"featureType":"transit","elementType":"labels.text.stroke","stylers":[{"saturation":-64},{"hue":"#ff9100"},{"lightness":16},{"gamma":0.47},{"weight":2.7}]}];
+                            
+                    <?php } ?>				
+                    
+                    
+                    
+    
+                    
+                    /*set google map options*/
+                    var map_options = {
+                        center: new google.maps.LatLng(latitude, longitude),
+                        zoom: map_zoom,
+                        panControl: false,
+                        zoomControl: false,
+                        mapTypeControl: false,
+                        streetViewControl: false,
+                        
+                        /*SATELLITE,ROADMAP,HYBRID,TERRAIN*/
+                        <?php if ( $map_style == 'normal' ||  $map_style == 'gray' ||  $map_style == 'black' ||  $map_style == 'white' ||  $map_style == 'dark-blue' ||  $map_style == 'dark-blue-2' ||  $map_style == 'blue' ||  $map_style == 'flat'){ ?>
+                        mapTypeId: google.maps.MapTypeId.ROADMAP, 
+                        <?php } ?>
+                        
+                        <?php if ( $map_style == 'real'){ ?>
+                        mapTypeId: google.maps.MapTypeId.HYBRID, 
+                        <?php } ?>
+                        
+                        <?php if ( $map_style == 'terrain'){ ?>
+                        mapTypeId: google.maps.MapTypeId.TERRAIN, 
+                        <?php } ?>
+        
+                        scrollwheel: false,
+                        styles: style
+                    };
+    
+                    /*inizialize the map*/
+                    var map = new google.maps.Map(document.getElementById('google-container-<?php echo $id; ?>'), map_options);
+                    /*add a custom marker to the map*/			
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(latitude, longitude),
+                        map: map,
+                        visible: true,
+                        icon: marker_url
+                    });
+    
+    
+    
+                    /*add custom buttons for the zoom-in/zoom-out on the map*/
+                    function CustomZoomControl(controlDiv, map) {
+                        /*grap the zoom elements from the DOM and insert them in the map */
+                        var controlUIzoomIn= document.getElementById('google-map-zoom-in-<?php echo $id; ?>'),
+                            controlUIzoomOut= document.getElementById('google-map-zoom-out-<?php echo $id; ?>');
+                            controlDiv.appendChild(controlUIzoomIn);
+                            controlDiv.appendChild(controlUIzoomOut);
+    
+    
+                        /*Setup the click event listeners and zoom-in or out according to the clicked element*/
+                        google.maps.event.addDomListener(controlUIzoomIn, 'click', function() {
+                            map.setZoom(map.getZoom()+1);
+                        });
+    
+                        google.maps.event.addDomListener(controlUIzoomOut, 'click', function() {
+                            map.setZoom(map.getZoom()-1);
+                        });
+    
+                    };
+    
+    
+    
+                    var zoomControlDiv = document.createElement('div');
+                    var zoomControl = new CustomZoomControl(zoomControlDiv, map);
+    
+                    /*insert the zoom div on the top left of the map*/
+                    map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
+                });
+    
+            })(jQuery);
+    
+    
+        </script>
+       
+     </section><!-- /.uix-sc-map-output -->
+    
+    
+   <?php
+		$out = ob_get_contents();
+	ob_end_clean();
+	
+	
+	//Enqueue google api
+	wp_enqueue_script( 'js-googleapis', '//maps.googleapis.com/maps/api/js?key=AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk', false, '2.0', true );
+
+   $return_string = $out;
+	
+	return UixShortcodes::do_callback( UixShortcodes::str_compression( $return_string ) );
 }
 
 add_shortcode( 'uix_map', 'uix_sc_fun_map' );
+
 
 
 //----------------------------------------------------------------------------------------------------
