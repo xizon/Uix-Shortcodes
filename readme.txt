@@ -1,6 +1,8 @@
 === Uix Shortcodes ===
 Contributors: uiuxlab
-Donate link: https:/uiux.cc
+Donate link: https://uiux.cc
+Author URI: https://uiux.cc
+Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
@@ -12,9 +14,10 @@ Uix Shortcodes brings an amazing set of beautiful and useful elements to your si
 
 == Description ==
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: "container", "columns", "buttons", "progress bar", "google maps", "special heading", "pricing table", "icons", "features boxes", "testimonials carousel", "team", "list of clients", "responsive video", "audio", "accordion", "dividing line", "tabs", "code with highlighter", "share buttons", "contact form(use commenting form template)", "portfolio(support lightbox)" and "recent posts with custom template".
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: `container`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)` and `recent posts with custom template`.
 
-The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. "Content Shortcode", "Column Shortcode", "Web Elements Shortcode", "Container Shortcode", and so on. They could be used together.
+
+The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
 
 
 

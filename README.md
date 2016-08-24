@@ -6,8 +6,12 @@ Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
 
 [Donate Me](https://www.paypal.me/uiuxlab)
 
-
 [Plugin URI](https://uiux.cc/wp-plugins/uix-shortcodes/)
+
+[Plugin for Wordpress at WordPress.org Repository](https://wordpress.org/plugins/uix-shortcodes/)
+
+
+
 
 ### Licensing
 
