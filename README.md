@@ -11,6 +11,8 @@ Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
 [Plugin for Wordpress at WordPress.org Repository](https://wordpress.org/plugins/uix-shortcodes/)
 
 
+[youtube="https://youtu.be/DCpGXKRvz1E"]
+
 
 
 ### Licensing
