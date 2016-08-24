@@ -30,7 +30,14 @@ The content elements are the heart of any page builder. These are the elements s
 
 ### Updates 
 
+##### Version 1.0.1
+
+Optimized HTML format of textarea
+
+
+
 ##### Version 1.0.0
+
 Initial Release.
 
 

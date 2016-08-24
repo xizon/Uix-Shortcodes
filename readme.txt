@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,8 @@ You can go to "Uix Shortcodes" in the WordPress Administration Screens, then lin
 
 There is a second way, make a new Cascading Style Sheet (CSS) document which name to uix-shortcodes-style.css to your templates directory /wp-content/themes/{your-theme}/. You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (uix-shortcodes-style.css), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
 
+Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom.js` to your templates directory. Once you have created an existing JS file (**uix-shortcodes-custom.js**), Uix Shortcodes will use it as a default script to your WordPress Theme.
+
 
 == Screenshots ==
 1. screenshot-1.jpg
@@ -90,14 +92,19 @@ There is a second way, make a new Cascading Style Sheet (CSS) document which nam
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.1 =
+
 * Bug fixes and improvements.
 
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Optimized HTML format of textarea
+
+
 = 1.0.0 =
-*Release Date - 1st February, 2016*
 
 * First release.
 

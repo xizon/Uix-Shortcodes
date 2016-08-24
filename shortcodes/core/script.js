@@ -900,7 +900,8 @@ function uix_html_listTran( str, type ) {
 	if ( str != undefined ) {
 		
 		//checking for "undefined" in replace-regexp
-		str = str.toString().replace(/(\r)*\n/g,"[/li][li]");
+		str = str.toString().replace(/(\r)*\n/g,"[/li][li]").replace(/<br>/g,"[/li][li]");
+		
 		newStr = '[li]'+str+'[/li]';
 		newStr = newStr.replace('[li][/li]','');
 		newStr = '['+type+']'+newStr+'[/'+type+']';
