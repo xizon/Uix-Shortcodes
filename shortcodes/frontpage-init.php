@@ -1469,7 +1469,7 @@ function uix_sc_fun_map( $atts, $content = null ) {
 	
 	
 	//Enqueue google api
-	wp_enqueue_script( 'js-googleapis', '//maps.googleapis.com/maps/api/js?key=AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk', false, '2.0', true );
+	wp_enqueue_script( 'googleapis', '//maps.googleapis.com/maps/api/js?key=AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk', false, '2.0', true );
 
    $return_string = $out;
 	
