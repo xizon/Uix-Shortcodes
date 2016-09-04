@@ -4,7 +4,7 @@ This is a WordPress Plugin. Uix Shortcodes brings an amazing set of beautiful an
 Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
 
 
-[Donate Me](https://www.paypal.me/uiuxlab)
+[Donate Me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYZLU7UZNQ6CE)
 
 [Plugin URI](https://uiux.cc/wp-plugins/uix-shortcodes/)
 
