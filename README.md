@@ -30,6 +30,13 @@ The content elements are the heart of any page builder. These are the elements s
 
 ### Updates 
 
+##### Version 1.0.2
+
+Fix parse error for tinyColorPicker sometimes.
+
+Other optimizations.
+
+
 ##### Version 1.0.1
 
 Optimized HTML format of textarea

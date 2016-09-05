@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,15 @@ The content elements are the heart of any page builder. These are the elements s
 
 
 https://www.youtube.com/watch?v=DCpGXKRvz1E
+
+
+= Usage =
+
+You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS".
+
+There is a second way, make a new Cascading Style Sheet (CSS) document which name to "uix-shortcodes-style.css" to your templates directory (/wp-content/themes/{your-theme}/). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (uix-shortcodes-style.css), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
+
+Note: Making a new javascrpt (.js) document which name to "uix-shortcodes-custom.js" to your templates directory. Once you have created an existing JS file (uix-shortcodes-custom.js), Uix Shortcodes will use it as a default script to your WordPress Theme.
 
 
 = Credits and Special Thanks =
@@ -91,6 +100,11 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 17. screenshot-17.jpg
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+
+* Fix parse error for tinyColorPicker sometimes.
+* Other optimizations.
 
 = 1.0.1 =
 
