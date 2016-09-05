@@ -101,17 +101,16 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 == Upgrade Notice ==
 
-= 1.0.2 =
-
-* Fix parse error for tinyColorPicker sometimes.
-* Other optimizations.
-
-= 1.0.1 =
 
 * Bug fixes and improvements.
 
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Fix parse error for tinyColorPicker sometimes.
+* Other optimizations.
 
 = 1.0.1 =
 
