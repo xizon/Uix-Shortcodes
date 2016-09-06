@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,22 +33,6 @@ There is a second way, make a new Cascading Style Sheet (CSS) document which nam
 Note: Making a new javascrpt (.js) document which name to "uix-shortcodes-custom.js" to your templates directory. Once you have created an existing JS file (uix-shortcodes-custom.js), Uix Shortcodes will use it as a default script to your WordPress Theme.
 
 
-= Credits and Special Thanks =
- - tinyColorPicker (https://github.com/PitPik/tinyColorPicker)
- - Sweetalert (http://t4t5.github.io/sweetalert/)
- - Font Awesome (https://fortawesome.github.io/Font-Awesome/)
- - prettyPhoto (http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/#prettyPhoto)
- - SyntaxHighlighter (http://alexgorbatchev.com/SyntaxHighlighter/)
- - Flexslider (http://flexslider.woothemes.com/)
- - jQuery Parallax (https://github.com/IanLunn/jQuery-Parallax)
- - Shuffle (https://github.com/Vestride/Shuffle)
- - imagesloaded (https://github.com/desandro/imagesloaded)
- - Easy Pie Chart (https://github.com/xizon/easy-pie-chart)
- - Flaticon (http://www.flaticon.com)
-
-
- 
-Once you have created or opened an existing CSS file, you can edit in in the code editor. 
 
 == Installation ==
 
@@ -106,6 +90,10 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 
 == Changelog ==
+
+= 1.0.3 =
+
+* Fix custom CSS function in the WordPress administration screens.
 
 = 1.0.2 =
 

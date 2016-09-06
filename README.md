@@ -30,6 +30,10 @@ The content elements are the heart of any page builder. These are the elements s
 
 ### Updates 
 
+##### Version 1.0.3
+
+Fix custom CSS function in the WordPress administration screens.
+
 ##### Version 1.0.2
 
 Fix parse error for tinyColorPicker sometimes.
