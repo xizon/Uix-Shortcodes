@@ -7,18 +7,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 // variables for the field and option names 
 $hidden_field_name = 'submit_hidden_customcss';
 
-//---
-$uix_sc_opt_cssnewcode = 'uix_sc_opt_cssnewcode';
-$style_code_uix_shortcodes = get_option( $uix_sc_opt_cssnewcode );
-	
+
+
 // If they did, this hidden field will be set to 'Y'
 if( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' ) {
-	// Read their posted value
-	$style_code_uix_shortcodes = $_POST[ 'uix_sc_opt_cssnewcode' ];
 	
-
 	// Save the posted value in the database
-	update_option( $uix_sc_opt_cssnewcode, $style_code_uix_shortcodes );
+	update_option( 'uix_sc_opt_cssnewcode', wp_unslash( $_POST[ 'uix_sc_opt_cssnewcode' ] ) );
 
 
 	// Put a "settings saved" message on the screen
@@ -44,7 +39,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
               <?php _e( 'Paste your CSS code', 'uix-shortcodes' ); ?>
             </th>
             <td>
-              <textarea name="uix_sc_opt_cssnewcode" class="regular-text" rows="25" style="width:98%;"><?php echo $style_code_uix_shortcodes; ?></textarea>
+              <textarea name="uix_sc_opt_cssnewcode" class="regular-text" rows="25" style="width:98%;"><?php echo esc_textarea( get_option( 'uix_sc_opt_cssnewcode' ) ); ?></textarea>
             </td>
           </tr>
         </table> 
