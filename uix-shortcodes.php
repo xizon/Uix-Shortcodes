@@ -304,7 +304,7 @@ class UixShortcodes {
 		if ( !empty( $uix_sc_frontend_css ) ) {
 			$custom_css = $custom_css.$uix_sc_frontend_css;
 		}
-		wp_add_inline_style( self::PREFIX . '-shortcodes-frontend-style', $custom_css );
+		wp_add_inline_style( self::PREFIX . '-shortcodes', $custom_css );
 		
 		return $uix_sc_frontend_css;
 
