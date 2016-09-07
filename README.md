@@ -20,7 +20,7 @@ Licensed under the [GPL3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ### Description
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: `container`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)` and `recent posts with custom template`.
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: `container`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)`, `recent posts with custom template` and `author card`.
 
 
 The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
@@ -28,7 +28,14 @@ The content elements are the heart of any page builder. These are the elements s
 #####Very easy to use :)
 
 
-### Updates 
+### Updates
+
+##### Version 1.0.4
+
+Added "Author Card" shortcode.
+
+Core CSS optimization.
+ 
 
 ##### Version 1.0.3
 
@@ -100,6 +107,7 @@ Initial Release.
 
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-17.jpg)
 
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-18.jpg)
 
 
 ###Credits

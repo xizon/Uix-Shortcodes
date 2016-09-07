@@ -117,11 +117,9 @@ $icons_show = '
 
 //Social
 echo '
-<div class="sweet-icon-selector-container-s">
-	<div class="sweet-icon-selector">
-		'.$icons_show.'
-	</div>
-
+<div class="sweet-icon-selector sweet-icon-selector-s">
+	'.$icons_show.'
 </div>
+
 
 ';

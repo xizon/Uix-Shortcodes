@@ -1664,3 +1664,67 @@ function uix_sc_fun_contact_form( $atts, $content = null ) {
 }
 
 add_shortcode( 'uix_contact_form', 'uix_sc_fun_contact_form' );
+
+
+
+
+//----------------------------------------------------------------------------------------------------
+// Author Card
+//----------------------------------------------------------------------------------------------------
+function uix_sc_fun_authorcard( $atts, $content = null ) {
+	extract( shortcode_atts( array( 
+	  'name' => '',
+	  'avatar' => '',
+	  'btnurl' => '#',
+	  'btnlabel' => '&rarr;',
+	  'social_1' => '',
+	  'social_2' => '',
+	  'social_3' => '',
+	  'primarycolor' => '#a2bf2f'
+		
+		
+	 ), $atts ) );
+	 
+   $avatarURL = ( !empty( $avatar ) ) ? $avatar : UixShortcodes::plug_directory() .'assets/images/no-photo.png';
+   
+   $social_arr_1 = explode( '|', $social_1 );
+   $social_arr_2 = explode( '|', $social_2 );
+   $social_arr_3 = explode( '|', $social_3 );
+   
+   $social_url_1 = ( !empty( $social_arr_1[1] ) ) ? $social_arr_1[1] : '#';
+   $social_url_2 = ( !empty( $social_arr_2[1] ) ) ? $social_arr_2[1] : '#';
+   $social_url_3 = ( !empty( $social_arr_3[1] ) ) ? $social_arr_3[1] : '#';
+   
+   $social_icon_1 = ( !empty( $social_arr_1[0] ) ) ? $social_arr_1[0] : 'link';
+   $social_icon_2 = ( !empty( $social_arr_2[0] ) ) ? $social_arr_2[0] : 'link';
+   $social_icon_3 = ( !empty( $social_arr_3[0] ) ) ? $social_arr_3[0] : 'link'; 
+   
+   
+   $social_out_1 = ( !empty( $social_arr_1[1] ) ) ? '<a href=\''.$social_url_1.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_1 ).'\'></i></a>' : '';
+   $social_out_2 = ( !empty( $social_arr_2[1] ) ) ? '<a href=\''.$social_url_2.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_2 ).'\'></i></a>' : '';
+   $social_out_3 = ( !empty( $social_arr_3[1] ) ) ? '<a href=\''.$social_url_3.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_3 ).'\'></i></a>' : '';
+
+
+   $return_string = '
+	<div class="uix-authorcard" style="border-top-color: '.$primarycolor.';">
+		<div class="uix-authorcard-top">
+			<div class="uix-authorcard-text">
+				<h3 class="uix-authorcard-title">'.$name.'
+				'.$social_out_1.'
+				'.$social_out_2.'
+				'.$social_out_3.'
+				</h3> 	 
+		    </div>
+			<div class="uix-authorcard-pic"><img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'"></div>
+		</div>
+		<div class="uix-authorcard-middle">'.$content.'</div> 
+		<a class="uix-authorcard-final" href="'.$btnurl.'" rel="author">'.$btnlabel.'</a> 
+	</div>            
+   ';
+
+
+	
+	return UixShortcodes::do_callback( $return_string );
+}
+
+add_shortcode( 'uix_authorcard', 'uix_sc_fun_authorcard' );

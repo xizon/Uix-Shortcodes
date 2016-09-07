@@ -221,7 +221,15 @@
 								onclick: function() {
 									jQuery( '#uix_sc_form_audio' ).trigger( 'click' );
 								}
-							},						
+							},	
+							
+							
+							{
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_34' ),
+								onclick: function() {
+									jQuery( '#uix_sc_form_authorcard' ).trigger( 'click' );
+								}
+							},												
 											
 						]
 							

@@ -5,21 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // variables for the field and option names 
-$hidden_field_name = 'submit_hidden_icontype';
-
-//---
-$uix_sc_opt_icontype = 'uix_sc_opt_icontype';
-$icontype_uix_shortcodes = get_option( $uix_sc_opt_icontype, 'fontawesome' );
+$hidden_field_name = 'submit_hidden_uix_sc_generalsettings';
 
 	
 // If they did, this hidden field will be set to 'Y'
 if( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' ) {
-	// Read their posted value
-	$icontype_uix_shortcodes = $_POST[ 'uix_sc_opt_icontype' ];
-	
 
 	// Save the posted value in the database
-	update_option( $uix_sc_opt_icontype, $icontype_uix_shortcodes );
+	update_option( 'uix_sc_opt_icontype', $_POST[ 'uix_sc_opt_icontype' ] );
 
 
 	// Put a "settings saved" message on the screen
@@ -44,15 +37,19 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
               
             </th>
             <td>
-                <p><label>
-                    <input name="uix_sc_opt_icontype" type="radio" value="fontawesome" class="tog"  <?php if ( $icontype_uix_shortcodes == 'fontawesome' ){ echo 'checked="checked"';}; ?> />
-                    Font Awesome	</label>
+                <p>
+                    <label>
+                        <input name="uix_sc_opt_icontype" type="radio" value="fontawesome" class="tog" <?php echo ( get_option( 'uix_sc_opt_icontype' ) == 'fontawesome' || !get_option( 'uix_sc_opt_icontype' ) ) ? 'checked' : ''; ?> />
+                        <?php _e( 'Font Awesome', 'uix-shortcodes' ); ?>
+                    </label>
                 </p>
                 
-                 <p><label>
-                    <input name="uix_sc_opt_icontype" type="radio" value="flaticon" class="tog"  <?php if ( $icontype_uix_shortcodes == 'flaticon' ){ echo 'checked="checked"';}; ?> />
-                    Flaticon	</label>
-                </p>        
+                <p>
+                    <label>
+                        <input name="uix_sc_opt_icontype" type="radio" value="flaticon" class="tog" <?php echo ( get_option( 'uix_sc_opt_icontype' ) == 'flaticon' ) ? 'checked' : ''; ?> />
+                        <?php _e( 'Flaticon', 'uix-shortcodes' ); ?>
+                    </label>
+                </p>       
             </td>
           </tr>
         </table> 

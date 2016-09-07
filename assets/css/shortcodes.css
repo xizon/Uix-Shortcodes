@@ -1,16 +1,41 @@
 /*
- * Uix Shortcodes
- * Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
- * Author: UIUX Lab
- * Author URI: https://uiux.cc
- * License: GPLv2 or later
+
+	 Uix Shortcodes
+	 Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
+	 Author: UIUX Lab
+	 Author URI: https://uiux.cc
+	 License: GPLv2 or later
+	
+	
+	TABLE OF CONTENTS
+	---------------------------
+	
+	1. Basic
+	2. Container    
+	3. Portfolio  
+	4. Dividing Line 
+	5. Heading 
+	6. Share Buttons  
+	7. Features   
+	8. Pricing  
+	9. Accordion 
+	10. Tabs
+	11. Gallery list (Team)
+	12. Card list   
+	13. Client 
+	14. Testimonials Carousel 
+	15. Media
+	16. Progress Bar
+	17. Google Map     
+	18. Author Card                         
+
+
 */
 
-/**
- *  Common
- * ----------------------------------------------------------------------------
- */
- 
+
+/* ====================================================== 
+   1. Basic                               
+/* ====================================================== */
 .uix-sc-row {
 
 }
@@ -189,11 +214,9 @@ img.uix-sc-img,
 }
 
 
-/**
- *  Container
- * ----------------------------------------------------------------------------
- */
-
+/* ====================================================== 
+   2. Container                               
+/* ====================================================== */
 .uix-sc-container{
 	margin: 0 auto;
 	max-width: 1200px;
@@ -258,11 +281,9 @@ img.uix-sc-img,
 }
 
 
-
-/**
- *  Portfolio
- * ----------------------------------------------------------------------------
- */
+/* ====================================================== 
+   3. Portfolio                               
+/* ====================================================== */
 .uix-sc-portfolio-tiles {
 	/* Let all the flexible items be the same length, regardles of its content */
 	display: -moz-flex;
@@ -578,12 +599,9 @@ img.uix-sc-img,
 }
 
 
-
-/**
- *  Dividing Line
- * ----------------------------------------------------------------------------
- */
- 
+/* ====================================================== 
+   4. Dividing Line                               
+/* ====================================================== */
 .uix-sc-separator-base{
 	display: block;
 	clear: both;
@@ -653,11 +671,9 @@ img.uix-sc-img,
 			
 		}
 
-
-/**
- *  Heading
- * ----------------------------------------------------------------------------
- */
+/* ====================================================== 
+   5. Heading                               
+/* ====================================================== */
 .uix-sc-heading,.uix-sc-subheading{
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1;
@@ -883,11 +899,9 @@ img.uix-sc-img,
 	
 
 
-
-/**
- *  Share Buttons
- * ----------------------------------------------------------------------------
- */
+/* ====================================================== 
+   6. Share Buttons                               
+/* ====================================================== */
 .uix-sc-share {
 	padding: .3em 0;
 	clear: both;
@@ -968,11 +982,9 @@ img.uix-sc-img,
 
 
 
-
-/**
- *  Features
- * ----------------------------------------------------------------------------
- */
+/* ====================================================== 
+   7. Features                              
+/* ====================================================== */
 .uix-sc-feature{
 
 }
@@ -1030,11 +1042,9 @@ img.uix-sc-img,
 
 
 
-
-/**
- *  Pricing
- * ----------------------------------------------------------------------------
- */
+/* ====================================================== 
+   8. Pricing                              
+/* ====================================================== */
 .uix-sc-price{
 	text-align: center;
 	
@@ -1199,12 +1209,9 @@ img.uix-sc-img,
 	
 
 
-
-/**
- *  Accordion
- * ----------------------------------------------------------------------------
- */
- 
+/* ====================================================== 
+   9. Accordion                              
+/* ====================================================== */
 .uix-sc-accordion-box{
 	
 }
@@ -1268,12 +1275,9 @@ img.uix-sc-img,
 		display: block;
 	}
 
-
-/**
- *  Tabs
- * ----------------------------------------------------------------------------
- */
-
+/* ====================================================== 
+   10. Tabs                              
+/* ====================================================== */
 .uix-sc-tabs:before,
 .uix-sc-tabs:after {
   display: table;
@@ -1443,11 +1447,9 @@ img.uix-sc-img,
 }	
 
 
-/**
- *  Gallery list (Team)
- * ----------------------------------------------------------------------------
- */
- 
+/* ====================================================== 
+   11. Gallery list (Team)                              
+/* ====================================================== */
 .uix-sc-gallery {
 	/* Let all the flexible items be the same length, regardles of its content */
 	display: -moz-flex;
@@ -1684,12 +1686,9 @@ img.uix-sc-img,
 
 
 
-
-/**
- *  Card list
- * ----------------------------------------------------------------------------
- */
- 
+/* ====================================================== 
+   12. Card list                           
+/* ====================================================== */
 .uix-sc-card {
 	
 }
@@ -1829,11 +1828,10 @@ img.uix-sc-img,
 	
 }
 
-/**
- *  Client
- * ----------------------------------------------------------------------------
- */
- 
+
+/* ====================================================== 
+   13. Client                           
+/* ====================================================== */
 .uix-sc-client{
 	 
 }
@@ -1848,12 +1846,9 @@ img.uix-sc-img,
 	 }
 	 
 	 
-
-/**
- *  Testimonials Carousel
- * ----------------------------------------------------------------------------
- */
- 
+/* ====================================================== 
+   14. Testimonials Carousel                           
+/* ====================================================== */
 /* Custom flexslider style */ 
 .uix-sc-flex-direction-nav a:before{
 	display: none;
@@ -2041,11 +2036,9 @@ img.uix-sc-img,
 			}
 					 
 	 
-
-/**
- *  Embed
- * ----------------------------------------------------------------------------
- */ 
+/* ====================================================== 
+   15. Media                     
+/* ====================================================== */
 .uix-sc-embed-responsive {
   position: relative;
   display: block;
@@ -2068,11 +2061,9 @@ img.uix-sc-img,
 	}
 
 
-/**
- *  Progress Bar
- * ----------------------------------------------------------------------------
- */ 
-
+/* ====================================================== 
+   16. Progress Bar                     
+/* ====================================================== */
 .uix-sc-bar-box {
 	postiion: relative;
 	display: inline-block;
@@ -2160,11 +2151,9 @@ img.uix-sc-img,
 		
 		
 
-
-/**
- *  Google Map
- * ----------------------------------------------------------------------------
- */ 	
+/* ====================================================== 
+   17. Google Map                 
+/* ====================================================== */	
 .uix-sc-map-output .full-map  {
 	height: 100vh !important;
 }
@@ -2207,4 +2196,107 @@ img.uix-sc-img,
 }	  
 		  
 		  
+/* ====================================================== 
+   18. Author Card        
+/* ====================================================== */	  
+.uix-authorcard {
+    margin: 0 auto;
+    border: 1px solid #eaeaea;
+    position: relative;
+	border-top: 3px solid #a2bf2f;
+	margin-bottom: 1em;
+}
+
+.uix-authorcard-top {
+	min-height: 2.38461538462em;
+    background: #fff;
+    padding: .75em 2em 0 2em;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+	.uix-authorcard-top .uix-authorcard-title {
+		margin: 0;
+		padding: 0;
+		font-size: 18px;
+		line-height: 1.7;
+	}
+
+	.uix-authorcard-top .uix-authorcard-text {
+		margin-top: .5em;
+		padding-left: 1em;
+		float: left;
+		width: calc(100% - 105px );
+	}
+
+		.uix-authorcard-top .uix-authorcard-text a {
+			font-size: 14px;
+			margin: 0 0 0 .7em;
+			filter: alpha(opacity=50);  
+			-moz-opacity: 0.5;   
+			opacity: 0.5; 
+		}
+			
+	.uix-authorcard-top .uix-authorcard-pic {
+		position: relative;
+		top: .2em;
+		height: 5em;
+		width: 5em;
+		float: right;
+		width: 100px;
+		height: 100px;
+	}
+		
+		.uix-authorcard-top .uix-authorcard-pic img {
+			width: 90px !important;
+			height: 90px !important;
+			margin: 5px 0 0 5px;
+			border: 1px solid #eaeaea;
+			-webkit-border-radius: 100%; 
+			-moz-border-radius: 100%; 
+			border-radius: 100%;
+		}
+
+.uix-authorcard-middle {
+    background: #fff;
+    padding: 2em 2em 0 1em;
+	line-height: 1.5;
+}
+
+.uix-authorcard-middle:after {
+    content: '';
+    position: relative;
+    height: 0;
+    width: 0;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-top: .5em solid #fff;
+    position: absolute;
+    bottom: 25px;
+    left: 2em;
+}
+	
+	.uix-authorcard-middle p {
+		margin-top: 1em;
+		padding: 0 1em 0 2em;
+	}
+
+.uix-authorcard-final {
+    height: 30px;
+    font-size: 12px;
+    display: block;
+    background: #F6F6F6;
+    padding: .6em 2.5em;
+	text-align: right;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+	color: #BDBDBD;
+}
+
+	.uix-authorcard-final .uix-authorcard-text {
+		color: #fff;
+		margin-left: .5em;
+	}	  
 		  

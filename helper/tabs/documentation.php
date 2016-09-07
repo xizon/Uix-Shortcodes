@@ -1587,7 +1587,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                        <div class="uix-list-content">
                        
                            <p><?php _e( 'This shortcode allows you to add a audio. You can paste the URL of SoundCloud or Audiomack, .mp3, .ogg format, and so on.', 'uix-shortcodes' ); ?>
-                           <blockquote class="alert"><?php _e( 'If you are using SoundCloud or Audiomack, the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'Enable SoundCloud', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'checkbox should be checked on the content of the popup window.', 'uix-shortcodes' ); ?></blockquote>
+                           <blockquote class="note"><?php _e( 'If you are using SoundCloud or Audiomack, the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'Enable SoundCloud', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'checkbox should be checked on the content of the popup window.', 'uix-shortcodes' ); ?></blockquote>
                             </p>
                             
                             <div class="uix-d-tabs">
@@ -1687,6 +1687,120 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                        </div><!-- /.uix-list-content -->
                        
                        <!-- ````````````````````````````````````````````````````````````````` -->
+                   
+                   
+                       <div class="uix-list-title"><?php _e( 'Author Card', 'uix-shortcodes' ); ?></div>
+                       <div class="uix-list-content">
+                       
+                           <p><?php _e( 'This shortcode designed it to allow your authors to present themselves in an elegant way.', 'uix-shortcodes' ); ?>
+                            </p>
+                            
+                            <div class="uix-d-tabs">
+                                <h3><?php _e( 'Admin Screenshots', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-51.jpg" alt="" />
+                                    
+                                </div>
+
+                                
+                                <h3 class="arg"><?php _e( 'Options', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                    <div class="uix-table-all">
+                                        <table>
+                                            <tr>
+                                                <th><?php _e( 'Name', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Type', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Default', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Description', 'uix-shortcodes' ); ?></th>
+                                            </tr>
+                         
+                            
+                                            <tr>
+                                                <td><?php _e( 'Primary Color', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-content-8.jpg" alt="" /></td>
+                                                <td><?php _e( 'You want for the primary color of this author card.', 'uix-shortcodes' ); ?></td>
+                                            </tr>        
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Author Picture', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'The avatar or Logo of this author.', 'uix-shortcodes' ); ?></td>
+                                            </tr>   
+                                              
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Author Name', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'The name of this author.', 'uix-shortcodes' ); ?></td>
+                                            </tr>                           
+                                     
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Biographical Info', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'The introduction of this author. The textarea is supported by HTML tags.', 'uix-shortcodes' ); ?></td>
+                                            </tr>   
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Link Text', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( '&rarr;', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'That is the text you would like displayed on the link region.', 'uix-shortcodes' ); ?></td>
+                                            </tr>   
+                                                                                      
+                                            <tr>
+                                                <td><?php _e( 'Link URL', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
+                                                <td>#</td>
+                                                <td><?php _e( 'URL of this link.', 'uix-shortcodes' ); ?></td>
+                                            </tr>            
+                                            
+                                            
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Social Network *', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'String & Selector', 'uix-shortcodes' ); ?> <em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'There are many different types of social media. You can choose custom button types.', 'uix-shortcodes' ); ?></td>
+                                            </tr> 
+                                            
+                                           
+                                           
+                                          
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                
+                                <h3><?php _e( 'Example', 'uix-shortcodes' ); ?></h3>
+                                <div>
+<pre class="brush: css;">
+&nbsp;
+[uix_authorcard primarycolor='#a2bf2f' btnlabel='→' btnurl='#' name='Jone Smith' avatar='http://your.website.com/photo.png' social_1='twitter|https://twitter.com/' social_2='facebook|https://www.facebook.com/' social_3='|' ][p]The Introduction of this author.[br]Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. [/p]
+[/uix_authorcard]
+
+[uix_authorcard primarycolor='#DD514C' btnlabel='→' btnurl='#' name='Name' avatar='http://your.website.com/photo.png' social_1='|' social_2='|' social_3='|' ][p]The Introduction of this author.[/p]
+[/uix_authorcard]
+&nbsp;
+</pre>
+                                </div>
+                                
+                      
+                                
+                                       
+                                <h3><?php _e( 'Preview', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                   <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-50.jpg" alt="" />
+                                </div>
+                            </div><!-- .uix-d-tabs -->
+                       </div><!-- /.uix-list-content -->
+                       
+                       <!-- ````````````````````````````````````````````````````````````````` -->
+                        
                    
   
      

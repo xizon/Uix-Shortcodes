@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.0.3
+ * Version:     1.0.4
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -217,7 +217,7 @@ class UixShortcodes {
 	 * Add plugin actions links
 	 */
 	public static function actions_links( $links ) {
-		$links[] = '<a href="' . admin_url( "admin.php?page=".self::CUSPAGE ) . '">' . __( 'Settings', 'uix-shortcodes' ) . '</a>';
+		$links[] = '<a href="' . admin_url( "admin.php?page=".self::CUSPAGE."&tab=general-settings" ) . '">' . __( 'Settings', 'uix-shortcodes' ) . '</a>';
 		$links[] = '<a href="' . admin_url( "admin.php?page=".self::CUSPAGE."&tab=usage" ) . '">' . __( 'How to use?', 'uix-shortcodes' ) . '</a>';
 		return $links;
 	}

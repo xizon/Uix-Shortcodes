@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // variables for the field and option names 
-$hidden_field_name = 'submit_hidden_customcss';
+$hidden_field_name = 'submit_hidden_uix_sc_customcss';
 
 
 

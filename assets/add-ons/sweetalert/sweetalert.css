@@ -601,8 +601,8 @@ body.stop-scrolling {
 .sweet-alert .sweet-upbtn-container{
 	position:relative;
 	width:98%;
-	
 }
+
 
 .sweet-alert .sweet-upbtn-container:before {
 	display:block;
@@ -851,14 +851,6 @@ body.stop-scrolling {
 
 /* Icons Selector
 -------------------------------------------------------------- */
-
-.sweet-icon-selector-container{
-
-	width:100%;
-	background:#fff;
-	
-}
-
 .sweet-icon-selector-label:before {
   display: table;
   content: "";
@@ -885,7 +877,6 @@ body.stop-scrolling {
 }
 
 
-
 .sweet-icon-selector{
 	width:96%;
 	height:105px;
@@ -895,12 +886,11 @@ body.stop-scrolling {
 	float:left;
 	overflow-y: auto;
 }
-.sweet-icon-selector-container .sweet-icon-selector{
-	height:50px;
+.sweet-icon-selector.sweet-icon-selector-s{
+	height:50px !important;
+	width: 780px;
 }
-.sweet-icon-selector-container-s .sweet-icon-selector{
-	height:50px;
-}
+
 
 
 .sweet-icon-selector a.b{
@@ -1384,6 +1374,13 @@ body.stop-scrolling {
 	
 
 		
+	/* Icons Selector
+	-------------------------------------------------------------- */
+	.sweet-icon-selector.sweet-icon-selector-s{
+		height:50px !important;
+		width: 615px;
+	}
+	
 
 
 }
@@ -1534,6 +1531,13 @@ body.stop-scrolling {
 	
 	}
 		
+		
+	/* Icons Selector
+	-------------------------------------------------------------- */
+	.sweet-icon-selector.sweet-icon-selector-s{
+		height:50px !important;
+		width: 275px;
+	}
 	
  
 	 
@@ -1614,6 +1618,14 @@ body.stop-scrolling {
 	
 	.sweet-alert .delrow-container{
 		width:260px;
+	}
+	
+	
+	/* Icons Selector
+	-------------------------------------------------------------- */
+	.sweet-icon-selector.sweet-icon-selector-s{
+		height:50px !important;
+		width: 100%;
 	}
 		
 	

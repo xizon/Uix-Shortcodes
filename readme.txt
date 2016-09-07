@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ Uix Shortcodes brings an amazing set of beautiful and useful elements to your si
 == Description ==
 
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: `container`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)` and `recent posts with custom template`.
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: `container`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)`, `recent posts with custom template` and `author card`.
 
 
 The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
@@ -82,6 +82,8 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 15. screenshot-15.jpg
 16. screenshot-16.jpg
 17. screenshot-17.jpg
+18. screenshot-18.jpg
+
 
 == Upgrade Notice ==
 
@@ -90,6 +92,11 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 
 == Changelog ==
+
+= 1.0.4 =
+
+* Added "Author Card" shortcode.
+* Core CSS optimization.
 
 = 1.0.3 =
 
