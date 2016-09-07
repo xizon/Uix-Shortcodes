@@ -50,11 +50,47 @@
 	
 }
 
+
 .uix-list-content:after{
   display: table;
   content: "";
   line-height: 0;
 }
+	
+
+.uix-list-content .note {
+    position: relative;
+    clear: both;
+    background: #FCDBD6;
+    border: 1px solid #ECD5D8;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(255,255,255,.1);
+    box-shadow: 0 1px 1px 0 rgba(255,255,255,.1);
+    margin: 5px 2px 2px 0;
+    padding: 1px 12px;
+    border-color: #f5df52;
+    background: #fcf7d4;
+    box-shadow: inset 0 0 0 1px #ffffff, 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.uix-list-content .note p {
+    margin: .5em 0;
+    padding: 2px;
+}
+
+.uix-list-content .info {
+    position: relative;
+    clear: both;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+	border-left: 3px solid #C8C8C8;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(255,255,255,.1);
+    box-shadow: 0 1px 1px 0 rgba(255,255,255,.1);
+    margin: 5px 2px 2px 0;
+    padding: 1px 12px;
+    box-shadow: inset 0 0 0 1px #ffffff, 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+
 	
 	
 	
