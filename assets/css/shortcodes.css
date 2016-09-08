@@ -366,7 +366,7 @@ img.uix-sc-img,
 	transition: .2s ease-in-out;
 	content: '+';
 	color: #fff;
-	font-family: 'latohairline', Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 46px;
 	font-weight: 100;
 	display: block;
@@ -675,7 +675,6 @@ img.uix-sc-img,
    5. Heading                               
 /* ====================================================== */
 .uix-sc-heading,.uix-sc-subheading{
-	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1;
 	font-weight: bold;
 	margin: .37em 0 .1em;
