@@ -1220,6 +1220,7 @@ img.uix-sc-img,
 	.uix-sc-accordion .uix-sc-spoiler{
 		border-bottom: 1px dotted rgba(0,0,0,.1);
 		padding: 0 0 .5em 0;
+		margin-bottom: 1.5em;
 	}
 	
 	.uix-sc-accordion .uix-sc-spoiler-group{
@@ -1227,11 +1228,14 @@ img.uix-sc-img,
 	}
 
 		.uix-sc-accordion .uix-sc-spoiler .uix-sc-spoiler-title{
+			margin: 0;
+			padding: 0;
 			cursor: pointer;
 			widows: 1; /*Accordion Analyzing Parameters*/
 			font-size: 14px;
 			letter-spacing: 0;
 			font-weight: normal;
+			padding-bottom: 1em;
 		}
 		
 		
@@ -1274,6 +1278,7 @@ img.uix-sc-img,
 	.uix-sc-accordion .uix-sc-spoiler-content.uix-sc-spoiler-content-show {
 		display: block;
 	}
+
 
 /* ====================================================== 
    10. Tabs                              
