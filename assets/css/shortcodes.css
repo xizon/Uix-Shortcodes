@@ -676,7 +676,7 @@ img.uix-sc-img,
 /* ====================================================== */
 .uix-sc-heading,.uix-sc-subheading{
 	line-height: 1;
-	font-weight: bold;
+	font-weight: 700;
 	margin: .37em 0 .1em;
 }
 .uix-sc-heading {
@@ -686,7 +686,6 @@ img.uix-sc-img,
 .uix-sc-subheading{
 	line-height: 1.5;
 	margin: 0;
-	font-weight: normal;
 }
   .uix-sc-subheading p {
 	  padding: 0;
@@ -757,10 +756,7 @@ img.uix-sc-img,
 	font-size: 12px;
 	position: relative;
 	margin: 1em 1em .7em 0;
-	display: inline-block;
-	font-weight: normal;
-	
-	
+	display: inline-block;	
 }
 
 	.uix-sc-btn .fa{
@@ -1018,12 +1014,9 @@ img.uix-sc-img,
 		
 	}
 	
-	
-	
 	.uix-sc-feature-title{
 		font-size: 18px;
 		letter-spacing: 0;
-		font-weight: 400;
 	}
 	
 	.uix-sc-feature-desc{
@@ -1109,12 +1102,11 @@ img.uix-sc-img,
 	
 	.uix-sc-price-num{
 		color: #d59a3e;
-		font-weight: bold;
+		font-weight: 700;
 	}
 	
 	.uix-sc-price-period{
 		font-size: 14px;
-		font-weight: 500;
 	}
 	
 	
@@ -1128,7 +1120,6 @@ img.uix-sc-img,
 	.uix-sc-price-excerpt{
 		height: auto;
 		padding: 0 1em;
-		font-weight: 600;
 		font-size: 14px;
 	}
 		
@@ -1233,7 +1224,6 @@ img.uix-sc-img,
 			widows: 1; /*Accordion Analyzing Parameters*/
 			font-size: 14px;
 			letter-spacing: 0;
-			font-weight: normal;
 			padding-bottom: 1em;
 		}
 		
@@ -1241,7 +1231,6 @@ img.uix-sc-img,
 		.uix-sc-accordion .uix-sc-spoiler .uix-sc-spoiler-title:before {
 			content: '\f067';
 			font-family: FontAwesome;
-			font-weight: normal;
 			display: inline-block;
 			vertical-align: top;
 			padding: 1px 10px 0 0;
@@ -1310,7 +1299,6 @@ img.uix-sc-img,
 		border: 1px solid #DFDFDF;
 		color: #777;
 		line-height: 1.7;
-		font-weight: normal;
 		padding: .5em 1.2em;
 		background: #fff;
 		position: relative;
@@ -1540,7 +1528,6 @@ img.uix-sc-img,
 	.uix-sc-gallery-list .uix-sc-gallery-list-position{
 		padding: 2px 6px;
 		font-size: 12px;
-		font-weight: normal;
 		position: absolute;
 		bottom: 5px;
 		right: 0;
