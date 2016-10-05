@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Wed Sep 07 2016 14:13:20 GMT+0800 (CST)\n"
+"POT-Revision-Date: Thu Oct 06 2016 02:43:42 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,15 +42,15 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:220
+#: ../uix-shortcodes.php:220 ../uix-shortcodes.php:340 ../uix-shortcodes.php:341
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:221 ../helper/settings.php:71
+#: ../uix-shortcodes.php:221 ../helper/settings.php:102
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:327 ../helper/settings.php:52
+#: ../uix-shortcodes.php:327 ../helper/settings.php:83
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
@@ -59,21 +59,29 @@ msgstr ""
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: ../uix-shortcodes.php:665
+#: ../uix-shortcodes.php:348 ../uix-shortcodes.php:349
+msgid "Custom CSS"
+msgstr ""
+
+#: ../uix-shortcodes.php:356 ../uix-shortcodes.php:357
+msgid "Helper"
+msgstr ""
+
+#: ../uix-shortcodes.php:696
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-shortcodes.php:1052
+#: ../uix-shortcodes.php:1102
 msgid "Cancel"
 msgstr ""
 
-#: ../uix-shortcodes.php:1053
+#: ../uix-shortcodes.php:1103
 msgid "Insert into"
 msgstr ""
 
-#: ../uix-shortcodes.php:1072
+#: ../uix-shortcodes.php:1122
 msgid "Using the shortcodes successfully."
 msgstr ""
 
@@ -81,23 +89,23 @@ msgstr ""
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../helper/settings.php:66
+#: ../helper/settings.php:97
 msgid "About"
 msgstr ""
 
-#: ../helper/settings.php:76
+#: ../helper/settings.php:107
 msgid "Documentation"
 msgstr ""
 
-#: ../helper/settings.php:82
+#: ../helper/settings.php:113
 msgid "Credits"
 msgstr ""
 
-#: ../helper/settings.php:87
+#: ../helper/settings.php:118
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: ../helper/settings.php:92
+#: ../helper/settings.php:123
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
@@ -130,6 +138,20 @@ msgid ""
 "could be used together."
 msgstr ""
 
+#: ../helper/tabs/about.php:17
+msgid ""
+"A variety of optional styles are available for Uix ShortCodes. Go to **\"Uix "
+"ShortCodes -> Settings -> General Settings\"**, you can choose the shortcodes "
+"style you want."
+msgstr ""
+
+#: ../helper/tabs/about.php:20
+msgid ""
+"<strong>If you like this plug-in, you can check out my free and high-quality "
+"themes with Uix Shortcodes for you to download.</strong> <h4><a href=\"https:"
+"//uiux.cc/\" target=\"_blank\">Click here to check out</a></h4>"
+msgstr ""
+
 #: ../helper/tabs/credits.php:11
 msgid ""
 "I would like to give special thanks to credits. The following is a guide to "
@@ -144,7 +166,7 @@ msgstr ""
 msgid "Sweetalert"
 msgstr ""
 
-#: ../helper/tabs/credits.php:18 ../helper/tabs/general-settings.php:43
+#: ../helper/tabs/credits.php:18 ../helper/tabs/general-settings.php:58
 msgid "Font Awesome"
 msgstr ""
 
@@ -180,11 +202,11 @@ msgstr ""
 msgid "Easy Pie Chart"
 msgstr ""
 
-#: ../helper/tabs/credits.php:27 ../helper/tabs/general-settings.php:50
+#: ../helper/tabs/credits.php:27 ../helper/tabs/general-settings.php:65
 msgid "Flaticon"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:20 ../helper/tabs/general-settings.php:19
+#: ../helper/tabs/custom-css.php:20 ../helper/tabs/general-settings.php:29
 msgid "Settings saved."
 msgstr ""
 
@@ -2140,8 +2162,20 @@ msgstr ""
 msgid "Preview (output)"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:36
+#: ../helper/tabs/general-settings.php:51
 msgid "Icon Types"
+msgstr ""
+
+#: ../helper/tabs/general-settings.php:75
+msgid "Choose The Shortcodes Style"
+msgstr ""
+
+#: ../helper/tabs/general-settings.php:85
+msgid "Elegant (default)"
+msgstr ""
+
+#: ../helper/tabs/general-settings.php:93
+msgid "Slant"
 msgstr ""
 
 #: ../helper/tabs/usage.php:11
