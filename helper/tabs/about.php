@@ -13,6 +13,12 @@ if( !isset( $_GET[ 'tab' ] ) || $_GET[ 'tab' ] == 'about' ) {
         <p>
            <?php _e( 'The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. <strong>"Content Shortcode"</strong>, <strong>"Column Shortcode"</strong>, <strong>"Web Elements Shortcode"</strong>, <strong>"Container Shortcode"</strong>, and so on. They could be used together.', 'uix-shortcodes' ); ?>
         </p>  
+         <p>
+           <?php _e( 'A variety of optional styles are available for Uix ShortCodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.', 'uix-shortcodes' ); ?>
+        </p>  
+         <p>
+           <?php _e( '<strong>If you like this plug-in, you can check out my free and high-quality themes with Uix Shortcodes for you to download.</strong> <h4><a href="https://uiux.cc/" target="_blank">Click here to check out</a></h4>', 'uix-shortcodes' ); ?>
+        </p>      
 
 
 <?php } ?>

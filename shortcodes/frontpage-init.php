@@ -497,7 +497,7 @@ function uix_sc_fun_toggle( $atts, $content = null ){
 	 ), $atts ) );
 	 
 	
-	 $tabclass = ( $tabs == 1 ) ? ' uix-sc-tabs '.( isset( $style ) && $style == 'vertical' ? 'uix-sc-tabs-vertical' : '' ).'' : '';
+	 $tabclass = ( $tabs == 1 ) ? ' uix-sc-tabs '.( isset( $style ) && $style == 'vertical' ? 'uix-sc-tabs-vertical' : 'uix-sc-tabs-horizontal' ).'' : '';
 	 $transeffect = 'slide';
 	 if ( $effect == 1 ) $transeffect = 'slide';
 	 if ( $effect == 2 ) $transeffect = 'fade';
@@ -513,8 +513,8 @@ function uix_sc_fun_toggle( $atts, $content = null ){
 			   
 	
 	} else {
-		$content = str_replace( '[uix_toggle_item_title]', '<h3 class="uix-sc-spoiler-title">',
-				   str_replace( '[/uix_toggle_item_title]', '</h3>',
+		$content = str_replace( '[uix_toggle_item_title]', '<div class="uix-sc-spoiler-title">',
+				   str_replace( '[/uix_toggle_item_title]', '</div>',
 			   $content
 			   ) );
 			   

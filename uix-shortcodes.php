@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.0.4
+ * Version:     1.0.5
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -333,8 +333,39 @@ class UixShortcodes {
 			'81.' . rand( 0, 99 )
 			
 		);
+	
+        //Add sub links
+		add_submenu_page(
+			self::CUSPAGE,
+			__( 'Settings', 'uix-shortcodes' ),
+			__( 'Settings', 'uix-shortcodes' ),
+			'manage_options',
+			'admin.php?page='.self::CUSPAGE.'&tab=general-settings'
+		);
+	
+		add_submenu_page(
+			self::CUSPAGE,
+			__( 'Custom CSS', 'uix-shortcodes' ),
+			__( 'Custom CSS', 'uix-shortcodes' ),
+			'manage_options',
+			'admin.php?page='.self::CUSPAGE.'&tab=custom-css'
+		);	
 		
+		add_submenu_page(
+			self::CUSPAGE,
+			__( 'Helper', 'uix-shortcodes' ),
+			__( 'Helper', 'uix-shortcodes' ),
+			'manage_options',
+			'admin.php?page='.self::CUSPAGE
+		);	
+		
+		// remove the "main" submenue page
+		remove_submenu_page( self::CUSPAGE, self::CUSPAGE );
+			
+			
 	 }
+	
+	
 	 
 	/*
 	 * Load helper
@@ -823,12 +854,31 @@ class UixShortcodes {
 	 */
 	public static function sc_css_file() {
 		
+		//default style
 		$validPath = self::plug_directory() .'assets/css/shortcodes.css';
 		$newFilePath = get_stylesheet_directory() . '/uix-shortcodes-style.css';
-	
+		
+		//shortcodes themes
+		$shortcodes_style = get_option( 'uix_sc_opt_style', 'elegant' );
+		$filenames = array();
+		$filepath = WP_PLUGIN_DIR .'/'.self::get_slug(). '/assets/css/';
+		
+		foreach ( glob( dirname(__FILE__). "/assets/css/shortcodes-*") as $file ) {
+		    $filenames[] = str_replace( '.css', '', str_replace( 'shortcodes-', '', str_replace( dirname(__FILE__). "/assets/css/", '', $file ) ) );
+		}	
+		
+		foreach ( $filenames as $filename ) {
+			if ( $shortcodes_style == $filename ) {
+				$validPath = self::plug_directory() .'assets/css/shortcodes-'.$filename.'.css';
+				break;
+			}
+		}	
+		
+	    //custom stylesheet for WP theme directory
 		if ( file_exists( $newFilePath ) ) {
 			$validPath = get_template_directory_uri() . '/uix-shortcodes-style.css';
 		}
+		
 		
 		return $validPath;
 		

@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,9 @@ Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve 
 
 
 The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
+
+
+A variety of optional styles are available for Uix ShortCodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.
 
 
 https://www.youtube.com/watch?v=DCpGXKRvz1E
@@ -83,6 +86,8 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 16. screenshot-16.jpg
 17. screenshot-17.jpg
 18. screenshot-18.jpg
+19. screenshot-19.jpg
+20. screenshot-20.jpg
 
 
 == Upgrade Notice ==
@@ -92,6 +97,13 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 
 == Changelog ==
+
+= 1.0.5 =
+
+* Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you can choose the shortcodes style you want.
+* Core CSS optimization.
+* Optimized shortcodes script.
+
 
 = 1.0.4 =
 

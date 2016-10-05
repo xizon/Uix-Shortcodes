@@ -25,10 +25,22 @@ Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve 
 
 The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
 
+A variety of optional styles are available for Uix ShortCodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.
+
+
 #####Very easy to use :)
 
 
 ### Updates
+
+##### Version 1.0.5
+
+Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you can choose the shortcodes style you want.
+
+Core CSS optimization.
+
+Optimized shortcodes script.
+
 
 ##### Version 1.0.4
 
@@ -108,6 +120,11 @@ Initial Release.
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-17.jpg)
 
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-18.jpg)
+
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-19.jpg)
+
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-20.jpg)
+
 
 
 ###Credits

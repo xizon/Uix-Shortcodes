@@ -199,7 +199,8 @@
 			var $this = $( this ),
 			    defaultColor = $this.find( '.uix-sc-price-border' ).css( 'border-color' );
 			
-			if ( settings.enable || $this.css( 'top' ) != '0px' ) {
+			if ( settings.enable && $this.css( 'top' ) != '0px' ) {
+				
 				$this.hover(function() {
 					$(this).find( '.uix-sc-price-border' ).css({
 						"border-color": $this.data( 'tcolor' ),
