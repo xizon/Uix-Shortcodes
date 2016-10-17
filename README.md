@@ -33,7 +33,7 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
-##### Version 1.0.6
+##### Version 2.0.0
 
 Optimized for tablet display.
 

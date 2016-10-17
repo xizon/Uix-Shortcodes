@@ -262,17 +262,17 @@ img.uix-sc-img,
 }
 
 
-.uix-sc-container .uix-sc-container-table{
-	display: table;
-	min-height: inherit;
-	width: 100%;
+/* Vertical Center. ( If ".uix-sc-container-table" height is "auto", ".uix-sc-container-content-box" should not print. ) */
+.uix-sc-container .uix-sc-container-table {
+	height: 250px;
 }
-.uix-sc-container .uix-sc-container-table .uix-sc-container-content-box{
-	display: table-cell;
-	vertical-align: middle;
-	height: auto;
-	
-}
+	.uix-sc-container .uix-sc-container-table .uix-sc-container-content-box {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
 
 
 /* ====================================================== 

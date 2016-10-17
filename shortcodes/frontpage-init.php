@@ -105,7 +105,7 @@ function uix_sc_fun_container( $atts, $content = null ){
 	if ( isset( $vertical_center ) &&  $vertical_center == 'false' ) {
 		$now_content = $content;
 	} else {
-		$now_content = '<div class="uix-sc-container-table"><div class="uix-sc-container-content-box">'.$content.'</div></div>';
+		$now_content = ''.( $height != 'auto' ? '<div class="uix-sc-container-table" style="min-height:'.$height.'"><div class="uix-sc-container-content-box">' : '' ).''.$content.''.( $height != 'auto' ? '</div></div>' : '' ).'';
 	}
 
   
