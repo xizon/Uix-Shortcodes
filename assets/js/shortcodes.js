@@ -13,6 +13,8 @@
 
 	$.extend({ 
 		uix_sc_init:function () { 
+		
+		     var $window = $( window );
 	
 	         //Pricing
 			 $( '.uix-sc-price' ).uix_sc_initPricing();
@@ -35,9 +37,16 @@
 			 });
 			 
 			 //Parallax
-			$( '.uix-sc-parallax' ).each(function() {
-				$( this ).bgParallax( "50%", $( this ).data( 'parallax' ) );
-			});
+			 parallaxInit();
+			 $window.on('resize', function() {
+			 	parallaxInit();
+	
+			 });
+			 function parallaxInit() {
+			  	 $( '.uix-sc-parallax' ).each(function() {
+					 $( this ).bgParallax( "50%", $( this ).data( 'parallax' ) );
+				 });
+			 };
 			 
 			 
 			 // Testimonials
@@ -261,7 +270,7 @@
 					
 						
 						
-					$tabsLi.unbind( 'click' ).click( function( e ){
+					$tabsLi.on( 'click', function( e ) {
 					
 						var  contentIndex = $( this ).index(),
 							$title = $( this ),
@@ -308,7 +317,7 @@
 					    spoilerCloseClass = 'uix-sc-spoiler-closed';
 					
 					
-					$spoilerBox.unbind( 'click' ).click( function( e ){ //prevent the extra click event from $spoilerBox
+					$spoilerBox.on( 'click', function( e ) { //prevent the extra click event from $spoilerBox
 					
 						var $title = $( '.uix-sc-spoiler-title', this ), 
 							$spoiler = $title.parent(), 
@@ -469,7 +478,7 @@
 			 });
 			  
 			
-			filterNav.find( 'li > a' ).unbind( 'click' ).click( function(){
+			filterNav.find( 'li > a' ).on( 'click', function( e ) {
 				
 				  var thisBtn = $( this ),
 					  activeClass = 'current',

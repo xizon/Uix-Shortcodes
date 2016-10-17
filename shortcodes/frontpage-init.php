@@ -109,7 +109,7 @@ function uix_sc_fun_container( $atts, $content = null ){
 	}
 
   
-   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).' '.$class.'" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;'.( $height != 'auto' ? 'min-height:'.$height.'' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'">'.$now_content.'</div></div>';	
+   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).' '.$class.'" style="'.( $height != 'auto' ? 'min-height:'.$height.'' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'"><div class="uix-sc-container-body" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;">'.$now_content.'</div></div></div>';	
 	
 
 	

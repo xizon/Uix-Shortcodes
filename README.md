@@ -33,6 +33,15 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### Version 1.0.6
+
+Optimized for tablet display.
+
+Improved event binding from the plugin main JavaScript file.
+
+Improved the main CSS file.
+
+
 ##### Version 1.0.5
 
 Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you can choose the shortcodes style you want.
