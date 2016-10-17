@@ -13,7 +13,6 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'credits' ) {
         <p>
         
         <ul>
-            <li><a href="https://github.com/PitPik/tinyColorPicker" target="_blank" rel="nofollow"><?php _e( 'tinyColorPicker', 'uix-shortcodes' ); ?></a></li>
             <li><a href="http://t4t5.github.io/sweetalert" target="_blank" rel="nofollow"><?php _e( 'Sweetalert', 'uix-shortcodes' ); ?></a></li>
             <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank" rel="nofollow"><?php _e( 'Font Awesome', 'uix-shortcodes' ); ?></a></li>
             <li><a href="https://github.com/nomensa/jquery.accessible-tabs.git" target="_blank" rel="nofollow"><?php _e( 'jQuery Accessible Tabs', 'uix-shortcodes' ); ?></a></li>

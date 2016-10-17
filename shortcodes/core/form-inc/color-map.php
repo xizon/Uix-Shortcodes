@@ -33,8 +33,7 @@ class UixShortcodesForm_ColorMap {
                         <th scope="row"><label>'.$title.'</label></th>
                         <td>	
 						
-						    <div class="sweet-box"> 
-						
+						    <div class="sweet-box">
 								
 			';
 			
@@ -43,9 +42,9 @@ class UixShortcodesForm_ColorMap {
 				                <div class="sweet-color-selector-onlybutton">
 								        
 										<div class="sweet-color-selector-toggles">
-											<div class="trigger" id="'.$id.'" value="'.$value.'" style="background:'.$value.';color:'.( !empty( $value ) ? UixShortcodes::readable_color( $value ) : '#333' ).'"><div></div></div>
+											<input type="text" class="wp-color-input" id="'.$id.'" value="'.$value.'">
 										</div>	
-										<span class="sweet-color-selector-label">'.( !empty( $desc ) ? $desc : __( 'Add Custom Color', 'uix-shortcodes' ) ).'</span>					
+										<span class="sweet-color-selector-label">'.( !empty( $desc ) ? $desc : __( 'Add Custom Color', 'uix-shortcodes' ) ).'</span>		
 								
 								</div>
 
@@ -58,6 +57,7 @@ class UixShortcodesForm_ColorMap {
 				                <div class="sweet-input-text-short">
 				
 									   '.( !empty( $id ) ? '<input type="text" id="'.$id.'" class="sweet-normal sweet-input-text color" '.( !empty( $value ) ? 'style="background:'.$value.';color:'.UixShortcodes::readable_color( $value ).'"' : '' ).' value="'.$value.'" placeholder="'.$placeholder.'">' : '' ).' 
+									   
 									  
 								</div>
 								
@@ -82,26 +82,7 @@ class UixShortcodesForm_ColorMap {
                 '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
             ';
 			
-			$jscode = '
-
-
-				/*-- Color Map --*/
-				$( "#'.$id.'" ).colorPicker({
-					renderCallback: function($elm, toggled) {
-						var colors = this.color.colors,
-							rgb = colors.RND.rgb;
-				
-						$elm.css({
-							backgroundColor: "#" + colors.HEX,
-							backgroundImage: "none",
-							color: colors.RGBLuminance > 0.22 ? "#222" : "#ddd"
-						}).val("rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b +
-							")");
-					}
-				});
-
-		
-			';
+			$jscode = '';
 
 
         }

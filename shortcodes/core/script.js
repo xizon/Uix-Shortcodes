@@ -7,17 +7,11 @@
 ( function($) {
  
 	$( document ).ready( function() {
-	
-		/* Color Picker */
-		$( document ).mousewheel( function( event, delta ) {
-			$( ".cp-color-picker" ).hide();
-		});
 		
 		/* Sweet Alert */
-		$( '.sweet-alert button' ).live( 'click',function(){
+		$( document ).on( 'click', '.sweet-alert button', function( e ) {
 			$( '.sweet-alert' ).css({ top: '50%' });
 		});　
-		
 		
 
 	} ); 
@@ -55,7 +49,7 @@
 			
 			
 			//Click event for icon type: Font Awesome
-			jQuery( '#' + listContainerID ).find( '.b.fontawesome' ).live( 'click',function(){
+			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.fontawesome', function( e ) {
 				var _v = jQuery(this).find( '.fa' ).attr("class");
 				jQuery( '.b.fontawesome' ).removeClass('active');
 				jQuery( this ).addClass( 'active' );
@@ -69,7 +63,7 @@
 			
 		    
 			//Click event for icon type: Flaticon
-			jQuery( '#' + listContainerID ).find( '.b.flaticon' ).live( 'click',function(){
+			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.flaticon', function( e ) {
 				var _v = jQuery(this).find( '.flaticon' ).attr( 'class' );
 				jQuery( '.b.flaticon' ).removeClass( 'active' );
 				jQuery( this ).addClass( 'active' );
@@ -105,7 +99,7 @@
 		,options );
 		return this.each( function() {
 			
-			jQuery( settings.clearIntervalID ).live( 'click',function(){
+			jQuery( document ).on( 'click', settings.clearIntervalID, function( e ) {
 				jQuery( settings.ID ).val( settings.value );
 			});　				
 
@@ -139,8 +133,7 @@
 				clone_content = '<span class="dynamic-row dynamic-addnow">' + clone_content + '<div class="delrow-container"><a href="javascript:" class="delrow '+settings.removebtnClass+'">&times;</a></div></span>';
 				clone_content = clone_content.replace( /toggle-row/g,'toggle-row toggle-row-clone-list' );
 				
-				
-				jQuery( settings.btnID ).live( 'click',function( event ){
+				jQuery( document ).on( 'click', settings.btnID, function( event ) {
 					
 					var btnINdex = parseFloat( jQuery( this ).attr( 'data-index' ) );
 					var sweetWrapperinnerHeight = jQuery( '.sweet-table-wrapper' ).innerHeight() + 24;
@@ -180,16 +173,18 @@
 						$( srow ).animate( { opacity: 1 }, 0 );
 					});
 					
+					//color picker
+					$( '.wp-color-input' ).wpColorPicker();
 					
-	
-	
+					
+					
 				} );
 				
 
 				 //remove input
 				 if ( settings.removebtnClass ){
 					 
-					jQuery( '.' + settings.removebtnClass ).live( 'click',function( event ){
+					 jQuery( document ).on( 'click', '.' + settings.removebtnClass, function( event ) {
 						var btnINdex = parseFloat( jQuery( settings.btnID ).attr( 'data-index' ) );
 				
 						if ( btnINdex <= 1 ) {
@@ -240,7 +235,7 @@
 			    //Toggle for radio
 				if ( settings.checkbox == 1 ) { 
 				
-					jQuery( settings.checkboxToggleClass ).live( 'click',function(){
+				    jQuery( document ).on( 'click', settings.checkboxToggleClass, function( e ) {
 						
 							if ( settings.list == 1 ) {
 							
@@ -261,9 +256,7 @@
 				}
 			
 			
-	
-				jQuery( settings.btnID ).live( 'click',function(){
-					
+	            jQuery( document ).on( 'click', settings.btnID, function( e ) {
 					
 					var sweetWrapperinnerHeight = jQuery( '.sweet-table-wrapper' ).innerHeight() + 24;
 					
@@ -367,7 +360,7 @@
 		return this.each( function() {
 	        
 			
-			jQuery( settings.containerID ).find( 'span' ).live( 'click',function(){
+			jQuery( document ).on( 'click', settings.containerID + ' span', function( e ) {
 	
 				var _curValue = jQuery( this ).attr( 'data-value' ),
 				    _tarValue = jQuery( settings.targetID ).val() + ',',
@@ -406,7 +399,7 @@
 		return this.each( function() {
 	        
 			
-			jQuery( settings.containerID ).find( 'span' ).live( 'click',function(){
+			jQuery( document ).on( 'click', settings.containerID + ' span', function( e ) {
 				var _curValue = jQuery( this ).attr( 'data-value' );
 				jQuery( settings.containerID ).find( 'span' ).removeClass( 'active' );
 				jQuery( settings.targetID ).val( _curValue );
@@ -440,8 +433,7 @@
 				    value_id,
 					propIDPrefix = settings.btnID.replace( '#', '' );
 					
-					
-				jQuery( settings.btnID ).live( 'click',function( event ){
+				jQuery( document ).on( 'click', settings.btnID, function( event ) {
 					
 					var _targetImgContainer = jQuery( this ).attr( "data-insert-img" );
 					var _targetPreviewContainer = jQuery( this ).attr( "data-insert-preview" );
@@ -500,7 +492,7 @@
 				
 				 //Delete pictrue   
 				 if ( settings.closebtnID ){
-					jQuery( settings.closebtnID ).live( 'click',function(){
+					jQuery( document ).on( 'click', settings.closebtnID, function( e ) {
 						var _targetImgContainer = jQuery( this ).attr( "data-insert-img" );
 						var _targetPreviewContainer = jQuery( this ).attr( "data-insert-preview" );
 						

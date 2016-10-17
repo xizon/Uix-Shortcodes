@@ -62,14 +62,7 @@ class UixShortcodesForm_ListClone {
 						
 						$media_js .= '$( document ).uix_radioSelector( { containerID: "#"+j_'.$id.'+"-radio-selector-'.$loop_trigger_id.'", targetID: "#"+j_'.$id.'+"-'.$loop_trigger_id.'" } );'."\n";
 					}
-					
-					
-					//-----
-					if ( $tid_value[ 'type' ] == 'colormap' ) {
 						
-						$media_js .= '
-$("#"+j_'.$id.'+"-'.$loop_trigger_id.'").colorPicker({renderCallback:function($elm,toggled){var colors=this.color.colors,rgb=colors.RND.rgb;$("#"+j_'.$id.'+"-'.$loop_trigger_id.'").css({backgroundColor:"#"+colors.HEX,color:colors.RGBLuminance>0.22?"#222":"#ddd"}).val("rgb("+rgb.r+", "+rgb.g+", "+rgb.b+")");}});'."\n";
-					}		
 					
 					//-----
 					if ( $tid_value[ 'type' ] == 'color' ) {

@@ -103,6 +103,7 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 * Optimized for tablet display.
 * Improved event binding from the plugin main JavaScript file.
 * Improved the main CSS file.
+* Use WordPress Color Picker API to replace tinyColorPicker
 
 
 = 1.0.5 =

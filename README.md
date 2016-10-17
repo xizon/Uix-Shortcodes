@@ -41,6 +41,8 @@ Improved event binding from the plugin main JavaScript file.
 
 Improved the main CSS file.
 
+Use WordPress Color Picker API to replace tinyColorPicker.
+
 
 ##### Version 1.0.5
 
@@ -49,6 +51,8 @@ Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you
 Core CSS optimization.
 
 Optimized shortcodes script.
+
+Fixed a minor error in color picker.
 
 
 ##### Version 1.0.4
@@ -140,7 +144,6 @@ Initial Release.
 
 #####I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
-- [tinyColorPicker](https://github.com/PitPik/tinyColorPicker)
 - [Sweetalert](http://t4t5.github.io/sweetalert/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [jQuery Accessible Tabs](https://github.com/nomensa/jquery.accessible-tabs.git)
