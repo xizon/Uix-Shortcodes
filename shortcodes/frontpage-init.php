@@ -77,7 +77,6 @@ function uix_sc_fun_container( $atts, $content = null ){
 		  'height' => 'auto',
 		  'class' => '',
 		  'parallax' => 0,
-		  'width' => '1200px',
 		  'borderwidth' => '1px',
 		  'bordercolor' => '',
 		  'borderstyle' => 'solid',
@@ -89,7 +88,6 @@ function uix_sc_fun_container( $atts, $content = null ){
 	$id = uniqid(); 
 	$bgimage_css = '';
 	$bgcolor_css = '';
-	$width_css = '';
 	$border_css = '';
 	
 	if ( isset( $bgimage ) && !empty( $bgimage ) ) $bgimage_css = 'background:url('.$bgimage.') '.( $parallax > 0 ? '50%' : 'top' ).' '.( $parallax > 0 ? 0 : $bgimage_position ).' '.$bgimage_repeat.' '.( $parallax > 0 ? 'fixed' : $bgimage_attachment ).';-webkit-background-size: '.$bgimage_size.';-moz-background-size: '.$bgimage_size.';background-size: '.$bgimage_size.';';
@@ -98,18 +96,17 @@ function uix_sc_fun_container( $atts, $content = null ){
 	
 	if ( isset( $bgcolor ) && !empty( $bgcolor ) ) $bgcolor_css = 'background-color:'.$bgcolor.';';
 
-	if ( $layout == 'center' ) $width_css = 'width:calc(100% - '.( $padding_right + $padding_left ).'px);max-width:'.$width.';';
 	
 	if ( !empty( $bordercolor ) ) $border_css = 'border-color:'.$bordercolor.';border-width:'.$borderwidth.';border-style:'.$borderstyle.';';
 	
 	if ( isset( $vertical_center ) &&  $vertical_center == 'false' ) {
 		$now_content = $content;
 	} else {
-		$now_content = ''.( $height != 'auto' ? '<div class="uix-sc-container-table" style="min-height:'.$height.'"><div class="uix-sc-container-content-box">' : '' ).''.$content.''.( $height != 'auto' ? '</div></div>' : '' ).'';
+		$now_content = ''.( $height != 'auto' ? '<div class="uix-sc-container-table" style="height:'.$height.'"><div class="uix-sc-container-content-box">' : '' ).''.$content.''.( $height != 'auto' ? '</div></div>' : '' ).'';
 	}
 
   
-   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).' '.$class.'" style="'.( $height != 'auto' ? 'min-height:'.$height.'' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$width_css.''.$border_css.'"><div class="uix-sc-container-body" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;">'.$now_content.'</div></div></div>';	
+   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).' '.$class.'" style="'.( $height != 'auto' ? 'height:calc('.$height.' + '.($padding_top+$padding_bottom).'px)' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$border_css.'"><div class="uix-sc-container-body" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;">'.$now_content.'</div></div></div>';	
 	
 
 	

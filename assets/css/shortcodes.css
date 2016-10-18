@@ -219,11 +219,10 @@ img.uix-sc-img,
 /* ====================================================== */
 .uix-sc-container{
 	margin: 0 auto;
-	max-width: 1200px;
-	padding: 0 25px;
+	max-width: 100%;
+	width: 1200px;
 	position: relative;
-	width: calc(100% - 50px);
-
+	overflow: hidden;
 }
 .uix-sc-container:after,
 .uix-sc-container:before {
@@ -273,7 +272,6 @@ img.uix-sc-img,
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
-
 
 /* ====================================================== 
    3. Portfolio                               

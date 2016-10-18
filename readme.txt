@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 2.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,12 +98,14 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 == Changelog ==
 
-= 2.0.0 =
+= 1.1.0 =
 
 * Optimized for tablet display.
 * Improved event binding from the plugin main JavaScript file.
 * Improved the main CSS file.
 * Use WordPress Color Picker API to replace tinyColorPicker
+* Fixed some bugs for parallax and container shortcodes
+
 
 
 = 1.0.5 =

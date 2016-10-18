@@ -26,35 +26,11 @@ $args =
 			'default'        => array(
 									'center'        => UixShortcodes::plug_directory() .'assets/images/container/style-1.jpg',
 									'fullwidth'     => UixShortcodes::plug_directory() .'assets/images/container/style-2.jpg',
-				                ),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
-			'toggle'        => array(
-			                        array(
-										'trigger_id'    => 'uix_sc_container_layout-center', /* {item id}-{option id} */
-										'toggle_class'  => [ 'uix_sc_container_layout_center_width_toggle_class' ]
-
-									),
-				                )	
-								
+				                )
 							
 		),
 		
-		
-		
-			array(
-				'id'             => 'uix_sc_container_layout_center_width',
-				'title'          => __( 'Width', 'uix-shortcodes' ),
-				'desc'           => '',
-				'value'          => '1200',
-				'class'          => 'toggle-row uix_sc_container_layout_center_width_toggle_class', /*class of toggle item */
-				'placeholder'    => '',
-				'type'           => 'short-text',
-				'default'        => array(
-										'units'  => 'px'
-									)
-			
-			),
-				
+
 
 		array(
 			'id'             => 'uix_sc_container_height',
@@ -350,14 +326,13 @@ echo UixShortcodes::add_form( $form_id, '', '', 'active_btn' );
 			       uix_sc_container_result_bgimage = ( uix_sc_container_bgimage != '' ) ? "bgimage='"+uix_sc_container_bgimage+"' bgimage_repeat='"+uix_sc_container_bgimage_repeat+"' bgimage_position='"+uix_sc_container_bgimage_position+"' bgimage_attachment='"+uix_sc_container_bgimage_attachment+"' bgimage_size='"+uix_sc_container_bgimage_size+"'" : "",
 				   uix_sc_container_result_bgcolor,
 				   uix_sc_container_result_height = ( uix_sc_container_height != '' && uix_sc_container_height != 0 ) ? uix_sc_container_height + 'px' : 'auto',
-				   uix_sc_container_result_width = ( uix_sc_container_layout == 'center' ) ? "width='"+uix_sc_container_layout_center_width+"px'" : '',
 				   uix_sc_container_result_bordercolor = ( uix_sc_container_border_color_other != '' ) ? uix_sc_container_border_color_other : uix_sc_container_border_color,
 				   uix_sc_container_result_border = ( uix_sc_container_border_toggle === true ) ? "borderwidth='"+uix_sc_container_border_width+"px' borderstyle='"+uix_sc_container_border_style+"' bordercolor='"+uix_sc_container_result_bordercolor+"'" : '';
 			    
 				
 				
 				  
-				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_container "+uix_sc_container_result_vertical_center+" parallax='"+uix_sc_container_parallax+"' class='"+uix_sc_container_class+"' "+uix_sc_container_result_width+" height='"+uix_sc_container_result_height+"' margin_top='"+uix_sc_container_layout_margin_top+"' margin_bottom='"+uix_sc_container_layout_margin_bottom+"' margin_left='"+uix_sc_container_layout_margin_left+"' margin_right='"+uix_sc_container_layout_margin_right+"' padding_top='"+uix_sc_container_layout_padding_top+"' padding_bottom='"+uix_sc_container_layout_padding_bottom+"' padding_left='"+uix_sc_container_layout_padding_left+"' padding_right='"+uix_sc_container_layout_padding_right+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>" <?php echo UixShortcodes::send_to_editor_after(); ?>
+				<?php echo UixShortcodes::send_to_editor_before( $form_id ); ?> "[uix_container "+uix_sc_container_result_vertical_center+" parallax='"+uix_sc_container_parallax+"' class='"+uix_sc_container_class+"' height='"+uix_sc_container_result_height+"' margin_top='"+uix_sc_container_layout_margin_top+"' margin_bottom='"+uix_sc_container_layout_margin_bottom+"' margin_left='"+uix_sc_container_layout_margin_left+"' margin_right='"+uix_sc_container_layout_margin_right+"' padding_top='"+uix_sc_container_layout_padding_top+"' padding_bottom='"+uix_sc_container_layout_padding_bottom+"' padding_left='"+uix_sc_container_layout_padding_left+"' padding_right='"+uix_sc_container_layout_padding_right+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>" <?php echo UixShortcodes::send_to_editor_after(); ?>
 				
 	
 				

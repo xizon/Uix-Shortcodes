@@ -33,7 +33,7 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
-##### Version 2.0.0
+##### Version 1.1.0
 
 Optimized for tablet display.
 
@@ -42,6 +42,8 @@ Improved event binding from the plugin main JavaScript file.
 Improved the main CSS file.
 
 Use WordPress Color Picker API to replace tinyColorPicker.
+
+Fixed some bugs for parallax and container shortcodes
 
 
 ##### Version 1.0.5

@@ -54,10 +54,10 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                             </tr>  
                                             
                                             <tr>
-                                                <td><?php _e( 'Width', 'uix-shortcodes' ); ?> (px)<?php _e( 'Period', 'uix-shortcodes' ); ?><span class="depend"><?php _e( 'depends on', 'uix-shortcodes' ); ?> <code><?php _e( 'Choose Layout', 'uix-shortcodes' ); ?></code> <?php _e( 'option', 'uix-shortcodes' ); ?></span></td>
-                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
-                                                <td>1200</td>
-                                                <td><?php _e( 'It will determine the width of the container in pixels if the', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'Choose Layout', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'value is', 'uix-shortcodes' ); ?> <code>center</code> .</td>
+                                                <td><del><?php _e( 'Width', 'uix-shortcodes' ); ?></del> <em class="prop">(<?php _e( 'Removed', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
                                             </tr>  
                                             
                                             <tr>

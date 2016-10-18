@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Thu Oct 06 2016 02:43:42 GMT+0800 (CST)\n"
+"POT-Revision-Date: Tue Oct 18 2016 10:47:29 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:220 ../uix-shortcodes.php:340 ../uix-shortcodes.php:341
+#: ../uix-shortcodes.php:220 ../uix-shortcodes.php:341 ../uix-shortcodes.php:342
 msgid "Settings"
 msgstr ""
 
@@ -50,38 +50,38 @@ msgstr ""
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:327 ../helper/settings.php:83
+#: ../uix-shortcodes.php:328 ../helper/settings.php:83
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: ../uix-shortcodes.php:328 ../shortcodes/core/tinymce-plugin-lang.php:16
+#: ../uix-shortcodes.php:329 ../shortcodes/core/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: ../uix-shortcodes.php:348 ../uix-shortcodes.php:349
+#: ../uix-shortcodes.php:349 ../uix-shortcodes.php:350
 msgid "Custom CSS"
 msgstr ""
 
-#: ../uix-shortcodes.php:356 ../uix-shortcodes.php:357
+#: ../uix-shortcodes.php:357 ../uix-shortcodes.php:358
 msgid "Helper"
 msgstr ""
 
-#: ../uix-shortcodes.php:696
+#: ../uix-shortcodes.php:697
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-shortcodes.php:1102
+#: ../uix-shortcodes.php:1104
 msgid "Cancel"
 msgstr ""
 
-#: ../uix-shortcodes.php:1103
+#: ../uix-shortcodes.php:1105
 msgid "Insert into"
 msgstr ""
 
-#: ../uix-shortcodes.php:1122
+#: ../uix-shortcodes.php:1124
 msgid "Using the shortcodes successfully."
 msgstr ""
 
@@ -159,50 +159,46 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/credits.php:16
-msgid "tinyColorPicker"
-msgstr ""
-
-#: ../helper/tabs/credits.php:17
 msgid "Sweetalert"
 msgstr ""
 
-#: ../helper/tabs/credits.php:18 ../helper/tabs/general-settings.php:58
+#: ../helper/tabs/credits.php:17 ../helper/tabs/general-settings.php:58
 msgid "Font Awesome"
 msgstr ""
 
-#: ../helper/tabs/credits.php:19
+#: ../helper/tabs/credits.php:18
 msgid "jQuery Accessible Tabs"
 msgstr ""
 
-#: ../helper/tabs/credits.php:20
+#: ../helper/tabs/credits.php:19
 msgid "prettyPhoto"
 msgstr ""
 
-#: ../helper/tabs/credits.php:21
+#: ../helper/tabs/credits.php:20
 msgid "SyntaxHighlighter"
 msgstr ""
 
-#: ../helper/tabs/credits.php:22
+#: ../helper/tabs/credits.php:21
 msgid "Flexslider"
 msgstr ""
 
-#: ../helper/tabs/credits.php:23
+#: ../helper/tabs/credits.php:22
 msgid "jQuery Parallax"
 msgstr ""
 
-#: ../helper/tabs/credits.php:24
+#: ../helper/tabs/credits.php:23
 msgid "Shuffle (filtering and sorting)"
 msgstr ""
 
-#: ../helper/tabs/credits.php:25
+#: ../helper/tabs/credits.php:24
 msgid "imagesloaded"
 msgstr ""
 
-#: ../helper/tabs/credits.php:26
+#: ../helper/tabs/credits.php:25
 msgid "Easy Pie Chart"
 msgstr ""
 
-#: ../helper/tabs/credits.php:27 ../helper/tabs/general-settings.php:65
+#: ../helper/tabs/credits.php:26 ../helper/tabs/general-settings.php:65
 msgid "Flaticon"
 msgstr ""
 
@@ -347,8 +343,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:49 ../helper/tabs/documentation.php:57 ..
-#: /helper/tabs/documentation.php:60 ../shortcodes/panel/container.php:21
+#: ../helper/tabs/documentation.php:49 ../shortcodes/panel/container.php:21
 msgid "Choose Layout"
 msgstr ""
 
@@ -392,69 +387,39 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:2815 ..
-#: /shortcodes/panel/container.php:46 ../shortcodes/panel/dividing-line.php:50
+#: /shortcodes/panel/dividing-line.php:50
 msgid "Width"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:484 ..
-#: /shortcodes/panel/pricing-3-col.php:60 ../shortcodes/panel/pricing-3-col.php:
-#: 210 ../shortcodes/panel/pricing-3-col.php:361 ../shortcodes/panel/pricing-4-
-#: col.php:60 ../shortcodes/panel/pricing-4-col.php:209 ..
-#: /shortcodes/panel/pricing-4-col.php:360 ../shortcodes/panel/pricing-4-col.php:
-#: 510
-msgid "Period"
+#: ../helper/tabs/documentation.php:57
+msgid "Removed"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:144 ..
-#: /helper/tabs/documentation.php:151 ../helper/tabs/documentation.php:159 ..
-#: /helper/tabs/documentation.php:2376 ../helper/tabs/documentation.php:2383 ..
-#: /helper/tabs/documentation.php:2409 ../helper/tabs/documentation.php:2416 ..
-#: /helper/tabs/documentation.php:2423 ../helper/tabs/documentation.php:2431
-msgid "depends on"
-msgstr ""
-
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:144 ..
-#: /helper/tabs/documentation.php:151 ../helper/tabs/documentation.php:159 ..
-#: /helper/tabs/documentation.php:2376 ../helper/tabs/documentation.php:2383 ..
-#: /helper/tabs/documentation.php:2409 ../helper/tabs/documentation.php:2416 ..
-#: /helper/tabs/documentation.php:2423 ../helper/tabs/documentation.php:2431
-msgid "option"
-msgstr ""
-
-#: ../helper/tabs/documentation.php:58 ../helper/tabs/documentation.php:65 ..
-#: /helper/tabs/documentation.php:98 ../helper/tabs/documentation.php:113 ..
-#: /helper/tabs/documentation.php:120 ../helper/tabs/documentation.php:145 ..
-#: /helper/tabs/documentation.php:367 ../helper/tabs/documentation.php:464 ..
-#: /helper/tabs/documentation.php:853 ../helper/tabs/documentation.php:881 ..
-#: /helper/tabs/documentation.php:1229 ../helper/tabs/documentation.php:1237 ..
-#: /helper/tabs/documentation.php:1245 ../helper/tabs/documentation.php:1537 ..
-#: /helper/tabs/documentation.php:1544 ../helper/tabs/documentation.php:1631 ..
-#: /helper/tabs/documentation.php:1638 ../helper/tabs/documentation.php:1844 ..
-#: /helper/tabs/documentation.php:2055 ../helper/tabs/documentation.php:2091 ..
-#: /helper/tabs/documentation.php:2098 ../helper/tabs/documentation.php:2190 ..
-#: /helper/tabs/documentation.php:2197 ../helper/tabs/documentation.php:2215 ..
-#: /helper/tabs/documentation.php:2224 ../helper/tabs/documentation.php:2231 ..
-#: /helper/tabs/documentation.php:2324 ../helper/tabs/documentation.php:2346 ..
-#: /helper/tabs/documentation.php:2377 ../helper/tabs/documentation.php:2384 ..
-#: /helper/tabs/documentation.php:2417 ../helper/tabs/documentation.php:2432 ..
-#: /helper/tabs/documentation.php:2531 ../helper/tabs/documentation.php:2612 ..
-#: /helper/tabs/documentation.php:2620 ../helper/tabs/documentation.php:2628 ..
-#: /helper/tabs/documentation.php:2636 ../helper/tabs/documentation.php:2699 ..
-#: /helper/tabs/documentation.php:2816 ../helper/tabs/documentation.php:2824 ..
-#: /helper/tabs/documentation.php:2912
-msgid "Number"
-msgstr ""
-
-#: ../helper/tabs/documentation.php:60
-msgid "It will determine the width of the container in pixels if the"
-msgstr ""
-
-#: ../helper/tabs/documentation.php:60
-msgid "value is"
-msgstr ""
-
-#: ../helper/tabs/documentation.php:64 ../shortcodes/panel/container.php:61
+#: ../helper/tabs/documentation.php:64 ../shortcodes/panel/container.php:37
 msgid "Height"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:65 ../helper/tabs/documentation.php:98 ..
+#: /helper/tabs/documentation.php:113 ../helper/tabs/documentation.php:120 ..
+#: /helper/tabs/documentation.php:145 ../helper/tabs/documentation.php:367 ..
+#: /helper/tabs/documentation.php:464 ../helper/tabs/documentation.php:853 ..
+#: /helper/tabs/documentation.php:881 ../helper/tabs/documentation.php:1229 ..
+#: /helper/tabs/documentation.php:1237 ../helper/tabs/documentation.php:1245 ..
+#: /helper/tabs/documentation.php:1537 ../helper/tabs/documentation.php:1544 ..
+#: /helper/tabs/documentation.php:1631 ../helper/tabs/documentation.php:1638 ..
+#: /helper/tabs/documentation.php:1844 ../helper/tabs/documentation.php:2055 ..
+#: /helper/tabs/documentation.php:2091 ../helper/tabs/documentation.php:2098 ..
+#: /helper/tabs/documentation.php:2190 ../helper/tabs/documentation.php:2197 ..
+#: /helper/tabs/documentation.php:2215 ../helper/tabs/documentation.php:2224 ..
+#: /helper/tabs/documentation.php:2231 ../helper/tabs/documentation.php:2324 ..
+#: /helper/tabs/documentation.php:2346 ../helper/tabs/documentation.php:2377 ..
+#: /helper/tabs/documentation.php:2384 ../helper/tabs/documentation.php:2417 ..
+#: /helper/tabs/documentation.php:2432 ../helper/tabs/documentation.php:2531 ..
+#: /helper/tabs/documentation.php:2612 ../helper/tabs/documentation.php:2620 ..
+#: /helper/tabs/documentation.php:2628 ../helper/tabs/documentation.php:2636 ..
+#: /helper/tabs/documentation.php:2699 ../helper/tabs/documentation.php:2816 ..
+#: /helper/tabs/documentation.php:2824 ../helper/tabs/documentation.php:2912
+msgid "Number"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:67
@@ -463,7 +428,7 @@ msgid ""
 "automatically calculates the container height if the value is"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/container.php:75
+#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/container.php:51
 msgid "Vertically Center Content"
 msgstr ""
 
@@ -483,7 +448,7 @@ msgstr ""
 msgid "When enabled, the content of container is placed in the middle."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:79 ../shortcodes/panel/container.php:90
+#: ../helper/tabs/documentation.php:79 ../shortcodes/panel/container.php:66
 msgid "Background Image"
 msgstr ""
 
@@ -510,7 +475,7 @@ msgid ""
 "upload."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/container.php:114
+#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/container.php:90
 msgid "Background Color"
 msgstr ""
 
@@ -539,7 +504,7 @@ msgstr ""
 #: /helper/tabs/documentation.php:2517 ../helper/tabs/documentation.php:2654 ..
 #: /helper/tabs/documentation.php:2662 ../helper/tabs/documentation.php:2670 ..
 #: /shortcodes/panel/button.php:40 ../shortcodes/panel/button.php:83 ..
-#: /shortcodes/panel/container.php:132 ../shortcodes/panel/container.php:216 ..
+#: /shortcodes/panel/container.php:108 ../shortcodes/panel/container.php:192 ..
 #: /shortcodes/panel/heading.php:104 ../shortcodes/panel/heading.php:301 ..
 #: /shortcodes/panel/icons.php:39 ../shortcodes/panel/progress-bar.php:171 ..
 #: /shortcodes/panel/progress-bar.php:213 ../shortcodes/panel/progress-bar.php:255
@@ -554,7 +519,7 @@ msgstr ""
 msgid "link at the bottom of the color selector."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:97 ../shortcodes/panel/container.php:259
+#: ../helper/tabs/documentation.php:97 ../shortcodes/panel/container.php:235
 msgid "Parallax"
 msgstr ""
 
@@ -564,7 +529,7 @@ msgid ""
 "value"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:104 ../shortcodes/panel/container.php:277
+#: ../helper/tabs/documentation.php:104 ../shortcodes/panel/container.php:253
 msgid "Class"
 msgstr ""
 
@@ -576,7 +541,7 @@ msgstr ""
 msgid "Wrapper Margin"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:115 ../shortcodes/panel/container.php:289
+#: ../helper/tabs/documentation.php:115 ../shortcodes/panel/container.php:265
 msgid "Use the input fields below to customize the margin of container wrapper."
 msgstr ""
 
@@ -584,7 +549,7 @@ msgstr ""
 msgid "Content Padding"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:122 ../shortcodes/panel/container.php:308
+#: ../helper/tabs/documentation.php:122 ../shortcodes/panel/container.php:284
 msgid ""
 "Use the input fields below to customize the padding of content from "
 "container."
@@ -592,7 +557,7 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:127 ../helper/tabs/documentation.php:137 ..
 #: /helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
-#: /helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:159
+#: /helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:135
 msgid "Border"
 msgstr ""
 
@@ -609,15 +574,31 @@ msgstr ""
 msgid "checkbox should be checked."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:144 ../shortcodes/panel/container.php:181
+#: ../helper/tabs/documentation.php:144 ../shortcodes/panel/container.php:157
 msgid "Border Width"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
+#: /helper/tabs/documentation.php:159 ../helper/tabs/documentation.php:2376 ..
+#: /helper/tabs/documentation.php:2383 ../helper/tabs/documentation.php:2409 ..
+#: /helper/tabs/documentation.php:2416 ../helper/tabs/documentation.php:2423 ..
+#: /helper/tabs/documentation.php:2431
+msgid "depends on"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
+#: /helper/tabs/documentation.php:159 ../helper/tabs/documentation.php:2376 ..
+#: /helper/tabs/documentation.php:2383 ../helper/tabs/documentation.php:2409 ..
+#: /helper/tabs/documentation.php:2416 ../helper/tabs/documentation.php:2423 ..
+#: /helper/tabs/documentation.php:2431
+msgid "option"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:147
 msgid "It will determine the width of the container border in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:151 ../shortcodes/panel/container.php:196
+#: ../helper/tabs/documentation.php:151 ../shortcodes/panel/container.php:172
 msgid "Border Color"
 msgstr ""
 
@@ -625,7 +606,7 @@ msgstr ""
 msgid "Set a color for the container border. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:239
+#: ../helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:215
 msgid "Border Style"
 msgstr ""
 
@@ -834,6 +815,14 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:480
 msgid "Your desired currency sign."
+msgstr ""
+
+#: ../helper/tabs/documentation.php:484 ../shortcodes/panel/pricing-3-col.php:60 .
+#: ./shortcodes/panel/pricing-3-col.php:210 ../shortcodes/panel/pricing-3-col.php:
+#: 361 ../shortcodes/panel/pricing-4-col.php:60 ../shortcodes/panel/pricing-4-col.
+#: php:209 ../shortcodes/panel/pricing-4-col.php:360 ../shortcodes/panel/pricing-
+#: 4-col.php:510
+msgid "Period"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:486 ../shortcodes/panel/pricing-3-col.php:62 .
@@ -2216,19 +2205,19 @@ msgid ""
 "WordPress Theme.</h4>"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:791
+#: ../shortcodes/frontpage-init.php:789
 msgid "All"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1291
+#: ../shortcodes/frontpage-init.php:1289
 msgid "+"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1292
+#: ../shortcodes/frontpage-init.php:1290
 msgid "-"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1658
+#: ../shortcodes/frontpage-init.php:1656
 msgid "Comments are closed."
 msgstr ""
 
@@ -2325,7 +2314,7 @@ msgstr ""
 msgid "Container"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/color-map.php:48
+#: ../shortcodes/core/form-inc/color-map.php:47
 msgid "Add Custom Color"
 msgstr ""
 
@@ -2439,7 +2428,7 @@ msgid "Avatar URL"
 msgstr ""
 
 #: ../shortcodes/panel/author-card.php:38 ../shortcodes/panel/client-3-col.php:64 
-#: ../shortcodes/panel/client-4-col.php:64 ../shortcodes/panel/container.php:96 ..
+#: ../shortcodes/panel/client-4-col.php:64 ../shortcodes/panel/container.php:72 ..
 #: /shortcodes/panel/heading.php:64 ../shortcodes/panel/hello.php:121 ..
 #: /shortcodes/panel/hello.php:419 ../shortcodes/panel/map.php:122 ..
 #: /shortcodes/panel/portfolio-grid.php:148 ../shortcodes/panel/portfolio-grid.
@@ -2448,7 +2437,7 @@ msgstr ""
 msgid "Remove image"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:39 ../shortcodes/panel/container.php:97 ..
+#: ../shortcodes/panel/author-card.php:39 ../shortcodes/panel/container.php:73 ..
 #: /shortcodes/panel/heading.php:65 ../shortcodes/panel/hello.php:122 ..
 #: /shortcodes/panel/hello.php:420 ../shortcodes/panel/map.php:123 ..
 #: /shortcodes/panel/portfolio-grid.php:149 ../shortcodes/panel/portfolio-grid.
@@ -2614,25 +2603,25 @@ msgstr ""
 msgid "Insert Contact Form"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:62
+#: ../shortcodes/panel/container.php:38
 msgid ""
 "The browser automatically calculates the container height if the value is "
 "<strong>\"0\"</strong>."
 msgstr ""
 
-#: ../shortcodes/panel/container.php:288
+#: ../shortcodes/panel/container.php:264
 msgid "Wrapper Margin (px)"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:307
+#: ../shortcodes/panel/container.php:283
 msgid "Content Padding (px)"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:345
+#: ../shortcodes/panel/container.php:321
 msgid "Add a Container"
 msgstr ""
 
-#: ../shortcodes/panel/container.php:360
+#: ../shortcodes/panel/container.php:335
 msgid "Content here..."
 msgstr ""
 
