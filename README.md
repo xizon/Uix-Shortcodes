@@ -33,6 +33,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### Version 1.1.1
+
+Optimize the selector of buttons.
+
+Enhanced editor and forms compatibility.
+
+
 ##### Version 1.1.0
 
 Optimized for tablet display.

@@ -932,6 +932,32 @@ function uix_insertToTextarea( s ) {
           s.replace(/<br>/g, "\n");  
 };
 
+
+/*! 
+ * ************************************
+ * Insert shortcodes code
+ *************************************
+ */	
+function uix_insertShortcodesCodes( code, id ) {
+	if ( id == 'content' ) {
+		window.send_to_editor( code );
+	} else {
+		( function( $ ) {
+		"use strict";
+			$( function() {
+		         $( '#' + id ).val( $( '#' + id ).val() + uix_insertToTextarea( code ) );
+			} );
+			
+		} ) ( jQuery );
+		
+	}  
+	
+	//Synchronize other plug-ins
+	if(typeof save == 'function'){
+		save();
+	}
+};
+
 /*! 
  * ************************************
  * Fix Sweet Alert position of top	

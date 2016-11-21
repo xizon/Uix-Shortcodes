@@ -42,7 +42,7 @@
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_demo_1' ),
 								onclick: function() {
 					
-									jQuery( '#uix_sc_form_hello' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_hello-widget_btn' ).trigger( 'click' );
 									
 
 														
@@ -52,7 +52,7 @@
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_demo_2' ),
 								onclick: function() {
 									
-									jQuery( '#uix_sc_form_hello2' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_hello2-widget_btn' ).trigger( 'click' );
 								}
 							},
 							{
@@ -76,7 +76,7 @@
 						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_32' ),
 						icon: 'icon dashicons-desktop',
 						onclick: function() {
-							jQuery( '#uix_sc_container' ).trigger( 'click' );
+							jQuery( '.uix_sc_container-widget_btn' ).trigger( 'click' );
 						}
 					},
 					
@@ -93,7 +93,7 @@
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_3' ),
 								onclick: function() {
 									
-									jQuery( '#uix_sc_form_recent_posts' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_recent_posts-widget_btn' ).trigger( 'click' );
 								}
 							},
 							{
@@ -102,13 +102,13 @@
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_5' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_pricing_col3' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_pricing_col3-widget_btn' ).trigger( 'click' );
 										}
 									},
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_6' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_pricing_col4' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_pricing_col4-widget_btn' ).trigger( 'click' );
 										}
 									},
 								
@@ -120,21 +120,21 @@
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_7' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_accordion' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_accordion-widget_btn' ).trigger( 'click' );
 								}
 							},	
 										
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_8' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_tabs' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_tabs-widget_btn' ).trigger( 'click' );
 								}
 							},	
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_31' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_portfolio_grid' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_portfolio_grid-widget_btn' ).trigger( 'click' );
 								}
 							},						
 							
@@ -144,13 +144,13 @@
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_10' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_team_fullwidth' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_team_fullwidth-widget_btn' ).trigger( 'click' );
 										}
 									},
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_11' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_team_grid' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_team_grid-widget_btn' ).trigger( 'click' );
 										}
 									},
 								
@@ -165,13 +165,13 @@
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_13' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_features_col2' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_features_col2-widget_btn' ).trigger( 'click' );
 										}
 									},
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_14' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_features_col3' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_features_col3-widget_btn' ).trigger( 'click' );
 										}
 									},
 								
@@ -186,13 +186,13 @@
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_16' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_client_col3' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_client_col3-widget_btn' ).trigger( 'click' );
 										}
 									},
 									{
 										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_17' ),
 										onclick: function() {
-											jQuery( '#uix_sc_form_client_col4' ).trigger( 'click' );
+											jQuery( '.uix_sc_form_client_col4-widget_btn' ).trigger( 'click' );
 										}
 									},
 								
@@ -204,7 +204,7 @@
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_18' ),
 								onclick: function() {
-									jQuery( '#uix_sc_testimonials' ).trigger( 'click' );
+									jQuery( '.uix_sc_testimonials-widget_btn' ).trigger( 'click' );
 								}
 							},		
 									
@@ -212,14 +212,14 @@
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_19' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_video' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_video-widget_btn' ).trigger( 'click' );
 								}
 							},				
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_20' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_audio' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_audio-widget_btn' ).trigger( 'click' );
 								}
 							},	
 							
@@ -227,7 +227,7 @@
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_34' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_authorcard' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_authorcard-widget_btn' ).trigger( 'click' );
 								}
 							},												
 											
@@ -248,21 +248,21 @@
 								text: '',
 								icon: 'icon uix-shortcodes-col uix-shortcodes-col-average-4',
 								onclick: function() {
-									jQuery( '#uix_sc_form_column_average_4' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_column_average_4-widget_btn' ).trigger( 'click' );
 								}
 							},
 							{
 								text: '',
 								icon: 'icon uix-shortcodes-col uix-shortcodes-col-average-3',
 								onclick: function() {
-									jQuery( '#uix_sc_form_column_average_3' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_column_average_3-widget_btn' ).trigger( 'click' );
 								}
 							},
 							{
 								text: '',
 								icon: 'icon uix-shortcodes-col uix-shortcodes-col-average-2',
 								onclick: function() {
-									jQuery( '#uix_sc_form_column_average_2' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_column_average_2-widget_btn' ).trigger( 'click' );
 								}
 							},
 							
@@ -270,7 +270,7 @@
 								text: '',
 								icon: 'icon uix-shortcodes-col uix-shortcodes-col-1_3-2_3',
 								onclick: function() {
-									jQuery( '#uix_sc_form_column_1_3__2_3' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_column_1_3__2_3-widget_btn' ).trigger( 'click' );
 								}
 							},
 							
@@ -278,7 +278,7 @@
 								text: '',
 								icon: 'icon uix-shortcodes-col uix-shortcodes-col-2_3-1_3',
 								onclick: function() {
-									jQuery( '#uix_sc_form_column_2_3__1_3' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_column_2_3__1_3-widget_btn' ).trigger( 'click' );
 								}
 							},									
 							
@@ -287,14 +287,14 @@
 								text: '',
 								icon: 'icon uix-shortcodes-col uix-shortcodes-col-1_4-3_4',
 								onclick: function() {
-									jQuery( '#uix_sc_form_column_1_4__3_4' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_column_1_4__3_4-widget_btn' ).trigger( 'click' );
 								}
 							},									
 								{
 								text: '',
 								icon: 'icon uix-shortcodes-col uix-shortcodes-col-3_4-1_4',
 								onclick: function() {
-									jQuery( '#uix_sc_form_column_3_4__1_4' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_column_3_4__1_4-widget_btn' ).trigger( 'click' );
 								}
 							},				
 							
@@ -315,14 +315,14 @@
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_23' ),
 								onclick: function() {
-									jQuery( '#uix_sc_heading' ).trigger( 'click' );
+									jQuery( '.uix_sc_heading-widget_btn' ).trigger( 'click' );
 								}
 							},	
 					
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_24' ),
 								onclick: function() {
-									jQuery( '#uix_sc_dividing_line' ).trigger( 'click' );
+									jQuery( '.uix_sc_dividing_line-widget_btn' ).trigger( 'click' );
 								}
 							},	
 						
@@ -330,27 +330,27 @@
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_25' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_button' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_button-widget_btn' ).trigger( 'click' );
 								}
 							},
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_26' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_share_buttons' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_share_buttons-widget_btn' ).trigger( 'click' );
 								}
 							},	
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_27' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_icon' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_icon-widget_btn' ).trigger( 'click' );
 								}
 							},
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_33' ),
 								onclick: function() {
-									jQuery( '#uix_sc_form_bar' ).trigger( 'click' );
+									jQuery( '.uix_sc_form_bar-widget_btn' ).trigger( 'click' );
 								}
 							},						
 							
@@ -358,14 +358,14 @@
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_28' ),
 								onclick: function() {
-									jQuery( '#uix_sc_map' ).trigger( 'click' );
+									jQuery( '.uix_sc_map-widget_btn' ).trigger( 'click' );
 								}
 							},			
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_29' ),
 								onclick: function() {
-									jQuery( '#uix_sc_contact_form' ).trigger( 'click' );
+									jQuery( '.uix_sc_contact_form-widget_btn' ).trigger( 'click' );
 								}
 							},			
 							
@@ -380,7 +380,7 @@
 						text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_30' ),
 						icon: 'icon dashicons-editor-code',
 						onclick: function() {
-							jQuery( '#uix_sc_form_code' ).trigger( 'click' );
+							jQuery( '.uix_sc_form_code-widget_btn' ).trigger( 'click' );
 						}
 					},
 					

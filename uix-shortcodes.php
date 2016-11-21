@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1074,17 +1074,7 @@ class UixShortcodes {
 	 */
 	public static function sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, $title ) {
 		
-		  //Check if screen ID
-		  $currentScreen = get_current_screen();
-	
-		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
-			  $formid = '.'.$form_id.'-widget_btn';
-			  $widget_content_id = "var widget_conID = $( this ).data( 'target' )";
-			  
-		  } else {
-			  $formid = '#'.$form_id;
-			  $widget_content_id = '';
-		  }
+	    $formid = '.'.$form_id.'-widget_btn';
 		  
 		return "
 		
@@ -1092,7 +1082,7 @@ class UixShortcodes {
 		
 		$( document ).on( 'click', '{$formid}', function( e ) {
 			
-			{$widget_content_id}
+			var widget_conID = $( this ).data( 'target' );
 			
 			swal({   
 				title: '{$title}',
@@ -1143,15 +1133,8 @@ class UixShortcodes {
 	 */
 	public static function send_to_editor_before( $tid = '' ) {
 		
-		  //Check if screen ID
-		  $currentScreen = get_current_screen();
-	
-		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
-			  return "$( '#' + widget_conID ).val( $( '#' + widget_conID ).val() + uix_insertToTextarea( ";
-		  } else {
-			  return 'window.send_to_editor(';
-		  }
-	
+		  return "uix_insertShortcodesCodes( ";
+
 	}
 	
 	
@@ -1162,14 +1145,7 @@ class UixShortcodes {
 	 */
 	public static function send_to_editor_after() {
 		
-		  //Check if screen ID
-		  $currentScreen = get_current_screen();
-	
-		  if( $currentScreen->base === "widgets" || $currentScreen->base === "customize" ) {
-			  return ") );";
-		  } else {
-			  return ');';
-		  }
+		  return ', widget_conID );';
 	
 	}
 
@@ -1518,7 +1494,7 @@ class UixShortcodes {
 			if ( $code == 'js_vars' ) $output = $jscode_vars;		
 			
 			//Add simulation buttons
-			if ( $code == 'active_btn' ) $output = '<a style="display:none" id="'.$config_id.'"></a>';		
+			if ( $code == 'active_btn' ) $output = '<a style="display:none" class="'.$config_id.'-widget_btn" data-target="content"></a>';		
 
 			
 		}
