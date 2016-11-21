@@ -136,20 +136,20 @@ class UixShortcodes {
 					
 						
 						//Sweetalert
-						wp_enqueue_style( self::PREFIX . '-shortcodes-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
+						wp_enqueue_style( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
 						if( $currentScreen->base === "customize" ) {
-							wp_enqueue_style( self::PREFIX . '-shortcodes-sweetalert-depth', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert-depth.css', false, '1.0.0', 'all' );
+							wp_enqueue_style( self::PREFIX . '-sweetalert-depth', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert-depth.css', false, '1.0.0', 'all' );
 						}
 						
-						wp_enqueue_script( self::PREFIX . '-shortcodes-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.min.js', array( 'jquery' ), '1.0.0' );
+						wp_enqueue_script( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.min.js', array( 'jquery' ), '1.0.0' );
 				
 						//Colorpicker
 						wp_enqueue_style( 'wp-color-picker' );
 						wp_enqueue_script( 'wp-color-picker' );
 							
 						//Main
-						wp_enqueue_style( self::PREFIX . '-shortcodes-mce-main', self::plug_directory() .'shortcodes/core/style.css', false, self::ver(), 'all');
-						wp_enqueue_script( self::PREFIX . '-shortcodes-mce-init', self::plug_directory() .'shortcodes/core/script.js', array( 'jquery' ), self::ver());
+						wp_enqueue_style( self::PREFIX . '-shortcodes-main', self::plug_directory() .'shortcodes/core/style.css', false, self::ver(), 'all');
+						wp_enqueue_script( self::PREFIX . '-shortcodes-init', self::plug_directory() .'shortcodes/core/script.js', array( 'jquery' ), self::ver());
 		
 							
 				}
