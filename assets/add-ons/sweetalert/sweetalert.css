@@ -631,13 +631,13 @@ body.stop-scrolling {
   width:495px;  
 }
 
-.sweet-alert .uix_sc_field_img_preview{
+.sweet-alert .field_img_preview{
 	display:none;
 	margin:6px 0;
 }
 
 
-.sweet-alert .uix_sc_field_img_preview a:hover img{
+.sweet-alert .field_img_preview a:hover img{
 	border:1px solid #666;
 	-webkit-box-shadow: 0 1px 15px rgba(0,0,0,.5);
 	-moz-box-shadow: 0 1px 15px rgba(0,0,0,.5);
@@ -646,7 +646,7 @@ body.stop-scrolling {
 }
 
 
-.sweet-alert .uix_sc_field_img_preview img{
+.sweet-alert .field_img_preview img{
 	max-width:100%;
 	max-height:70px;
 	

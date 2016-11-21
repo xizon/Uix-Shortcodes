@@ -58,7 +58,7 @@ class UixShortcodesForm_Image {
 									
 									<input type="button" class="button sweet-upbtn" id="trigger_id_'.$id.'" data-insert-img="'.$id.'" data-insert-preview="'.$id.'_preview" value="'.$upload_btn_text.'" />
 									<a href="javascript:" id="drop_trigger_id_'.$id.'" data-insert-img="'.$id.'" data-insert-preview="'.$id.'_preview" style="display:none">'.$remove_btn_text.'</a>
-									'.( !empty( $value ) ? '<div id="'.$id.'_preview" class="uix_sc_field_img_preview" style="display:block"><img src="'.$value.'" alt=""></div>' : '<div id="'.$id.'_preview" class="uix_sc_field_img_preview"><img src="" alt=""></div>' ).' 
+									'.( !empty( $value ) ? '<div id="'.$id.'_preview" class="field_img_preview" style="display:block"><img src="'.$value.'" alt=""></div>' : '<div id="'.$id.'_preview" class="field_img_preview"><img src="" alt=""></div>' ).' 
 									
 												
 										
