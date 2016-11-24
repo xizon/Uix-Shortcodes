@@ -8,7 +8,8 @@
     $( function() {
 		
 		//Initialize shortcodes buttons without tinyMCE 
-		$( document ).on( 'mouseover', '[data-target]', function() {
+		$( document ).on( 'mouseenter', '.custom-button', function( e ) {
+			e.preventDefault();
 			var c = $( this ).attr( 'class' );
 			if ( c.indexOf( '-widget_btn' ) >= 0 && c.indexOf( 'mce-' ) < 0 ) {
 				var n = c.replace( /uix_sc_/g,'mce-uix_sc_' );
@@ -65,6 +66,7 @@
 			
 			//Click event for icon type: Font Awesome
 			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.fontawesome', function( e ) {
+				e.preventDefault();
 				var _v = jQuery(this).find( '.fa' ).attr( 'class' );
 				jQuery( '.b.fontawesome' ).removeClass('active');
 				jQuery( this ).addClass( 'active' );
@@ -79,6 +81,7 @@
 		    
 			//Click event for icon type: Flaticon
 			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.flaticon', function( e ) {
+				e.preventDefault();
 				var _v = jQuery(this).find( '.flaticon' ).attr( 'class' );
 				jQuery( '.b.flaticon' ).removeClass( 'active' );
 				jQuery( this ).addClass( 'active' );
@@ -117,6 +120,7 @@
 		return this.each( function() {
 			
 			jQuery( document ).on( 'click', settings.clearIntervalID, function( e ) {
+				e.preventDefault();
 				jQuery( settings.ID ).val( settings.value );
 			});　				
 
@@ -150,7 +154,8 @@
 				clone_content = '<span class="dynamic-row dynamic-addnow">' + clone_content + '<div class="delrow-container"><a href="javascript:" class="delrow '+settings.removebtnClass+'">&times;</a></div></span>';
 				clone_content = clone_content.replace( /toggle-row/g,'toggle-row toggle-row-clone-list' );
 				
-				jQuery( document ).on( 'click', settings.btnID, function( event ) {
+				jQuery( document ).on( 'click', settings.btnID, function( e ) {
+					e.preventDefault();
 					
 					var btnINdex = parseFloat( jQuery( this ).attr( 'data-index' ) );
 					
@@ -196,7 +201,8 @@
 				 //remove input
 				 if ( settings.removebtnClass ){
 					 
-					 jQuery( document ).on( 'click', '.' + settings.removebtnClass, function( event ) {
+					 jQuery( document ).on( 'click', '.' + settings.removebtnClass, function( e ) {
+						e.preventDefault();
 						var btnINdex = parseFloat( jQuery( settings.btnID ).attr( 'data-index' ) );
 				
 						if ( btnINdex <= 1 ) {
@@ -248,19 +254,20 @@
 				if ( settings.checkbox == 1 ) { 
 				
 				    jQuery( document ).on( 'click', settings.checkboxToggleClass, function( e ) {
+						e.preventDefault();
 						
-							if ( settings.list == 1 ) {
+						if ( settings.list == 1 ) {
+						
+							jQuery( settings.targetID ).parent().parent( '.toggle-row' ).hide();
+							jQuery( settings.targetID ).parent().parent( '.toggle-row' ).find( '.uixscform-box' ).hide();
+
+						} else {
 							
-								jQuery( settings.targetID ).parent().parent( '.toggle-row' ).hide();
-								jQuery( settings.targetID ).parent().parent( '.toggle-row' ).find( '.uixscform-box' ).hide();
-	
-							} else {
-								
-								jQuery( settings.targetID ).hide();
-								jQuery( settings.targetID ).find( 'th' ).find( 'label' ).hide();
-								jQuery( settings.targetID ).find( 'td' ).find( '.uixscform-box' ).hide();
-						
-							}
+							jQuery( settings.targetID ).hide();
+							jQuery( settings.targetID ).find( 'th' ).find( 'label' ).hide();
+							jQuery( settings.targetID ).find( 'td' ).find( '.uixscform-box' ).hide();
+					
+						}
 	
 					});
 
@@ -269,6 +276,7 @@
 			
 			
 	            jQuery( document ).on( 'click', settings.btnID, function( e ) {
+					e.preventDefault();
 					
 					// if checkbox
 					if ( settings.checkbox == 1 ) { 
@@ -366,6 +374,7 @@
 	        
 			
 			jQuery( document ).on( 'click', settings.containerID + ' span', function( e ) {
+				e.preventDefault();
 	
 				var _curValue = jQuery( this ).attr( 'data-value' ),
 				    _tarValue = jQuery( settings.targetID ).val() + ',',
@@ -405,6 +414,7 @@
 	        
 			
 			jQuery( document ).on( 'click', settings.containerID + ' span', function( e ) {
+				e.preventDefault();
 				var _curValue = jQuery( this ).attr( 'data-value' );
 				jQuery( settings.containerID ).find( 'span' ).removeClass( 'active' );
 				jQuery( settings.targetID ).val( _curValue );
@@ -439,6 +449,7 @@
 					propIDPrefix = settings.btnID.replace( '#', '' );
 					
 				jQuery( document ).on( 'click', settings.btnID, function( event ) {
+					
 					
 					var _targetImgContainer = jQuery( this ).attr( "data-insert-img" );
 					var _targetPreviewContainer = jQuery( this ).attr( "data-insert-preview" );
@@ -495,6 +506,7 @@
 				 //Delete pictrue   
 				 if ( settings.closebtnID ){
 					jQuery( document ).on( 'click', settings.closebtnID, function( e ) {
+						e.preventDefault();
 						var _targetImgContainer = jQuery( this ).attr( "data-insert-img" );
 						var _targetPreviewContainer = jQuery( this ).attr( "data-insert-preview" );
 						
