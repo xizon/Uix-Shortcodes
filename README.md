@@ -33,15 +33,27 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### Version 1.1.5
 
-##### Version 1.1.2
+Used ajax form & improved the running speed greatly.
+
+Optimized back-end structure.
+
+Upgraded the back-end form UI.
+
+Removed sweetalert plugin.
 
 Fix some bugs.
 
 
+##### Version 1.1.2
+
+Fixed some bugs.
+
+
 ##### Version 1.1.1
 
-Optimize the selector of buttons.
+Optimized the selector of buttons.
 
 Enhanced editor and forms compatibility.
 
@@ -159,7 +171,6 @@ Initial Release.
 
 #####I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
-- [Sweetalert](http://t4t5.github.io/sweetalert/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [jQuery Accessible Tabs](https://github.com/nomensa/jquery.accessible-tabs.git)
 - [prettyPhoto](http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/#prettyPhoto)

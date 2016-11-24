@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.6
-Stable tag: 1.1.2
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,13 +98,22 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 == Changelog ==
 
+= 1.1.5 =
+
+* Used ajax form & improved the running speed greatly.
+* Optimized back-end structure.
+* Upgraded the back-end form UI.
+* Removed sweetalert plugin.
+* Fixed some bugs.
+
+
 = 1.1.2 =
 
-* Fix some bugs.
+* Fixed some bugs.
 
 = 1.1.1 =
 
-* Optimize the selector of buttons.
+* Optimized the selector of buttons.
 * Enhanced editor and forms compatibility.
 
 = 1.1.0 =

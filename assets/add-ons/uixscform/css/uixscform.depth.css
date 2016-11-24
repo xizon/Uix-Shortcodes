@@ -1,0 +1,11 @@
+.uixscform-modal-mask {
+  z-index: 559899; 
+ }
+
+.uixscform-modal-box {
+	z-index: 559900;
+ }
+ 
+.uixscform-modal-buttons {
+	z-index: 559901;
+}

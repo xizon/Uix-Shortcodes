@@ -8,27 +8,18 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.1.2
+ * Version:     1.1.5
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
  * Text Domain: uix-shortcodes
  * Domain Path: /languages
  */
-			
+
 class UixShortcodes {
 
 	const PREFIX   = 'uix';
 	const CUSPAGE = 'uix-shortcodes-custom-submenu-page';
-	
-
-	/**
-	 * Holds plugin data
-	 *
-	 */
-	protected static $data;
-	
-
 	
 	
 	/**
@@ -37,6 +28,7 @@ class UixShortcodes {
 	 */
 	public static function init() {
 		
+		self::uixscform_core();
 		
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'actions_links' ), -10 );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ), 999 );
@@ -44,12 +36,11 @@ class UixShortcodes {
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_custom_stylesheet' ) );
 		add_action( 'current_screen', array( __CLASS__, 'do_register_shortcodes' ) );
 		add_action( 'admin_init', array( __CLASS__, 'tc_i18n' ) );
-		add_action( 'admin_init', array( __CLASS__, 'load_form_core' ) );
 		add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'options_admin_menu' ) );
 		add_action( 'wp_head', array( __CLASS__, 'do_my_shortcodes' ) );
 		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
-		add_filter( 'mce_css', array( __CLASS__, 'mce_css' ) );
+		
 		
 		
 	}
@@ -63,13 +54,6 @@ class UixShortcodes {
 	 */
 	public static function frontpage_scripts() {
 		
-
-		
-		//Add Icons
-		wp_enqueue_style( 'font-awesome', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
-		wp_enqueue_style( 'flaticon', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
-	
-	
 		// Shuffle
 		wp_enqueue_script( 'shuffle', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );
 		
@@ -130,30 +114,10 @@ class UixShortcodes {
 				  
 					if ( is_admin()) {
 						
-						
-							//Add Icons
-							wp_enqueue_style( 'font-awesome', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
-							wp_enqueue_style( 'flaticon', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
-							
-						
-							
-							//Sweetalert
-							wp_enqueue_style( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
-							if( $currentScreen->base === "customize" ) {
-								wp_enqueue_style( self::PREFIX . '-sweetalert-depth', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert-depth.css', false, '1.0.0', 'all' );
-							}
-							
-							wp_enqueue_script( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.min.js', array( 'jquery' ), '1.0.0' );
-					
-							//Colorpicker
-							wp_enqueue_style( 'wp-color-picker' );
-							wp_enqueue_script( 'wp-color-picker' );
-								
-							//Main
-							wp_enqueue_style( self::PREFIX . '-shortcodes-main', self::plug_directory() .'shortcodes/core/style.css', false, self::ver(), 'all');
-							wp_enqueue_script( self::PREFIX . '-shortcodes-init', self::plug_directory() .'shortcodes/core/script.js', array( 'jquery' ), self::ver());
+							//Editor
+							wp_enqueue_style( self::PREFIX . '-shortcodes-main', self::plug_directory() .'shortcodes/editor/style.css', false, self::ver(), 'all');
 			
-								
+							
 					}
 	  
 			  } 
@@ -187,14 +151,99 @@ class UixShortcodes {
 
 	
 	/*
-	 * Call the specified form
+	 * Call the specified form  [Use for theme]
 	 *
 	 *
 	 */
 	public static function call_form( $name ) {
 		
+		$newname = $name;
+		
+		switch ( $name ) {
+			case 'pricing-3-col':
+				$newname = 'uix_sc_form_pricing_col3';
+				break;
+			case 'pricing-4-col':
+				$newname = 'uix_sc_form_pricing_col4';
+				break;
+			case 'features-2-col':
+				$newname = 'uix_sc_form_features_col2';
+				break;
+			case 'features-3-col':
+				$newname = 'uix_sc_form_features_col3';
+				break;
+			case 'team-grid':
+				$newname = 'uix_sc_form_team_grid';
+				break;
+			case 'team-fullwidth':
+				$newname = 'uix_sc_form_team_fullwidth';
+				break;
+			case 'progress-bar':
+				$newname = 'uix_sc_form_bar';
+				break;
+			case 'testimonials':
+				$newname = 'uix_sc_testimonials';
+				break;
+			case 'map':
+				$newname = 'uix_sc_map';
+				break;
+			case 'heading':
+				$newname = 'uix_sc_heading';
+				break;
+			case 'video':
+				$newname = 'uix_sc_form_video';
+				break;
+			case 'tabs':
+				$newname = 'uix_sc_form_tabs';
+				break;	
+			case 'share-buttons':
+				$newname = 'uix_sc_form_share_buttons';
+				break;	
+			case 'recent-posts':
+				$newname = 'uix_sc_form_recent_posts';
+				break;	
+			case 'portfolio':
+				$newname = 'uix_sc_form_portfolio_grid';
+				break;					
+			case 'icon':
+				$newname = 'uix_sc_form_icon';
+				break;	
+			case 'code':
+				$newname = 'uix_sc_form_code';
+				break;	
+			case 'client-3-col':
+				$newname = 'uix_sc_form_client_col3';
+				break;	
+			case 'client-4-col':
+				$newname = 'uix_sc_form_client_col4';
+				break;			
+			case 'button':
+				$newname = 'uix_sc_form_button';
+				break;		
+			case 'authorcard':
+				$newname = 'uix_sc_form_authorcard';
+				break;			
+			case 'audio':
+				$newname = 'uix_sc_form_audio';
+				break;				
+			case 'accordion':
+				$newname = 'uix_sc_form_accordion';
+				break;			
+			case 'dividing-line':
+				$newname = 'uix_sc_dividing_line';
+				break;	
+			case 'contact-form':
+				$newname = 'uix_sc_contact_form';
+				break;							
+			default:
+				$newname = $name;
+				break;
+		}
+		
 		$folder = WP_PLUGIN_DIR.'/'.self::get_slug().'/shortcodes/panel/';
-		require_once $folder.''.$name.'.php';
+		$file   = $folder.''.$newname.'.php';
+		
+		if ( file_exists( $file ) ) require_once $file;
   
 	}
 
@@ -288,16 +337,6 @@ class UixShortcodes {
 	}
 	
 	
-	/*
-	 * Load all the form fields in the directory
-	 *
-	 */
-	 public static function load_form_core() {
-
-		foreach ( glob( dirname(__FILE__). "/shortcodes/core/form-inc/*.php") as $file ) {
-			include $file;
-		}	 
-	 }
 
 	/*
 	 * Print Custom Stylesheet
@@ -791,17 +830,7 @@ class UixShortcodes {
 	
 	}
 	
-	
-	/*
-	 * Add custom CTA styles to TinyMCE editor
-	 *
-	 *
-	 */
-	public static function mce_css( $wp ) {
-		$wp .= ',' . self::plug_directory() .'shortcodes/core/content.css';
-		return $wp;
-	}
-	
+
 	
 	
 	/*
@@ -839,21 +868,6 @@ class UixShortcodes {
 	}
 	
 	
-	/*
-	 * Enable comments on pages.
-	 *
-	 *
-	 */
-	public static function comments_open( $open, $post_id ) {
-
-		$post = get_post( $post_id );
-		if ( 'page' == $post->post_type )
-			$open = true;
-		return $open;
-		
-	}
-	
-
 
 	/**
 	 * Returns .css file name of custom shortcodes 
@@ -909,65 +923,7 @@ class UixShortcodes {
 	}
 	
 	
-	/*
-	 * Returns readable Colour
-	 *
-	 *
-	 */	
-	public static function readable_color( $color ){
-		
-		if ( self::inc_str( $color, 'rgb' ) ) {
-			$color = self::rgb2hex( $color );
-		}
-		
-		if ( self::inc_str( $color, '#' ) ) {
-			$color = str_replace('#', '', $color );
-		}
-		
-		$r = hexdec(substr( $color, 0, 2 ) );
-		$g = hexdec(substr( $color, 2, 2 ) );
-		$b = hexdec(substr( $color, 4, 2 ) );
 	
-		$contrast = sqrt(
-			$r * $r * .241 +
-			$g * $g * .691 +
-			$b * $b * .068
-		);
-	
-	    //RGB Luminance
-		if($contrast > 130){
-			return '#000000';
-		}else{
-			return '#FFFFFF';
-		}
-	}
-		
-	public static function hex2rgb($hex) {
-	   $hex = str_replace("#", "", $hex);
-	
-	   if(strlen($hex) == 3) {
-		  $r = hexdec(substr($hex,0,1).substr($hex,0,1));
-		  $g = hexdec(substr($hex,1,1).substr($hex,1,1));
-		  $b = hexdec(substr($hex,2,1).substr($hex,2,1));
-	   } else {
-		  $r = hexdec(substr($hex,0,2));
-		  $g = hexdec(substr($hex,2,2));
-		  $b = hexdec(substr($hex,4,2));
-	   }
-	   $rgb = array($r, $g, $b);
-	   //return implode(",", $rgb); // returns the rgb values separated by commas
-	   return $rgb; // returns an array with the rgb values
-	}
-	
-	public static function rgb2hex($rgb) {
-	   $hex = "#";
-	   $hex .= str_pad(dechex($rgb[0]), 2, "0", STR_PAD_LEFT);
-	   $hex .= str_pad(dechex($rgb[1]), 2, "0", STR_PAD_LEFT);
-	   $hex .= str_pad(dechex($rgb[2]), 2, "0", STR_PAD_LEFT);
-	
-	   return $hex; // returns the hex value including the number sign (#)
-	}	
-		
 	
 	/*
 	 * Decode shortcodes template
@@ -1032,484 +988,17 @@ class UixShortcodes {
 	}
 	
 	
-	/*
-	 * Callback code of form
-	 *
-	 *
-	 */
-	public static function format_formcode( $str ) {
-
-		$str = str_replace( '\'', '&apos;',
-				   self::str_compression( $str )
-				   );
-	
-
-		return $str;
-
-
-	}
-	
-
-	
-	/*
-	 * Callback before tag of form
-	 *
-	 *
-	 */
-	public static function form_before() {
-		
-		return '<div class="sweet-table-wrapper">';
-
-	}
-	
-	/*
-	 * Callback after tag of form
-	 *
-	 *
-	 */
-	public static function form_after() {
-		
-		return '</div><!-- /.sweet-table-wrapper-->';
-
-	}
-	
-	/*
-	 * Callback before javascript of sweetalert
-	 *
-	 *
-	 */
-	public static function sweetalert_before( $form_js, $form_html, $form_js_vars, $form_id, $title ) {
-		
-	    $formid = '.'.$form_id.'-widget_btn';
-		  
-		return "
-		
-		{$form_js}
-		
-		$( document ).on( 'click', '{$formid}', function( e ) {
-			
-			var widget_conID = $( this ).data( 'target' );
-			
-			swal({   
-				title: '{$title}',
-				text: '{$form_html}',   
-				html: true,
-				type: 'input',
-				showCancelButton: true,   
-				confirmButtonColor: '#7ad03a',   
-				cancelButtonText: '".__( 'Cancel', 'uix-shortcodes' )."',
-				confirmButtonText: '".__( 'Insert into', 'uix-shortcodes' )."'
-			}, 
-			function(){ 
-			    
-			    {$form_js_vars}
-		";
-
-	}
 	
 	
 	/*
-	 * Callback after javascript of sweetalert
+	 * Uix SC Form Core
 	 *
 	 *
 	 */
-	public static function sweetalert_after() {
-		
-		return "
-				/* Close */
-				swal( '', '".__( 'Using the shortcodes successfully.', 'uix-shortcodes' )."', 'success' ); 
+	public static function uixscform_core() {
+	
+		require_once 'assets/add-ons/uixscform/init.php';
 
-				
-			});
-			
-			/*-- Icon list with the jQuery AJAX method --*/
-			$( '.icon-selector' ).uix_iconSelector();
-			$( '.wp-color-input' ).wpColorPicker();
-		
-		});
-		";
-
-	}
-	
-	
-	/*
-	 * Callback before javascript of push to editor/textarea
-	 *
-	 *
-	 */
-	public static function send_to_editor_before( $tid = '' ) {
-		
-		  return "uix_insertShortcodesCodes( ";
-
-	}
-	
-	
-	/*
-	 * Callback after javascript of push to editor/textarea
-	 *
-	 *
-	 */
-	public static function send_to_editor_after() {
-		
-		  return ', widget_conID );';
-	
-	}
-
-	
-     /*
-	 * Returns dynamic form
-	 *
-	 *
-	 */
-	public static function dynamic_form_code( $class, $str, $toggle = null ) {
-		
-		 $searcharray[ 'list_str' ] = array(
-			   'data-insert-preview="', //image
-			   'data-insert-img="', //image
-			   'pushinputID=',//icon
-			   'id=',//input,textarea
-			   '<td>',
-			   '</td>'
-			   
-		
-		  );
-		  $replacearray[ 'list_str' ] = array(
-			   'data-insert-preview="{dataID}', 
-			   'data-insert-img="{dataID}', 
-			   'pushinputID={dataID}', 
-			   'data-id=',
-			   '',
-			   ''
-		  );  
-
-         if ( $str ) {
-			 preg_match_all( '/<tr.*?'.$class.'">(.*?)<\/tr>/is', $str, $match );
-			 $v = str_replace( $searcharray[ 'list_str' ], $replacearray[ 'list_str' ], $match[1][0] );
-			 $v = preg_replace( '/<th.*?<\/th>/', '', $v );
-			 
-			//inscure browser
-			if( self::is_IE() ) {
-				 if ( $toggle == 'toggle-row' ) {
-					 $v = '<div class="toggle-row isMSIE">'.$v.'</div>';
-				 }
-				 if ( $toggle == 'toggle' ) {
-					 $v = '<div class="toggle-btn isMSIE">'.$v.'</div>';
-				 }	 
-
-			} else {
-				 if ( $toggle == 'toggle-row' ) {
-					 $v = '<div class="toggle-row">'.$v.'</div>';
-				 }
-				 if ( $toggle == 'toggle' ) {
-					 $v = '<div class="toggle-btn">'.$v.'</div>';
-				 }	 
-	
-			}
-		
-			 return self::str_compression( $v );
-		 } else {
-		    return '';
-		 }
-	
-
-	}
-	
-	
-	/*
-	 * Callback form
-	 *
-	 * 
-	 */
-	 
-	public static function add_form( $config_id, $arr1 = null, $arr2 = null, $code = 'html', $wrapper_name = '' ) {
-		
-		$section_args = array();
-		$field_total = array();
-		$field_args = array();
-		$before = '';
-		$after = '';
-		$field = '';
-		$output = '';
-		$jscode = '';
-		$jscode_vars = '';
-		
-		
-		
-		
-		/**
-		 * Get the configuration options
-		 */
-		
-		if ( is_array( $arr2 ) ) {
-
-			foreach ( $arr2 as $field_key => $field_value ) {
-				$field_total[] = $field_value;
-			}	
-	
-		}
-	
-	
-        if ( !empty( $config_id ) ) {
-			
-			
-			/**
-			 * Add the form container
-			 */
-			 if ( is_array( $arr1 ) ) { 
-			 
-					if ( $arr1[ 'list' ] == false ) {
-		
-							$before = '
-							 '.self::form_before().'
-								<table class="sweet-table">
-									<!-- Automatically repair display issues that readability of Sweetalert Form.  -->
-									<input type="hidden" style="display:none"><!-- Required -->
-							'."\n";
-							
-							
-							$after = '
-								</table>
-							 '.self::form_after().'
-							'."\n";
-		
-			
-					}
-					
-					//Column 2
-					if ( $arr1[ 'list' ] == 2 ) {
-					
-							$before = '
-							 
-								 <div class="sweet-table-cols-wrapper sweet-table-col-2">
-									<table class="sweet-table-list">
-										<!-- Automatically repair display issues that readability of Sweetalert Form.  -->
-										<input type="hidden" style="display:none"><!-- Required -->
-										
-										
-										<tr class="item">
-											<th colspan="2" scope="col">
-											'.$wrapper_name.'
-											</th>
-										</tr> 
-										
-							'."\n";
-							
-							
-							$after = '
-									</table>
-								</div><!-- /.sweet-table-cols-wrapper-->
-							 
-							'."\n";
-						
-						
-					}
-					
-					//Column 3
-					if ( $arr1[ 'list' ] == 3 ) {
-						$before = '
-							 
-								 <div class="sweet-table-cols-wrapper sweet-table-col-3">
-									<table class="sweet-table-list">
-										<!-- Automatically repair display issues that readability of Sweetalert Form.  -->
-										<input type="hidden" style="display:none"><!-- Required -->
-										
-										
-										<tr class="item">
-											<th colspan="2" scope="col">
-											'.$wrapper_name.'
-											</th>
-										</tr> 
-										
-							'."\n";
-							
-							
-							$after = '
-									</table>
-								</div><!-- /.sweet-table-cols-wrapper-->
-							 
-							'."\n";
-						
-					}
-					
-					//Column 4
-					if ( $arr1[ 'list' ] == 4 ) {
-						$before = '
-							 
-								 <div class="sweet-table-cols-wrapper sweet-table-col-4">
-									<table class="sweet-table-list">
-										<!-- Automatically repair display issues that readability of Sweetalert Form.  -->
-										<input type="hidden" style="display:none"><!-- Required -->
-										
-										
-										<tr class="item">
-											<th colspan="2" scope="col">
-											'.$wrapper_name.'
-											</th>
-										</tr> 
-										
-							'."\n";
-							
-							
-							$after = '
-									</table>
-								</div><!-- /.sweet-table-cols-wrapper-->
-							 
-							'."\n";
-							
-					}
-			
-			 }
-			
-			
-			
-
-			/**
-			 * Add the field to the properly indexed
-			 */
-	
-			foreach ( $field_total as $key) {
-		
-				$_title = ( isset( $key['title'] ) ) ? $key['title'] : '';
-				$_desc = ( isset( $key['desc'] ) ) ? $key['desc'] : '';
-				$_default = ( isset( $key['default'] ) ) ? $key['default'] : '';
-				$_value = ( isset( $key['value'] ) ) ? $key['value'] : '';
-				$_ph = ( isset( $key['placeholder'] ) ) ? $key['placeholder'] : '';
-				$_id = ( isset( $key['id'] ) ) ? $key['id'] : '';
-				$_type = ( isset( $key['type'] ) ) ? $key['type'] : 'text';
-				$_class = ( isset( $key['class'] ) ) ? $key['class'] : '';
-				$_toggle = ( isset( $key['toggle'] ) ) ? $key['toggle'] : '';
-				
-				$args = [
-					'title'             => $_title,
-					'desc'              => $_desc,
-					'default'           => $_default,
-					'value'             => $_value,
-					'placeholder'       => $_ph,
-					'id'                => $_id,
-					'type'              => $_type,
-					'class'              => $_class,
-					'toggle'              => $_toggle
-
-				];
-			
-				
-				//icon
-				$field .= UixShortcodesForm_Icon::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Icon::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Icon::add( $args, 'js_vars' );
-	
-				//radio
-				$field .= UixShortcodesForm_Radio::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Radio::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Radio::add( $args, 'js_vars' );
-				
-				//radio image
-				$field .= UixShortcodesForm_RadioImage::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_RadioImage::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_RadioImage::add( $args, 'js_vars' );			
-				
-				//multiple selector
-				$field .= UixShortcodesForm_MultiSelector::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_MultiSelector::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_MultiSelector::add( $args, 'js_vars' );			
-	
-				//slider
-				$field .= UixShortcodesForm_Slider::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Slider::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Slider::add( $args, 'js_vars' );
-				
-				//margin
-				$field .= UixShortcodesForm_Margin::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Margin::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Margin::add( $args, 'js_vars' );
-				
-				
-				//text
-				$field .= UixShortcodesForm_Text::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Text::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Text::add( $args, 'js_vars' );
-	
-	
-				//textarea
-				$field .= UixShortcodesForm_Textarea::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Textarea::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Textarea::add( $args, 'js_vars' );
-	
-	
-				//short text
-				$field .= UixShortcodesForm_ShortText::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_ShortText::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_ShortText::add( $args, 'js_vars' );
-				
-				//short units text
-				$field .= UixShortcodesForm_ShortUnitsText::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_ShortUnitsText::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_ShortUnitsText::add( $args, 'js_vars' );	
-	
-				//checkbox
-				$field .= UixShortcodesForm_Checkbox::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Checkbox::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Checkbox::add( $args, 'js_vars' );
-	
-				//color
-				$field .= UixShortcodesForm_Color::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Color::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Color::add( $args, 'js_vars' );
-				
-				//colormap
-				$field .= UixShortcodesForm_ColorMap::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_ColorMap::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_ColorMap::add( $args, 'js_vars' );
-					
-				
-	
-				//select
-				$field .= UixShortcodesForm_Select::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Select::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Select::add( $args, 'js_vars' );
-	
-				//image
-				$field .= UixShortcodesForm_Image::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Image::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Image::add( $args, 'js_vars' );
-	
-	
-				//toggle 1
-				$field .= UixShortcodesForm_Toggle::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_Toggle::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_Toggle::add( $args, 'js_vars' );
-	
-				//list 1
-				$field .= UixShortcodesForm_ListClone::add( $args, 'html' );
-				$jscode .= UixShortcodesForm_ListClone::add( $args, 'js' );
-				$jscode_vars .= UixShortcodesForm_ListClone::add( $args, 'js_vars' );
-	
-	
-
-
-			} // end foreach
-			
-
-			//HTML output
-			if ( $code == 'html' ) $output = self::format_formcode ( $before.$field.$after );
-			
-			//Javascript output
-			if ( $code == 'js' || $code == 'javascript' ) $output = $jscode;
-			
-			//Javascript vars output
-			if ( $code == 'js_vars' ) $output = $jscode_vars;		
-			
-			//Add simulation buttons
-			if ( $code == 'active_btn' ) $output = '<a style="display:none" class="'.$config_id.'-widget_btn" data-target="content"></a>';		
-
-			
-		}
-		
-		
-		
-		
-		return $output;
-	
 	}
 	
 	
@@ -1517,4 +1006,3 @@ class UixShortcodes {
 }
 
 add_action( 'plugins_loaded', array( 'UixShortcodes', 'init' ) );
-

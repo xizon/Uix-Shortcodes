@@ -19,7 +19,7 @@ add_filter( 'mce_buttons', 'uix_sc_register_buttons' );
 
 
 function uix_sc_add_buttons( $plugin_array ) {
-    $plugin_array['uix_SC'] = UixShortcodes::plug_directory() .'shortcodes/core/tinymce-plugin.js';
+    $plugin_array['uix_SC'] = UixShortcodes::plug_directory() .'shortcodes/editor/tinymce-plugin.js';
     return $plugin_array;
 }
 add_filter( "mce_external_plugins", "uix_sc_add_buttons" );
@@ -48,7 +48,7 @@ add_action( 'admin_footer', 'uix_sc_form_output' );
  */
  
 function uix_sc_custom_tinymce_plugin_add_locale( $locales ) {
-    $locales [ 'uix_sc_custom_tinymce_plugin' ] = plugin_dir_path ( __FILE__ ) . 'core/tinymce-plugin-lang.php';
+    $locales [ 'uix_sc_custom_tinymce_plugin' ] = plugin_dir_path ( __FILE__ ) . 'editor/tinymce-plugin-lang.php';
     return $locales;
 }
 add_filter( 'mce_external_languages', 'uix_sc_custom_tinymce_plugin_add_locale' );
