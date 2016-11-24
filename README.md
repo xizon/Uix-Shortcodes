@@ -33,6 +33,12 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+
+##### Version 1.1.2
+
+Fix some bugs.
+
+
 ##### Version 1.1.1
 
 Optimize the selector of buttons.

@@ -30,9 +30,12 @@ add_filter( "mce_external_plugins", "uix_sc_add_buttons" );
  *
  */
 function uix_sc_form_output(){
-	foreach ( glob( dirname(__FILE__). "/panel/*.php") as $file ) {
-		include $file;
-	}	
+	if ( get_post_type() != 'uix_page_builder' ) {
+		foreach ( glob( dirname(__FILE__). "/panel/*.php") as $file ) {
+			include $file;
+		}	
+	
+	}
 
 }
 add_action( 'admin_footer', 'uix_sc_form_output' );

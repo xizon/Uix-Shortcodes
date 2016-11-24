@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.1.1
+ * Version:     1.1.2
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -120,62 +120,67 @@ class UixShortcodes {
 	 */
 	public static function backstage_scripts() {
 	
-		  //Check if screen ID
-		  $currentScreen = get_current_screen();
-		  
-		  
-		  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+	      if ( get_post_type() != 'uix_page_builder' ) {
 			  
-				if ( is_admin()) {
-					
-					
-						//Add Icons
-						wp_enqueue_style( 'font-awesome', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
-						wp_enqueue_style( 'flaticon', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
-						
-					
-						
-						//Sweetalert
-						wp_enqueue_style( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
-						if( $currentScreen->base === "customize" ) {
-							wp_enqueue_style( self::PREFIX . '-sweetalert-depth', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert-depth.css', false, '1.0.0', 'all' );
-						}
-						
-						wp_enqueue_script( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.min.js', array( 'jquery' ), '1.0.0' );
-				
-						//Colorpicker
-						wp_enqueue_style( 'wp-color-picker' );
-						wp_enqueue_script( 'wp-color-picker' );
-							
-						//Main
-						wp_enqueue_style( self::PREFIX . '-shortcodes-main', self::plug_directory() .'shortcodes/core/style.css', false, self::ver(), 'all');
-						wp_enqueue_script( self::PREFIX . '-shortcodes-init', self::plug_directory() .'shortcodes/core/script.js', array( 'jquery' ), self::ver());
-		
-							
-				}
-  
-		  } 
-		  
-		  if ( isset( $_GET[ 'tab' ] ) && isset( $_GET[ 'page' ] ) ) {
-			  if( $_GET[ 'tab' ] == 'documentation' && $_GET[ 'page' ] == self::CUSPAGE ) {
+			  //Check if screen ID
+			  $currentScreen = get_current_screen();
+			  
+			  
+			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 				  
 					if ( is_admin()) {
+						
+						
+							//Add Icons
+							wp_enqueue_style( 'font-awesome', self::plug_directory() .'assets/add-ons/fontawesome/font-awesome.css', array(), '4.5.0', 'all');
+							wp_enqueue_style( 'flaticon', self::plug_directory() .'assets/add-ons/flaticon/flaticon.css', array(), '1.0', 'all');
+							
+						
+							
+							//Sweetalert
+							wp_enqueue_style( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.css', false,'1.0.0', 'all');
+							if( $currentScreen->base === "customize" ) {
+								wp_enqueue_style( self::PREFIX . '-sweetalert-depth', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert-depth.css', false, '1.0.0', 'all' );
+							}
+							
+							wp_enqueue_script( self::PREFIX . '-sweetalert', self::plug_directory() .'assets/add-ons/sweetalert/sweetalert.min.js', array( 'jquery' ), '1.0.0' );
 					
-							//jQuery Accessible Tabs
-							wp_enqueue_script( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1');
-							wp_enqueue_style( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all');
+							//Colorpicker
+							wp_enqueue_style( 'wp-color-picker' );
+							wp_enqueue_script( 'wp-color-picker' );
 								
-							// SyntaxHighlighter
-							wp_enqueue_script( 'syntaxhighlighter-core', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shCore.js', false, '3.0.83', true );
-							wp_enqueue_script( 'syntaxhighlighter-autoloader', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
-							wp_enqueue_style( 'syntaxhighlighter', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all');	
-												
+							//Main
+							wp_enqueue_style( self::PREFIX . '-shortcodes-main', self::plug_directory() .'shortcodes/core/style.css', false, self::ver(), 'all');
+							wp_enqueue_script( self::PREFIX . '-shortcodes-init', self::plug_directory() .'shortcodes/core/script.js', array( 'jquery' ), self::ver());
+			
 								
 					}
 	  
-			  }  
-		  }
+			  } 
+			  
+			  if ( isset( $_GET[ 'tab' ] ) && isset( $_GET[ 'page' ] ) ) {
+				  if( $_GET[ 'tab' ] == 'documentation' && $_GET[ 'page' ] == self::CUSPAGE ) {
+					  
+						if ( is_admin()) {
+						
+								//jQuery Accessible Tabs
+								wp_enqueue_script( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1');
+								wp_enqueue_style( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all');
+									
+								// SyntaxHighlighter
+								wp_enqueue_script( 'syntaxhighlighter-core', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shCore.js', false, '3.0.83', true );
+								wp_enqueue_script( 'syntaxhighlighter-autoloader', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
+								wp_enqueue_style( 'syntaxhighlighter', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all');	
+													
+									
+						}
+		  
+				  }  
+			  }
 	
+			  
+		  }
+		  
 
 	}
 	
@@ -229,6 +234,7 @@ class UixShortcodes {
 	 */
 	public static function do_register_shortcodes() {
 	
+	    
 		  //Check if screen ID
 		  $currentScreen = get_current_screen();
 	

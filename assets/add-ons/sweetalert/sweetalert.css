@@ -885,6 +885,7 @@ body.stop-scrolling {
 	margin:4px 0;
 	float:left;
 	overflow-y: auto;
+	z-index: 559902;
 }
 .sweet-icon-selector.sweet-icon-selector-s{
 	height:50px !important;
