@@ -61,7 +61,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			  //Check if screen ID
 			  $currentScreen = get_current_screen();
 			  
-			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 				  
 					if ( is_admin()) {
 						    

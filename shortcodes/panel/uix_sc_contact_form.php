@@ -47,16 +47,16 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
-	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	  
-		
 		
 		?>
 		<script type="text/javascript">
 		( function($) {
 		'use strict';
 			$( function() {  
-				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Contact Form', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Contact Form', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					code = "[uix_contact_form]";
 				

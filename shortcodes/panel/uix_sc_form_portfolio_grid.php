@@ -272,7 +272,7 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
-	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	  
 		/* List Item - Register clone vars ( step 1) */
 		UixSCFormCore::reg_clone_vars( 'uix_sc_portfolio_grid_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_image', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_full_image', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_type', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_url', $form_html, 'toggle-row' ) );	

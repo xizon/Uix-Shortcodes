@@ -584,7 +584,7 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
-	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
 		/* List Item - Register clone vars ( step 1) */
 		UixSCFormCore::reg_clone_vars( 'uix_sc_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgURL', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgtitle', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgicon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_radio', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_color', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_colormap', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_shorttext', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_icon', $form_html, 'toggle-row' ) );

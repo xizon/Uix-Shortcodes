@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Tue Oct 18 2016 10:47:29 GMT+0800 (CST)\n"
+"POT-Revision-Date: Sat Nov 26 2016 01:51:25 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,47 +42,123 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:220 ../uix-shortcodes.php:341 ../uix-shortcodes.php:342
+#: ../uix-shortcodes.php:274 ../uix-shortcodes.php:386 ../uix-shortcodes.php:387
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:221 ../helper/settings.php:102
+#: ../uix-shortcodes.php:275 ../helper/settings.php:102
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:328 ../helper/settings.php:83
+#: ../uix-shortcodes.php:373 ../helper/settings.php:83
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: ../uix-shortcodes.php:329 ../shortcodes/core/tinymce-plugin-lang.php:16
+#: ../uix-shortcodes.php:374 ../shortcodes/editor/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: ../uix-shortcodes.php:349 ../uix-shortcodes.php:350
+#: ../uix-shortcodes.php:394 ../uix-shortcodes.php:395
 msgid "Custom CSS"
 msgstr ""
 
-#: ../uix-shortcodes.php:357 ../uix-shortcodes.php:358
+#: ../uix-shortcodes.php:402 ../uix-shortcodes.php:403
 msgid "Helper"
 msgstr ""
 
-#: ../uix-shortcodes.php:697
+#: ../uix-shortcodes.php:742
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-shortcodes.php:1104
+#: ../assets/add-ons/uixscform/init.php:483
 msgid "Cancel"
 msgstr ""
 
-#: ../uix-shortcodes.php:1105
-msgid "Insert into"
+#: ../assets/add-ons/uixscform/init.php:483
+msgid "Save"
 msgstr ""
 
-#: ../uix-shortcodes.php:1124
-msgid "Using the shortcodes successfully."
+#: ../assets/add-ons/uixscform/fontawesome/font-awesome-custom.php:473
+msgid "Social:"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/color-map.php:48
+msgid "Add Custom Color"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/icon.php:23
+msgid "Select from the following list of icons: "
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:79
+msgid "Background Repeat"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:85
+msgid "No Repeat"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:86
+msgid "Tile"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:87
+msgid "Tile Horizontally"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:88
+msgid "Tile Vertically"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:102
+msgid "Background Position"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:108
+msgid "Left"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:109
+msgid "Center"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:110
+msgid "Right"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:124
+msgid "Background Attachment"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:130
+msgid "Scroll"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:131
+msgid "Fixed"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:145
+msgid "Background Size"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:151
+msgid "Cover"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:152
+msgid "Auto"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/image.php:153
+msgid "Contain"
+msgstr ""
+
+#: ../assets/add-ons/uixscform/form-inc/multiselect.php:57
+msgid "Must use the array for \"value\"."
 msgstr ""
 
 #: ../helper/settings.php:8
@@ -158,47 +234,43 @@ msgid ""
 "the list of credits for this plugin:"
 msgstr ""
 
-#: ../helper/tabs/credits.php:16
-msgid "Sweetalert"
-msgstr ""
-
-#: ../helper/tabs/credits.php:17 ../helper/tabs/general-settings.php:58
+#: ../helper/tabs/credits.php:16 ../helper/tabs/general-settings.php:58
 msgid "Font Awesome"
 msgstr ""
 
-#: ../helper/tabs/credits.php:18
+#: ../helper/tabs/credits.php:17
 msgid "jQuery Accessible Tabs"
 msgstr ""
 
-#: ../helper/tabs/credits.php:19
+#: ../helper/tabs/credits.php:18
 msgid "prettyPhoto"
 msgstr ""
 
-#: ../helper/tabs/credits.php:20
+#: ../helper/tabs/credits.php:19
 msgid "SyntaxHighlighter"
 msgstr ""
 
-#: ../helper/tabs/credits.php:21
+#: ../helper/tabs/credits.php:20
 msgid "Flexslider"
 msgstr ""
 
-#: ../helper/tabs/credits.php:22
+#: ../helper/tabs/credits.php:21
 msgid "jQuery Parallax"
 msgstr ""
 
-#: ../helper/tabs/credits.php:23
+#: ../helper/tabs/credits.php:22
 msgid "Shuffle (filtering and sorting)"
 msgstr ""
 
-#: ../helper/tabs/credits.php:24
+#: ../helper/tabs/credits.php:23
 msgid "imagesloaded"
 msgstr ""
 
-#: ../helper/tabs/credits.php:25
+#: ../helper/tabs/credits.php:24
 msgid "Easy Pie Chart"
 msgstr ""
 
-#: ../helper/tabs/credits.php:26 ../helper/tabs/general-settings.php:65
+#: ../helper/tabs/credits.php:25 ../helper/tabs/general-settings.php:65
 msgid "Flaticon"
 msgstr ""
 
@@ -284,8 +356,10 @@ msgstr ""
 #: /helper/tabs/documentation.php:2297 ../helper/tabs/documentation.php:2505 ..
 #: /helper/tabs/documentation.php:2594 ../helper/tabs/documentation.php:2790 ..
 #: /helper/tabs/documentation.php:2893 ../helper/tabs/documentation.php:2985 ..
-#: /helper/tabs/documentation.php:3061 ../shortcodes/panel/team-fullwidth.php:124 
-#: ../shortcodes/panel/team-grid.php:140 ../shortcodes/panel/testimonials.php:76
+#: /helper/tabs/documentation.php:3061 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:131 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:147 ..
+#: /shortcodes/panel/uix_sc_testimonials.php:83
 msgid "Name"
 msgstr ""
 
@@ -334,16 +408,19 @@ msgstr ""
 #: /helper/tabs/documentation.php:2508 ../helper/tabs/documentation.php:2597 ..
 #: /helper/tabs/documentation.php:2683 ../helper/tabs/documentation.php:2793 ..
 #: /helper/tabs/documentation.php:2896 ../helper/tabs/documentation.php:2988 ..
-#: /helper/tabs/documentation.php:3064 ../shortcodes/panel/heading.php:225 ..
-#: /shortcodes/panel/pricing-3-col.php:69 ../shortcodes/panel/pricing-3-col.php:
-#: 219 ../shortcodes/panel/pricing-3-col.php:370 ../shortcodes/panel/pricing-4-
-#: col.php:69 ../shortcodes/panel/pricing-4-col.php:218 ..
-#: /shortcodes/panel/pricing-4-col.php:369 ../shortcodes/panel/pricing-4-col.php:
-#: 519 ../shortcodes/panel/progress-bar.php:288
+#: /helper/tabs/documentation.php:3064 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 295 ../shortcodes/panel/uix_sc_form_pricing_col3.php:76 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:224 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:373 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:76 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:223 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:372 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:520 ..
+#: /shortcodes/panel/uix_sc_heading.php:232
 msgid "Description"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:49 ../shortcodes/panel/container.php:21
+#: ../helper/tabs/documentation.php:49 ../shortcodes/panel/uix_sc_container.php:28
 msgid "Choose Layout"
 msgstr ""
 
@@ -387,7 +464,7 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:2815 ..
-#: /shortcodes/panel/dividing-line.php:50
+#: /shortcodes/panel/uix_sc_dividing_line.php:57
 msgid "Width"
 msgstr ""
 
@@ -395,7 +472,7 @@ msgstr ""
 msgid "Removed"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:64 ../shortcodes/panel/container.php:37
+#: ../helper/tabs/documentation.php:64 ../shortcodes/panel/uix_sc_container.php:44
 msgid "Height"
 msgstr ""
 
@@ -428,7 +505,7 @@ msgid ""
 "automatically calculates the container height if the value is"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/container.php:51
+#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/uix_sc_container.php:58
 msgid "Vertically Center Content"
 msgstr ""
 
@@ -448,7 +525,7 @@ msgstr ""
 msgid "When enabled, the content of container is placed in the middle."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:79 ../shortcodes/panel/container.php:66
+#: ../helper/tabs/documentation.php:79 ../shortcodes/panel/uix_sc_container.php:73
 msgid "Background Image"
 msgstr ""
 
@@ -475,7 +552,7 @@ msgid ""
 "upload."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/container.php:90
+#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/uix_sc_container.php:97
 msgid "Background Color"
 msgstr ""
 
@@ -503,11 +580,14 @@ msgstr ""
 #: /helper/tabs/documentation.php:2333 ../helper/tabs/documentation.php:2426 ..
 #: /helper/tabs/documentation.php:2517 ../helper/tabs/documentation.php:2654 ..
 #: /helper/tabs/documentation.php:2662 ../helper/tabs/documentation.php:2670 ..
-#: /shortcodes/panel/button.php:40 ../shortcodes/panel/button.php:83 ..
-#: /shortcodes/panel/container.php:108 ../shortcodes/panel/container.php:192 ..
-#: /shortcodes/panel/heading.php:104 ../shortcodes/panel/heading.php:301 ..
-#: /shortcodes/panel/icons.php:39 ../shortcodes/panel/progress-bar.php:171 ..
-#: /shortcodes/panel/progress-bar.php:213 ../shortcodes/panel/progress-bar.php:255
+#: /shortcodes/panel/uix_sc_container.php:115 ..
+#: /shortcodes/panel/uix_sc_container.php:199 ../shortcodes/panel/uix_sc_form_bar.
+#: php:178 ../shortcodes/panel/uix_sc_form_bar.php:220 ..
+#: /shortcodes/panel/uix_sc_form_bar.php:262 ..
+#: /shortcodes/panel/uix_sc_form_button.php:47 ..
+#: /shortcodes/panel/uix_sc_form_button.php:90 ..
+#: /shortcodes/panel/uix_sc_form_icon.php:46 ../shortcodes/panel/uix_sc_heading.
+#: php:111 ../shortcodes/panel/uix_sc_heading.php:308
 msgid "other color"
 msgstr ""
 
@@ -519,7 +599,7 @@ msgstr ""
 msgid "link at the bottom of the color selector."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:97 ../shortcodes/panel/container.php:235
+#: ../helper/tabs/documentation.php:97 ../shortcodes/panel/uix_sc_container.php:242
 msgid "Parallax"
 msgstr ""
 
@@ -529,7 +609,8 @@ msgid ""
 "value"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:104 ../shortcodes/panel/container.php:253
+#: ../helper/tabs/documentation.php:104 ../shortcodes/panel/uix_sc_container.php:
+#: 260
 msgid "Class"
 msgstr ""
 
@@ -541,7 +622,8 @@ msgstr ""
 msgid "Wrapper Margin"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:115 ../shortcodes/panel/container.php:265
+#: ../helper/tabs/documentation.php:115 ../shortcodes/panel/uix_sc_container.php:
+#: 272
 msgid "Use the input fields below to customize the margin of container wrapper."
 msgstr ""
 
@@ -549,7 +631,8 @@ msgstr ""
 msgid "Content Padding"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:122 ../shortcodes/panel/container.php:284
+#: ../helper/tabs/documentation.php:122 ../shortcodes/panel/uix_sc_container.php:
+#: 291
 msgid ""
 "Use the input fields below to customize the padding of content from "
 "container."
@@ -557,7 +640,7 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:127 ../helper/tabs/documentation.php:137 ..
 #: /helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
-#: /helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:135
+#: /helper/tabs/documentation.php:159 ../shortcodes/panel/uix_sc_container.php:142
 msgid "Border"
 msgstr ""
 
@@ -574,7 +657,8 @@ msgstr ""
 msgid "checkbox should be checked."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:144 ../shortcodes/panel/container.php:157
+#: ../helper/tabs/documentation.php:144 ../shortcodes/panel/uix_sc_container.php:
+#: 164
 msgid "Border Width"
 msgstr ""
 
@@ -598,7 +682,8 @@ msgstr ""
 msgid "It will determine the width of the container border in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:151 ../shortcodes/panel/container.php:172
+#: ../helper/tabs/documentation.php:151 ../shortcodes/panel/uix_sc_container.php:
+#: 179
 msgid "Border Color"
 msgstr ""
 
@@ -606,7 +691,8 @@ msgstr ""
 msgid "Set a color for the container border. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:159 ../shortcodes/panel/container.php:215
+#: ../helper/tabs/documentation.php:159 ../shortcodes/panel/uix_sc_container.php:
+#: 222
 msgid "Border Style"
 msgstr ""
 
@@ -661,7 +747,8 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:366 ../shortcodes/panel/recent-posts.php:19
+#: ../helper/tabs/documentation.php:366 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:26
 msgid "Number of posts to show"
 msgstr ""
 
@@ -669,7 +756,8 @@ msgstr ""
 msgid "Set the number of posts to display per page there."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:372 ../shortcodes/panel/recent-posts.php:31
+#: ../helper/tabs/documentation.php:372 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:38
 msgid "Loop Template"
 msgstr ""
 
@@ -684,46 +772,58 @@ msgid ""
 "which will be replaced by the actual values when the content is displayed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:377 ../shortcodes/panel/recent-posts.php:35
+#: ../helper/tabs/documentation.php:377 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:42
 msgid "Permalink"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:378 ../helper/tabs/documentation.php:455 ..
 #: /helper/tabs/documentation.php:2306 ../helper/tabs/documentation.php:2676 ..
-#: /shortcodes/panel/heading.php:23 ../shortcodes/panel/pricing-3-col.php:21 ..
-#: /shortcodes/panel/pricing-3-col.php:172 ../shortcodes/panel/pricing-3-col.php:
-#: 323 ../shortcodes/panel/pricing-4-col.php:21 ../shortcodes/panel/pricing-4-col.
-#: php:171 ../shortcodes/panel/pricing-4-col.php:322 ../shortcodes/panel/pricing-
-#: 4-col.php:472 ../shortcodes/panel/progress-bar.php:278 ..
-#: /shortcodes/panel/recent-posts.php:36
+#: /shortcodes/panel/uix_sc_form_bar.php:285 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:28 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:177 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:326 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:28 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:176 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:325 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:473 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:43 ..
+#: /shortcodes/panel/uix_sc_heading.php:30
 msgid "Title"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:379 ../shortcodes/panel/recent-posts.php:37
+#: ../helper/tabs/documentation.php:379 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:44
 msgid "Month"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:380 ../shortcodes/panel/recent-posts.php:38
+#: ../helper/tabs/documentation.php:380 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:45
 msgid "Month display in English"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:381 ../shortcodes/panel/recent-posts.php:39
+#: ../helper/tabs/documentation.php:381 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:46
 msgid "Day"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:382 ../shortcodes/panel/recent-posts.php:40
+#: ../helper/tabs/documentation.php:382 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:47
 msgid "Year"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:383 ../shortcodes/panel/recent-posts.php:41
+#: ../helper/tabs/documentation.php:383 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:48
 msgid "Excerpt"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:384 ../shortcodes/panel/recent-posts.php:42
+#: ../helper/tabs/documentation.php:384 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:49
 msgid "Featured image"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:389 ../shortcodes/panel/recent-posts.php:58
+#: ../helper/tabs/documentation.php:389 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:65
 msgid "Output text before the &lt;a&gt; of the link"
 msgstr ""
 
@@ -733,7 +833,8 @@ msgid ""
 "example:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:395 ../shortcodes/panel/recent-posts.php:68
+#: ../helper/tabs/documentation.php:395 ..
+#: /shortcodes/panel/uix_sc_form_recent_posts.php:75
 msgid "Output text after the &lt;/a&gt; of the link"
 msgstr ""
 
@@ -781,11 +882,14 @@ msgstr ""
 msgid "A title for the pricing table."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:463 ../shortcodes/panel/pricing-3-col.php:30 .
-#: ./shortcodes/panel/pricing-3-col.php:181 ../shortcodes/panel/pricing-3-col.php:
-#: 332 ../shortcodes/panel/pricing-4-col.php:30 ../shortcodes/panel/pricing-4-col.
-#: php:180 ../shortcodes/panel/pricing-4-col.php:331 ../shortcodes/panel/pricing-
-#: 4-col.php:481
+#: ../helper/tabs/documentation.php:463 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:37 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:186 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:335 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:37 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:185 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:334 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:482
 msgid "Price"
 msgstr ""
 
@@ -793,11 +897,14 @@ msgstr ""
 msgid "You want for the price."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:470 ../shortcodes/panel/pricing-3-col.php:39 .
-#: ./shortcodes/panel/pricing-3-col.php:190 ../shortcodes/panel/pricing-3-col.php:
-#: 341 ../shortcodes/panel/pricing-4-col.php:39 ../shortcodes/panel/pricing-4-col.
-#: php:189 ../shortcodes/panel/pricing-4-col.php:340 ../shortcodes/panel/pricing-
-#: 4-col.php:490
+#: ../helper/tabs/documentation.php:470 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:46 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:195 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:344 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:46 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:194 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:343 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:491
 msgid "Price Color"
 msgstr ""
 
@@ -805,11 +912,14 @@ msgstr ""
 msgid "You want for the text color of price."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:477 ../shortcodes/panel/pricing-3-col.php:51 .
-#: ./shortcodes/panel/pricing-3-col.php:201 ../shortcodes/panel/pricing-3-col.php:
-#: 352 ../shortcodes/panel/pricing-4-col.php:51 ../shortcodes/panel/pricing-4-col.
-#: php:200 ../shortcodes/panel/pricing-4-col.php:351 ../shortcodes/panel/pricing-
-#: 4-col.php:501
+#: ../helper/tabs/documentation.php:477 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:58 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:206 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:355 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:58 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:205 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:354 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:502
 msgid "Currency"
 msgstr ""
 
@@ -817,19 +927,25 @@ msgstr ""
 msgid "Your desired currency sign."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:484 ../shortcodes/panel/pricing-3-col.php:60 .
-#: ./shortcodes/panel/pricing-3-col.php:210 ../shortcodes/panel/pricing-3-col.php:
-#: 361 ../shortcodes/panel/pricing-4-col.php:60 ../shortcodes/panel/pricing-4-col.
-#: php:209 ../shortcodes/panel/pricing-4-col.php:360 ../shortcodes/panel/pricing-
-#: 4-col.php:510
+#: ../helper/tabs/documentation.php:484 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:67 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:215 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:364 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:67 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:214 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:363 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:511
 msgid "Period"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:486 ../shortcodes/panel/pricing-3-col.php:62 .
-#: ./shortcodes/panel/pricing-3-col.php:212 ../shortcodes/panel/pricing-3-col.php:
-#: 363 ../shortcodes/panel/pricing-4-col.php:62 ../shortcodes/panel/pricing-4-col.
-#: php:211 ../shortcodes/panel/pricing-4-col.php:362 ../shortcodes/panel/pricing-
-#: 4-col.php:512
+#: ../helper/tabs/documentation.php:486 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:69 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:217 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:366 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:69 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:216 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:365 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:513
 msgid "per month"
 msgstr ""
 
@@ -841,11 +957,14 @@ msgstr ""
 msgid "Description of this pricing table."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:498 ../shortcodes/panel/pricing-3-col.php:82 .
-#: ./shortcodes/panel/pricing-3-col.php:232 ../shortcodes/panel/pricing-3-col.php:
-#: 383 ../shortcodes/panel/pricing-4-col.php:82 ../shortcodes/panel/pricing-4-col.
-#: php:231 ../shortcodes/panel/pricing-4-col.php:382 ../shortcodes/panel/pricing-
-#: 4-col.php:532
+#: ../helper/tabs/documentation.php:498 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:89 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:237 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:386 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:89 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:236 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:385 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:533
 msgid "Button Label"
 msgstr ""
 
@@ -853,11 +972,14 @@ msgstr ""
 msgid "That is the text you would like displayed on the button."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:505 ../shortcodes/panel/pricing-3-col.php:91 .
-#: ./shortcodes/panel/pricing-3-col.php:241 ../shortcodes/panel/pricing-3-col.php:
-#: 392 ../shortcodes/panel/pricing-4-col.php:91 ../shortcodes/panel/pricing-4-col.
-#: php:240 ../shortcodes/panel/pricing-4-col.php:391 ../shortcodes/panel/pricing-
-#: 4-col.php:541
+#: ../helper/tabs/documentation.php:505 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:98 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:246 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:395 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:98 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:245 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:394 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:542
 msgid "Button Link"
 msgstr ""
 
@@ -866,20 +988,26 @@ msgid "A destination link for the button."
 msgstr ""
 
 #: ../helper/tabs/documentation.php:512 ../helper/tabs/documentation.php:2023 ..
-#: /helper/tabs/documentation.php:2918 ../shortcodes/panel/button.php:22 ..
-#: /shortcodes/panel/pricing-3-col.php:100 ../shortcodes/panel/pricing-3-col.php:
-#: 251 ../shortcodes/panel/pricing-3-col.php:402 ../shortcodes/panel/pricing-4-
-#: col.php:100 ../shortcodes/panel/pricing-4-col.php:250 ..
-#: /shortcodes/panel/pricing-4-col.php:401 ../shortcodes/panel/pricing-4-col.php:
-#: 551 ../shortcodes/panel/share-button.php:55
+#: /helper/tabs/documentation.php:2918 ../shortcodes/panel/uix_sc_form_button.php:
+#: 29 ../shortcodes/panel/uix_sc_form_pricing_col3.php:107 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:256 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:405 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:107 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:255 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:404 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:552 ..
+#: /shortcodes/panel/uix_sc_form_share_buttons.php:62
 msgid "Button Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:519 ../shortcodes/panel/pricing-3-col.php:111 
-#: ../shortcodes/panel/pricing-3-col.php:262 ../shortcodes/panel/pricing-3-col.
-#: php:413 ../shortcodes/panel/pricing-4-col.php:111 ../shortcodes/panel/pricing-
-#: 4-col.php:261 ../shortcodes/panel/pricing-4-col.php:412 ..
-#: /shortcodes/panel/pricing-4-col.php:562
+#: ../helper/tabs/documentation.php:519 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:118 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:267 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:416 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:118 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:266 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:415 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:563
 msgid "Open in new tab"
 msgstr ""
 
@@ -887,12 +1015,14 @@ msgstr ""
 msgid "When enabled, the button link to open in a new tab."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:526 ../shortcodes/core/tinymce-plugin-lang.
-#: php:27 ../shortcodes/panel/pricing-3-col.php:123 ../shortcodes/panel/pricing-3-
-#: col.php:274 ../shortcodes/panel/pricing-3-col.php:425 ..
-#: /shortcodes/panel/pricing-4-col.php:123 ../shortcodes/panel/pricing-4-col.php:
-#: 273 ../shortcodes/panel/pricing-4-col.php:424 ../shortcodes/panel/pricing-4-
-#: col.php:574
+#: ../helper/tabs/documentation.php:526 ../shortcodes/editor/tinymce-plugin-lang.
+#: php:27 ../shortcodes/panel/uix_sc_form_pricing_col3.php:130 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:279 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:428 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:130 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:278 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:427 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:575
 msgid "Features"
 msgstr ""
 
@@ -902,11 +1032,14 @@ msgid ""
 "<strong>\"ENTER\"</strong>. The textarea is supported by HTML tags."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:534 ../shortcodes/panel/pricing-3-col.php:139 
-#: ../shortcodes/panel/pricing-3-col.php:289 ../shortcodes/panel/pricing-3-col.
-#: php:440 ../shortcodes/panel/pricing-4-col.php:138 ../shortcodes/panel/pricing-
-#: 4-col.php:288 ../shortcodes/panel/pricing-4-col.php:439 ..
-#: /shortcodes/panel/pricing-4-col.php:589
+#: ../helper/tabs/documentation.php:534 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:144 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:292 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:441 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:143 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:291 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:440 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:588
 msgid "Active"
 msgstr ""
 
@@ -927,11 +1060,14 @@ msgstr ""
 msgid "Example: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:544 ../shortcodes/panel/pricing-3-col.php:151 
-#: ../shortcodes/panel/pricing-3-col.php:301 ../shortcodes/panel/pricing-3-col.
-#: php:452 ../shortcodes/panel/pricing-4-col.php:150 ../shortcodes/panel/pricing-
-#: 4-col.php:300 ../shortcodes/panel/pricing-4-col.php:451 ..
-#: /shortcodes/panel/pricing-4-col.php:601
+#: ../helper/tabs/documentation.php:544 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:156 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:304 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:453 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:155 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:303 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:452 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:600
 msgid "Hide"
 msgstr ""
 
@@ -948,7 +1084,7 @@ msgstr ""
 msgid "Example (4 col)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:639 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:639 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:22
 msgid "Accordion"
 msgstr ""
@@ -977,12 +1113,17 @@ msgstr ""
 #: /helper/tabs/documentation.php:1132 ../helper/tabs/documentation.php:1160 ..
 #: /helper/tabs/documentation.php:1201 ../helper/tabs/documentation.php:1256 ..
 #: /helper/tabs/documentation.php:1369 ../helper/tabs/documentation.php:1398 ..
-#: /shortcodes/panel/accordion.php:58 ../shortcodes/panel/client-3-col.php:34 ..
-#: /shortcodes/panel/client-4-col.php:34 ../shortcodes/panel/features-2-col.php:
-#: 33 ../shortcodes/panel/features-2-col.php:190 ../shortcodes/panel/features-3-
-#: col.php:33 ../shortcodes/panel/hello.php:363 ../shortcodes/panel/tabs.php:57 ..
-#: /shortcodes/panel/team-fullwidth.php:70 ../shortcodes/panel/team-grid.php:86 ..
-#: /shortcodes/panel/testimonials.php:27
+#: /shortcodes/panel/uix_sc_form_accordion.php:65 ..
+#: /shortcodes/panel/uix_sc_form_client_col3.php:41 ..
+#: /shortcodes/panel/uix_sc_form_client_col4.php:41 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:40 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:197 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:40 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:368 ..
+#: /shortcodes/panel/uix_sc_form_tabs.php:64 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:77 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:93 ..
+#: /shortcodes/panel/uix_sc_testimonials.php:34
 msgid "click here to add an item"
 msgstr ""
 
@@ -995,7 +1136,8 @@ msgid "button to add a new item"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:665 ../helper/tabs/documentation.php:757 ..
-#: /shortcodes/panel/accordion.php:21 ../shortcodes/panel/tabs.php:34
+#: /shortcodes/panel/uix_sc_form_accordion.php:28 ..
+#: /shortcodes/panel/uix_sc_form_tabs.php:41
 msgid "Transition Effect"
 msgstr ""
 
@@ -1008,7 +1150,8 @@ msgstr ""
 msgid "Controls the animation type. The following values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:673 ../shortcodes/panel/accordion.php:36
+#: ../helper/tabs/documentation.php:673 ../shortcodes/panel/uix_sc_form_accordion.
+#: php:43
 msgid "Open The First One Automatically"
 msgstr ""
 
@@ -1019,13 +1162,18 @@ msgstr ""
 #: ../helper/tabs/documentation.php:680 ../helper/tabs/documentation.php:764 ..
 #: /helper/tabs/documentation.php:909 ../helper/tabs/documentation.php:1025 ..
 #: /helper/tabs/documentation.php:1156 ../helper/tabs/documentation.php:1252 ..
-#: /helper/tabs/documentation.php:1394 ../shortcodes/panel/accordion.php:52 ..
-#: /shortcodes/panel/client-3-col.php:28 ../shortcodes/panel/client-4-col.php:28 .
-#: ./shortcodes/panel/features-2-col.php:27 ../shortcodes/panel/features-2-col.
-#: php:184 ../shortcodes/panel/features-3-col.php:27 ../shortcodes/panel/hello.
-#: php:357 ../shortcodes/panel/portfolio-grid.php:90 ../shortcodes/panel/tabs.php:
-#: 51 ../shortcodes/panel/team-fullwidth.php:64 ../shortcodes/panel/team-grid.php:
-#: 80 ../shortcodes/panel/testimonials.php:21
+#: /helper/tabs/documentation.php:1394 ../shortcodes/panel/uix_sc_form_accordion.
+#: php:59 ../shortcodes/panel/uix_sc_form_client_col3.php:35 ..
+#: /shortcodes/panel/uix_sc_form_client_col4.php:35 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:34 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:191 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:34 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:362 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:97 ..
+#: /shortcodes/panel/uix_sc_form_tabs.php:58 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:71 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:87 ..
+#: /shortcodes/panel/uix_sc_testimonials.php:28
 msgid "List Item"
 msgstr ""
 
@@ -1043,7 +1191,7 @@ msgid ""
 "<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:730 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:730 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:23
 msgid "Tabs"
 msgstr ""
@@ -1060,7 +1208,7 @@ msgid ""
 "within each sub-group. The textarea is supported by HTML tags."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:826 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:826 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:46
 msgid "Portfolio"
 msgstr ""
@@ -1087,7 +1235,7 @@ msgid "To set up the project destination URL by clicking "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:915 ..
-#: /shortcodes/panel/portfolio-grid.php:224
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:231
 msgid "set up destination URL with this project"
 msgstr ""
 
@@ -1097,8 +1245,9 @@ msgid "link on the content of the popup window."
 msgstr ""
 
 #: ../helper/tabs/documentation.php:852 ../helper/tabs/documentation.php:1228 ..
-#: /shortcodes/core/tinymce-plugin-lang.php:36 ../shortcodes/panel/portfolio-grid.
-#: php:21 ../shortcodes/panel/team-grid.php:20
+#: /shortcodes/editor/tinymce-plugin-lang.php:36 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:28 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:27
 msgid "Column"
 msgstr ""
 
@@ -1108,7 +1257,8 @@ msgid ""
 "Allows 2, 3 and 4 columns across the page."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:859 ../shortcodes/panel/portfolio-grid.php:36
+#: ../helper/tabs/documentation.php:859 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:43
 msgid "Filterable by Category"
 msgstr ""
 
@@ -1122,7 +1272,8 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/documentation.php:870 ../helper/tabs/documentation.php:2062 ..
-#: /shortcodes/panel/button.php:143 ../shortcodes/panel/portfolio-grid.php:51
+#: /shortcodes/panel/uix_sc_form_button.php:150 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:58
 msgid "Open link in new tab"
 msgstr ""
 
@@ -1135,11 +1286,13 @@ msgid "This option is valid when you use "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:874 ../helper/tabs/documentation.php:2046 ..
-#: /shortcodes/panel/button.php:118 ../shortcodes/panel/portfolio-grid.php:236
+#: /shortcodes/panel/uix_sc_form_button.php:125 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:243
 msgid "Destination URL"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:880 ../shortcodes/panel/portfolio-grid.php:66
+#: ../helper/tabs/documentation.php:880 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:73
 msgid "Radius of Fillet Image"
 msgstr ""
 
@@ -1147,7 +1300,8 @@ msgstr ""
 msgid "To set the fillet radius in pixels for project picture."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:888 ../shortcodes/panel/portfolio-grid.php:79
+#: ../helper/tabs/documentation.php:888 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:86
 msgid "Class Prefix"
 msgstr ""
 
@@ -1229,7 +1383,7 @@ msgid ""
 "within each sub-group. The textarea is supported by HTML tags.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1199 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:1199 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:24
 msgid "Team"
 msgstr ""
@@ -1252,12 +1406,14 @@ msgid "To set up the member social media links by clicking"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:1201 ../helper/tabs/documentation.php:1258 ..
-#: /shortcodes/panel/team-fullwidth.php:169 ../shortcodes/panel/team-grid.php:185
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:176 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:192
 msgid "set up links with social network"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1236 ../shortcodes/panel/team-fullwidth.php:
-#: 34 ../shortcodes/panel/team-grid.php:49
+#: ../helper/tabs/documentation.php:1236 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:41 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:56
 msgid "Radius of Fillet Avatar"
 msgstr ""
 
@@ -1265,8 +1421,9 @@ msgstr ""
 msgid "To set the fillet radius in pixels for avatar photo."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1244 ../shortcodes/panel/team-fullwidth.php:
-#: 48 ../shortcodes/panel/team-grid.php:62
+#: ../helper/tabs/documentation.php:1244 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:55 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:69
 msgid "Height of Grid"
 msgstr ""
 
@@ -1318,7 +1475,7 @@ msgid ""
 "<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1500 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:1500 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:34
 msgid "Responsive Video"
 msgstr ""
@@ -1335,7 +1492,8 @@ msgid ""
 "background image that will be visible while the video is loading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1528 ../shortcodes/panel/video.php:24
+#: ../helper/tabs/documentation.php:1528 ../shortcodes/panel/uix_sc_form_video.
+#: php:31
 msgid "Video URL"
 msgstr ""
 
@@ -1361,7 +1519,8 @@ msgstr ""
 msgid "Defines height of the media. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1550 ../shortcodes/panel/video.php:62
+#: ../helper/tabs/documentation.php:1550 ../shortcodes/panel/uix_sc_form_video.
+#: php:69
 msgid "Responsive of Display"
 msgstr ""
 
@@ -1369,7 +1528,7 @@ msgstr ""
 msgid "When enabled, using responsive video embedding."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1586 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:1586 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:35
 msgid "Audio"
 msgstr ""
@@ -1386,7 +1545,7 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:1590 ../helper/tabs/documentation.php:1623 ..
 #: /helper/tabs/documentation.php:1640 ../helper/tabs/documentation.php:1648 ..
-#: /helper/tabs/documentation.php:1655 ../shortcodes/panel/audio.php:34
+#: /helper/tabs/documentation.php:1655 ../shortcodes/panel/uix_sc_form_audio.php:37
 msgid "Enable SoundCloud"
 msgstr ""
 
@@ -1394,7 +1553,8 @@ msgstr ""
 msgid "checkbox should be checked on the content of the popup window."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1615 ../shortcodes/panel/audio.php:24
+#: ../helper/tabs/documentation.php:1615 ../shortcodes/panel/uix_sc_form_audio.
+#: php:27
 msgid "Audio URL"
 msgstr ""
 
@@ -1438,7 +1598,8 @@ msgstr ""
 msgid "checkbox is <strong>unchecked</strong>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1645 ../shortcodes/panel/audio.php:77
+#: ../helper/tabs/documentation.php:1645 ../shortcodes/panel/uix_sc_form_audio.
+#: php:80
 msgid "Autoplay"
 msgstr ""
 
@@ -1450,7 +1611,8 @@ msgstr ""
 msgid "checkbox is <strong>checked</strong>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1652 ../shortcodes/panel/audio.php:91
+#: ../helper/tabs/documentation.php:1652 ../shortcodes/panel/uix_sc_form_audio.
+#: php:94
 msgid "Loop"
 msgstr ""
 
@@ -1458,7 +1620,7 @@ msgstr ""
 msgid "When enabled, the audio will loop and play again once it has finished."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1692 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:1692 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:49
 msgid "Author Card"
 msgstr ""
@@ -1469,7 +1631,8 @@ msgid ""
 "elegant way."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1719 ../shortcodes/panel/author-card.php:21
+#: ../helper/tabs/documentation.php:1719 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:28
 msgid "Primary Color"
 msgstr ""
 
@@ -1477,7 +1640,8 @@ msgstr ""
 msgid "You want for the primary color of this author card."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1726 ../shortcodes/panel/author-card.php:32
+#: ../helper/tabs/documentation.php:1726 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:39
 msgid "Author Picture"
 msgstr ""
 
@@ -1485,7 +1649,8 @@ msgstr ""
 msgid "The avatar or Logo of this author."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1734 ../shortcodes/panel/author-card.php:48
+#: ../helper/tabs/documentation.php:1734 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:55
 msgid "Author Name"
 msgstr ""
 
@@ -1493,7 +1658,8 @@ msgstr ""
 msgid "The name of this author."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1742 ../shortcodes/panel/author-card.php:59
+#: ../helper/tabs/documentation.php:1742 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:66
 msgid "Biographical Info"
 msgstr ""
 
@@ -1502,11 +1668,13 @@ msgid "The introduction of this author. The textarea is supported by HTML tags."
 msgstr ""
 
 #: ../helper/tabs/documentation.php:1749 ../helper/tabs/documentation.php:2038 ..
-#: /shortcodes/panel/author-card.php:74 ../shortcodes/panel/button.php:108
+#: /shortcodes/panel/uix_sc_form_authorcard.php:81 ..
+#: /shortcodes/panel/uix_sc_form_button.php:115
 msgid "Link Text"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1751 ../shortcodes/panel/author-card.php:76
+#: ../helper/tabs/documentation.php:1751 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:83
 msgid "&rarr;"
 msgstr ""
 
@@ -1514,7 +1682,8 @@ msgstr ""
 msgid "That is the text you would like displayed on the link region."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1756 ../shortcodes/panel/author-card.php:83
+#: ../helper/tabs/documentation.php:1756 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:90
 msgid "Link URL"
 msgstr ""
 
@@ -1548,18 +1717,26 @@ msgid ""
 "columns tag <code>[uix_column] ... [/uix_column]</code>."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1843 ../shortcodes/panel/col-1_3-2_3.php:19 ..
-#: /shortcodes/panel/col-2_3-1_3.php:19 ../shortcodes/panel/col-3_4-1_4.php:19 ..
-#: /shortcodes/panel/col-average-2.php:19 ../shortcodes/panel/col-average-3.php:
-#: 19 ../shortcodes/panel/col-average-4.php:19 ../shortcodes/panel/hello.php:65
+#: ../helper/tabs/documentation.php:1843 ..
+#: /shortcodes/panel/uix_sc_form_column_1_3__2_3.php:26 ..
+#: /shortcodes/panel/uix_sc_form_column_2_3__1_3.php:26 ..
+#: /shortcodes/panel/uix_sc_form_column_3_4__1_4.php:26 ..
+#: /shortcodes/panel/uix_sc_form_column_average_2.php:26 ..
+#: /shortcodes/panel/uix_sc_form_column_average_3.php:26 ..
+#: /shortcodes/panel/uix_sc_form_column_average_4.php:26 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:72
 msgid "Padding (px)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1846 ../shortcodes/panel/col-1_3-2_3.php:20 ..
-#: /shortcodes/panel/col-1_4-3_4.php:20 ../shortcodes/panel/col-2_3-1_3.php:20 ..
-#: /shortcodes/panel/col-3_4-1_4.php:20 ../shortcodes/panel/col-average-2.php:20 .
-#: ./shortcodes/panel/col-average-3.php:20 ../shortcodes/panel/col-average-4.php:
-#: 20 ../shortcodes/panel/hello.php:66
+#: ../helper/tabs/documentation.php:1846 ..
+#: /shortcodes/panel/uix_sc_form_column_1_3__2_3.php:27 ..
+#: /shortcodes/panel/uix_sc_form_column_1_4__3_4.php:27 ..
+#: /shortcodes/panel/uix_sc_form_column_2_3__1_3.php:27 ..
+#: /shortcodes/panel/uix_sc_form_column_3_4__1_4.php:27 ..
+#: /shortcodes/panel/uix_sc_form_column_average_2.php:27 ..
+#: /shortcodes/panel/uix_sc_form_column_average_3.php:27 ..
+#: /shortcodes/panel/uix_sc_form_column_average_4.php:27 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:73
 msgid ""
 "Use the input fields below to customize the padding of your column shortcode."
 " Measurement units is pixels (px)."
@@ -1584,7 +1761,7 @@ msgid "To set up the more properties by clicking"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:1998 ../helper/tabs/documentation.php:2073 ..
-#: /shortcodes/panel/button.php:169
+#: /shortcodes/panel/uix_sc_form_button.php:176
 msgid "click on the set more attributes"
 msgstr ""
 
@@ -1596,7 +1773,8 @@ msgstr ""
 msgid "Set a color for the button. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2031 ../shortcodes/panel/button.php:64
+#: ../helper/tabs/documentation.php:2031 ../shortcodes/panel/uix_sc_form_button.
+#: php:71
 msgid "Text Color"
 msgstr ""
 
@@ -1605,12 +1783,13 @@ msgid "Set a color for the text. "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2040 ../helper/tabs/documentation.php:2207 ..
-#: /shortcodes/panel/button.php:110
+#: /shortcodes/panel/uix_sc_form_button.php:117
 msgid "Link to"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2054 ../helper/tabs/documentation.php:2911 ..
-#: /shortcodes/panel/button.php:129 ../shortcodes/panel/share-button.php:40
+#: /shortcodes/panel/uix_sc_form_button.php:136 ..
+#: /shortcodes/panel/uix_sc_form_share_buttons.php:47
 msgid "Fillet Radius"
 msgstr ""
 
@@ -1646,7 +1825,8 @@ msgstr ""
 msgid "Note: that will be pure text button if icon does not choose."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2090 ../shortcodes/panel/button.php:192
+#: ../helper/tabs/documentation.php:2090 ../shortcodes/panel/uix_sc_form_button.
+#: php:199
 msgid "Font-Size for Button"
 msgstr ""
 
@@ -1655,7 +1835,8 @@ msgid "The font size of button in pixels."
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2097 ../helper/tabs/documentation.php:2345 ..
-#: /shortcodes/panel/button.php:206 ../shortcodes/panel/heading.php:146
+#: /shortcodes/panel/uix_sc_form_button.php:213 ..
+#: /shortcodes/panel/uix_sc_heading.php:153
 msgid "Letter Spacing"
 msgstr ""
 
@@ -1682,7 +1863,7 @@ msgstr ""
 msgid "Get Latitude Longitude"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2181 ../shortcodes/panel/map.php:21
+#: ../helper/tabs/documentation.php:2181 ../shortcodes/panel/uix_sc_map.php:28
 msgid "Map Style"
 msgstr ""
 
@@ -1690,7 +1871,7 @@ msgstr ""
 msgid "Create your own Google Maps style."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2189 ../shortcodes/panel/map.php:43
+#: ../helper/tabs/documentation.php:2189 ../shortcodes/panel/uix_sc_map.php:50
 msgid "Map Width"
 msgstr ""
 
@@ -1700,7 +1881,7 @@ msgid ""
 "There are two types of length units:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2196 ../shortcodes/panel/map.php:57
+#: ../helper/tabs/documentation.php:2196 ../shortcodes/panel/uix_sc_map.php:64
 msgid "Map Height"
 msgstr ""
 
@@ -1708,7 +1889,7 @@ msgstr ""
 msgid "Defines height of the map in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2205 ../shortcodes/panel/map.php:70
+#: ../helper/tabs/documentation.php:2205 ../shortcodes/panel/uix_sc_map.php:77
 msgid "Place Name"
 msgstr ""
 
@@ -1716,7 +1897,7 @@ msgstr ""
 msgid "Input an address to show on the map."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2214 ../shortcodes/panel/map.php:80
+#: ../helper/tabs/documentation.php:2214 ../shortcodes/panel/uix_sc_map.php:87
 msgid "Latitude"
 msgstr ""
 
@@ -1724,7 +1905,7 @@ msgstr ""
 msgid "Input a separate latitude value."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2223 ../shortcodes/panel/map.php:90
+#: ../helper/tabs/documentation.php:2223 ../shortcodes/panel/uix_sc_map.php:97
 msgid "Longitude"
 msgstr ""
 
@@ -1732,7 +1913,7 @@ msgstr ""
 msgid "Input a separate longitude value."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2230 ../shortcodes/panel/map.php:101
+#: ../helper/tabs/documentation.php:2230 ../shortcodes/panel/uix_sc_map.php:108
 msgid "Zoom"
 msgstr ""
 
@@ -1740,7 +1921,7 @@ msgstr ""
 msgid "Map scale at various zoom levels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2237 ../shortcodes/panel/map.php:116
+#: ../helper/tabs/documentation.php:2237 ../shortcodes/panel/uix_sc_map.php:123
 msgid "Marker"
 msgstr ""
 
@@ -1748,7 +1929,7 @@ msgstr ""
 msgid "Custom a pin (location marker) to be used on the map."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2276 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2276 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:38
 msgid "Special Heading"
 msgstr ""
@@ -1757,7 +1938,7 @@ msgstr ""
 msgid "This shortcode lets you add a special heading into your page."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2308 ../shortcodes/panel/heading.php:25
+#: ../helper/tabs/documentation.php:2308 ../shortcodes/panel/uix_sc_heading.php:32
 msgid "Text Here"
 msgstr ""
 
@@ -1765,7 +1946,7 @@ msgstr ""
 msgid "The heading title."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2314 ../shortcodes/panel/heading.php:34
+#: ../helper/tabs/documentation.php:2314 ../shortcodes/panel/uix_sc_heading.php:41
 msgid "Choose Title Style"
 msgstr ""
 
@@ -1777,7 +1958,8 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2323 ../helper/tabs/documentation.php:2530 ..
-#: /shortcodes/panel/heading.php:72 ../shortcodes/panel/icons.php:74
+#: /shortcodes/panel/uix_sc_form_icon.php:81 ../shortcodes/panel/uix_sc_heading.
+#: php:79
 msgid "Size"
 msgstr ""
 
@@ -1785,7 +1967,7 @@ msgstr ""
 msgid "The heading size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2330 ../shortcodes/panel/heading.php:86
+#: ../helper/tabs/documentation.php:2330 ../shortcodes/panel/uix_sc_heading.php:93
 msgid "Heading Color"
 msgstr ""
 
@@ -1799,7 +1981,7 @@ msgid ""
 "stylesheet to render webpages if the value is empty. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2338 ../shortcodes/panel/heading.php:131
+#: ../helper/tabs/documentation.php:2338 ../shortcodes/panel/uix_sc_heading.php:138
 msgid "Alignment"
 msgstr ""
 
@@ -1813,7 +1995,7 @@ msgstr ""
 msgid "The letter spacing of heading in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2352 ../shortcodes/panel/heading.php:161
+#: ../helper/tabs/documentation.php:2352 ../shortcodes/panel/uix_sc_heading.php:168
 msgid "Uppercase of Text"
 msgstr ""
 
@@ -1823,7 +2005,7 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:2359 ../helper/tabs/documentation.php:2369 ..
 #: /helper/tabs/documentation.php:2376 ../helper/tabs/documentation.php:2383 ..
-#: /shortcodes/panel/heading.php:176
+#: /shortcodes/panel/uix_sc_heading.php:183
 msgid "Underline"
 msgstr ""
 
@@ -1836,7 +2018,8 @@ msgid "To set up the following properties, the"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2376 ../helper/tabs/documentation.php:2635 ..
-#: /shortcodes/panel/heading.php:195 ../shortcodes/panel/progress-bar.php:107
+#: /shortcodes/panel/uix_sc_form_bar.php:114 ../shortcodes/panel/uix_sc_heading.
+#: php:202
 msgid "Line Width"
 msgstr ""
 
@@ -1846,7 +2029,7 @@ msgid ""
 "There are two types of length units: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2383 ../shortcodes/panel/heading.php:210
+#: ../helper/tabs/documentation.php:2383 ../shortcodes/panel/uix_sc_heading.php:217
 msgid "Line Height"
 msgstr ""
 
@@ -1866,7 +2049,7 @@ msgstr ""
 msgid "Some relevant text for the heading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2416 ../shortcodes/panel/heading.php:265
+#: ../helper/tabs/documentation.php:2416 ../shortcodes/panel/uix_sc_heading.php:272
 msgid "Font Size"
 msgstr ""
 
@@ -1874,9 +2057,11 @@ msgstr ""
 msgid "The description font size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2423 ../shortcodes/panel/features-2-col.php:
-#: 121 ../shortcodes/panel/features-2-col.php:278 ../shortcodes/panel/features-3-
-#: col.php:120 ../shortcodes/panel/heading.php:281
+#: ../helper/tabs/documentation.php:2423 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:128 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:284 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:127 ..
+#: /shortcodes/panel/uix_sc_heading.php:288
 msgid "Description Color"
 msgstr ""
 
@@ -1885,7 +2070,8 @@ msgid "Set a color for the description of heading. "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2431 ../helper/tabs/documentation.php:2823 ..
-#: /shortcodes/panel/dividing-line.php:64 ../shortcodes/panel/heading.php:326
+#: /shortcodes/panel/uix_sc_dividing_line.php:71 ..
+#: /shortcodes/panel/uix_sc_heading.php:333
 msgid "Opacity"
 msgstr ""
 
@@ -1909,8 +2095,9 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2514 ../helper/tabs/documentation.php:2808 ..
-#: /shortcodes/panel/dividing-line.php:39 ../shortcodes/panel/hello.php:216 ..
-#: /shortcodes/panel/icons.php:21
+#: /shortcodes/panel/uix_sc_dividing_line.php:46 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:221 ..
+#: /shortcodes/panel/uix_sc_form_icon.php:28
 msgid "Color"
 msgstr ""
 
@@ -1922,7 +2109,7 @@ msgstr ""
 msgid "The icon size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2575 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2575 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:48
 msgid "Progress Bar"
 msgstr ""
@@ -1936,8 +2123,8 @@ msgid ""
 "customization."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2603 ../shortcodes/panel/progress-bar.php:20 .
-#: ./shortcodes/panel/tabs.php:20
+#: ../helper/tabs/documentation.php:2603 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 27 ../shortcodes/panel/uix_sc_form_tabs.php:27
 msgid "Choose Style"
 msgstr ""
 
@@ -1949,8 +2136,8 @@ msgstr ""
 msgid "The following values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2611 ../shortcodes/panel/progress-bar.php:49 .
-#: ./shortcodes/panel/progress-bar.php:63
+#: ../helper/tabs/documentation.php:2611 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 56 ../shortcodes/panel/uix_sc_form_bar.php:70
 msgid "Bar Size"
 msgstr ""
 
@@ -1958,7 +2145,7 @@ msgstr ""
 msgid "Size of the bar in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2619 ../shortcodes/panel/progress-bar.php:80
+#: ../helper/tabs/documentation.php:2619 ../shortcodes/panel/uix_sc_form_bar.php:87
 msgid "Percent"
 msgstr ""
 
@@ -1968,7 +2155,8 @@ msgid ""
 "100."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2627 ../shortcodes/panel/progress-bar.php:94
+#: ../helper/tabs/documentation.php:2627 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 101
 msgid "Percentage & Icon Size"
 msgstr ""
 
@@ -1980,8 +2168,10 @@ msgstr ""
 msgid "Width of the bar line in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2642 ../shortcodes/core/tinymce-plugin-lang.
-#: php:42 ../shortcodes/panel/progress-bar.php:120
+#: ../helper/tabs/documentation.php:2642 ../shortcodes/editor/tinymce-plugin-lang.
+#: php:42 ../shortcodes/panel/uix_sc_form_bar.php:127 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:52 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:128
 msgid "Icon"
 msgstr ""
 
@@ -1989,7 +2179,8 @@ msgstr ""
 msgid "Using Icon instead of percentage. Default value is empty."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2651 ../shortcodes/panel/progress-bar.php:153
+#: ../helper/tabs/documentation.php:2651 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 160
 msgid "Bar Color"
 msgstr ""
 
@@ -2005,7 +2196,8 @@ msgstr ""
 msgid "Set a color for the track for the bar. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2667 ../shortcodes/panel/progress-bar.php:237
+#: ../helper/tabs/documentation.php:2667 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 244
 msgid "Percentage & Icon Color"
 msgstr ""
 
@@ -2021,7 +2213,8 @@ msgstr ""
 msgid "The progress bar's description. Could be left blank."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2690 ../shortcodes/panel/progress-bar.php:302
+#: ../helper/tabs/documentation.php:2690 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 309
 msgid "Displayed Units"
 msgstr ""
 
@@ -2033,11 +2226,12 @@ msgstr ""
 msgid "Margin"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2701 ../shortcodes/panel/progress-bar.php:313
+#: ../helper/tabs/documentation.php:2701 ../shortcodes/panel/uix_sc_form_bar.php:
+#: 320
 msgid "Use the input fields below to customize the margin of progress bar."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2771 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2771 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:39
 msgid "Dividing Line"
 msgstr ""
@@ -2048,7 +2242,8 @@ msgid ""
 "sections on your pages."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2799 ../shortcodes/panel/dividing-line.php:20
+#: ../helper/tabs/documentation.php:2799 ../shortcodes/panel/uix_sc_dividing_line.
+#: php:27
 msgid "Choose Line Style"
 msgstr ""
 
@@ -2068,7 +2263,7 @@ msgstr ""
 msgid "The separator transparency. It inherits your choice of color."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2874 ../shortcodes/core/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2874 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:41
 msgid "Share Buttons"
 msgstr ""
@@ -2080,11 +2275,13 @@ msgid ""
 "automagically."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2903 ../shortcodes/panel/share-button.php:22
+#: ../helper/tabs/documentation.php:2903 ..
+#: /shortcodes/panel/uix_sc_form_share_buttons.php:29
 msgid "Choose Type of Button"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2904 ../shortcodes/panel/hello.php:243
+#: ../helper/tabs/documentation.php:2904 ../shortcodes/panel/uix_sc_form_hello.
+#: php:248
 msgid "Multiple Selector"
 msgstr ""
 
@@ -2096,7 +2293,8 @@ msgstr ""
 msgid "Set a color for social share buttons."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2925 ../shortcodes/panel/share-button.php:69
+#: ../helper/tabs/documentation.php:2925 ..
+#: /shortcodes/panel/uix_sc_form_share_buttons.php:76
 msgid "Button Size"
 msgstr ""
 
@@ -2124,7 +2322,8 @@ msgid ""
 "site without losing it's formatting."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3070 ../shortcodes/panel/code.php:20
+#: ../helper/tabs/documentation.php:3070 ../shortcodes/panel/uix_sc_form_code.php:
+#: 27
 msgid "Language"
 msgstr ""
 
@@ -2135,7 +2334,8 @@ msgid ""
 "what languages you use and how you want your code snippets to be displayed."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3079 ../shortcodes/panel/code.php:65
+#: ../helper/tabs/documentation.php:3079 ../shortcodes/panel/uix_sc_form_code.php:
+#: 72
 msgid "Source code"
 msgstr ""
 
@@ -2205,872 +2405,866 @@ msgid ""
 "WordPress Theme.</h4>"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:789
+#: ../shortcodes/frontpage-init.php:788
 msgid "All"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1289
+#: ../shortcodes/frontpage-init.php:1288
 msgid "+"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1290
+#: ../shortcodes/frontpage-init.php:1289
 msgid "-"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1656
+#: ../shortcodes/frontpage-init.php:1655
 msgid "Comments are closed."
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:12
+#: ../shortcodes/editor/tinymce-plugin-lang.php:12
 msgid "Hello Form"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:13
+#: ../shortcodes/editor/tinymce-plugin-lang.php:13
 msgid "Column Form"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:14 ../shortcodes/panel/hello.php:23 
-#: ../shortcodes/panel/hello.php:432
+#: ../shortcodes/editor/tinymce-plugin-lang.php:14 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:30 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:437
 msgid "Text"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:15
+#: ../shortcodes/editor/tinymce-plugin-lang.php:15
 msgid "Demo"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:17
+#: ../shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Content"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:18
+#: ../shortcodes/editor/tinymce-plugin-lang.php:18
 msgid "Recent Posts"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:19
+#: ../shortcodes/editor/tinymce-plugin-lang.php:19
 msgid "Pricing"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:20
+#: ../shortcodes/editor/tinymce-plugin-lang.php:20
 msgid "Pricing 3 Column"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:21
+#: ../shortcodes/editor/tinymce-plugin-lang.php:21
 msgid "Pricing 4 Column"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:25
+#: ../shortcodes/editor/tinymce-plugin-lang.php:25
 msgid "Team Full Width"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:26
+#: ../shortcodes/editor/tinymce-plugin-lang.php:26
 msgid "Team Grid"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:28
+#: ../shortcodes/editor/tinymce-plugin-lang.php:28
 msgid "Features 2 Column"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:29
+#: ../shortcodes/editor/tinymce-plugin-lang.php:29
 msgid "Features 3 Column"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:30
+#: ../shortcodes/editor/tinymce-plugin-lang.php:30
 msgid "Client"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:31
+#: ../shortcodes/editor/tinymce-plugin-lang.php:31
 msgid "Client 3 Column"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:32
+#: ../shortcodes/editor/tinymce-plugin-lang.php:32
 msgid "Client 4 Column"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:33
+#: ../shortcodes/editor/tinymce-plugin-lang.php:33
 msgid "Testimonials"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:37
+#: ../shortcodes/editor/tinymce-plugin-lang.php:37
 msgid "Web Elements"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:40
+#: ../shortcodes/editor/tinymce-plugin-lang.php:40
 msgid "Button"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:43
+#: ../shortcodes/editor/tinymce-plugin-lang.php:43
 msgid "Google Map"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:44
+#: ../shortcodes/editor/tinymce-plugin-lang.php:44
 msgid "Contact Form"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:45
+#: ../shortcodes/editor/tinymce-plugin-lang.php:45
 msgid "Code"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:47
+#: ../shortcodes/editor/tinymce-plugin-lang.php:47
 msgid "Container"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/color-map.php:47
-msgid "Add Custom Color"
+#: ../shortcodes/panel/uix_sc_contact_form.php:26
+msgid "Tips: Output a complete commenting form for use within a template. "
 msgstr ""
 
-#: ../shortcodes/core/form-inc/icon.php:22
-msgid "Select from the following list of icons: "
+#: ../shortcodes/panel/uix_sc_contact_form.php:58
+msgid "Insert Contact Form"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:78
-msgid "Background Repeat"
+#: ../shortcodes/panel/uix_sc_container.php:45
+msgid ""
+"The browser automatically calculates the container height if the value is "
+"<strong>\"0\"</strong>."
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:84
-msgid "No Repeat"
+#: ../shortcodes/panel/uix_sc_container.php:79 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:45 ..
+#: /shortcodes/panel/uix_sc_form_client_col3.php:71 ..
+#: /shortcodes/panel/uix_sc_form_client_col4.php:71 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:126 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:424 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:71 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:147 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:155 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:170 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:121 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:137 ..
+#: /shortcodes/panel/uix_sc_heading.php:71 ../shortcodes/panel/uix_sc_map.php:129 
+#: ../shortcodes/panel/uix_sc_testimonials.php:74
+msgid "Remove image"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:85
-msgid "Tile"
+#: ../shortcodes/panel/uix_sc_container.php:80 ..
+#: /shortcodes/panel/uix_sc_form_authorcard.php:46 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:127 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:425 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:72 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:148 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:156 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:171 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:122 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:138 ..
+#: /shortcodes/panel/uix_sc_heading.php:72 ../shortcodes/panel/uix_sc_map.php:130 
+#: ../shortcodes/panel/uix_sc_testimonials.php:75
+msgid "Upload"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:86
-msgid "Tile Horizontally"
+#: ../shortcodes/panel/uix_sc_container.php:271
+msgid "Wrapper Margin (px)"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:87
-msgid "Tile Vertically"
+#: ../shortcodes/panel/uix_sc_container.php:290
+msgid "Content Padding (px)"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:107
-msgid "Background Position"
+#: ../shortcodes/panel/uix_sc_container.php:333
+msgid "Add a Container"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:113
-msgid "Left"
+#: ../shortcodes/panel/uix_sc_container.php:348
+msgid "Content here..."
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:114
-msgid "Center"
+#: ../shortcodes/panel/uix_sc_dividing_line.php:117
+msgid "Add a Dividing Line"
 msgstr ""
 
-#: ../shortcodes/core/form-inc/image.php:115
-msgid "Right"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:135
-msgid "Background Attachment"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:141
-msgid "Scroll"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:142
-msgid "Fixed"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:162
-msgid "Background Size"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:168
-msgid "Cover"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:169
-msgid "Auto"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/image.php:170
-msgid "Contain"
-msgstr ""
-
-#: ../shortcodes/core/form-inc/multiselect.php:56
-msgid "Must use the array for \"value\"."
-msgstr ""
-
-#: ../shortcodes/panel/accordion.php:80
+#: ../shortcodes/panel/uix_sc_form_accordion.php:87
 msgid "Accordion Title"
 msgstr ""
 
-#: ../shortcodes/panel/accordion.php:91
+#: ../shortcodes/panel/uix_sc_form_accordion.php:98
 msgid "Accordion content here."
 msgstr ""
 
-#: ../shortcodes/panel/accordion.php:139
+#: ../shortcodes/panel/uix_sc_form_accordion.php:143
 msgid "Insert Accordion"
 msgstr ""
 
-#: ../shortcodes/panel/audio.php:25
+#: ../shortcodes/panel/uix_sc_form_audio.php:28
 msgid ""
 "Just enter the MP3, SoundCloud or Audiomack URL. If you are using SoundCloud "
 "or Audiomack, the following <strong>\"Enable SoundCloud\"</strong> checkbox "
 "should be checked."
 msgstr ""
 
-#: ../shortcodes/panel/audio.php:49
+#: ../shortcodes/panel/uix_sc_form_audio.php:52
 msgid "Player Width"
 msgstr ""
 
-#: ../shortcodes/panel/audio.php:63
+#: ../shortcodes/panel/uix_sc_form_audio.php:66
 msgid "Player Height"
 msgstr ""
 
-#: ../shortcodes/panel/audio.php:127
-msgid "Add a Responsive audio"
+#: ../shortcodes/panel/uix_sc_form_audio.php:133
+msgid "Add a Responsive Audio"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:35 ../shortcodes/panel/team-fullwidth.php:
-#: 111 ../shortcodes/panel/team-grid.php:127 ../shortcodes/panel/testimonials.php:
-#: 64
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:42 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:118 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:134 ..
+#: /shortcodes/panel/uix_sc_testimonials.php:71
 msgid "Avatar URL"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:38 ../shortcodes/panel/client-3-col.php:64 
-#: ../shortcodes/panel/client-4-col.php:64 ../shortcodes/panel/container.php:72 ..
-#: /shortcodes/panel/heading.php:64 ../shortcodes/panel/hello.php:121 ..
-#: /shortcodes/panel/hello.php:419 ../shortcodes/panel/map.php:122 ..
-#: /shortcodes/panel/portfolio-grid.php:148 ../shortcodes/panel/portfolio-grid.
-#: php:163 ../shortcodes/panel/team-fullwidth.php:114 ../shortcodes/panel/team-
-#: grid.php:130 ../shortcodes/panel/testimonials.php:67
-msgid "Remove image"
-msgstr ""
-
-#: ../shortcodes/panel/author-card.php:39 ../shortcodes/panel/container.php:73 ..
-#: /shortcodes/panel/heading.php:65 ../shortcodes/panel/hello.php:122 ..
-#: /shortcodes/panel/hello.php:420 ../shortcodes/panel/map.php:123 ..
-#: /shortcodes/panel/portfolio-grid.php:149 ../shortcodes/panel/portfolio-grid.
-#: php:164 ../shortcodes/panel/team-fullwidth.php:115 ../shortcodes/panel/team-
-#: grid.php:131 ../shortcodes/panel/testimonials.php:68
-msgid "Upload"
-msgstr ""
-
-#: ../shortcodes/panel/author-card.php:95
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:102
 msgid "Social Network 1"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:98 ../shortcodes/panel/team-fullwidth.php:
-#: 181 ../shortcodes/panel/team-grid.php:197
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:105 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:188 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:204
 msgid "Your Social Network Page URL 1"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:109 ../shortcodes/panel/team-fullwidth.php:
-#: 193 ../shortcodes/panel/team-grid.php:209
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:116 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:200 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:216
 msgid "Choose Social Icon 1"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:120
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:127
 msgid "Social Network 2"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:123 ../shortcodes/panel/team-fullwidth.php:
-#: 208 ../shortcodes/panel/team-grid.php:224
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:130 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:215 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:231
 msgid "Your Social Network Page URL 2"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:134 ../shortcodes/panel/team-fullwidth.php:
-#: 220 ../shortcodes/panel/team-grid.php:236
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:141 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:227 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:243
 msgid "Choose Social Icon 2"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:145
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:152
 msgid "Social Network 3"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:148 ../shortcodes/panel/team-fullwidth.php:
-#: 235 ../shortcodes/panel/team-grid.php:251
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:155 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:242 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:258
 msgid "Your Social Network Page URL 3"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:159 ../shortcodes/panel/team-fullwidth.php:
-#: 247 ../shortcodes/panel/team-grid.php:263
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:166 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:254 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:270
 msgid "Choose Social Icon 3"
 msgstr ""
 
-#: ../shortcodes/panel/author-card.php:192
+#: ../shortcodes/panel/uix_sc_form_authorcard.php:203
 msgid "Insert An Author Card"
 msgstr ""
 
-#: ../shortcodes/panel/button.php:121
+#: ../shortcodes/panel/uix_sc_form_bar.php:128
+msgid "Using Icon instead of percentage."
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_bar.php:202
+msgid "Track color"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_bar.php:319
+msgid "Margin (px)"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_bar.php:363
+msgid "Add a Progress Bar"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_button.php:128
 msgid "http://"
 msgstr ""
 
-#: ../shortcodes/panel/button.php:178 ../shortcodes/panel/icons.php:62
+#: ../shortcodes/panel/uix_sc_form_button.php:185 ..
+#: /shortcodes/panel/uix_sc_form_icon.php:69
 msgid "Icon&apos;s Name"
 msgstr ""
 
-#: ../shortcodes/panel/button.php:179
+#: ../shortcodes/panel/uix_sc_form_button.php:186
 msgid "Tips: that will be pure text button if icon does not choose."
 msgstr ""
 
-#: ../shortcodes/panel/button.php:222
+#: ../shortcodes/panel/uix_sc_form_button.php:229
 msgid "Padding Spacing"
 msgstr ""
 
-#: ../shortcodes/panel/button.php:261
+#: ../shortcodes/panel/uix_sc_form_button.php:274
 msgid "Add a Button"
 msgstr ""
 
-#: ../shortcodes/panel/client-3-col.php:19 ../shortcodes/panel/features-3-col.php:
-#: 19
+#: ../shortcodes/panel/uix_sc_form_client_col3.php:26 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:26
 msgid ""
 "Note: 3 items per row. Per section insert for a maximum of "
 "<strong>3</strong>."
 msgstr ""
 
-#: ../shortcodes/panel/client-3-col.php:61 ../shortcodes/panel/client-4-col.php:61
+#: ../shortcodes/panel/uix_sc_form_client_col3.php:68 ..
+#: /shortcodes/panel/uix_sc_form_client_col4.php:68
 msgid "Logo URL"
 msgstr ""
 
-#: ../shortcodes/panel/client-3-col.php:65 ../shortcodes/panel/client-4-col.php:65
+#: ../shortcodes/panel/uix_sc_form_client_col3.php:72 ..
+#: /shortcodes/panel/uix_sc_form_client_col4.php:72
 msgid "Upload Logo"
 msgstr ""
 
-#: ../shortcodes/panel/client-3-col.php:76 ../shortcodes/panel/client-4-col.php:
-#: 76 ../shortcodes/panel/team-fullwidth.php:147 ../shortcodes/panel/team-grid.
-#: php:163
+#: ../shortcodes/panel/uix_sc_form_client_col3.php:83 ..
+#: /shortcodes/panel/uix_sc_form_client_col4.php:83 ..
+#: /shortcodes/panel/uix_sc_form_team_fullwidth.php:154 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:170
 msgid "The Introduction of this member."
 msgstr ""
 
-#: ../shortcodes/panel/client-3-col.php:124
+#: ../shortcodes/panel/uix_sc_form_client_col3.php:134
 msgid "Insert Client (3 Column)"
 msgstr ""
 
-#: ../shortcodes/panel/client-4-col.php:19
+#: ../shortcodes/panel/uix_sc_form_client_col4.php:26
 msgid ""
 "Note: 4 items per row. Per section insert for a maximum of "
 "<strong>4</strong>."
 msgstr ""
 
-#: ../shortcodes/panel/client-4-col.php:124
+#: ../shortcodes/panel/uix_sc_form_client_col4.php:133
 msgid "Insert Client (4 Column)"
 msgstr ""
 
-#: ../shortcodes/panel/code.php:100
+#: ../shortcodes/panel/uix_sc_form_code.php:112
 msgid "Insert Source Code"
 msgstr ""
 
-#: ../shortcodes/panel/col-1_3-2_3.php:56
+#: ../shortcodes/panel/uix_sc_form_column_1_3__2_3.php:68
 msgid "Column Two Third (last)"
 msgstr ""
 
-#: ../shortcodes/panel/col-1_3-2_3.php:62 ../shortcodes/panel/col-1_3-2_3.php:63 .
-#: ./shortcodes/panel/col-1_4-3_4.php:63 ../shortcodes/panel/col-1_4-3_4.php:64 ..
-#: /shortcodes/panel/col-2_3-1_3.php:63 ../shortcodes/panel/col-2_3-1_3.php:64 ..
-#: /shortcodes/panel/col-3_4-1_4.php:63 ../shortcodes/panel/col-3_4-1_4.php:64 ..
-#: /shortcodes/panel/col-average-2.php:64 ../shortcodes/panel/col-average-2.php:
-#: 65 ../shortcodes/panel/col-average-3.php:64 ../shortcodes/panel/col-average-3.
-#: php:65 ../shortcodes/panel/col-average-3.php:66 ../shortcodes/panel/col-
-#: average-4.php:64 ../shortcodes/panel/col-average-4.php:65 ..
-#: /shortcodes/panel/col-average-4.php:66 ../shortcodes/panel/col-average-4.php:67
+#: ../shortcodes/panel/uix_sc_form_column_1_3__2_3.php:73 ..
+#: /shortcodes/panel/uix_sc_form_column_1_3__2_3.php:74 ..
+#: /shortcodes/panel/uix_sc_form_column_1_4__3_4.php:76 ..
+#: /shortcodes/panel/uix_sc_form_column_1_4__3_4.php:77 ..
+#: /shortcodes/panel/uix_sc_form_column_2_3__1_3.php:75 ..
+#: /shortcodes/panel/uix_sc_form_column_2_3__1_3.php:76 ..
+#: /shortcodes/panel/uix_sc_form_column_3_4__1_4.php:74 ..
+#: /shortcodes/panel/uix_sc_form_column_3_4__1_4.php:75 ..
+#: /shortcodes/panel/uix_sc_form_column_average_2.php:75 ..
+#: /shortcodes/panel/uix_sc_form_column_average_2.php:76 ..
+#: /shortcodes/panel/uix_sc_form_column_average_3.php:75 ..
+#: /shortcodes/panel/uix_sc_form_column_average_3.php:76 ..
+#: /shortcodes/panel/uix_sc_form_column_average_3.php:77 ..
+#: /shortcodes/panel/uix_sc_form_column_average_4.php:74 ..
+#: /shortcodes/panel/uix_sc_form_column_average_4.php:75 ..
+#: /shortcodes/panel/uix_sc_form_column_average_4.php:76 ..
+#: /shortcodes/panel/uix_sc_form_column_average_4.php:77
 msgid "Some content for this column."
 msgstr ""
 
-#: ../shortcodes/panel/col-1_4-3_4.php:19
+#: ../shortcodes/panel/uix_sc_form_column_1_4__3_4.php:26
 msgid "Padding"
 msgstr ""
 
-#: ../shortcodes/panel/col-1_4-3_4.php:57
+#: ../shortcodes/panel/uix_sc_form_column_1_4__3_4.php:70
 msgid "Column Three Fourth (last)"
 msgstr ""
 
-#: ../shortcodes/panel/col-2_3-1_3.php:57
+#: ../shortcodes/panel/uix_sc_form_column_2_3__1_3.php:70
 msgid "Column Two Third"
 msgstr ""
 
-#: ../shortcodes/panel/col-3_4-1_4.php:57
+#: ../shortcodes/panel/uix_sc_form_column_3_4__1_4.php:69
 msgid "Column Three Fourth"
 msgstr ""
 
-#: ../shortcodes/panel/col-average-2.php:58
+#: ../shortcodes/panel/uix_sc_form_column_average_2.php:70
 msgid "Column One Half"
 msgstr ""
 
-#: ../shortcodes/panel/col-average-3.php:58
+#: ../shortcodes/panel/uix_sc_form_column_average_3.php:70
 msgid "Column One Third"
 msgstr ""
 
-#: ../shortcodes/panel/col-average-4.php:58
+#: ../shortcodes/panel/uix_sc_form_column_average_4.php:68
 msgid "Column One Fourth"
 msgstr ""
 
-#: ../shortcodes/panel/contact-form.php:19
-msgid "Tips: Output a complete commenting form for use within a template. "
-msgstr ""
-
-#: ../shortcodes/panel/contact-form.php:47
-msgid "Insert Contact Form"
-msgstr ""
-
-#: ../shortcodes/panel/container.php:38
-msgid ""
-"The browser automatically calculates the container height if the value is "
-"<strong>\"0\"</strong>."
-msgstr ""
-
-#: ../shortcodes/panel/container.php:264
-msgid "Wrapper Margin (px)"
-msgstr ""
-
-#: ../shortcodes/panel/container.php:283
-msgid "Content Padding (px)"
-msgstr ""
-
-#: ../shortcodes/panel/container.php:321
-msgid "Add a Container"
-msgstr ""
-
-#: ../shortcodes/panel/container.php:335
-msgid "Content here..."
-msgstr ""
-
-#: ../shortcodes/panel/dividing-line.php:104
-msgid "Add a Dividing Line"
-msgstr ""
-
-#: ../shortcodes/panel/features-2-col.php:19 ../shortcodes/panel/features-2-col.
-#: php:176
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:26 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:183
 msgid "Note: multiple items per column"
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:79 ../shortcodes/panel/features-2-col.
-#: php:236 ../shortcodes/panel/features-3-col.php:78
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:85 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:242 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:85
 msgid "Feature Title"
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:89 ../shortcodes/panel/features-2-col.
-#: php:246 ../shortcodes/panel/features-3-col.php:88
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:95 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:252 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:95
 msgid "Title Color"
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:107 ../shortcodes/panel/features-2-col.
-#: php:264 ../shortcodes/panel/features-3-col.php:106
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:114 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:270 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:113
 msgid ""
 "Some description text here. You can add a lot of it or can choose to leave "
 "it blank."
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:138 ../shortcodes/panel/features-2-col.
-#: php:295 ../shortcodes/panel/features-3-col.php:137
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:145 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:301 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:144 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:55 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:131
 msgid "Choose Feature Icon"
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:149 ../shortcodes/panel/features-2-col.
-#: php:306 ../shortcodes/panel/features-3-col.php:148
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:156 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:312 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:155
 msgid "Icon Color"
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:334
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:339
 msgid "Left Section"
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:335
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:340
 msgid "Right Section"
 msgstr ""
 
-#: ../shortcodes/panel/features-2-col.php:377
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:377
 msgid "Insert Features (2 Column)"
 msgstr ""
 
-#: ../shortcodes/panel/features-3-col.php:195
+#: ../shortcodes/panel/uix_sc_form_features_col3.php:201
 msgid "Insert Features (3 Column)"
 msgstr ""
 
-#: ../shortcodes/panel/heading.php:61
-msgid "Image for Text Fill"
-msgstr ""
-
-#: ../shortcodes/panel/heading.php:249
-msgid "Displayed Text"
-msgstr ""
-
-#: ../shortcodes/panel/heading.php:365
-msgid "Add a Special Heading"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:19
-msgid "Text2 - 1"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:36
-msgid "Text2 - 2"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:60
-msgid "Text3 - 1"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:76
-msgid "Text3 - 2"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:93
-msgid "Text3 - 3"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:118
-msgid "Text4 - 1"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:134
-msgid "Text4 - 2"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:149
-msgid "Text4 - 3"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:164
-msgid "Text4 - 4"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:182 ../shortcodes/panel/hello-2.php:186 ..
-#: /shortcodes/panel/hello-2.php:191 ../shortcodes/panel/pricing-3-col.php:474 ..
-#: /shortcodes/panel/pricing-4-col.php:622
-msgid "Item 1"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:183 ../shortcodes/panel/hello-2.php:187 ..
-#: /shortcodes/panel/hello-2.php:192 ../shortcodes/panel/pricing-3-col.php:475 ..
-#: /shortcodes/panel/pricing-4-col.php:623
-msgid "Item 2"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:188 ../shortcodes/panel/hello-2.php:193 ..
-#: /shortcodes/panel/pricing-3-col.php:476 ../shortcodes/panel/pricing-4-col.php:
-#: 624
-msgid "Item 3"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:194 ../shortcodes/panel/pricing-4-col.php:625
-msgid "Item 4"
-msgstr ""
-
-#: ../shortcodes/panel/hello-2.php:251
-msgid "Demo Form 2"
-msgstr ""
-
-#: ../shortcodes/panel/hello.php:17 ../shortcodes/panel/hello.php:529
+#: ../shortcodes/panel/uix_sc_form_hello.php:24 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:534
 msgid "Note: 3 items per row.Per section insert \"for a maximum of 3\"."
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:32
+#: ../shortcodes/panel/uix_sc_form_hello.php:39
 msgid "Radio"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:47
+#: ../shortcodes/panel/uix_sc_form_hello.php:54
 msgid "Slider"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:85
+#: ../shortcodes/panel/uix_sc_form_hello.php:92
 msgid "Textarea"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:99
+#: ../shortcodes/panel/uix_sc_form_hello.php:106
 msgid "Textarea(by default value)"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:101 ../shortcodes/panel/pricing-3-col.php:125 ..
-#: /shortcodes/panel/pricing-4-col.php:125
+#: ../shortcodes/panel/uix_sc_form_hello.php:108 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:132 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:132
 msgid ""
 "Feature Description<br>Another Feature Description<br><s>Invalid Feature "
 "Description</s>"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:115
+#: ../shortcodes/panel/uix_sc_form_hello.php:120 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:65 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:141
 msgid "Upload Image"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:118 ../shortcodes/panel/hello.php:416 ..
-#: /shortcodes/panel/map.php:119
+#: ../shortcodes/panel/uix_sc_form_hello.php:123 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:421 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:68 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:144 ../shortcodes/panel/uix_sc_map.
+#: php:126
 msgid "Image URL"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:140
+#: ../shortcodes/panel/uix_sc_form_hello.php:145
 msgid "Short Text"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:152
+#: ../shortcodes/panel/uix_sc_form_hello.php:157
 msgid "Short Units Text"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:174 ../shortcodes/panel/hello.php:520
+#: ../shortcodes/panel/uix_sc_form_hello.php:179 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:525
 msgid "set up links with toggle"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:186 ../shortcodes/panel/hello.php:532
+#: ../shortcodes/panel/uix_sc_form_hello.php:191 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:537
 msgid "Toggle URL"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:198
+#: ../shortcodes/panel/uix_sc_form_hello.php:203
 msgid "Toggle URL2"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:226
+#: ../shortcodes/panel/uix_sc_form_hello.php:231
 msgid "Select"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:227
+#: ../shortcodes/panel/uix_sc_form_hello.php:232
 msgid "This is infomation."
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:261
+#: ../shortcodes/panel/uix_sc_form_hello.php:266
 msgid "This is Icon Selector "
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:275 ../shortcodes/panel/hello.php:285
+#: ../shortcodes/panel/uix_sc_form_hello.php:280 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:290
 msgid "Color Map"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:299
+#: ../shortcodes/panel/uix_sc_form_hello.php:304
 msgid "Checkbox"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:313
+#: ../shortcodes/panel/uix_sc_form_hello.php:318
 msgid "Toggle for Checkbox"
 msgstr ""
 
-#: ../shortcodes/panel/hello.php:593
+#: ../shortcodes/panel/uix_sc_form_hello.php:599
 msgid "Demo Form 1"
 msgstr ""
 
-#: ../shortcodes/panel/icons.php:109
+#: ../shortcodes/panel/uix_sc_form_hello2.php:27
+msgid "Text2 - 1"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:80 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:155
+msgid "SLider"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:104
+msgid "Text2 - 2"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:185
+msgid "Text3 - 1"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:201
+msgid "Text3 - 2"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:218
+msgid "Text3 - 3"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:243
+msgid "Text4 - 1"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:259
+msgid "Text4 - 2"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:274
+msgid "Text4 - 3"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:289
+msgid "Text4 - 4"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:307 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:311 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:316 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:473 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:620
+msgid "Item 1"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:308 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:312 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:317 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:474 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:621
+msgid "Item 2"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:313 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:318 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:475 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:622
+msgid "Item 3"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:319 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:623
+msgid "Item 4"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello2.php:374
+msgid "Demo Form 2"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_icon.php:117
 msgid "Add a Icon"
 msgstr ""
 
-#: ../shortcodes/panel/map.php:22
-msgid ""
-"You can make a search, use the name of a place, city, state, or address, or "
-"click the location on the map to get lat long coordinates. &rarr; <a "
-"href=\"//www.latlong.net/\" target=\"_blank\">Get Latitude Longitude</a>"
-msgstr ""
-
-#: ../shortcodes/panel/map.php:44
-msgid "It default to using a 100% width."
-msgstr ""
-
-#: ../shortcodes/panel/map.php:117
-msgid ""
-"By default, a marker uses a standard image. Markers can display custom "
-"images, in which case they are usually referred to as \"icons.\""
-msgstr ""
-
-#: ../shortcodes/panel/map.php:150
-msgid "Embed a Google Map"
-msgstr ""
-
-#: ../shortcodes/panel/portfolio-grid.php:52
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:59
 msgid "This option is valid when you use destination URL."
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:80
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:87
 msgid ""
 "Prefix string attached to the classes of all elements generated by the "
 "portfolio, the default value is &quot;<strong>uix-sc-portfolio-"
 "</strong>&quot;."
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:96
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:103
 msgid "click here to add a item"
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:145
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:152
 msgid "Thumbnail"
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:160
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:167
 msgid "Full Preview"
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:174
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:181
 msgid "Project Title"
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:185 ../shortcodes/panel/portfolio-grid.
-#: php:310
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:192 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:316
 msgid "Category Name"
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:199
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:206
 msgid "The description of this project."
 msgstr ""
 
-#: ../shortcodes/panel/portfolio-grid.php:280
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:286
 msgid "Insert Portfolio Section"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:23 ../shortcodes/panel/pricing-4-col.php:
-#: 23
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:30 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:30
 msgid "free"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:71 ../shortcodes/panel/pricing-3-col.php:
-#: 221 ../shortcodes/panel/pricing-3-col.php:372 ../shortcodes/panel/pricing-4-
-#: col.php:71 ../shortcodes/panel/pricing-4-col.php:220 ..
-#: /shortcodes/panel/pricing-4-col.php:371 ../shortcodes/panel/pricing-4-col.php:
-#: 521
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:78 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:226 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:375 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:78 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:225 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:374 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:522
 msgid "Some description text here."
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:84 ../shortcodes/panel/pricing-4-col.php:
-#: 84
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:91 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:91
 msgid "TRY FOR FREE"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:124 ../shortcodes/panel/pricing-3-col.
-#: php:275 ../shortcodes/panel/pricing-3-col.php:426 ../shortcodes/panel/pricing-
-#: 4-col.php:124 ../shortcodes/panel/pricing-4-col.php:274 ..
-#: /shortcodes/panel/pricing-4-col.php:425 ../shortcodes/panel/pricing-4-col.php:
-#: 575
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:131 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:280 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:429 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:131 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:279 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:428 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:576
 msgid "Type one word or sentence per line when press \"ENTER\"."
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:174 ../shortcodes/panel/pricing-4-col.
-#: php:173
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:179 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:178
 msgid "premium"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:234 ../shortcodes/panel/pricing-3-col.
-#: php:385 ../shortcodes/panel/pricing-4-col.php:233 ../shortcodes/panel/pricing-
-#: 4-col.php:384 ../shortcodes/panel/pricing-4-col.php:534
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:239 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col3.php:388 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:238 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:387 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:535
 msgid "BUY"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:276 ../shortcodes/panel/pricing-4-col.
-#: php:275
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:281 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:280
 msgid ""
 "Feature Description<br>Another Feature Description<br>Another Feature "
 "Description<br><s>Invalid Feature Description</s>"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:325 ../shortcodes/panel/pricing-4-col.
-#: php:324
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:328 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:327
 msgid "professional"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:427 ../shortcodes/panel/pricing-4-col.
-#: php:426
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:430 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:429
 msgid ""
 "Feature Description<br>Another Feature Description<br>Another Feature "
 "Description<br><s>Invalid Feature Description</s><br>Another Feature "
 "Description"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-3-col.php:513
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:510
 msgid "Insert Pricing Table (3 column)"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-4-col.php:474
+#: ../shortcodes/panel/uix_sc_form_pricing_col4.php:475
 msgid "expand"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-4-col.php:576
+#: ../shortcodes/panel/uix_sc_form_pricing_col4.php:577
 msgid ""
 "Feature Description<br>Another Feature Description<br>Another Feature "
 "Description<br><s>Invalid Feature Description</s><br>Another Feature "
 "Description<br>Another Feature Description"
 msgstr ""
 
-#: ../shortcodes/panel/pricing-4-col.php:663
+#: ../shortcodes/panel/uix_sc_form_pricing_col4.php:659
 msgid "Insert Pricing Table (4 column)"
 msgstr ""
 
-#: ../shortcodes/panel/progress-bar.php:121
-msgid "Using Icon instead of percentage."
-msgstr ""
-
-#: ../shortcodes/panel/progress-bar.php:195
-msgid "Track color"
-msgstr ""
-
-#: ../shortcodes/panel/progress-bar.php:312
-msgid "Margin (px)"
-msgstr ""
-
-#: ../shortcodes/panel/progress-bar.php:351
-msgid "Add a Progress Bar"
-msgstr ""
-
-#: ../shortcodes/panel/recent-posts.php:33
+#: ../shortcodes/panel/uix_sc_form_recent_posts.php:40
 msgid ""
 "Use this template to display content on your website. You can use the "
 "following placeholders in the post list item templates, which will be "
 "replaced by the actual values when the content is displayed"
 msgstr ""
 
-#: ../shortcodes/panel/recent-posts.php:98
+#: ../shortcodes/panel/uix_sc_form_recent_posts.php:106
 msgid "Insert Recent Posts"
 msgstr ""
 
-#: ../shortcodes/panel/share-button.php:83
+#: ../shortcodes/panel/uix_sc_form_share_buttons.php:90
 msgid "It takes that unique url and share it on the social page automagically."
 msgstr ""
 
-#: ../shortcodes/panel/share-button.php:111
+#: ../shortcodes/panel/uix_sc_form_share_buttons.php:120
 msgid "Add Share Buttons"
 msgstr ""
 
-#: ../shortcodes/panel/tabs.php:79
+#: ../shortcodes/panel/uix_sc_form_tabs.php:86
 msgid "Tab Title"
 msgstr ""
 
-#: ../shortcodes/panel/tabs.php:90
+#: ../shortcodes/panel/uix_sc_form_tabs.php:97
 msgid "This is content of the tab."
 msgstr ""
 
-#: ../shortcodes/panel/tabs.php:137
+#: ../shortcodes/panel/uix_sc_form_tabs.php:143
 msgid "Insert Tabs"
 msgstr ""
 
-#: ../shortcodes/panel/team-fullwidth.php:20 ../shortcodes/panel/team-grid.php:35
+#: ../shortcodes/panel/uix_sc_form_team_fullwidth.php:27 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:42
 msgid "Gray Avatar"
 msgstr ""
 
-#: ../shortcodes/panel/team-fullwidth.php:49 ../shortcodes/panel/team-grid.php:63
+#: ../shortcodes/panel/uix_sc_form_team_fullwidth.php:56 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:70
 msgid ""
 "Set height of grid so that it will fit its avatar photo. Browsers use a "
 "default stylesheet to render webpages if  the value is <strong>\"0\"</strong>."
 msgstr ""
 
-#: ../shortcodes/panel/team-fullwidth.php:135 ../shortcodes/panel/team-grid.php:
-#: 151 ../shortcodes/panel/testimonials.php:87
+#: ../shortcodes/panel/uix_sc_form_team_fullwidth.php:142 ..
+#: /shortcodes/panel/uix_sc_form_team_grid.php:158 ..
+#: /shortcodes/panel/uix_sc_testimonials.php:94
 msgid "Position"
 msgstr ""
 
-#: ../shortcodes/panel/team-fullwidth.php:294
+#: ../shortcodes/panel/uix_sc_form_team_fullwidth.php:300
 msgid "Insert Team Fullwidth"
 msgstr ""
 
-#: ../shortcodes/panel/team-grid.php:310
+#: ../shortcodes/panel/uix_sc_form_team_grid.php:316
 msgid "Insert Team Grid"
 msgstr ""
 
-#: ../shortcodes/panel/testimonials.php:97
-msgid ""
-"Enter some details for the customer giving this testimonial., E.g., Thank "
-"you from the bottom of our hearts."
-msgstr ""
-
-#: ../shortcodes/panel/testimonials.php:145
-msgid "Insert Testimonials Carousel"
-msgstr ""
-
-#: ../shortcodes/panel/video.php:25
+#: ../shortcodes/panel/uix_sc_form_video.php:32
 msgid ""
 "Copy the video's URL from your web browser's address bar while viewing the "
 "video, paste it. <br>e.g., <strong>https://www.youtube.com/watch?"
 "v=abc</strong>"
 msgstr ""
 
-#: ../shortcodes/panel/video.php:36
+#: ../shortcodes/panel/uix_sc_form_video.php:43
 msgid "Display Width"
 msgstr ""
 
-#: ../shortcodes/panel/video.php:49
+#: ../shortcodes/panel/uix_sc_form_video.php:56
 msgid "Display Height"
 msgstr ""
 
-#: ../shortcodes/panel/video.php:98
+#: ../shortcodes/panel/uix_sc_form_video.php:107
 msgid "Add a Responsive Video"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_heading.php:68
+msgid "Image for Text Fill"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_heading.php:256
+msgid "Displayed Text"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_heading.php:374
+msgid "Add a Special Heading"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_map.php:29
+msgid ""
+"You can make a search, use the name of a place, city, state, or address, or "
+"click the location on the map to get lat long coordinates. &rarr; <a "
+"href=\"//www.latlong.net/\" target=\"_blank\">Get Latitude Longitude</a>"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_map.php:51
+msgid "It default to using a 100% width."
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_map.php:124
+msgid ""
+"By default, a marker uses a standard image. Markers can display custom "
+"images, in which case they are usually referred to as \"icons.\""
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_map.php:159
+msgid "Embed a Google Map"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_testimonials.php:104
+msgid ""
+"Enter some details for the customer giving this testimonial., E.g., Thank "
+"you from the bottom of our hearts."
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_testimonials.php:151
+msgid "Insert Testimonials Carousel"
 msgstr ""

@@ -187,7 +187,7 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
-	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	
 		/* List Item - Register clone vars ( step 1) */
 		UixSCFormCore::reg_clone_vars( 'uix_sc_features_col3_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_titlecolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_desccolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_icon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_iconcolor', $form_html ) );

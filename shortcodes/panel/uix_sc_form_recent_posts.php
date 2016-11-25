@@ -95,7 +95,7 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
-	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
 		
 		?>
