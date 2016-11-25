@@ -121,65 +121,61 @@ if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
+		/* List Item - Register clone vars ( step 1) */
+		UixSCFormCore::reg_clone_vars( 'uix_sc_client_col4_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_col4_listitem_logo', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_col4_listitem_intro', $form_html ) );
 				
-					/* List Item ( step 1) */
-					var dynamic_append_box_content = '<?php echo UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_col4_listitem_logo', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_col4_listitem_intro', $form_html ); ?>';
-
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Client (4 Column)', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						
-						/* List Item ( step 2)  */
-						var list_num = 4;
-						
-				
-						var show_list_item = '';
-						for ( var i=0; i<=list_num; i++ ){
-							
-							var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-								_logo = $( _uid+'uix_sc_client_col4_listitem_logo' ).val(),
-								_desc = $( _uid+'uix_sc_client_col4_listitem_intro' ).val();
-								
-								
-								
-								
-							var _item_v_logo = ( _logo != undefined ) ? _logo : '',
-								_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
-								
-							
-							//last column
-							var lastcol = ( i == list_num ) ? " last='1'" : '';
-							
-							if ( _logo != undefined ) {
-								show_list_item += "<br>[uix_client_item col='4' logo='"+_item_v_logo+"' "+lastcol+"]";
-								show_list_item += "<br>[uix_client_item_desc]"+ _item_v_desc +"[/uix_client_item_desc]";					
-								show_list_item += "<br>[/uix_client_item]";
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() { 
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Client (4 Column)', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					
+					/* List Item ( step 2)  */
+					var list_num = 4;
+					
 			
-							}
-								
+					var show_list_item = '';
+					for ( var i=0; i<=list_num; i++ ){
+						
+						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
+							_logo = $( _uid+'uix_sc_client_col4_listitem_logo' ).val(),
+							_desc = $( _uid+'uix_sc_client_col4_listitem_intro' ).val();
 							
+							
+							
+							
+						var _item_v_logo = ( _logo != undefined ) ? _logo : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
+							
+						
+						//last column
+						var lastcol = ( i == list_num ) ? " last='1'" : '';
+						
+						if ( _logo != undefined ) {
+							show_list_item += "<br>[uix_client_item col='4' logo='"+_item_v_logo+"' "+lastcol+"]";
+							show_list_item += "<br>[uix_client_item_desc]"+ _item_v_desc +"[/uix_client_item_desc]";					
+							show_list_item += "<br>[/uix_client_item]";
+		
 						}
-			
-			
-						code = "[uix_client]"+show_list_item+"<br>[/uix_client]";
+							
+						
+					}
+		
+		
+					code = "[uix_client]"+show_list_item+"<br>[/uix_client]";
 
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
-	
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
 			
-		}
 	}
 	
 }

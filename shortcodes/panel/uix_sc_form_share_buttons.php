@@ -110,65 +110,61 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add Share Buttons', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						/* Multiple Selector */
-						var multiselectorArr = uix_sc_share_btn_name.split( ',' ),
-							show_checkboxes = '';
-						for ( var k=0; k < multiselectorArr.length; k++ ) {
-							
-							
-							switch( multiselectorArr[k] ){ 
-								case '1': 
-									show_checkboxes += 'facebook,';
-									
-								break; 
-								
-								case '2': 
-									show_checkboxes += 'twitter,';
-								
-								break; 
-								
-								case '3': 
-									show_checkboxes += 'google_plus,';
-								
-								break; 	
-								
-								case '4': 
-									show_checkboxes += 'pinterest,';
-								
-								break; 				
-								
-								default: 
-		
-							}
-							
-						}  
-						show_checkboxes = show_checkboxes.substring( 0, show_checkboxes.length-1 );
-						 
-						
-					
-						code = "[uix_share_buttons color='"+uix_sc_share_btn_color+"' size='"+uix_sc_share_btn_size+"' fillet='"+uix_sc_share_btn_fillet+"px' show='"+show_checkboxes+"']";
-
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
 	 
-			<?php
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add Share Buttons', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					/* Multiple Selector */
+					var multiselectorArr = uix_sc_share_btn_name.split( ',' ),
+						show_checkboxes = '';
+					for ( var k=0; k < multiselectorArr.length; k++ ) {
+						
+						
+						switch( multiselectorArr[k] ){ 
+							case '1': 
+								show_checkboxes += 'facebook,';
+								
+							break; 
+							
+							case '2': 
+								show_checkboxes += 'twitter,';
+							
+							break; 
+							
+							case '3': 
+								show_checkboxes += 'google_plus,';
+							
+							break; 	
+							
+							case '4': 
+								show_checkboxes += 'pinterest,';
+							
+							break; 				
+							
+							default: 
 	
-			
-		}
+						}
+						
+					}  
+					show_checkboxes = show_checkboxes.substring( 0, show_checkboxes.length-1 );
+					 
+					
+				
+					code = "[uix_share_buttons color='"+uix_sc_share_btn_color+"' size='"+uix_sc_share_btn_size+"' fillet='"+uix_sc_share_btn_fillet+"px' show='"+show_checkboxes+"']";
+
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
 	}
 	
 }

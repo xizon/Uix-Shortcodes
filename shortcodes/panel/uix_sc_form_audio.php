@@ -122,37 +122,34 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Responsive Audio', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						if ( uix_sc_audio_soundcloud === true ) {
-								uix_sc_audio_autoplay = uix_sc_audio_loop = 'null';
-							}
-							if ( uix_sc_audio_soundcloud === false ) {
-								uix_sc_audio_height = 'null';
-							}
-						
-						
-					
-						code = "[uix_audio width='"+uix_sc_audio_width+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']";	
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
 	
-			
-		}
+		
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Responsive Audio', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					if ( uix_sc_audio_soundcloud === true ) {
+							uix_sc_audio_autoplay = uix_sc_audio_loop = 'null';
+						}
+						if ( uix_sc_audio_soundcloud === false ) {
+							uix_sc_audio_height = 'null';
+						}
+					
+					
+				
+					code = "[uix_audio width='"+uix_sc_audio_width+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']";	
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
 	}
 	
 }

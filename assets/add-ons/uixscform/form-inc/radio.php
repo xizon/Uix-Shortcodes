@@ -20,12 +20,42 @@ class UixSCFormType_Radio {
 		$jscode = '';
 		$jscode_vars = '';
 		
-		$toggleForRadioClass = 'toggle-radio-options-'.$id;
-		$toggleForRadioJS = '';
-		
 		
         if ( $type == 'radio' ) {
-            
+			
+			
+			//Toggle for radio options
+			$toggle_class = '';
+			$target_id = '';
+			$toggle_trigger_id = '';
+			
+			if ( is_array( $toggle ) && !empty( $toggle ) ) {
+			 
+				foreach ( $toggle as $toggleArr ) {
+					
+					$toggle_class = ( isset( $toggleArr[ 'toggle_class' ] ) ) ? $toggleArr[ 'toggle_class' ] : '';
+					$toggle_trigger_id = ( isset( $toggleArr[ 'trigger_id' ] ) ) ? $toggleArr[ 'trigger_id' ] : '';
+					$target_id = '';
+					
+					if ( isset( $toggleArr[ 'toggle_class' ] ) ) {
+						foreach ( $toggleArr[ 'toggle_class' ] as $tid_value ) {
+							$target_id .= '.'.$tid_value.','; 	
+						}
+					}
+				}	
+				
+			}
+	
+			//inscure browser
+			if( UixSCFormCore::is_IE() && UixSCFormCore::is_dynamic_input( $class ) ) {
+				$new_class = str_replace( 'dynamic-row', 'isMSIE dynamic-row', $class );
+			} else {
+				$new_class = $class;
+			}
+	
+		
+			
+            //Options list
             $optionlist = '';
             if ( is_array( $default ) && !empty( $default ) ) {
                 $optionloop = 1;
@@ -40,60 +70,20 @@ class UixSCFormType_Radio {
 						$radiofirst = $select_key;	
 					} 
                  
-                    $optionlist .= '<span data-value="'.$select_key.'" id="'.$id.'-'.$select_key.'" class="'.$toggleForRadioClass.' '.$selected.'">'.$select_value.'</span>'."\n";	
+                    $optionlist .= '<span data-value="'.$select_key.'" id="'.$id.'-'.$select_key.'" class="'.$selected.' '.( !empty( $toggle_trigger_id ) ? 'uixscform_btn_trigger-toggleswitch_radio' : '' ).'" '.( !empty( $toggle_trigger_id ) ? 'data-targetid="'.rtrim( $target_id, ',' ).'" data-list="0" data-targetid-clone="{multID}" data-linked-btnid="'.$toggle_trigger_id.'"' : '' ).'>'.$select_value.'</span>'."\n";	
                     $optionloop ++;
                 }	
 		
             }
 			
-			
-			//Toggle
-			$toggle_class = '';
-			$target_id = '';
-			$toggle_trigger_id = '';
-			
-            if ( is_array( $toggle ) && !empty( $toggle ) ) {
-             
-				foreach ( $toggle as $toggleArr ) {
-			
-					/* ------------  */
-					$toggle_class = ( isset( $toggleArr[ 'toggle_class' ] ) ) ? $toggleArr[ 'toggle_class' ] : '';
-					$toggle_trigger_id = ( isset( $toggleArr[ 'trigger_id' ] ) ) ? $toggleArr[ 'trigger_id' ] : '';
-					$target_id = '';
-					
-					if ( isset( $toggleArr[ 'toggle_class' ] ) ) {
-						foreach ( $toggleArr[ 'toggle_class' ] as $tid_value ) {
-							$target_id .= '.'.$tid_value.','; 	
-						}
-						
-						$toggleForRadioJS .= '$( document ).uixscform_divToggle( { checkbox: 1, checkboxToggleClass: ".'.$toggleForRadioClass.'", btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );'."\n";
-		
-					}
-					/* ------------  */	
-					
-	
-					
-				}	
-				
-            }
-	
-			//inscure browser
-			if( UixSCFormCore::is_IE() && UixSCFormCore::is_dynamic_input( $class ) ) {
-				$new_class = str_replace( 'dynamic-row', 'isMSIE dynamic-row', $class );
-			} else {
-				$new_class = $class;
-			}
-	
-	
-            
             $field = '
                     <tr'.$new_class.'>
                         <th scope="row"><label>'.$title.'</label></th>
                         <td>
 						
 						    <div class="uixscform-box">
-                               
-								  <div class="radio" id="radio-selector-'.$id.'">	
+                                  <div class="uixscform-form-clear"></div>
+								  <div class="radio uixscform_btn_trigger-radio" data-targetid="'.$id.'">	
 								   '.$optionlist.' 
 								   </div>
 							   
@@ -113,31 +103,8 @@ class UixSCFormType_Radio {
             ';		
 			
 			
-			$jscode_tog = '';
-			if ( !empty( $toggle_class ) ) {
-				$jscode_tog = '
-					/*-- Toggle for radio  --*/
-					'.$toggleForRadioJS.'
-				';	
-				
-				//inscure browser
-				if( UixSCFormCore::is_IE() && UixSCFormCore::is_dynamic_input( $class ) ) {
-					$jscode_tog = '';
-				}
-						
-	
-			}	
 			
-            $jscode = '
-                /*-- Radio --*/
-                $( document ).uixscform_radioSelector({
-                    containerID: "#radio-selector-'.$id.'",
-                    targetID: "#'.$id.'"
-                });
-				
-				'.$jscode_tog.'
-	
-          ';
+            $jscode = '';
             
 
         }

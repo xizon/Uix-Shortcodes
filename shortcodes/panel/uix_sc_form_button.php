@@ -263,40 +263,37 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Button', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						
-						var  uix_sc_btn_result_color = ( uix_sc_btn_color_other != '' ) ? uix_sc_btn_color_other : uixscform_colorTran( uix_sc_btn_color ),
-							 uix_sc_btn_result_txtcolor = ( uix_sc_btn_txtcolor_other != '' ) ? uix_sc_btn_txtcolor_other : uix_sc_btn_txtcolor,
-							 uix_sc_btn_result_target = ( uix_sc_btn_target === true ) ? 1 : 0,
-							 uix_sc_btn_result_url = ( uix_sc_btn_url != '' ) ? uix_sc_btn_url : '#';
-						
-			
-			
+	  	
+		
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Button', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
 					
-						code = "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uix_sc_btn_fontsize+"px' letterspacing='"+uix_sc_btn_letterspacing+"px' fillet='"+uix_sc_btn_fillet+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]";
-						
+					var  uix_sc_btn_result_color = ( uix_sc_btn_color_other != '' ) ? uix_sc_btn_color_other : uixscform_colorTran( uix_sc_btn_color ),
+						 uix_sc_btn_result_txtcolor = ( uix_sc_btn_txtcolor_other != '' ) ? uix_sc_btn_txtcolor_other : uix_sc_btn_txtcolor,
+						 uix_sc_btn_result_target = ( uix_sc_btn_target === true ) ? 1 : 0,
+						 uix_sc_btn_result_url = ( uix_sc_btn_url != '' ) ? uix_sc_btn_url : '#';
+					
+		
+		
+				
+					code = "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uix_sc_btn_fontsize+"px' letterspacing='"+uix_sc_btn_letterspacing+"px' fillet='"+uix_sc_btn_fillet+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]";
+					
 
-						
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
+					
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
 	
-			
-		}
 	}
 	
 }

@@ -139,64 +139,61 @@ if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
-		if ( is_admin()) {
+		/* List Item - Register clone vars ( step 1) */
+		UixSCFormCore::reg_clone_vars( 'uix_sc_testimonials_col3_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_avatar', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_name', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_position', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_intro', $form_html ) );	
+		
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Testimonials Carousel', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					/* List Item ( step 2)  */
+					var list_num = 15;
+					
 			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					/* List Item ( step 1) */
-					var dynamic_append_box_content = '<?php echo UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_avatar', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_name', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_position', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_intro', $form_html ); ?>';
-
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Testimonials Carousel', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						/* List Item ( step 2)  */
-						var list_num = 15;
+					var show_list_item = '';
+					for ( var i=0; i<=list_num; i++ ){
 						
-				
-						var show_list_item = '';
-						for ( var i=0; i<=list_num; i++ ){
+						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
+							_avatar = $( _uid+'uix_sc_testimonials_col3_listitem_avatar' ).val(),
+							_name = $( _uid+'uix_sc_testimonials_col3_listitem_name' ).val(),
+							_position = $( _uid+'uix_sc_testimonials_col3_listitem_position' ).val(),
+							_desc = $( _uid+'uix_sc_testimonials_col3_listitem_intro' ).val();
 							
-							var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-								_avatar = $( _uid+'uix_sc_testimonials_col3_listitem_avatar' ).val(),
-								_name = $( _uid+'uix_sc_testimonials_col3_listitem_name' ).val(),
-								_position = $( _uid+'uix_sc_testimonials_col3_listitem_position' ).val(),
-								_desc = $( _uid+'uix_sc_testimonials_col3_listitem_intro' ).val();
-								
-								
-								
-								
-							var _item_v_avatar = ( _avatar != undefined ) ? _avatar : '',
-								_item_v_name = ( _name != undefined ) ? uixscform_htmlencodeFormat( _name ) : '',
-								_item_v_position = ( _position != undefined ) ? uixscform_htmlencodeFormat( _position ) : '',
-								_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
-								
 							
-							if ( _name != undefined ) {
-								show_list_item += "<br>[uix_testimonials_item name='"+_item_v_name+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"']";
-								show_list_item += "<br>[uix_testimonials_item_desc]"+ _item_v_desc +"[/uix_testimonials_item_desc]";					
-								show_list_item += "<br>[/uix_testimonials_item]";
-			
-							}
-								
 							
+							
+						var _item_v_avatar = ( _avatar != undefined ) ? _avatar : '',
+							_item_v_name = ( _name != undefined ) ? uixscform_htmlencodeFormat( _name ) : '',
+							_item_v_position = ( _position != undefined ) ? uixscform_htmlencodeFormat( _position ) : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
+							
+						
+						if ( _name != undefined ) {
+							show_list_item += "<br>[uix_testimonials_item name='"+_item_v_name+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"']";
+							show_list_item += "<br>[uix_testimonials_item_desc]"+ _item_v_desc +"[/uix_testimonials_item_desc]";					
+							show_list_item += "<br>[/uix_testimonials_item]";
+		
 						}
-			
-			
-						code = "[uix_testimonials]"+show_list_item+"<br>[/uix_testimonials]";
+							
+						
+					}
+		
+		
+					code = "[uix_testimonials]"+show_list_item+"<br>[/uix_testimonials]";
 
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
-	
-			
-		}
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
+		
 	}
 	
 }

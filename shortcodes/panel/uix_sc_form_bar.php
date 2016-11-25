@@ -353,38 +353,34 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Progress Bar', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						
-						var  uix_sc_bar_result_color = ( uix_sc_bar_color_other != '' ) ? uix_sc_bar_color_other : uix_sc_bar_color,
-							 uix_sc_bar_result_trackcolor = ( uix_sc_bar_trackcolor_other != '' ) ? uix_sc_bar_trackcolor_other : uix_sc_bar_trackcolor,
-							 uix_sc_bar_result_percent_icon_color = ( uix_sc_bar_percent_icon_color_other != '' ) ? uix_sc_bar_percent_icon_color_other : uix_sc_bar_percent_icon_color,
-							 uix_sc_bar_result_icon = ( uix_sc_bar_icon_toggle === true ) ? "icon='"+uix_sc_bar_icon+"'" : '',
-							 uix_sc_bar_result_size = ( uix_sc_bar_shape == 'circular' ) ? "size='"+uix_sc_bar_circular_size+"px'" : "size='"+uix_sc_bar_square_size+""+uix_sc_bar_square_size_units+"'";
-						
-			
-						code = "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uix_sc_bar_percent+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uix_sc_bar_linewidth+"' precsize='"+uix_sc_bar_perc_icons_size+"px' title='"+uixscform_htmlencodeFormat( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+" top='"+uix_sc_bar_margin_top+"' bottom='"+uix_sc_bar_margin_bottom+"' left='"+uix_sc_bar_margin_left+"' right='"+uix_sc_bar_margin_right+"']"+uix_sc_bar_desc+"[/uix_progress_bar]";
-						
+ 
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Progress Bar', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					
+					var  uix_sc_bar_result_color = ( uix_sc_bar_color_other != '' ) ? uix_sc_bar_color_other : uix_sc_bar_color,
+						 uix_sc_bar_result_trackcolor = ( uix_sc_bar_trackcolor_other != '' ) ? uix_sc_bar_trackcolor_other : uix_sc_bar_trackcolor,
+						 uix_sc_bar_result_percent_icon_color = ( uix_sc_bar_percent_icon_color_other != '' ) ? uix_sc_bar_percent_icon_color_other : uix_sc_bar_percent_icon_color,
+						 uix_sc_bar_result_icon = ( uix_sc_bar_icon_toggle === true ) ? "icon='"+uix_sc_bar_icon+"'" : '',
+						 uix_sc_bar_result_size = ( uix_sc_bar_shape == 'circular' ) ? "size='"+uix_sc_bar_circular_size+"px'" : "size='"+uix_sc_bar_square_size+""+uix_sc_bar_square_size_units+"'";
+					
+		
+					code = "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uix_sc_bar_percent+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uix_sc_bar_linewidth+"' precsize='"+uix_sc_bar_perc_icons_size+"px' title='"+uixscform_htmlencodeFormat( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+" top='"+uix_sc_bar_margin_top+"' bottom='"+uix_sc_bar_margin_bottom+"' left='"+uix_sc_bar_margin_left+"' right='"+uix_sc_bar_margin_right+"']"+uix_sc_bar_desc+"[/uix_progress_bar]";
+					
+
+					
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
 	
-						
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
-	
-			
-		}
 	}
 	
 }

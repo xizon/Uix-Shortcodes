@@ -110,9 +110,7 @@ $args =
 			'type'           => 'textarea',
 			'default'        => array(
 									'row'                       => 5,
-									'format'                    => false,
-									'default_value_htmlformat'  => true,
-									'default_value_trigger'     => $form_id
+									'format'                    => false
 				                )
 		
 		),
@@ -588,131 +586,127 @@ if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-				
-					/* List Item ( step 1) */
-					var dynamic_append_box_content = '<?php echo UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgURL', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgtitle', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgicon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_radio', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_color', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_colormap', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_shorttext', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_icon', $form_html, 'toggle-row' ); ?>';
-					
-
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Demo Form 1', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						/* List Item ( step 2)  */
-						var list_num = 3;
-						
-				
-						var show_list_item = '';
-						for ( var i=0; i<=list_num; i++ ){
-							
-							var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-								_txt = $( _uid+'uix_sc_listitem_imgtitle' ).val(),
-								_img = $( _uid+'uix_sc_listitem_imgURL' ).val(),
-								_icon = $( _uid+'uix_sc_listitem_imgicon' ).val(),
-								_radio = $( _uid+'uix_sc_listitem_radio' ).val(),
-								_color = $( _uid+'uix_sc_listitem_color' ).val(),
-								_colormap = $( _uid+'uix_sc_listitem_colormap' ).val(),
-								_shorttext = $( _uid+'uix_sc_listitem_shorttext' ).val(),
-								_toggle_url = $( _uid+'uix_sc_listitem_toggle_url' ).val(),
-								_toggle_icon = $( _uid+'uix_sc_listitem_toggle_icon' ).val();
-								
-							
-							
-							if ( _txt != undefined )  show_list_item += _txt;   
-							if ( _img != undefined ) show_list_item += '( Image URL: '+_img+' )';   
-							if ( _icon != undefined ) show_list_item += '( Icon: '+_icon+' )';   
-							if ( _radio != undefined ) show_list_item += '( Radio: '+_radio+' )';   
-							if ( _color != undefined ) show_list_item += '( Color: '+_color+' )';   
-							if ( _colormap != undefined ) show_list_item += '( Custom Color : '+_colormap+' )';   
-							if ( _shorttext != undefined ) show_list_item += '( Units Txt : '+_shorttext+' )';   
-							if ( _toggle_url != undefined ) show_list_item += '( Toggle URL : '+_toggle_url+' )';   
-							if ( _toggle_icon != undefined ) show_list_item += '( Toggle Icon : '+_toggle_icon+' )';   
-								
-							
-						}
-						
-						
-						/* Multiple Selector */
-						var multiselectorArr = uix_sc_multiselect.split( ',' ),
-							show_checkboxes = '';
-						for ( var k=0; k < multiselectorArr.length; k++ ) {
-							
-							
-							switch( multiselectorArr[k] ){ 
-								case '1': 
-									show_checkboxes += 'student+';
-									
-								break; 
-								
-								case '2': 
-									show_checkboxes += 'teacher+';
-								
-								break; 
-								
-								case '3': 
-									show_checkboxes += 'manager+';
-								
-								break; 	
-								
-								case '4': 
-									show_checkboxes += 'children+';
-								
-								break; 				
-								
-								default: 
-		
-							}
-							
-						}
-				
-			
-						/* Checkbox */
-						var show_checkbox = '';
-						if ( uix_sc_checkbox === true ){
-							show_checkbox = '(checked)';
-						}
-						
-					
-						/* Output */
-						_vhtml = '';
-						_vhtml += '<hr>Text: '+uix_sc_text;
-						_vhtml += '<hr>Textarea: '+uix_sc_textarea;
-						_vhtml += '<hr>Short Text: <br>'+uix_sc_shorttext;
-						_vhtml += '<hr>Short Units Text: '+uix_sc_shortunitstext+uix_sc_shortunitstext_units;
-						_vhtml += '<hr>Select: '+uix_sc_select;
-						_vhtml += '<hr>Upload Image: '+uix_sc_image;
-						_vhtml += '<hr>Toggle URL: '+uix_sc_toggle_url;
-						_vhtml += '<hr>Icon: '+uix_sc_icon;
-						_vhtml += '<hr>Radio: '+uix_sc_radio;
-						_vhtml += '<hr>Slider: '+uix_sc_slider+uix_sc_slider_units;
-						_vhtml += '<hr>Color Map Value: '+uix_sc_colormap;
-						_vhtml += '<hr>Multiple Checkboxes: '+show_checkboxes;
-						_vhtml += '<hr>Padding: '+uix_sc_paddingdis_top+','+uix_sc_paddingdis_right+','+uix_sc_paddingdis_bottom+','+uix_sc_paddingdis_left;
-						
-						
-						
-						//---
-						_vhtml += '<hr>List Item: '+show_list_item;
-						_vhtml += '<hr>Checkbox: '+show_checkbox+'<br>';
-					
-		
-						code = "[uix_hello color='"+uix_sc_single_color+"']<p>" + _vhtml + "</p>[/uix_hello]";
-
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
+		/* List Item - Register clone vars ( step 1) */
+		UixSCFormCore::reg_clone_vars( 'uix_sc_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgURL', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgtitle', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgicon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_radio', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_color', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_colormap', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_shorttext', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_icon', $form_html, 'toggle-row' ) );
 	
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() { 
+
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Demo Form 1', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					/* List Item ( step 2)  */
+					var list_num = 3;
+					
 			
-		}
+					var show_list_item = '';
+					for ( var i=0; i<=list_num; i++ ){
+						
+						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
+							_txt = $( _uid+'uix_sc_listitem_imgtitle' ).val(),
+							_img = $( _uid+'uix_sc_listitem_imgURL' ).val(),
+							_icon = $( _uid+'uix_sc_listitem_imgicon' ).val(),
+							_radio = $( _uid+'uix_sc_listitem_radio' ).val(),
+							_color = $( _uid+'uix_sc_listitem_color' ).val(),
+							_colormap = $( _uid+'uix_sc_listitem_colormap' ).val(),
+							_shorttext = $( _uid+'uix_sc_listitem_shorttext' ).val(),
+							_toggle_url = $( _uid+'uix_sc_listitem_toggle_url' ).val(),
+							_toggle_icon = $( _uid+'uix_sc_listitem_toggle_icon' ).val();
+							
+						
+						
+						if ( _txt != undefined )  show_list_item += _txt;   
+						if ( _img != undefined ) show_list_item += '( Image URL: '+_img+' )';   
+						if ( _icon != undefined ) show_list_item += '( Icon: '+_icon+' )';   
+						if ( _radio != undefined ) show_list_item += '( Radio: '+_radio+' )';   
+						if ( _color != undefined ) show_list_item += '( Color: '+_color+' )';   
+						if ( _colormap != undefined ) show_list_item += '( Custom Color : '+_colormap+' )';   
+						if ( _shorttext != undefined ) show_list_item += '( Units Txt : '+_shorttext+' )';   
+						if ( _toggle_url != undefined ) show_list_item += '( Toggle URL : '+_toggle_url+' )';   
+						if ( _toggle_icon != undefined ) show_list_item += '( Toggle Icon : '+_toggle_icon+' )';   
+							
+						
+					}
+					
+					
+					/* Multiple Selector */
+					var multiselectorArr = uix_sc_multiselect.split( ',' ),
+						show_checkboxes = '';
+					for ( var k=0; k < multiselectorArr.length; k++ ) {
+						
+						
+						switch( multiselectorArr[k] ){ 
+							case '1': 
+								show_checkboxes += 'student+';
+								
+							break; 
+							
+							case '2': 
+								show_checkboxes += 'teacher+';
+							
+							break; 
+							
+							case '3': 
+								show_checkboxes += 'manager+';
+							
+							break; 	
+							
+							case '4': 
+								show_checkboxes += 'children+';
+							
+							break; 				
+							
+							default: 
+	
+						}
+						
+					}
+			
+		
+					/* Checkbox */
+					var show_checkbox = '';
+					if ( uix_sc_checkbox === true ){
+						show_checkbox = '(checked)';
+					}
+					
+				
+					/* Output */
+					_vhtml = '';
+					_vhtml += '<hr>Text: '+uix_sc_text;
+					_vhtml += '<hr>Textarea: '+uix_sc_textarea;
+					_vhtml += '<hr>Short Text: <br>'+uix_sc_shorttext;
+					_vhtml += '<hr>Short Units Text: '+uix_sc_shortunitstext+uix_sc_shortunitstext_units;
+					_vhtml += '<hr>Select: '+uix_sc_select;
+					_vhtml += '<hr>Upload Image: '+uix_sc_image;
+					_vhtml += '<hr>Toggle URL: '+uix_sc_toggle_url;
+					_vhtml += '<hr>Icon: '+uix_sc_icon;
+					_vhtml += '<hr>Radio: '+uix_sc_radio;
+					_vhtml += '<hr>Slider: '+uix_sc_slider+uix_sc_slider_units;
+					_vhtml += '<hr>Color Map Value: '+uix_sc_colormap;
+					_vhtml += '<hr>Multiple Checkboxes: '+show_checkboxes;
+					_vhtml += '<hr>Padding: '+uix_sc_paddingdis_top+','+uix_sc_paddingdis_right+','+uix_sc_paddingdis_bottom+','+uix_sc_paddingdis_left;
+					
+					
+					
+					//---
+					_vhtml += '<hr>List Item: '+show_list_item;
+					_vhtml += '<hr>Checkbox: '+show_checkbox+'<br>';
+				
+	
+					code = "[uix_hello color='"+uix_sc_single_color+"']<p>" + _vhtml + "</p>[/uix_hello]";
+
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
+	
 	}
 	
 }

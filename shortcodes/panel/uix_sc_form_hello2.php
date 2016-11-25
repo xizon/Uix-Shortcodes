@@ -21,8 +21,9 @@ $form_type_col2 = [
 
 $args_col2_1 = 
 	[
+	
 		array(
-			'id'             => 'uix_sc_col_demo_col2_1',
+			'id'             => 'uix_sc_col_demo_col2_1_text',
 			'title'          => __( 'Text2 - 1', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
@@ -30,6 +31,66 @@ $args_col2_1 =
 			'type'           => 'text'
 		
 		),
+		
+			
+		array(
+			'id'             => 'uix_sc_col_demo_col2_1_textarea',
+			'title'          => '',
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'textarea',
+			'default'        => array(
+									'row'     => 2,
+									'format'  => true
+								)
+		
+		),
+		
+		array(
+			'id'             => 'uix_sc_col_demo_col2_1_icon',
+			'title'          => __( 'Icon', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => __( 'Choose Feature Icon', 'uix-shortcodes' ),
+			'type'           => 'icon',
+			'default'        => array(
+									'social'  => false
+								)
+		
+		),
+		
+		array(
+				'id'             => 'uix_sc_col_demo_col2_1_upload',
+				'title'          => __( 'Upload Image', 'uix-shortcodes' ),
+				'desc'           => '',
+				'value'          => '',
+				'placeholder'    => __( 'Image URL', 'uix-shortcodes' ),
+				'type'           => 'image',
+				'default'        => array(
+										'remove_btn_text'  => __( 'Remove image', 'uix-shortcodes' ),
+										'upload_btn_text'  => __( 'Upload', 'uix-shortcodes' )
+									)
+			
+		),	
+			
+		
+	    array(
+			'id'             => 'uix_sc_col_demo_col2_1_slider',
+			'title'          => __( 'SLider', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 0,
+			'placeholder'    => '',
+			'type'           => 'slider',
+			'default'        => array(
+			                        'units_id'  => 'uix_sc_col_demo_col2_1_slider_units',
+									'units'  => '',
+									'min'   => 0,
+									'max'   => 10,
+									'step'  => 0.1
+				                )
+		
+		),		
 		
 	
 	]
@@ -48,6 +109,63 @@ $args_col2_2 =
 		
 		),
 		
+		array(
+			'id'             => 'uix_sc_col_demo_col2_2_textarea',
+			'title'          => '',
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'textarea',
+			'default'        => array(
+									'row'     => 2,
+									'format'  => true
+								)
+		
+		),
+		
+		array(
+			'id'             => 'uix_sc_col_demo_col2_2_icon',
+			'title'          => __( 'Icon', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => __( 'Choose Feature Icon', 'uix-shortcodes' ),
+			'type'           => 'icon',
+			'default'        => array(
+									'social'  => false
+								)
+		
+		),
+		
+		array(
+				'id'             => 'uix_sc_col_demo_col2_2_upload',
+				'title'          => __( 'Upload Image', 'uix-shortcodes' ),
+				'desc'           => '',
+				'value'          => '',
+				'placeholder'    => __( 'Image URL', 'uix-shortcodes' ),
+				'type'           => 'image',
+				'default'        => array(
+										'remove_btn_text'  => __( 'Remove image', 'uix-shortcodes' ),
+										'upload_btn_text'  => __( 'Upload', 'uix-shortcodes' )
+									)
+			
+		),	
+			
+	    array(
+			'id'             => 'uix_sc_col_demo_col2_2_slider',
+			'title'          => __( 'SLider', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 0,
+			'placeholder'    => '',
+			'type'           => 'slider',
+			'default'        => array(
+			                        'units_id'  => 'uix_sc_col_demo_col2_2_slider_units',
+									'units'  => '',
+									'min'   => 0,
+									'max'   => 10,
+									'step'  => 0.1
+				                )
+		
+		),			
 	
 	]
 ;
@@ -186,7 +304,7 @@ $args_col4_4 =
 $form_html = UixSCFormCore::form_before( $cid, $sid, $form_id );
 
 
-$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_2, 'html', __( 'Item 1', 'uix-shortcodes' ) );
+$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_1, 'html', __( 'Item 1', 'uix-shortcodes' ) );
 $form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_2, 'html', __( 'Item 2', 'uix-shortcodes' ) );
 
 
@@ -206,7 +324,7 @@ $form_html .= UixSCFormCore::form_after();
 //----
 
 $form_js = '';
-$form_js .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_2, 'js' );
+$form_js .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_1, 'js' );
 $form_js .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_2, 'js' );
 
 
@@ -223,7 +341,7 @@ $form_js .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col4, $arg
 //----
 
 $form_js_vars = '';
-$form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_2, 'js_vars' );
+$form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_1, 'js_vars' );
 $form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col2, $args_col2_2, 'js_vars' );
 
 $form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col3, $args_col3_1, 'js_vars' );
@@ -245,30 +363,27 @@ $form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type_col4,
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Demo Form 2', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						
-					code = "[uix_hello2][/uix_hello2]";
-						
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
-	
-			
-		}
+  
+		
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Demo Form 2', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					
+				code = "[uix_hello2][/uix_hello2]";
+					
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
 	}
 	
 }

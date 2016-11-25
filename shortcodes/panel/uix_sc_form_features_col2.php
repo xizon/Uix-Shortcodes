@@ -38,7 +38,6 @@ $args_1 =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_content_js_var'      => 'dynamic_append_box_content_left',
 									'clone_class'               => [ 
 									
 										array(
@@ -106,6 +105,7 @@ $args_1 =
 			),	
 		
 			
+
 			
 			array(
 				'id'             => 'uix_sc_features_col2_one_listitem_desc',
@@ -195,7 +195,6 @@ $args_2 =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_content_js_var'      => 'dynamic_append_box_content_right',
 									'clone_class'               => [ 
 									
 										array(
@@ -363,118 +362,111 @@ $form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $arg
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-				
-				
-					/* List Item ( step 1) */
-					var dynamic_append_box_content_left = '<?php echo UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_titlecolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_desccolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_icon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_iconcolor', $form_html ); ?>';
+	  
+		/* List Item - Register clone vars ( step 1) */
+		UixSCFormCore::reg_clone_vars( 'uix_sc_features_col2_one_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_titlecolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_desccolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_icon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_one_listitem_iconcolor', $form_html ) );  
+		
+		UixSCFormCore::reg_clone_vars( 'uix_sc_features_col2_two_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_titlecolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_desccolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_icon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_iconcolor', $form_html ) );
+	  
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() { 
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Features (2 Column)', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					/* List Item ( step 2)  */
+					var list_num = 30;
 					
-					
-					var dynamic_append_box_content_right = '<?php echo UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_titlecolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_desccolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_icon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col2_two_listitem_iconcolor', $form_html ); ?>';	
-						
-
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Features (2 Column)', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						/* List Item ( step 2)  */
-						var list_num = 30;
-						
-				
-						var show_list_item_1 = '';
-						for ( var i=0; i<=list_num; i++ ){
-							
-							var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-								_title = $( _uid+'uix_sc_features_col2_one_listitem_title' ).val(),
-								_titlecolor = $( _uid+'uix_sc_features_col2_one_listitem_titlecolor' ).val(),
-								_icon = $( _uid+'uix_sc_features_col2_one_listitem_icon' ).val(),
-								_iconcolor = $( _uid+'uix_sc_features_col2_one_listitem_iconcolor' ).val(),
-								_desc = $( _uid+'uix_sc_features_col2_one_listitem_desc' ).val(),
-								_desccolor = $( _uid+'uix_sc_features_col2_one_listitem_desccolor' ).val();
-								
-								
-								
-								
-								
-							var _item_v_title = ( _title != undefined ) ? _title : '',
-								_item_v_titlecolor = ( _titlecolor != undefined ) ? _titlecolor : '',
-								_item_v_icon = ( _icon != undefined ) ? _icon : '',
-								_item_v_iconcolor = ( _iconcolor != undefined ) ? _iconcolor : '',
-								_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
-								_item_v_desccolor = ( _desccolor != undefined ) ? _desccolor : '';
-								
-							
-							if ( _title != undefined ) {
-								show_list_item_1 += "<br>[uix_features_item col='2' icon='"+_item_v_icon+"' iconcolor='"+_item_v_iconcolor+"' titlecolor='"+_item_v_titlecolor+"' desccolor='"+_item_v_desccolor+"']";
-								show_list_item_1 += "<br>[uix_features_item_title]"+ _item_v_title +"[/uix_features_item_title]";			
-								show_list_item_1 += "<br>[uix_features_item_desc]"+ _item_v_desc +"[/uix_features_item_desc]";					
-								show_list_item_1 += "<br>[/uix_features_item]";
 			
-							}
-								
+					var show_list_item_1 = '';
+					for ( var i=0; i<=list_num; i++ ){
+						
+						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
+							_title = $( _uid+'uix_sc_features_col2_one_listitem_title' ).val(),
+							_titlecolor = $( _uid+'uix_sc_features_col2_one_listitem_titlecolor' ).val(),
+							_icon = $( _uid+'uix_sc_features_col2_one_listitem_icon' ).val(),
+							_iconcolor = $( _uid+'uix_sc_features_col2_one_listitem_iconcolor' ).val(),
+							_desc = $( _uid+'uix_sc_features_col2_one_listitem_desc' ).val(),
+							_desccolor = $( _uid+'uix_sc_features_col2_one_listitem_desccolor' ).val();
 							
+							
+							
+							
+							
+						var _item_v_title = ( _title != undefined ) ? _title : '',
+							_item_v_titlecolor = ( _titlecolor != undefined ) ? _titlecolor : '',
+							_item_v_icon = ( _icon != undefined ) ? _icon : '',
+							_item_v_iconcolor = ( _iconcolor != undefined ) ? _iconcolor : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
+							_item_v_desccolor = ( _desccolor != undefined ) ? _desccolor : '';
+							
+						
+						if ( _title != undefined ) {
+							show_list_item_1 += "<br>[uix_features_item col='2' icon='"+_item_v_icon+"' iconcolor='"+_item_v_iconcolor+"' titlecolor='"+_item_v_titlecolor+"' desccolor='"+_item_v_desccolor+"']";
+							show_list_item_1 += "<br>[uix_features_item_title]"+ _item_v_title +"[/uix_features_item_title]";			
+							show_list_item_1 += "<br>[uix_features_item_desc]"+ _item_v_desc +"[/uix_features_item_desc]";					
+							show_list_item_1 += "<br>[/uix_features_item]";
+		
+						}
+							
+						
+					}
+					
+					//-----
+					
+					var show_list_item_2 = '';
+					for ( var i=0; i<=list_num; i++ ){
+						
+						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
+							_title = $( _uid+'uix_sc_features_col2_two_listitem_title' ).val(),
+							_titlecolor = $( _uid+'uix_sc_features_col2_two_listitem_titlecolor' ).val(),
+							_icon = $( _uid+'uix_sc_features_col2_two_listitem_icon' ).val(),
+							_iconcolor = $( _uid+'uix_sc_features_col2_two_listitem_iconcolor' ).val(),
+							_desc = $( _uid+'uix_sc_features_col2_two_listitem_desc' ).val(),
+							_desccolor = $( _uid+'uix_sc_features_col2_two_listitem_desccolor' ).val();
+							
+							
+							
+							
+							
+						var _item_v_title = ( _title != undefined ) ? _title : '',
+							_item_v_titlecolor = ( _titlecolor != undefined ) ? _titlecolor : '',
+							_item_v_icon = ( _icon != undefined ) ? _icon : '',
+							_item_v_iconcolor = ( _iconcolor != undefined ) ? _iconcolor : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
+							_item_v_desccolor = ( _desccolor != undefined ) ? _desccolor : '';
+							
+						
+						if ( _title != undefined ) {
+							show_list_item_2 += "<br>[uix_features_item col='2' icon='"+_item_v_icon+"' iconcolor='"+_item_v_iconcolor+"' titlecolor='"+_item_v_titlecolor+"' desccolor='"+_item_v_desccolor+"']";
+							show_list_item_2 += "<br>[uix_features_item_title]"+ _item_v_title +"[/uix_features_item_title]";			
+							show_list_item_2 += "<br>[uix_features_item_desc]"+ _item_v_desc +"[/uix_features_item_desc]";					
+							show_list_item_2 += "<br>[/uix_features_item]";
+		
 						}
 						
-						//-----
+							
 						
-						var show_list_item_2 = '';
-						for ( var i=0; i<=list_num; i++ ){
-							
-							var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-								_title = $( _uid+'uix_sc_features_col2_two_listitem_title' ).val(),
-								_titlecolor = $( _uid+'uix_sc_features_col2_two_listitem_titlecolor' ).val(),
-								_icon = $( _uid+'uix_sc_features_col2_two_listitem_icon' ).val(),
-								_iconcolor = $( _uid+'uix_sc_features_col2_two_listitem_iconcolor' ).val(),
-								_desc = $( _uid+'uix_sc_features_col2_two_listitem_desc' ).val(),
-								_desccolor = $( _uid+'uix_sc_features_col2_two_listitem_desccolor' ).val();
-								
-								
-								
-								
-								
-							var _item_v_title = ( _title != undefined ) ? _title : '',
-								_item_v_titlecolor = ( _titlecolor != undefined ) ? _titlecolor : '',
-								_item_v_icon = ( _icon != undefined ) ? _icon : '',
-								_item_v_iconcolor = ( _iconcolor != undefined ) ? _iconcolor : '',
-								_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
-								_item_v_desccolor = ( _desccolor != undefined ) ? _desccolor : '';
-								
-							
-							if ( _title != undefined ) {
-								show_list_item_2 += "<br>[uix_features_item col='2' icon='"+_item_v_icon+"' iconcolor='"+_item_v_iconcolor+"' titlecolor='"+_item_v_titlecolor+"' desccolor='"+_item_v_desccolor+"']";
-								show_list_item_2 += "<br>[uix_features_item_title]"+ _item_v_title +"[/uix_features_item_title]";			
-								show_list_item_2 += "<br>[uix_features_item_desc]"+ _item_v_desc +"[/uix_features_item_desc]";					
-								show_list_item_2 += "<br>[/uix_features_item]";
-			
-							}
-							
-								
-							
-						}
-						
-						//-----
-						show_list_item_1 = "<br>[uix_features_col_left]"+show_list_item_1+"<br>[/uix_features_col_left]";
-						show_list_item_2 = "<br>[uix_features_col_right]"+show_list_item_2+"<br>[/uix_features_col_right]<br>";
-						
+					}
 					
-						code = "[uix_features col='2']"+show_list_item_1+show_list_item_2+"[/uix_features]";
+					//-----
+					show_list_item_1 = "<br>[uix_features_col_left]"+show_list_item_1+"<br>[/uix_features_col_left]";
+					show_list_item_2 = "<br>[uix_features_col_right]"+show_list_item_2+"<br>[/uix_features_col_right]<br>";
+					
+				
+					code = "[uix_features col='2']"+show_list_item_1+show_list_item_2+"[/uix_features]";
 
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
-	
-			
-		}
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
+		
 	}
 	
 }

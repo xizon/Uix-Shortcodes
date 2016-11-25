@@ -778,61 +778,6 @@ class UixShortcodes {
 	
 	
 	
-		
-	/*
-	 * Check if the user needs a browser update
-	 *
-	 *
-	 */
-	public static function is_IE() {
-         
-		 if( self::inc_str( $_SERVER[ 'HTTP_USER_AGENT' ], 'MSIE' ) ) { 
-		     return true;
-		 } else {
-			 return false;
-		 }
-        
-	
-	}
-	
-	/*
-	 * Check if the Dynamic Adding Input
-	 *
-	 *
-	 */
-	public static function is_dynamic_input( $class ) {
-         
-		 if( self::inc_str( $class, 'dynamic-row' ) ) { 
-		     return true;
-		 } else {
-			 return false;
-		 }
-        
-	
-	}
-	
-	
-	/*
-	 * Returns Row Class of Table 
-	 *
-	 *
-	 */
-	public static function row_class( $class ) {
-         
-		if( self::is_IE() && self::is_dynamic_input( $class ) ) {
-			$new_class = str_replace( 'toggle-row', 'toggle-row isMSIE', $class );
-		} else {
-			$new_class = $class;
-		}
-		
-		return $new_class;
-        
-	
-	}
-	
-
-	
-	
 	/*
 	 * Callback function of "do shortcodes"
 	 *

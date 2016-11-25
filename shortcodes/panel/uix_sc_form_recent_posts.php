@@ -97,37 +97,33 @@ if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Recent Posts', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						var before = uixscform_htmlencodeFormat( uix_sc_rposts_before );
-						var after = uixscform_htmlencodeFormat( uix_sc_rposts_after );
-						var temp = uixscform_htmlencodeFormat( uix_sc_rposts_looptemp );
-						
-						
-				
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Recent Posts', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					var before = uixscform_htmlencodeFormat( uix_sc_rposts_before );
+					var after = uixscform_htmlencodeFormat( uix_sc_rposts_after );
+					var temp = uixscform_htmlencodeFormat( uix_sc_rposts_looptemp );
 					
-						code = "[uix_recent_posts show='"+uix_sc_rposts_num+"' before='"+before+"' after='"+after+"']"+temp+"[/uix_recent_posts]";
-						
-						
-
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
-	
+					
 			
-		}
+				
+					code = "[uix_recent_posts show='"+uix_sc_rposts_num+"' before='"+before+"' after='"+after+"']"+temp+"[/uix_recent_posts]";
+					
+					
+
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
 	}
 	
 }

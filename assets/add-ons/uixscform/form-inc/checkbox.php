@@ -20,7 +20,6 @@ class UixSCFormType_Checkbox {
 		$jscode = '';
 		$jscode_vars = '';
 		
-		$toggleForRadioClass = 'toggle-radio-options-'.$id;
 		
         if ( $type == 'checkbox' ) {
             
@@ -40,12 +39,11 @@ class UixSCFormType_Checkbox {
 				
             }
 			
-			//Toggle
+			//Toggle for checkbox
 			$toggle_class = '';
 			$target_id = '';
 			$toggle_trigger_id = '';
 			$toggle_no_id = '';
-			$toggle_no_js = '';
 			
 			
             if ( is_array( $toggle ) && !empty( $toggle ) ) {
@@ -65,10 +63,7 @@ class UixSCFormType_Checkbox {
 				if ( isset( $toggle[ 'toggle_not_class' ] ) && !empty( $toggle[ 'toggle_not_class' ] ) ) {
 					foreach ( $toggle[ 'toggle_not_class' ] as $tid_value2 ) {
 						$toggle_no_id .= '.'.$tid_value2.','; 		
-					}	
-					
-					$toggle_no_js = ', noToggleID: "'.rtrim( $toggle_no_id, ',' ).'"';
-					
+					}
 						
 				}
 				
@@ -82,7 +77,6 @@ class UixSCFormType_Checkbox {
 				$new_class = $class;
 			}
 			
-            
             $field = '
                     <tr'.$new_class.'>
                         <th scope="row"><label>'.$title.'</label></th>
@@ -90,8 +84,13 @@ class UixSCFormType_Checkbox {
 						    <div class="uixscform-box">
                         
                              <span class="uixscform-checkbox">
-                                 
-                                 '.( !empty( $id ) ? '<input id="'.$id.'" name="'.$name.'" value="'.$value.'" type="checkbox" class="uixscform-normal uixscform-check" '.$checked_txt.'>' : '' ).' 
+                              
+								 '.( !empty( $toggle_trigger_id ) ? '<div class="onoffswitch uixscform_btn_trigger-toggleswitch_checkbox" data-targetid="'.rtrim( $target_id, ',' ).'" data-list="0" data-targetid-clone="{multID}" data-linked-no-toggleid="'.rtrim( $toggle_no_id, ',' ).'">' : '' ).'
+								 
+                                 '.( !empty( $id ) ? '<input id="'.$id.'" name="'.$name.'" value="'.$value.'" type="checkbox" class="uixscform-normal uixscform-check '.( !empty( $toggle_trigger_id ) ? 'onoffswitch-checkbox' : '' ).'" '.$checked_txt.'>' : '' ).'
+								 
+								 '.( !empty( $toggle_trigger_id ) ? '<label class="onoffswitch-label" for="myonoffswitch"></label></div>' : '' ).'
+
 
                              </span>
                              
@@ -107,23 +106,7 @@ class UixSCFormType_Checkbox {
                 
             ';						
                 
-			
-			$jscode_tog = '';
-			if ( !empty( $toggle_class ) ) {
-				$jscode_tog = '
-					/*-- Toggle for checkbox  --*/
-					$( document ).uixscform_divToggle( { checkbox: 1, checkboxToggleClass: ".'.$toggleForRadioClass.'", btnID: "#'.$toggle_trigger_id.'", targetID: "'.rtrim( $target_id, ',' ).'" '.$toggle_no_js.' } );
-				';	
-				
-				//inscure browser
-				if( UixSCFormCore::is_IE() && UixSCFormCore::is_dynamic_input( $class ) ) {
-					$jscode_tog = '';
-				}
-						
-	
-			}	
-				
-			$jscode = $jscode_tog;
+			$jscode = '';
 				
 
         }

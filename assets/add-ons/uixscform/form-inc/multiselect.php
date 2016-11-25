@@ -65,7 +65,7 @@ class UixSCFormType_MultiSelector {
 						
 						    <div class="uixscform-box">
                                
-								  <div class="radio" id="radio-selector-'.$id.'">	
+								  <div class="radio uixscform_btn_trigger-multradio" data-targetid="'.$id.'">	
 								   '.$optionlist.' 
 								   </div>
 							   
@@ -84,14 +84,7 @@ class UixSCFormType_MultiSelector {
 				'.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
             ';		
 			
-            $jscode = '
-                /*-- Radio --*/
-                $( document ).uixscform_multipleSelector({
-                    containerID: "#radio-selector-'.$id.'",
-                    targetID: "#'.$id.'"
-                });
-	
-          ';
+            $jscode = '';
 		  
 		  
 

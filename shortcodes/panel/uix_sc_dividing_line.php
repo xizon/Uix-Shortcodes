@@ -106,37 +106,35 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
+
 			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Dividing Line', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						
-						var uix_sc_dividing_line_result_color = '';
-						
-						if ( uix_sc_dividing_line_color == '#fff' ) uix_sc_dividing_line_result_color = 'light';
-						if ( uix_sc_dividing_line_color == '#333' ) uix_sc_dividing_line_result_color = 'dark';
-					  
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Dividing Line', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
 					
-						code = "[uix_dividing_line style='"+uix_sc_dividing_line_style+"' color='"+uix_sc_dividing_line_result_color+"' width='"+uix_sc_dividing_line_width+uix_sc_dividing_line_width_units+"' opacity='"+uix_sc_dividing_line_opacity+"']";
-						
-	
-						
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
-	
-			
-		}
+					var uix_sc_dividing_line_result_color = '';
+					
+					if ( uix_sc_dividing_line_color == '#fff' ) uix_sc_dividing_line_result_color = 'light';
+					if ( uix_sc_dividing_line_color == '#333' ) uix_sc_dividing_line_result_color = 'dark';
+				  
+				
+					code = "[uix_dividing_line style='"+uix_sc_dividing_line_style+"' color='"+uix_sc_dividing_line_result_color+"' width='"+uix_sc_dividing_line_width+uix_sc_dividing_line_width_units+"' opacity='"+uix_sc_dividing_line_opacity+"']";
+					
+
+					
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
+		
 	}
 	
 }

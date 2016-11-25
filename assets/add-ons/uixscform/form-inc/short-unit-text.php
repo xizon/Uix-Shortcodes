@@ -50,7 +50,7 @@ class UixSCFormType_ShortUnitsText {
 								   '.( !empty( $id ) ? '<input type="text" id="'.$id.'" name="'.$name.'" class="uixscform-normal uixscform-input-text" value="'.$value.'" placeholder="'.$placeholder.'">' : '' ).' 
 								   '.( !empty( $unitsid ) ? '<input type="hidden" id="'.$unitsid.'" value="'.$unitsfirst.'">' : '' ).' 
 								   
-								   <span class="units units-short units-selector" id="units-selector-'.$unitsid.'">'.$unitslist.'</span>
+								   <span class="units units-short units-selector uixscform_btn_trigger-radio" data-targetid="'.$unitsid.'">'.$unitslist.'</span>
 						
 								</div>
 								
@@ -68,13 +68,7 @@ class UixSCFormType_ShortUnitsText {
 				'.( !empty( $unitsid ) ? 'var '.$unitsid.' = $( "#'.$unitsid.'" ).val();'."\n" : '' ).'
             ';		
 			
-            $jscode = '
-                /*-- Units Selector --*/
-                $( document ).uixscform_radioSelector({
-                    containerID: "#units-selector-'.$unitsid.'",
-                    targetID: "#'.$unitsid.'"
-                });
-            ';
+            $jscode = '';
             
 
         }

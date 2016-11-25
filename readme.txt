@@ -104,6 +104,8 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 * Optimized back-end structure.
 * Upgraded the back-end form UI.
 * Removed sweetalert plugin.
+* Improved event binding from the plugin main JavaScript file.
+* Improved the main CSS file.
 * Fixed some bugs.
 
 

@@ -43,7 +43,7 @@ class UixSCFormType_Icon {
 						<td>
 						    <div class="uixscform-box">
 						
-								<div class="uixscform-icon-selector-label">'.$tips.'</div>
+								<div class="uixscform-icon-selector-label">'.$tips.'<span class="uixscform-loading icon"></span></div>
 								<div class="uixscform-icon-selector-icon-preview" id="'.$id.'-preview">'.( ( !empty( $value ) ) ? '<i class="fa fa-'.$value.'"></i>' : '' ).'</div>
 								'.( !empty( $id ) ? '<input type="hidden" id="'.$id.'" name="'.$name.'" class="uixscform-normal uixscform-input-text" value="'.$value.'">' : '' ).'
 								'.$iconlist.'

@@ -60,37 +60,33 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Column One Third', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						/* Output */
-						_vhtml = '';
-						_vhtml += "<br>[uix_column grid='4']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]";
-						_vhtml += "<br>[uix_column grid='4']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]";
-						_vhtml += "<br>[uix_column grid='4' last='1']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]<br>";
-						
+	  	 
 		
-						code = "[uix_column_wrapper top='"+uix_sc_col_average_3_padding_top+"' bottom='"+uix_sc_col_average_3_padding_bottom+"' left='"+uix_sc_col_average_3_padding_left+"' right='"+uix_sc_col_average_3_padding_right+"']" + _vhtml + "[/uix_column_wrapper]";
-						
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Column One Third', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					/* Output */
+					_vhtml = '';
+					_vhtml += "<br>[uix_column grid='4']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]";
+					_vhtml += "<br>[uix_column grid='4']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]";
+					_vhtml += "<br>[uix_column grid='4' last='1']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]<br>";
+					
 	
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
+					code = "[uix_column_wrapper top='"+uix_sc_col_average_3_padding_top+"' bottom='"+uix_sc_col_average_3_padding_bottom+"' left='"+uix_sc_col_average_3_padding_left+"' right='"+uix_sc_col_average_3_padding_right+"']" + _vhtml + "[/uix_column_wrapper]";
+					
+
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
 	
-			
-		}
 	}
 	
 }

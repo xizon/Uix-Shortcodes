@@ -64,7 +64,10 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 				  
 					if ( is_admin()) {
-						
+						    
+							//Register clone vars
+							wp_register_script( 'uixscform-functions-handle', UixSCFormCore::plug_directory() .'js/uixscform.debug.js' );
+							
 							//Add Icons
 							wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.css', array(), '4.5.0', 'all');
 							wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.css', array(), '1.0', 'all');
@@ -198,6 +201,19 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 * ========================================================================================================================================
 		 */			
 	
+		
+		/*
+		 * Register clone vars
+		 *
+		 *
+		 */	
+		public static function reg_clone_vars( $clone_id, $str ) {
+			wp_localize_script( 'uixscform-functions-handle', $clone_id.'_clone_vars', array(
+				'value' => $str
+			) );
+			wp_enqueue_script( 'uixscform-functions-handle' );
+		}
+		
 		
 		/*
 		 * Get attachment ID
@@ -464,7 +480,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 */
 		public static function form_before( $content_id, $section_row, $form_id ) {
 			
-			return '<div class="uixscform-alert"><div class="uixscform-table-wrapper"><form method="post" id="form-'.$form_id.'"><div class="uixscform-modal-buttons"><input type="button" class="close-uixscform-modal uixscform-modal-button uixscform-modal-cancel-btn" value="'.__( 'Cancel', 'uix-shortcodes' ).'" /><input type="button" class="uixscform-modal-button uixscform-modal-button-primary uixscform-modal-save-btn" value="'.__( 'Save', 'uix-shortcodes' ).'" /></div><input type="hidden" name="section" value="'.$form_id.'"><input type="hidden" name="row" value="'.$section_row.'"><input type="hidden" name="contentid" value="'.$content_id.'">';
+			return '<div class="uixscform-form-container"><div class="uixscform-table-wrapper"><form method="post" id="form-'.$form_id.'"><div class="uixscform-modal-buttons"><input type="button" class="close-uixscform-modal uixscform-modal-button uixscform-modal-cancel-btn" value="'.__( 'Cancel', 'uix-shortcodes' ).'" /><input type="button" class="uixscform-modal-button uixscform-modal-button-primary uixscform-modal-save-btn" value="'.__( 'Save', 'uix-shortcodes' ).'" /></div><input type="hidden" name="section" value="'.$form_id.'"><input type="hidden" name="row" value="'.$section_row.'"><input type="hidden" name="contentid" value="'.$content_id.'">';
 	
 		}
 		
@@ -841,7 +857,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					$jscode .= UixSCFormType_Toggle::add( $args, 'js' );
 					$jscode_vars .= UixSCFormType_Toggle::add( $args, 'js_vars' );
 		
-					//list 1
+					//Clone list
 					$field .= UixSCFormType_ListClone::add( $args, 'html' );
 					$jscode .= UixSCFormType_ListClone::add( $args, 'js' );
 					$jscode_vars .= UixSCFormType_ListClone::add( $args, 'js_vars' );
@@ -861,8 +877,6 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 				//Javascript vars output
 				if ( $code == 'js_vars' ) $output = $jscode_vars;		
 				
-				//Add simulation buttons
-				if ( $code == 'active_btn' ) $output = '<a style="display:none" class="'.$config_id.'-widget_btn" data-target="content" data-id="'.$section_row.'"></a>';
 	
 				
 			}

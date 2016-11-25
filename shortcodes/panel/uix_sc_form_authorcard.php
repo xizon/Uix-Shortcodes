@@ -192,32 +192,29 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert An Author Card', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						
-						code = "[uix_authorcard primarycolor='"+uix_sc_authorcard_primary_color+"' btnlabel='"+uixscform_htmlencodeFormat( uix_sc_authorcard_link_label )+"' btnurl='"+uix_sc_authorcard_link_link+"' name='"+uixscform_htmlencodeFormat( uix_sc_authorcard_name )+"' avatar='"+uix_sc_authorcard_avatar+"' social_1='"+uix_sc_authorcard_1_icon+"|"+uix_sc_authorcard_1_url+"' social_2='"+uix_sc_authorcard_2_icon+"|"+uix_sc_authorcard_2_url+"' social_3='"+uix_sc_authorcard_3_icon+"|"+uix_sc_authorcard_3_url+"' ]"+uix_sc_authorcard_intro+"<br>[/uix_authorcard]";
-						
-						
-
-						
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
 	
 			
-		}
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert An Author Card', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					
+					code = "[uix_authorcard primarycolor='"+uix_sc_authorcard_primary_color+"' btnlabel='"+uixscform_htmlencodeFormat( uix_sc_authorcard_link_label )+"' btnurl='"+uix_sc_authorcard_link_link+"' name='"+uixscform_htmlencodeFormat( uix_sc_authorcard_name )+"' avatar='"+uix_sc_authorcard_avatar+"' social_1='"+uix_sc_authorcard_1_icon+"|"+uix_sc_authorcard_1_url+"' social_2='"+uix_sc_authorcard_2_icon+"|"+uix_sc_authorcard_2_url+"' social_3='"+uix_sc_authorcard_3_icon+"|"+uix_sc_authorcard_3_url+"' ]"+uix_sc_authorcard_intro+"<br>[/uix_authorcard]";
+					
+					
+
+					
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+	
 	}
 	
 }

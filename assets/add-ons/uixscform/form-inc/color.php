@@ -38,7 +38,7 @@ class UixSCFormType_Color {
                         <td>		
 						    
 							<div class="uixscform-box">
-								  <div class="uixscform-color-selector" id="trigger_id_'.$id.'">	
+								  <div class="uixscform-color-selector uixscform_btn_trigger-radio" data-targetid="'.$id.'">	
 								   '.$colorlist.' 
 								   </div>
 								   '.( !empty( $id ) ? '<input type="hidden" id="'.$id.'" name="'.$name.'" value="'.$value.'">' : '' ).' 
@@ -54,13 +54,7 @@ class UixSCFormType_Color {
             $jscode_vars = '
                 '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
             ';
-            $jscode = '
-                /*-- Color Selector --*/
-                $( document ).uixscform_radioSelector({
-                    containerID: "#trigger_id_'.$id.'",
-                    targetID: "#'.$id.'"
-                });
-            ';
+            $jscode = '';
 
         }
 			

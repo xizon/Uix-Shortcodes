@@ -364,37 +364,34 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Special Heading', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-					   var uix_sc_heading_result_color = ( uix_sc_heading_color_other != '' ) ? uix_sc_heading_color_other : uix_sc_heading_color,
-						   uix_sc_heading_desc_result_color = ( uix_sc_heading_desc_color_other != '' ) ? uix_sc_heading_desc_color_other : uix_sc_heading_desc_color;
-						  
-					   
-					   var subhtml = ( uix_sc_heading_desc != '' ) ? "[uix_heading_sub color='"+uix_sc_heading_desc_result_color+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_desc_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' opacity='"+uix_sc_heading_desc_opacity+"']"+uix_sc_heading_desc+"[/uix_heading_sub]" : "";
-					   
-					 
-						code = "[uix_heading color='"+uix_sc_heading_result_color+"' style='"+uix_sc_heading_style+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' fillbg='"+uix_sc_heading_fillbg+"']"+uix_sc_heading_title+"[/uix_heading]"+subhtml+"[uix_heading_line line='"+uix_sc_heading_line+"' width='"+uix_sc_heading_line_width+uix_sc_heading_line_width_units+"' height='"+uix_sc_heading_line_height+"px']";
-						
-
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
 	 
-			<?php
-	
-			
-		}
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Special Heading', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+				   var uix_sc_heading_result_color = ( uix_sc_heading_color_other != '' ) ? uix_sc_heading_color_other : uix_sc_heading_color,
+					   uix_sc_heading_desc_result_color = ( uix_sc_heading_desc_color_other != '' ) ? uix_sc_heading_desc_color_other : uix_sc_heading_desc_color;
+					  
+				   
+				   var subhtml = ( uix_sc_heading_desc != '' ) ? "[uix_heading_sub color='"+uix_sc_heading_desc_result_color+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_desc_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' opacity='"+uix_sc_heading_desc_opacity+"']"+uix_sc_heading_desc+"[/uix_heading_sub]" : "";
+				   
+				 
+					code = "[uix_heading color='"+uix_sc_heading_result_color+"' style='"+uix_sc_heading_style+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' fillbg='"+uix_sc_heading_fillbg+"']"+uix_sc_heading_title+"[/uix_heading]"+subhtml+"[uix_heading_line line='"+uix_sc_heading_line+"' width='"+uix_sc_heading_line_width+uix_sc_heading_line_width_units+"' height='"+uix_sc_heading_line_height+"px']";
+					
+
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
+		
 	}
 	
 }

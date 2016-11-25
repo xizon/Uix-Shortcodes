@@ -134,9 +134,7 @@ $args_1 =
 			'type'           => 'textarea',
 			'default'        => array(
 									'row'                       => 5,
-									'format'                    => false,
-									'default_value_htmlformat'  => true,
-									'default_value_trigger'     => $form_id
+									'format'                    => false
 									
 				                )
 		
@@ -285,9 +283,7 @@ $args_2 =
 			'type'           => 'textarea',
 			'default'        => array(
 									'row'                       => 5,
-									'format'                    => false,
-									'default_value_htmlformat'  => true,
-									'default_value_trigger'     => $form_id
+									'format'                    => false
 				                )
 		
 		),	
@@ -436,9 +432,7 @@ $args_3 =
 			'type'           => 'textarea',
 			'default'        => array(
 									'row'                       => 5,
-									'format'                    => false,
-									'default_value_htmlformat'  => true,
-									'default_value_trigger'     => $form_id
+									'format'                    => false
 				                )
 		
 		),	
@@ -506,78 +500,75 @@ if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Pricing Table (3 column)', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-							/* Making the button open in a new window */
-							var _p_btn_target_1 = "", _p_btn_target_2 = "", _p_btn_target_3 = "";
-							if ( uix_sc_pricing_col3_one_btn_win === true ) _p_btn_target_1 = '_blank';
-							if ( uix_sc_pricing_col3_two_btn_win === true ) _p_btn_target_2 = '_blank';
-							if ( uix_sc_pricing_col3_three_btn_win === true ) _p_btn_target_3 = '_blank';
-							
-							
-							/* Mark a pricing as important */
-							var _p_class_1 = "", _p_class_2 = "", _p_class_3 = "";
-							if ( uix_sc_pricing_col3_one_active === true ) _p_class_1 = 'uix-sc-price-important';
-							if ( uix_sc_pricing_col3_two_active === true ) _p_class_2 = 'uix-sc-price-important';
-							if ( uix_sc_pricing_col3_three_active === true ) _p_class_3 = 'uix-sc-price-important';
-							
-		
-						
-							/* Output */
-							var _vhtml_1 = "",_vhtml_2 = "",_vhtml_3 = "";
-							_vhtml_1 += "<br>[uix_pricing_item target='"+_p_btn_target_1+"' class='"+_p_class_1+"' url='"+uix_sc_pricing_col3_one_btn_link+"' period='"+uix_sc_pricing_col3_one_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_one_btn_color )+"' imcolor='"+uix_sc_pricing_col3_one_emphasis_color+"' col='3']";
-							_vhtml_1 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col3_one_title+"[/uix_pricing_item_level]";
-							_vhtml_1 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_one_currency+uix_sc_pricing_col3_one_price+"[/uix_pricing_item_price]";
-							_vhtml_1 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_one_desc+"[/uix_pricing_item_desc]";
-							_vhtml_1 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_one_btn_label+"[/uix_pricing_item_button]";		
-							_vhtml_1 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_one_features, 'ul' )+"[/uix_pricing_item_detail]";					
-							_vhtml_1 += "<br>[/uix_pricing_item]<br>";
-							
-							_vhtml_2 += "[uix_pricing_item target='"+_p_btn_target_2+"' class='"+_p_class_2+"' url='"+uix_sc_pricing_col3_two_btn_link+"' period='"+uix_sc_pricing_col3_two_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_two_btn_color )+"' imcolor='"+uix_sc_pricing_col3_two_emphasis_color+"' col='3']";
-							_vhtml_2 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col3_two_title+"[/uix_pricing_item_level]";
-							_vhtml_2 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_two_currency+uix_sc_pricing_col3_two_price+"[/uix_pricing_item_price]";
-							_vhtml_2 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_two_desc+"[/uix_pricing_item_desc]";
-							_vhtml_2 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_two_btn_label+"[/uix_pricing_item_button]";		
-							_vhtml_2 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_two_features, 'ul' )+"[/uix_pricing_item_detail]";					
-							_vhtml_2 += "<br>[/uix_pricing_item]<br>";
-							
-							_vhtml_3 += "[uix_pricing_item target='"+_p_btn_target_3+"' class='"+_p_class_3+"' url='"+uix_sc_pricing_col3_three_btn_link+"' period='"+uix_sc_pricing_col3_three_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_three_btn_color )+"' imcolor='"+uix_sc_pricing_col3_three_emphasis_color+"' col='3' last='1']";
-							_vhtml_3 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col3_three_title+"[/uix_pricing_item_level]";
-							_vhtml_3 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_three_currency+uix_sc_pricing_col3_three_price+"[/uix_pricing_item_price]";
-							_vhtml_3 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_three_desc+"[/uix_pricing_item_desc]";
-							_vhtml_3 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_three_btn_label+"[/uix_pricing_item_button]";		
-							_vhtml_3 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_three_features, 'ul' )+"[/uix_pricing_item_detail]";					
-							_vhtml_3 += "<br>[/uix_pricing_item]<br>";
-							
-							
-							
-							/* Hide item */
-							if ( uix_sc_pricing_col3_one_hide === true ) _vhtml_1 = '';
-							if ( uix_sc_pricing_col3_two_hide === true ) _vhtml_2 = '';
-							if ( uix_sc_pricing_col3_three_hide === true ) _vhtml_3 = '';
-							
-							
-												
-						code = "[uix_pricing]" + _vhtml_1 + _vhtml_2 + _vhtml_3 + "[/uix_pricing]";
-
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
 	
-			
-		}
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Pricing Table (3 column)', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+						/* Making the button open in a new window */
+						var _p_btn_target_1 = "", _p_btn_target_2 = "", _p_btn_target_3 = "";
+						if ( uix_sc_pricing_col3_one_btn_win === true ) _p_btn_target_1 = '_blank';
+						if ( uix_sc_pricing_col3_two_btn_win === true ) _p_btn_target_2 = '_blank';
+						if ( uix_sc_pricing_col3_three_btn_win === true ) _p_btn_target_3 = '_blank';
+						
+						
+						/* Mark a pricing as important */
+						var _p_class_1 = "", _p_class_2 = "", _p_class_3 = "";
+						if ( uix_sc_pricing_col3_one_active === true ) _p_class_1 = 'uix-sc-price-important';
+						if ( uix_sc_pricing_col3_two_active === true ) _p_class_2 = 'uix-sc-price-important';
+						if ( uix_sc_pricing_col3_three_active === true ) _p_class_3 = 'uix-sc-price-important';
+						
+	
+					
+						/* Output */
+						var _vhtml_1 = "",_vhtml_2 = "",_vhtml_3 = "";
+						_vhtml_1 += "<br>[uix_pricing_item target='"+_p_btn_target_1+"' class='"+_p_class_1+"' url='"+uix_sc_pricing_col3_one_btn_link+"' period='"+uix_sc_pricing_col3_one_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_one_btn_color )+"' imcolor='"+uix_sc_pricing_col3_one_emphasis_color+"' col='3']";
+						_vhtml_1 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col3_one_title+"[/uix_pricing_item_level]";
+						_vhtml_1 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_one_currency+uix_sc_pricing_col3_one_price+"[/uix_pricing_item_price]";
+						_vhtml_1 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_one_desc+"[/uix_pricing_item_desc]";
+						_vhtml_1 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_one_btn_label+"[/uix_pricing_item_button]";		
+						_vhtml_1 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_one_features, 'ul' )+"[/uix_pricing_item_detail]";					
+						_vhtml_1 += "<br>[/uix_pricing_item]<br>";
+						
+						_vhtml_2 += "[uix_pricing_item target='"+_p_btn_target_2+"' class='"+_p_class_2+"' url='"+uix_sc_pricing_col3_two_btn_link+"' period='"+uix_sc_pricing_col3_two_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_two_btn_color )+"' imcolor='"+uix_sc_pricing_col3_two_emphasis_color+"' col='3']";
+						_vhtml_2 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col3_two_title+"[/uix_pricing_item_level]";
+						_vhtml_2 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_two_currency+uix_sc_pricing_col3_two_price+"[/uix_pricing_item_price]";
+						_vhtml_2 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_two_desc+"[/uix_pricing_item_desc]";
+						_vhtml_2 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_two_btn_label+"[/uix_pricing_item_button]";		
+						_vhtml_2 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_two_features, 'ul' )+"[/uix_pricing_item_detail]";					
+						_vhtml_2 += "<br>[/uix_pricing_item]<br>";
+						
+						_vhtml_3 += "[uix_pricing_item target='"+_p_btn_target_3+"' class='"+_p_class_3+"' url='"+uix_sc_pricing_col3_three_btn_link+"' period='"+uix_sc_pricing_col3_three_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_three_btn_color )+"' imcolor='"+uix_sc_pricing_col3_three_emphasis_color+"' col='3' last='1']";
+						_vhtml_3 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col3_three_title+"[/uix_pricing_item_level]";
+						_vhtml_3 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_three_currency+uix_sc_pricing_col3_three_price+"[/uix_pricing_item_price]";
+						_vhtml_3 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_three_desc+"[/uix_pricing_item_desc]";
+						_vhtml_3 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_three_btn_label+"[/uix_pricing_item_button]";		
+						_vhtml_3 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_three_features, 'ul' )+"[/uix_pricing_item_detail]";					
+						_vhtml_3 += "<br>[/uix_pricing_item]<br>";
+						
+						
+						
+						/* Hide item */
+						if ( uix_sc_pricing_col3_one_hide === true ) _vhtml_1 = '';
+						if ( uix_sc_pricing_col3_two_hide === true ) _vhtml_2 = '';
+						if ( uix_sc_pricing_col3_three_hide === true ) _vhtml_3 = '';
+						
+						
+											
+					code = "[uix_pricing]" + _vhtml_1 + _vhtml_2 + _vhtml_3 + "[/uix_pricing]";
+
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+	
 	}
 	
 }

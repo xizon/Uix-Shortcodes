@@ -25,14 +25,10 @@ class UixSCFormType_Textarea {
 			
 			$row = 5;
 			$format = true;
-			$default_value_htmlformat = false;
-			$default_value_trigger = '';
 			
 			if ( is_array( $default ) && !empty( $default ) ) {
 				$row = $default[ 'row' ];
 				$format = $default[ 'format' ];
-				$default_value_htmlformat = ( isset( $default[ 'default_value_htmlformat' ] ) ) ? $default[ 'default_value_htmlformat' ] : false;
-				$default_value_trigger = ( isset( $default[ 'default_value_trigger' ] ) ) ? $default[ 'default_value_trigger' ] : '';
 				
 				
 				if ( $format ) {
@@ -60,18 +56,7 @@ class UixSCFormType_Textarea {
 				'.( !empty( $id ) ? ''.$the_var.''."\n" : '' ).'
 			';	
 			
-			if ( $default_value_htmlformat ) {
-				$jscode = '
-					/*-- Textarea --*/
-				   $( document ).uixscform_enterTextareaValue({
-						ID: "#'.$id.'",
-						value: "'.preg_replace( '/(<br.*?>)+/', '\\n', str_replace( '"', '\\"', $value ) ).'",
-						clearIntervalID :  "#'.$default_value_trigger.'"
-					});		
-	
-				';	
-	
-			}
+			$jscode = '';
 			
 			
 		

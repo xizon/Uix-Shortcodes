@@ -21,6 +21,8 @@ class UixSCFormType_Toggle {
 		$jscode = '';
 		$jscode_vars = '';
 		
+		
+		//Toggle
         if ( $type == 'toggle' ) {
             
             $btn_text = '';
@@ -56,7 +58,7 @@ class UixSCFormType_Toggle {
                         <td>
 						
 						   <div class="uixscform-box">
-								<a href="javascript:" id="trigger_id_'.$id.'" class="'.$link_class.'">'.$btn_text.'</a>
+								<a href="javascript:" class="'.$link_class.' uixscform_btn_trigger-toggleshow" data-targetid="'.rtrim( $target_id, ',' ).'" data-list="0" data-targetid-clone="{multID}">'.$btn_text.'</a>
 		
 								'.( !empty( $desc ) ? '<p class="info">'.$desc.'</p>' : '' ).' 	
 								
@@ -74,15 +76,7 @@ class UixSCFormType_Toggle {
 			
 
 			
-            $jscode = '
-			    /*-- Toggle  --*/
-                $( document ).uixscform_divToggle( { btnID: "#trigger_id_'.$id.'", targetID: "'.rtrim( $target_id, ',' ).'" } );
-            ';	
-			
-			//inscure browser
-			if( UixSCFormCore::is_IE() && UixSCFormCore::is_dynamic_input( $class ) ) {
-				$jscode = '';
-			}
+            $jscode = '';
                 
 
         }	

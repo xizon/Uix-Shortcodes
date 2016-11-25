@@ -107,32 +107,29 @@ if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
-		if ( is_admin()) {
-			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Icon', 'uix-shortcodes' ) ); ?> 
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						
-						var uix_sc_icon_result_color = ( uix_sc_icon_color_other != '' ) ? uix_sc_icon_color_other : uix_sc_icon_color;
-						
-						code = "[uix_icons size='"+uix_sc_icon_size+"' units='px' color='"+uix_sc_icon_result_color+"' name='"+uix_sc_icon_name+"']";
-						
-						
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
+
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() {  
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Icon', 'uix-shortcodes' ) ); ?> 
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					
+					var uix_sc_icon_result_color = ( uix_sc_icon_color_other != '' ) ? uix_sc_icon_color_other : uix_sc_icon_color;
+					
+					code = "[uix_icons size='"+uix_sc_icon_size+"' units='px' color='"+uix_sc_icon_result_color+"' name='"+uix_sc_icon_name+"']";
+					
+					
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
 	
-			
-		}
 	}
 	
 }

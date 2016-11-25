@@ -303,85 +303,81 @@ $form_js_vars = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args
 if ( $sid == -1 && is_admin() ) {
 	$currentScreen = get_current_screen();
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-	  	  
-		if ( is_admin()) {
+ 
+ 		/* List Item - Register clone vars ( step 1) */
+		UixSCFormCore::reg_clone_vars( 'uix_sc_team_grid_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_avatar', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_name', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_position', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_intro', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon', $form_html, 'toggle-row' ) );
+ 
+		
+		?>
+		<script type="text/javascript">
+		( function($) {
+		'use strict';
+			$( function() { 
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Team Grid', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
+				/*--**************** Custom shortcode begin ****************-- */
+					/* List Item ( step 2)  */
+					var list_num = 30;
+					
 			
-			echo UixSCFormCore::add_form( $cid, $sid, $form_id, '', '', 'active_btn' );
-			?>
-			<script type="text/javascript">
-			( function($) {
-			'use strict';
-				$( function() {  
-					/* List Item ( step 1) */
-					var dynamic_append_box_content = '<?php echo UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_avatar', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_name', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_position', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_intro', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon', $form_html, 'toggle-row' ); ?>';
-
-					<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Team Grid', 'uix-shortcodes' ) ); ?>					
-					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
-					/*--**************** Custom shortcode begin ****************-- */
-						/* List Item ( step 2)  */
-						var list_num = 30;
+					var show_list_item = '';
+					for ( var i=0; i<=list_num; i++ ){
 						
-				
-						var show_list_item = '';
-						for ( var i=0; i<=list_num; i++ ){
+						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
+							_avatar = $( _uid+'uix_sc_team_grid_listitem_avatar' ).val(),
+							_name = $( _uid+'uix_sc_team_grid_listitem_name' ).val(),
+							_position = $( _uid+'uix_sc_team_grid_listitem_position' ).val(),
+							_desc = $( _uid+'uix_sc_team_grid_listitem_intro' ).val(),
+							_social_url_1 = $( _uid+'uix_sc_team_grid_listitem_toggle_1_url' ).val(),
+							_social_icon_1 = $( _uid+'uix_sc_team_grid_listitem_toggle_1_icon' ).val(),
+							_social_url_2 = $( _uid+'uix_sc_team_grid_listitem_toggle_2_url' ).val(),
+							_social_icon_2 = $( _uid+'uix_sc_team_grid_listitem_toggle_2_icon' ).val(),
+							_social_url_3 = $( _uid+'uix_sc_team_grid_listitem_toggle_3_url' ).val(),
+							_social_icon_3 = $( _uid+'uix_sc_team_grid_listitem_toggle_3_icon' ).val();
 							
-							var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-								_avatar = $( _uid+'uix_sc_team_grid_listitem_avatar' ).val(),
-								_name = $( _uid+'uix_sc_team_grid_listitem_name' ).val(),
-								_position = $( _uid+'uix_sc_team_grid_listitem_position' ).val(),
-								_desc = $( _uid+'uix_sc_team_grid_listitem_intro' ).val(),
-								_social_url_1 = $( _uid+'uix_sc_team_grid_listitem_toggle_1_url' ).val(),
-								_social_icon_1 = $( _uid+'uix_sc_team_grid_listitem_toggle_1_icon' ).val(),
-								_social_url_2 = $( _uid+'uix_sc_team_grid_listitem_toggle_2_url' ).val(),
-								_social_icon_2 = $( _uid+'uix_sc_team_grid_listitem_toggle_2_icon' ).val(),
-								_social_url_3 = $( _uid+'uix_sc_team_grid_listitem_toggle_3_url' ).val(),
-								_social_icon_3 = $( _uid+'uix_sc_team_grid_listitem_toggle_3_icon' ).val();
-								
-								
-								
-								
-							var _item_v_avatar = ( _avatar != undefined ) ? _avatar : '',
-								_item_v_name = ( _name != undefined ) ? _name : '',
-								_item_v_position = ( _position != undefined ) ? _position : '',
-								_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
-								_item_v_s_url_1 = ( _social_url_1 != undefined ) ? _social_url_1 : '',
-								_item_v_s_icon_1 = ( _social_icon_1 != undefined ) ? _social_icon_1 : '',
-								_item_v_s_url_2 = ( _social_url_2 != undefined ) ? _social_url_2 : '',
-								_item_v_s_icon_2 = ( _social_icon_2 != undefined ) ? _social_icon_2 : '',
-								_item_v_s_url_3 = ( _social_url_3 != undefined ) ? _social_url_3 : '',
-								_item_v_s_icon_3 = ( _social_icon_3 != undefined ) ? _social_icon_3 : '';
-								
-						
 							
-							if ( _name != undefined ) {
-								show_list_item += "<br>[uix_team_item col='"+uix_sc_team_grid_listitem_col+"' name='"+uixscform_htmlencodeFormat( _item_v_name )+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
-								show_list_item += "<br>[uix_team_item_desc]"+ _item_v_desc +"[/uix_team_item_desc]";					
-								show_list_item += "<br>[/uix_team_item]";
-			
-							}
+							
+							
+						var _item_v_avatar = ( _avatar != undefined ) ? _avatar : '',
+							_item_v_name = ( _name != undefined ) ? _name : '',
+							_item_v_position = ( _position != undefined ) ? _position : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
+							_item_v_s_url_1 = ( _social_url_1 != undefined ) ? _social_url_1 : '',
+							_item_v_s_icon_1 = ( _social_icon_1 != undefined ) ? _social_icon_1 : '',
+							_item_v_s_url_2 = ( _social_url_2 != undefined ) ? _social_url_2 : '',
+							_item_v_s_icon_2 = ( _social_icon_2 != undefined ) ? _social_icon_2 : '',
+							_item_v_s_url_3 = ( _social_url_3 != undefined ) ? _social_url_3 : '',
+							_item_v_s_icon_3 = ( _social_icon_3 != undefined ) ? _social_icon_3 : '';
 							
 					
+						
+						if ( _name != undefined ) {
+							show_list_item += "<br>[uix_team_item col='"+uix_sc_team_grid_listitem_col+"' name='"+uixscform_htmlencodeFormat( _item_v_name )+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
+							show_list_item += "<br>[uix_team_item_desc]"+ _item_v_desc +"[/uix_team_item_desc]";					
+							show_list_item += "<br>[/uix_team_item]";
+		
 						}
 						
-						/* Height of grid */
-						var photobox_height = "avatarheight='"+uix_sc_team_grid_listitem_list_height+"px'";
-						if ( uix_sc_team_grid_listitem_list_height == 0 )  photobox_height = '';	
-		
-		
-			
-			
-						code = "[uix_team col='"+uix_sc_team_grid_listitem_col+"' "+photobox_height+" avatarfillet='"+uix_sc_team_grid_listitem_avatar_fillet+"%' gray='"+uix_sc_team_grid_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]";
-						
-
-					/*--**************** Custom shortcode end ****************-- */
-					<?php echo UixSCFormCore::send_after(); ?> 
-			} ) ( jQuery );
-			</script>
-	 
-			<?php
+				
+					}
+					
+					/* Height of grid */
+					var photobox_height = "avatarheight='"+uix_sc_team_grid_listitem_list_height+"px'";
+					if ( uix_sc_team_grid_listitem_list_height == 0 )  photobox_height = '';	
 	
-			
-		}
+	
+		
+		
+					code = "[uix_team col='"+uix_sc_team_grid_listitem_col+"' "+photobox_height+" avatarfillet='"+uix_sc_team_grid_listitem_avatar_fillet+"%' gray='"+uix_sc_team_grid_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]";
+					
+
+				/*--**************** Custom shortcode end ****************-- */
+				<?php echo UixSCFormCore::send_after(); ?> 
+		} ) ( jQuery );
+		</script>
+ 
+		<?php
+
 	}
 	
 }

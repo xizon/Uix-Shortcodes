@@ -57,7 +57,7 @@ class UixSCFormType_Image {
 									'.( !empty( $desc ) ? '<p class="info">'.$desc.'</p>' : '' ).' 
 									
 									
-									<input type="button" class="button uixscform-upbtn" id="trigger_id_'.$id.'" data-insert-img="'.$id.'" data-insert-preview="'.$id.'_preview" value="'.$upload_btn_text.'" />
+									<input type="button" class="button uixscform-upbtn uixscform_btn_trigger-upload" data-prop="'.( $image_prop ? 1 : 0 ).'" data-btnid="trigger_id_'.$id.'" data-closebtnid="drop_trigger_id_'.$id.'" data-insert-img="'.$id.'" data-insert-preview="'.$id.'_preview" value="'.$upload_btn_text.'" />
 									<a class="removeimg" href="javascript:" id="drop_trigger_id_'.$id.'" data-insert-img="'.$id.'" data-insert-preview="'.$id.'_preview" style="display:none">'.$remove_btn_text.'</a>
 									'.( !empty( $value ) ? '<div id="'.$id.'_preview" class="field_img_preview" style="display:block"><img src="'.$value.'" alt=""></div>' : '<div id="'.$id.'_preview" class="field_img_preview"><img src="" alt=""></div>' ).' 
 									
@@ -81,7 +81,7 @@ class UixSCFormType_Image {
 							
 								<div class="uixscform-box">
 								   
-									  <div class="radio" id="radio-selector-'.$id.'_repeat">	
+									  <div class="radio uixscform_btn_trigger-radio" data-targetid="'.$id.'_repeat">	
 										  <span data-value="no-repeat" class="active">'.__( 'No Repeat', 'uix-shortcodes' ).'</span>
 										  <span data-value="repeat" >'.__( 'Tile', 'uix-shortcodes' ).'</span>
 										  <span data-value="repeat-x" >'.__( 'Tile Horizontally', 'uix-shortcodes' ).'</span>
@@ -93,13 +93,7 @@ class UixSCFormType_Image {
 							</td>
 						</tr> 
 					'."\n";	
-				$jscode .= '
-				$( document ).uixscform_radioSelector({
-						containerID: "#radio-selector-'.$id.'_repeat",
-						targetID: "#'.$id.'_repeat"
-					});		
-						
-				'."\n";	
+				$jscode .= '';	
 				
 				/* ------------ */
 				
@@ -110,7 +104,7 @@ class UixSCFormType_Image {
 							
 								<div class="uixscform-box">
 								   
-									  <div class="radio" id="radio-selector-'.$id.'_position">	
+									  <div class="radio uixscform_btn_trigger-radio" data-targetid="'.$id.'_position">	
 										  <span data-value="left" class="active">'.__( 'Left', 'uix-shortcodes' ).'</span>
 										  <span data-value="center" >'.__( 'Center', 'uix-shortcodes' ).'</span>
 										  <span data-value="right" >'.__( 'Right', 'uix-shortcodes' ).'</span>
@@ -121,13 +115,7 @@ class UixSCFormType_Image {
 							</td>
 						</tr> 
 					'."\n";	
-				$jscode .= '
-				$( document ).uixscform_radioSelector({
-						containerID: "#radio-selector-'.$id.'_position",
-						targetID: "#'.$id.'_position"
-					});		
-						
-				'."\n";	
+				$jscode .= '';	
 				
 				/* ------------ */
 				
@@ -138,7 +126,7 @@ class UixSCFormType_Image {
 							
 								<div class="uixscform-box">
 								   
-									  <div class="radio" id="radio-selector-'.$id.'_attachment">	
+									  <div class="radio uixscform_btn_trigger-radio" data-targetid="'.$id.'_attachment">	
 										  <span data-value="scroll" class="active">'.__( 'Scroll', 'uix-shortcodes' ).'</span>
 										  <span data-value="fixed" >'.__( 'Fixed', 'uix-shortcodes' ).'</span>
 									   </div>
@@ -148,13 +136,7 @@ class UixSCFormType_Image {
 							</td>
 						</tr> 
 					'."\n";	
-				$jscode .= '
-				$( document ).uixscform_radioSelector({
-						containerID: "#radio-selector-'.$id.'_attachment",
-						targetID: "#'.$id.'_attachment"
-					});		
-						
-				'."\n";	
+				$jscode .= '';	
 				
 				/* ------------ */
 				
@@ -165,7 +147,7 @@ class UixSCFormType_Image {
 							
 								<div class="uixscform-box">
 								   
-									  <div class="radio" id="radio-selector-'.$id.'_size">	
+									  <div class="radio uixscform_btn_trigger-radio" data-targetid="'.$id.'_size">	
 									      <span data-value="cover" class="active">'.__( 'Cover', 'uix-shortcodes' ).'</span>
 									      <span data-value="auto">'.__( 'Auto', 'uix-shortcodes' ).'</span>
 										  <span data-value="contain">'.__( 'Contain', 'uix-shortcodes' ).'</span>
@@ -176,13 +158,7 @@ class UixSCFormType_Image {
 							</td>
 						</tr> 
 					'."\n";	
-				$jscode .= '
-				$( document ).uixscform_radioSelector({
-						containerID: "#radio-selector-'.$id.'_size",
-						targetID: "#'.$id.'_size"
-					});		
-						
-				'."\n";	
+				$jscode .= '';	
 				
 				/* ------------ */
 						
@@ -196,11 +172,7 @@ class UixSCFormType_Image {
                 '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
 				'.( $image_prop ? 'var '.$id.'_repeat = $( "#'.$id.'_repeat" ).val(); var '.$id.'_position = $( "#'.$id.'_position" ).val(); var '.$id.'_attachment = $( "#'.$id.'_attachment" ).val(); var '.$id.'_size = $( "#'.$id.'_size" ).val();'."\n" : '' ).'
             ';
-            $jscode .= '
-
-                /*-- Insert media  --*/
-                $( document ).uixscform_uploadMediaCustom( { '.( $image_prop ? 'prop: true,' : '' ).'btnID: "#trigger_id_'.$id.'", closebtnID: "#drop_trigger_id_'.$id.'" } );
-            ';	
+            $jscode .= '';	
                 
 
         }
