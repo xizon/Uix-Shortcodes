@@ -49,15 +49,15 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 
 	
 	$newFilePath = get_stylesheet_directory() . '/uix-shortcodes-style.css';
-
+	$org_cssname_uix_shortcodes = UixShortcodes::sc_css_file( 'name' );
+	$org_csspath_uix_shortcodes = UixShortcodes::sc_css_file();
+	
+	echo $org_cssname_uix_shortcodes;
+		
 	if ( file_exists( $newFilePath ) ) {
-		$org_cssname_uix_shortcodes = 'uix-shortcodes-style.css';
-		$org_csspath_uix_shortcodes = get_template_directory_uri() .'/'. $org_cssname_uix_shortcodes;
 		$filesystype = 'theme';
 		$filesyspath = '';
 	} else {
-		$org_cssname_uix_shortcodes = 'shortcodes.css';
-		$org_csspath_uix_shortcodes = UixShortcodes::plug_directory() .'assets/css/'. $org_cssname_uix_shortcodes;
 		$filesystype = 'plugin';
 		$filesyspath = 'assets/css/';
 	}

@@ -818,7 +818,7 @@ class UixShortcodes {
 	 * Returns .css file name of custom shortcodes 
 	 *
 	 */
-	public static function sc_css_file() {
+	public static function sc_css_file( $type = 'uri' ) {
 		
 		//default style
 		$validPath = self::plug_directory() .'assets/css/shortcodes.css';
@@ -839,16 +839,34 @@ class UixShortcodes {
 				break;
 			}
 		}	
+		WP_PLUGIN_DIR.'/'.self::get_slug().'/assets/css/shortcodes-'.$filename.'.css';
+		
+		
+		if ( self::inc_str( $validPath, $shortcodes_style ) ) {
+			if ( $type == 'dir' ) $validPath = str_replace( trailingslashit( self::plug_directory() ), trailingslashit( WP_PLUGIN_DIR.'/'.self::get_slug() ), $validPath );
+			if ( $type == 'name' ) $validPath = 'shortcodes-'.$shortcodes_style.'.css';
+		} else {
+			if ( $type == 'dir' ) $validPath = str_replace( '-'.$shortcodes_style, '', str_replace( trailingslashit( self::plug_directory() ), trailingslashit( WP_PLUGIN_DIR.'/'.self::get_slug() ), $validPath ) );
+			if ( $type == 'name' ) $validPath = 'shortcodes.css';	
+		}
 		
 	    //custom stylesheet for WP theme directory
 		if ( file_exists( $newFilePath ) ) {
 			$validPath = get_template_directory_uri() . '/uix-shortcodes-style.css';
+			if ( $type == 'dir' ) {
+				$validPath = get_template_directory() . '/uix-shortcodes-style.css';
+			}
+			if ( $type == 'name' ) {
+				$validPath = 'uix-shortcodes-style.css';
+			}
 		}
 		
 		
 		return $validPath;
 		
 	}
+	
+	
 	
 	/**
 	 * Returns .js file name of custom shortcodes script 

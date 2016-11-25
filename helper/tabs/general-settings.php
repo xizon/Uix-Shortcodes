@@ -37,7 +37,6 @@ if( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' )
 
 if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
 	
-UixShortcodes::sc_css_file();
 ?>
 
     <form name="form1" method="post" action="">
