@@ -33,6 +33,11 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+#### Version 1.1.6
+
+Fix some bugs of custom CSS admin panel.
+
+
 #### Version 1.1.5
 
 Used ajax form & improved the running speed greatly.

@@ -52,8 +52,6 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	$org_cssname_uix_shortcodes = UixShortcodes::sc_css_file( 'name' );
 	$org_csspath_uix_shortcodes = UixShortcodes::sc_css_file();
 	
-	echo $org_cssname_uix_shortcodes;
-		
 	if ( file_exists( $newFilePath ) ) {
 		$filesystype = 'theme';
 		$filesyspath = '';
