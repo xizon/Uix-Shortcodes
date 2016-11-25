@@ -21,7 +21,9 @@ class UixSCFormType_Icon {
 		$jscode_vars = '';
 		
 		$tips = ( !empty( $placeholder ) ) ? $placeholder : __( 'Select from the following list of icons: ', 'uix-shortcodes' );
-		$iconselector = 'fontawesome/font-awesome-custom.php';
+		$icontype = get_option( 'uix_sc_opt_icontype', 'fontawesome' );
+		if ( $icontype == 'fontawesome' ) $iconselector = 'fontawesome/font-awesome-custom.php';
+		if ( $icontype == 'flaticon' ) $iconselector = 'flaticon/font-flaticon-custom.php';
 		
 		if ( $type == 'icon' ) {
 			
