@@ -22,8 +22,14 @@ class UixSCFormType_Icon {
 		
 		$tips = ( !empty( $placeholder ) ) ? $placeholder : __( 'Select from the following list of icons: ', 'uix-shortcodes' );
 		$icontype = get_option( 'uix_sc_opt_icontype', 'fontawesome' );
-		if ( $icontype == 'fontawesome' ) $iconselector = 'fontawesome/font-awesome-custom.php';
-		if ( $icontype == 'flaticon' ) $iconselector = 'flaticon/font-flaticon-custom.php';
+		if ( $icontype == 'fontawesome' ) {
+			$iconselector = 'fontawesome/font-awesome-custom.php';
+			$iconprefix = 'fa fa-';
+		}
+		if ( $icontype == 'flaticon' ) {
+			$iconselector = 'flaticon/font-flaticon-custom.php';
+			$iconprefix = 'flaticon flaticon-';
+		}
 		
 		if ( $type == 'icon' ) {
 			
@@ -46,10 +52,10 @@ class UixSCFormType_Icon {
 						    <div class="uixscform-box">
 						
 								<div class="uixscform-icon-selector-label">'.$tips.'<span class="uixscform-loading icon"></span></div>
-								<div class="uixscform-icon-selector-icon-preview" id="'.$id.'-preview">'.( ( !empty( $value ) ) ? '<i class="fa fa-'.$value.'"></i>' : '' ).'</div>
+								<div class="uixscform-icon-selector-icon-preview" id="'.$id.'-preview">'.( ( !empty( $value ) ) ? '<i class="'.$iconprefix.''.$value.'"></i>' : '' ).'</div>
 								'.( !empty( $id ) ? '<input type="hidden" id="'.$id.'" name="'.$name.'" class="uixscform-normal uixscform-input-text" value="'.$value.'">' : '' ).'
 								'.$iconlist.'
-							
+								
 							   '.( !empty( $desc ) ? '<p class="info">'.$desc.'</p>' : '' ).' 
 							   
 							</div>
