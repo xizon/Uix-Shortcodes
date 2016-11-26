@@ -65,7 +65,7 @@ $args =
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
 									'clone_class'               => [ 
 										array(
-											'id'        => 'dynamic-row-uix_sc_listitem_imgURL',
+											'id'        => 'dynamic-row-uix_sc_accordion_listitem_title',
 											'type'      => 'text'
 										), 
 										array(

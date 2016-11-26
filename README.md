@@ -39,6 +39,9 @@ Fix some bugs of custom CSS admin panel.
 
 Older version themes are functionally compatible.
 
+Fixed some bugs.
+
+
 
 #### === 1.1.5 ===
 

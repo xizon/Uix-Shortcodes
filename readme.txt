@@ -102,7 +102,7 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 * Fix some bugs of custom CSS admin panel.
 * Older version themes are functionally compatible.
-
+* Fixed some bugs.
 
 = 1.1.5 =
 
