@@ -66,7 +66,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					if ( is_admin()) {
 						    
 							//Register clone vars
-							wp_register_script( 'uixscform-functions-handle', UixSCFormCore::plug_directory() .'js/uixscform.debug.js' );
+							wp_register_script( 'uixscform-functions-handle', self::plug_directory() .'js/uixscform.debug.js' );
 							
 							//Add Icons
 							wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.css', array(), '4.5.0', 'all');
