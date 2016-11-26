@@ -33,12 +33,14 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
-#### Version 1.1.6
+#### === 1.1.6 ===
 
 Fix some bugs of custom CSS admin panel.
 
+Older version themes are functionally compatible.
 
-#### Version 1.1.5
+
+#### === 1.1.5 ===
 
 Used ajax form & improved the running speed greatly.
 
@@ -55,19 +57,19 @@ Improved the main CSS file.
 Fix some bugs.
 
 
-#### Version 1.1.2
+#### === 1.1.2 ===
 
 Fixed some bugs.
 
 
-#### Version 1.1.1
+#### === 1.1.1 ===
 
 Optimized the selector of buttons.
 
 Enhanced editor and forms compatibility.
 
 
-#### Version 1.1.0
+#### === 1.1.0 ===
 
 Optimized for tablet display.
 
@@ -80,7 +82,7 @@ Use WordPress Color Picker API to replace tinyColorPicker.
 Fixed some bugs for parallax and container shortcodes
 
 
-#### Version 1.0.5
+#### === 1.0.5 ===
 
 Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you can choose the shortcodes style you want.
 
@@ -91,31 +93,31 @@ Optimized shortcodes script.
 Fixed a minor error in color picker.
 
 
-#### Version 1.0.4
+#### === 1.0.4 ===
 
 Added "Author Card" shortcode.
 
 Core CSS optimization.
  
 
-#### Version 1.0.3
+#### === 1.0.3 ===
 
 Fix custom CSS function in the WordPress administration screens.
 
-#### Version 1.0.2
+#### === 1.0.2 ===
 
 Fix parse error for tinyColorPicker sometimes.
 
 Other optimizations.
 
 
-#### Version 1.0.1
+#### === 1.0.1 ===
 
 Optimized HTML format of textarea
 
 
 
-#### Version 1.0.0
+#### === 1.0.0 ===
 
 Initial Release.
 

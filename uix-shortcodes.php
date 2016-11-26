@@ -965,6 +965,21 @@ class UixShortcodes {
 	}
 	
 	
+	/*
+	 * Older version themes are functionally compatible
+	 *
+	 *
+	 */
+	public static function comments_open( $open, $post_id ) {
+
+		$post = get_post( $post_id );
+		if ( 'page' == $post->post_type ) {
+			//do something
+		}
+		return $open;
+		
+	}
+	
 	
 }
 
