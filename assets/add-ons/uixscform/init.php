@@ -69,16 +69,16 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 							wp_register_script( 'uixscform-functions-handle', self::plug_directory() .'js/uixscform.debug.js' );
 							
 							//Add Icons
-							wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.css', array(), '4.5.0', 'all');
-							wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.css', array(), '1.0', 'all');
+							wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.css', array(), '4.5.0', 'all' );
+							wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.css', array(), '1.0', 'all' );
 									
 							//UixSCForm
-							wp_enqueue_style( 'uixscform', self::plug_directory() .'css/uixscform.css', false,'1.0.0', 'all');
+							wp_enqueue_style( 'uixscform', self::plug_directory() .'css/uixscform.css', false,'1.0.0', 'all' );
 							if( $currentScreen->base === "customize" ) {
 								wp_enqueue_style( 'uixscform-depth', self::plug_directory() .'css/uixscform.depth.css', false, '1.0.0', 'all' );
 							}	
-							wp_enqueue_script( 'uixscform', self::plug_directory() .'js/uixscform.js', array( 'jquery' ), '1.0.0' );
-							wp_enqueue_script( 'uixscform-functions', self::plug_directory() .'js/uixscform.functions.js', array( 'jquery' ), '1.0.0' );
+							wp_enqueue_script( 'uixscform', self::plug_directory() .'js/uixscform.js', array( 'jquery' ), '1.0.0', true );
+							wp_enqueue_script( 'uixscform-functions', self::plug_directory() .'js/uixscform.functions.js', array( 'jquery' ), '1.0.0', true );
 					
 							//Colorpicker
 							wp_enqueue_style( 'wp-color-picker' );

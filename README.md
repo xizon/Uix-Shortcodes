@@ -33,6 +33,12 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+#### === 1.1.7 ===
+
+Fixed some bugs.
+
+
+
 #### === 1.1.6 ===
 
 Fix some bugs of custom CSS admin panel.

@@ -186,17 +186,17 @@ jQuery( document ).ready( function() {
 			 
 			 jQuery( document ).on( 'click', '.' + cur_removeClass, function( e ) {
 				e.preventDefault();
-				var btnINdex = parseFloat( jQuery( this ).attr( 'data-index' ) );
+	
+				var  cur_thisBTN = jQuery( this ).closest( 'table' ).find( '.uixscform_btn_trigger-clone' ),
+				     btnINdex = parseFloat( cur_thisBTN.attr( 'data-index' ) );
 		
-				if ( btnINdex <= 1 ) {
-					alert( "keep at least one." );
-				} else {
-					jQuery( this ).parent().parent().remove();
-					jQuery( this ).attr( 'data-index',btnINdex-1 );							
+				if ( btnINdex > 1 ) {
+					jQuery( this ).closest( '.dynamic-addnow' ).remove();
+					cur_thisBTN.attr( 'data-index',btnINdex-1 );							
 				}
-		
-				jQuery( this ).removeClass( 'disable' );
-		
+				
+				cur_thisBTN.removeClass( 'disable' );
+				
 				
 			} );		
 

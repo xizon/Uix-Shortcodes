@@ -68,8 +68,15 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
              
             
           </tr>
-          
-          <tr class="uix-field-custom-style">
+          <?php
+		  $newFilePath = get_stylesheet_directory() . '/uix-shortcodes-style.css';
+		  if ( file_exists( $newFilePath ) ) {
+			  $stylechoose = 'style="display:none"';
+		  } else {
+			  $stylechoose = '';  
+		  }
+		  ?>
+          <tr class="uix-field-custom-style" <?php echo $stylechoose; ?>>
             <th scope="row">
               <?php _e( 'Choose The Shortcodes Style', 'uix-shortcodes' ); ?>
               
