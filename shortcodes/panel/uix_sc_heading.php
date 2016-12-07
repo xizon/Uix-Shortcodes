@@ -50,10 +50,20 @@ $args =
 			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
 			'toggle'        => array(
 			                        array(
-										'trigger_id'    => 'uix_sc_heading_style-grand-fill-yellow', /* {item id}-{option id} */
-										'toggle_class'  => [ 'uix_sc_heading_fillbg_toggle_class' ]
+										'trigger_id'           => 'uix_sc_heading_style-grand-fill-yellow', /* {item id}-{option id} */
+										'toggle_class'         => [ 'uix_sc_heading_fillbg_toggle_class' ],
+										'toggle_remove_class'  => [ ]
 
 									),
+									
+			                        array(
+										'trigger_id'           => 'uix_sc_heading_style-grand', /* {item id}-{option id} */
+										'toggle_class'         => [ ],
+										'toggle_remove_class'  => [ 'uix_sc_heading_fillbg_toggle_class' ]
+
+									),	
+										
+									
 				                )	
 								
 		

@@ -36,13 +36,15 @@ $args =
 			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
 			'toggle'        => array(
 			                        array(
-										'trigger_id'    => 'uix_sc_bar_shape-circular', /* {item id}-{option id} */
-										'toggle_class'  => [ 'uix_sc_bar_circular_size_toggle_class' ]
+										'trigger_id'           => 'uix_sc_bar_shape-circular', /* {item id}-{option id} */
+										'toggle_class'         => [ 'uix_sc_bar_circular_size_toggle_class' ],
+										'toggle_remove_class'  => [ 'uix_sc_bar_square_size_toggle_class' ]
 
 									),
 			                        array(
-										'trigger_id'    => 'uix_sc_bar_shape-square', /* {item id}-{option id} */
-										'toggle_class'  => [ 'uix_sc_bar_square_size_toggle_class' ]
+										'trigger_id'           => 'uix_sc_bar_shape-square', /* {item id}-{option id} */
+										'toggle_class'         => [ 'uix_sc_bar_square_size_toggle_class' ],
+										'toggle_remove_class'  => [ 'uix_sc_bar_circular_size_toggle_class' ]
 
 									),
 						
@@ -284,7 +286,7 @@ $args =
 			'id'             => 'uix_sc_bar_title',
 			'title'          => __( 'Title', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => '',
+			'value'          => __( 'Title', 'uix-shortcodes' ),
 			'placeholder'    => '',
 			'type'           => 'text'
 		),	

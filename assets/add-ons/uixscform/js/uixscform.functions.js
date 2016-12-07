@@ -73,7 +73,7 @@ jQuery( document ).ready( function() {
 		e.preventDefault();
 		
 		var cur_targetID          = jQuery( this ).attr( "data-targetid" ),
-		    cur_linkedBtnID       = '#' + jQuery( this ).attr( "data-linked-btnid" ),
+		    cur_removeID          = jQuery( this ).attr( "data-remove" ),
 			cur_targetCloneID     = jQuery( this ).attr( "data-targetid-clone" ),
 			cur_list              = jQuery( this ).attr( "data-list" );
 			
@@ -82,22 +82,29 @@ jQuery( document ).ready( function() {
 			cur_targetID = cur_targetCloneID;
 		}
 		
+		
 		if ( cur_list == 1 ) {
 			//Dynamic elements
 			
-			jQuery( cur_targetID ).parent().parent( '.toggle-row' ).hide();
-			jQuery( cur_targetID ).parent().parent( '.toggle-row' ).find( '.uixscform-box' ).hide();
+			jQuery( cur_targetID ).parent().parent( '.toggle-row' ).show();
+			jQuery( cur_targetID ).parent().parent( '.toggle-row' ).find( '.uixscform-box' ).show();
+			
+			jQuery( cur_removeID ).parent().parent( '.toggle-row' ).hide();
+			jQuery( cur_removeID ).parent().parent( '.toggle-row' ).find( '.uixscform-box' ).hide();		
+			
 
 		} else {
-			jQuery( cur_targetID ).hide();
-			jQuery( cur_targetID ).find( 'th' ).find( 'label' ).hide();
-			jQuery( cur_targetID ).find( 'td' ).find( '.uixscform-box' ).hide();
+			
+			jQuery( cur_targetID ).show();
+			jQuery( cur_targetID ).find( 'th' ).find( 'label' ).show();
+			jQuery( cur_targetID ).find( 'td' ).find( '.uixscform-box' ).show();
+			
+			jQuery( cur_removeID ).hide();
+			jQuery( cur_removeID ).find( 'th' ).find( 'label' ).hide();
+			jQuery( cur_removeID ).find( 'td' ).find( '.uixscform-box' ).hide();
 	
 		}
 		
-		
-		//Association checkbox action
-		jQuery( document ).uixscform_toggleSwitchCheckbox( { btnID: cur_linkedBtnID } );
 		
 		
 		

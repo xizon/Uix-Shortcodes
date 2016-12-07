@@ -33,6 +33,15 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+
+#### === 1.1.8 ===
+
+Optimized switcher from back-end.
+
+WordPress 4.7 compatible.
+
+
+
 #### === 1.1.7 ===
 
 Fixed some bugs.
@@ -141,7 +150,8 @@ Initial Release.
 - WP 4.5.1
 - WP 4.5.2
 - WP 4.5.3
-- WP 4.6
+- WP 4.6.*
+- WP 4.7
 
 ###Screenshot
 
