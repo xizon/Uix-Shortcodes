@@ -88,7 +88,7 @@
 								e.preventDefault();
 								$( '.uixscform-modal-box' ).removeClass( 'active' );
 								$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
-								$( 'html' ).css( 'overflow-y', 'auto' );
+								$( 'body' ).css( 'overflow-y', 'auto' );
 							});	
 
 						},
@@ -106,7 +106,7 @@
 					$( '.uixscform-modal-mask' ).fadeIn( 'fast' );
 					$obj.addClass( 'active' );
 					$obj.find( '.content' ).animate( {scrollTop: 10 }, 100 );
-					$( 'html' ).css( 'overflow-y', 'hidden' );
+					$( 'body' ).css( 'overflow-y', 'hidden' );
 				}
 	
 				
@@ -120,7 +120,7 @@
 					$( this ).parent().removeClass( 'active' );
 					$( '.uixscform-modal-box' ).removeClass( 'active' );
 					$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
-					$( 'html' ).css( 'overflow-y', 'auto' );
+					$( 'body' ).css( 'overflow-y', 'auto' );
 				});
 				
 			} );
