@@ -78,7 +78,7 @@
  /*coordinate of wordpress*/
     display: none;
     content: '';
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,.7);
 }
 
 .uixscform-modal-box.active {

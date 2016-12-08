@@ -759,7 +759,7 @@ function uixscform_closeWin() {
 		$( function() {
 			$( '.uixscform-modal-box' ).removeClass( 'active' );
 			$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
-			$( 'body' ).css( 'overflow-y', 'auto' );
+			$( 'html' ).css( 'overflow-y', 'auto' );
 		} );
 		
 	} ) ( jQuery );
