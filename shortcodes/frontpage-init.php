@@ -153,7 +153,7 @@ function uix_sc_fun_progress_bar( $atts, $content = null ){
 					<h3 class="uix-sc-bar-title">'.$title.'</h3>
 					<div class="uix-sc-bar-desc">'.$content.'</div>
 				</div>
-				<div class="uix-sc-bar" data-percent="'.$percent.'" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'" data-icon="'.$icon_name.'">
+				<div class="uix-sc-bar" data-percent="'.$percent.'" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'" data-icon="'.UixShortcodes::output_icon_class( $icon_name ).'">
 					<span class="uix-sc-bar-percent"></span>
 					<span class="uix-sc-bar-placeholder">0</span>
 					<span class="uix-sc-bar-text"  style="color:'.$preccolor.';font-size:'.$precsize.';">'.( !empty( $icon_name )  ? '<i class="'.UixShortcodes::output_icon_class( $icon_name ).'"></i>' : ''.$percent.''.$units.'' ).'</span>
@@ -162,7 +162,7 @@ function uix_sc_fun_progress_bar( $atts, $content = null ){
 		' : '
 			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-circular" style="margin: '.$top.'px '.$right.'px '.$bottom.'px '.$left.'px;">
 				<div class="uix-sc-bar" data-percent="'.$percent.'" style="width:'.$size.';">
-					<span class="uix-sc-bar-percent" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'"  data-icon="'.$icon_name.'" style="color:'.$preccolor.';font-size:'.$precsize.';"></span>
+					<span class="uix-sc-bar-percent" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'"  data-icon="'.UixShortcodes::output_icon_class( $icon_name ).'" style="color:'.$preccolor.';font-size:'.$precsize.';"></span>
 				</div>
 				<h3 class="uix-sc-bar-title">'.$title.'</h3>
 				<div class="uix-sc-bar-desc">'.$content.'</div>

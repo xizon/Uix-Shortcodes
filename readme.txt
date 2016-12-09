@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.7
-Stable tag: 1.1.8
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 https://www.youtube.com/watch?v=DCpGXKRvz1E
 
 
-= Usage =
+= Custom Usage =
 
 You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS".
 
@@ -97,6 +97,14 @@ Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom
 
 
 == Changelog ==
+
+= 1.2.0 =
+
+* Optimized shortcodes script for front-end.
+* Fixed a minor error in prograss bar.
+* Added function to delete selected icon.
+* Removed some unnecessary attributes for shortcode.
+
 
 = 1.1.8 =
 

@@ -14,21 +14,25 @@
 	$.extend({ 
 		uix_sc_init:function () { 
 		
-		     var $window = $( window );
+			var $window      = $( window ),
+				windowWidth  = $window.width(),
+				windowHeight = $window.height();
 	
-	         //Pricing
+			 /*--  Pricing -- */
 			 $( '.uix-sc-price' ).uix_sc_initPricing();
 			 $( '.uix-sc-price-border-hover' ).uix_sc_pricingHover();
 			
 			
-			 //Filterable
+			 /*--  Filterable -- */
 			 $( '.uix-sc-filterable' ).uix_sc_filterable();
 			 
 			 
-			 //Accordion
+			 
+			 /*--  Accordion -- */
 			 $( '.uix-sc-accordion' ).uix_sc_initAccordion(); 
 			
-			 // prettyPhoto
+			
+			 /*--  prettyPhoto -- */
 			 $( "a[rel^='uix-sc-prettyPhoto']" ).prettyPhoto({
 				 animation_speed:'normal',
 				 theme:'dark_rounded',
@@ -36,7 +40,8 @@
 				 utoplay_slideshow: false
 			 });
 			 
-			 //Parallax
+			
+			 /*--  Parallax -- */
 			 parallaxInit();
 			 $window.on('resize', function() {
 			 	parallaxInit();
@@ -49,7 +54,8 @@
 			 };
 			 
 			 
-			 // Testimonials
+			
+			 /*--  Testimonials -- */
 			$( '.uix-sc-testimonials-container .flexslider' ).flexslider( {
 				namespace	      : "uix-sc-flex-",
 				animation         : 'slide',
@@ -66,39 +72,48 @@
 	
 			} ); 
 			
-			// Progress Bar
+		
+			/*--  Progress Bar -- */
 			$( '.uix-sc-bar-box-square' ).each(function() {
-				var perc  = $( '.uix-sc-bar', this).data( 'percent' ),
-				    size  = $( '.uix-sc-bar', this).data( 'size' ),
-				    linewidth  = $( '.uix-sc-bar', this).data( 'linewidth' ),
+				var perc        = $( '.uix-sc-bar', this).data( 'percent' ),
+				    size        = $( '.uix-sc-bar', this).data( 'size' ),
+				    linewidth   = $( '.uix-sc-bar', this).data( 'linewidth' ),
 					trackcolor  = $( '.uix-sc-bar', this).data( 'trackcolor' ),
-					barcolor  = $( '.uix-sc-bar', this).data( 'barcolor' ),
-					units  = $( '.uix-sc-bar', this).data( 'units' ),
-					iconName  = $( '.uix-sc-bar', this).data( 'icon' ),
-					boxheight  = $( '.uix-sc-bar-info', this).height();
+					barcolor    = $( '.uix-sc-bar', this).data( 'barcolor' ),
+					units       = $( '.uix-sc-bar', this).data( 'units' ),
+					iconName    = $( '.uix-sc-bar', this).data( 'icon' ),
+					boxheight   = $( '.uix-sc-bar-info', this).height();
 					
 				if ( boxheight > 0 ) $( this ).css( { 'height': linewidth + boxheight + 'px' } );
 				$( '.uix-sc-bar', this).css( { 'height': linewidth + 'px', 'width': '100%', 'background': trackcolor } );
-				$( '.uix-sc-bar .uix-sc-bar-percent', this).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } ).animate( { percentage: perc, width: perc + '%' }, {duration: 1000 } );
-				$( '.uix-sc-bar .uix-sc-bar-text', this).uix_sc_progress( { percentage: perc, units: units, icon: iconName } ); 
+				$( '.uix-sc-bar .uix-pb-bar-text', this).html( '' );
+				$( '.uix-sc-bar .uix-sc-bar-percent', this).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } ).animate( { percentage: perc, width: perc + '%' }, {duration: 3000 } );
+				$( '.uix-sc-bar .uix-sc-bar-text', this).uix_sc_progress( { speed: 3000, percentage: perc, units: units, icon: iconName } ); 
+				
 				
 				
 			});
 			
 			
 			$( '.uix-sc-bar-box-circular' ).each(function() {
-				var perc  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'percent' ),
-				    size  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'size' ),
-					sizeNum  = size.replace( 'px', '' ),
-				    linewidth  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'linewidth' ),
+				var perc        = $( '.uix-sc-bar', this).data( 'percent' ),
+				    size        = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'size' ),
+					sizeNum     = size.replace( 'px', '' ),
+				    linewidth   = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'linewidth' ),
 					trackcolor  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'trackcolor' ),
-					barcolor  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'barcolor' ),
-					units  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'units' ),
-					icon  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'icon' );
+					barcolor    = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'barcolor' ),
+					units       = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'units' ),
+					icon        = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'icon' ),
+					chkicon     = icon
+									.replace(/fa/g, '' )
+									.replace(/flaticon/g, '' )
+									.replace(/-/g, '' );
+							
 				
 				$( '.uix-sc-bar', this ).easyPieChart({
+					animate: 3000,
 					onStep: function(from, to, percent) { 
-					    var txtShow = ( icon != '' ) ? '<i class="fa fa-'+icon+'"></i>' : Math.round( percent ) + units;
+					    var txtShow = ( chkicon.length > 2 ) ? '<i class="'+icon+'"></i>' : Math.round( percent ) + units;
 						$( this.el ).find( '.uix-sc-bar-percent' ).html( txtShow ).css( { 'line-height': size, 'width': size } ); 
 					},
 					barColor: barcolor,
@@ -109,6 +124,7 @@
 				});
 
 			});
+
 	
 		
 			 
@@ -390,61 +406,6 @@
 
 
 
-/*! 
- *************************************
- * Number Incrementers of Progress Bar 
- *************************************
- */
-( function( $ ) {
-	$.fn.uix_sc_progress = function(options){
-
-		var settings=$.extend({
-			"percentage": 75,
-			"speed": 1000,
-			"units": '%',
-			"icon": ''
-		}
-		,options);
-		
-		this.each(function(){
-			    
-			var $el = $( this ),
-				value = settings.percentage;
-		
-			$( { percentage: 0 } ).stop(true).animate( { percentage: value }, {
-				duration : settings.speed,
-				step: function () {
-					// percentage with 1 decimal;
-					var percentageVal = parseInt( Math.round(this.percentage * 10) / 10 );
-					
-					if ( settings.icon != '' ) {
-						$el.html( '<i class="fa fa-'+settings.icon+'"></i>' );
-					} else {
-						$el.html( percentageVal + settings.units );
-					}
-					
-				}
-			}).promise().done(function () {
-				// hard set the value after animation is done to be
-				// sure the value is correct
-				if ( settings.icon != '' ) {
-					$el.html( '<i class="fa fa-'+settings.icon+'"></i>' );
-				} else {
-					$el.html( value + settings.units );
-				}			
-				
-				
-			});
-
-			
-		} );
-
-	
-  };
-} )( jQuery );
-
-
-
 
 /*! 
  *************************************
@@ -500,6 +461,64 @@
 				  
 			} ); 		
 		
+			
+		} );
+
+	
+  };
+} )( jQuery );
+
+/*! 
+ *************************************
+ * Number Incrementers of Progress Bar 
+ *************************************
+ */
+( function( $ ) {
+	$.fn.uix_sc_progress = function(options){
+
+		var settings=$.extend({
+			"percentage": 75,
+			"speed": 1000,
+			"units": '%',
+			"icon": ''
+		}
+		,options);
+		
+		this.each(function(){
+			    
+			var $el      = $( this ),
+				value    = settings.percentage,
+				chkicon  = settings.icon
+									.replace(/fa/g, '' )
+									.replace(/flaticon/g, '' )
+									.replace(/-/g, '' );
+		
+			$( { percentage: 0 } ).stop(true).animate( { percentage: value }, {
+				duration : settings.speed,
+				step: function () {
+					// percentage with 1 decimal;
+					var percentageVal = parseInt( Math.round(this.percentage * 10) / 10 );
+			
+					if ( chkicon.length > 2 ) {
+						$el.html( '<i class="'+settings.icon+'"></i>' );
+					} else {
+						$el.html( percentageVal + settings.units );
+					}
+					
+				}
+			}).promise().done(function () {
+				// hard set the value after animation is done to be
+				// sure the value is correct
+				
+				if ( chkicon.length > 2 ) {
+					$el.html( '<i class="'+settings.icon+'"></i>' );
+				} else {
+					$el.html( value + settings.units );
+				}			
+				
+				
+			});
+
 			
 		} );
 

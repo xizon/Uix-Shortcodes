@@ -1131,6 +1131,24 @@
     z-index: 559902;
 }
 
+a.uixscform-icon-clear {
+	background: #D8181C;
+    font-size: 16px;
+	margin-left: 10px;
+	color: #fff;
+	-webkit-border-radius: 100%; 
+	-moz-border-radius: 100%; 
+	border-radius: 100%; 
+	text-decoration: none;
+	font-weight: 600;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	display: none;
+}
+
 
 .uixscform-table-list .uixscform-icon-selector {
     width: 100%;

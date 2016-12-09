@@ -33,6 +33,17 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+#### === 1.2.0 ===
+
+Optimized shortcodes script for front-end.
+
+Fixed a minor error in prograss bar.
+
+Added function to delete selected icon.
+
+Removed some unnecessary attributes for shortcode.
+
+
 
 #### === 1.1.8 ===
 

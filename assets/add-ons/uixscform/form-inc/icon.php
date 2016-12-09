@@ -34,14 +34,14 @@ class UixSCFormType_Icon {
 		if ( $type == 'icon' ) {
 			
 			$social = false;
-			$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'/assets/add-ons/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector" id="icon-selector-'.$id.'"></span>';
+			$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'assets/add-ons/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector" id="icon-selector-'.$id.'"></span>';
 			if ( is_array( $default ) && !empty( $default ) ) {
 				$social = $default[ 'social' ];
 				
 				if ( $social ) $iconselector = 'fontawesome/font-awesome-social.php';
 				
 				if ( $social ) {
-					$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'/assets/add-ons/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector" id="icon-selector-'.$id.'-social"></span>';
+					$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'assets/add-ons/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector" id="icon-selector-'.$id.'-social"></span>';
 				} 
 			}
 			
@@ -53,6 +53,7 @@ class UixSCFormType_Icon {
 						
 								<div class="uixscform-icon-selector-label">'.$tips.'<span class="uixscform-loading icon"></span></div>
 								<div class="uixscform-icon-selector-icon-preview" id="'.$id.'-preview">'.( ( !empty( $value ) ) ? '<i class="'.$iconprefix.''.$value.'"></i>' : '' ).'</div>
+								<a href="javascript:" class="uixscform-icon-clear">&times;</a>
 								'.( !empty( $id ) ? '<input type="hidden" id="'.$id.'" name="'.$name.'" class="uixscform-normal uixscform-input-text" value="'.$value.'">' : '' ).'
 								'.$iconlist.'
 								

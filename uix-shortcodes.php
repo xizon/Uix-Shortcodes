@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.1.8
+ * Version:     1.2.0
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -63,9 +63,8 @@ class UixShortcodes {
 		// Easing
 		wp_enqueue_script( 'jquery-easing', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
 
-
 		// imagesloaded
-		wp_enqueue_script( 'imagesloaded', self::plug_directory() .'assets/add-ons/preload/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
+		wp_enqueue_script( 'uix-imagesloaded', self::plug_directory() .'assets/add-ons/preload/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
 
 		//Easy Pie Chart
 		wp_enqueue_script( 'easypiechart', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );

@@ -477,10 +477,11 @@ jQuery( document ).ready( function() {
 				targetID        = '#' + $this.attr( 'target-id' ),
 				previewID       = '#' + $this.attr( 'preview-id' ),
 				listContainerID = 'icon-list-' + $this.attr( 'target-id' ),
-				defaultIconName =  jQuery( targetID ).val();
+				defaultIconName =  jQuery( targetID ).val(),
+				$formContainer   = jQuery( previewID ).closest( '.uixscform-box' );
 				
 			
-			//Icon list with the jQuery AJAX method.
+			/*-- Icon list with the jQuery AJAX method. --*/
 			jQuery.ajax({
 				url       : ajaxurl,
 				type      : 'POST',
@@ -502,7 +503,7 @@ jQuery( document ).ready( function() {
 			
 			
 			
-			//Click event for icon type: Font Awesome
+			/*-- Click event for icon type: Font Awesome --*/
 			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.fontawesome', function( e ) {
 				e.preventDefault();
 				var _v = jQuery(this).find( '.fa' ).attr( 'class' );
@@ -514,10 +515,13 @@ jQuery( document ).ready( function() {
 				jQuery( targetID ).val(_v);
 				jQuery( previewID ).html( '<i class="fa fa-'+_v+'"></i>' );
 				
+				//remove button
+				$formContainer.find( '.uixscform-icon-clear' ).css( 'display', 'inline-block' );	
+				
 			});
 			
 		    
-			//Click event for icon type: Flaticon
+			/*-- Click event for icon type: Flaticon --*/
 			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.flaticon', function( e ) {
 				e.preventDefault();
 				var _v = jQuery(this).find( '.flaticon' ).attr( 'class' );
@@ -528,10 +532,23 @@ jQuery( document ).ready( function() {
 				_v = _v.replace( 'flaticon ', '' );
 				jQuery( targetID ).val( _v );
 				jQuery( previewID ).html( '<i class="flaticon '+_v+'"></i>' );
+				
+				//remove button
+				$formContainer.find( '.uixscform-icon-clear' ).css( 'display', 'inline-block' );	
 			
 			});	
 			
 			
+			/*-- Remove --*/
+			jQuery( document ).on( 'click', '.uixscform-icon-clear', function( e ) {
+				e.preventDefault();
+				
+				jQuery( this ).css( 'display', 'none' );
+				$formContainer.find( 'input' ).val( '' );
+				$formContainer.find( '.uixscform-icon-selector a' ).removeClass( 'active' );
+				$formContainer.find( '.uixscform-icon-selector-icon-preview' ).html( '' );
+				
+			});
 			
 	
  

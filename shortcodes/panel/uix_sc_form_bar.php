@@ -168,35 +168,7 @@ $args =
 		
 		),
 		
-		//------toggle begin
-		array(
-			'id'             => 'uix_sc_bar_color_toggle',
-			'title'          => '',
-			'desc'           => '',
-			'value'          => '',
-			'placeholder'    => '',
-			'type'           => 'toggle',
-			'default'        => array(
-			                        'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_bar_color_other_class' ]
-				                )
 		
-		),	
-			
-			array(
-				'id'             => 'uix_sc_bar_color_other',
-				'title'          => '',
-				'desc'           => '',
-				'value'          => '',
-				'class'          => 'toggle-row uix_sc_bar_color_other_class', /*class of toggle item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-			
-			
-			),	
 	
 	
 		array(
@@ -209,36 +181,6 @@ $args =
 			'default'        => [ '#ffffff', '#473f3f',  '#bebebe', '#dcdcdc', '#f1f1f1' ]
 		
 		),
-		
-		//------toggle begin
-		array(
-			'id'             => 'uix_sc_bar_trackcolor_toggle',
-			'title'          => '',
-			'desc'           => '',
-			'value'          => '',
-			'placeholder'    => '',
-			'type'           => 'toggle',
-			'default'        => array(
-			                        'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_bar_trackcolor_other_class' ]
-				                )
-		
-		),	
-			
-			array(
-				'id'             => 'uix_sc_bar_trackcolor_other',
-				'title'          => '',
-				'desc'           => '',
-				'value'          => '',
-				'class'          => 'toggle-row uix_sc_bar_trackcolor_other_class', /*class of toggle item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-			
-			
-			),	
 	
 	
 		array(
@@ -252,35 +194,6 @@ $args =
 		
 		),
 		
-		//------toggle begin
-		array(
-			'id'             => 'uix_sc_bar_percent_icon_color_toggle',
-			'title'          => '',
-			'desc'           => '',
-			'value'          => '',
-			'placeholder'    => '',
-			'type'           => 'toggle',
-			'default'        => array(
-			                        'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_bar_percent_icon_color_other_class' ]
-				                )
-		
-		),	
-			
-			array(
-				'id'             => 'uix_sc_bar_percent_icon_color_other',
-				'title'          => '',
-				'desc'           => '',
-				'value'          => '',
-				'class'          => 'toggle-row uix_sc_bar_percent_icon_color_other_class', /*class of toggle item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-			
-			
-			),	
 	
 	    array(
 			'id'             => 'uix_sc_bar_title',
@@ -365,10 +278,10 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Add a Progress Bar', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					
-					var  uix_sc_bar_result_color = ( uix_sc_bar_color_other != '' ) ? uix_sc_bar_color_other : uix_sc_bar_color,
-						 uix_sc_bar_result_trackcolor = ( uix_sc_bar_trackcolor_other != '' ) ? uix_sc_bar_trackcolor_other : uix_sc_bar_trackcolor,
-						 uix_sc_bar_result_percent_icon_color = ( uix_sc_bar_percent_icon_color_other != '' ) ? uix_sc_bar_percent_icon_color_other : uix_sc_bar_percent_icon_color,
-						 uix_sc_bar_result_icon = ( uix_sc_bar_icon_toggle === true ) ? "icon='"+uix_sc_bar_icon+"'" : '',
+					var  uix_sc_bar_result_color = uix_sc_bar_color,
+						 uix_sc_bar_result_trackcolor = uix_sc_bar_trackcolor,
+						 uix_sc_bar_result_percent_icon_color = uix_sc_bar_percent_icon_color,
+						 uix_sc_bar_result_icon = ( uix_sc_bar_icon != '' ) ? "icon='"+uix_sc_bar_icon+"'" : '',
 						 uix_sc_bar_result_size = ( uix_sc_bar_shape == 'circular' ) ? "size='"+uix_sc_bar_circular_size+"px'" : "size='"+uix_sc_bar_square_size+""+uix_sc_bar_square_size_units+"'";
 					
 		
