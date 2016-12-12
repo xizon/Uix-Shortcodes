@@ -12,12 +12,24 @@ $hidden_field_name = 'submit_hidden_uix_sc_customcss';
 // If they did, this hidden field will be set to 'Y'
 if( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' ) {
 	
-	// Save the posted value in the database
-	update_option( 'uix_sc_opt_cssnewcode', wp_unslash( $_POST[ 'uix_sc_opt_cssnewcode' ] ) );
+	// Just security thingy that wordpress offers us
+	check_admin_referer( 'uix_sc_customcss' );
+	
+	// Only if administrator
+	if( current_user_can( 'administrator' ) ) {
+		
+		
+		update_option( 'uix_sc_opt_cssnewcode', wp_unslash( $_POST[ 'uix_sc_opt_cssnewcode' ] ) );
+	
+	
+		// Put a "settings saved" message on the screen
+		echo '<div class="updated"><p><strong>'.__('Settings saved.', 'uix-shortcodes' ).'</strong></p></div>';
 
-
-	// Put a "settings saved" message on the screen
-	echo '<div class="updated"><p><strong>'.__('Settings saved.', 'uix-shortcodes' ).'</strong></p></div>';
+	
+	}
+	
+	
+	
 
  }  
 
@@ -27,9 +39,10 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 
 ?>
 
-    <form name="form1" method="post" action="">
+    <form method="post" action="">
     
         <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
+        <?php wp_nonce_field( 'uix_sc_customcss' ); ?>
         
         <h4><?php _e( 'You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original <code>.css</code> files.', 'uix-shortcodes' ); ?></h4>
             
@@ -60,9 +73,6 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 		$filesyspath = 'assets/css/';
 	}
 		
-
-	
-	wp_nonce_field( 'css-filesystem-nonce' );
 	
 	// capture output from WP_Filesystem
 	ob_start();

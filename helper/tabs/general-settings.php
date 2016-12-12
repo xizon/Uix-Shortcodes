@@ -39,7 +39,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
 	
 ?>
 
-    <form name="form1" method="post" action="">
+    <form method="post" action="">
     
         <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
         <?php wp_nonce_field( 'uix_sc_generalsettings' ); ?>
