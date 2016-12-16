@@ -27,7 +27,8 @@
 	15. Media
 	16. Progress Bar
 	17. Google Map     
-	18. Author Card                         
+	18. Author Card  
+	19. Buttons                         
 
 
 */
@@ -37,6 +38,8 @@
    1. Basic                               
 /* ====================================================== */
 .uix-sc-row {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 
 }
 
@@ -56,6 +59,7 @@
 	.uix-sc-col-1, .uix-sc-col-2, .uix-sc-col-3, .uix-sc-col-4, .uix-sc-col-5, .uix-sc-col-6, .uix-sc-col-7, .uix-sc-col-8, .uix-sc-col-9, .uix-sc-col-10, .uix-sc-col-11, .uix-sc-col-12 {
 		float: left;
 		margin: 0 3% 0 0;
+
 	}
 	
 	.uix-sc-col-1.uix-sc-col-last, .uix-sc-col-2.uix-sc-col-last, .uix-sc-col-3.uix-sc-col-last, .uix-sc-col-4.uix-sc-col-last, .uix-sc-col-5.uix-sc-col-last, .uix-sc-col-6.uix-sc-col-last, .uix-sc-col-7.uix-sc-col-last, .uix-sc-col-8.uix-sc-col-last, .uix-sc-col-9.uix-sc-col-last, .uix-sc-col-10.uix-sc-col-last, .uix-sc-col-11.uix-sc-col-last, .uix-sc-col-12 {
@@ -728,162 +732,6 @@ img.uix-sc-img,
 	}
 }
 
-/**
- *  Button
- * ----------------------------------------------------------------------------
- */
- 
-.uix-sc-btn{
-	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0);
-	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0);
-	box-shadow: 0 1px 5px rgba(0,0,0,0);
-	border: none;
-	color: #fff;
-	-webkit-border-radius: 50px; 
-	-moz-border-radius: 50px; 
-	border-radius: 50px;
-	padding: .8em 3em;
-	letter-spacing: normal;
-	text-transform: none;
-	font-size: 12px;
-	position: relative;
-	margin: 1em 1em .7em 0;
-	display: inline-block;	
-}
-
-	.uix-sc-btn .fa{
-		margin: 0 .4em 0 0;
-	
-	}
-
-	.uix-sc-btn-small{
-		padding: .6em 1.7em;
-		
-	}
-	
-	.uix-sc-btn-small-small{
-		padding: .3em 1.2em;
-	}
-	
-
-	/*green*/
-	.uix-sc-btn-green{
-		background: #a2bf2f;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-green:hover{
-		background: #77a43a;
-		color: #fff;
-	}
-	
-	/*yellow*/
-	.uix-sc-btn-yellow{
-		background: #d59a3e;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-yellow:hover{
-		background: #b37f2d;
-		color: #fff;
-	}
-	
-	/*black*/
-	.uix-sc-btn-black{
-		background: #473f3f;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-black:hover{
-		background: #090909;
-		color: #fff;
-	}
-	
-	/*gray*/
-	.uix-sc-btn-gray{
-		background: #bebebe;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-gray:hover{
-		background: #979797;
-		color: #fff;
-	}
-
-
-	/*red*/
-	.uix-sc-btn-red{
-		background: #DD514C;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-red:hover{
-		background: #B53335;
-		color: #fff;
-	}
-	
-	/*blue*/
-	.uix-sc-btn-blue{
-		background: #4BB1CF;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-blue:hover{
-		background: #36A4C0;
-		color: #fff;
-	}
-	
-	/*darkblue*/
-	.uix-sc-btn-darkblue{
-		background: #0E90D2;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-darkblue:hover{
-		background: #3780C4;
-		color: #fff;
-	}
-	
-	/*cadetblue*/
-	.uix-sc-btn-cadetblue{
-		background: #5F9EA0;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-cadetblue:hover{
-		background: #509088;
-		color: #fff;
-	}
-	
-	/*pink*/
-	.uix-sc-btn-pink{
-		background: #FA9ADF;
-		color: #fff;
-	
-	}
-	
-	
-	.uix-sc-btn-pink:hover{
-		background: #D27FC5;
-		color: #fff;
-	}
-	
 
 
 /* ====================================================== 
@@ -2284,4 +2132,163 @@ img.uix-sc-img,
 		color: #fff;
 		margin-left: .5em;
 	}	  
+		  
+		  
+/**
+ *  19. Button
+ * ----------------------------------------------------------------------------
+ */
+ 
+.uix-sc-btn{
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0);
+	box-shadow: 0 1px 5px rgba(0,0,0,0);
+	border: none;
+	color: #fff;
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px; 
+	border-radius: 50px;
+	padding: .8em 3em;
+	letter-spacing: normal;
+	text-transform: none;
+	font-size: 12px;
+	position: relative;
+	margin: 1em 1em .7em 0;
+	display: inline-block;	
+}
+
+	.uix-sc-btn .fa{
+		margin: 0 .4em 0 0;
+	
+	}
+
+	.uix-sc-btn-small{
+		padding: .6em 1.7em;
+		
+	}
+	
+	.uix-sc-btn-small-small{
+		padding: .3em 1.2em;
+	}
+	
+
+	/*green*/
+	.uix-sc-btn-green{
+		background: #a2bf2f;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-green:hover{
+		background: #77a43a;
+		color: #fff;
+	}
+	
+	/*yellow*/
+	.uix-sc-btn-yellow{
+		background: #d59a3e;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-yellow:hover{
+		background: #b37f2d;
+		color: #fff;
+	}
+	
+	/*black*/
+	.uix-sc-btn-black{
+		background: #473f3f;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-black:hover{
+		background: #090909;
+		color: #fff;
+	}
+	
+	/*gray*/
+	.uix-sc-btn-gray{
+		background: #bebebe;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-gray:hover{
+		background: #979797;
+		color: #fff;
+	}
+
+
+	/*red*/
+	.uix-sc-btn-red{
+		background: #DD514C;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-red:hover{
+		background: #B53335;
+		color: #fff;
+	}
+	
+	/*blue*/
+	.uix-sc-btn-blue{
+		background: #4BB1CF;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-blue:hover{
+		background: #36A4C0;
+		color: #fff;
+	}
+	
+	/*darkblue*/
+	.uix-sc-btn-darkblue{
+		background: #0E90D2;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-darkblue:hover{
+		background: #3780C4;
+		color: #fff;
+	}
+	
+	/*cadetblue*/
+	.uix-sc-btn-cadetblue{
+		background: #5F9EA0;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-cadetblue:hover{
+		background: #509088;
+		color: #fff;
+	}
+	
+	/*pink*/
+	.uix-sc-btn-pink{
+		background: #FA9ADF;
+		color: #fff;
+	
+	}
+	
+	
+	.uix-sc-btn-pink:hover{
+		background: #D27FC5;
+		color: #fff;
+	}
+	
+	  
 		  
