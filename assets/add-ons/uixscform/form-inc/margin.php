@@ -58,7 +58,7 @@ class UixSCFormType_Margin {
 							</div>
 						</td>
 					</tr> 
-				'."\n";	
+				'.PHP_EOL;	
 
 			$jscode_vars = '
 				'.( !empty( $id ) ? '
@@ -66,7 +66,7 @@ class UixSCFormType_Margin {
 				    '.$id.'_right = $( "#'.$id.'_right" ).val(),
 					'.$id.'_bottom = $( "#'.$id.'_bottom" ).val(),
 					'.$id.'_left = $( "#'.$id.'_left" ).val();
-				'."\n" : '' ).'
+				'.PHP_EOL : '' ).'
 			';	
 
 		}

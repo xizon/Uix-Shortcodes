@@ -70,7 +70,7 @@ class UixSCFormType_Image {
                             
                         </td>
                     </tr> 
-                '."\n";	
+                '.PHP_EOL;	
                 
 				
 			if ( $image_prop ) {	
@@ -92,7 +92,7 @@ class UixSCFormType_Image {
 								</div>
 							</td>
 						</tr> 
-					'."\n";	
+					'.PHP_EOL;	
 				$jscode .= '';	
 				
 				/* ------------ */
@@ -114,7 +114,7 @@ class UixSCFormType_Image {
 								</div>
 							</td>
 						</tr> 
-					'."\n";	
+					'.PHP_EOL;	
 				$jscode .= '';	
 				
 				/* ------------ */
@@ -135,7 +135,7 @@ class UixSCFormType_Image {
 								</div>
 							</td>
 						</tr> 
-					'."\n";	
+					'.PHP_EOL;	
 				$jscode .= '';	
 				
 				/* ------------ */
@@ -157,7 +157,7 @@ class UixSCFormType_Image {
 								</div>
 							</td>
 						</tr> 
-					'."\n";	
+					'.PHP_EOL;	
 				$jscode .= '';	
 				
 				/* ------------ */
@@ -169,8 +169,8 @@ class UixSCFormType_Image {
                 
 				
             $jscode_vars = '
-                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
-				'.( $image_prop ? 'var '.$id.'_repeat = $( "#'.$id.'_repeat" ).val(); var '.$id.'_position = $( "#'.$id.'_position" ).val(); var '.$id.'_attachment = $( "#'.$id.'_attachment" ).val(); var '.$id.'_size = $( "#'.$id.'_size" ).val();'."\n" : '' ).'
+                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'.PHP_EOL : '' ).'
+				'.( $image_prop ? 'var '.$id.'_repeat = $( "#'.$id.'_repeat" ).val(); var '.$id.'_position = $( "#'.$id.'_position" ).val(); var '.$id.'_attachment = $( "#'.$id.'_attachment" ).val(); var '.$id.'_size = $( "#'.$id.'_size" ).val();'.PHP_EOL : '' ).'
             ';
             $jscode .= '';	
                 

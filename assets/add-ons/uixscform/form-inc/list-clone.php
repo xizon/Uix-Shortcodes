@@ -98,7 +98,7 @@ class UixSCFormType_ListClone {
                 </tr>  
 				
 
-                '."\n";	
+                '.PHP_EOL;	
 				
 			 
             $jscode = '';	

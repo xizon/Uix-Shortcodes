@@ -50,10 +50,10 @@ class UixSCFormType_Textarea {
 							</div>
 						</td>
 					</tr> 
-				'."\n";	
+				'.PHP_EOL;	
 				
 			$jscode_vars = '
-				'.( !empty( $id ) ? ''.$the_var.''."\n" : '' ).'
+				'.( !empty( $id ) ? ''.$the_var.''.PHP_EOL : '' ).'
 			';	
 			
 			$jscode = '';

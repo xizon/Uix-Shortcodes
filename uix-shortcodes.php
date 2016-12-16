@@ -19,7 +19,8 @@
 class UixShortcodes {
 
 	const PREFIX   = 'uix';
-	const CUSPAGE = 'uix-shortcodes-custom-submenu-page';
+	const CUSPAGE  = 'uix-shortcodes-custom-submenu-page';
+	const MAPAPI   = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 	
 	/**
@@ -632,9 +633,7 @@ class UixShortcodes {
 	 */
 	public static function str_compression( $str ) {
 		
-		$str = str_replace( "\r\n", '', $str );
-		$str = str_replace( "\n", '', $str );
-		$str = str_replace( "\t", '', $str ); 
+		$str = str_replace( PHP_EOL, '', $str );
 		$str = str_replace( "\t", '', $str );
 		
 		$pattern = array(

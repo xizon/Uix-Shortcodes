@@ -567,7 +567,7 @@ function uixscform_formatTextarea( str ) {
 	//checking for "undefined" in replace-regexp
 	if ( str != undefined ) {
 		str = uixscform_getHTML( str );
-		str = str.toString().replace(/\s/g," ").replace(/\"/g,"&quot;").replace(/\'/g,"&apos;");
+		str = str.toString().replace(/\s/g," ").replace(/\"/g, '&quot;' ).replace(/\'/g, '&apos;' );
 		str = str.replace(/<br\w*\/*>/g,"[br]");
 		str = str.replace(/<p>/g,"[p]");
 		str = str.replace(/<\/p>/g,"[\/p]");
@@ -689,21 +689,51 @@ function uixscform_colorTran( value ) {
  */	
 function uixscform_html_listTran( str, type ) {
 	
+	
 	var newStr = '';
-	if ( str != undefined ) {
+	
+	if ( str != '' ) {
 		
-		//checking for "undefined" in replace-regexp
-		str = str.toString().replace(/(\r)*\n/g,"[/li][li]").replace(/<br>/g,"[/li][li]");
+		if ( str != undefined ) {
+			str = str.toString().replace(/(\r)*\n/g, '<br>' );
+		}
+
+
+		if ( str.indexOf( '<br>' ) >= 0 ) {
+
+			var strarr = str.split( '<br>' );	
+
+			for (var i = 0, len = strarr.length; i < len; i++ ) {
+				
+				if ( strarr[i].indexOf( '['+type+']' ) >= 0 ) {
+					newStr += strarr[i];
+				} else {
+					newStr += '['+type+']'+strarr[i]+'[/'+type+']';
+				}
+				
+				
+			}	
+
+		} else {
+            
+			if ( str.indexOf( '['+type+']' ) >= 0 ) {
+				newStr = str;
+			} else {
+				newStr = '['+type+']'+str+'[/'+type+']';
+			}
+			
+		}	
 		
-		newStr = '[li]'+str+'[/li]';
-		newStr = newStr.replace('[li][/li]','');
-		newStr = '['+type+']'+newStr+'[/'+type+']';
 	}
 	
-	if ( str == '' ) newStr = '';
+	newStr = newStr.replace(/\[li\]\[\/li\]/g, '' );
+
 	return newStr;
-        
+	
 };
+
+
+
 
 /*! 
  * ************************************
@@ -730,7 +760,7 @@ function uixscform_htmlEncode( s ) {
  */	
 function uixscform_insertToTextarea( s ) {
       return (typeof s != "string") ? s :  
-          s.replace(/<br>/g, "\n");  
+          s.replace(/<br\s*[\/]?>/gi, '\n' );
 };
 
 

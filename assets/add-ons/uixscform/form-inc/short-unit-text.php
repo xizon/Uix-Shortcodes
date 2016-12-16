@@ -32,7 +32,7 @@ class UixSCFormType_ShortUnitsText {
                 foreach ( $default[ 'units' ] as $units_value ) {
 					
 					( $i == 1 ) ? $active = ' class="active"' : $active = '' ;
-                    $unitslist .= '<span '.$active.' data-value="'.$units_value.'">'.$units_value.'</span>'."\n";	
+                    $unitslist .= '<span '.$active.' data-value="'.$units_value.'">'.$units_value.'</span>'.PHP_EOL;	
 					
 					$i++;
                 }	
@@ -60,12 +60,12 @@ class UixSCFormType_ShortUnitsText {
                             
                         </td>
                     </tr> 
-                '."\n";	
+                '.PHP_EOL;	
                 
 				
             $jscode_vars = '
-                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
-				'.( !empty( $unitsid ) ? 'var '.$unitsid.' = $( "#'.$unitsid.'" ).val();'."\n" : '' ).'
+                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'.PHP_EOL : '' ).'
+				'.( !empty( $unitsid ) ? 'var '.$unitsid.' = $( "#'.$unitsid.'" ).val();'.PHP_EOL : '' ).'
             ';		
 			
             $jscode = '';

@@ -532,7 +532,7 @@ if ( $sid == -1 && is_admin() ) {
 						_vhtml_1 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_one_currency+uix_sc_pricing_col3_one_price+"[/uix_pricing_item_price]";
 						_vhtml_1 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_one_desc+"[/uix_pricing_item_desc]";
 						_vhtml_1 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_one_btn_label+"[/uix_pricing_item_button]";		
-						_vhtml_1 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_one_features, 'ul' )+"[/uix_pricing_item_detail]";					
+						_vhtml_1 += "<br>[uix_pricing_item_detail][ul]"+uixscform_html_listTran( uix_sc_pricing_col3_one_features, 'li' )+"[/ul][/uix_pricing_item_detail]";					
 						_vhtml_1 += "<br>[/uix_pricing_item]<br>";
 						
 						_vhtml_2 += "[uix_pricing_item target='"+_p_btn_target_2+"' class='"+_p_class_2+"' url='"+uix_sc_pricing_col3_two_btn_link+"' period='"+uix_sc_pricing_col3_two_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_two_btn_color )+"' imcolor='"+uix_sc_pricing_col3_two_emphasis_color+"' col='3']";
@@ -540,7 +540,7 @@ if ( $sid == -1 && is_admin() ) {
 						_vhtml_2 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_two_currency+uix_sc_pricing_col3_two_price+"[/uix_pricing_item_price]";
 						_vhtml_2 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_two_desc+"[/uix_pricing_item_desc]";
 						_vhtml_2 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_two_btn_label+"[/uix_pricing_item_button]";		
-						_vhtml_2 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_two_features, 'ul' )+"[/uix_pricing_item_detail]";					
+						_vhtml_2 += "<br>[uix_pricing_item_detail][ul]"+uixscform_html_listTran( uix_sc_pricing_col3_two_features, 'li' )+"[/ul][/uix_pricing_item_detail]";					
 						_vhtml_2 += "<br>[/uix_pricing_item]<br>";
 						
 						_vhtml_3 += "[uix_pricing_item target='"+_p_btn_target_3+"' class='"+_p_class_3+"' url='"+uix_sc_pricing_col3_three_btn_link+"' period='"+uix_sc_pricing_col3_three_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col3_three_btn_color )+"' imcolor='"+uix_sc_pricing_col3_three_emphasis_color+"' col='3' last='1']";
@@ -548,7 +548,7 @@ if ( $sid == -1 && is_admin() ) {
 						_vhtml_3 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col3_three_currency+uix_sc_pricing_col3_three_price+"[/uix_pricing_item_price]";
 						_vhtml_3 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col3_three_desc+"[/uix_pricing_item_desc]";
 						_vhtml_3 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col3_three_btn_label+"[/uix_pricing_item_button]";		
-						_vhtml_3 += "<br>[uix_pricing_item_detail]"+uixscform_html_listTran( uix_sc_pricing_col3_three_features, 'ul' )+"[/uix_pricing_item_detail]";					
+						_vhtml_3 += "<br>[uix_pricing_item_detail][ul]"+uixscform_html_listTran( uix_sc_pricing_col3_three_features, 'li' )+"[/ul][/uix_pricing_item_detail]";					
 						_vhtml_3 += "<br>[/uix_pricing_item]<br>";
 						
 						

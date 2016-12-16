@@ -249,9 +249,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 */
 		public static function str_compression( $str ) {
 			
-			$str = str_replace( "\r\n", '', $str );
-			$str = str_replace( "\n", '', $str );
-			$str = str_replace( "\t", '', $str ); 
+			$str = str_replace( PHP_EOL, '', $str );
 			$str = str_replace( "\t", '', $str );
 			
 			$pattern = array(
@@ -649,13 +647,13 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 								$before = '
 								 '.self::form_before( $content_id, $section_row, $config_id ).'
 									<table class="uixscform-table">
-								'."\n";
+								'.PHP_EOL;
 								
 								
 								$after = '
 									</table>
 								 '.self::form_after().'
-								'."\n";
+								'.PHP_EOL;
 			
 				
 						}
@@ -674,14 +672,14 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 												</th>
 											</tr> 
 											
-								'."\n";
+								'.PHP_EOL;
 								
 								
 								$after = '
 										</table>
 									</div><!-- /.uixscform-table-cols-wrapper-->
 								 
-								'."\n";
+								'.PHP_EOL;
 							
 							
 						}
@@ -699,14 +697,14 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 												</th>
 											</tr> 
 											
-								'."\n";
+								'.PHP_EOL;
 								
 								
 								$after = '
 										</table>
 									</div><!-- /.uixscform-table-cols-wrapper-->
 								 
-								'."\n";
+								'.PHP_EOL;
 							
 						}
 						
@@ -723,14 +721,14 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 												</th>
 											</tr> 
 											
-								'."\n";
+								'.PHP_EOL;
 								
 								
 								$after = '
 										</table>
 									</div><!-- /.uixscform-table-cols-wrapper-->
 								 
-								'."\n";
+								'.PHP_EOL;
 								
 						}
 				

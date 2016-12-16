@@ -61,12 +61,12 @@ class UixSCFormType_Slider {
                             
                         </td>
                     </tr> 
-                '."\n";	
+                '.PHP_EOL;	
                 
 				
             $jscode_vars = '
-				'.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'."\n" : '' ).'
-				'.( !empty( $units_id ) ? 'var '.$units_id.' = $( "#'.$units_id.'" ).val();'."\n" : '' ).'
+				'.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).val();'.PHP_EOL : '' ).'
+				'.( !empty( $units_id ) ? 'var '.$units_id.' = $( "#'.$units_id.'" ).val();'.PHP_EOL : '' ).'
             ';		
 		
             

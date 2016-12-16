@@ -215,8 +215,8 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 	 ), $atts ) );
 	 
 	 
-	 $before = wp_specialchars_decode( $before )."\n";
-	 $after = wp_specialchars_decode( $after )."\n";
+	 $before = wp_specialchars_decode( $before ).PHP_EOL;
+	 $after = wp_specialchars_decode( $after ).PHP_EOL;
 	 
 	 $return_string = '';
 	query_posts( array( 
@@ -245,7 +245,7 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 				   str_replace( '[uix_recent_posts_thumbnail]', $post_thumbnail,
 				   UixShortcodes::decode( $content )
 				   ))))))))
-				   ."\n";
+				   .PHP_EOL;
 	
 	
 		 
@@ -1466,7 +1466,7 @@ function uix_sc_fun_map( $atts, $content = null ) {
 	
 	
 	//Enqueue google api
-	wp_enqueue_script( 'googleapis', '//maps.googleapis.com/maps/api/js?key=AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk', false, '2.0', true );
+	wp_enqueue_script( 'googleapis', '//maps.googleapis.com/maps/api/js?key='.UixShortcodes::MAPAPI, false, '2.0', true );
 
    $return_string = $out;
 	

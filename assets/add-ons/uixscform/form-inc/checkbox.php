@@ -99,10 +99,10 @@ class UixSCFormType_Checkbox {
                             </div>
                         </td>
                     </tr> 
-                '."\n";	
+                '.PHP_EOL;	
                 
             $jscode_vars = '
-                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).is( ":checked" );'."\n" : '' ).'
+                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).is( ":checked" );'.PHP_EOL : '' ).'
                 
             ';						
                 
