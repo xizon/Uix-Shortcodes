@@ -33,6 +33,14 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+#### === 1.2.1 ===
+
+Optimized core stylesheets for front-end.
+
+Optimized form for admin panel.
+
+
+
 #### === 1.2.0 ===
 
 Optimized shortcodes script for front-end.
