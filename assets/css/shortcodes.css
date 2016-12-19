@@ -180,8 +180,7 @@ img.uix-sc-img,
 
 
 
-.uix-sc-client:before,
-.uix-sc-client:after,
+
 .uix-sc-portfolio-tiles:before,
 .uix-sc-portfolio-tiles:after,
 .uix-sc-feature:before,
@@ -204,7 +203,7 @@ img.uix-sc-img,
   padding-top: 1.5em;
 }
 
-.uix-sc-client:after,
+
 .uix-sc-portfolio-tiles:after,
 .uix-sc-feature:after,
 .uix-sc-price:after,
