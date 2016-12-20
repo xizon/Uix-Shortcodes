@@ -176,11 +176,11 @@ jQuery( document ).ready( function() {
 		//focus
 		var srow = '.uixscform-form-container .dynamic-row';
 		jQuery( srow ).mouseenter(function() {
-			jQuery( srow ).animate( { opacity: 0.3 }, 0 );
-			jQuery( this ).animate( { opacity: 1 }, 0 );
+			jQuery( srow ).removeClass( 'hover' );
+			jQuery( this ).addClass( 'hover' );
 		});
 		jQuery( srow ).mouseleave(function() {
-			jQuery( srow ).animate( { opacity: 1 }, 0 );
+			jQuery( srow ).removeClass( 'hover' );
 		});
 		
 		//color picker

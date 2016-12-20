@@ -883,7 +883,20 @@
 
 .uixscform-form-container .dynamic-row {
     display: block;
+	-moz-transition: .1s ease-in-out; 
+	-o-transition: .1s ease-in-out;
+	-webkit-transition: .1s ease-in-out; 
+	transition: .1s ease-in-out;
+
 }
+
+.uixscform-form-container .dynamic-row.hover {
+	-webkit-box-shadow: -3px 0px 0px 0px #DC4D50;
+	-moz-box-shadow: -3px 0px 0px 0px #DC4D50;
+	box-shadow: -3px 0px 0px 0px #DC4D50;
+}
+
+
 
 .uixscform-form-container .dynamic-row .uixscform-input-text {
     margin-bottom: 12px;
