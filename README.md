@@ -39,6 +39,8 @@ Optimized core stylesheets for front-end.
 
 Optimized form for admin panel.
 
+Optimized shortcodes: Clients, Features, Container, Progress Bar, Pricing
+
 
 
 #### === 1.2.0 ===
