@@ -617,10 +617,10 @@ $args_4 =
 
 $form_html = UixSCFormCore::form_before( $cid, $sid, $form_id );
 
-$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_1, 'html', __( 'Item 1', 'uix-shortcodes' ) );
-$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_2, 'html', __( 'Item 2', 'uix-shortcodes' ) );
-$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_3, 'html', __( 'Item 3', 'uix-shortcodes' ) );
-$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_4, 'html', __( 'Item 4', 'uix-shortcodes' ) );
+$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_1, 'html', __( 'Table 1', 'uix-shortcodes' ) );
+$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_2, 'html', __( 'Table 2', 'uix-shortcodes' ) );
+$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_3, 'html', __( 'Table 3', 'uix-shortcodes' ) );
+$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_4, 'html', __( 'Table 4', 'uix-shortcodes' ) );
 
 $form_html .= UixSCFormCore::form_after();
 

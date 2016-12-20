@@ -336,8 +336,8 @@ $args_2 =
 
 $form_html = UixSCFormCore::form_before( $cid, $sid, $form_id );
 
-$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_1, 'html', __( 'Left Section', 'uix-shortcodes' ) );
-$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_2, 'html', __( 'Right Section', 'uix-shortcodes' ) );
+$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_1, 'html', __( 'Left Block', 'uix-shortcodes' ) );
+$form_html .= UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args_2, 'html', __( 'Right Block', 'uix-shortcodes' ) );
 
 $form_html .= UixSCFormCore::form_after();
 

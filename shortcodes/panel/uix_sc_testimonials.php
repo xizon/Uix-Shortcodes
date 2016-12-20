@@ -24,7 +24,7 @@ $args =
 	
 		//------list begin
 		array(
-			'id'             => 'uix_sc_testimonials_col3_list',
+			'id'             => 'uix_sc_testimonials_list',
 			'title'          => __( 'List Item', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
@@ -35,22 +35,22 @@ $args =
 									'clone_class'               => [ 
 									
 										array(
-											'id'        => 'dynamic-row-uix_sc_testimonials_col3_listitem_avatar',
+											'id'        => 'dynamic-row-uix_sc_testimonials_listitem_avatar',
 											'type'      => 'image'
 										), 
 										
 										array(
-											'id'        => 'dynamic-row-uix_sc_testimonials_col3_listitem_name',
+											'id'        => 'dynamic-row-uix_sc_testimonials_listitem_name',
 											'type'      => 'text'
 										), 										
 										
 										array(
-											'id'        => 'dynamic-row-uix_sc_testimonials_col3_listitem_position',
+											'id'        => 'dynamic-row-uix_sc_testimonials_listitem_position',
 											'type'      => 'text'
 										), 
 									
 										array(
-											'id'        => 'dynamic-row-uix_sc_testimonials_col3_listitem_intro',
+											'id'        => 'dynamic-row-uix_sc_testimonials_listitem_intro',
 											'type'      => 'textarea'
 										), 
 										
@@ -63,11 +63,11 @@ $args =
 		
 		
 			array(
-				'id'             => 'uix_sc_testimonials_col3_listitem_avatar',
+				'id'             => 'uix_sc_testimonials_listitem_avatar',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_testimonials_col3_listitem_avatar', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_testimonials_listitem_avatar', /*class of list item */
 				'placeholder'    => __( 'Avatar URL', 'uix-shortcodes' ),
 				'type'           => 'image',
 				'default'        => array(
@@ -77,32 +77,32 @@ $args =
 			
 			),	
 			array(
-				'id'             => 'uix_sc_testimonials_col3_listitem_name',
+				'id'             => 'uix_sc_testimonials_listitem_name',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => __( 'Name', 'uix-shortcodes' ),
-				'class'          => 'dynamic-row-uix_sc_testimonials_col3_listitem_name', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_testimonials_listitem_name', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'text'
 			
 			),			
 			
 			array(
-				'id'             => 'uix_sc_testimonials_col3_listitem_position',
+				'id'             => 'uix_sc_testimonials_listitem_position',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => __( 'Position', 'uix-shortcodes' ),
-				'class'          => 'dynamic-row-uix_sc_testimonials_col3_listitem_position', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_testimonials_listitem_position', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'text'
 			
 			),			
 			array(
-				'id'             => 'uix_sc_testimonials_col3_listitem_intro',
+				'id'             => 'uix_sc_testimonials_listitem_intro',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => __( 'Enter some details for the customer giving this testimonial., E.g., Thank you from the bottom of our hearts.', 'uix-shortcodes' ),
-				'class'          => 'dynamic-row-uix_sc_testimonials_col3_listitem_intro', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_testimonials_listitem_intro', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'textarea',
 				'default'        => array(
@@ -140,7 +140,7 @@ if ( $sid == -1 && is_admin() ) {
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
 		/* List Item - Register clone vars ( step 1) */
-		UixSCFormCore::reg_clone_vars( 'uix_sc_testimonials_col3_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_avatar', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_name', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_position', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_col3_listitem_intro', $form_html ) );	
+		UixSCFormCore::reg_clone_vars( 'uix_sc_testimonials_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_listitem_avatar', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_listitem_name', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_listitem_position', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_testimonials_listitem_intro', $form_html ) );	
 		
 		
 		?>
@@ -159,10 +159,10 @@ if ( $sid == -1 && is_admin() ) {
 					for ( var i=0; i<=list_num; i++ ){
 						
 						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-							_avatar = $( _uid+'uix_sc_testimonials_col3_listitem_avatar' ).val(),
-							_name = $( _uid+'uix_sc_testimonials_col3_listitem_name' ).val(),
-							_position = $( _uid+'uix_sc_testimonials_col3_listitem_position' ).val(),
-							_desc = $( _uid+'uix_sc_testimonials_col3_listitem_intro' ).val();
+							_avatar = $( _uid+'uix_sc_testimonials_listitem_avatar' ).val(),
+							_name = $( _uid+'uix_sc_testimonials_listitem_name' ).val(),
+							_position = $( _uid+'uix_sc_testimonials_listitem_position' ).val(),
+							_desc = $( _uid+'uix_sc_testimonials_listitem_intro' ).val();
 							
 							
 							
