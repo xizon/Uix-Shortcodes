@@ -44,31 +44,16 @@ $args =
 											'id'        => 'dynamic-row-uix_sc_features_col3_listitem_title',
 											'type'      => 'text'
 										), 
-										
-										array(
-											'id'        => 'dynamic-row-uix_sc_features_col3_listitem_titlecolor',
-											'type'      => 'colormap'
-										), 		
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_features_col3_listitem_desc',
 											'type'      => 'textarea'
 										),
-										array(
-											'id'        => 'dynamic-row-uix_sc_features_col3_listitem_desccolor',
-											'type'      => 'colormap'
-										), 		
-										 
 										
 										array(
 											'id'        => 'dynamic-row-uix_sc_features_col3_listitem_icon',
 											'type'      => 'icon'
-										), 	
-										
-										array(
-											'id'        => 'dynamic-row-uix_sc_features_col3_listitem_iconcolor',
-											'type'      => 'colormap'
-										), 										
+										),								
 																			
 
 									 ],
@@ -89,22 +74,6 @@ $args =
 			
 			),
 			
-			array(
-				'id'             => 'uix_sc_features_col3_listitem_titlecolor',
-				'title'          => '',
-				'desc'           => __( 'Title Color', 'uix-shortcodes' ),
-				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_features_col3_listitem_titlecolor', /*class of list item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-
-			
-			),	
-		
-			
 			
 			array(
 				'id'             => 'uix_sc_features_col3_listitem_desc',
@@ -120,20 +89,6 @@ $args =
 									)
 			
 			),
-			
-			array(
-				'id'             => 'uix_sc_features_col3_listitem_desccolor',
-				'title'          => '',
-				'desc'           => __( 'Description Color', 'uix-shortcodes' ),
-				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_features_col3_listitem_desccolor', /*class of list item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-			
-			),	
 		
 			array(
 				'id'             => 'uix_sc_features_col3_listitem_icon',
@@ -141,28 +96,15 @@ $args =
 				'desc'           => '',
 				'value'          => '',
 				'class'          => 'dynamic-row-uix_sc_features_col3_listitem_icon', /*class of list item */
-				'placeholder'    => __( 'Choose Feature Icon', 'uix-shortcodes' ),
+				'placeholder'    => '',
 				'type'           => 'icon',
 				'default'        => array(
 										'social'  => false
 									)
 			
 			),
-			
-			array(
-				'id'             => 'uix_sc_features_col3_listitem_iconcolor',
-				'title'          => '',
-				'desc'           => __( 'Icon Color', 'uix-shortcodes' ),
-				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_features_col3_listitem_iconcolor', /*class of list item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-			
-			),	
-
+		
+		
 			
 		
 		//------list end
@@ -190,7 +132,11 @@ if ( $sid == -1 && is_admin() ) {
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	
 		/* List Item - Register clone vars ( step 1) */
-		UixSCFormCore::reg_clone_vars( 'uix_sc_features_col3_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_titlecolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_desccolor', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_icon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_iconcolor', $form_html ) );
+		UixSCFormCore::reg_clone_vars( 'uix_sc_features_col3_list', 
+									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_title', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_desc', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_features_col3_listitem_icon', $form_html )
+									 );
 		
 		
 		?>
@@ -210,22 +156,16 @@ if ( $sid == -1 && is_admin() ) {
 						
 						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
 							_title = $( _uid+'uix_sc_features_col3_listitem_title' ).val(),
-							_titlecolor = $( _uid+'uix_sc_features_col3_listitem_titlecolor' ).val(),
 							_icon = $( _uid+'uix_sc_features_col3_listitem_icon' ).val(),
-							_iconcolor = $( _uid+'uix_sc_features_col3_listitem_iconcolor' ).val(),
-							_desc = $( _uid+'uix_sc_features_col3_listitem_desc' ).val(),
-							_desccolor = $( _uid+'uix_sc_features_col3_listitem_desccolor' ).val();
+							_desc = $( _uid+'uix_sc_features_col3_listitem_desc' ).val();
 							
 							
 							
 							
 							
 						var _item_v_title = ( _title != undefined ) ? _title : '',
-							_item_v_titlecolor = ( _titlecolor != undefined ) ? _titlecolor : '',
 							_item_v_icon = ( _icon != undefined ) ? _icon : '',
-							_item_v_iconcolor = ( _iconcolor != undefined ) ? _iconcolor : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
-							_item_v_desccolor = ( _desccolor != undefined ) ? _desccolor : '';
+							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
 							
 							
 						
@@ -234,7 +174,7 @@ if ( $sid == -1 && is_admin() ) {
 						
 						
 						if ( _title != undefined ) {
-							show_list_item += "<br>[uix_features_item col='3' icon='"+_item_v_icon+"' iconcolor='"+_item_v_iconcolor+"' titlecolor='"+_item_v_titlecolor+"' desccolor='"+_item_v_desccolor+"' "+lastcol+"]";
+							show_list_item += "<br>[uix_features_item col='3' icon='"+_item_v_icon+"' "+lastcol+"]";
 							show_list_item += "<br>[uix_features_item_title]"+ _item_v_title +"[/uix_features_item_title]";			
 							show_list_item += "<br>[uix_features_item_desc]"+ _item_v_desc +"[/uix_features_item_desc]";					
 							show_list_item += "<br>[/uix_features_item]";

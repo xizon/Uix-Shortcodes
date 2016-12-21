@@ -6,6 +6,32 @@
 jQuery( document ).ready( function() {
 	
 	
+    /*!
+	 *
+	 * Remove current icon from icons list
+	 * ---------------------------------------------------
+	 */
+	jQuery( document ).on( 'click', '.uixscform-icon-clear', function( e ) {
+		e.preventDefault();
+
+		var c               = jQuery( this ).closest( '.uixscform-box' ),
+			s               = c.find( 'span.icon-selector' ),
+			targetID        = '#' + s.attr( 'target-id' ),
+			chooseBtnID     = '#' + s.attr( 'target-id' ) + '-choosebtn',
+			labeltxtID      = '#' + s.attr( 'target-id' ) + '-label',
+			previewID       = '#' + s.attr( 'preview-id' );	
+		
+
+		jQuery( this ).css( 'display', 'none' );
+		c.find( 'input' ).val( '' );
+		c.find( '.uixscform-icon-selector-icon-preview' ).html( '' );
+		jQuery( chooseBtnID ).show();
+		jQuery( labeltxtID ).show();
+		jQuery( previewID ).hide();
+
+	});
+			
+	
 	/*! 
 	 * 
 	 * Buttons without tinyMCE 
@@ -208,7 +234,7 @@ jQuery( document ).ready( function() {
 			} );		
 
 		 }	
-		 
+		
 
 		
 	} );	
@@ -475,48 +501,41 @@ jQuery( document ).ready( function() {
 			    containerID     = '#' + $this.attr( 'contain-id' ),
 				iconURL         = $this.attr( 'list-url' ),
 				targetID        = '#' + $this.attr( 'target-id' ),
+				chooseBtnID     = '#' + $this.attr( 'target-id' ) + '-choosebtn',
+				labeltxtID      = '#' + $this.attr( 'target-id' ) + '-label',
 				previewID       = '#' + $this.attr( 'preview-id' ),
 				listContainerID = 'icon-list-' + $this.attr( 'target-id' ),
 				defaultIconName =  jQuery( targetID ).val(),
 				$formContainer   = jQuery( previewID ).closest( '.uixscform-box' );
 				
 			
-			/*-- Icon list with the jQuery AJAX method. --*/
-			jQuery.ajax({
-				url       : ajaxurl,
-				type      : 'POST',
-				data: {
-					action      : 'uixscform_ajax_iconlist',
-					iconName    : defaultIconName,
-					iconURL     : iconURL
-				},
-				success   : function( result ){
-					jQuery( containerID ).html( '<div id="' + listContainerID + '">' + result + '</div>' );
-					jQuery( '.uixscform-loading.icon' ).hide();
-					
-				},
-				beforeSend: function() {
-					jQuery( '.uixscform-loading.icon' ).css( 'visibility', 'visible' );
+			/*-- Icon list in new window --*/
+			jQuery( document ).on( 'click', chooseBtnID, function( e ) {
+				e.preventDefault();
+				
+				jQuery( '.uixscform-icon-selector-btn-target' ).attr( 'id', listContainerID ).show();
 
-				}
 			});
 			
-			
-			
+
 			/*-- Click event for icon type: Font Awesome --*/
 			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.fontawesome', function( e ) {
 				e.preventDefault();
 				var _v = jQuery(this).find( '.fa' ).attr( 'class' );
-				jQuery( '.b.fontawesome' ).removeClass('active');
-				jQuery( this ).addClass( 'active' );
 				
 				
 				_v = _v.replace( 'fa fa-', '' );
 				jQuery( targetID ).val(_v);
-				jQuery( previewID ).html( '<i class="fa fa-'+_v+'"></i>' );
+				jQuery( previewID ).html( '<i class="fa fa-'+_v+'"></i>' ).show().addClass( 'iconshow' );
 				
 				//remove button
-				$formContainer.find( '.uixscform-icon-clear' ).css( 'display', 'inline-block' );	
+				$formContainer.find( '.uixscform-icon-clear' ).css( 'display', 'inline-block' );
+				jQuery( chooseBtnID ).hide();
+				jQuery( labeltxtID ).hide();
+				
+				
+				//remove window
+				jQuery( '#' + listContainerID ).attr( 'id', '' ).hide();
 				
 			});
 			
@@ -525,30 +544,21 @@ jQuery( document ).ready( function() {
 			jQuery( document ).on( 'click', '#' + listContainerID + ' .b.flaticon', function( e ) {
 				e.preventDefault();
 				var _v = jQuery(this).find( '.flaticon' ).attr( 'class' );
-				jQuery( '.b.flaticon' ).removeClass( 'active' );
-				jQuery( this ).addClass( 'active' );
 				
 				
 				_v = _v.replace( 'flaticon ', '' );
 				jQuery( targetID ).val( _v );
-				jQuery( previewID ).html( '<i class="flaticon '+_v+'"></i>' );
+				jQuery( previewID ).html( '<i class="flaticon '+_v+'"></i>' ).show().addClass( 'iconshow' );
 				
 				//remove button
-				$formContainer.find( '.uixscform-icon-clear' ).css( 'display', 'inline-block' );	
+				$formContainer.find( '.uixscform-icon-clear' ).css( 'display', 'inline-block' );
+				jQuery( chooseBtnID ).hide();
+				jQuery( labeltxtID ).hide();
+				
+				//remove window
+				jQuery( '#' + listContainerID ).attr( 'id', '' ).hide();
 			
 			});	
-			
-			
-			/*-- Remove --*/
-			jQuery( document ).on( 'click', '.uixscform-icon-clear', function( e ) {
-				e.preventDefault();
-				
-				jQuery( this ).css( 'display', 'none' );
-				$formContainer.find( 'input' ).val( '' );
-				$formContainer.find( '.uixscform-icon-selector a' ).removeClass( 'active' );
-				$formContainer.find( '.uixscform-icon-selector-icon-preview' ).html( '' );
-				
-			});
 			
 	
  
@@ -797,16 +807,22 @@ function uixscform_insertCodes( content, conid ) {
 
 /*! 
  * ************************************
- * Close the form window
+ * Close the core window
  *************************************
  */	
 function uixscform_closeWin() {
 	( function( $ ) {
 	"use strict";
 		$( function() {
+			
+			//remove modal
 			$( '.uixscform-modal-box' ).removeClass( 'active' );
 			$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
 			$( 'html' ).css( 'overflow-y', 'auto' );
+			
+			//remove icon list window
+			$( '.uixscform-icon-selector-btn-target' ).attr( 'id', '' ).hide();		
+
 		} );
 		
 	} ) ( jQuery );

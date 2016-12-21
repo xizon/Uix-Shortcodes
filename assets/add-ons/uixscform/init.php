@@ -28,6 +28,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
 			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ) );
 			add_action( 'admin_init', array( __CLASS__, 'load_form_core' ) );
+			add_action( 'admin_footer', array( __CLASS__, 'icon_selector_win' ) );
 			add_filter( 'mce_css', array( __CLASS__, 'mce_css' ) );
 			add_action( 'wp_ajax_nopriv_uixscform_ajax_sections', array( __CLASS__, 'load_uixscform_ajax_sections' ) );
 			add_action( 'wp_ajax_uixscform_ajax_sections', array( __CLASS__, 'load_uixscform_ajax_sections' ) );
@@ -194,13 +195,65 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			}	 
 		 }
 		
-		
+
 	
 		/*
 		 * ========================================================================================================================================
 		 * ========================================================================================================================================
 		 */			
 	
+		/*
+		 * Print icon selector
+		 *
+		 */
+		 public static function icon_selector_win() {
+			 
+			  //Check if screen ID
+			  $currentScreen = get_current_screen();
+			  
+			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
+	
+				 echo '<div class="uixscform-icon-selector-btn-target" id="">';
+				 require_once ( dirname( __FILE__ ) . '/'.self::icon_attr( 'selector' ) );
+				 echo '</div>';
+				  
+			  }
+
+		 }
+		
+		
+		/*
+		 * Returns icon attributes
+		 *
+		 */
+		 public static function icon_attr( $type = 'prefix' ) {
+			 
+			$icontype = get_option( 'uix_sc_opt_icontype', 'fontawesome' );
+			 
+			if ( $type == 'prefix' ) {
+				if ( $icontype == 'fontawesome' ) {
+					return 'fa fa-';
+				}
+				if ( $icontype == 'flaticon' ) {
+					return 'flaticon flaticon-';
+				}
+				
+			}
+			 
+			if ( $type == 'selector' ) {
+				if ( $icontype == 'fontawesome' ) {
+					return 'fontawesome/font-awesome-custom.php';
+				}
+				if ( $icontype == 'flaticon' ) {
+					return 'flaticon/font-flaticon-custom.php';
+				}
+				
+			}
+			 
+
+			 
+		 }
+		
 		
 		/*
 		 * Register clone vars

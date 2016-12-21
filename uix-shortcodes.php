@@ -211,12 +211,9 @@ class UixShortcodes {
 			case 'code':
 				$newname = 'uix_sc_form_code';
 				break;	
-			case 'client-3-col':
-				$newname = 'uix_sc_form_client_col3';
-				break;	
-			case 'client-4-col':
-				$newname = 'uix_sc_form_client_col4';
-				break;			
+			case 'client':
+				$newname = 'uix_sc_form_client';
+				break;		
 			case 'button':
 				$newname = 'uix_sc_form_button';
 				break;		

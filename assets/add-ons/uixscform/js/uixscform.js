@@ -86,10 +86,20 @@
 							//Close
 							$( '.uixscform-modal-box .close-uixscform-modal' ).on( 'click', function( e ) {
 								e.preventDefault();
+								
+								//remove modal
 								$( '.uixscform-modal-box' ).removeClass( 'active' );
 								$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
 								$( 'html' ).css( 'overflow-y', 'auto' );
+								
+								//remove icon list window
+								$( '.uixscform-icon-selector-btn-target' ).attr( 'id', '' ).hide();	
+								
 							});	
+							
+							// stuff here
+							return false;			
+							
 
 						},
 						error: function(){
@@ -117,10 +127,16 @@
 				//Close
 				$( '.uixscform-modal-box .close-uixscform-modal' ).on( 'click', function( e ) {
 					e.preventDefault();
+					
+					//remove modal
 					$( this ).parent().removeClass( 'active' );
 					$( '.uixscform-modal-box' ).removeClass( 'active' );
 					$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
 					$( 'html' ).css( 'overflow-y', 'auto' );
+					
+					//remove icon list window
+					$( '.uixscform-icon-selector-btn-target' ).attr( 'id', '' ).hide();		
+					
 				});
 				
 			} );

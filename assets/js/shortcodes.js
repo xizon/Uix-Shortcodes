@@ -86,7 +86,7 @@
 					
 				if ( boxheight > 0 ) $( this ).css( { 'height': linewidth + boxheight + 'px' } );
 				$( '.uix-sc-bar', this).css( { 'height': linewidth + 'px', 'width': '100%', 'background': trackcolor } );
-				$( '.uix-sc-bar .uix-pb-bar-text', this).html( '' );
+				$( '.uix-sc-bar .uix-sc-bar-text', this).html( '' );
 				$( '.uix-sc-bar .uix-sc-bar-percent', this).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } ).animate( { percentage: perc, width: perc + '%' }, {duration: 3000 } );
 				$( '.uix-sc-bar .uix-sc-bar-text', this).uix_sc_progress( { speed: 3000, percentage: perc, units: units, icon: iconName } ); 
 				

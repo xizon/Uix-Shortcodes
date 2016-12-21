@@ -66,7 +66,7 @@ $args =
 		
 		array(
 			'id'             => 'uix_sc_icon_name',
-			'title'          => __( 'Icon&apos;s Name', 'uix-shortcodes' ),
+			'title'          => __( 'Icon', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
 			'placeholder'    => '',

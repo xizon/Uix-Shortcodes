@@ -2157,7 +2157,7 @@ img.uix-sc-img,
    18. Author Card        
 /* ====================================================== */	
 
-.uix-pb-container-fullwidth .uix-sc-authorcard-wrapper {
+.uix-sc-container-fullwidth .uix-sc-authorcard-wrapper {
 	padding: 2em;
 }
 

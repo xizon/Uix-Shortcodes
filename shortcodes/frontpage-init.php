@@ -1074,11 +1074,8 @@ add_shortcode( 'uix_features', 'uix_sc_fun_features_wrapper' );
 
 //-----
 function uix_sc_fun_features_item( $atts, $content = null ){
-	extract( shortcode_atts( array( 
-		  'titlecolor' => '',
+	extract( shortcode_atts( array(
 		  'icon' => '',
-          'iconcolor' => '',
-		  'desccolor' => '',
 		  'col' => 3,
 		  'last' => 0
 	 ), $atts ) );
@@ -1089,9 +1086,9 @@ function uix_sc_fun_features_item( $atts, $content = null ){
    if ( $col == 2 ) {
 	   
 	 
-		$content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature-title" '.( !empty( $titlecolor ) ? 'style="color:'.$titlecolor.'"' : '' ).'><span class="uix-sc-feature-icon-side"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class( $icon ) : 'fa fa-check' ).'" '.( !empty( $iconcolor ) ? 'style="border-color:'.$iconcolor.';color:'.$iconcolor.'"' : '' ).'></i></span>',
+		$content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature-title"><span class="uix-sc-feature-icon-side"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class( $icon ) : 'fa fa-check' ).'"></i></span>',
 				   str_replace( '[/uix_features_item_title]', '</h3>',
-				   str_replace( '[uix_features_item_desc]', '<div class="uix-sc-feature-desc uix-sc-feature-desc-singlerow" '.( !empty( $desccolor ) ? 'style="color:'.$desccolor.'"' : '' ).'>',
+				   str_replace( '[uix_features_item_desc]', '<div class="uix-sc-feature-desc uix-sc-feature-desc-singlerow">',
 				   str_replace( '[/uix_features_item_desc]', '</div>',
 			   $content
 			   ) ) ) ); 
@@ -1107,9 +1104,9 @@ function uix_sc_fun_features_item( $atts, $content = null ){
    
    if ( $col == 3 ) {
 	   
-		$content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature-title" '.( !empty( $titlecolor ) ? 'style="color:'.$titlecolor.'"' : '' ).'>',
+		$content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature-title">',
 				   str_replace( '[/uix_features_item_title]', '</h3>',
-				   str_replace( '[uix_features_item_desc]', '<div class="uix-sc-feature-desc" '.( !empty( $desccolor ) ? 'style="color:'.$desccolor.'"' : '' ).'>',
+				   str_replace( '[uix_features_item_desc]', '<div class="uix-sc-feature-desc">',
 				   str_replace( '[/uix_features_item_desc]', '</div>',
 			   $content
 			   ) ) ) ); 
@@ -1118,7 +1115,7 @@ function uix_sc_fun_features_item( $atts, $content = null ){
 	   $return_string = '
 		<div class="uix-sc-col-4 '.$col_last.'">
 			<div class="uix-sc-feature-li">
-				  <p class="uix-sc-feature-icon"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class( $icon ) : 'fa fa-check' ).'" '.( !empty( $iconcolor ) ? 'style="border-color:'.$iconcolor.';color:'.$iconcolor.'"' : '' ).'></i></p>
+				  <p class="uix-sc-feature-icon"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class( $icon ) : 'fa fa-check' ).'"></i></p>
 				  '.$content.'
 			 </div>
 		</div>          
@@ -1143,9 +1140,7 @@ function uix_sc_fun_client_wrapper( $atts, $content = null ){
 
    $return_string = '
    <div class="uix-sc-client uix-sc-tc">
-       <div class="uix-sc-row">
-            '.$content.'
-       </div>
+        '.$content.'
     </div><!-- /.uix-sc-client -->                                   
    ';
    
@@ -1163,10 +1158,7 @@ function uix_sc_fun_client_item( $atts, $content = null ){
 		  'last' => 0
 	 ), $atts ) );
 	 
-	 $col_last = ( $last == 1 ) ? 'uix-sc-col-last' : '';
-	
-   if ( $col == 3 ) $gridclass = 'uix-sc-col-4';
-   if ( $col == 4 ) $gridclass = 'uix-sc-col-3';
+
 
     $desc = str_replace( '[uix_client_item_desc]', '',
                str_replace( '[/uix_client_item_desc]', '',
@@ -1174,15 +1166,13 @@ function uix_sc_fun_client_item( $atts, $content = null ){
            ) ); 
        
    
-   $return_string = '
-        <div class="'.$gridclass.' '.$col_last.'">
-            <div class="uix-sc-client-li">
-                <p class="uix-sc-img">
-                   <img src="'.$logo.'" alt="">
-                </p>
-                '.$desc.'	
-            </div>																	                                                    
-        </div>	      
+   $return_string = ' 
+		<div class="uix-sc-client-li uix-sc-client-li-'.$col.'">
+			<p class="uix-sc-img">
+			   <img src="'.$logo.'" alt="">
+			</p>
+			'.$desc.'	
+		</div>																	                                                          
    ';
   
   

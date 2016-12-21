@@ -149,10 +149,10 @@
 -------------------------------------------------------------- */
 .uixscform-loading {
     background: url(../images/loading.gif) no-repeat;
-    display: block;
     width: 18px;
     height: 15px;
     margin: 8px 0;
+	display: none;
 }
 
 .uixscform-loading.icon {
@@ -1108,46 +1108,123 @@
 
 /* Icons Selector
 -------------------------------------------------------------- */
-.uixscform-icon-selector-label:before {
-    display: table;
-    content: "";
-    line-height: 0;
+
+.uixscform-icon-selector-preview-wrapper {
+	position: relative;
+	z-index: 559902;	
 }
 
-.uixscform-icon-selector-label:before {
-    clear: left;
+.uixscform-icon-selector-btn,
+.uixscform-icon-selector-icon-preview {
+	display: inline-block;
+	-webkit-border-radius: 100%; 
+	-moz-border-radius: 100%; 
+	border-radius: 100%;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	background: rgba(233, 179, 48, 1);
+    -webkit-box-shadow: 2.5px 4.33px 16px 0px rgba(233, 179, 48, .31);
+    -moz-box-shadow: 2.5px 4.33px 16px 0px rgba(233, 179, 48, .31);
+    box-shadow: 2.5px 4.33px 16px 0px rgba(233, 179, 48, .31);
+	position: relative;
+	z-index: 1;
+	margin-bottom: 10px;
+}
+
+.uixscform-icon-selector-btn i,
+.uixscform-icon-selector-icon-preview i {
+	font-size: 13px !important;
+	color: #fff !important;
+}
+
+
+.uixscform-icon-selector-btn:hover,
+.uixscform-icon-selector-icon-preview:hover{
+	background: rgba(218, 165, 32, 1);
+}
+
+.uixscform-icon-selector-icon-preview {
+	display: none;
+}
+
+.uixscform-icon-selector-btn-target {
+    position: fixed;
+    top: 50%;
+    z-index: 100049;
+    /*coordinate of wordpress*/
+    width: calc( 1080px - 8px );
+    height: 75vh;
+    background: #fff;
+    left: calc( (100% - 1000px)/2 );
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;	
+	display: none;
+}
+
+
+@media all and (min-width: 1200px) {
+    .uixscform-icon-selector-btn-target{
+        width: calc( 1080px - 8px );
+        left: calc( (100% - 1080px)/2 );
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .uixscform-icon-selector-btn-target {
+        width: calc( 930px - 8px );
+        left: calc( (100% - 930px)/2 );
+    }
+}
+
+@media all and (max-width: 768px) {
+    .uixscform-icon-selector-btn-target {
+        width: calc( 550px - 16px );
+        left: calc( (100% - 550px)/2 );
+    }
+}
+
+@media all and (max-width: 480px) {
+    .uixscform-icon-selector-btn-target {
+        width: calc( 90% - 16px );
+        left: 5%;
+    }
 }
 
 .uixscform-icon-selector-label {
     line-height: 25px;
-    float: left;
     display: inline-block;
     font-weight: bold;
     font-style: italic;
+	position: absolute;
+	z-index: 559902;
+	left: 40px;
+	top:  0;
 }
 
-.uixscform-icon-selector-icon-preview {
-    font-size: 20px;
-    color: #333;
-    float: left;
-    margin-left: 10px;
-}
 
 .uixscform-icon-selector {
-    width: 780px;
-    height: 105px;
+    width: calc( 98% - 20px );
+    height: calc( 98% - 80px );
     overflow: hidden;
     position: relative;
-    margin: 4px 0;
-    float: left;
+    margin: 20px 0;
     overflow-y: auto;
     z-index: 559902;
+	padding: 20px;
 }
 
 a.uixscform-icon-clear {
+	position: absolute;
+	left: 18px;
+	top: -6px;
 	background: #D8181C;
     font-size: 16px;
-	margin-left: 10px;
 	color: #fff;
 	-webkit-border-radius: 100%; 
 	-moz-border-radius: 100%; 
@@ -1160,6 +1237,7 @@ a.uixscform-icon-clear {
 	text-align: center;
 	line-height: 15px;
 	display: none;
+	z-index: 2;
 }
 
 
@@ -1172,14 +1250,14 @@ a.uixscform-icon-clear {
     height: 50px !important;
 }
 
-.uixscform-icon-selector a.b {
-    margin: 2px;
+.uixscform-icon-selector span.b {
+    margin: 3px;
     display: inline-block;
     text-align: center;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 12px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
     border: 1px solid #ECECEC;
     color: #909090;
     -moz-transition: .2s ease-in-out;
@@ -1187,49 +1265,46 @@ a.uixscform-icon-clear {
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
     outline: none;
+	cursor: pointer;
 }
 
-.uixscform-icon-selector a.b i {
+.uixscform-icon-selector span.b i {
     margin: 0 !important;
-    line-height: 20px !important;
-    font-size: 12px !important;
+    line-height: 32px !important;
+    font-size: 16px !important;
     color: #909090 !important;
 }
 
-.uixscform-icon-selector-icon-preview i {
-    font-size: 20px !important;
-    color: #333 !important;
-}
 
 .uixscform-icon-selector strong {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: #333;
     margin: 8px 0;
+	font-weight: 600;
 }
 
-.uixscform-icon-selector a.b:hover {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -o-transform: scale(2);
-    -ms-transform: scale(2);
-    transform: scale(2);
-    color: #000;
-    border-color: transparent;
+.uixscform-icon-selector span.b:hover {
+	border-color: #000 !important;
 }
 
-.uixscform-icon-selector a.b.active,
-.uixscform-icon-selector a.b.im.active {
+.uixscform-icon-selector span.b:hover i {
+    color: #000 !important;
+}
+
+
+.uixscform-icon-selector span.b.active,
+.uixscform-icon-selector span.b.im.active {
     border-color: #333;
     color: #000;
 }
 
-.uixscform-icon-selector a.b.im {
+.uixscform-icon-selector span.b.im {
     color: #333;
     border-color: #BBB;
 }
 
-.uixscform-icon-selector a.b.im:hover {
+.uixscform-icon-selector span.b.im:hover {
     border-color: #333;
     color: #000;
 }
@@ -1676,15 +1751,6 @@ a.uixscform-icon-clear {
     }
 	
 
-	/* Icons Selector
-	-------------------------------------------------------------- */
-    .uixscform-icon-selector {
-        width: 615px;
-    }
-	
-    .uixscform-table-list .uixscform-icon-selector {
-        width: 100%;
-    }
 }
 
 @media all and (max-width: 768px) {
@@ -1808,16 +1874,7 @@ a.uixscform-icon-clear {
         width: 275px;
     }
 		
-		
-	/* Icons Selector
-	-------------------------------------------------------------- */
-    .uixscform-icon-selector {
-        width: 265px;
-    }
-	
-    .uixscform-table-list .uixscform-icon-selector {
-        width: calc( 100% - 25px );
-    }
+
 	
 }
 
@@ -1886,16 +1943,6 @@ a.uixscform-icon-clear {
     .uixscform-table-col-3 .uixscform-table-list tr th,
 	.uixscform-table-col-4 .uixscform-table-list tr th {
         font-size: 12px;
-    }
-	
-	/* Icons Selector
-	-------------------------------------------------------------- */
-    .uixscform-icon-selector {
-        width: 265px;
-    }
-	
-    .uixscform-table-list .uixscform-icon-selector {
-        width: 100%;
     }
 	
 

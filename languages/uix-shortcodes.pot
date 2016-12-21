@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Fri Dec 09 2016 15:13:09 GMT+0800 (CST)\n"
+"POT-Revision-Date: Thu Dec 22 2016 02:15:57 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,42 +42,42 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:273 ../uix-shortcodes.php:385 ../uix-shortcodes.php:386
+#: ../uix-shortcodes.php:271 ../uix-shortcodes.php:383 ../uix-shortcodes.php:384
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:274 ../helper/settings.php:102
+#: ../uix-shortcodes.php:272 ../helper/settings.php:116
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:372 ../helper/settings.php:83
+#: ../uix-shortcodes.php:370 ../helper/settings.php:97
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: ../uix-shortcodes.php:373 ../shortcodes/editor/tinymce-plugin-lang.php:16
+#: ../uix-shortcodes.php:371 ../shortcodes/editor/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: ../uix-shortcodes.php:393 ../uix-shortcodes.php:394
+#: ../uix-shortcodes.php:391 ../uix-shortcodes.php:392
 msgid "Custom CSS"
 msgstr ""
 
-#: ../uix-shortcodes.php:401 ../uix-shortcodes.php:402
+#: ../uix-shortcodes.php:399 ../uix-shortcodes.php:400
 msgid "Helper"
 msgstr ""
 
-#: ../uix-shortcodes.php:741
+#: ../uix-shortcodes.php:737
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/init.php:483
+#: ../assets/add-ons/uixscform/init.php:534
 msgid "Cancel"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/init.php:483
+#: ../assets/add-ons/uixscform/init.php:534
 msgid "Save"
 msgstr ""
 
@@ -89,8 +89,9 @@ msgstr ""
 msgid "Add Custom Color"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/icon.php:23
-msgid "Select from the following list of icons: "
+#: ../assets/add-ons/uixscform/form-inc/icon.php:23 ../assets/add-
+#: ons/uixscform/form-inc/icon.php:59
+msgid "Choose Icon"
 msgstr ""
 
 #: ../assets/add-ons/uixscform/form-inc/image.php:79
@@ -165,23 +166,23 @@ msgstr ""
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../helper/settings.php:97
+#: ../helper/settings.php:111
 msgid "About"
 msgstr ""
 
-#: ../helper/settings.php:107
+#: ../helper/settings.php:121
 msgid "Documentation"
 msgstr ""
 
-#: ../helper/settings.php:113
+#: ../helper/settings.php:127
 msgid "Credits"
 msgstr ""
 
-#: ../helper/settings.php:118
+#: ../helper/settings.php:132
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: ../helper/settings.php:123
+#: ../helper/settings.php:137
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
@@ -274,26 +275,26 @@ msgstr ""
 msgid "Flaticon"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:20 ../helper/tabs/general-settings.php:29
+#: ../helper/tabs/custom-css.php:26 ../helper/tabs/general-settings.php:29
 msgid "Settings saved."
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:34
+#: ../helper/tabs/custom-css.php:47
 msgid ""
 "You can overview the original styles to overwrite it. It will be on creating "
 "new styles to your website, without modifying original <code>.css</code> "
 "files."
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:39
+#: ../helper/tabs/custom-css.php:52
 msgid "Paste your CSS code"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:80 ../helper/tabs/custom-css.php:117
+#: ../helper/tabs/custom-css.php:99 ../helper/tabs/custom-css.php:136
 msgid "CSS file root directory:"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:85
+#: ../helper/tabs/custom-css.php:104
 msgid "Close"
 msgstr ""
 
@@ -1112,10 +1113,9 @@ msgstr ""
 #: /helper/tabs/documentation.php:1201 ../helper/tabs/documentation.php:1256 ..
 #: /helper/tabs/documentation.php:1369 ../helper/tabs/documentation.php:1398 ..
 #: /shortcodes/panel/uix_sc_form_accordion.php:65 ..
-#: /shortcodes/panel/uix_sc_form_client_col3.php:41 ..
-#: /shortcodes/panel/uix_sc_form_client_col4.php:41 ..
+#: /shortcodes/panel/uix_sc_form_client.php:52 ..
 #: /shortcodes/panel/uix_sc_form_features_col2.php:40 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:197 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:134 ..
 #: /shortcodes/panel/uix_sc_form_features_col3.php:40 ..
 #: /shortcodes/panel/uix_sc_form_hello.php:368 ..
 #: /shortcodes/panel/uix_sc_form_tabs.php:64 ..
@@ -1161,10 +1161,9 @@ msgstr ""
 #: /helper/tabs/documentation.php:909 ../helper/tabs/documentation.php:1025 ..
 #: /helper/tabs/documentation.php:1156 ../helper/tabs/documentation.php:1252 ..
 #: /helper/tabs/documentation.php:1394 ../shortcodes/panel/uix_sc_form_accordion.
-#: php:59 ../shortcodes/panel/uix_sc_form_client_col3.php:35 ..
-#: /shortcodes/panel/uix_sc_form_client_col4.php:35 ..
+#: php:59 ../shortcodes/panel/uix_sc_form_client.php:46 ..
 #: /shortcodes/panel/uix_sc_form_features_col2.php:34 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:191 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:128 ..
 #: /shortcodes/panel/uix_sc_form_features_col3.php:34 ..
 #: /shortcodes/panel/uix_sc_form_hello.php:362 ..
 #: /shortcodes/panel/uix_sc_form_portfolio_grid.php:97 ..
@@ -1244,6 +1243,7 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:852 ../helper/tabs/documentation.php:1228 ..
 #: /shortcodes/editor/tinymce-plugin-lang.php:36 ..
+#: /shortcodes/panel/uix_sc_form_client.php:27 ..
 #: /shortcodes/panel/uix_sc_form_portfolio_grid.php:28 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:27
 msgid "Column"
@@ -2055,11 +2055,7 @@ msgstr ""
 msgid "The description font size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2423 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:128 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:284 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:127 ..
-#: /shortcodes/panel/uix_sc_heading.php:298
+#: ../helper/tabs/documentation.php:2423 ../shortcodes/panel/uix_sc_heading.php:298
 msgid "Description Color"
 msgstr ""
 
@@ -2169,7 +2165,8 @@ msgstr ""
 #: ../helper/tabs/documentation.php:2642 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:42 ../shortcodes/panel/uix_sc_form_bar.php:129 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:52 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:128
+#: /shortcodes/panel/uix_sc_form_hello2.php:128 ..
+#: /shortcodes/panel/uix_sc_form_icon.php:69
 msgid "Icon"
 msgstr ""
 
@@ -2353,15 +2350,15 @@ msgstr ""
 msgid "Icon Types"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:81
+#: ../helper/tabs/general-settings.php:80
 msgid "Choose The Shortcodes Style"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:91
+#: ../helper/tabs/general-settings.php:90
 msgid "Elegant (default)"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:99
+#: ../helper/tabs/general-settings.php:98
 msgid "Slant"
 msgstr ""
 
@@ -2381,41 +2378,40 @@ msgid ""
 "toolbar, preceded by a separator:</h4>"
 msgstr ""
 
-#: ../helper/tabs/usage.php:30
+#: ../helper/tabs/usage.php:31
 msgid ""
-"<h4 class=\"uix-bg-custom-title\">4. There is a second way, make a new "
-"Cascading Style Sheet (CSS) document which name to <code>uix-shortcodes-"
-"style.css</code> to your templates directory <code>/wp-content/themes/{your-"
-"theme}/</code>. You can connect to your site via an FTP client, make the "
-"changes and then upload the file back to the server. Once you have created "
-"an existing CSS file (<strong>uix-shortcodes-style.css</strong>), Uix "
-"Shortcodes will use it as a default style sheet to your WordPress Theme. Of "
-"course, Uix Shortcodes's function of <strong>\"Custom CSS\"</strong> is still "
-"valid.</h4>"
+"There is a second way, make a new Cascading Style Sheet (CSS) document which "
+"name to <strong>uix-shortcodes-style.css</strong> to your templates "
+"directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-"
+"content/themes/{your-theme}/assets/css/</code> ). You can connect to your "
+"site via an FTP client, make the changes and then upload the file back to "
+"the server. Once you have created an existing CSS file, Uix Shortcodes will "
+"use it as a default style sheet to your WordPress Theme. Of course, Uix "
+"Shortcodes's function of \"Custom CSS\" is still valid."
 msgstr ""
 
-#: ../helper/tabs/usage.php:34
+#: ../helper/tabs/usage.php:35
 msgid ""
-"<h4 class=\"uix-bg-custom-title\">Note: Making a new javascrpt (.js) document "
-"which name to <code>uix-shortcodes-custom.js</code> to your templates "
-"directory. Once you have created an existing JS file (<strong>uix-shortcodes-"
-"custom.js</strong>), Uix Shortcodes will use it as a default script to your "
-"WordPress Theme.</h4>"
+"<b>Note:<b> Making a new javascrpt (.js) document which name to <strong>uix-"
+"shortcodes-custom.js</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-"
+"theme}/assets/js/</code> ). Once you have created an existing JS file, Uix "
+"Shortcodes will use it as a default script to your WordPress Theme."
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:788
+#: ../shortcodes/frontpage-init.php:789
 msgid "All"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1288
+#: ../shortcodes/frontpage-init.php:1283
 msgid "+"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1289
+#: ../shortcodes/frontpage-init.php:1284
 msgid "-"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1655
+#: ../shortcodes/frontpage-init.php:1650
 msgid "Comments are closed."
 msgstr ""
 
@@ -2477,14 +2473,6 @@ msgstr ""
 msgid "Client"
 msgstr ""
 
-#: ../shortcodes/editor/tinymce-plugin-lang.php:31
-msgid "Client 3 Column"
-msgstr ""
-
-#: ../shortcodes/editor/tinymce-plugin-lang.php:32
-msgid "Client 4 Column"
-msgstr ""
-
 #: ../shortcodes/editor/tinymce-plugin-lang.php:33
 msgid "Testimonials"
 msgstr ""
@@ -2529,8 +2517,7 @@ msgstr ""
 
 #: ../shortcodes/panel/uix_sc_container.php:79 ..
 #: /shortcodes/panel/uix_sc_form_authorcard.php:45 ..
-#: /shortcodes/panel/uix_sc_form_client_col3.php:71 ..
-#: /shortcodes/panel/uix_sc_form_client_col4.php:71 ..
+#: /shortcodes/panel/uix_sc_form_client.php:82 ..
 #: /shortcodes/panel/uix_sc_form_hello.php:126 ..
 #: /shortcodes/panel/uix_sc_form_hello.php:424 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:71 ..
@@ -2689,8 +2676,7 @@ msgstr ""
 msgid "http://"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_button.php:185 ..
-#: /shortcodes/panel/uix_sc_form_icon.php:69
+#: ../shortcodes/panel/uix_sc_form_button.php:185
 msgid "Icon&apos;s Name"
 msgstr ""
 
@@ -2706,42 +2692,22 @@ msgstr ""
 msgid "Add a Button"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_client_col3.php:26 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:26
-msgid ""
-"Note: 3 items per row. Per section insert for a maximum of "
-"<strong>3</strong>."
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_client_col3.php:68 ..
-#: /shortcodes/panel/uix_sc_form_client_col4.php:68
+#: ../shortcodes/panel/uix_sc_form_client.php:79
 msgid "Logo URL"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_client_col3.php:72 ..
-#: /shortcodes/panel/uix_sc_form_client_col4.php:72
+#: ../shortcodes/panel/uix_sc_form_client.php:83
 msgid "Upload Logo"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_client_col3.php:83 ..
-#: /shortcodes/panel/uix_sc_form_client_col4.php:83 ..
+#: ../shortcodes/panel/uix_sc_form_client.php:94 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:154 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:170
 msgid "The Introduction of this member."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_client_col3.php:134
-msgid "Insert Client (3 Column)"
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_client_col4.php:26
-msgid ""
-"Note: 4 items per row. Per section insert for a maximum of "
-"<strong>4</strong>."
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_client_col4.php:133
-msgid "Insert Client (4 Column)"
+#: ../shortcodes/panel/uix_sc_form_client.php:145
+msgid "Insert Client Lists"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_code.php:112
@@ -2801,57 +2767,43 @@ msgid "Column One Fourth"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_features_col2.php:26 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:183
+#: /shortcodes/panel/uix_sc_form_features_col2.php:120
 msgid "Note: multiple items per column"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:85 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:242 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:85
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:69 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:163 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:70
 msgid "Feature Title"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:95 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:252 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:95
-msgid "Title Color"
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:114 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:270 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:113
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:80 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:174 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:82
 msgid ""
 "Some description text here. You can add a lot of it or can choose to leave "
 "it blank."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:145 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:301 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:144 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:55 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:131
-msgid "Choose Feature Icon"
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:214
+msgid "Left Block"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:156 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:312 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:155
-msgid "Icon Color"
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:215
+msgid "Right Block"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:339
-msgid "Left Section"
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:340
-msgid "Right Section"
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:377
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:260
 msgid "Insert Features (2 Column)"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col3.php:201
+#: ../shortcodes/panel/uix_sc_form_features_col3.php:26
+msgid ""
+"Note: 3 items per row. Per section insert for a maximum of "
+"<strong>3</strong>."
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_features_col3.php:147
 msgid "Insert Features (3 Column)"
 msgstr ""
 
@@ -2953,6 +2905,11 @@ msgstr ""
 msgid "Text2 - 1"
 msgstr ""
 
+#: ../shortcodes/panel/uix_sc_form_hello2.php:55 ..
+#: /shortcodes/panel/uix_sc_form_hello2.php:131
+msgid "Choose Demo Icon"
+msgstr ""
+
 #: ../shortcodes/panel/uix_sc_form_hello2.php:80 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:155
 msgid "SLider"
@@ -2992,29 +2949,22 @@ msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_hello2.php:307 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:311 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:316 ..
-#: /shortcodes/panel/uix_sc_form_pricing_col3.php:473 ..
-#: /shortcodes/panel/uix_sc_form_pricing_col4.php:620
+#: /shortcodes/panel/uix_sc_form_hello2.php:316
 msgid "Item 1"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_hello2.php:308 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:312 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:317 ..
-#: /shortcodes/panel/uix_sc_form_pricing_col3.php:474 ..
-#: /shortcodes/panel/uix_sc_form_pricing_col4.php:621
+#: /shortcodes/panel/uix_sc_form_hello2.php:317
 msgid "Item 2"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_hello2.php:313 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:318 ..
-#: /shortcodes/panel/uix_sc_form_pricing_col3.php:475 ..
-#: /shortcodes/panel/uix_sc_form_pricing_col4.php:622
+#: /shortcodes/panel/uix_sc_form_hello2.php:318
 msgid "Item 3"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello2.php:319 ..
-#: /shortcodes/panel/uix_sc_form_pricing_col4.php:623
+#: ../shortcodes/panel/uix_sc_form_hello2.php:319
 msgid "Item 4"
 msgstr ""
 
@@ -3129,6 +3079,21 @@ msgid ""
 "Description"
 msgstr ""
 
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:473 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:620
+msgid "Table 1"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:474 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:621
+msgid "Table 2"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_pricing_col3.php:475 ..
+#: /shortcodes/panel/uix_sc_form_pricing_col4.php:622
+msgid "Table 3"
+msgstr ""
+
 #: ../shortcodes/panel/uix_sc_form_pricing_col3.php:510
 msgid "Insert Pricing Table (3 column)"
 msgstr ""
@@ -3142,6 +3107,10 @@ msgid ""
 "Feature Description<br>Another Feature Description<br>Another Feature "
 "Description<br><s>Invalid Feature Description</s><br>Another Feature "
 "Description<br>Another Feature Description"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_pricing_col4.php:623
+msgid "Table 4"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_pricing_col4.php:659

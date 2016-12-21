@@ -186,24 +186,10 @@
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_15' ),
-								menu: [
-									{
-										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_16' ),
-										classes: 'uix-widget-btn uix_sc_form_client_col3-widget_btn',
-										onclick: function() {
-										}
-									},
-									{
-										text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_17' ),
-										classes: 'uix-widget-btn uix_sc_form_client_col4-widget_btn',
-										onclick: function() {
-										}
-									},
-								
-									
-								]
-							
-							},	
+								classes: 'uix-widget-btn uix_sc_form_client-widget_btn',
+								onclick: function() {
+								}
+							},
 							
 							{
 								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_18' ),
