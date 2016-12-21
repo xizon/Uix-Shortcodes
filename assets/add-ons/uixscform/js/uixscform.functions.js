@@ -199,15 +199,54 @@ jQuery( document ).ready( function() {
 		jQuery( '.icon-selector' ).uixscform_iconSelector();
 			  
 		 
-		//focus
-		var srow = '.uixscform-form-container .dynamic-row';
+		//the form focus
+		var srow            = jQuery( cur_appendID ).parent( 'td' ).find( ' > .dynamic-row' ),
+			sroworg         = jQuery( cur_appendID ).closest( 'form' ).find( 'tr[class^="dynamic-row-"]' ),
+			sroworg_trigger = jQuery( cur_appendID ).closest( 'form' ).find( 'tr[class^="dynamic-row-"] td' );
+
+
 		jQuery( srow ).mouseenter(function() {
 			jQuery( srow ).removeClass( 'hover' );
+			jQuery( srow ).addClass( 'hoverall' );
+			jQuery( sroworg ).removeClass( 'hover' );
+			jQuery( sroworg ).addClass( 'hoverall' );		
+
 			jQuery( this ).addClass( 'hover' );
+			jQuery( this ).removeClass( 'hoverall' );
+
+			return false;
 		});
 		jQuery( srow ).mouseleave(function() {
-			jQuery( srow ).removeClass( 'hover' );
+			jQuery( srow ).removeClass( 'hoverall' );
+			jQuery( sroworg ).removeClass( 'hoverall' );	
+
+			jQuery( srow ).addClass( 'hover' );
+			jQuery( sroworg ).addClass( 'hover' );
+
+			return false;
+
 		});
+
+		//--
+		jQuery( sroworg_trigger ).mouseenter(function() {
+			jQuery( srow ).removeClass( 'hover' );
+			jQuery( srow ).addClass( 'hoverall' );		
+
+			jQuery( sroworg ).addClass( 'hover' );
+			jQuery( sroworg ).removeClass( 'hoverall' );
+
+			return false;
+		});
+		jQuery( sroworg_trigger ).mouseleave(function() {
+			jQuery( srow ).removeClass( 'hoverall' );
+			jQuery( sroworg ).removeClass( 'hoverall' );	
+
+			jQuery( srow ).addClass( 'hover' );
+			jQuery( sroworg ).addClass( 'hover' );
+
+			return false;
+		});	
+		
 		
 		//color picker
 		jQuery( '.wp-color-input' ).wpColorPicker();
