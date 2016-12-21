@@ -39,7 +39,9 @@ Optimized core stylesheets for front-end.
 
 Optimized form for admin panel.
 
-Optimized shortcodes: Clients, Features, Container, Progress Bar, Pricing
+Optimized front-end shortcodes structure.
+
+Supports custom Uix Shortcodes core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
 
 
@@ -248,12 +250,12 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/helper/img/button.jpg)
 
 
-3.You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to **"Uix Shortcodes"** in the WordPress Administration Screens, then link to a specific tab like **"Custom CSS"**.
+3.You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS".
 
 
-4.There is a second way, make a new Cascading Style Sheet (CSS) document which name to `uix-shortcodes-style.css` to your **templates directory** (`/wp-content/themes/{your-theme}/`). You can connect to your site via an **FTP** client, make the changes and then upload the file back to the server. Once you have created an existing CSS file (**uix-shortcodes-style.css**), Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of **"Custom CSS"** is still valid.
+> There is a second way, make a new Cascading Style Sheet (CSS) document which name to **uix-shortcodes-style.css** to your **templates directory** (`/wp-content/themes/{your-theme}/` or `/wp-content/themes/{your-theme}/assets/css/`). You can connect to your site via an **FTP** client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
 
 
-Note: Making a new javascrpt (.js) document which name to `uix-shortcodes-custom.js` to your templates directory. Once you have created an existing JS file (**uix-shortcodes-custom.js**), Uix Shortcodes will use it as a default script to your WordPress Theme.
+> Note: Making a new javascrpt (.js) document which name to **uix-shortcodes-custom.js** to your templates directory (`/wp-content/themes/{your-theme}/` or `/wp-content/themes/{your-theme}/assets/js/`). Once you have created an existing JS file, Uix Shortcodes will use it as a default script to your WordPress Theme.
 
 

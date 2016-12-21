@@ -813,19 +813,35 @@ class UixShortcodes {
 	
 
 	/**
+	 * Determine whether the css core file exists
+	 *
+	 */
+	public static function sc_css_file_exists() {
+		  $newFilePath      = get_stylesheet_directory() . '/uix-shortcodes-style.css';
+	      $newFilePath2     = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
+		  if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
+			  return true;
+		  } else {
+			  return false;
+		  }	
+	}
+	
+	
+	/**
 	 * Returns .css file name of custom shortcodes 
 	 *
 	 */
 	public static function sc_css_file( $type = 'uri' ) {
 		
 		//default style
-		$validPath = self::plug_directory() .'assets/css/shortcodes.css';
-		$newFilePath = get_stylesheet_directory() . '/uix-shortcodes-style.css';
+		$validPath    = self::plug_directory() .'assets/css/shortcodes.css';
+		$newFilePath  = get_stylesheet_directory() . '/uix-shortcodes-style.css';
+		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
 		
 		//shortcodes themes
 		$shortcodes_style = get_option( 'uix_sc_opt_style', 'elegant' );
-		$filenames = array();
-		$filepath = WP_PLUGIN_DIR .'/'.self::get_slug(). '/assets/css/';
+		$filenames        = array();
+		$filepath         = WP_PLUGIN_DIR .'/'.self::get_slug(). '/assets/css/';
 		
 		foreach ( glob( dirname(__FILE__). "/assets/css/shortcodes-*") as $file ) {
 		    $filenames[] = str_replace( '.css', '', str_replace( 'shortcodes-', '', str_replace( dirname(__FILE__). "/assets/css/", '', $file ) ) );
@@ -854,6 +870,18 @@ class UixShortcodes {
 			if ( $type == 'dir' ) {
 				$validPath = get_template_directory() . '/uix-shortcodes-style.css';
 			}
+		}
+		
+		
+		if ( file_exists( $newFilePath2 ) ) {
+			$validPath = get_template_directory_uri() . '/assets/css/uix-shortcodes-style.css';
+			if ( $type == 'dir' ) {
+				$validPath = get_template_directory() . '/assets/css/uix-shortcodes-style.css';
+			}
+
+		}
+		
+		if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
 			if ( $type == 'name' ) {
 				$validPath = 'uix-shortcodes-style.css';
 			}
@@ -872,11 +900,17 @@ class UixShortcodes {
 	 */
 	public static function sc_js_file() {
 		
-		$validPath = self::plug_directory() .'assets/js/shortcodes.js';
-		$newFilePath = get_stylesheet_directory() . '/uix-shortcodes-custom.js';
+		$validPath    = self::plug_directory() .'assets/js/shortcodes.js';
+		$newFilePath  = get_stylesheet_directory() . '/uix-shortcodes-custom.js';
+		$newFilePath2 = get_stylesheet_directory() . '/assets/js/uix-shortcodes-custom.js';
 	
 		if ( file_exists( $newFilePath ) ) {
 			$validPath = get_template_directory_uri() . '/uix-shortcodes-custom.js';
+		}
+		
+	
+		if ( file_exists( $newFilePath2 ) ) {
+			$validPath = get_template_directory_uri() . '/assets/js/uix-shortcodes-custom.js';
 		}
 		
 		return $validPath;

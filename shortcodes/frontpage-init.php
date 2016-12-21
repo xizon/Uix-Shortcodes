@@ -767,10 +767,11 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
    
 
    $return_string = '
-
-   <div class="'.$classprefix.'tiles '.$col_class.'" id="'.$classprefix.'filter-stage-'.$id.'">
-          '.$content.'
-    </div><!-- /.'.$classprefix.'tiles -->                                   
+   <div class="uix-sc-portfolio-wrapper">
+	   <div class="'.$classprefix.'tiles '.$col_class.'" id="'.$classprefix.'filter-stage-'.$id.'">
+			  '.$content.'
+		</div><!-- /.'.$classprefix.'tiles -->   
+	</div><!-- /.uix-sc-portfolio-wrapper --> 
    ';
   
    
@@ -882,9 +883,11 @@ function uix_sc_fun_team_wrapper( $atts, $content = null ){
    
    if ( $col == 4 || $col == 3 || $col == 2 ) {
 	   $return_string = '
-	   <div class="uix-sc-gallery">
-			  '.$content.'
-		</div><!-- /.uix-sc-gallery -->                                   
+	   <div class="uix-sc-gallery-wrapper">
+		   <div class="uix-sc-gallery">
+				  '.$content.'
+			</div><!-- /.uix-sc-gallery --> 
+		</div>
 	   ';
    
    }
@@ -1198,15 +1201,17 @@ function uix_sc_fun_testimonials_wrapper( $atts, $content = null ){
 	
 
    $return_string = '
-   <div class="uix-sc-testimonials" id="uix-testimonials-'.uniqid().'">
-		<div class="uix-sc-testimonials-container">
-			<div class="flexslider">
-				<ul class="slides">
-					'.$content.'
-				</ul><!-- .uix-sc-testimonials-slides -->
-			</div><!-- .flexslider -->
-		</div><!-- .uix-sc-testimonials-container -->
-    </div><!-- /.uix-sc-testimonials -->                                   
+   <div class="uix-sc-testimonials-wrapper">
+	   <div class="uix-sc-testimonials" id="uix-testimonials-'.uniqid().'">
+			<div class="uix-sc-testimonials-container">
+				<div class="flexslider">
+					<ul class="slides">
+						'.$content.'
+					</ul><!-- .uix-sc-testimonials-slides -->
+				</div><!-- .flexslider -->
+			</div><!-- .uix-sc-testimonials-container -->
+		</div><!-- /.uix-sc-testimonials -->
+	</div>
    ';
    
 
@@ -1703,20 +1708,22 @@ function uix_sc_fun_authorcard( $atts, $content = null ) {
 
 
    $return_string = '
-	<div class="uix-authorcard" style="border-top-color: '.$primarycolor.';">
-		<div class="uix-authorcard-top">
-			<div class="uix-authorcard-text">
-				<h3 class="uix-authorcard-title">'.$name.'
-				'.$social_out_1.'
-				'.$social_out_2.'
-				'.$social_out_3.'
-				</h3> 	 
-		    </div>
-			<div class="uix-authorcard-pic"><img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'"></div>
+   <div class="uix-sc-authorcard-wrapper">
+		<div class="uix-authorcard" style="border-top-color: '.$primarycolor.';">
+			<div class="uix-authorcard-top">
+				<div class="uix-authorcard-text">
+					<h3 class="uix-authorcard-title">'.$name.'
+					'.$social_out_1.'
+					'.$social_out_2.'
+					'.$social_out_3.'
+					</h3> 	 
+				</div>
+				<div class="uix-authorcard-pic"><img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'"></div>
+			</div>
+			<div class="uix-authorcard-middle">'.$content.'</div> 
+			<a class="uix-authorcard-final" href="'.$btnurl.'" rel="author">'.$btnlabel.'</a> 
 		</div>
-		<div class="uix-authorcard-middle">'.$content.'</div> 
-		<a class="uix-authorcard-final" href="'.$btnurl.'" rel="author">'.$btnlabel.'</a> 
-	</div>            
+	</div>
    ';
 
 

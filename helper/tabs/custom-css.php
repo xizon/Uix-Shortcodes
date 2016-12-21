@@ -61,29 +61,38 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 <?php
 
 	
-	$newFilePath = get_stylesheet_directory() . '/uix-shortcodes-style.css';
+	$newFilePath                = get_stylesheet_directory() . '/uix-shortcodes-style.css';
+	$newFilePath2               = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
 	$org_cssname_uix_shortcodes = UixShortcodes::sc_css_file( 'name' );
 	$org_csspath_uix_shortcodes = UixShortcodes::sc_css_file();
 	
-	if ( file_exists( $newFilePath ) ) {
-		$filesystype = 'theme';
-		$filesyspath = '';
-	} else {
-		$filesystype = 'plugin';
-		$filesyspath = 'assets/css/';
-	}
+	if ( UixShortcodes::sc_css_file_exists() ) {
+		$filetype = 'theme';
 		
+		//CSS file directory
+		$filepath = '';
+		
+		if ( file_exists( $newFilePath2 ) ) {
+			$filepath = 'assets/css/';
+		}
+		
+	} else {
+		$filetype = 'plugin';
+		$filepath = 'assets/css/';
+	}
+
+
 	
 	// capture output from WP_Filesystem
 	ob_start();
 	
-		UixShortcodes::wpfilesystem_read_file( 'css-filesystem-nonce', 'edit.php?post_type='.UixShortcodes::get_slug().'&page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filesyspath, $org_cssname_uix_shortcodes, $filesystype );
+		UixShortcodes::wpfilesystem_read_file( 'css-filesystem-nonce', 'edit.php?post_type='.UixShortcodes::get_slug().'&page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $filetype );
 		$filesystem_uix_shortcodes_out = ob_get_contents();
 	ob_end_clean();
 	
 	if ( empty( $filesystem_uix_shortcodes_out ) ) {
 		
-		$style_org_code_uix_shortcodes = UixShortcodes::wpfilesystem_read_file( 'css-filesystem-nonce', 'edit.php?post_type='.UixShortcodes::get_slug().'&page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filesyspath, $org_cssname_uix_shortcodes, $filesystype );
+		$style_org_code_uix_shortcodes = UixShortcodes::wpfilesystem_read_file( 'css-filesystem-nonce', 'edit.php?post_type='.UixShortcodes::get_slug().'&page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $filetype );
 		
 		echo '
 		
