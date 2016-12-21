@@ -33,7 +33,7 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
-#### === 1.2.1 ===
+#### === 1.2.5 ===
 
 Optimized core stylesheets for front-end.
 
@@ -42,6 +42,8 @@ Optimized form for admin panel.
 Optimized front-end shortcodes structure.
 
 Optimized icon selector & improved the running speed greatly.
+
+Beautified the form UI, enhance the user experience.
 
 Supports custom Uix Shortcodes core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
