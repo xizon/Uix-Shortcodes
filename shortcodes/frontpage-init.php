@@ -1154,6 +1154,7 @@ add_shortcode( 'uix_client', 'uix_sc_fun_client_wrapper' );
 function uix_sc_fun_client_item( $atts, $content = null ){
 	extract( shortcode_atts( array( 
 		  'logo' => '',
+		  'url' => '',
 		  'col' => 3,
 		  'last' => 0
 	 ), $atts ) );
@@ -1167,9 +1168,9 @@ function uix_sc_fun_client_item( $atts, $content = null ){
        
    
    $return_string = ' 
-		<div class="uix-sc-client-li uix-sc-client-li-'.$col.'">
+		<div class="uix-sc-client-li uix-sc-client-li-'.$col.'" data-url="'.esc_url( $url ).'">
 			<p class="uix-sc-img">
-			   <img src="'.$logo.'" alt="">
+			   '.( !empty( $url ) ? '<a href="'.esc_url( $url ).'" target="_blank">' : '' ).'<img src="'.$logo.'" alt="">'.( !empty( $url ) ? '</a>' : '' ).'
 			</p>
 			'.$desc.'	
 		</div>																	                                                          

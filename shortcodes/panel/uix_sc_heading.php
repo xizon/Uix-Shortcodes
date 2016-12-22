@@ -388,10 +388,10 @@ if ( $sid == -1 && is_admin() ) {
 					   uix_sc_heading_desc_result_color = ( uix_sc_heading_desc_color_other != '' ) ? uix_sc_heading_desc_color_other : uix_sc_heading_desc_color;
 					  
 				   
-				   var subhtml = ( uix_sc_heading_desc != '' ) ? "[uix_heading_sub color='"+uix_sc_heading_desc_result_color+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_desc_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' opacity='"+uix_sc_heading_desc_opacity+"']"+uix_sc_heading_desc+"[/uix_heading_sub]" : "";
+				   var subhtml = ( uix_sc_heading_desc != '' ) ? "[uix_heading_sub color='"+uix_sc_heading_desc_result_color+"' align='"+uix_sc_heading_align+"' size='"+uixscform_floatval( uix_sc_heading_desc_size )+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uixscform_floatval( uix_sc_heading_spacing )+"px' opacity='"+uix_sc_heading_desc_opacity+"']"+uix_sc_heading_desc+"[/uix_heading_sub]" : "";
 				   
 				 
-					code = "[uix_heading color='"+uix_sc_heading_result_color+"' style='"+uix_sc_heading_style+"' align='"+uix_sc_heading_align+"' size='"+uix_sc_heading_size+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uix_sc_heading_spacing+"px' fillbg='"+uix_sc_heading_fillbg+"']"+uix_sc_heading_title+"[/uix_heading]"+subhtml+"[uix_heading_line line='"+uix_sc_heading_line+"' width='"+uix_sc_heading_line_width+uix_sc_heading_line_width_units+"' height='"+uix_sc_heading_line_height+"px']";
+					code = "[uix_heading color='"+uix_sc_heading_result_color+"' style='"+uix_sc_heading_style+"' align='"+uix_sc_heading_align+"' size='"+uixscform_floatval( uix_sc_heading_size )+"px' uppercase='"+uix_sc_heading_uppercase+"' spacing='"+uixscform_floatval( uix_sc_heading_spacing )+"px' fillbg='"+uix_sc_heading_fillbg+"']"+uix_sc_heading_title+"[/uix_heading]"+subhtml+"[uix_heading_line line='"+uix_sc_heading_line+"' width='"+uixscform_floatval( uix_sc_heading_line_width )+uix_sc_heading_line_width_units+"' height='"+uixscform_floatval( uix_sc_heading_line_height )+"px']";
 					
 
 				/*--**************** Custom shortcode end ****************-- */

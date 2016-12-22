@@ -106,14 +106,14 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Recent Posts', 'uix-shortcodes' ) ); ?>					
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
-					var before = uixscform_htmlencodeFormat( uix_sc_rposts_before );
-					var after = uixscform_htmlencodeFormat( uix_sc_rposts_after );
-					var temp = uixscform_htmlencodeFormat( uix_sc_rposts_looptemp );
+					var before = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_before );
+					var after = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_after );
+					var temp = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_looptemp );
 					
 					
 			
 				
-					code = "[uix_recent_posts show='"+uix_sc_rposts_num+"' before='"+before+"' after='"+after+"']"+temp+"[/uix_recent_posts]";
+					code = "[uix_recent_posts show='"+uixscform_floatval( uix_sc_rposts_num )+"' before='"+before+"' after='"+after+"']"+temp+"[/uix_recent_posts]";
 					
 					
 

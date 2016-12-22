@@ -18,9 +18,10 @@
 
 class UixShortcodes {
 
-	const PREFIX   = 'uix';
-	const CUSPAGE  = 'uix-shortcodes-custom-submenu-page';
-	const MAPAPI   = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
+	const PREFIX      = 'uix';
+	const CUSPAGE     = 'uix-shortcodes-custom-submenu-page';
+	const MAPAPI      = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
+	const DEMOFORM    = 0;
 	
 	
 	/**
@@ -241,6 +242,10 @@ class UixShortcodes {
 		$file   = $folder.''.$newname.'.php';
 		
 		if ( file_exists( $file ) ) require_once $file;
+		
+		
+		
+		
   
 	}
 

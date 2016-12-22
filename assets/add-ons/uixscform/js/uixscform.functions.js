@@ -24,7 +24,7 @@ jQuery( document ).ready( function() {
 
 		jQuery( this ).css( 'display', 'none' );
 		c.find( 'input' ).val( '' );
-		c.find( '.uixscform-icon-selector-icon-preview' ).html( '' );
+		c.find( '.uixscform-icon-selector-icon-preview' ).html( '' ).removeClass( 'iconshow' );
 		jQuery( chooseBtnID ).show();
 		jQuery( labeltxtID ).show();
 		jQuery( previewID ).hide();
@@ -201,9 +201,20 @@ jQuery( document ).ready( function() {
 		 
 		//the form focus
 		var srow            = jQuery( cur_appendID ).parent( 'td' ).find( ' > .dynamic-row' ),
-			sroworg         = jQuery( cur_appendID ).closest( 'form' ).find( 'tr[class^="dynamic-row-"]' ),
-			sroworg_trigger = jQuery( cur_appendID ).closest( 'form' ).find( 'tr[class^="dynamic-row-"] td' );
-
+			srowcols_c      = jQuery( cur_appendID ).closest( '.uixscform-table-cols-wrapper' ),
+			srowsingle_c    = jQuery( cur_appendID ).closest( '.uixscform-table-wrapper' ),
+			sroworg         = null, 
+			sroworg_trigger = null;
+		
+		if ( srowcols_c.length > 0 ) {
+			sroworg         = srowcols_c.find( 'tr[class^="dynamic-row-"]' ),
+			sroworg_trigger = srowcols_c.find( 'tr[class^="dynamic-row-"] td' );	
+		} else {
+			sroworg         = srowsingle_c.find( 'tr[class^="dynamic-row-"]' ),
+			sroworg_trigger = srowsingle_c.find( 'tr[class^="dynamic-row-"] td' );	
+		}
+		
+		
 
 		jQuery( srow ).mouseenter(function() {
 			jQuery( srow ).removeClass( 'hover' );
@@ -608,10 +619,10 @@ jQuery( document ).ready( function() {
 
 /*! 
  * ************************************
- * Format Content from Textarea 
+ * Format textarea content of shortcode tags
  *************************************
  */	
-function uixscform_formatTextarea( str ) {
+function uixscform_shortcodeTextareaPrint( str ) {
 	
 	//checking for "undefined" in replace-regexp
 	if ( str != undefined ) {
@@ -642,13 +653,27 @@ function uixscform_getHTML( str ) {
 
 }
 
+/*! 
+ * ************************************
+ * Number formatting
+ *************************************
+ */	
+function uixscform_floatval( str ) {
+	
+	if (typeof str == "string" ) {
+	    return ( !isNaN( parseFloat( str ) ) ) ? parseFloat( str ) : 0;
+	} else {
+		return str;
+	}
+
+}
 
 /*! 
  * ************************************
- * HTML Encode
+ * Transform to usable HTML tags and add to attributes of shortcode tags
  *************************************
  */	
-function uixscform_htmlencodeFormat( str ) {
+function uixscform_shortcodeUsableHtmlToAttr( str ) {
 	
 	return (typeof str != "string") ? str :
 	  str.replace(/'/g,'"').replace(/“/g,'"').replace(/<|>/g,
@@ -660,6 +685,25 @@ function uixscform_htmlencodeFormat( str ) {
 				});
 
 
+}
+
+/*! 
+ * ************************************
+ * Escaping for HTML attributes of shortcode tags
+ *************************************
+ */	
+function uixscform_shortcodeHTMLEcode( str ) {
+	if ( typeof( str ) == 'string' && str.length > 0 ) {
+		var pattern = new RegExp("[`~!+%@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）&;|{}【】\"；：”“'。，、？]");
+		var rs = ""; 
+		for (var i = 0; i < str.length; i++) { 
+			rs = rs+str.substr( i, 1 ).replace( pattern, '' ); 
+		} 
+
+		rs = rs.replace(/ /g, '-').toLowerCase();
+		return rs;
+
+	}
 }
 
 /*! 

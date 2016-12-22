@@ -11,6 +11,8 @@ $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content
  */
 $form_id = 'uix_sc_form_team_fullwidth';
 
+$clone_max = 30; // Maximum of clone form 
+
 /**
  * Form Type
  */
@@ -103,7 +105,7 @@ $args =
 										), 	
 
 									 ],
-									'max'                       => 30
+									'max'                       => $clone_max
 				                )
 									
 		),
@@ -301,7 +303,7 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					/* List Item ( step 2)  */
-					var list_num = 30;
+					var list_num = <?php echo $clone_max; ?>;
 					
 			
 					var show_list_item = '';
@@ -322,21 +324,21 @@ if ( $sid == -1 && is_admin() ) {
 							
 							
 							
-						var _item_v_avatar = ( _avatar != undefined ) ? _avatar : '',
-							_item_v_name = ( _name != undefined ) ? _name : '',
-							_item_v_position = ( _position != undefined ) ? _position : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
-							_item_v_s_url_1 = ( _social_url_1 != undefined ) ? _social_url_1 : '',
+						var _item_v_avatar = ( _avatar != undefined ) ? encodeURI( _avatar ) : '',
+							_item_v_name = ( _name != undefined ) ? uixscform_shortcodeHTMLEcode( _name ) : '',
+							_item_v_position = ( _position != undefined ) ? uixscform_shortcodeHTMLEcode( _position ) : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '',
+							_item_v_s_url_1 = ( _social_url_1 != undefined ) ? encodeURI( _social_url_1 ) : '',
 							_item_v_s_icon_1 = ( _social_icon_1 != undefined ) ? _social_icon_1 : '',
-							_item_v_s_url_2 = ( _social_url_2 != undefined ) ? _social_url_2 : '',
+							_item_v_s_url_2 = ( _social_url_2 != undefined ) ? encodeURI( _social_url_2 ) : '',
 							_item_v_s_icon_2 = ( _social_icon_2 != undefined ) ? _social_icon_2 : '',
-							_item_v_s_url_3 = ( _social_url_3 != undefined ) ? _social_url_3 : '',
+							_item_v_s_url_3 = ( _social_url_3 != undefined ) ? encodeURI( _social_url_3 ) : '',
 							_item_v_s_icon_3 = ( _social_icon_3 != undefined ) ? _social_icon_3 : '';
 							
 					
 						
 						if ( _name != undefined ) {
-							show_list_item += "<br>[uix_team_item col='fullwidth' name='"+uixscform_htmlencodeFormat( _item_v_name )+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
+							show_list_item += "<br>[uix_team_item col='fullwidth' name='"+uixscform_shortcodeHTMLEcode( _item_v_name )+"' avatar='"+_item_v_avatar+"' position='"+_item_v_position+"' social_1='"+_item_v_s_icon_1+"|"+_item_v_s_url_1+"' social_2='"+_item_v_s_icon_2+"|"+_item_v_s_url_2+"' social_3='"+_item_v_s_icon_3+"|"+_item_v_s_url_3+"']";
 							show_list_item += "<br>[uix_team_item_desc]"+ _item_v_desc +"[/uix_team_item_desc]";					
 							show_list_item += "<br>[/uix_team_item]";
 		
@@ -346,11 +348,11 @@ if ( $sid == -1 && is_admin() ) {
 					}
 					
 					/* Height of grid */
-					var photobox_height = "avatarheight='"+uix_sc_team_fullwidth_listitem_list_height+"px'";
+					var photobox_height = "avatarheight='"+uixscform_floatval( uix_sc_team_fullwidth_listitem_list_height )+"px'";
 					if ( uix_sc_team_fullwidth_listitem_list_height == 0 )  photobox_height = '';	
 	
 		
-					code = "[uix_team col='fullwidth' "+photobox_height+" avatarfillet='"+uix_sc_team_fullwidth_listitem_avatar_fillet+"%' gray='"+uix_sc_team_fullwidth_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]";
+					code = "[uix_team col='fullwidth' "+photobox_height+" avatarfillet='"+uixscform_floatval( uix_sc_team_fullwidth_listitem_avatar_fillet )+"%' gray='"+uix_sc_team_fullwidth_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]";
 
 				/*--**************** Custom shortcode end ****************-- */
 				<?php echo UixSCFormCore::send_after(); ?> 

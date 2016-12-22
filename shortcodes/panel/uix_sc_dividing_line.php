@@ -123,7 +123,7 @@ if ( $sid == -1 && is_admin() ) {
 					if ( uix_sc_dividing_line_color == '#333' ) uix_sc_dividing_line_result_color = 'dark';
 				  
 				
-					code = "[uix_dividing_line style='"+uix_sc_dividing_line_style+"' color='"+uix_sc_dividing_line_result_color+"' width='"+uix_sc_dividing_line_width+uix_sc_dividing_line_width_units+"' opacity='"+uix_sc_dividing_line_opacity+"']";
+					code = "[uix_dividing_line style='"+uix_sc_dividing_line_style+"' color='"+uix_sc_dividing_line_result_color+"' width='"+uixscform_floatval( uix_sc_dividing_line_width )+uix_sc_dividing_line_width_units+"' opacity='"+uix_sc_dividing_line_opacity+"']";
 					
 
 					

@@ -278,7 +278,7 @@ if ( $sid == -1 && is_admin() ) {
 							
 						var _item_v_title = ( _title != undefined ) ? _title : '',
 							_item_v_icon = ( _icon != undefined ) ? _icon : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
+							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '';
 							
 						
 						if ( _title != undefined ) {
@@ -308,7 +308,7 @@ if ( $sid == -1 && is_admin() ) {
 							
 						var _item_v_title = ( _title != undefined ) ? _title : '',
 							_item_v_icon = ( _icon != undefined ) ? _icon : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
+							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '';
 							
 						
 						if ( _title != undefined ) {

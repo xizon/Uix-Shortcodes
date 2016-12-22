@@ -213,7 +213,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			  
 			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	
-				 echo '<div class="uixscform-icon-selector-btn-target" id="">';
+				 echo '<div class="uixscform-icon-selector-btn-target" id="" style="display:none;">';
 				 require_once ( dirname( __FILE__ ) . '/'.self::icon_attr( 'selector' ) );
 				 echo '</div>';
 				  

@@ -275,7 +275,15 @@ if ( $sid == -1 && is_admin() ) {
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	  
 		/* List Item - Register clone vars ( step 1) */
-		UixSCFormCore::reg_clone_vars( 'uix_sc_portfolio_grid_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_image', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_full_image', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_title', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_type', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_desc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_url', $form_html, 'toggle-row' ) );	
+		UixSCFormCore::reg_clone_vars( 'uix_sc_portfolio_grid_list', 
+									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_image', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_full_image', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_title', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_type', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_desc', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_listitem_toggle', $form_html, 'toggle' )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_portfolio_grid_url', $form_html, 'toggle-row' ) 
+									 );	
 		
 		
 		?>
@@ -299,14 +307,14 @@ if ( $sid == -1 && is_admin() ) {
 							_title = $( _uid+'uix_sc_portfolio_grid_listitem_title' ).val(),
 							_type = $( _uid+'uix_sc_portfolio_grid_listitem_type' ).val(),
 							_desc = $( _uid+'uix_sc_portfolio_grid_listitem_desc' ).val(),
-							_item_url = ( $( _uid+'uix_sc_portfolio_grid_url' ).val() != '' ) ? $( _uid+'uix_sc_portfolio_grid_url' ).val() : '';	
+							_item_url = ( $( _uid+'uix_sc_portfolio_grid_url' ).val() != '' ) ? encodeURI( $( _uid+'uix_sc_portfolio_grid_url' ).val() ) : '';	
 								
 								
-						var _item_v_image = ( _image != undefined ) ? _image : '',
-							_item_v_imagefull = ( _imagefull != undefined ) ? _imagefull : '',
-							_item_v_title = ( _title != undefined ) ? _title : '',
-							_item_v_type = ( _type != undefined ) ? _type : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '',
+						var _item_v_image = ( _image != undefined ) ? encodeURI( _image ) : '',
+							_item_v_imagefull = ( _imagefull != undefined ) ? encodeURI( _imagefull ) : '',
+							_item_v_title = ( _title != undefined ) ? uixscform_shortcodeHTMLEcode( _title ) : '',
+							_item_v_type = ( _type != undefined ) ? uixscform_shortcodeHTMLEcode( _type ) : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '',
 							_item_v_target = ( uix_sc_portfolio_grid_target === true ) ? 1 : 0,
 							_item_v_filterable = ( uix_sc_portfolio_grid_filterable === true ) ? 1 : 0;
 					
@@ -317,7 +325,7 @@ if ( $sid == -1 && is_admin() ) {
 						
 						
 						if ( _title != undefined ) {
-							show_list_item += "<br>[uix_portfolio_item type='"+uixscform_htmlencodeFormat( _item_v_type )+"' title='"+uixscform_htmlencodeFormat( _item_v_title )+"' image='"+_item_v_image+"' fullimage='"+_item_v_imagefull+"' target='"+_item_v_target+"' url='"+_item_url+"']";
+							show_list_item += "<br>[uix_portfolio_item type='"+_item_v_type+"' title='"+_item_v_title+"' image='"+_item_v_image+"' fullimage='"+_item_v_imagefull+"' target='"+_item_v_target+"' url='"+_item_url+"']";
 							show_list_item += "<br>[uix_portfolio_item_desc]"+ _item_v_desc +"[/uix_portfolio_item_desc]";					
 							show_list_item += "<br>[/uix_portfolio_item]";
 		
@@ -327,7 +335,7 @@ if ( $sid == -1 && is_admin() ) {
 					}
 		
 		
-					code = "[uix_portfolio filterable='"+_item_v_filterable+"' classprefix='"+uix_sc_portfolio_grid_listitem_class_prefix+"' col='"+uix_sc_portfolio_grid_listitem_col+"' imagefillet='"+uix_sc_portfolio_grid_listitem_image_fillet+"%']"+show_list_item+"<br>[/uix_portfolio]";
+					code = "[uix_portfolio filterable='"+_item_v_filterable+"' classprefix='"+uixscform_shortcodeHTMLEcode( uix_sc_portfolio_grid_listitem_class_prefix )+"' col='"+uix_sc_portfolio_grid_listitem_col+"' imagefillet='"+uixscform_floatval( uix_sc_portfolio_grid_listitem_image_fillet )+"%']"+show_list_item+"<br>[/uix_portfolio]";
 
 				/*--**************** Custom shortcode end ****************-- */
 				<?php echo UixSCFormCore::send_after(); ?> 

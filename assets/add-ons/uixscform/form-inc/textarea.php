@@ -32,7 +32,7 @@ class UixSCFormType_Textarea {
 				
 				
 				if ( $format ) {
-					$the_var = 'var '.$id.' = uixscform_formatTextarea( $( "#'.$id.'" ).val() );';
+					$the_var = 'var '.$id.' = uixscform_shortcodeTextareaPrint( $( "#'.$id.'" ).val() );';
 				} else {
 					$the_var = 'var '.$id.' = $( "#'.$id.'" ).val();';
 				}

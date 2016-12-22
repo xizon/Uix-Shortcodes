@@ -11,6 +11,8 @@ $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content
  */
 $form_id = 'uix_sc_form_client';
 
+$clone_max = 50; // Maximum of clone form 
+
 /**
  * Form Type
  */
@@ -56,6 +58,11 @@ $args =
 											'id'        => 'dynamic-row-uix_sc_client_listitem_logo',
 											'type'      => 'image'
 										), 
+		
+										array(
+											'id'        => 'dynamic-row-uix_sc_client_listitem_url',
+											'type'      => 'text'
+										), 
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_client_listitem_intro',
@@ -64,7 +71,7 @@ $args =
 										
 
 									 ],
-									'max'                       => 50
+									'max'                       => $clone_max
 				                )
 									
 		),
@@ -85,7 +92,19 @@ $args =
 			
 			),	
 			
-			
+
+			array(
+				'id'             => 'uix_sc_client_listitem_url',
+				'title'          => '',
+				'desc'           => '',
+				'value'          => '',
+				'class'          => 'dynamic-row-uix_sc_client_listitem_url', /*class of list item */
+				'placeholder'    => __( 'Destination URL, e.g., http://your.clientsite.com', 'uix-shortcodes' ),
+				'type'           => 'text',
+				'default'        => ''
+
+			),
+
 			
 			array(
 				'id'             => 'uix_sc_client_listitem_intro',
@@ -133,7 +152,11 @@ if ( $sid == -1 && is_admin() ) {
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	 
 		/* List Item - Register clone vars ( step 1) */
-		UixSCFormCore::reg_clone_vars( 'uix_sc_client_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_logo', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_intro', $form_html ) );
+		UixSCFormCore::reg_clone_vars( 'uix_sc_client_list', 
+									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_logo', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_intro', $form_html ) 
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_url', $form_html )  
+									 );
 	 
 		
 		?>
@@ -147,28 +170,30 @@ if ( $sid == -1 && is_admin() ) {
 				/*--**************** Custom shortcode begin ****************-- */
 					
 					/* List Item ( step 2)  */
-					var list_num = 50;
+					var list_num = <?php echo $clone_max; ?>;
 					
 			
 					var show_list_item = '';
 					for ( var i=0; i<=list_num; i++ ){
 						
-						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
+						var _uid  = ( i == 0 ) ? '#' : '#'+i+'-',
 							_logo = $( _uid+'uix_sc_client_listitem_logo' ).val(),
+							_url  = $( _uid+'uix_sc_client_listitem_url' ).val(),
 							_desc = $( _uid+'uix_sc_client_listitem_intro' ).val();
 							
 							
 							
 							
-						var _item_v_logo = ( _logo != undefined ) ? _logo : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
+						var _item_v_logo = ( _logo != undefined ) ? encodeURI( _logo ) : '',
+							_item_v_url  = ( _url != undefined && _url != '' ) ? "url='"+encodeURI( _url )+"'" : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '';
 							
 						
 						//last column
 						var lastcol = ( i == list_num ) ? " last='1'" : '';
 						
 						if ( _logo != undefined ) {
-							show_list_item += "<br>[uix_client_item col='"+uix_sc_client_list_col+"' logo='"+_item_v_logo+"' "+lastcol+"]";
+							show_list_item += "<br>[uix_client_item "+_item_v_url+" col='"+uix_sc_client_list_col+"' logo='"+_item_v_logo+"' "+lastcol+"]";
 							show_list_item += "<br>[uix_client_item_desc]"+ _item_v_desc +"[/uix_client_item_desc]";					
 							show_list_item += "<br>[/uix_client_item]";
 		

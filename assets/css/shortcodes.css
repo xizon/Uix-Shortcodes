@@ -1730,9 +1730,18 @@ img.uix-sc-img,
 	} 
 }
 
-	 .uix-sc-client-li .uix-sc-img img{
-		 border: 1px solid #DFDFDF;
-	 }
+		.uix-sc-client-li .uix-sc-img img{
+		    border: 1px solid #DFDFDF;
+			-moz-transition: .1s ease-in-out; 
+			-o-transition: .1s ease-in-out;
+			-webkit-transition: .1s ease-in-out; 
+			transition: .1s ease-in-out;
+
+		}
+
+		.uix-sc-client-li .uix-sc-img a:hover img {
+			border-color: #333;
+		}
 	 
 	 
 	 

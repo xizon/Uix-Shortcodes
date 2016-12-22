@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.7
-Stable tag: 1.2.1
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,10 @@ Note: Making a new javascrpt (.js) document which name to <strong>"uix-shortcode
 * Optimized front-end shortcodes structure.
 * Optimized icon selector & improved the running speed greatly.
 * Beautified the form UI, enhance the user experience.
+* Added function of escaping for HTML blocks from core forms.
+* Added hyperlink support for client shortcode.
+* Added multi-column selector for client shortcode.
+* Removed colors selectors for features shortcode.
 * Supports custom Uix Shortcodes core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
 

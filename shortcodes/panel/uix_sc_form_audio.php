@@ -138,11 +138,13 @@ if ( $sid == -1 && is_admin() ) {
 						}
 						if ( uix_sc_audio_soundcloud === false ) {
 							uix_sc_audio_height = 'null';
+						} else {
+							uix_sc_audio_height = uixscform_floatval( uix_sc_audio_height );
 						}
 					
 					
 				
-					code = "[uix_audio width='"+uix_sc_audio_width+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']";	
+					code = "[uix_audio width='"+uixscform_floatval( uix_sc_audio_width )+uix_sc_audio_width_units+"' height='"+uix_sc_audio_height+"' soundcloud='"+uix_sc_audio_soundcloud+"' autoplay='"+uix_sc_audio_autoplay+"' loop='"+uix_sc_audio_loop+"' url='"+uix_sc_audio_url+"']";	
 				/*--**************** Custom shortcode end ****************-- */
 				<?php echo UixSCFormCore::send_after(); ?> 
 		} ) ( jQuery );

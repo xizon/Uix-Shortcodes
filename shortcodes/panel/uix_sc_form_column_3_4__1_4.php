@@ -75,7 +75,7 @@ if ( $sid == -1 && is_admin() ) {
 					_vhtml += "<br>[uix_column grid='4' last='1']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]<br>";
 					
 	
-					code = "[uix_column_wrapper top='"+uix_sc_col_3_4__1_4_padding_top+"' bottom='"+uix_sc_col_3_4__1_4_padding_bottom+"' left='"+uix_sc_col_3_4__1_4_padding_left+"' right='"+uix_sc_col_3_4__1_4_padding_right+"']" + _vhtml + "[/uix_column_wrapper]";
+					code = "[uix_column_wrapper top='"+uixscform_floatval( uix_sc_col_3_4__1_4_padding_top )+"' bottom='"+uixscform_floatval( uix_sc_col_3_4__1_4_padding_bottom )+"' left='"+uixscform_floatval( uix_sc_col_3_4__1_4_padding_left )+"' right='"+uixscform_floatval( uix_sc_col_3_4__1_4_padding_right )+"']" + _vhtml + "[/uix_column_wrapper]";
 
 					
 				/*--**************** Custom shortcode end ****************-- */

@@ -282,10 +282,10 @@ if ( $sid == -1 && is_admin() ) {
 						 uix_sc_bar_result_trackcolor = uix_sc_bar_trackcolor,
 						 uix_sc_bar_result_percent_icon_color = uix_sc_bar_percent_icon_color,
 						 uix_sc_bar_result_icon = ( uix_sc_bar_icon != '' ) ? "icon='"+uix_sc_bar_icon+"'" : '',
-						 uix_sc_bar_result_size = ( uix_sc_bar_shape == 'circular' ) ? "size='"+uix_sc_bar_circular_size+"px'" : "size='"+uix_sc_bar_square_size+""+uix_sc_bar_square_size_units+"'";
+						 uix_sc_bar_result_size = ( uix_sc_bar_shape == 'circular' ) ? "size='"+uixscform_floatval( uix_sc_bar_circular_size )+"px'" : "size='"+uixscform_floatval( uix_sc_bar_square_size )+""+uix_sc_bar_square_size_units+"'";
 					
 		
-					code = "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uix_sc_bar_percent+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uix_sc_bar_linewidth+"' precsize='"+uix_sc_bar_perc_icons_size+"px' title='"+uixscform_htmlencodeFormat( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+" top='"+uix_sc_bar_margin_top+"' bottom='"+uix_sc_bar_margin_bottom+"' left='"+uix_sc_bar_margin_left+"' right='"+uix_sc_bar_margin_right+"']"+uix_sc_bar_desc+"[/uix_progress_bar]";
+					code = "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uixscform_floatval( uix_sc_bar_percent )+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uixscform_floatval( uix_sc_bar_linewidth )+"' precsize='"+uixscform_floatval( uix_sc_bar_perc_icons_size )+"px' title='"+uixscform_shortcodeHTMLEcode( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+" top='"+uixscform_floatval( uix_sc_bar_margin_top )+"' bottom='"+uixscform_floatval( uix_sc_bar_margin_bottom )+"' left='"+uixscform_floatval( uix_sc_bar_margin_left )+"' right='"+uixscform_floatval( uix_sc_bar_margin_right )+"']"+uix_sc_bar_desc+"[/uix_progress_bar]";
 					
 
 					

@@ -120,7 +120,7 @@ if ( $sid == -1 && is_admin() ) {
 					
 					var uix_sc_icon_result_color = ( uix_sc_icon_color_other != '' ) ? uix_sc_icon_color_other : uix_sc_icon_color;
 					
-					code = "[uix_icons size='"+uix_sc_icon_size+"' units='px' color='"+uix_sc_icon_result_color+"' name='"+uix_sc_icon_name+"']";
+					code = "[uix_icons size='"+uixscform_floatval( uix_sc_icon_size )+"' units='px' color='"+uix_sc_icon_result_color+"' name='"+uix_sc_icon_name+"']";
 					
 					
 				/*--**************** Custom shortcode end ****************-- */

@@ -76,7 +76,7 @@ if ( $sid == -1 && is_admin() ) {
 					_vhtml += "<br>[uix_column grid='3' last='1']<p><?php _e( 'Some content for this column.', 'uix-shortcodes' ); ?></p>[/uix_column]<br>";
 					
 	
-					code = "[uix_column_wrapper top='"+uix_sc_col_2_3__1_3_padding_top+"' bottom='"+uix_sc_col_2_3__1_3_padding_bottom+"' left='"+uix_sc_col_2_3__1_3_padding_left+"' right='"+uix_sc_col_2_3__1_3_padding_right+"']" + _vhtml + "[/uix_column_wrapper]";
+					code = "[uix_column_wrapper top='"+uixscform_floatval( uix_sc_col_2_3__1_3_padding_top )+"' bottom='"+uixscform_floatval( uix_sc_col_2_3__1_3_padding_bottom )+"' left='"+uixscform_floatval( uix_sc_col_2_3__1_3_padding_left )+"' right='"+uixscform_floatval( uix_sc_col_2_3__1_3_padding_right )+"']" + _vhtml + "[/uix_column_wrapper]";
 
 				/*--**************** Custom shortcode end ****************-- */
 				<?php echo UixSCFormCore::send_after(); ?> 

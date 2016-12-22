@@ -65,7 +65,7 @@ $args =
 			'id'             => 'uix_sc_authorcard_intro',
 			'title'          => __( 'Biographical Info', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => '',
+			'value'          => __( 'Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Tu vero, inquam, ducas licet, si sequetur; Ab his oratores, ab his imperatores ac rerum publicarum principes extiterunt. Igitur neque stultorum quisquam beatus neque sapientium non beatus.', 'uix-shortcodes' ),
 			'placeholder'    => '',
 			'type'           => 'textarea',
 			'default'        => array(
@@ -203,7 +203,7 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert An Author Card', 'uix-shortcodes' ) ); ?>					<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					
-					code = "[uix_authorcard primarycolor='"+uix_sc_authorcard_primary_color+"' btnlabel='"+uixscform_htmlencodeFormat( uix_sc_authorcard_link_label )+"' btnurl='"+uix_sc_authorcard_link_link+"' name='"+uixscform_htmlencodeFormat( uix_sc_authorcard_name )+"' avatar='"+uix_sc_authorcard_avatar+"' social_1='"+uix_sc_authorcard_1_icon+"|"+uix_sc_authorcard_1_url+"' social_2='"+uix_sc_authorcard_2_icon+"|"+uix_sc_authorcard_2_url+"' social_3='"+uix_sc_authorcard_3_icon+"|"+uix_sc_authorcard_3_url+"' ]"+uix_sc_authorcard_intro+"<br>[/uix_authorcard]";
+					code = "[uix_authorcard primarycolor='"+uix_sc_authorcard_primary_color+"' btnlabel='"+uixscform_shortcodeHTMLEcode( uix_sc_authorcard_link_label )+"' btnurl='"+encodeURI( uix_sc_authorcard_link_link )+"' name='"+uixscform_shortcodeHTMLEcode( uix_sc_authorcard_name )+"' avatar='"+encodeURI( uix_sc_authorcard_avatar )+"' social_1='"+uix_sc_authorcard_1_icon+"|"+encodeURI( uix_sc_authorcard_1_url )+"' social_2='"+uix_sc_authorcard_2_icon+"|"+encodeURI( uix_sc_authorcard_2_url )+"' social_3='"+uix_sc_authorcard_3_icon+"|"+encodeURI( uix_sc_authorcard_3_url )+"' ]"+uix_sc_authorcard_intro+"<br>[/uix_authorcard]";
 					
 					
 

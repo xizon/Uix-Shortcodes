@@ -11,6 +11,8 @@ $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content
  */
 $form_id = 'uix_sc_testimonials';
 
+$clone_max = 15; // Maximum of clone form 
+
 /**
  * Form Type
  */
@@ -56,7 +58,7 @@ $args =
 										
 
 									 ],
-									'max'                       => 15
+									'max'                       => $clone_max
 				                )
 									
 		),
@@ -152,7 +154,7 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					/* List Item ( step 2)  */
-					var list_num = 15;
+					var list_num = <?php echo $clone_max; ?>;
 					
 			
 					var show_list_item = '';
@@ -167,10 +169,10 @@ if ( $sid == -1 && is_admin() ) {
 							
 							
 							
-						var _item_v_avatar = ( _avatar != undefined ) ? _avatar : '',
-							_item_v_name = ( _name != undefined ) ? uixscform_htmlencodeFormat( _name ) : '',
-							_item_v_position = ( _position != undefined ) ? uixscform_htmlencodeFormat( _position ) : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_formatTextarea( _desc ) : '';
+						var _item_v_avatar = ( _avatar != undefined ) ? encodeURI( _avatar ) : '',
+							_item_v_name = ( _name != undefined ) ? uixscform_shortcodeHTMLEcode( _name ) : '',
+							_item_v_position = ( _position != undefined ) ? uixscform_shortcodeHTMLEcode( _position ) : '',
+							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '';
 							
 						
 						if ( _name != undefined ) {

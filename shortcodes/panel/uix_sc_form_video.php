@@ -108,7 +108,7 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					
-				code = "[uix_video width='"+uix_sc_video_w+"' height='"+uix_sc_video_h+"' responsive='"+uix_sc_video_responsive+"' url='"+uix_sc_video_url+"']";
+				code = "[uix_video width='"+uixscform_floatval( uix_sc_video_w )+"' height='"+uixscform_floatval( uix_sc_video_h )+"' responsive='"+uix_sc_video_responsive+"' url='"+encodeURI( uix_sc_video_url )+"']";
 					
 				/*--**************** Custom shortcode end ****************-- */
 				<?php echo UixSCFormCore::send_after(); ?> 

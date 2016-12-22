@@ -45,6 +45,14 @@ Optimized icon selector & improved the running speed greatly.
 
 Beautified the form UI, enhance the user experience.
 
+Added function of escaping for HTML blocks from core forms.
+
+Added hyperlink support for client shortcode.
+
+Added multi-column selector for client shortcode.
+
+Removed colors selectors for features shortcode.
+
 Supports custom Uix Shortcodes core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
 

@@ -680,7 +680,7 @@ if ( $sid == -1 && is_admin() ) {
 					var _vhtml_1 = "",_vhtml_2 = "",_vhtml_3 = "",_vhtml_4 = "";
 					_vhtml_1 += "<br>[uix_pricing_item target='"+_p_btn_target_1+"' class='"+_p_class_1+"' url='"+uix_sc_pricing_col4_one_btn_link+"' period='"+uix_sc_pricing_col4_one_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col4_one_btn_color )+"' imcolor='"+uix_sc_pricing_col4_one_emphasis_color+"' col='4']";
 					_vhtml_1 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col4_one_title+"[/uix_pricing_item_level]";
-					_vhtml_1 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_one_currency+uix_sc_pricing_col4_one_price+"[/uix_pricing_item_price]";
+					_vhtml_1 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_one_currency+uixscform_floatval( uix_sc_pricing_col4_one_price )+"[/uix_pricing_item_price]";
 					_vhtml_1 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col4_one_desc+"[/uix_pricing_item_desc]";
 					_vhtml_1 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col4_one_btn_label+"[/uix_pricing_item_button]";		
 					_vhtml_1 += "<br>[uix_pricing_item_detail][ul]"+uixscform_html_listTran( uix_sc_pricing_col4_one_features, 'li' )+"[/ul][/uix_pricing_item_detail]";					
@@ -688,7 +688,7 @@ if ( $sid == -1 && is_admin() ) {
 					
 					_vhtml_2 += "[uix_pricing_item target='"+_p_btn_target_2+"' class='"+_p_class_2+"' url='"+uix_sc_pricing_col4_two_btn_link+"' period='"+uix_sc_pricing_col4_two_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col4_two_btn_color )+"' imcolor='"+uix_sc_pricing_col4_two_emphasis_color+"' col='4']";
 					_vhtml_2 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col4_two_title+"[/uix_pricing_item_level]";
-					_vhtml_2 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_two_currency+uix_sc_pricing_col4_two_price+"[/uix_pricing_item_price]";
+					_vhtml_2 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_two_currency+uixscform_floatval( uix_sc_pricing_col4_two_price )+"[/uix_pricing_item_price]";
 					_vhtml_2 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col4_two_desc+"[/uix_pricing_item_desc]";
 					_vhtml_2 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col4_two_btn_label+"[/uix_pricing_item_button]";		
 					_vhtml_2 += "<br>[uix_pricing_item_detail][ul]"+uixscform_html_listTran( uix_sc_pricing_col4_two_features, 'li' )+"[/ul][/uix_pricing_item_detail]";					
@@ -696,7 +696,7 @@ if ( $sid == -1 && is_admin() ) {
 					
 					_vhtml_3 += "[uix_pricing_item target='"+_p_btn_target_3+"' class='"+_p_class_3+"' url='"+uix_sc_pricing_col4_three_btn_link+"' period='"+uix_sc_pricing_col4_three_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col4_three_btn_color )+"' imcolor='"+uix_sc_pricing_col4_three_emphasis_color+"' col='4']";
 					_vhtml_3 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col4_three_title+"[/uix_pricing_item_level]";
-					_vhtml_3 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_three_currency+uix_sc_pricing_col4_three_price+"[/uix_pricing_item_price]";
+					_vhtml_3 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_three_currency+uixscform_floatval( uix_sc_pricing_col4_three_price )+"[/uix_pricing_item_price]";
 					_vhtml_3 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col4_three_desc+"[/uix_pricing_item_desc]";
 					_vhtml_3 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col4_three_btn_label+"[/uix_pricing_item_button]";		
 					_vhtml_3 += "<br>[uix_pricing_item_detail][ul]"+uixscform_html_listTran( uix_sc_pricing_col4_three_features, 'li' )+"[/ul][/uix_pricing_item_detail]";					
@@ -704,7 +704,7 @@ if ( $sid == -1 && is_admin() ) {
 					
 					_vhtml_4 += "[uix_pricing_item target='"+_p_btn_target_4+"' class='"+_p_class_4+"' url='"+uix_sc_pricing_col4_four_btn_link+"' period='"+uix_sc_pricing_col4_four_period+"' bcolor='"+uixscform_colorTran( uix_sc_pricing_col4_four_btn_color )+"' imcolor='"+uix_sc_pricing_col4_four_emphasis_color+"' col='4' last='1']";
 					_vhtml_4 += "<br>[uix_pricing_item_level]"+uix_sc_pricing_col4_four_title+"[/uix_pricing_item_level]";
-					_vhtml_4 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_four_currency+uix_sc_pricing_col4_four_price+"[/uix_pricing_item_price]";
+					_vhtml_4 += "<br>[uix_pricing_item_price]"+uix_sc_pricing_col4_four_currency+uixscform_floatval( uix_sc_pricing_col4_four_price )+"[/uix_pricing_item_price]";
 					_vhtml_4 += "<br>[uix_pricing_item_desc]"+uix_sc_pricing_col4_four_desc+"[/uix_pricing_item_desc]";
 					_vhtml_4 += "<br>[uix_pricing_item_button]"+uix_sc_pricing_col4_four_btn_label+"[/uix_pricing_item_button]";		
 					_vhtml_4 += "<br>[uix_pricing_item_detail][ul]"+uixscform_html_listTran( uix_sc_pricing_col4_four_features, 'li' )+"[/ul][/uix_pricing_item_detail]";					

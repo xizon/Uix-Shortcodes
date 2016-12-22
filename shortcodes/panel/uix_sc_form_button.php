@@ -283,7 +283,7 @@ if ( $sid == -1 && is_admin() ) {
 		
 		
 				
-					code = "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uix_sc_btn_fontsize+"px' letterspacing='"+uix_sc_btn_letterspacing+"px' fillet='"+uix_sc_btn_fillet+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]";
+					code = "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uixscform_floatval( uix_sc_btn_fontsize )+"px' letterspacing='"+uixscform_floatval( uix_sc_btn_letterspacing )+"px' fillet='"+uixscform_floatval( uix_sc_btn_fillet )+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]";
 					
 
 					

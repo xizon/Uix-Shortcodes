@@ -43,7 +43,7 @@ $args =
 			'id'             => 'uix_sc_container_height',
 			'title'          => __( 'Height', 'uix-shortcodes' ),
 			'desc'           => __( 'The browser automatically calculates the container height if the value is <strong>"0"</strong>.', 'uix-shortcodes' ),
-			'value'          => '0',
+			'value'          => 300,
 			'placeholder'    => '',
 			'type'           => 'short-text',
 			'default'        => array(
@@ -336,16 +336,16 @@ if ( $sid == -1 && is_admin() ) {
 					
 				   var uix_sc_container_result_vertical_center = ( uix_sc_container_vertical_center === false ) ? "vertical_center='"+uix_sc_container_vertical_center+"'" : '',
 					   uix_sc_container_result_bgcolor = ( uix_sc_container_bgcolor_other != '' ) ? "bgcolor='"+uix_sc_container_bgcolor_other+"'" : "bgcolor='"+uix_sc_container_bgcolor+"'",
-					   uix_sc_container_result_bgimage = ( uix_sc_container_bgimage != '' ) ? "bgimage='"+uix_sc_container_bgimage+"' bgimage_repeat='"+uix_sc_container_bgimage_repeat+"' bgimage_position='"+uix_sc_container_bgimage_position+"' bgimage_attachment='"+uix_sc_container_bgimage_attachment+"' bgimage_size='"+uix_sc_container_bgimage_size+"'" : "",
+					   uix_sc_container_result_bgimage = ( uix_sc_container_bgimage != '' ) ? "bgimage='"+encodeURI( uix_sc_container_bgimage )+"' bgimage_repeat='"+uix_sc_container_bgimage_repeat+"' bgimage_position='"+uix_sc_container_bgimage_position+"' bgimage_attachment='"+uix_sc_container_bgimage_attachment+"' bgimage_size='"+uix_sc_container_bgimage_size+"'" : "",
 					   uix_sc_container_result_bgcolor,
-					   uix_sc_container_result_height = ( uix_sc_container_height != '' && uix_sc_container_height != 0 ) ? uix_sc_container_height + 'px' : 'auto',
+					   uix_sc_container_result_height = ( uix_sc_container_height != '' && uix_sc_container_height != 0 ) ? uixscform_floatval( uix_sc_container_height ) + 'px' : 'auto',
 					   uix_sc_container_result_bordercolor = ( uix_sc_container_border_color_other != '' ) ? uix_sc_container_border_color_other : uix_sc_container_border_color,
-					   uix_sc_container_result_border = ( uix_sc_container_border_toggle === true ) ? "borderwidth='"+uix_sc_container_border_width+"px' borderstyle='"+uix_sc_container_border_style+"' bordercolor='"+uix_sc_container_result_bordercolor+"'" : '';
+					   uix_sc_container_result_border = ( uix_sc_container_border_toggle === true ) ? "borderwidth='"+uixscform_floatval( uix_sc_container_border_width )+"px' borderstyle='"+uix_sc_container_border_style+"' bordercolor='"+uix_sc_container_result_bordercolor+"'" : '';
 					
 					
 					
 					  
-					code = "[uix_container "+uix_sc_container_result_vertical_center+" parallax='"+uix_sc_container_parallax+"' class='"+uix_sc_container_class+"' height='"+uix_sc_container_result_height+"' margin_top='"+uix_sc_container_layout_margin_top+"' margin_bottom='"+uix_sc_container_layout_margin_bottom+"' margin_left='"+uix_sc_container_layout_margin_left+"' margin_right='"+uix_sc_container_layout_margin_right+"' padding_top='"+uix_sc_container_layout_padding_top+"' padding_bottom='"+uix_sc_container_layout_padding_bottom+"' padding_left='"+uix_sc_container_layout_padding_left+"' padding_right='"+uix_sc_container_layout_padding_right+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>";
+					code = "[uix_container "+uix_sc_container_result_vertical_center+" parallax='"+uix_sc_container_parallax+"' class='"+uix_sc_container_class+"' height='"+uix_sc_container_result_height+"' margin_top='"+uixscform_floatval( uix_sc_container_layout_margin_top )+"' margin_bottom='"+uixscform_floatval( uix_sc_container_layout_margin_bottom )+"' margin_left='"+uixscform_floatval( uix_sc_container_layout_margin_left )+"' margin_right='"+uixscform_floatval( uix_sc_container_layout_margin_right )+"' padding_top='"+uixscform_floatval( uix_sc_container_layout_padding_top )+"' padding_bottom='"+uixscform_floatval( uix_sc_container_layout_padding_bottom )+"' padding_left='"+uixscform_floatval( uix_sc_container_layout_padding_left )+"' padding_right='"+uixscform_floatval( uix_sc_container_layout_padding_right )+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>";
 
 					
 				/*--**************** Custom shortcode end ****************-- */

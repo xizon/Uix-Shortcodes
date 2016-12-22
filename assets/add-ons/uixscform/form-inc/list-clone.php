@@ -76,7 +76,7 @@ class UixSCFormType_ListClone {
                     <td>
 					
 						<div class="uixscform-box">
-						   <a href="javascript:" class="addrow table-link uixscform_btn_trigger-clone" data-targetid="'.$id.'" data-max="'.$max.'" data-clonecontent="'.$clone_content_js_var.'" data-removeclass="delrow-'.$id.'" data-appendid="'.$append_box_id.'" data-toggle-targetid="'.$toggle_target_id.'"  data-index="2">'.$btn_text.'</a>
+						   <a href="javascript:" class="addrow table-link-m uixscform_btn_trigger-clone" data-targetid="'.$id.'" data-max="'.$max.'" data-clonecontent="'.$clone_content_js_var.'" data-removeclass="delrow-'.$id.'" data-appendid="'.$append_box_id.'" data-toggle-targetid="'.$toggle_target_id.'"  data-index="2" title="'.esc_attr( $btn_text ).'"><i class="fa fa-plus"></i></a>
 						 </div>
 					
 					    <div class="uixscform-box">

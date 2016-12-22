@@ -11,6 +11,8 @@ $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content
  */
 $form_id = 'uix_sc_form_hello';
 
+$clone_max = 3; // Maximum of clone form 
+
 /**
  * Form Type
  */
@@ -372,8 +374,8 @@ $args =
 											'type'      => 'image'
 										), 
 										array(
-											'id'        => 'dynamic-row-uix_sc_listitem_imgtitle',
-											'type'      => 'text'
+											'id'        => 'dynamic-row-uix_sc_listitem_imgdesc',
+											'type'      => 'textarea'
 										), 
 										array(
 											'id'        => 'dynamic-row-uix_sc_listitem_imgicon',
@@ -407,7 +409,7 @@ $args =
 										
 
 									 ],
-									'max'                       => 3
+									'max'                       => $clone_max
 				                )
 									
 		),
@@ -429,13 +431,17 @@ $args =
 		
 		
 			array(
-				'id'             => 'uix_sc_listitem_imgtitle',
+				'id'             => 'uix_sc_listitem_imgdesc',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_listitem_imgtitle', /*class of list item */
+				'class'          => 'dynamic-row-uix_sc_listitem_imgdesc', /*class of list item */
 				'placeholder'    => __( 'Text', 'uix-shortcodes' ),
-				'type'           => 'text'
+				'type'           => 'textarea',
+				'default'        => array(
+										'row'     => 2,
+										'format'  => true
+									)
 			
 			),
 			
@@ -587,7 +593,7 @@ if ( $sid == -1 && is_admin() ) {
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	  	  
 		/* List Item - Register clone vars ( step 1) */
-		UixSCFormCore::reg_clone_vars( 'uix_sc_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgURL', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgtitle', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgicon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_radio', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_color', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_colormap', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_shorttext', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_icon', $form_html, 'toggle-row' ) );
+		UixSCFormCore::reg_clone_vars( 'uix_sc_list', UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgURL', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgdesc', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_imgicon', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_radio', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_color', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_colormap', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_shorttext', $form_html ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle', $form_html, 'toggle' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_url', $form_html, 'toggle-row' ).UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_listitem_toggle_icon', $form_html, 'toggle-row' ) );
 	
 		
 		?>
@@ -600,14 +606,14 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					/* List Item ( step 2)  */
-					var list_num = 3;
+					var list_num = <?php echo $clone_max; ?>;
 					
 			
 					var show_list_item = '';
 					for ( var i=0; i<=list_num; i++ ){
 						
 						var _uid = ( i == 0 ) ? '#' : '#'+i+'-',
-							_txt = $( _uid+'uix_sc_listitem_imgtitle' ).val(),
+							_desc = $( _uid+'uix_sc_listitem_imgdesc' ).val(),
 							_img = $( _uid+'uix_sc_listitem_imgURL' ).val(),
 							_icon = $( _uid+'uix_sc_listitem_imgicon' ).val(),
 							_radio = $( _uid+'uix_sc_listitem_radio' ).val(),
@@ -619,15 +625,15 @@ if ( $sid == -1 && is_admin() ) {
 							
 						
 						
-						if ( _txt != undefined )  show_list_item += _txt;   
-						if ( _img != undefined ) show_list_item += '( Image URL: '+_img+' )';   
-						if ( _icon != undefined ) show_list_item += '( Icon: '+_icon+' )';   
-						if ( _radio != undefined ) show_list_item += '( Radio: '+_radio+' )';   
-						if ( _color != undefined ) show_list_item += '( Color: '+_color+' )';   
-						if ( _colormap != undefined ) show_list_item += '( Custom Color : '+_colormap+' )';   
-						if ( _shorttext != undefined ) show_list_item += '( Units Txt : '+_shorttext+' )';   
-						if ( _toggle_url != undefined ) show_list_item += '( Toggle URL : '+_toggle_url+' )';   
-						if ( _toggle_icon != undefined ) show_list_item += '( Toggle Icon : '+_toggle_icon+' )';   
+						if ( _desc != undefined )  show_list_item += uixscform_shortcodeTextareaPrint( _desc );   
+						if ( _img != undefined && _img != '' ) show_list_item += '( Image URL: '+_img+' )';   
+						if ( _icon != undefined && _icon != '' ) show_list_item += '( Icon: '+_icon+' )';   
+						if ( _radio != undefined && _radio != '' ) show_list_item += '( Radio: '+_radio+' )';   
+						if ( _color != undefined && _color != '' ) show_list_item += '( Color: '+_color+' )';   
+						if ( _colormap != undefined && _colormap != '' ) show_list_item += '( Custom Color : '+_colormap+' )';   
+						if ( _shorttext != undefined && _shorttext != '' ) show_list_item += '( Units Txt : '+_shorttext+' )';   
+						if ( _toggle_url != undefined && _toggle_url != '' ) show_list_item += '( Toggle URL : '+_toggle_url+' )';   
+						if ( _toggle_icon != undefined && _toggle_icon != '' ) show_list_item += '( Toggle Icon : '+_toggle_icon+' )';   
 							
 						
 					}
@@ -679,16 +685,16 @@ if ( $sid == -1 && is_admin() ) {
 					_vhtml += '<hr>Text: '+uix_sc_text;
 					_vhtml += '<hr>Textarea: '+uix_sc_textarea;
 					_vhtml += '<hr>Short Text: <br>'+uix_sc_shorttext;
-					_vhtml += '<hr>Short Units Text: '+uix_sc_shortunitstext+uix_sc_shortunitstext_units;
+					_vhtml += '<hr>Short Units Text: '+uixscform_floatval( uix_sc_shortunitstext )+uix_sc_shortunitstext_units;
 					_vhtml += '<hr>Select: '+uix_sc_select;
-					_vhtml += '<hr>Upload Image: '+uix_sc_image;
-					_vhtml += '<hr>Toggle URL: '+uix_sc_toggle_url;
+					_vhtml += '<hr>Upload Image: '+encodeURI( uix_sc_image );
+					_vhtml += '<hr>Toggle URL: '+encodeURI( uix_sc_toggle_url );
 					_vhtml += '<hr>Icon: '+uix_sc_icon;
 					_vhtml += '<hr>Radio: '+uix_sc_radio;
 					_vhtml += '<hr>Slider: '+uix_sc_slider+uix_sc_slider_units;
 					_vhtml += '<hr>Color Map Value: '+uix_sc_colormap;
 					_vhtml += '<hr>Multiple Checkboxes: '+show_checkboxes;
-					_vhtml += '<hr>Padding: '+uix_sc_paddingdis_top+','+uix_sc_paddingdis_right+','+uix_sc_paddingdis_bottom+','+uix_sc_paddingdis_left;
+					_vhtml += '<hr>Padding: '+uixscform_floatval( uix_sc_paddingdis_top )+','+uixscform_floatval( uix_sc_paddingdis_right )+','+uixscform_floatval( uix_sc_paddingdis_bottom )+','+uixscform_floatval( uix_sc_paddingdis_left );
 					
 					
 					
@@ -697,7 +703,7 @@ if ( $sid == -1 && is_admin() ) {
 					_vhtml += '<hr>Checkbox: '+show_checkbox+'<br>';
 				
 	
-					code = "[uix_hello color='"+uix_sc_single_color+"']<p>" + _vhtml + "</p>[/uix_hello]";
+					code = "[uix_hello text='"+uixscform_shortcodeHTMLEcode( uix_sc_text )+"' color='"+uix_sc_single_color+"']" + uix_sc_textarea + " <p>" + _vhtml + "</p>[/uix_hello]";
 
 				/*--**************** Custom shortcode end ****************-- */
 				<?php echo UixSCFormCore::send_after(); ?> 

@@ -6,10 +6,13 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 $sid     = ( isset( $_POST[ 'sectionID' ] ) ) ? $_POST[ 'sectionID' ] : -1;
 $pid     = ( isset( $_POST[ 'postID' ] ) ) ? $_POST[ 'postID' ] : 0;
 $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content';
+
 /**
  * Form ID
  */
 $form_id = 'uix_sc_form_accordion';
+
+$clone_max = 30; // Maximum of clone form 
 
 /**
  * Form Type
@@ -75,7 +78,7 @@ $args =
 	
 
 									 ],
-									'max'                       => 30
+									'max'                       => $clone_max
 				                )
 									
 		),
@@ -145,7 +148,7 @@ if ( $sid == -1 && is_admin() ) {
 				/*--**************** Custom shortcode begin ****************-- */
 					
 					/* List Item ( step 2)  */
-					var list_num = 30;
+					var list_num = <?php echo $clone_max; ?>;
 					
 				
 					var show_list_item = '';
@@ -156,7 +159,7 @@ if ( $sid == -1 && is_admin() ) {
 							_con = $( _uid+'uix_sc_accordion_listitem_con' ).val();
 							
 						var _item_v_title = ( _txt != undefined ) ? _txt : '',
-							_item_v_con = ( _con != undefined ) ? uixscform_formatTextarea( _con ) : '',
+							_item_v_con = ( _con != undefined ) ? uixscform_shortcodeTextareaPrint( _con ) : '',
 							_item_v_first_open = '';
 							
 						if ( i == 0 ) {
