@@ -83,6 +83,11 @@
 					units       = $( '.uix-sc-bar', this).data( 'units' ),
 					iconName    = $( '.uix-sc-bar', this).data( 'icon' ),
 					boxheight   = $( '.uix-sc-bar-info', this).height();
+				
+				//Determines whether the width is 100%
+				if ( $( this ).find( '> div' ).attr( 'style' ).indexOf( '100%' ) >= 0 ) {
+					$( this ).css( 'width', '100%' );
+				}
 					
 				if ( boxheight > 0 ) $( this ).css( { 'height': linewidth + boxheight + 'px' } );
 				$( '.uix-sc-bar', this).css( { 'height': linewidth + 'px', 'width': '100%', 'background': trackcolor } );
@@ -93,6 +98,8 @@
 				
 				
 			});
+			
+			
 			
 			
 			$( '.uix-sc-bar-box-circular' ).each(function() {
