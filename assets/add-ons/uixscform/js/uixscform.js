@@ -79,9 +79,27 @@
 							result = result.replace( /{index}/g, '\['+widget_ID+'\]' );
 							
 							$obj.find( '.ajax-temp' ).html( result );
-							//Icon list with the jQuery AJAX method
+							
+							//Icon list
 							$( '.icon-selector' ).uixscform_iconSelector();
+							
+							//color picker
 							$( '.wp-color-input' ).wpColorPicker();
+							
+							
+							//toggle default
+							jQuery( '.uixscform_btn_trigger-toggleshow' ).each( function()  {
+								if ( jQuery( this ).closest( '.uixscform-box' ).find( 'input' ).val() == 1 ) {
+									jQuery( this ).uixscform_toggleshow();
+								}
+							});
+							jQuery( '.uixscform_btn_trigger-toggleswitch_checkbox' ).uixscform_toggleSwitchCheckboxStatus();
+							jQuery( '.uixscform_btn_trigger-toggleswitch_radio' ).uixscform_toggleSwitchRadioStatus();
+
+							//insert media
+							jQuery( '.uixscform_btn_trigger-upload' ).uixscform_mediaStatus();
+
+		
 							
 							//Close
 							$( '.uixscform-modal-box .close-uixscform-modal' ).on( 'click', function( e ) {

@@ -85,11 +85,13 @@ class UixSCFormType_Checkbox {
                         
                              <span class="uixscform-checkbox">
                               
-								 '.( !empty( $toggle_trigger_id ) ? '<div class="onoffswitch uixscform_btn_trigger-toggleswitch_checkbox" data-targetid="'.rtrim( $target_id, ',' ).'" data-list="0" data-targetid-clone="{multID}" data-linked-no-toggleid="'.rtrim( $toggle_no_id, ',' ).'">' : '' ).'
+								 '.( !empty( $toggle_trigger_id ) ? '<div class="onoffswitch uixscform_btn_trigger-toggleswitch_checkbox '.$checked_txt.'" data-targetid="'.rtrim( $target_id, ',' ).'" data-list="0" data-targetid-clone="{multID}" data-linked-no-toggleid="'.rtrim( $toggle_no_id, ',' ).'">' : '' ).'
 								 
-                                 '.( !empty( $id ) ? '<input id="'.$id.'" name="'.$name.'" value="'.$value.'" type="checkbox" class="uixscform-normal uixscform-check '.( !empty( $toggle_trigger_id ) ? 'onoffswitch-checkbox' : '' ).'" '.$checked_txt.'>' : '' ).'
+                                 '.( !empty( $id ) ? '<input value="" id="'.$id.'-checkbox" name="'.$name.'-checkbox" type="checkbox" data-this-targetid="'.$id.'" class="uixscform-normal uixscform-check uixscform_btn_trigger-normalchk '.( !empty( $toggle_trigger_id ) ? 'onoffswitch-checkbox' : '' ).'" '.$checked_txt.'>' : '' ).'
 								 
 								 '.( !empty( $toggle_trigger_id ) ? '<label class="onoffswitch-label" for="myonoffswitch"></label></div>' : '' ).'
+								 
+								 '.( !empty( $id ) ? '<input type="hidden" id="'.$id.'" name="'.$name.'" value="'.$value.'" >' : '' ).'
 
 
                              </span>
@@ -102,7 +104,7 @@ class UixSCFormType_Checkbox {
                 '.PHP_EOL;	
                 
             $jscode_vars = '
-                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'" ).is( ":checked" );'.PHP_EOL : '' ).'
+                '.( !empty( $id ) ? 'var '.$id.' = $( "#'.$id.'-checkbox" ).is( ":checked" );'.PHP_EOL : '' ).'
                 
             ';						
                 

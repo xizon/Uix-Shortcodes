@@ -33,7 +33,7 @@ $args =
 									'circular'  => 'circular',
 									'square'  => 'square'
 								),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
+			/* If the toggle of switch with radio is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 			                        array(
 										'trigger_id'           => 'uix_sc_bar_shape-circular', /* {item id}-{option id} */
@@ -58,7 +58,7 @@ $args =
 				'title'          => __( 'Bar Size', 'uix-shortcodes' ),
 				'desc'           => '',
 				'value'          => '120',
-				'class'          => 'toggle-row toggle-row-show uix_sc_bar_circular_size_toggle_class', /*class of toggle item */
+				'class'          => 'toggle-row uix_sc_bar_circular_size_toggle_class', /*class of toggle item */
 				'placeholder'    => '',
 				'type'           => 'short-text',
 				'default'        => array(
@@ -134,7 +134,7 @@ $args =
 			'default'        => array(
 									'checked'  => false
 				                ),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
+			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_bar_icon_toggle', /* {item id}-{option id} */
 									'toggle_class'  => [ 'uix_sc_bar_icon_toggle_class', 'uix_sc_bar_iconsize_toggle_class' ]
@@ -229,24 +229,6 @@ $args =
 		
 		),
 		
-		array(
-			'id'             => 'uix_sc_bar_margin',
-			'title'          => __( 'Margin (px)', 'uix-shortcodes' ),
-			'desc'           => __( 'Use the input fields below to customize the margin of progress bar.', 'uix-shortcodes' ),
-			'value'          => array(
-									'top'  => 25,
-									'right'  => 25,
-									'bottom'  => 0,
-									'left'  => 25
-								),
-			'placeholder'    => '',
-			'type'           => 'margin',
-			'default'        => array(
-									'units'  => 'px'
-								)
-		
-		),
-		
 
 	
 	]
@@ -285,7 +267,7 @@ if ( $sid == -1 && is_admin() ) {
 						 uix_sc_bar_result_size = ( uix_sc_bar_shape == 'circular' ) ? "size='"+uixscform_floatval( uix_sc_bar_circular_size )+"px'" : "size='"+uixscform_floatval( uix_sc_bar_square_size )+""+uix_sc_bar_square_size_units+"'";
 					
 		
-					code = "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uixscform_floatval( uix_sc_bar_percent )+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uixscform_floatval( uix_sc_bar_linewidth )+"' precsize='"+uixscform_floatval( uix_sc_bar_perc_icons_size )+"px' title='"+uixscform_shortcodeHTMLEcode( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+" top='"+uixscform_floatval( uix_sc_bar_margin_top )+"' bottom='"+uixscform_floatval( uix_sc_bar_margin_bottom )+"' left='"+uixscform_floatval( uix_sc_bar_margin_left )+"' right='"+uixscform_floatval( uix_sc_bar_margin_right )+"']"+uix_sc_bar_desc+"[/uix_progress_bar]";
+					code = "[uix_progress_bar barcolor='"+uix_sc_bar_result_color+"' trackcolor='"+uix_sc_bar_result_trackcolor+"' preccolor='"+uix_sc_bar_result_percent_icon_color+"' "+uix_sc_bar_result_size+" shape='"+uix_sc_bar_shape+"' percent='"+uixscform_floatval( uix_sc_bar_percent )+"' units='"+uix_sc_bar_show_units+"' linewidth='"+uixscform_floatval( uix_sc_bar_linewidth )+"' precsize='"+uixscform_floatval( uix_sc_bar_perc_icons_size )+"px' title='"+uixscform_shortcodeHTMLEcode( uix_sc_bar_title )+"' "+uix_sc_bar_result_icon+"]"+uix_sc_bar_desc+"[/uix_progress_bar]";
 					
 
 					

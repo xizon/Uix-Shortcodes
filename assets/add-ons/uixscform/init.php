@@ -903,7 +903,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					$jscode_vars .= UixSCFormType_Image::add( $args, 'js_vars' );
 		
 		
-					//toggle 1
+					//toggle
 					$field .= UixSCFormType_Toggle::add( $args, 'html' );
 					$jscode .= UixSCFormType_Toggle::add( $args, 'js' );
 					$jscode_vars .= UixSCFormType_Toggle::add( $args, 'js_vars' );
@@ -913,7 +913,10 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					$jscode .= UixSCFormType_ListClone::add( $args, 'js' );
 					$jscode_vars .= UixSCFormType_ListClone::add( $args, 'js_vars' );
 		
-		
+					//Note
+					$field .= UixSCFormType_Note::add( $args, 'html' );
+					$jscode .= UixSCFormType_Note::add( $args, 'js' );
+					$jscode_vars .= UixSCFormType_Note::add( $args, 'js_vars' );
 	
 	
 				} // end foreach

@@ -36,6 +36,8 @@ $args =
 			'type'           => 'text'
 		
 		),
+		
+		/*
 	    array(
 			'id'             => 'uix_sc_radio',
 			'title'          => __( 'Radio', 'uix-shortcodes' ),
@@ -50,7 +52,45 @@ $args =
 				                )
 		
 		),
+		*/
 
+	    array(
+			'id'             => 'uix_sc_radio',
+			'title'          => __( 'Radio', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'radio',
+			'default'        => array(
+									'1'  => 'boy',
+									'2'  => 'girl',
+									'3'  => 'private',
+								),
+			/* If the toggle of switch with radio is enabled, the target id require class like "toggle-row" */
+			'toggle'        => array(
+			                        array(
+										'trigger_id'           => 'uix_sc_radio-1', /* {item id}-{option id} */
+										'toggle_class'         => [ 'xxx_toggle_class' ],
+										'toggle_remove_class'  => [ 'yyy_toggle_class', 'zzz_toggle_class' ]
+
+									),
+			                        array(
+										'trigger_id'           => 'uix_sc_radio-2', /* {item id}-{option id} */
+										'toggle_class'         => [ 'yyy_toggle_class' ],
+										'toggle_remove_class'  => [ 'xxx_toggle_class', 'zzz_toggle_class' ]
+
+									),
+			                        array(
+										'trigger_id'           => 'uix_sc_radio-3', /* {item id}-{option id} */
+										'toggle_class'         => [ 'zzz_toggle_class' ],
+										'toggle_remove_class'  => [ 'xxx_toggle_class', 'yyy_toggle_class' ]
+
+									),
+									
+				                )	
+		
+		),		
+		
 	    array(
 			'id'             => 'uix_sc_slider',
 			'title'          => __( 'Slider', 'uix-shortcodes' ),
@@ -325,7 +365,7 @@ $args =
 			'default'        => array(
 									'checked'  => true
 				                ),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
+			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_checkbox_toggle', /* {item id}-{option id} */
 									'toggle_class'  => [ 'uix_sc_checkbox_toggle_text_class' ],
@@ -345,7 +385,7 @@ $args =
 				'title'          => '',
 				'desc'           => '',
 				'value'          => 1,
-				'class'          => 'toggle-row toggle-row-show uix_sc_checkbox_toggle_text_class', /*class of toggle item */
+				'class'          => 'toggle-row uix_sc_checkbox_toggle_text_class', /*class of toggle item */
 				'placeholder'    => '',
 				'type'           => 'short-text',
 				'default'        => array(
@@ -684,6 +724,7 @@ if ( $sid == -1 && is_admin() ) {
 					_vhtml = '';
 					_vhtml += '<hr>Text: '+uix_sc_text;
 					_vhtml += '<hr>Textarea: '+uix_sc_textarea;
+				    _vhtml += '<hr>ToggleSwitch: '+uixscform_toggleSwitchCheckboxVal( 'uix_sc_checkbox_toggle' );
 					_vhtml += '<hr>Short Text: <br>'+uix_sc_shorttext;
 					_vhtml += '<hr>Short Units Text: '+uixscform_floatval( uix_sc_shortunitstext )+uix_sc_shortunitstext_units;
 					_vhtml += '<hr>Select: '+uix_sc_select;

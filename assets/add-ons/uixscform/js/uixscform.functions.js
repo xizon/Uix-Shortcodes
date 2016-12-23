@@ -262,7 +262,19 @@ jQuery( document ).ready( function() {
 		//color picker
 		jQuery( '.wp-color-input' ).wpColorPicker();
 		
-			
+		//toggle default
+		jQuery( '.uixscform_btn_trigger-toggleshow' ).each( function()  {
+			if ( jQuery( this ).closest( '.uixscform-box' ).find( 'input' ).val() == 1 ) {
+				jQuery( this ).uixscform_toggleshow();
+			}
+		});
+		jQuery( '.uixscform_btn_trigger-toggleswitch_checkbox' ).uixscform_toggleSwitchCheckboxStatus();
+		jQuery( '.uixscform_btn_trigger-toggleswitch_radio' ).uixscform_toggleSwitchRadioStatus();
+
+		//insert media
+		jQuery( '.uixscform_btn_trigger-upload' ).uixscform_mediaStatus();
+
+
 		
 		 //remove input
 		 if ( cur_removeClass ){
@@ -463,8 +475,17 @@ jQuery( document ).ready( function() {
 				var cur_targetID          = jQuery( this ).attr( "data-targetid" ),
 					cur_linkedNoToggleID  = jQuery( this ).attr( "data-linked-no-toggleid" ),
 					cur_targetCloneID     = jQuery( this ).attr( "data-targetid-clone" ),
-					cur_list              = jQuery( this ).attr( "data-list" );
+					cur_list              = jQuery( this ).attr( "data-list" ),
+					cur_targetThisID      = '#' + jQuery( this ).attr( "data-this-targetid" );
 					
+				//status
+				if( !jQuery( this ).hasClass( 'checked' ) ) {
+					jQuery( cur_targetThisID ).val( 1 );
+				} else {
+					jQuery( cur_targetThisID ).val( 0 );
+				}
+				
+				
 				//Dynamic button id
 				if ( cur_targetCloneID != '{multID}' && cur_targetCloneID != '' ) {
 					cur_targetID = cur_targetCloneID;
@@ -536,6 +557,203 @@ jQuery( document ).ready( function() {
   };
 } )( jQuery );
 
+
+/*!
+ * ************************************
+ * Insert media  status
+ *************************************
+ */
+ ( function( $ ) {
+  jQuery.fn.uixscform_mediaStatus = function( options ) {
+		var settings=$.extend( {}, options );
+		return this.each( function() {
+
+			var cur_btnID       = '#' + jQuery( this ).attr( "data-btnid" ),
+			    cur_closebtnID  = '#' + jQuery( this ).attr( "data-closebtnid" ),
+				cur_targetID    = '#' + jQuery( this ).attr( "data-insert-img" ),
+				cur_previewID   = '#' + jQuery( this ).attr( "data-insert-preview" ),
+				cur_prop        = jQuery( this ).attr( "data-prop" ),
+				propIDPrefix    = cur_btnID.replace( '#', '' ),
+				imgvalue        = jQuery( cur_targetID ).val();
+
+		
+			if ( jQuery( cur_targetID ).length > 0 ) {
+
+				if ( imgvalue.length > 0 ) {
+
+					/*-- Show image properties and remove button --*/
+					jQuery( cur_closebtnID ).show().css( { 'display': 'block' } );
+					jQuery( cur_previewID ).find( 'img' ).attr( 'src', imgvalue );
+
+					if ( cur_prop ) {
+						jQuery( "." + propIDPrefix + '_repeat' ).show();
+						jQuery( "." + propIDPrefix + '_position' ).show();
+						jQuery( "." + propIDPrefix + '_attachment' ).show();
+						jQuery( "." + propIDPrefix + '_size' ).show();
+
+					}
+
+
+					/*-- Delete current picture --*/
+					 if ( cur_closebtnID ){
+						jQuery( document ).on( 'click', cur_closebtnID, function( e ) {
+							e.preventDefault();
+							var _targetImgContainer = jQuery( this ).attr( "data-insert-img" );
+							var _targetPreviewContainer = jQuery( this ).attr( "data-insert-preview" );
+
+							jQuery( "#" + _targetImgContainer ).val( '' );
+							jQuery( "#" + _targetPreviewContainer ).find( 'img' ).attr( 'src', '' );
+							jQuery( "#" + _targetPreviewContainer ).hide();
+
+							//Upload container
+							if ( _targetPreviewContainer != '' && _targetPreviewContainer != 'none' ) {
+								jQuery( cur_btnID ).parent( '.uixscform-upbtn-container' ).css( 'height','40px' );
+							}
+
+
+							jQuery( this ).hide();
+
+							//Hide image properties
+							if ( cur_prop ) {
+								jQuery( "." + propIDPrefix + '_repeat' ).hide();
+								jQuery( "." + propIDPrefix + '_position' ).hide();
+								jQuery( "." + propIDPrefix + '_attachment' ).hide();
+								jQuery( "." + propIDPrefix + '_size' ).hide();
+							}
+
+
+						} );
+
+					 }
+
+
+
+				}
+
+			}
+
+
+
+		} );
+
+  };
+} )( jQuery );
+
+
+
+/*!
+ * ************************************
+ * Toggle of switch with checkbox status
+ *************************************
+ */
+ ( function( $ ) {
+  jQuery.fn.uixscform_toggleSwitchCheckboxStatus = function( options ) {
+		var settings=$.extend( {}, options );
+		return this.each( function() {
+
+			var cur_targetID          = jQuery( this ).attr( "data-targetid" ),
+				cur_linkedNoToggleID  = jQuery( this ).attr( "data-linked-no-toggleid" ),
+				cur_targetCloneID     = jQuery( this ).attr( "data-targetid-clone" ),
+				cur_list              = jQuery( this ).attr( "data-list" ),
+				cur_targetThisID      = '#' + jQuery( this ).attr( "data-this-targetid" );
+
+			//Dynamic button id
+			if ( cur_targetCloneID != '{multID}' && cur_targetCloneID != '' ) {
+				cur_targetID = cur_targetCloneID;
+			}
+
+			if ( cur_list == 1 ) {
+				//Dynamic elements
+
+				var trid = jQuery( cur_targetID ).parent().parent( '.toggle-row' );
+
+				if( jQuery( this ).hasClass( 'checked' ) ) {
+					trid.show();
+					trid.find( '.uixscform-box' ).show();
+					jQuery( cur_targetID ).addClass( 'active' );
+
+				}
+
+
+			} else {
+
+				var trid = jQuery( cur_targetID );
+				if( jQuery( this ).hasClass( 'checked' ) ) {
+					trid.show();
+					trid.find( 'th' ).find( 'label' ).show();
+					trid.find( 'td' ).find( '.uixscform-box' ).show();
+
+				}
+
+
+			}
+
+			//if this toggle contains another toggle, please specifies "toggle_not_class" in order that default hiding form is still valid
+			if ( cur_linkedNoToggleID != '' ) {
+				jQuery( cur_linkedNoToggleID ).hide();
+			}
+			
+
+		} );
+
+  };
+} )( jQuery );
+
+
+
+/*!
+ * ************************************
+ * Toggle of switch with radio status
+ *************************************
+ */
+ ( function( $ ) {
+  jQuery.fn.uixscform_toggleSwitchRadioStatus = function( options ) {
+		var settings=$.extend( {}, options );
+		return this.each( function() {
+
+			var cur_targetID          = jQuery( this ).attr( "data-targetid" ),
+				cur_removeID          = jQuery( this ).attr( "data-remove" ),
+				cur_targetCloneID     = jQuery( this ).attr( "data-targetid-clone" ),
+				cur_list              = jQuery( this ).attr( "data-list" ),
+				cur_value             = jQuery( this ).closest( '.uixscform-box' ).find( 'input' ).val();
+
+			if ( cur_value == jQuery( this ).attr( 'data-value' ) ) {
+
+				//Dynamic button id
+				if ( cur_targetCloneID != '{multID}' && cur_targetCloneID != '' ) {
+					cur_targetID = cur_targetCloneID;
+				}
+
+
+				if ( cur_list == 1 ) {
+					//Dynamic elements
+
+					jQuery( cur_targetID ).parent().parent( '.toggle-row' ).show();
+					jQuery( cur_targetID ).parent().parent( '.toggle-row' ).find( '.uixscform-box' ).show();
+
+					jQuery( cur_removeID ).parent().parent( '.toggle-row' ).hide();
+					jQuery( cur_removeID ).parent().parent( '.toggle-row' ).find( '.uixscform-box' ).hide();
+
+
+				} else {
+
+					jQuery( cur_targetID ).show();
+					jQuery( cur_targetID ).find( 'th' ).find( 'label' ).show();
+					jQuery( cur_targetID ).find( 'td' ).find( '.uixscform-box' ).show();
+
+					jQuery( cur_removeID ).hide();
+					jQuery( cur_removeID ).find( 'th' ).find( 'label' ).hide();
+					jQuery( cur_removeID ).find( 'td' ).find( '.uixscform-box' ).hide();
+
+				}
+
+			}
+
+
+		} );
+
+  };
+} )( jQuery );
 
 /*! 
  * ************************************
@@ -694,15 +912,14 @@ function uixscform_shortcodeUsableHtmlToAttr( str ) {
  */	
 function uixscform_shortcodeHTMLEcode( str ) {
 	if ( typeof( str ) == 'string' && str.length > 0 ) {
-		var pattern = new RegExp("[`~!+%@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）&;|{}【】\"；：”“'。，、？]");
-		var rs = ""; 
-		for (var i = 0; i < str.length; i++) { 
-			rs = rs+str.substr( i, 1 ).replace( pattern, '' ); 
-		} 
+	
+		return str.replace(/\"/g, '' )
+			     .replace(/\'/g, '' )
+	          	 .replace(/&quot;/g, '' )
+			     .replace(/&apos;/g, '' );
 
-		rs = rs.replace(/ /g, '-').toLowerCase();
-		return rs;
-
+	} else {
+		return 'undefined';
 	}
 }
 
@@ -909,6 +1126,32 @@ function uixscform_closeWin() {
 		} );
 		
 	} ) ( jQuery );
+};
+
+
+
+/*! 
+ * ************************************
+ * Returns value for toggle of switch with checkbox 
+ *************************************
+ */	
+function uixscform_toggleSwitchCheckboxVal( id ) {
+	var result;
+	( function( $ ) {
+	"use strict";
+		$( function() {
+			
+			if( $( 'input[data-this-targetid="'+id+'"]' ).parent( '.onoffswitch' ).hasClass( 'checked' ) ) {
+				result = true;
+			} else {
+				result = false;
+			}		
+
+		} );
+		
+	} ) ( jQuery );
+	
+	return result;
 };
 
 

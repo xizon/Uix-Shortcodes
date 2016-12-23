@@ -47,7 +47,7 @@ $args =
 									'grand-fill-yellow'   => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-1.jpg',
 									'grand'               => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-2.jpg',
 				                ),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
+			/* If the toggle of switch with radio is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 			                        array(
 										'trigger_id'           => 'uix_sc_heading_style-grand-fill-yellow', /* {item id}-{option id} */
@@ -74,7 +74,7 @@ $args =
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'toggle-row toggle-row-show uix_sc_heading_fillbg_toggle_class', /*class of toggle item */
+				'class'          => 'toggle-row uix_sc_heading_fillbg_toggle_class', /*class of toggle item */
 				'placeholder'    => __( 'Image for Text Fill', 'uix-shortcodes' ),
 				'type'           => 'image',
 				'default'        => array(
@@ -198,7 +198,7 @@ $args =
 			'default'        => array(
 									'checked'  => false
 							),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
+			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_heading_line', /* {item id}-{option id} */
 									'toggle_class'  => [ 'uix_sc_heading_line_width_toggle_class', 'uix_sc_heading_line_height_toggle_class' ]
@@ -247,7 +247,7 @@ $args =
 			'default'        => array(
 									'checked'  => false
 				                ),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
+			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_heading_desc_toggle', /* {item id}-{option id} */
 									'toggle_class'  => [ 'uix_sc_heading_desc_toggle_class', 'uix_sc_heading_desc_size_toggle_class', 'uix_sc_heading_desc_color_toggle_class', 'uix_sc_heading_desc_color_toggle_toggle_class', 'uix_sc_heading_desc_color_other_class_class', 'uix_sc_heading_desc_opacity_toggle_class' ],

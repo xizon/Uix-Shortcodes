@@ -31,13 +31,40 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'radio-image',
 			'default'        => array(
-									'center'        => UixShortcodes::plug_directory() .'assets/images/container/style-1.jpg',
+									'boxed'        => UixShortcodes::plug_directory() .'assets/images/container/style-1.jpg',
 									'fullwidth'     => UixShortcodes::plug_directory() .'assets/images/container/style-2.jpg',
-				                )
+				                ),
+			/* If the toggle of switch with radio is enabled, the target id require class like "toggle-row" */
+			'toggle'        => array(
+			                        array(
+										'trigger_id'           => 'uix_sc_container_layout-boxed', /* {item id}-{option id} */
+										'toggle_class'         => [ 'uix_sc_container_layout_boxedtip_toggle_class' ],
+										'toggle_remove_class'  => [ ]
+
+									),
+									
+			                        array(
+										'trigger_id'           => 'uix_sc_container_layout-fullwidth', /* {item id}-{option id} */
+										'toggle_class'         => [ ],
+										'toggle_remove_class'  => [ 'uix_sc_container_layout_boxedtip_toggle_class' ]
+
+									),	
+										
+									
+				                )	
 							
 		),
 		
-
+		
+		array(
+			'id'             => 'uix_sc_container_layout_boxedtip',
+		    'class'          => 'toggle-row uix_sc_container_layout_boxedtip_toggle_class', /*class of toggle item */
+			'desc'           => sprintf( __( 'You can custom the boxed width of the container for Uix Shortcodes stylesheets. <a target="_blank" href="%1$s">click here to custom</a>', 'uix-shortcodes' ), admin_url( 'options-general.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ),
+			'type'           => 'note',
+		
+		
+		),	
+		
 
 		array(
 			'id'             => 'uix_sc_container_height',
@@ -147,7 +174,7 @@ $args =
 			'default'        => array(
 									'checked'  => false
 				                ),
-			/* if show the target item, the target id require class like "toggle-row toggle-row-show" */
+			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_container_border_toggle', /* {item id}-{option id} */
 									'toggle_class'  => [ 'uix_sc_container_border_width_toggle_class', 'uix_sc_container_border_color_toggle_class', 'uix_sc_container_border_style_toggle_class', 'uix_sc_container_border_color_toggle_toggle_class', 'uix_sc_container_border_color_other_class_class' ],
@@ -252,17 +279,6 @@ $args =
 									'step'  => 0.1
 				                )
 		
-		),	
-			
-			
-		array(
-			'id'             => 'uix_sc_container_class',
-			'title'          => __( 'Class', 'uix-shortcodes' ),
-			'desc'           => '',
-			'value'          => '',
-			'placeholder'    => '',
-			'type'           => 'text'
-		
 		),
 		
 		
@@ -340,12 +356,11 @@ if ( $sid == -1 && is_admin() ) {
 					   uix_sc_container_result_bgcolor,
 					   uix_sc_container_result_height = ( uix_sc_container_height != '' && uix_sc_container_height != 0 ) ? uixscform_floatval( uix_sc_container_height ) + 'px' : 'auto',
 					   uix_sc_container_result_bordercolor = ( uix_sc_container_border_color_other != '' ) ? uix_sc_container_border_color_other : uix_sc_container_border_color,
-					   uix_sc_container_result_border = ( uix_sc_container_border_toggle === true ) ? "borderwidth='"+uixscform_floatval( uix_sc_container_border_width )+"px' borderstyle='"+uix_sc_container_border_style+"' bordercolor='"+uix_sc_container_result_bordercolor+"'" : '';
+					   uix_sc_container_result_border = ( uixscform_toggleSwitchCheckboxVal( 'uix_sc_container_border_toggle' ) === true ) ? "borderwidth='"+uixscform_floatval( uix_sc_container_border_width )+"px' borderstyle='"+uix_sc_container_border_style+"' bordercolor='"+uix_sc_container_result_bordercolor+"'" : '';
 					
-					
-					
-					  
-					code = "[uix_container "+uix_sc_container_result_vertical_center+" parallax='"+uix_sc_container_parallax+"' class='"+uix_sc_container_class+"' height='"+uix_sc_container_result_height+"' margin_top='"+uixscform_floatval( uix_sc_container_layout_margin_top )+"' margin_bottom='"+uixscform_floatval( uix_sc_container_layout_margin_bottom )+"' margin_left='"+uixscform_floatval( uix_sc_container_layout_margin_left )+"' margin_right='"+uixscform_floatval( uix_sc_container_layout_margin_right )+"' padding_top='"+uixscform_floatval( uix_sc_container_layout_padding_top )+"' padding_bottom='"+uixscform_floatval( uix_sc_container_layout_padding_bottom )+"' padding_left='"+uixscform_floatval( uix_sc_container_layout_padding_left )+"' padding_right='"+uixscform_floatval( uix_sc_container_layout_padding_right )+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>";
+			
+				
+					code = "[uix_container "+uix_sc_container_result_vertical_center+" parallax='"+uix_sc_container_parallax+"' height='"+uix_sc_container_result_height+"' margin_top='"+uixscform_floatval( uix_sc_container_layout_margin_top )+"' margin_bottom='"+uixscform_floatval( uix_sc_container_layout_margin_bottom )+"' margin_left='"+uixscform_floatval( uix_sc_container_layout_margin_left )+"' margin_right='"+uixscform_floatval( uix_sc_container_layout_margin_right )+"' padding_top='"+uixscform_floatval( uix_sc_container_layout_padding_top )+"' padding_bottom='"+uixscform_floatval( uix_sc_container_layout_padding_bottom )+"' padding_left='"+uixscform_floatval( uix_sc_container_layout_padding_left )+"' padding_right='"+uixscform_floatval( uix_sc_container_layout_padding_right )+"' "+uix_sc_container_result_bgimage+" "+uix_sc_container_result_border+" "+uix_sc_container_result_bgcolor+" layout='"+uix_sc_container_layout+"' ]<p><?php _e( 'Content here...', 'uix-shortcodes' ); ?></p>[/uix_container]<br>";
 
 					
 				/*--**************** Custom shortcode end ****************-- */

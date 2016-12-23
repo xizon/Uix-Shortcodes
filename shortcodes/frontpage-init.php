@@ -75,7 +75,6 @@ function uix_sc_fun_container( $atts, $content = null ){
 		  'padding_left' => 0,
 		  'padding_right' => 0,
 		  'height' => 'auto',
-		  'class' => '',
 		  'parallax' => 0,
 		  'borderwidth' => '1px',
 		  'bordercolor' => '',
@@ -106,7 +105,7 @@ function uix_sc_fun_container( $atts, $content = null ){
 	}
 
   
-   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).' '.$class.'" style="'.( $height != 'auto' ? 'height:calc('.$height.' + '.($padding_top+$padding_bottom).'px)' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$border_css.'"><div class="uix-sc-container-body" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;">'.$now_content.'</div></div></div>';	
+   $return_string = '<div id="uix-sc-container-wrapper-'.$id.'" class="uix-sc-container-wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container-'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container-fullwidth' : 'uix-sc-container-boxed' ).'" style="'.( $height != 'auto' ? 'height:calc('.$height.' + '.($padding_top+$padding_bottom).'px)' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$border_css.'"><div class="uix-sc-container-body" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;">'.$now_content.'</div></div></div>';	
 	
 
 	
@@ -133,10 +132,6 @@ function uix_sc_fun_progress_bar( $atts, $content = null ){
 		  'precsize' => '12px',
 		  'title' => '',
 		  'icon' => '',
-		  'top' => 25,
-		  'bottom' => 0,
-		  'left' => 25,
-		  'right' => 25  
 	
 	 ), $atts ) );
 	 
@@ -148,19 +143,21 @@ function uix_sc_fun_progress_bar( $atts, $content = null ){
    $return_string = '
    
         '.( $shape == 'square' ? '
-			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-square" style="margin:'.$top.'px '.$right.'px '.$bottom.'px '.$left.'px; width:'.$size.';">
-				<div class="uix-sc-bar-info">
-					<h3 class="uix-sc-bar-title">'.$title.'</h3>
-					<div class="uix-sc-bar-desc">'.$content.'</div>
-				</div>
-				<div class="uix-sc-bar" data-percent="'.$percent.'" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'" data-icon="'.UixShortcodes::output_icon_class( $icon_name ).'">
-					<span class="uix-sc-bar-percent"></span>
-					<span class="uix-sc-bar-placeholder">0</span>
-					<span class="uix-sc-bar-text"  style="color:'.$preccolor.';font-size:'.$precsize.';">'.( !empty( $icon_name )  ? '<i class="'.UixShortcodes::output_icon_class( $icon_name ).'"></i>' : ''.$percent.''.$units.'' ).'</span>
+			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-square">
+			    <div style="width:'.$size.';">
+					<div class="uix-sc-bar-info">
+						<h3 class="uix-sc-bar-title">'.$title.'</h3>
+						<div class="uix-sc-bar-desc">'.$content.'</div>
+					</div>
+					<div class="uix-sc-bar" data-percent="'.$percent.'" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'" data-icon="'.UixShortcodes::output_icon_class( $icon_name ).'">
+						<span class="uix-sc-bar-percent"></span>
+						<span class="uix-sc-bar-placeholder">0</span>
+						<span class="uix-sc-bar-text"  style="color:'.$preccolor.';font-size:'.$precsize.';">'.( !empty( $icon_name )  ? '<i class="'.UixShortcodes::output_icon_class( $icon_name ).'"></i>' : ''.$percent.''.$units.'' ).'</span>
+					</div>
 				</div>
 			</div><!-- /.uix-sc-bar-box-square -->
 		' : '
-			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-circular" style="margin: '.$top.'px '.$right.'px '.$bottom.'px '.$left.'px;">
+			<div id="uix-sc-bar-box-'.$id.'" class="uix-sc-bar-box uix-sc-bar-box-circular">
 				<div class="uix-sc-bar" data-percent="'.$percent.'" style="width:'.$size.';">
 					<span class="uix-sc-bar-percent" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'"  data-icon="'.UixShortcodes::output_icon_class( $icon_name ).'" style="color:'.$preccolor.';font-size:'.$precsize.';"></span>
 				</div>
