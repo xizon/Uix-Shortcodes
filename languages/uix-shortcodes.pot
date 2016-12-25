@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Fri Dec 23 2016 15:01:44 GMT+0800 (CST)\n"
+"POT-Revision-Date: Mon Dec 26 2016 01:52:40 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,42 +42,42 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:276 ../uix-shortcodes.php:388 ../uix-shortcodes.php:389
+#: ../uix-shortcodes.php:308 ../uix-shortcodes.php:420 ../uix-shortcodes.php:421
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:277 ../helper/settings.php:116
+#: ../uix-shortcodes.php:309 ../helper/settings.php:116
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:375 ../helper/settings.php:97
+#: ../uix-shortcodes.php:407 ../helper/settings.php:97
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: ../uix-shortcodes.php:376 ../shortcodes/editor/tinymce-plugin-lang.php:16
+#: ../uix-shortcodes.php:408 ../shortcodes/editor/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: ../uix-shortcodes.php:396 ../uix-shortcodes.php:397
+#: ../uix-shortcodes.php:428 ../uix-shortcodes.php:429
 msgid "Custom CSS"
 msgstr ""
 
-#: ../uix-shortcodes.php:404 ../uix-shortcodes.php:405
+#: ../uix-shortcodes.php:436 ../uix-shortcodes.php:437
 msgid "Helper"
 msgstr ""
 
-#: ../uix-shortcodes.php:742
+#: ../uix-shortcodes.php:789
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/init.php:534
+#: ../assets/add-ons/uixscform/init.php:539
 msgid "Cancel"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/init.php:534
+#: ../assets/add-ons/uixscform/init.php:539
 msgid "Save"
 msgstr ""
 

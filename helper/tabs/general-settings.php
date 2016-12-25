@@ -69,7 +69,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
             
           </tr>
           <?php
-		  if ( UixShortcodes::sc_css_file_exists() ) {
+		  if ( UixShortcodes::core_css_file_exists() ) {
 			  $stylechoose = 'style="display:none"';
 		  } else {
 			  $stylechoose = '';  

@@ -30,7 +30,8 @@ class UixShortcodes {
 	 */
 	public static function init() {
 		
-		self::uixscform_core();
+		self::setup_constants();
+		self::includes();
 		
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'actions_links' ), -10 );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ), 999 );
@@ -47,6 +48,37 @@ class UixShortcodes {
 		
 	}
 
+	/**
+	 * Setup plugin constants.
+	 *
+	 */
+	public static  function setup_constants() {
+
+		// Plugin Folder Path.
+		if ( ! defined( 'UIX_SHORTCODES_PLUGIN_DIR' ) ) {
+			define( 'UIX_SHORTCODES_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+		}
+
+		// Plugin Folder URL.
+		if ( ! defined( 'UIX_SHORTCODES_PLUGIN_URL' ) ) {
+			define( 'UIX_SHORTCODES_PLUGIN_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+		}
+
+		// Plugin Root File.
+		if ( ! defined( 'UIX_SHORTCODES_PLUGIN_FILE' ) ) {
+			define( 'UIX_SHORTCODES_PLUGIN_FILE', trailingslashit( __FILE__ ) );
+		}
+	}
+	
+	/*
+	 * Include required files.
+	 *
+	 *
+	 */
+	public static function includes() {
+		require_once UIX_SHORTCODES_PLUGIN_DIR.'assets/add-ons/uixscform/init.php';
+	}
+	
 	
 	
 	/*
@@ -88,10 +120,10 @@ class UixShortcodes {
 		wp_enqueue_script( 'bgParallax', self::plug_directory() .'assets/add-ons/parallax/jquery.bgParallax.js', array( 'jquery' ), '1.1.3', true );		
 								
 		//Add shortcodes style to Front-End
-		wp_enqueue_style( self::PREFIX . '-shortcodes', self::sc_css_file(), false, self::ver(), 'all');
+		wp_enqueue_style( self::PREFIX . '-shortcodes', self::core_css_file(), false, self::ver(), 'all');
 	
 		//Main stylesheets and scripts to Front-End
-		wp_enqueue_script( self::PREFIX . '-shortcodes', self::sc_js_file(), array( 'jquery' ), self::ver());
+		wp_enqueue_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver());
 
 	}
 	
@@ -238,7 +270,7 @@ class UixShortcodes {
 				break;
 		}
 		
-		$folder = WP_PLUGIN_DIR.'/'.self::get_slug().'/shortcodes/panel/';
+		$folder = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/panel/';
 		$file   = $folder.''.$newname.'.php';
 		
 		if ( file_exists( $file ) ) require_once $file;
@@ -291,7 +323,7 @@ class UixShortcodes {
 	
 		  if( $currentScreen->base === "post" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 			
-				require_once 'shortcodes/backstage-init.php';
+				require_once UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/backstage-init.php';
 		
 		  } 
 	
@@ -334,7 +366,7 @@ class UixShortcodes {
 	 */
 	public static function do_my_shortcodes() {
 	
-		  require_once 'shortcodes/frontpage-init.php';
+		  require_once UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/frontpage-init.php';
 	
 	}
 	
@@ -421,7 +453,7 @@ class UixShortcodes {
 	 */
 	 public static function load_helper() {
 		 
-		 require_once 'helper/settings.php';
+		 require_once UIX_SHORTCODES_PLUGIN_DIR.'helper/settings.php';
 	 }
 	
 	
@@ -529,7 +561,25 @@ class UixShortcodes {
 	 *
 	 */
 	public static function inc_str( $str, $incstr ) {
-	    
+		
+		$incstr = str_replace( '(', '\(',
+				  str_replace( ')', '\)',
+				  str_replace( '|', '\|',
+				  str_replace( '*', '\*',
+				  str_replace( '+', '\+',
+			      str_replace( '.', '\.',
+				  str_replace( '[', '\[',
+				  str_replace( ']', '\]',
+				  str_replace( '?', '\?',
+				  str_replace( '/', '\/',
+				  str_replace( '^', '\^',
+			      str_replace( '{', '\{',
+				  str_replace( '}', '\}',	
+				  str_replace( '$', '\$',
+			      str_replace( '\\', '\\\\',
+				  $incstr 
+				  )))))))))))))));
+			
 		if ( !empty( $incstr ) ) {
 			if ( preg_match( '/'.$incstr.'/', $str ) ) {
 				return true;
@@ -669,15 +719,27 @@ class UixShortcodes {
 	
 	
 	/*
-	 * Callback the plugin directory
+	 * Callback the plugin directory URL
 	 *
 	 *
 	 */
 	public static function plug_directory() {
 
-	  return plugin_dir_url( __FILE__ );
+	  return UIX_SHORTCODES_PLUGIN_URL;
 
 	}
+	
+	/*
+	 * Callback the plugin directory
+	 *
+	 *
+	 */
+	public static function plug_filepath() {
+
+	  return UIX_SHORTCODES_PLUGIN_DIR;
+
+	}	
+	
 	
 	/*
 	 * Returns plugin slug
@@ -698,19 +760,17 @@ class UixShortcodes {
 	 * Example:
 	 
             $output = "";
-			$wpnonce_url = 'edit.php?post_type='.UixShortcodes::get_slug().'&page='.UixShortcodes::HELPER;
-			$wpnonce_action = 'temp-filesystem-nonce';
-
-            if ( !empty( $_POST ) ) {
+			
+            if ( !empty( $_POST ) && check_admin_referer( 'custom_action_nonce') ) {
 				
 				
-                  $output = UixShortcodes::wpfilesystem_write_file( $wpnonce_action, $wpnonce_url, 'helper/tabs/', '1.txt', 'This is test.' );
+                  $output = UixShortcodes::wpfilesystem_write_file( 'custom_action_nonce', 'admin.php?page='.UixShortcodes::HELPER.'&tab=???', 'helper/', 'debug.txt', 'This is test.' );
 				  echo $output;
 			
             } else {
 				
-				wp_nonce_field( $wpnonce_action );
-				echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Click This Button to Copy Files', 'uix-shortcodes' ).'"  /></p>';
+				wp_nonce_field( 'custom_action_nonce' );
+				echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Click This Button to Copy Files', 'uix-pagebuilder' ).'"  /></p>';
 				
 			}
 	 *
@@ -736,7 +796,7 @@ class UixShortcodes {
 		
 		  $url = wp_nonce_url( $nonce, $nonceaction );
 		
-		  $contentdir = trailingslashit( WP_PLUGIN_DIR .'/'.self::get_slug() ).$path; 
+		  $contentdir = UIX_SHORTCODES_PLUGIN_DIR.$path; 
 		  
 		  if ( self::wpfilesystem_connect_fs( $url, '', $contentdir, '' ) ) {
 			  
@@ -756,7 +816,7 @@ class UixShortcodes {
 		  $url = wp_nonce_url( $nonce, $nonceaction );
 	
 		  if ( $type == 'plugin' ) {
-			  $contentdir = trailingslashit( WP_PLUGIN_DIR .'/'.self::get_slug() ).$path; 
+			  $contentdir = UIX_SHORTCODES_PLUGIN_DIR.$path; 
 		  } 
 		  if ( $type == 'theme' ) {
 			  $contentdir = trailingslashit( get_template_directory() ).$path; 
@@ -823,7 +883,7 @@ class UixShortcodes {
 	 * Determine whether the css core file exists
 	 *
 	 */
-	public static function sc_css_file_exists() {
+	public static function core_css_file_exists() {
 		  $newFilePath      = get_stylesheet_directory() . '/uix-shortcodes-style.css';
 	      $newFilePath2     = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
 		  if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
@@ -838,7 +898,7 @@ class UixShortcodes {
 	 * Returns .css file name of custom shortcodes 
 	 *
 	 */
-	public static function sc_css_file( $type = 'uri' ) {
+	public static function core_css_file( $type = 'uri' ) {
 		
 		//default style
 		$validPath    = self::plug_directory() .'assets/css/shortcodes.css';
@@ -848,7 +908,7 @@ class UixShortcodes {
 		//shortcodes themes
 		$shortcodes_style = get_option( 'uix_sc_opt_style', 'elegant' );
 		$filenames        = array();
-		$filepath         = WP_PLUGIN_DIR .'/'.self::get_slug(). '/assets/css/';
+		$filepath         = UIX_SHORTCODES_PLUGIN_DIR. 'assets/css/';
 		
 		foreach ( glob( dirname(__FILE__). "/assets/css/shortcodes-*") as $file ) {
 		    $filenames[] = str_replace( '.css', '', str_replace( 'shortcodes-', '', str_replace( dirname(__FILE__). "/assets/css/", '', $file ) ) );
@@ -860,14 +920,13 @@ class UixShortcodes {
 				break;
 			}
 		}	
-		WP_PLUGIN_DIR.'/'.self::get_slug().'/assets/css/shortcodes-'.$filename.'.css';
 		
 		
 		if ( self::inc_str( $validPath, $shortcodes_style ) ) {
-			if ( $type == 'dir' ) $validPath = str_replace( trailingslashit( self::plug_directory() ), trailingslashit( WP_PLUGIN_DIR.'/'.self::get_slug() ), $validPath );
+			if ( $type == 'dir' ) $validPath = str_replace( trailingslashit( self::plug_directory() ), UIX_SHORTCODES_PLUGIN_DIR, $validPath );
 			if ( $type == 'name' ) $validPath = 'shortcodes-'.$shortcodes_style.'.css';
 		} else {
-			if ( $type == 'dir' ) $validPath = str_replace( '-'.$shortcodes_style, '', str_replace( trailingslashit( self::plug_directory() ), trailingslashit( WP_PLUGIN_DIR.'/'.self::get_slug() ), $validPath ) );
+			if ( $type == 'dir' ) $validPath = str_replace( '-'.$shortcodes_style, '', str_replace( trailingslashit( self::plug_directory() ), UIX_SHORTCODES_PLUGIN_DIR, $validPath ) );
 			if ( $type == 'name' ) $validPath = 'shortcodes.css';	
 		}
 		
@@ -905,7 +964,7 @@ class UixShortcodes {
 	 * Returns .js file name of custom shortcodes script 
 	 *
 	 */
-	public static function sc_js_file() {
+	public static function core_js_file() {
 		
 		$validPath    = self::plug_directory() .'assets/js/shortcodes.js';
 		$newFilePath  = get_stylesheet_directory() . '/uix-shortcodes-custom.js';
@@ -989,19 +1048,6 @@ class UixShortcodes {
 
 	}
 	
-	
-	
-	
-	/*
-	 * Uix SC Form Core
-	 *
-	 *
-	 */
-	public static function uixscform_core() {
-	
-		require_once 'assets/add-ons/uixscform/init.php';
-
-	}
 	
 	
 	/*

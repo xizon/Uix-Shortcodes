@@ -63,10 +63,10 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	
 	$newFilePath                = get_stylesheet_directory() . '/uix-shortcodes-style.css';
 	$newFilePath2               = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
-	$org_cssname_uix_shortcodes = UixShortcodes::sc_css_file( 'name' );
-	$org_csspath_uix_shortcodes = UixShortcodes::sc_css_file();
+	$org_cssname_uix_shortcodes = UixShortcodes::core_css_file( 'name' );
+	$org_csspath_uix_shortcodes = UixShortcodes::core_css_file();
 	
-	if ( UixShortcodes::sc_css_file_exists() ) {
+	if ( UixShortcodes::core_css_file_exists() ) {
 		$filetype = 'theme';
 		
 		//CSS file directory
@@ -86,13 +86,13 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	// capture output from WP_Filesystem
 	ob_start();
 	
-		UixShortcodes::wpfilesystem_read_file( 'css-filesystem-nonce', 'edit.php?post_type='.UixShortcodes::get_slug().'&page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $filetype );
+		UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $filetype );
 		$filesystem_uix_shortcodes_out = ob_get_contents();
 	ob_end_clean();
 	
 	if ( empty( $filesystem_uix_shortcodes_out ) ) {
 		
-		$style_org_code_uix_shortcodes = UixShortcodes::wpfilesystem_read_file( 'css-filesystem-nonce', 'edit.php?post_type='.UixShortcodes::get_slug().'&page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $filetype );
+		$style_org_code_uix_shortcodes = UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $filetype );
 		
 		echo '
 		

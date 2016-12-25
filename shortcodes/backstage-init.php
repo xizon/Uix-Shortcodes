@@ -57,7 +57,7 @@ add_action( 'admin_footer', 'uix_sc_form_output' );
  */
  
 function uix_sc_custom_tinymce_plugin_add_locale( $locales ) {
-    $locales [ 'uix_sc_custom_tinymce_plugin' ] = plugin_dir_path ( __FILE__ ) . 'editor/tinymce-plugin-lang.php';
+    $locales [ 'uix_sc_custom_tinymce_plugin' ] = UIX_SHORTCODES_PLUGIN_DIR . 'shortcodes/editor/tinymce-plugin-lang.php';
     return $locales;
 }
 add_filter( 'mce_external_languages', 'uix_sc_custom_tinymce_plugin_add_locale' );
