@@ -34,9 +34,11 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 ### Updates
 
 
-#### === 1.2.7 ===
+#### === 1.3.0 ===
 
 Added the live preview shortcode.
+
+Optimized shortcodes core script for front-end and admin panel.
 
 
 
