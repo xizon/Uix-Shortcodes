@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.2.6
+ * Version:     1.2.7
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -35,6 +35,7 @@ class UixShortcodes {
 		
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'actions_links' ), -10 );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ), 999 );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ), 999 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_custom_stylesheet' ) );
 		add_action( 'current_screen', array( __CLASS__, 'do_register_shortcodes' ) );
@@ -42,6 +43,7 @@ class UixShortcodes {
 		add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'options_admin_menu' ) );
 		add_action( 'wp_head', array( __CLASS__, 'do_my_shortcodes' ) );
+		add_action( 'admin_init', array( __CLASS__, 'do_my_shortcodes' ) );
 		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
 		
 		
@@ -123,7 +125,13 @@ class UixShortcodes {
 		wp_enqueue_style( self::PREFIX . '-shortcodes', self::core_css_file(), false, self::ver(), 'all');
 	
 		//Main stylesheets and scripts to Front-End
-		wp_enqueue_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver());
+		wp_enqueue_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver(), true);
+		
+		// Theme path in javascript file ( var templateUrl = wp_theme_root_path.templateUrl; )
+		wp_localize_script( self::PREFIX . '-shortcodes',  'wp_theme_root_path', array( 
+			'templateUrl' => get_stylesheet_directory_uri()
+		 ) );		
+
 
 	}
 	

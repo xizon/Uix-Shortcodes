@@ -22,6 +22,13 @@ class UixSCFormType_Note {
 		
 		
 		if ( $type == 'note' ) {
+			
+			$infotype = 'note';
+			
+			if ( is_array( $default ) && !empty( $default ) ) {
+				$infotype = $default[ 'type' ];
+			}
+			
 			$field = '
 					<tr'.$class.'>
 						<th scope="row"><label>'.$title.'</label></th>
@@ -31,7 +38,7 @@ class UixSCFormType_Note {
 							
 							   '.( !empty( $id ) ? '<input type="hidden" id="'.$id.'" name="'.$name.'" value="'.$value.'">' : '' ).' 	
 			   	   
-							   '.( !empty( $desc ) ? '<p class="info info-note">'.$desc.'</p>' : '' ).' 
+							   '.( !empty( $desc ) ? '<p class="info info-'.$infotype.'">'.$desc.'</p>' : '' ).' 
 							   
 							   
 							</div>

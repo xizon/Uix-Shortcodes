@@ -27,6 +27,18 @@ $args =
 			'type'           => 'text'
 		
 		),
+		
+		
+		array(
+			'id'             => 'uix_sc_tipinfo',
+			'desc'           => sprintf( __( 'You can custom the boxed width of the container for Uix Shortcodes stylesheets. <a target="_blank" href="%1$s">click here to custom</a>', 'uix-shortcodes' ), admin_url( 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ),
+			'type'           => 'note',
+			'default'        => array(
+									'type'  => 'note'  //error, success, warning, note
+				                ),
+		
+		),	
+		
 		array(
 			'id'             => 'uix_sc_text',
 			'title'          => __( 'Text', 'uix-shortcodes' ),
@@ -747,7 +759,7 @@ if ( $sid == -1 && is_admin() ) {
 					code = "[uix_hello text='"+uixscform_shortcodeHTMLEcode( uix_sc_text )+"' color='"+uix_sc_single_color+"']" + uix_sc_textarea + " <p>" + _vhtml + "</p>[/uix_hello]";
 
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

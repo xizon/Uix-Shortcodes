@@ -378,7 +378,7 @@ if ( $sid == -1 && is_admin() ) {
 				code = "[uix_hello2][/uix_hello2]";
 					
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

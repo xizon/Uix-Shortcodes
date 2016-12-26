@@ -355,7 +355,7 @@ if ( $sid == -1 && is_admin() ) {
 					code = "[uix_team col='fullwidth' "+photobox_height+" avatarfillet='"+uixscform_floatval( uix_sc_team_fullwidth_listitem_avatar_fillet )+"%' gray='"+uix_sc_team_fullwidth_listitem_avatar_gray+"']"+show_list_item+"<br>[/uix_team]";
 
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

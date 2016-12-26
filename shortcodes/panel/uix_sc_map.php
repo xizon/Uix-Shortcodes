@@ -163,7 +163,7 @@ if ( $sid == -1 && is_admin() ) {
 				code = "[uix_map style='"+uix_sc_map_style+"' width='"+uixscform_floatval( uix_sc_map_width )+uix_sc_map_width_units+"' height='"+uixscform_floatval( uix_sc_map_height )+"px' latitude='"+uixscform_floatval( uix_sc_map_latitude )+"' longitude='"+uixscform_floatval( uix_sc_map_longitude )+"' zoom='"+uix_sc_map_zoom+"' name='"+uixscform_shortcodeHTMLEcode( uix_sc_map_name )+"' marker='"+encodeURI( uix_sc_map_marker )+"' ]";
 					
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

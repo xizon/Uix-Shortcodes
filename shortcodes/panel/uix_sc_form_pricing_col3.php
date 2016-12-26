@@ -563,7 +563,7 @@ if ( $sid == -1 && is_admin() ) {
 					code = "[uix_pricing]" + _vhtml_1 + _vhtml_2 + _vhtml_3 + "[/uix_pricing]";
 
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

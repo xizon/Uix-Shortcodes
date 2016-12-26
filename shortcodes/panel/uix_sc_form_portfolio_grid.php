@@ -338,7 +338,7 @@ if ( $sid == -1 && is_admin() ) {
 					code = "[uix_portfolio filterable='"+_item_v_filterable+"' classprefix='"+uixscform_shortcodeHTMLEcode( uix_sc_portfolio_grid_listitem_class_prefix )+"' col='"+uix_sc_portfolio_grid_listitem_col+"' imagefillet='"+uixscform_floatval( uix_sc_portfolio_grid_listitem_image_fillet )+"%']"+show_list_item+"<br>[/uix_portfolio]";
 
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

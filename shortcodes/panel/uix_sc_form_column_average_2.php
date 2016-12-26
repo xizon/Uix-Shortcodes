@@ -79,7 +79,7 @@ if ( $sid == -1 && is_admin() ) {
 					code = "[uix_column_wrapper top='"+uixscform_floatval( uix_sc_col_average_2_padding_top )+"' bottom='"+uixscform_floatval( uix_sc_col_average_2_padding_bottom )+"' left='"+uixscform_floatval( uix_sc_col_average_2_padding_left )+"' right='"+uixscform_floatval( uix_sc_col_average_2_padding_right )+"']" + _vhtml + "[/uix_column_wrapper]";
 
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

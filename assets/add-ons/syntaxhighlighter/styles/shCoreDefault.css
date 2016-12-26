@@ -326,3 +326,7 @@
 .syntaxhighlighter .keyword {
   font-weight: bold !important;
 }
+
+.toolbar { 
+	visibility: hidden !important;
+}

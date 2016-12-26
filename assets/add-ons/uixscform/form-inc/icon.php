@@ -60,7 +60,7 @@ class UixSCFormType_Icon {
 
 									<a href="javascript:" class="uixscform-icon-clear">&times;</a>
 
-									<div class="uixscform-icon-selector-label" id="'.$id.'-label">'.$tips.'<span class="uixscform-loading icon"></span></div>
+									<div class="uixscform-icon-selector-label" id="'.$id.'-label">'.$tips.'<span class="uixscform-loading icon" style="display:none"></span></div>
 									
 								</div>
 

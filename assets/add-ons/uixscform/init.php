@@ -29,11 +29,14 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ) );
 			add_action( 'admin_init', array( __CLASS__, 'load_form_core' ) );
 			add_action( 'admin_footer', array( __CLASS__, 'icon_selector_win' ) );
+			add_action( 'admin_footer', array( __CLASS__, 'live_preview_win' ) );
 			add_filter( 'mce_css', array( __CLASS__, 'mce_css' ) );
 			add_action( 'wp_ajax_nopriv_uixscform_ajax_sections', array( __CLASS__, 'load_uixscform_ajax_sections' ) );
 			add_action( 'wp_ajax_uixscform_ajax_sections', array( __CLASS__, 'load_uixscform_ajax_sections' ) );
 			add_action( 'wp_ajax_nopriv_uixscform_ajax_iconlist', array( __CLASS__, 'load_uixscform_ajax_iconlist' ) );
 			add_action( 'wp_ajax_uixscform_ajax_iconlist', array( __CLASS__, 'load_uixscform_ajax_iconlist' ) );
+			add_action( 'wp_ajax_nopriv_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
+			add_action( 'wp_ajax_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
 			
 		}
 		
@@ -62,7 +65,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			  //Check if screen ID
 			  $currentScreen = get_current_screen();
 			  
-			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
+			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 				  
 					if ( is_admin()) {
 						    
@@ -234,10 +237,30 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			  //Check if screen ID
 			  $currentScreen = get_current_screen();
 			  
-			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
+			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
 	
-				 echo '<div class="uixscform-icon-selector-btn-target" id="" style="display:none;">';
+				 echo '<div class="uixscform-sub-window uixscform-icon-selector-btn-target" id="" style="display:none;">';
 				 require_once ( dirname( __FILE__ ) . '/'.self::icon_attr( 'selector' ) );
+				 echo '</div>';
+				  
+			  }
+
+		 }
+		
+		
+		/*
+		 * Print live preview container
+		 *
+		 */
+		 public static function live_preview_win() {
+			 
+			  //Check if screen ID
+			  $currentScreen = get_current_screen();
+			  
+			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+	
+				 echo '<div class="uixscform-sub-window uixscform-livepreview-btn-target" id="" style="display:none;">';
+				 echo '<div></div>';
 				 echo '</div>';
 				  
 			  }
@@ -532,7 +555,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 */
 		public static function send_before( $form_js_vars, $form_id ) {
 			
-			return '$(document).on("click","form#form-'.$form_id.' .uixscform-modal-save-btn",function(e){e.preventDefault();'.self::str_compression( $form_js_vars ).'var $form=$(this).closest("form"),contentID=$form.find(\'[name="contentid"]\').val(),code="",_vhtml="";';
+			return '$(document).on("mouseenter","form#form-'.$form_id.' .uixscform-modal-save-btn",function(e){e.preventDefault();'.self::str_compression( $form_js_vars ).'var $form=$(this).closest("form"),contentID=$form.find(\'[name="contentid"]\').val(),code="",_vhtml="";';
 	
 		}
 		
@@ -541,9 +564,9 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 *
 		 *
 		 */
-		public static function send_after() {
+		public static function send_after( $form_id ) {
 			
-			return 'uixscform_insertCodes(code,contentID);});});';
+			return '$( "#'.$form_id.'_preview_codebtn" ).attr({"data-code":code});$( "#'.$form_id.'_savebtn" ).attr({"data-code":code,"data-cid":contentID});});});';
 	
 		}	
 	
@@ -554,7 +577,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 */
 		public static function form_before( $content_id, $section_row, $form_id ) {
 			
-			return '<div class="uixscform-form-container"><div class="uixscform-table-wrapper"><form method="post" id="form-'.$form_id.'"><div class="uixscform-modal-buttons"><input type="button" class="close-uixscform-modal uixscform-modal-button uixscform-modal-cancel-btn" value="'.__( 'Cancel', 'uix-shortcodes' ).'" /><input type="button" class="uixscform-modal-button uixscform-modal-button-primary uixscform-modal-save-btn" value="'.__( 'Save', 'uix-shortcodes' ).'" /></div><input type="hidden" name="section" value="'.$form_id.'"><input type="hidden" name="row" value="'.$section_row.'"><input type="hidden" name="contentid" value="'.$content_id.'">';
+			return '<div class="uixscform-form-container"><div class="uixscform-table-wrapper"><form method="post" id="form-'.$form_id.'"><div class="uixscform-modal-buttons"><input type="button" class="close-uixscform-modal uixscform-modal-button uixscform-modal-button-secondary uixscform-modal-cancel-btn" value="'.__( 'Cancel', 'uix-shortcodes' ).'" /><span class="uixscform-modal-save-btn-wrapper"><input type="button" class="uixscform-modal-button uixscform-modal-button-primary uixscform-modal-save-btn" id="'.$form_id.'_savebtn" data-contentID="" value="'.__( 'Insert', 'uix-shortcodes' ).'" /><span class="uixscform-modal-button uixscform-modal-button-icon" id="'.$form_id.'_preview_codebtn" data-code=""><i class="fa fa-search-plus"></i></span></span></div><input type="hidden" name="section" value="'.$form_id.'"><input type="hidden" name="row" value="'.$section_row.'"><input type="hidden" name="contentid" value="'.$content_id.'">';
 	
 		}
 		
@@ -598,6 +621,34 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		}
 	
 	
+		/*
+		 * Callback shortcode preview code of uixscform with ajax
+		 *
+		 *
+		 */
+		public static function load_uixscform_ajax_shortcodepreview() {
+			
+			
+			$previewcode  = isset( $_POST['previewcode'] ) ? $_POST[ 'previewcode' ] : '';
+			$previewcode  = str_replace( '\\\'', "'",
+							str_replace( '<br>', '',
+							$previewcode 
+						   ));
+			
+			
+			//Separately need loaded script files for live preview
+			if ( self::inc_str( $previewcode, '[uix_map' ) || self::inc_str( $previewcode, '[uix_code' ) ) {
+				_e( '<div class="uixscform-form-container"><p class="info info-warning">This shortcode does not support live preview, please check out it directly on front end page.</p></div>', 'uix-shortcodes' );
+				die();
+			}
+			
+				
+			echo do_shortcode( $previewcode );
+			
+			die();
+		}
+			
+		
 		
 		
 		/*

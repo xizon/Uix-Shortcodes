@@ -22,7 +22,7 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
            <img src="<?php echo UixShortcodes::plug_directory(); ?>helper/img/button.jpg" alt="">
         </p> 
         <p>
-           <?php _e( '<h4 class="uix-bg-custom-title">3. You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS". <br><a class="button button-primary" href="' . admin_url( "options-general.php?page=".UixShortcodes::CUSPAGE ) . '&tab=custom-css">Add custom stylesheets by clicking here</a></h4>', 'uix-shortcodes' ); ?>
+           <?php _e( '<h4 class="uix-bg-custom-title">3. You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS". <br><a class="button button-primary" href="' . admin_url( "admin.php?page=".UixShortcodes::CUSPAGE ) . '&tab=custom-css">Add custom stylesheets by clicking here</a></h4>', 'uix-shortcodes' ); ?>
   
         </p> 
         

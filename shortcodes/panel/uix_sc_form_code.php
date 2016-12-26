@@ -115,7 +115,7 @@ if ( $sid == -1 && is_admin() ) {
 				code = "[uix_code language='"+uix_sc_code_lan+"']<pre class='brush: "+uix_sc_code_lan+";'>"+uixscform_htmlEncode( uix_sc_code_content )+"</pre>[/uix_code]";
 					
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

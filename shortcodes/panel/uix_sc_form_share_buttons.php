@@ -159,7 +159,7 @@ if ( $sid == -1 && is_admin() ) {
 					code = "[uix_share_buttons color='"+uix_sc_share_btn_color+"' size='"+uix_sc_share_btn_size+"' fillet='"+uixscform_floatval( uix_sc_share_btn_fillet )+"px' show='"+show_checkboxes+"']";
 
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

@@ -111,7 +111,7 @@ if ( $sid == -1 && is_admin() ) {
 				code = "[uix_video width='"+uixscform_floatval( uix_sc_video_w )+"' height='"+uixscform_floatval( uix_sc_video_h )+"' responsive='"+uix_sc_video_responsive+"' url='"+encodeURI( uix_sc_video_url )+"']";
 					
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

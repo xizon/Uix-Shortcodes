@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.7
-Stable tag: 1.2.6
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,10 @@ Note: Making a new javascrpt (.js) document which name to <strong>"uix-shortcode
 
 
 == Changelog ==
+
+= 1.2.7 =
+
+* Added the live preview shortcode.
 
 
 = 1.2.6 =

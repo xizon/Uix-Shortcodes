@@ -111,7 +111,7 @@
 								$( 'html' ).css( 'overflow-y', 'auto' );
 								
 								//remove icon list window
-								$( '.uixscform-icon-selector-btn-target' ).attr( 'id', '' ).hide();	
+								$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();	
 								
 							});	
 							
@@ -153,7 +153,7 @@
 					$( 'html' ).css( 'overflow-y', 'auto' );
 					
 					//remove icon list window
-					$( '.uixscform-icon-selector-btn-target' ).attr( 'id', '' ).hide();		
+					$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();		
 					
 				});
 				

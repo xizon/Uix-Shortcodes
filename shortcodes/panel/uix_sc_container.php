@@ -59,8 +59,11 @@ $args =
 		array(
 			'id'             => 'uix_sc_container_layout_boxedtip',
 		    'class'          => 'toggle-row uix_sc_container_layout_boxedtip_toggle_class', /*class of toggle item */
-			'desc'           => sprintf( __( 'You can custom the boxed width of the container for Uix Shortcodes stylesheets. <a target="_blank" href="%1$s">click here to custom</a>', 'uix-shortcodes' ), admin_url( 'options-general.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ),
+			'desc'           => sprintf( __( 'You can custom the boxed width of the container for Uix Shortcodes stylesheets. <a target="_blank" href="%1$s">click here to custom</a>', 'uix-shortcodes' ), admin_url( 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ),
 			'type'           => 'note',
+			'default'        => array(
+									'type'  => 'note'  //error, success, warning, note
+				                ),
 		
 		
 		),	
@@ -364,7 +367,7 @@ if ( $sid == -1 && is_admin() ) {
 
 					
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

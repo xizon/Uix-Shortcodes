@@ -33,6 +33,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+
+#### === 1.2.7 ===
+
+Added the live preview shortcode.
+
+
+
 #### === 1.2.6 ===
 
 Fixed some minor bugs for version 1.2.5.

@@ -188,7 +188,7 @@ if ( $sid == -1 && is_admin() ) {
 					code = "[uix_features col='3']"+show_list_item+"<br>[/uix_features]";
 
 				/*--**************** Custom shortcode end ****************-- */
-				<?php echo UixSCFormCore::send_after(); ?> 
+				<?php echo UixSCFormCore::send_after( $form_id ); ?> 
 		} ) ( jQuery );
 		</script>
  

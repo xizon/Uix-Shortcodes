@@ -4,6 +4,72 @@
  *************************************
  */	
 jQuery( document ).ready( function() {
+
+
+    /*!
+	 *
+	 * Shortcode preview button
+	 * ---------------------------------------------------
+	 */
+	jQuery( document ).on( 'mouseenter', '.uixscform-modal-save-btn-wrapper', function( e ) {
+		e.preventDefault();
+		jQuery( this ).find( '.uixscform-modal-button-icon' ).addClass( 'active' );
+		
+		return false;
+	});
+	jQuery( document ).on( 'mouseleave', '.uixscform-modal-save-btn-wrapper', function( e ) {
+		e.preventDefault();
+		jQuery( this ).find( '.uixscform-modal-button-icon' ).removeClass( 'active' );
+		
+		return false;
+	});	
+	
+	jQuery( document ).on( 'click', '.uixscform-modal-button-icon', function( e ) {
+		e.preventDefault();
+
+		var c       = jQuery( '.uixscform-livepreview-btn-target' ),
+			curcode = jQuery( this ).data( 'code' );
+
+		jQuery.ajax({
+			url: ajaxurl,
+			type: 'POST',
+			data: {
+				action      : 'uixscform_ajax_shortcodepreview',
+				previewcode : curcode
+			},
+			success: function(result) {
+				c.show();
+				c.find(' > div' ).html(result);
+				
+			   if ( jQuery.isFunction( jQuery.uix_sc_init ) ) {
+				   jQuery.uix_sc_init();
+			   }
+				
+				return false;
+			},
+			beforeSend: function() {
+				c.show();
+				c.find(' > div' ).html( '<span class="uixscform-loading"></span>' );
+			}
+		});
+
+
+	});		
+	
+
+    /*!
+	 *
+	 * Shortcode insert button
+	 * ---------------------------------------------------
+	 */	
+	jQuery( document ).on( 'click', '.uixscform-modal-save-btn', function( e ) {
+		e.preventDefault();
+		
+		uixscform_insertCodes( jQuery( this ).data( 'code' ), jQuery( this ).data( 'cid' ) );
+		
+		return false;
+	} );
+
 	
 	
     /*!
@@ -216,7 +282,7 @@ jQuery( document ).ready( function() {
 		
 		
 
-		jQuery( srow ).mouseenter(function() {
+		jQuery( srow ).on( 'mouseenter', function(){
 			jQuery( srow ).removeClass( 'hover' );
 			jQuery( srow ).addClass( 'hoverall' );
 			jQuery( sroworg ).removeClass( 'hover' );
@@ -227,7 +293,7 @@ jQuery( document ).ready( function() {
 
 			return false;
 		});
-		jQuery( srow ).mouseleave(function() {
+		jQuery( srow ).on( 'mouseleave', function(){
 			jQuery( srow ).removeClass( 'hoverall' );
 			jQuery( sroworg ).removeClass( 'hoverall' );	
 
@@ -239,7 +305,7 @@ jQuery( document ).ready( function() {
 		});
 
 		//--
-		jQuery( sroworg_trigger ).mouseenter(function() {
+		jQuery( sroworg_trigger ).on( 'mouseenter', function(){
 			jQuery( srow ).removeClass( 'hover' );
 			jQuery( srow ).addClass( 'hoverall' );		
 
@@ -248,7 +314,7 @@ jQuery( document ).ready( function() {
 
 			return false;
 		});
-		jQuery( sroworg_trigger ).mouseleave(function() {
+		jQuery( sroworg_trigger ).on( 'mouseleave', function(){
 			jQuery( srow ).removeClass( 'hoverall' );
 			jQuery( sroworg ).removeClass( 'hoverall' );	
 
@@ -835,6 +901,8 @@ jQuery( document ).ready( function() {
   };
 } )( jQuery );
 
+
+
 /*! 
  * ************************************
  * Format textarea content of shortcode tags
@@ -1121,7 +1189,7 @@ function uixscform_closeWin() {
 			$( 'html' ).css( 'overflow-y', 'auto' );
 			
 			//remove icon list window
-			$( '.uixscform-icon-selector-btn-target' ).attr( 'id', '' ).hide();		
+			$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();		
 
 		} );
 		
