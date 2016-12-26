@@ -54,7 +54,17 @@ jQuery( document ).ready( function() {
 		});
 
 
-	});		
+	});	
+	
+	jQuery( document ).on( 'click', '.uixscform-modal-exitpreview-btn', function( e ) {
+		e.preventDefault();
+		
+		//remove sub window
+		jQuery( '.uixscform-sub-window' ).attr( 'id', '' ).hide();	
+	});	
+	
+	
+	
 	
 
     /*!
@@ -1188,7 +1198,7 @@ function uixscform_closeWin() {
 			$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
 			$( 'html' ).css( 'overflow-y', 'auto' );
 			
-			//remove icon list window
+			//remove sub window
 			$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();		
 
 		} );

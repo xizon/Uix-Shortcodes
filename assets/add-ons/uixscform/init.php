@@ -261,6 +261,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	
 				 echo '<div class="uixscform-sub-window uixscform-livepreview-btn-target" id="" style="display:none;">';
 				 echo '<div></div>';
+				 echo '<span class="uixscform-sub-window-buttons uixscform-modal-buttons"><input type="button" class="uixscform-modal-button uixscform-modal-button-alert uixscform-modal-exitpreview-btn"  value="'.__( 'Exit live preview', 'uix-shortcodes' ).'" /></span>';
 				 echo '</div>';
 				  
 			  }

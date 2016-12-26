@@ -110,7 +110,7 @@
 								$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
 								$( 'html' ).css( 'overflow-y', 'auto' );
 								
-								//remove icon list window
+								//remove sub window
 								$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();	
 								
 							});	
@@ -152,7 +152,7 @@
 					$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
 					$( 'html' ).css( 'overflow-y', 'auto' );
 					
-					//remove icon list window
+					//remove sub window
 					$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();		
 					
 				});
