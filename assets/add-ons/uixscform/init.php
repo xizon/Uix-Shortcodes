@@ -567,7 +567,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 */
 		public static function send_after( $form_id ) {
 			
-			return '$( "#'.$form_id.'_preview_codebtn" ).attr({"data-code":code});$( "#'.$form_id.'_savebtn" ).attr({"data-code":code,"data-cid":contentID});});});';
+			return '$( "#'.$form_id.'_preview_codebtn" ).data("code",code);$( "#'.$form_id.'_savebtn" ).data("code",code);$( "#'.$form_id.'_savebtn" ).data("cid",contentID);});});';
 	
 		}	
 	
@@ -638,7 +638,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			
 			
 			//Separately need loaded script files for live preview
-			if ( self::inc_str( $previewcode, '[uix_map' ) || self::inc_str( $previewcode, '[uix_code' ) ) {
+			if ( self::inc_str( $previewcode, '[uix_map' ) || self::inc_str( $previewcode, '[uix_code' ) || self::inc_str( $previewcode, '[uix_contact_form' ) ) {
 				_e( '<div class="uixscform-form-container"><p class="info info-warning">This shortcode does not support live preview, please check out it directly on front end page.</p></div>', 'uix-shortcodes' );
 				die();
 			}

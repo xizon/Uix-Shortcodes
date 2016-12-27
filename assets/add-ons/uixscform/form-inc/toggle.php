@@ -58,7 +58,7 @@ class UixSCFormType_Toggle {
                         <td>
 						
 						   <div class="uixscform-box">
-								<a href="javascript:" class="'.$link_class.' uixscform_btn_trigger-toggleshow" data-targetid="'.rtrim( $target_id, ',' ).'" data-list="0" data-targetid-clone="{multID}">'.$btn_text.'</a>
+								<a href="javascript:" class="'.$link_class.' '.( $link_class == 'table-link-icon' ? 'table-link-iconattr' : '' ).' uixscform_btn_trigger-toggleshow" data-targetid="'.rtrim( $target_id, ',' ).'" data-list="0" data-targetid-clone="{multID}" title="'.esc_attr( $btn_text ).'">'.( $link_class == 'table-link-icon' ? '<i class="fa fa-sort-desc"></i>'.__( 'More Options', 'uix-shortcodes' ) : $btn_text ).'</a>
 		
 								'.( !empty( $desc ) ? '<p class="info">'.$desc.'</p>' : '' ).' 	
 								

@@ -23,6 +23,21 @@ $args =
 	[
 	
 	 
+		array(
+			'id'             => 'uix_sc_btn_paddingspacing',
+			'title'          => __( 'Size', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 1,
+			'placeholder'    => '',
+			'type'           => 'radio',
+			'default'        => array(
+									'1'  => 'large',
+									'2'  => 'medium',
+									'3'  => 'small',
+								)
+
+		),
+
 	 
 		array(
 			'id'             => 'uix_sc_btn_color',
@@ -34,37 +49,21 @@ $args =
 			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
 		
 		),
+	
 		
-		//------toggle begin
 		array(
-			'id'             => 'uix_sc_btn_color_toggle',
-			'title'          => '',
+			'id'             => 'uix_sc_btn_hovercolor',
+			'title'          => __( 'Hover Color', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
 			'placeholder'    => '',
-			'type'           => 'toggle',
-			'default'        => array(
-			                        'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_btn_color_other_class' ]
-				                )
+			'type'           => 'color',
+			'default'        => [ '#b2de70', '#eae081', '#eead8f', '#fdc8e2', '#8ec0e7',  '#3d9ae8', '#9ebfcc', '#8a8482',  '#dddddd' ]
 		
-		),	
-			
-			array(
-				'id'             => 'uix_sc_btn_color_other',
-				'title'          => '',
-				'desc'           => '',
-				'value'          => '',
-				'class'          => 'toggle-row uix_sc_btn_color_other_class', /*class of toggle item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-			
-			
-			),	
+		),
+		
 	
+		
 		
 		array(
 			'id'             => 'uix_sc_btn_txtcolor',
@@ -77,37 +76,7 @@ $args =
 		
 		
 		),
-		
-		//------toggle begin
-		array(
-			'id'             => 'uix_sc_btn_txtcolor_toggle',
-			'title'          => '',
-			'desc'           => '',
-			'value'          => '',
-			'placeholder'    => '',
-			'type'           => 'toggle',
-			'default'        => array(
-			                        'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_btn_txtcolor_other_class' ]
-				                )
-		
-		),	
-			
-			array(
-				'id'             => 'uix_sc_btn_txtcolor_other',
-				'title'          => '',
-				'desc'           => '',
-				'value'          => '',
-				'class'          => 'toggle-row uix_sc_btn_txtcolor_other_class', /*class of toggle item */
-				'placeholder'    => '',
-				'type'           => 'colormap',
-				'default'        => array(
-										'swatches' => 1
-									)
-			
-			
-			),	
-		
+	
 		
 		
 		array(
@@ -172,13 +141,59 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'toggle',
 			'default'        => array(
-			                        'btn_textclass' => 'table-link-attr',
+			                        'btn_textclass' => 'table-link-icon',
 			                        'btn_text'      => __( 'click on the set more attributes', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_btn_attrs-uix_sc_btn_icon', 'uix_sc_btn_attrs-uix_sc_btn_fontsize', 'uix_sc_btn_attrs-uix_sc_btn_letterspacing', 'uix_sc_btn_attrs-uix_sc_btn_paddingspacing' ]
+									'toggle_class'  => [ 'uix_sc_btn_attrs-uix_sc_btn_icon', 'uix_sc_btn_attrs-uix_sc_btn_fontsize', 'uix_sc_btn_attrs-uix_sc_btn_letterspacing', 'uix_sc_btn_attrs-uix_sc_btn_color_other', 'uix_sc_btn_attrs-uix_sc_btn_hovercolor_other', 'uix_sc_btn_attrs-uix_sc_btn_txtcolor_other' ]
 				                )
 		
 		),	
 	
+		
+			
+			array(
+				'id'             => 'uix_sc_btn_color_other',
+				'title'          => __( 'Other Color Button', 'uix-shortcodes' ),
+				'desc'           => '',
+				'value'          => '',
+				'class'          => 'toggle-row uix_sc_btn_attrs-uix_sc_btn_color_other', /*class of toggle item */
+				'placeholder'    => '',
+				'type'           => 'colormap',
+				'default'        => array(
+										'swatches' => 1
+									)
+			
+			
+			),	
+			
+			array(
+				'id'             => 'uix_sc_btn_hovercolor_other',
+				'title'          => __( 'Other Color Hover', 'uix-shortcodes' ),
+				'desc'           => '',
+				'value'          => '',
+				'class'          => 'toggle-row uix_sc_btn_attrs-uix_sc_btn_hovercolor_other', /*class of toggle item */
+				'placeholder'    => '',
+				'type'           => 'colormap',
+				'default'        => array(
+										'swatches' => 1
+									)
+			
+			
+			),	
+		
+			array(
+				'id'             => 'uix_sc_btn_txtcolor_other',
+				'title'          => __( 'Other Color Text', 'uix-shortcodes' ),
+				'desc'           => '',
+				'value'          => '',
+				'class'          => 'toggle-row uix_sc_btn_attrs-uix_sc_btn_txtcolor_other', /*class of toggle item */
+				'placeholder'    => '',
+				'type'           => 'colormap',
+				'default'        => array(
+										'swatches' => 1
+									)
+			
+			
+			),	
 		
 			array(
 				'id'             => 'uix_sc_btn_icon',
@@ -223,22 +238,6 @@ $args =
 			),
 			
 			
-			
-			array(
-				'id'             => 'uix_sc_btn_paddingspacing',
-				'title'          => __( 'Padding Spacing', 'uix-shortcodes' ),
-				'desc'           => '',
-				'value'          => 1,
-				'class'          => 'toggle-row uix_sc_btn_attrs-uix_sc_btn_paddingspacing', /*class of toggle item */
-				'placeholder'    => '',
-				'type'           => 'radio',
-				'default'        => array(
-										'1'  => 'large',
-										'2'  => 'medium',
-										'3'  => 'small',
-									)
-			
-			),
 		
 		
 
@@ -275,15 +274,18 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					
-					var  uix_sc_btn_result_color = ( uix_sc_btn_color_other != '' ) ? uix_sc_btn_color_other : uixscform_colorTran( uix_sc_btn_color ),
-						 uix_sc_btn_result_txtcolor = ( uix_sc_btn_txtcolor_other != '' ) ? uix_sc_btn_txtcolor_other : uix_sc_btn_txtcolor,
-						 uix_sc_btn_result_target = ( uix_sc_btn_target === true ) ? 1 : 0,
-						 uix_sc_btn_result_url = ( uix_sc_btn_url != '' ) ? uix_sc_btn_url : '#';
+					var  uix_sc_btn_result_color          = ( uix_sc_btn_color_other != '' ) ? uix_sc_btn_color_other : uixscform_colorTran( uix_sc_btn_color ),
+						 uix_sc_btn_result_defaultbgcolor = ( uix_sc_btn_color_other != '' ) ? uix_sc_btn_color_other : uix_sc_btn_color,
+						 uix_sc_btn_result_hovercolor     = ( uix_sc_btn_hovercolor_other != '' ) ? uix_sc_btn_hovercolor_other : uix_sc_btn_hovercolor,
+						 uix_sc_btn_result_txtcolor       = ( uix_sc_btn_txtcolor_other != '' ) ? uix_sc_btn_txtcolor_other : uix_sc_btn_txtcolor,
+						 uix_sc_btn_result_target         = ( uix_sc_btn_target === true ) ? 1 : 0,
+						 uix_sc_btn_result_url            = ( uix_sc_btn_url != '' ) ? uix_sc_btn_url : '#',
+						 uix_sc_btn_result_hoverattr      = ( uix_sc_btn_result_hovercolor != '' ) ? "defaultbgcolor='"+uix_sc_btn_result_defaultbgcolor+"' hovercolor='"+uix_sc_btn_result_hovercolor+"'" : '';
 					
 		
 		
 				
-					code = "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uixscform_floatval( uix_sc_btn_fontsize )+"px' letterspacing='"+uixscform_floatval( uix_sc_btn_letterspacing )+"px' fillet='"+uixscform_floatval( uix_sc_btn_fillet )+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]";
+					code = "[uix_button icon='"+uix_sc_btn_icon+"' fontsize='"+uixscform_floatval( uix_sc_btn_fontsize )+"px' letterspacing='"+uixscform_floatval( uix_sc_btn_letterspacing )+"px' fillet='"+uixscform_floatval( uix_sc_btn_fillet )+"px' paddingspacing='"+uix_sc_btn_paddingspacing+"' target='"+uix_sc_btn_result_target+"' "+uix_sc_btn_result_hoverattr+" bgcolor='"+uix_sc_btn_result_color+"' txtcolor='"+uix_sc_btn_result_txtcolor+"' url='"+uix_sc_btn_result_url+"']"+uix_sc_btn_label+"[/uix_button]";
 					
 
 					

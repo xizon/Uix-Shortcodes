@@ -23,15 +23,19 @@ class UixSCFormType_Note {
 		
 		if ( $type == 'note' ) {
 			
-			$infotype = 'note';
+			$infotype  = 'note';
+			$fullwidth = false;
+			
 			
 			if ( is_array( $default ) && !empty( $default ) ) {
-				$infotype = $default[ 'type' ];
+				$infotype  = $default[ 'type' ];
+				$fullwidth = $default[ 'fullwidth' ];
 			}
 			
 			$field = '
 					<tr'.$class.'>
-						<th scope="row"><label>'.$title.'</label></th>
+					    '.( ! $fullwidth ? '<th scope="row"><label>'.$title.'</label></th>' : '' ).'
+						
 						<td>	
 						    
 							<div class="uixscform-box">

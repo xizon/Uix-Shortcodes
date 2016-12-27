@@ -16,6 +16,7 @@
     5. Testimonials
 	6. prettyPhoto
 	7. Filterable
+	8. Buttons
 
 
 ************************************* */
@@ -532,6 +533,40 @@
 
 
 				 });	
+			
+				/*!
+				 *************************************
+				 * 8. Buttons
+				 *************************************
+				 */
+				 $( '.uix-sc-btn' ).each( function(){
+
+					var $this              = $( this ),
+						hoverbg            = $this.data( 'hover' ),
+					    defaultbg          = $this.data( 'default-bg' );
+					 
+					 if ( hoverbg != '' ) {
+						 
+						$this.on( 'mouseenter', function( e ) {
+							e.preventDefault();
+							$( this ).css( 'background-color', hoverbg );
+
+							return false;
+						});
+						$this.on( 'mouseleave', function( e ) {
+							e.preventDefault();
+							$( this ).css( 'background-color', defaultbg );
+
+							return false;
+						});		 
+						 
+					 }
+
+
+
+
+				 });	
+				
 			
 			
 		} 

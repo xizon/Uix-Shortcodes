@@ -2237,6 +2237,7 @@ img.uix-sc-img,
 	position: relative;
 	margin: 1em 1em .7em 0;
 	display: inline-block;	
+	text-decoration: none;
 }
 
 	.uix-sc-btn .fa{

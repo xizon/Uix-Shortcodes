@@ -375,6 +375,8 @@ function uix_sc_fun_button( $atts, $content = null ) {
 		'paddingspacing' => 2, 
 		'target' => 0, 
 		'bgcolor' => '', 
+		'defaultbgcolor' => '', 
+		'hovercolor' => '', 
 		'txtcolor' => '', 
 		'url' => '',
 		'letterspacing' => '',
@@ -399,10 +401,10 @@ function uix_sc_fun_button( $atts, $content = null ) {
 		
 	//button background
 	
-	$bg_custom_color = ( UixShortcodes::inc_str( $bgcolor, 'rgb' ) ) ? 'uix-sc-btn-none '.$sizeclass.'" style="background:'.$bgcolor.';'.$commoncss.'"' : 'uix-sc-btn-'.$bgcolor.' '.$sizeclass.'" style="'.$commoncss.'"';
+	$bg_custom_color = ( UixShortcodes::inc_str( $bgcolor, 'rgb' ) || UixShortcodes::inc_str( $bgcolor, '#' ) ) ? 'uix-sc-btn-none '.$sizeclass.'" style="background:'.$bgcolor.';'.$commoncss.'"' : 'uix-sc-btn-'.$bgcolor.' '.$sizeclass.'" style="'.$commoncss.'"';
 	
 	
-   $return_string = '<a class="uix-sc-btn '.$bg_custom_color.' '.$targetcode.' href="'.$url.'">'.$iconshow.''.$content.'</a>';	
+   $return_string = '<a class="uix-sc-btn '.$bg_custom_color.' '.$targetcode.' href="'.$url.'" data-hover="'.$hovercolor.'" data-default-bg="'.$defaultbgcolor.'">'.$iconshow.''.$content.'</a>';	
 		
 		
 	

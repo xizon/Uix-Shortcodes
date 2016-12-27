@@ -23,8 +23,13 @@ $args =
 	
 	
 		array(
-			'desc'           => __( 'Tips: Output a complete commenting form for use within a template. ', 'uix-shortcodes' ),
-			'type'           => 'text'
+			'id'             => 'uix_sc_contactform_tipinfo',
+			'desc'           => __( 'Output a complete commenting form with your theme.', 'uix-shortcodes' ),
+			'type'           => 'note',
+			'default'        => array(
+		                            'fullwidth'  => true,
+									'type'       => 'note'  //error, success, warning, note
+				                ),
 		
 		),
 	

@@ -34,7 +34,8 @@ $args =
 			'desc'           => sprintf( __( 'You can custom the boxed width of the container for Uix Shortcodes stylesheets. <a target="_blank" href="%1$s">click here to custom</a>', 'uix-shortcodes' ), admin_url( 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ),
 			'type'           => 'note',
 			'default'        => array(
-									'type'  => 'note'  //error, success, warning, note
+		                            'fullwidth'  => false,
+									'type'       => 'note'  //error, success, warning, note
 				                ),
 		
 		),	
@@ -229,7 +230,7 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'toggle',
 			'default'        => array(
-			                        //'btn_textclass' => 'table-link-attr',
+		                            //'btn_textclass' => 'table-link-icon',
 			                        'btn_text'      => __( 'set up links with toggle', 'uix-shortcodes' ),
 									'toggle_class'  => [ 'uix_sc_toggle_url_class', 'uix_sc_toggle_url2_class', 'uix_sc_toggle_urlalign_class' ]
 				                )
