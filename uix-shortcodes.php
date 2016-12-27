@@ -33,9 +33,10 @@ class UixShortcodes {
 		self::setup_constants();
 		self::includes();
 		
+		add_action( 'init', array( __CLASS__, 'register_scripts' ) );
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'actions_links' ), -10 );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ), 999 );
-		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ), 999 );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts_fe' ), 999 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_custom_stylesheet' ) );
 		add_action( 'current_screen', array( __CLASS__, 'do_register_shortcodes' ) );
@@ -82,6 +83,64 @@ class UixShortcodes {
 	}
 	
 	
+	/*
+	 * Register scripts and styles.
+	 *
+	 *
+	 */
+	public static function register_scripts() {
+		
+		// jQuery Accessible Tabs
+		wp_register_script( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1' );
+		wp_register_style( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all' );
+		
+		// Shuffle
+		wp_register_script( 'shuffle', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );
+		
+		// Shuffle.js requires Modernizr..
+		wp_register_script( 'modernizr', self::plug_directory() .'assets/add-ons/HTML5/modernizr.min.js', false, '3.3.1', false );
+			
+		// Easing
+		wp_register_script( 'jquery-easing', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
+
+		// imagesloaded
+		wp_register_script( 'uix-imagesloaded', self::plug_directory() .'assets/add-ons/preload/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
+
+		// Easy Pie Chart
+		wp_register_script( 'easypiechart', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );
+
+		//flexslider
+		wp_register_script( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/jquery.flexslider.min.js', array( 'jquery' ), '2.5.0', true );	
+		wp_register_style( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/flexslider.css', false, '2.5.0', 'all' );
+		
+		// prettyPhoto
+		wp_register_script( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );
+		wp_register_style( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.css', false, '3.1.5', 'all' );
+				
+		// SyntaxHighlighter
+		wp_register_script( 'syntaxhighlighter-core', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shCore.js', false, '3.0.83', true );
+		wp_register_script( 'syntaxhighlighter-autoloader', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
+		wp_register_style( 'syntaxhighlighter', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all' );
+					
+		// Parallax
+		wp_register_script( 'bgParallax', self::plug_directory() .'assets/add-ons/parallax/jquery.bgParallax.js', array( 'jquery' ), '1.1.3', true );		
+								
+		// Add shortcodes style to Front-End
+		wp_register_style( self::PREFIX . '-shortcodes', self::core_css_file(), false, self::ver(), 'all' );
+	
+		// Main stylesheets and scripts to Front-End
+		wp_register_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver(), true );
+		wp_localize_script( self::PREFIX . '-shortcodes',  'wp_theme_root_path', array( 
+			'templateUrl' => get_stylesheet_directory_uri()
+		 ) );		
+		
+		// Admin panel stylesheets
+		wp_register_style( self::PREFIX . '-shortcodes-admin', self::plug_directory() .'shortcodes/editor/style.css', false, self::ver(), 'all' );
+
+
+
+	}
+	
 	
 	/*
 	 * Enqueue scripts and styles.
@@ -89,49 +148,22 @@ class UixShortcodes {
 	 *
 	 */
 	public static function frontpage_scripts() {
-		
-		// Shuffle
-		wp_enqueue_script( 'shuffle', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );
-		
-		// Shuffle.js requires Modernizr..
-		wp_enqueue_script( 'modernizr', self::plug_directory() .'assets/add-ons/HTML5/modernizr.min.js', false, '3.3.1', false );
-			
-		// Easing
-		wp_enqueue_script( 'jquery-easing', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
 
-		// imagesloaded
-		wp_enqueue_script( 'uix-imagesloaded', self::plug_directory() .'assets/add-ons/preload/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
-
-		//Easy Pie Chart
-		wp_enqueue_script( 'easypiechart', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );
-
-		//flexslider
-		wp_enqueue_script( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/jquery.flexslider.min.js', array( 'jquery' ), '2.5.0', true );	
-		wp_enqueue_style( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/flexslider.css', false, '2.5.0', 'all' );
-		
-		// prettyPhoto
-		wp_enqueue_script( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );
-		wp_enqueue_style( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.css', false, '3.1.5', 'all');
-				
-		// SyntaxHighlighter
-		wp_enqueue_script( 'syntaxhighlighter-core', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shCore.js', false, '3.0.83', true );
-		wp_enqueue_script( 'syntaxhighlighter-autoloader', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
-		wp_enqueue_style( 'syntaxhighlighter', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all');
-					
-		//Parallax
-		wp_enqueue_script( 'bgParallax', self::plug_directory() .'assets/add-ons/parallax/jquery.bgParallax.js', array( 'jquery' ), '1.1.3', true );		
-								
-		//Add shortcodes style to Front-End
-		wp_enqueue_style( self::PREFIX . '-shortcodes', self::core_css_file(), false, self::ver(), 'all');
-	
-		//Main stylesheets and scripts to Front-End
-		wp_enqueue_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver(), true);
-		
-		// Theme path in javascript file ( var templateUrl = wp_theme_root_path.templateUrl; )
-		wp_localize_script( self::PREFIX . '-shortcodes',  'wp_theme_root_path', array( 
-			'templateUrl' => get_stylesheet_directory_uri()
-		 ) );		
-
+		wp_enqueue_script( 'shuffle' );
+		wp_enqueue_script( 'modernizr' );
+		wp_enqueue_script( 'jquery-easing' );
+		wp_enqueue_script( 'uix-imagesloaded' );
+		wp_enqueue_script( 'easypiechart' );
+		wp_enqueue_script( 'flexslider' );	
+		wp_enqueue_style( 'flexslider' );
+		wp_enqueue_script( 'prettyPhoto' );
+		wp_enqueue_style( 'prettyPhoto' );
+		wp_enqueue_script( 'syntaxhighlighter-core' );
+		wp_enqueue_script( 'syntaxhighlighter-autoloader' );
+		wp_enqueue_style( 'syntaxhighlighter' );
+		wp_enqueue_script( 'bgParallax' );
+		wp_enqueue_style( self::PREFIX . '-shortcodes' );
+		wp_enqueue_script( self::PREFIX . '-shortcodes' );
 
 	}
 	
@@ -143,6 +175,42 @@ class UixShortcodes {
 	 *
 	 *
 	 */
+	public static function backstage_scripts_fe() {
+	
+	      if ( get_post_type() != 'uix_page_builder' ) {
+			  
+			  //Check if screen ID
+			  $currentScreen = get_current_screen();
+			  
+			  if ( $currentScreen->base === "post" || 
+				   $currentScreen->base === "widgets" || 
+				   $currentScreen->base === "customize" || 
+				   self::inc_str( $currentScreen->base, '_page_' ) 
+				 ) 
+			  {
+					wp_enqueue_script( 'shuffle' );
+					wp_enqueue_script( 'modernizr' );
+					wp_enqueue_script( 'jquery-easing' );
+					wp_enqueue_script( 'uix-imagesloaded' );
+					wp_enqueue_script( 'easypiechart' );
+					wp_enqueue_script( 'flexslider' );	
+					wp_enqueue_style( 'flexslider' );
+					wp_enqueue_script( 'prettyPhoto' );
+					wp_enqueue_style( 'prettyPhoto' );
+					wp_enqueue_script( 'bgParallax' );
+					wp_enqueue_style( self::PREFIX . '-shortcodes' );
+					wp_enqueue_script( self::PREFIX . '-shortcodes' );			
+
+			  } 
+
+			  
+		  }
+		  
+
+	}
+	
+	
+	
 	public static function backstage_scripts() {
 	
 	      if ( get_post_type() != 'uix_page_builder' ) {
@@ -151,34 +219,26 @@ class UixShortcodes {
 			  $currentScreen = get_current_screen();
 			  
 			  
-			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
-				  
-					if ( is_admin()) {
-						
-							//Editor
-							wp_enqueue_style( self::PREFIX . '-shortcodes-main', self::plug_directory() .'shortcodes/editor/style.css', false, self::ver(), 'all');
-			
-							
-					}
+			  if ( $currentScreen->base === "post" || 
+				   $currentScreen->base === "widgets" || 
+				   $currentScreen->base === "customize" || 
+				   self::inc_str( $currentScreen->base, '_page_' ) 
+				 ) 
+			  {
+				  wp_enqueue_style( self::PREFIX . '-shortcodes-admin' );
 	  
 			  } 
 			  
 			  if ( isset( $_GET[ 'tab' ] ) && isset( $_GET[ 'page' ] ) ) {
+				  
 				  if( $_GET[ 'tab' ] == 'documentation' && $_GET[ 'page' ] == self::CUSPAGE ) {
 					  
-						if ( is_admin()) {
-						
-								//jQuery Accessible Tabs
-								wp_enqueue_script( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1');
-								wp_enqueue_style( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all');
-									
-								// SyntaxHighlighter
-								wp_enqueue_script( 'syntaxhighlighter-core', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shCore.js', false, '3.0.83', true );
-								wp_enqueue_script( 'syntaxhighlighter-autoloader', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
-								wp_enqueue_style( 'syntaxhighlighter', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all');	
-													
-									
-						}
+						wp_enqueue_script( 'accTabs' );
+						wp_enqueue_style( 'accTabs' );
+						wp_enqueue_script( 'syntaxhighlighter-core' );
+						wp_enqueue_script( 'syntaxhighlighter-autoloader' );
+						wp_enqueue_style( 'syntaxhighlighter' );
+					
 		  
 				  }  
 			  }
