@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 0.0.1
+ * @version		: 1.1
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -16,7 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
-		const PREFIX = 'uix';
+		const PREFIX     = 'uix';
+		const VERSION    = '1.1';
 		const CUSTOMTEMP = 'shortcodes/panel/';
 	
 		
@@ -80,12 +81,12 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.css', array(), '1.0', 'all' );
 
 					//UixSCForm
-					wp_enqueue_style( 'uixscform', self::plug_directory() .'css/uixscform.css', false,'1.0.0', 'all' );
+					wp_enqueue_style( 'uixscform', self::plug_directory() .'css/uixscform.css', false, self::VERSION, 'all' );
 					if( $currentScreen->base === "customize" ) {
-						wp_enqueue_style( 'uixscform-depth', self::plug_directory() .'css/uixscform.depth.css', false, '1.0.0', 'all' );
+						wp_enqueue_style( 'uixscform-depth', self::plug_directory() .'css/uixscform.depth.css', false, self::VERSION, 'all' );
 					}	
-					wp_enqueue_script( 'uixscform', self::plug_directory() .'js/uixscform.js', array( 'jquery' ), '1.0.0', true );
-					wp_enqueue_script( 'uixscform-functions', self::plug_directory() .'js/uixscform.functions.js', array( 'jquery' ), '1.0.0', true );
+					wp_enqueue_script( 'uixscform', self::plug_directory() .'js/uixscform.js', array( 'jquery' ), self::VERSION, true );
+					wp_enqueue_script( 'uixscform-functions', self::plug_directory() .'js/uixscform.functions.js', array( 'jquery' ), self::VERSION, true );
 
 					//Colorpicker
 					wp_enqueue_style( 'wp-color-picker' );
