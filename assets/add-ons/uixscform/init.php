@@ -38,7 +38,6 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			add_action( 'wp_ajax_uixscform_ajax_iconlist', array( __CLASS__, 'load_uixscform_ajax_iconlist' ) );
 			add_action( 'wp_ajax_nopriv_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
 			add_action( 'wp_ajax_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
-			add_action( 'customize_controls_print_scripts', array( __CLASS__, 'customize_scripts' ) );
 			
 		}
 		
@@ -55,24 +54,6 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.css', array(), '1.0', 'all');
 			
 	
-		}
-		
-		/*
-		 * Enqueue scripts and styles  in the backstage
-		 *
-		 *
-		 */
-		public static function customize_scripts() {		
-				  echo '
-				  <script>
-				  jQuery( document ).ready( function() {
-
-						
-
-					});
-
-				  </script>
-				  ';	
 		}
 		
 		
@@ -107,6 +88,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					}	
 					wp_enqueue_script( 'uixscform', self::plug_directory() .'js/uixscform.js', array( 'jquery' ), self::VERSION, true );
 					wp_enqueue_script( 'uixscform-functions', self::plug_directory() .'js/uixscform.functions.js', array( 'jquery' ), self::VERSION, true );
+				  
 
 					//Colorpicker
 					wp_enqueue_style( 'wp-color-picker' );
@@ -292,7 +274,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	
 				 echo '<div class="uixscform-sub-window uixscform-livepreview-btn-target" id="" style="display:none;">';
 				 echo '<div></div>';
-				 echo '<span class="uixscform-sub-window-buttons uixscform-modal-buttons"><input type="button" class="uixscform-modal-button uixscform-modal-button-alert uixscform-modal-exitpreview-btn"  value="'.__( 'Exit live preview', 'uix-shortcodes' ).'" /></span>';
+				 echo '<span class="uixscform-sub-window-buttons"><input type="button" class="uixscform-modal-button uixscform-modal-button-alert uixscform-modal-exitpreview-btn"  value="'.__( 'Exit live preview', 'uix-shortcodes' ).'" /></span>';
 				 echo '</div>';
 				  
 			  }

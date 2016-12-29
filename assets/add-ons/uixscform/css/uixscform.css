@@ -40,8 +40,48 @@
 	height: 80vh;
 }
 
-.uixscform-modal-buttons,
-.uixscform-sub-window .uixscform-sub-window-buttons {
+.uixscform-modal-box .preview-box,
+.uixscform-modal-box .iconslist-box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	background: #fff;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;	
+    z-index: 100051;
+   /*coordinate of wordpress*/
+}
+
+.uixscform-modal-box .preview-box.active,
+.uixscform-modal-box .iconslist-box.active {
+	display: block;
+}
+
+.uixscform-modal-box .preview-box > .uixscform-sub-window-buttons {
+	display: block;
+	text-align: center;
+	position: absolute;
+	bottom: 12px;
+	width: 100%;
+}
+
+
+.uixscform-modal-box .preview-box > div {
+    width: calc( 98% - 40px );
+    height: calc( 98% - 70px );
+    overflow: hidden;
+    position: relative;
+    overflow-y: auto;
+	padding: 0 20px 0 20px;
+	margin: 20px 0;
+}
+
+
+.uixscform-modal-buttons {
 	display: block;
 	text-align: center;
     width: 1080px;
@@ -50,8 +90,7 @@
 
 @media all and (min-width: 1200px) {
     .uixscform-modal-box, 
-	.uixscform-modal-buttons,
-	.uixscform-sub-window .uixscform-sub-window-buttons {
+	.uixscform-modal-buttons {
         width: 1080px;
         left: calc( (100% - 1080px)/2 );
     }
@@ -59,8 +98,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
     .uixscform-modal-box, 
-	.uixscform-modal-buttons,
-	.uixscform-sub-window .uixscform-sub-window-buttons {
+	.uixscform-modal-buttons {
         width: 930px;
         left: calc( (100% - 930px)/2 );
     }
@@ -68,8 +106,7 @@
 
 @media all and (max-width: 768px) {
     .uixscform-modal-box, 
-	.uixscform-modal-buttons,
-	.uixscform-sub-window .uixscform-sub-window-buttons {
+	.uixscform-modal-buttons {
         width: 550px;
         left: calc( (100% - 550px)/2 );
     }
@@ -77,8 +114,7 @@
 
 @media all and (max-width: 480px) {
     .uixscform-modal-box, 
-	.uixscform-modal-buttons,
-	.uixscform-sub-window .uixscform-sub-window-buttons {
+	.uixscform-modal-buttons {
         width: 90%;
         left: 5%;
     }
@@ -162,75 +198,6 @@
 }
 
 
-/* Sub Window for Modal
--------------------------------------------------------------- */
-.uixscform-sub-window {
-    position: fixed;
-    top: 50%;
-    z-index: 100049;
-    /*coordinate of wordpress*/
-    width: calc( 1080px - 8px );
-    height: 80vh;
-	height: 220px;
-    background: #fff;
-    left: calc( (100% - 1000px)/2 );
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;	
-	display: none;
-}
-
-.uixscform-sub-window.active {
-	display: block !important;
-}
-
-
-@media all and (min-width: 1200px) {
-    .uixscform-sub-window {
-        width: calc( 1080px - 8px );
-        left: calc( (100% - 1080px)/2 );
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1199px) {
-    .uixscform-sub-window {
-        width: calc( 930px - 8px );
-        left: calc( (100% - 930px)/2 );
-    }
-}
-
-@media all and (max-width: 768px) {
-    .uixscform-sub-window {
-        width: calc( 550px - 16px );
-        left: calc( (100% - 550px)/2 );
-    }
-}
-
-@media all and (max-width: 480px) {
-    .uixscform-sub-window {
-        width: calc( 90% - 16px );
-        left: 5%;
-    }
-}
-
-/* Shortcode Preview
--------------------------------------------------------------- */
-.uixscform-livepreview-btn-target > div {
-    width: calc( 98% - 40px );
-    height: calc( 98% - 70px );
-    overflow: hidden;
-    position: relative;
-    overflow-y: auto;
-    z-index: 559902;
-	padding: 0 20px 0 20px;
-	margin: 20px 0;
-}
-
-
-
 
 /* Loading
 -------------------------------------------------------------- */
@@ -300,7 +267,8 @@
 	z-index: 2;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-primary {
+.uixscform-modal-buttons .uixscform-modal-button-primary,
+.uixscform-modal-button-primary{
     background-color: RGBA(122, 208, 58, 1) !important;
     -webkit-box-shadow: 2.5px 4.33px 16px 0px rgba(122, 208, 58, 0.31) !important;
     -moz-box-shadow: 2.5px 4.33px 16px 0px rgba(122, 208, 58, 0.31) !important;
@@ -308,20 +276,23 @@
 }
 
 
-.uixscform-modal-buttons .uixscform-modal-button-secondary {
+.uixscform-modal-buttons .uixscform-modal-button-secondary,
+.uixscform-modal-button-secondary{
     -webkit-box-shadow: 2.5px 4.33px 16px 0px rgba(207, 207, 207, 0.31) !important;
     -moz-box-shadow: 2.5px 4.33px 16px 0px rgba(207, 207, 207, 0.31) !important;
     box-shadow: 2.5px 4.33px 16px 0px rgba(207, 207, 207, 0.31) !important;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-alert {
+.uixscform-modal-buttons .uixscform-modal-button-alert,
+.uixscform-modal-button-alert{
 	 background-color: rgba(204, 23, 30, 1) !important;
     -webkit-box-shadow: 2.5px 4.33px 16px 0px rgba(204, 23, 30, 0.31) !important;
     -moz-box-shadow: 2.5px 4.33px 16px 0px rgba(204, 23, 30, 0.31) !important;
     box-shadow: 2.5px 4.33px 16px 0px rgba(204, 23, 30, 0.31) !important;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-icon {
+.uixscform-modal-buttons .uixscform-modal-button-icon,
+.uixscform-modal-button-icon{
 	background-color: rgba(106, 194, 41, 1) !important;
     -webkit-box-shadow: 2.5px 4.33px 16px 0px rgba(106, 194, 41, 0.31) !important;
     -moz-box-shadow: 2.5px 4.33px 16px 0px rgba(106, 194, 41, 0.31) !important;
@@ -345,7 +316,13 @@
 	transition: .1s ease-in-out;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-icon.active {
+.uixscform-modal-buttons .uixscform-modal-button-icon i,
+.uixscform-modal-button-icon i {
+	color: #fff;	
+}
+
+.uixscform-modal-buttons .uixscform-modal-button-icon.active,
+.uixscform-modal-button-icon.active{
     margin: 26px 5px 0 -7px !important;
 	visibility: visible;
 	z-index: 1;
@@ -353,7 +330,8 @@
 
 
 
-.uixscform-modal-buttons .uixscform-modal-button-icon:hover:after{
+.uixscform-modal-buttons .uixscform-modal-button-icon:hover:after,
+.uixscform-modal-button-icon:hover:after{
     background: #333;
     background: rgba(0,0,0,.8);
     border-radius: 5px;
@@ -370,7 +348,8 @@
 	font-style: normal;
 	font-size: 12px;
 }
-.uixscform-modal-buttons .uixscform-modal-button-icon:hover:before{
+.uixscform-modal-buttons .uixscform-modal-button-icon:hover:before,
+.uixscform-modal-button-icon:hover:before{
     border: solid;
     border-color: #333 transparent;
     border-width: 6px 6px 0 6px;
@@ -381,7 +360,8 @@
     z-index: 99;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-txt {
+.uixscform-modal-buttons .uixscform-modal-button-txt,
+.uixscform-modal-button-txt {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
@@ -396,18 +376,22 @@
     outline: none !important;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-primary:hover {
+.uixscform-modal-buttons .uixscform-modal-button-primary:hover,
+.uixscform-modal-button-primary:hover{
 	background-color: #9cdf5f !important;
 }
-.uixscform-modal-buttons .uixscform-modal-button-icon:hover {
+.uixscform-modal-buttons .uixscform-modal-button-icon:hover,
+.uixscform-modal-button-icon:hover{
 	background-color: #8ed44b !important;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-secondary:hover {
+.uixscform-modal-buttons .uixscform-modal-button-secondary:hover,
+.uixscform-modal-button-secondary:hover{
 	background-color: #dedede !important;
 }
 
-.uixscform-modal-buttons .uixscform-modal-button-alert:hover {
+.uixscform-modal-buttons .uixscform-modal-button-alert:hover,
+.uixscform-modal-button-alert:hover{
 	background-color: #b50d14 !important;
 }
 

@@ -27,9 +27,15 @@ jQuery( document ).ready( function() {
 	jQuery( document ).on( 'click', '.uixscform-modal-button-icon', function( e ) {
 		e.preventDefault();
 
-		var c       = jQuery( '.uixscform-livepreview-btn-target' ),
-			curcode = jQuery( this ).data( 'code' );
+		
+		var curmID             = uixscform_curModalID(), //current modal box ID
+		    curcode            = jQuery( this ).data( 'code' ),
+			$mainmodalcontent  = jQuery( '#'+curmID+' .ajax-temp' ),
+			$previewbox        = jQuery( '#'+curmID+' .preview-box' ),
+			$previewboxBtn     = jQuery( '#'+curmID+' .preview-box > .uixscform-sub-window-buttons' );
 
+		console.log( curmID );
+		
 		jQuery.ajax({
 			url: ajaxurl,
 			type: 'POST',
@@ -38,8 +44,11 @@ jQuery( document ).ready( function() {
 				previewcode : curcode
 			},
 			success: function(result) {
-				c.addClass( 'active' );
-				c.find(' > div' ).html(result);
+				
+			   $previewbox.find(' > div' ).html( result );
+				
+			   //show preview box buttons
+			   $previewboxBtn.css( 'visibility', 'visible' );
 				
 			   if ( jQuery.isFunction( jQuery.uix_sc_init ) ) {
 				   jQuery.uix_sc_init();
@@ -48,8 +57,17 @@ jQuery( document ).ready( function() {
 				return false;
 			},
 			beforeSend: function() {
-				c.addClass( 'active' );
-				c.find(' > div' ).html( '<span class="uixscform-loading"></span>' );
+				
+				//hide preview box buttons
+				$previewboxBtn.css( 'visibility', 'hidden' );
+				//hide main modal content
+				$mainmodalcontent.css( 'visibility', 'hidden' );
+				//show sub window (live preview)
+				$previewbox.addClass( 'active' );
+				$previewbox.find(' > div' ).html( '<span class="uixscform-loading"></span>' );
+				
+				
+				
 			}
 		});
 
@@ -59,9 +77,14 @@ jQuery( document ).ready( function() {
 	jQuery( document ).on( 'click', '.uixscform-modal-exitpreview-btn', function( e ) {
 		e.preventDefault();
 		
-		//remove sub window
-		jQuery( '.uixscform-sub-window' ).removeAttr( 'id' ).removeClass( 'active' );
+		
+		//remove sub window (live preview)
+		jQuery( '.uixscform-modal-box .preview-box' ).removeAttr( 'id' ).removeClass( 'active' );
+		//show main modal content
+		jQuery( '.uixscform-modal-box .ajax-temp' ).css( 'visibility', 'visible' );
+		
 	});
+	
 
     /*!
 	 *
@@ -845,18 +868,29 @@ jQuery( document ).ready( function() {
 				labeltxtID      = '#' + $this.attr( 'target-id' ) + '-label',
 				previewID       = '#' + $this.attr( 'preview-id' ),
 				listContainerID = 'icon-list-' + $this.attr( 'target-id' ),
-				defaultIconName =  jQuery( targetID ).val(),
-				$formContainer  = jQuery( previewID ).closest( '.uixscform-box' ),
-				$socialIcon     = jQuery( '.uixscform-icon-selector-btn-target .b:not(.social)' ),
-				$socialTitle    = jQuery( '.uixscform-icon-selector-btn-target .uixscform-icon-social-title' );
+				defaultIconName = jQuery( targetID ).val(),
+				$formContainer  = jQuery( previewID ).closest( '.uixscform-box' );
 				
 			
 			/*-- Icon list in new window --*/
 			jQuery( document ).on( 'click', chooseBtnID, function( e ) {
 				e.preventDefault();
 				
-				jQuery( '.uixscform-icon-selector-btn-target' ).attr( 'id', listContainerID ).addClass( 'active' );
+				//current modal box ID
+				var curmID          = uixscform_curModalID(),
+					$socialIcon     = jQuery( '#'+curmID+' .iconslist-box .b:not(.social)' ),
+				    $socialTitle    = jQuery( '#'+curmID+' .iconslist-box .uixscform-icon-social-title' )
+
+				console.log( curmID );
 				
+				//hide main modal content
+				jQuery( '#'+curmID+' .ajax-temp' ).css( 'visibility', 'hidden' );
+				//show sub window (icons)
+				jQuery( '#'+curmID+' .iconslist-box' )
+					.attr( 'id', listContainerID )
+					.addClass( 'active' );
+				
+	
 				//social icons
 				if ( $this.hasClass( 'icon-social' ) ) {
 					$socialIcon.hide();	
@@ -887,8 +921,10 @@ jQuery( document ).ready( function() {
 				jQuery( labeltxtID ).hide();
 				
 				
-				//remove window
-				jQuery( '.uixscform-sub-window' ).removeAttr( 'id' ).removeClass( 'active' );
+				//remove sub window (icons)
+				jQuery( '.uixscform-modal-box .iconslist-box' ).removeAttr( 'id' ).removeClass( 'active' );
+				//show main modal content
+				jQuery( '.uixscform-modal-box .ajax-temp' ).css( 'visibility', 'visible' );
 				
 			});
 			
@@ -908,8 +944,10 @@ jQuery( document ).ready( function() {
 				jQuery( chooseBtnID ).hide();
 				jQuery( labeltxtID ).hide();
 				
-				//remove window
-				jQuery( '.uixscform-sub-window' ).removeAttr( 'id' ).removeClass( 'active' );
+				//remove sub window (icons)
+				jQuery( '.uixscform-modal-box .iconslist-box' ).removeAttr( 'id' ).removeClass( 'active' );
+				//show main modal content
+				jQuery( '.uixscform-modal-box .ajax-temp' ).css( 'visibility', 'visible' );
 			
 			});	
 			
@@ -1207,8 +1245,13 @@ function uixscform_closeWin() {
 			$( '.uixscform-modal-mask' ).fadeOut( 'fast' );
 			$( 'html' ).css( 'overflow-y', 'auto' );
 			
-			//remove sub window
-			$( '.uixscform-sub-window' ).removeAttr( 'id' ).removeClass( 'active' );
+			
+			//remove sub window (live preview)
+			$( '.uixscform-modal-box .preview-box' ).removeAttr( 'id' ).removeClass( 'active' );
+			//remove sub window (icons)
+			$( '.uixscform-modal-box .iconslist-box' ).removeAttr( 'id' ).removeClass( 'active' );
+			//show main modal content
+			$( '.uixscform-modal-box .ajax-temp' ).css( 'visibility', 'visible' );
 
 		} );
 		
@@ -1233,6 +1276,32 @@ function uixscform_toggleSwitchCheckboxVal( id ) {
 			} else {
 				result = false;
 			}		
+
+		} );
+		
+	} ) ( jQuery );
+	
+	return result;
+};
+
+
+/*! 
+ * ************************************
+ * Returns current modal box ID
+ *************************************
+ */	
+function uixscform_curModalID() {
+	var result = '';
+	( function( $ ) {
+	"use strict";
+		$( function() {
+			
+			$( '.uixscform-modal-box' ).each( function()  {
+				if ( $( this ).css( 'display' ) != 'none' ) {
+					result = $( this ).attr( 'id' )
+					return false;
+				}
+			});	
 
 		} );
 		
