@@ -142,7 +142,7 @@
 							
 							/*-- Initializes the form state --*/
 							//Icon list
-							$( '.icon-selector' ).uixscform_iconSelector();
+							$( '.uixscform-icon-selector' ).uixscform_iconSelector();
 							
 							//color picker
 							$( '.wp-color-input' ).wpColorPicker();
@@ -172,7 +172,7 @@
 								$( 'html' ).css( 'overflow-y', 'auto' );
 								
 								//remove sub window
-								$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();	
+								$( '.uixscform-sub-window' ).removeAttr( 'id' ).removeClass( 'active' );
 								
 							});	
 							
@@ -218,7 +218,7 @@
 					$( 'html' ).css( 'overflow-y', 'auto' );
 					
 					//remove sub window
-					$( '.uixscform-sub-window' ).attr( 'id', '' ).hide();		
+					$( '.uixscform-sub-window' ).removeAttr( 'id' ).removeClass( 'active' );
 					
 				});
 				

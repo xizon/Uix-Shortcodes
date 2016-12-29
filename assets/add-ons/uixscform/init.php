@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 1.2
+ * @version		: 1.3
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '1.2';
+		const VERSION    = '1.3';
 		const CUSTOMTEMP = 'shortcodes/panel/';
 	
 		
@@ -38,6 +38,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			add_action( 'wp_ajax_uixscform_ajax_iconlist', array( __CLASS__, 'load_uixscform_ajax_iconlist' ) );
 			add_action( 'wp_ajax_nopriv_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
 			add_action( 'wp_ajax_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
+			add_action( 'customize_controls_print_scripts', array( __CLASS__, 'customize_scripts' ) );
 			
 		}
 		
@@ -61,6 +62,25 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 *
 		 *
 		 */
+		public static function customize_scripts() {		
+				  echo '
+				  <script>
+				  jQuery( document ).ready( function() {
+
+						
+
+					});
+
+				  </script>
+				  ';	
+		}
+		
+		
+		/*
+		 * Enqueue scripts and styles  in the backstage
+		 *
+		 *
+		 */
 		public static function backstage_scripts() {
 		
 			  //Check if screen ID
@@ -72,7 +92,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 				   self::inc_str( $currentScreen->base, '_page_' ) 
 				 ) 
 			  {
-						    
+    
 					//Register clone vars
 					wp_register_script( 'uixscform-functions-handle', self::plug_directory() .'js/uixscform.debug.js' );
 
@@ -238,7 +258,12 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			  //Check if screen ID
 			  $currentScreen = get_current_screen();
 			  
-			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+			  if ( $currentScreen->base === "post" || 
+				   $currentScreen->base === "widgets" || 
+				   $currentScreen->base === "customize" || 
+				   self::inc_str( $currentScreen->base, '_page_' ) 
+				 ) 
+			  {
 	
 				 echo '<div class="uixscform-sub-window uixscform-icon-selector-btn-target" id="" style="display:none;">';
 				 require_once ( dirname( __FILE__ ) . '/'.self::icon_attr( 'selector' ) );
@@ -258,7 +283,12 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			  //Check if screen ID
 			  $currentScreen = get_current_screen();
 			  
-			  if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || self::inc_str( $currentScreen->base, '_page_' ) ) {
+			  if ( $currentScreen->base === "post" || 
+				   $currentScreen->base === "widgets" || 
+				   $currentScreen->base === "customize" || 
+				   self::inc_str( $currentScreen->base, '_page_' ) 
+				 ) 
+			  {
 	
 				 echo '<div class="uixscform-sub-window uixscform-livepreview-btn-target" id="" style="display:none;">';
 				 echo '<div></div>';

@@ -33,6 +33,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+#### = 1.3.5 (2016 final version)=
+
+* Optimized form selectors.
+* Supported Uix Shortcodes for the theme customizer screen.
+* Compatible with more plug-ins.
+* Fixed some minor bugs for version 1.3.0.
+
 
 #### = 1.3.1=
 
