@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.3.0
+ * Version:     1.3.1
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -92,7 +92,7 @@ class UixShortcodes {
 		
 		// jQuery Accessible Tabs
 		wp_register_script( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1' );
-		wp_register_style( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all' );
+		wp_register_style( 'accTabs-uix-shortcodes', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all' );
 		
 		// Shuffle
 		wp_register_script( 'shuffle', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );

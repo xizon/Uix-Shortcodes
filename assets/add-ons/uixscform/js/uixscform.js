@@ -54,12 +54,16 @@
 	        $( document ).on( 'click', $trigger, function( e ) {
 				e.preventDefault();
 				
-				var widget_ID       = $( this ).data( 'id' ),
-					contentID       = ( $( this ).data( 'target' ) != undefined ) ? $( this ).data( 'target' ) : 'content',
-					widget_ID       = 0,
-				    widgets         = { 'ID': widget_ID, 'contentID': contentID, 'title': $title },
-				    code            = '',
-					$obj            = $( '.uixscform-modal-box#'+dataID );
+				var widget_ID               = $( this ).data( 'id' ),
+					contentID               = ( $( this ).data( 'target' ) != undefined ) ? $( this ).data( 'target' ) : 'content',
+					widget_ID               = 0,
+				    widgets                 = { 'ID': widget_ID, 'contentID': contentID, 'title': $title },
+				    code                    = '',
+					$obj                    = $( '.uixscform-modal-box#'+dataID ),
+					modal_H_init            = $( '.uixscform-modal-box, .uixscform-sub-window' ),
+					modal_H_btn_init        = $( '.uixscform-modal-buttons' ),
+					modal_H_previewbtn_init = $( '.uixscform-livepreview-btn-target .uixscform-modal-buttons' ),
+					modal_H_max             = $( window ).height()*0.8 - 150;
 				
 				//Open
 				if ( $obj.length > 0 ) {
@@ -78,8 +82,65 @@
 							
 							result = result.replace( /{index}/g, '\['+widget_ID+'\]' );
 							
+							
 							$obj.find( '.ajax-temp' ).html( result );
 							
+							
+							/*-- Count new modal height --*/
+							var newmHeight = 0,
+								hEx        = 0,
+								nocols     = $obj.find( '.ajax-temp .uixscform-form-container' ),
+								cols       = $obj.find( '.ajax-temp .uixscform-table-cols-wrapper' ),
+								colsH      = Array(),
+								colsH_Max  = 0;
+							if ( cols.length > 0 ) {
+								
+								cols.each( function( index ) {
+									var curH  = $( this ).height();
+									
+									if ( $( this ).hasClass( 'uixscform-table-col-1' ) ) {
+										hEx = curH;
+									}
+									
+									colsH.push( parseFloat( curH ) + parseFloat( hEx ) );
+									
+									
+								} );
+								
+								newmHeight = Math.max.apply( Math, colsH );
+	
+								
+							} else {
+								newmHeight = nocols.height();
+							}
+							
+							if ( newmHeight == null || 
+								newmHeight == 0 || 
+								parseFloat( newmHeight + 250 ) > $( window ).height()
+							   ) 
+							{
+								newmHeight = modal_H_max;
+							}
+							//Initializes modal height
+							modal_H_init.css( 'height', parseFloat( newmHeight + 150 ) + 'px' );
+							$obj.find( '.ajax-temp .uixscform-modal-buttons' ).css( 'margin-top', parseFloat( newmHeight/2 + 20 ) + 'px' );
+							modal_H_previewbtn_init.css( 'margin-top', parseFloat( newmHeight/2 + 20 ) + 'px' );
+							
+							
+							
+							//Add row
+							$( '.uixscform_btn_trigger-clone' ).on( 'click', function( e ) {
+								e.preventDefault();
+								
+								modal_H_init.css( 'height', parseFloat( modal_H_max + 150 ) + 'px' );
+								$obj.find( '.ajax-temp .uixscform-modal-buttons' ).css( 'margin-top', parseFloat( modal_H_max/2 + 20 ) + 'px' );
+								modal_H_previewbtn_init.css( 'margin-top', parseFloat( modal_H_max/2 + 20 ) + 'px' );
+							});	
+							
+							
+							
+							
+							/*-- Initializes the form state --*/
 							//Icon list
 							$( '.icon-selector' ).uixscform_iconSelector();
 							
@@ -88,20 +149,20 @@
 							
 							
 							//toggle default
-							jQuery( '.uixscform_btn_trigger-toggleshow' ).each( function()  {
-								if ( jQuery( this ).closest( '.uixscform-box' ).find( 'input' ).val() == 1 ) {
-									jQuery( this ).uixscform_toggleshow();
+							$( '.uixscform_btn_trigger-toggleshow' ).each( function()  {
+								if ( $( this ).closest( '.uixscform-box' ).find( 'input' ).val() == 1 ) {
+									$( this ).uixscform_toggleshow();
 								}
 							});
-							jQuery( '.uixscform_btn_trigger-toggleswitch_checkbox' ).uixscform_toggleSwitchCheckboxStatus();
-							jQuery( '.uixscform_btn_trigger-toggleswitch_radio' ).uixscform_toggleSwitchRadioStatus();
+							$( '.uixscform_btn_trigger-toggleswitch_checkbox' ).uixscform_toggleSwitchCheckboxStatus();
+							$( '.uixscform_btn_trigger-toggleswitch_radio' ).uixscform_toggleSwitchRadioStatus();
 
 							//insert media
-							jQuery( '.uixscform_btn_trigger-upload' ).uixscform_mediaStatus();
+							$( '.uixscform_btn_trigger-upload' ).uixscform_mediaStatus();
 
 		
 							
-							//Close
+							/*-- Close --*/
 							$( '.uixscform-modal-box .close-uixscform-modal' ).on( 'click', function( e ) {
 								e.preventDefault();
 								
@@ -126,6 +187,10 @@
 						beforeSend: function() {
 							$obj.find( '.ajax-temp' ).html( '<span class="uixscform-loading"></span>' );
 							//console.log( 'loading...' );
+							
+							//Initializes modal height
+							modal_H_init.css( 'height', '220px' );
+							modal_H_btn_init.css( 'margin-top', '50px' );
 
 						}
 					});

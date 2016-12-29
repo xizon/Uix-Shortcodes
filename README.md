@@ -34,162 +34,123 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 ### Updates
 
 
-#### === 1.3.0 ===
+#### = 1.3.1=
 
-Added the live preview shortcode.
+* Optimized the pop-up window experience.
+* Optimized the shortcodes-slant.css.
 
-Optimized shortcodes core script for front-end and admin panel.
 
+#### = 1.3.0=
 
+* Added the live preview shortcode.
+* Optimized shortcodes core script for front-end and admin panel.
 
-#### === 1.2.6 ===
 
-Fixed some minor bugs for version 1.2.5.
+#### = 1.2.6=
 
-Optimized the container shortcode.
+* Fixed some minor bugs for version 1.2.5.
+* Optimized the container shortcode.
 
 
+#### = 1.2.5=
 
-#### === 1.2.5 ===
+* Optimized core stylesheets for front-end.
+* Optimized form for admin panel.
+* Optimized front-end shortcodes structure.
+* Optimized icon selector & improved the running speed greatly.
+* Beautified the form UI, enhance the user experience.
+* Added function of escaping for HTML blocks from core forms.
+* Added hyperlink support for client shortcode.
+* Added multi-column selector for client shortcode.
+* Removed colors selectors for features shortcode.
+* Supports custom Uix Shortcodes core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
-Optimized core stylesheets for front-end.
 
-Optimized form for admin panel.
+#### = 1.2.0=
 
-Optimized front-end shortcodes structure.
+* Optimized shortcodes script for front-end.
+* Fixed a minor error in prograss bar.
+* Added function to delete selected icon.
+* Removed some unnecessary attributes for shortcode.
 
-Optimized icon selector & improved the running speed greatly.
 
-Beautified the form UI, enhance the user experience.
+#### = 1.1.8=
 
-Added function of escaping for HTML blocks from core forms.
+* Optimized switcher from back-end.
+* WordPress 4.7 compatible.
 
-Added hyperlink support for client shortcode.
 
-Added multi-column selector for client shortcode.
+#### = 1.1.7=
 
-Removed colors selectors for features shortcode.
+* Fixed some bugs.
 
-Supports custom Uix Shortcodes core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
 
+#### = 1.1.6=
 
-#### === 1.2.0 ===
+* Fix some bugs of custom CSS admin panel.
+* Older version themes are functionally compatible.
+* Fixed some bugs.
 
-Optimized shortcodes script for front-end.
+#### = 1.1.5=
 
-Fixed a minor error in prograss bar.
+* Used ajax form & improved the running speed greatly.
+* Optimized back-end structure.
+* Upgraded the back-end form UI.
+* Removed sweetalert plugin.
+* Improved event binding from the plugin main JavaScript file.
+* Improved the main CSS file.
+* Fixed some bugs.
 
-Added function to delete selected icon.
 
-Removed some unnecessary attributes for shortcode.
+#### = 1.1.2=
 
+* Fixed some bugs.
 
+#### = 1.1.1=
 
-#### === 1.1.8 ===
+* Optimized the selector of buttons.
+* Enhanced editor and forms compatibility.
 
-Optimized switcher from back-end.
+#### = 1.1.0=
 
-WordPress 4.7 compatible.
+* Optimized for tablet display.
+* Improved event binding from the plugin main JavaScript file.
+* Improved the main CSS file.
+* Use WordPress Color Picker API to replace tinyColorPicker
+* Fixed some bugs for parallax and container shortcodes
 
 
 
-#### === 1.1.7 ===
+#### = 1.0.5=
 
-Fixed some bugs.
+* Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you can choose the shortcodes style you want.
+* Core CSS optimization.
+* Optimized shortcodes script.
 
 
+#### = 1.0.4=
 
-#### === 1.1.6 ===
+* Added "Author Card" shortcode.
+* Core CSS optimization.
 
-Fix some bugs of custom CSS admin panel.
+#### = 1.0.3=
 
-Older version themes are functionally compatible.
+* Fix custom CSS function in the WordPress administration screens.
 
-Fixed some bugs.
+#### = 1.0.2=
 
+* Fix parse error for tinyColorPicker sometimes.
+* Other optimizations.
 
+#### = 1.0.1=
 
-#### === 1.1.5 ===
+* Optimized HTML format of textarea
 
-Used ajax form & improved the running speed greatly.
 
-Optimized back-end structure.
+#### = 1.0.0=
 
-Upgraded the back-end form UI.
-
-Removed sweetalert plugin.
-
-Improved event binding from the plugin main JavaScript file.
-
-Improved the main CSS file.
-
-Fix some bugs.
-
-
-#### === 1.1.2 ===
-
-Fixed some bugs.
-
-
-#### === 1.1.1 ===
-
-Optimized the selector of buttons.
-
-Enhanced editor and forms compatibility.
-
-
-#### === 1.1.0 ===
-
-Optimized for tablet display.
-
-Improved event binding from the plugin main JavaScript file.
-
-Improved the main CSS file.
-
-Use WordPress Color Picker API to replace tinyColorPicker.
-
-Fixed some bugs for parallax and container shortcodes
-
-
-#### === 1.0.5 ===
-
-Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you can choose the shortcodes style you want.
-
-Core CSS optimization.
-
-Optimized shortcodes script.
-
-Fixed a minor error in color picker.
-
-
-#### === 1.0.4 ===
-
-Added "Author Card" shortcode.
-
-Core CSS optimization.
- 
-
-#### === 1.0.3 ===
-
-Fix custom CSS function in the WordPress administration screens.
-
-#### === 1.0.2 ===
-
-Fix parse error for tinyColorPicker sometimes.
-
-Other optimizations.
-
-
-#### === 1.0.1 ===
-
-Optimized HTML format of textarea
-
-
-
-#### === 1.0.0 ===
-
-Initial Release.
+* First release.
 
 
 ### Tested under

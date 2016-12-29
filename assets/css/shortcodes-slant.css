@@ -892,7 +892,7 @@ img.uix-sc-img,
 	.uix-sc-price .uix-sc-btn{
 		position: absolute;
 		bottom: .825em;
-		width: calc(100% - 40px);
+		width: calc(100% - 4em - 40px);
 		/* Vertical Center */
 		left: 50%;
 		-webkit-transform: translateX(-50%);
@@ -1914,6 +1914,7 @@ img.uix-sc-img,
 .uix-sc-testimonials{
 	width: 100%;
 	overflow: hidden;
+	padding-bottom: 15px;
 }
 
 
