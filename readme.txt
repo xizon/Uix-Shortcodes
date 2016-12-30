@@ -98,7 +98,7 @@ Note: Making a new javascrpt (.js) document which name to <strong>"uix-shortcode
 
 == Changelog ==
 
-= 1.3.5 (2016 final version) =
+= 1.3.5 ( Final Version, 2016 ) =
 
 * Optimized form selectors.
 * Supported Uix Shortcodes for the theme customizer screen.
