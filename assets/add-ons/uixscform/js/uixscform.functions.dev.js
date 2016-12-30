@@ -1214,6 +1214,10 @@ function uixscform_insertCodes( content, conid ) {
 		"use strict";
 			$( function() {
 				$( '#' + conid ).val( $( '#' + conid ).val() + uixscform_insertToTextarea( content ) );
+				
+				//Dynamic listening for the latest value
+				$( '#' + conid ).focus().trigger( 'change' );
+				
 				uixscform_closeWin();
 			} );
 			
