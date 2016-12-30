@@ -125,7 +125,7 @@
 							
 							if ( newmHeight == null || 
 								newmHeight == 0 || 
-								parseFloat( newmHeight + 250 ) > $( window ).height()
+								parseFloat( newmHeight + 150 + $( window ).height()*0.2 ) > $( window ).height()
 							   ) 
 							{
 								newmHeight = modal_H_max;
@@ -133,7 +133,6 @@
 							//Initializes modal height
 							modal_H_init.css( 'height', parseFloat( newmHeight + 150 ) + 'px' );
 							$obj.find( '.ajax-temp .uixscform-modal-buttons' ).css( 'margin-top', parseFloat( newmHeight/2 + 20 ) + 'px' );
-							
 							
 							
 							//Add row

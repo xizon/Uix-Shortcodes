@@ -34,7 +34,7 @@ jQuery( document ).ready( function() {
 			$previewbox        = jQuery( '#'+curmID+' .preview-box' ),
 			$previewboxBtn     = jQuery( '#'+curmID+' .preview-box > .uixscform-sub-window-buttons' );
 
-		console.log( curmID );
+		//console.log( curmID );
 		
 		jQuery.ajax({
 			url: ajaxurl,
@@ -881,7 +881,7 @@ jQuery( document ).ready( function() {
 					$socialIcon     = jQuery( '#'+curmID+' .iconslist-box .b:not(.social)' ),
 				    $socialTitle    = jQuery( '#'+curmID+' .iconslist-box .uixscform-icon-social-title' )
 
-				console.log( curmID );
+				//console.log( curmID );
 				
 				//hide main modal content
 				jQuery( '#'+curmID+' .ajax-temp' ).css( 'visibility', 'hidden' );
