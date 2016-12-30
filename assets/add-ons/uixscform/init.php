@@ -26,11 +26,12 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 *
 		 */
 		public static function init() {
+			
+			 global $pagenow;
+			
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
 			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ) );
 			add_action( 'admin_init', array( __CLASS__, 'load_form_core' ) );
-			add_action( 'admin_footer', array( __CLASS__, 'icon_selector_win' ) );
-			add_action( 'admin_footer', array( __CLASS__, 'live_preview_win' ) );
 			add_filter( 'mce_css', array( __CLASS__, 'mce_css' ) );
 			add_action( 'wp_ajax_nopriv_uixscform_ajax_sections', array( __CLASS__, 'load_uixscform_ajax_sections' ) );
 			add_action( 'wp_ajax_uixscform_ajax_sections', array( __CLASS__, 'load_uixscform_ajax_sections' ) );
@@ -38,6 +39,25 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			add_action( 'wp_ajax_uixscform_ajax_iconlist', array( __CLASS__, 'load_uixscform_ajax_iconlist' ) );
 			add_action( 'wp_ajax_nopriv_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
 			add_action( 'wp_ajax_uixscform_ajax_shortcodepreview', array( __CLASS__, 'load_uixscform_ajax_shortcodepreview' ) );
+			
+			  if ( $pagenow === "post.php" || 
+				   $pagenow === "post-new.php" || 
+				   $pagenow === "widgets.php" || 
+				   $pagenow === "customize.php" || 
+				   $pagenow === "admin.php"
+				 ) 
+			  {
+				    
+				  if ( $pagenow === "customize.php" ) {
+					add_action( 'customize_controls_print_scripts', array( __CLASS__, 'icon_selector_win' ) );
+					add_action( 'customize_controls_print_scripts', array( __CLASS__, 'live_preview_win' ) );	    
+				  } else {
+					add_action( 'admin_footer', array( __CLASS__, 'icon_selector_win' ) );
+					add_action( 'admin_footer', array( __CLASS__, 'live_preview_win' ) );	   
+				  }
+
+			  }
+			
 			
 		}
 		
@@ -66,7 +86,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		
 			  //Check if screen ID
 			  $currentScreen = get_current_screen();
-			  
+		
 			  if ( $currentScreen->base === "post" || 
 				   $currentScreen->base === "widgets" || 
 				   $currentScreen->base === "customize" || 
@@ -237,23 +257,11 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 *
 		 */
 		 public static function icon_selector_win() {
-			 
-			  //Check if screen ID
-			  $currentScreen = get_current_screen();
-			  
-			  if ( $currentScreen->base === "post" || 
-				   $currentScreen->base === "widgets" || 
-				   $currentScreen->base === "customize" || 
-				   self::inc_str( $currentScreen->base, '_page_' ) 
-				 ) 
-			  {
-	
-				 echo '<div class="uixscform-sub-window uixscform-icon-selector-btn-target" id="" style="display:none;">';
-				 require_once ( dirname( __FILE__ ) . '/'.self::icon_attr( 'selector' ) );
-				 echo '</div>';
-				  
-			  }
 
+			 echo '<div class="uixscform-sub-window uixscform-icon-selector-btn-target" id="" style="display:none;">';
+			 require_once ( dirname( __FILE__ ) . '/'.self::icon_attr( 'selector' ) );
+			 echo '</div>';
+	
 		 }
 		
 		
@@ -262,23 +270,11 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 *
 		 */
 		 public static function live_preview_win() {
-			 
-			  //Check if screen ID
-			  $currentScreen = get_current_screen();
-			  
-			  if ( $currentScreen->base === "post" || 
-				   $currentScreen->base === "widgets" || 
-				   $currentScreen->base === "customize" || 
-				   self::inc_str( $currentScreen->base, '_page_' ) 
-				 ) 
-			  {
-	
-				 echo '<div class="uixscform-sub-window uixscform-livepreview-btn-target" id="" style="display:none;">';
-				 echo '<div></div>';
-				 echo '<span class="uixscform-sub-window-buttons"><input type="button" class="uixscform-modal-button uixscform-modal-button-alert uixscform-modal-exitpreview-btn"  value="'.__( 'Exit live preview', 'uix-shortcodes' ).'" /></span>';
-				 echo '</div>';
-				  
-			  }
+
+			 echo '<div class="uixscform-sub-window uixscform-livepreview-btn-target" id="" style="display:none;">';
+			 echo '<div></div>';
+			 echo '<span class="uixscform-sub-window-buttons"><input type="button" class="uixscform-modal-button uixscform-modal-button-alert uixscform-modal-exitpreview-btn"  value="'.__( 'Exit live preview', 'uix-shortcodes' ).'" /></span>';
+			 echo '</div>';
 
 		 }
 		
