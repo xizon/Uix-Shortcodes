@@ -505,7 +505,7 @@
 
 					//init
 					imagesLoaded( '#'+classprefix+'filter-stage-'+fid+'' ).on( 'always', function() {
-						 $( '#'+classprefix+'cat-list-'+fid+' li:first a' ).trigger( 'click' ); 
+						 $( '#'+classprefix+'cat-list-'+fid+' li:first a' ).trigger( 'click' );
 					 });
 
 

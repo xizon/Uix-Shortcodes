@@ -694,6 +694,7 @@ class UixShortcodes {
 	public static function cat_list( $str, $classprefix = 'uix-sc-portfolio-' ) {
 
 		$list = array();  
+		$html = array();  
 		$c = preg_match_all( '/\<div class="'.$classprefix.'type">(.*?)\<\/div\>/', $str, $m ); 
 		$code = '';
 		if( count( $m[1] ) > 0 ) { 
@@ -708,7 +709,12 @@ class UixShortcodes {
 			}  
 			
 			foreach ( $list as $key ) {
-				$code .= '<li><a href="javascript:" data-group="'.$key[ 'slug' ].'">'.$key[ 'name' ].'</a></li>';
+				array_push( $html, '<li><a href="javascript:" data-group="'.$key[ 'slug' ].'">'.$key[ 'name' ].'</a></li>' );
+			}
+			$html = array_unique( $html );
+			
+			foreach ( $html as $key ) {
+				$code .= $key;
 			}	
 			
 			return $code;
