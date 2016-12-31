@@ -103,9 +103,6 @@ class UixShortcodes {
 		// Easing
 		wp_register_script( 'jquery-easing', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
 
-		// imagesloaded
-		wp_register_script( 'uix-imagesloaded', self::plug_directory() .'assets/add-ons/preload/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
-
 		// Easy Pie Chart
 		wp_register_script( 'easypiechart', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );
 
@@ -152,7 +149,7 @@ class UixShortcodes {
 		wp_enqueue_script( 'shuffle' );
 		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'jquery-easing' );
-		wp_enqueue_script( 'uix-imagesloaded' );
+		wp_enqueue_script( 'imagesloaded' );
 		wp_enqueue_script( 'easypiechart' );
 		wp_enqueue_script( 'flexslider' );	
 		wp_enqueue_style( 'flexslider' );
@@ -191,7 +188,7 @@ class UixShortcodes {
 					wp_enqueue_script( 'shuffle' );
 					wp_enqueue_script( 'modernizr' );
 					wp_enqueue_script( 'jquery-easing' );
-					wp_enqueue_script( 'uix-imagesloaded' );
+					wp_enqueue_script( 'imagesloaded' );
 					wp_enqueue_script( 'easypiechart' );
 					wp_enqueue_script( 'flexslider' );	
 					wp_enqueue_style( 'flexslider' );
