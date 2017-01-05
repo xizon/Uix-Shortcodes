@@ -298,8 +298,8 @@ function uix_sc_fun_pricing_item( $atts, $content = null ){
    <div class="'.$col_num.' '.$col_last.' uix-sc-price-border-hover" data-tcolor="'.$imcolor.'" id="uix-sc-col-js-'.$id.'">
        <div class="uix-sc-price-bg-hover uix-sc-price-init-height">
 	       <div class="uix-sc-price-border '.$class.'">
-				<h5 class="uix-sc-price-level">'.UixShortcodes::get_subtags( 'uix_pricing_item_level', $content ).'</h5>
-				<h2 class="uix-sc-price-num" style="color:'.$imcolor.'">'.UixShortcodes::get_subtags( 'uix_pricing_item_price', $content ).' <span class="uix-sc-price-period">'.$period.'</span></h2>
+				<div class="uix-sc-price-level">'.UixShortcodes::get_subtags( 'uix_pricing_item_level', $content ).'</div>
+				<div class="uix-sc-price-num" style="color:'.$imcolor.'">'.UixShortcodes::get_subtags( 'uix_pricing_item_price', $content ).' <span class="uix-sc-price-period">'.$period.'</span></div>
 				
 				<div class="uix-sc-price-excerpt">
 					'.UixShortcodes::get_subtags( 'uix_pricing_item_desc', $content ).'
@@ -813,7 +813,9 @@ function uix_sc_fun_portfolio_item( $atts, $content = null ){
 	 ), $atts ) );
 	 
 
- 
+	//thumbnail
+	$image = ( !empty( $image ) ) ? $image : UixSCFormCore::photo_placeholder();
+	
 	//target
     $targetcode = '';
     if ( !empty( $url ) ) {
@@ -926,7 +928,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 	 
 
 	 
-   $avatarURL = ( !empty( $avatar ) ) ? $avatar : UixShortcodes::plug_directory() .'assets/images/no-photo.png';
+   $avatarURL = ( !empty( $avatar ) ) ? $avatar : UixSCFormCore::photo_placeholder();
    
    $social_arr_1 = explode( '|', $social_1 );
    $social_arr_2 = explode( '|', $social_2 );
@@ -1159,6 +1161,8 @@ function uix_sc_fun_client_item( $atts, $content = null ){
 	 ), $atts ) );
 	 
 
+	//logo
+	$logo = ( !empty( $logo ) ) ? $logo : UixSCFormCore::logo_placeholder();
 
     $desc = str_replace( '[uix_client_item_desc]', '',
                str_replace( '[/uix_client_item_desc]', '',
@@ -1677,7 +1681,7 @@ function uix_sc_fun_authorcard( $atts, $content = null ) {
 		
 	 ), $atts ) );
 	 
-   $avatarURL = ( !empty( $avatar ) ) ? $avatar : UixShortcodes::plug_directory() .'assets/images/no-photo.png';
+   $avatarURL = ( !empty( $avatar ) ) ? $avatar : UixSCFormCore::photo_placeholder();
    
    $social_arr_1 = explode( '|', $social_1 );
    $social_arr_2 = explode( '|', $social_2 );

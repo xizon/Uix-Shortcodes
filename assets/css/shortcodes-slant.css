@@ -942,6 +942,7 @@ img.uix-sc-img,
 	.uix-sc-price-border{
 		padding-top: 1em;
 		border: 1px solid #090909;
+		position: relative;
 	}
 	
 	/* Remove border hover effect when top is "0" */
@@ -987,6 +988,7 @@ img.uix-sc-img,
 		text-transform: uppercase;
 		position: relative;
 		z-index: 3;
+		font-weight: 700;
 	}
 		
 
@@ -996,6 +998,7 @@ img.uix-sc-img,
 		font-weight: 700;
 		font-size: 18px;
 		margin-top: 1em;
+		
 	}
 	
 	.uix-sc-price-period{

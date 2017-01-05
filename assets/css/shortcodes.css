@@ -924,6 +924,7 @@ img.uix-sc-img,
 	.uix-sc-price-border{
 		padding-top: 1em;
 		border: 1px solid #090909;
+		position: relative;
 	}
 	
 	/* Remove border hover effect when top is "0" */
@@ -946,11 +947,15 @@ img.uix-sc-img,
 		filter: alpha(opacity=40);  
 		-moz-opacity: 0.4;   
 		opacity: 0.4; 
+		font-weight: 700;
 	}
 	
 	.uix-sc-price-num{
 		color: #d59a3e;
 		font-weight: 700;
+		font-size: 46px;
+		line-height: 1;
+		padding: .3em 0;
 	}
 	
 	.uix-sc-price-period{

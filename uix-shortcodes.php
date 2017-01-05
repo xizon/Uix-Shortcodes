@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.3.5
+ * Version:     1.3.6
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -682,7 +682,7 @@ class UixShortcodes {
 	 */
 	public static function transform_slug( $str ) {
 	
-		return str_replace( ' ', '-', strtolower( $str ) );
+		return sanitize_title( $str );
 
 	}
 

@@ -189,7 +189,7 @@ $args =
 				'id'             => 'uix_sc_portfolio_grid_listitem_type',
 				'title'          => '',
 				'desc'           => '',
-				'value'          => __( 'Category Name', 'uix-shortcodes' ),
+				'value'          => __( 'Category', 'uix-shortcodes' ),
 				'class'          => 'dynamic-row-uix_sc_portfolio_grid_listitem_type', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'text'
@@ -318,11 +318,7 @@ if ( $sid == -1 && is_admin() ) {
 							_item_v_target = ( uix_sc_portfolio_grid_target === true ) ? 1 : 0,
 							_item_v_filterable = ( uix_sc_portfolio_grid_filterable === true ) ? 1 : 0;
 					
-					
-					
-					
-						 if ( _item_v_type == '<?php _e( 'Category Name', 'uix-shortcodes' ); ?>' ) _item_v_type = '';
-						
+				
 						
 						if ( _title != undefined ) {
 							show_list_item += "<br>[uix_portfolio_item type='"+_item_v_type+"' title='"+_item_v_title+"' image='"+_item_v_image+"' fullimage='"+_item_v_imagefull+"' target='"+_item_v_target+"' url='"+_item_url+"']";

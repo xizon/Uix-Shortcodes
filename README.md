@@ -33,6 +33,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+#### = 1.3.6 =
+
+* Optimized the live preview for the admin panel.
+* Optimized the front-end shortcode.
+
+
+
 #### = 1.3.5 (2016 final version)=
 
 * Optimized form selectors.
