@@ -344,6 +344,15 @@
 				 * 3. Pricing
 				 *************************************
 				 */
+			    //Compatible with older themes
+			    if ( $( '#Nailme-mainstyle-css' ).length > 0 && $( '#uix-shortcodes-css' ).attr( 'href' ).indexOf( '-slant' ) < 0 ) {
+					$( '.uix-sc-price .uix-sc-price-num' ).css( {
+						'font-size': '46px',
+						'line-height': '1',
+						'padding': '.3em 0'
+					} );
+				}
+			
 
 				//Initialize the height
 				$( '.uix-sc-price' ).each( function(){
