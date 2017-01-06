@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Tue Dec 27 2016 13:11:35 GMT+0800 (CST)\n"
+"POT-Revision-Date: Fri Jan 06 2017 19:58:45 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,138 +42,159 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-shortcodes.php:316 ../uix-shortcodes.php:428 ../uix-shortcodes.php:429
+#: ../uix-shortcodes.php:373 ../uix-shortcodes.php:485 ../uix-shortcodes.php:486
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:317 ../helper/settings.php:116
+#: ../uix-shortcodes.php:374 ../helper/settings.php:116
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:415 ../helper/settings.php:97
+#: ../uix-shortcodes.php:472 ../helper/settings.php:97
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: ../uix-shortcodes.php:416 ../shortcodes/editor/tinymce-plugin-lang.php:16
+#: ../uix-shortcodes.php:473 ../shortcodes/editor/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: ../uix-shortcodes.php:436 ../uix-shortcodes.php:437
+#: ../uix-shortcodes.php:493 ../uix-shortcodes.php:494
 msgid "Custom CSS"
 msgstr ""
 
-#: ../uix-shortcodes.php:444 ../uix-shortcodes.php:445
+#: ../uix-shortcodes.php:501 ../uix-shortcodes.php:502
 msgid "Helper"
 msgstr ""
 
-#: ../uix-shortcodes.php:815
+#: ../uix-shortcodes.php:878
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/init.php:264
-msgid "Exit live preview"
+#: ../admin/uixscform/init.php:101
+msgid "Select Files"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/init.php:581
-msgid "Cancel"
-msgstr ""
-
-#: ../assets/add-ons/uixscform/init.php:581
+#: ../admin/uixscform/init.php:102 ../admin/uixscform/init.php:597
 msgid "Insert"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/init.php:642
+#: ../admin/uixscform/init.php:103
+msgid "Insert Image"
+msgstr ""
+
+#: ../admin/uixscform/init.php:282
+msgid "Exit live preview"
+msgstr ""
+
+#: ../admin/uixscform/init.php:597
+msgid "Cancel"
+msgstr ""
+
+#: ../admin/uixscform/init.php:597 ../helper/tabs/documentation.php:416 ..
+#: /helper/tabs/documentation.php:626 ../helper/tabs/documentation.php:719 ..
+#: /helper/tabs/documentation.php:814 ../helper/tabs/documentation.php:982 ..
+#: /helper/tabs/documentation.php:1116 ../helper/tabs/documentation.php:1189 ..
+#: /helper/tabs/documentation.php:1354 ../helper/tabs/documentation.php:1488 ..
+#: /helper/tabs/documentation.php:1575 ../helper/tabs/documentation.php:1681 ..
+#: /helper/tabs/documentation.php:1795 ../helper/tabs/documentation.php:1971 ..
+#: /helper/tabs/documentation.php:2139 ../helper/tabs/documentation.php:2264 ..
+#: /helper/tabs/documentation.php:2473 ../helper/tabs/documentation.php:2564 ..
+#: /helper/tabs/documentation.php:2759 ../helper/tabs/documentation.php:2863 ..
+#: /helper/tabs/documentation.php:2956 ../helper/tabs/documentation.php:3019
+msgid "Preview"
+msgstr ""
+
+#: ../admin/uixscform/init.php:658
 msgid ""
 "<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
 "shortcode does not support live preview, please check out it directly on "
 "front end page.</p></div>"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/fontawesome/font-awesome-custom.php:473
+#: ../admin/uixscform/fontawesome/font-awesome-custom.php:474
 msgid "Social:"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/color-map.php:48
+#: ../admin/uixscform/form-inc/color-map.php:48
 msgid "Add Custom Color"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/icon.php:23 ../assets/add-
-#: ons/uixscform/form-inc/icon.php:59
+#: ../admin/uixscform/form-inc/icon.php:23 ../admin/uixscform/form-inc/icon.php:59
 msgid "Choose Icon"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:79
+#: ../admin/uixscform/form-inc/image.php:79
 msgid "Background Repeat"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:85
+#: ../admin/uixscform/form-inc/image.php:85
 msgid "No Repeat"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:86
+#: ../admin/uixscform/form-inc/image.php:86
 msgid "Tile"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:87
+#: ../admin/uixscform/form-inc/image.php:87
 msgid "Tile Horizontally"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:88
+#: ../admin/uixscform/form-inc/image.php:88
 msgid "Tile Vertically"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:102
+#: ../admin/uixscform/form-inc/image.php:102
 msgid "Background Position"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:108
+#: ../admin/uixscform/form-inc/image.php:108
 msgid "Left"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:109
+#: ../admin/uixscform/form-inc/image.php:109
 msgid "Center"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:110
+#: ../admin/uixscform/form-inc/image.php:110
 msgid "Right"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:124
+#: ../admin/uixscform/form-inc/image.php:124
 msgid "Background Attachment"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:130
+#: ../admin/uixscform/form-inc/image.php:130
 msgid "Scroll"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:131
+#: ../admin/uixscform/form-inc/image.php:131
 msgid "Fixed"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:145
+#: ../admin/uixscform/form-inc/image.php:145
 msgid "Background Size"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:151
+#: ../admin/uixscform/form-inc/image.php:151
 msgid "Cover"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:152
+#: ../admin/uixscform/form-inc/image.php:152
 msgid "Auto"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/image.php:153
+#: ../admin/uixscform/form-inc/image.php:153
 msgid "Contain"
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/multiselect.php:57
+#: ../admin/uixscform/form-inc/multiselect.php:57
 msgid "Must use the array for \"value\"."
 msgstr ""
 
-#: ../assets/add-ons/uixscform/form-inc/toggle.php:61
+#: ../admin/uixscform/form-inc/toggle.php:61
 msgid "More Options"
 msgstr ""
 
@@ -206,9 +227,10 @@ msgid ""
 "Uix Shortcodes brings an amazing set of beautiful and useful elements to "
 "your site that lets you do nifty things with very little effort. It makes it "
 "easy and quick to add the shortcode you need to achieve the page layout or "
-"function you desire. It provides easy to use over 21+ shortcodes. Currently, "
-"Uix Shortcodes supports: <code>\"container\"</code>, <code>\"columns\"</code>, "
-"<code>\"buttons\"</code>, <code>\"progress bar\"</code>, <code>\"google "
+"function you desire. It provides easy to use over 26+ shortcodes. Currently, "
+"Uix Shortcodes supports: <code>\"container\"</code>, <code>\"parallax\"</code>, "
+"<code>\"image slider\"</code>, <code>\"timeline\"</code>, <code>\"columns\"</code>,"
+" <code>\"buttons\"</code>, <code>\"progress bar\"</code>, <code>\"google "
 "maps\"</code>, <code>\"special heading\"</code>, <code>\"pricing table\"</code>, "
 "<code>\"icons\"</code>, <code>\"features boxes\"</code>, <code>\"testimonials "
 "carousel\"</code>, <code>\"team\"</code>, <code>\"list of clients\"</code>, "
@@ -865,20 +887,6 @@ msgstr ""
 msgid "Example"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:416 ../helper/tabs/documentation.php:626 ..
-#: /helper/tabs/documentation.php:719 ../helper/tabs/documentation.php:814 ..
-#: /helper/tabs/documentation.php:982 ../helper/tabs/documentation.php:1116 ..
-#: /helper/tabs/documentation.php:1189 ../helper/tabs/documentation.php:1354 ..
-#: /helper/tabs/documentation.php:1488 ../helper/tabs/documentation.php:1575 ..
-#: /helper/tabs/documentation.php:1681 ../helper/tabs/documentation.php:1795 ..
-#: /helper/tabs/documentation.php:1971 ../helper/tabs/documentation.php:2139 ..
-#: /helper/tabs/documentation.php:2264 ../helper/tabs/documentation.php:2473 ..
-#: /helper/tabs/documentation.php:2564 ../helper/tabs/documentation.php:2759 ..
-#: /helper/tabs/documentation.php:2863 ../helper/tabs/documentation.php:2956 ..
-#: /helper/tabs/documentation.php:3019
-msgid "Preview"
-msgstr ""
-
 #: ../helper/tabs/documentation.php:429
 msgid "Pricing Table"
 msgstr ""
@@ -1129,7 +1137,7 @@ msgstr ""
 #: /shortcodes/panel/uix_sc_form_features_col2.php:40 ..
 #: /shortcodes/panel/uix_sc_form_features_col2.php:134 ..
 #: /shortcodes/panel/uix_sc_form_features_col3.php:40 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:423 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:435 ..
 #: /shortcodes/panel/uix_sc_form_tabs.php:66 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:79 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:95 ..
@@ -1177,7 +1185,7 @@ msgstr ""
 #: /shortcodes/panel/uix_sc_form_features_col2.php:34 ..
 #: /shortcodes/panel/uix_sc_form_features_col2.php:128 ..
 #: /shortcodes/panel/uix_sc_form_features_col3.php:34 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:417 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:429 ..
 #: /shortcodes/panel/uix_sc_form_portfolio_grid.php:97 ..
 #: /shortcodes/panel/uix_sc_form_tabs.php:60 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:73 ..
@@ -2103,7 +2111,7 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:2514 ../helper/tabs/documentation.php:2808 ..
 #: /shortcodes/panel/uix_sc_dividing_line.php:46 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:276 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:288 ..
 #: /shortcodes/panel/uix_sc_form_icon.php:28
 msgid "Color"
 msgstr ""
@@ -2288,7 +2296,7 @@ msgid "Choose Type of Button"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:2904 ../shortcodes/panel/uix_sc_form_hello.
-#: php:303
+#: php:315
 msgid "Multiple Selector"
 msgstr ""
 
@@ -2415,15 +2423,15 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1283
+#: ../shortcodes/frontpage-init.php:1287
 msgid "+"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1284
+#: ../shortcodes/frontpage-init.php:1288
 msgid "-"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1650
+#: ../shortcodes/frontpage-init.php:1654
 msgid "Comments are closed."
 msgstr ""
 
@@ -2437,7 +2445,7 @@ msgstr ""
 
 #: ../shortcodes/editor/tinymce-plugin-lang.php:14 ..
 #: /shortcodes/panel/uix_sc_form_hello.php:45 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:492
+#: /shortcodes/panel/uix_sc_form_hello.php:504
 msgid "Text"
 msgstr ""
 
@@ -2538,8 +2546,8 @@ msgstr ""
 #: ../shortcodes/panel/uix_sc_container.php:109 ..
 #: /shortcodes/panel/uix_sc_form_authorcard.php:45 ..
 #: /shortcodes/panel/uix_sc_form_client.php:89 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:181 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:479 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:193 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:491 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:71 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:147 ..
 #: /shortcodes/panel/uix_sc_form_portfolio_grid.php:155 ..
@@ -2553,8 +2561,8 @@ msgstr ""
 
 #: ../shortcodes/panel/uix_sc_container.php:110 ..
 #: /shortcodes/panel/uix_sc_form_authorcard.php:46 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:182 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:480 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:194 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:492 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:72 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:148 ..
 #: /shortcodes/panel/uix_sc_form_portfolio_grid.php:156 ..
@@ -2848,7 +2856,7 @@ msgid "Insert Features (3 Column)"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_hello.php:26 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:593
+#: /shortcodes/panel/uix_sc_form_hello.php:605
 msgid "Note: 3 items per row.Per section insert \"for a maximum of 3\"."
 msgstr ""
 
@@ -2860,15 +2868,19 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:147
+#: ../shortcodes/panel/uix_sc_form_hello.php:145
+msgid "Editor"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello.php:159
 msgid "Textarea"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:161
+#: ../shortcodes/panel/uix_sc_form_hello.php:173
 msgid "Textarea(by default value)"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:163 ..
+#: ../shortcodes/panel/uix_sc_form_hello.php:175 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col3.php:132 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col4.php:132
 msgid ""
@@ -2876,68 +2888,68 @@ msgid ""
 "Description</s>"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:175 ..
+#: ../shortcodes/panel/uix_sc_form_hello.php:187 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:65 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:141
 msgid "Upload Image"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:178 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:476 ..
+#: ../shortcodes/panel/uix_sc_form_hello.php:190 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:488 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:68 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:144 ../shortcodes/panel/uix_sc_map.
 #: php:126
 msgid "Image URL"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:200
+#: ../shortcodes/panel/uix_sc_form_hello.php:212
 msgid "Short Text"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:212
+#: ../shortcodes/panel/uix_sc_form_hello.php:224
 msgid "Short Units Text"
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_hello.php:234 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:584
-msgid "set up links with toggle"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_hello.php:246 ..
 #: /shortcodes/panel/uix_sc_form_hello.php:596
+msgid "set up links with toggle"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello.php:258 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:608
 msgid "Toggle URL"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:258
+#: ../shortcodes/panel/uix_sc_form_hello.php:270
 msgid "Toggle URL2"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:286
+#: ../shortcodes/panel/uix_sc_form_hello.php:298
 msgid "Select"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:287
+#: ../shortcodes/panel/uix_sc_form_hello.php:299
 msgid "This is infomation."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:321
+#: ../shortcodes/panel/uix_sc_form_hello.php:333
 msgid "This is Icon Selector "
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:335 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:345
+#: ../shortcodes/panel/uix_sc_form_hello.php:347 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:357
 msgid "Color Map"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:359
+#: ../shortcodes/panel/uix_sc_form_hello.php:371
 msgid "Checkbox"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:373
+#: ../shortcodes/panel/uix_sc_form_hello.php:385
 msgid "Toggle for Checkbox"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:658
+#: ../shortcodes/panel/uix_sc_form_hello.php:670
 msgid "Demo Form 1"
 msgstr ""
 
@@ -3043,9 +3055,8 @@ msgstr ""
 msgid "Project Title"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:192 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:324
-msgid "Category Name"
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:192
+msgid "Category"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:206

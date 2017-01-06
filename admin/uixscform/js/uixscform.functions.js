@@ -475,13 +475,14 @@ jQuery( document ).ready( function() {
 			return;
 		}
 		upload_frame = wp.media( {
-			title: 'Select Files',
+			title: uix_shortcodes_wp_plugin.lang_media_title,
 			button: {
-			text: 'Insert into post',
+			text: uix_shortcodes_wp_plugin.lang_media_text,
 		},
 			multiple: false
 		} );
 		upload_frame.on( 'select',function(){
+			var attachment;
 			attachment = upload_frame.state().get( 'selection' ).first().toJSON();
 			jQuery( "#" + _targetImgContainer ).val( attachment.url );
 			jQuery( "#" + _targetPreviewContainer ).find( 'img' ).attr( "src",attachment.url );//image preview
@@ -1337,7 +1338,7 @@ function uixscform_editorInit( id ){
 					height : 200,
 					menubar: false,
 					plugins: 'textcolor image media hr',
-				    toolbar: 'undo redo | forecolor backcolor styleselect | bold italic | bullist numlist outdent indent | hr image',
+				    toolbar: 'undo redo removeformat  | forecolor backcolor styleselect | bold italic | bullist numlist outdent indent | hr uixsc_image',
 					setup:function(ed) {
 					   ed.on( 'change', function(e) {
 						   var newvalue = ed.getContent().replace(/\r?\n/gm, '');
@@ -1348,6 +1349,41 @@ function uixscform_editorInit( id ){
 						   
 						   $( 'textarea#' + vid ).val( newvalue ).trigger( 'change' );
 					   });
+						
+						
+                        //Add media button
+						function uixsc_mce_insertImage() {
+							var upload_frame;
+							if( upload_frame ){
+								upload_frame.open();
+								return;
+							}
+							upload_frame = wp.media( {
+								title: uix_shortcodes_wp_plugin.lang_media_title,
+								button: {
+								text: uix_shortcodes_wp_plugin.lang_media_text,
+							},
+								multiple: false
+							} );
+							upload_frame.on( 'select',function() {
+								var attachment;
+								attachment = upload_frame.state().get( 'selection' ).first().toJSON();
+								ed.insertContent( '<img src="'+attachment.url+'" alt="">' );
+
+								
+							} );
+
+							upload_frame.open();
+							
+						}
+
+						ed.addButton( 'uixsc_image', {
+						  icon: 'mce-ico mce-i-image',
+						  tooltip: uix_shortcodes_wp_plugin.lang_mce_image,
+						  onclick: uixsc_mce_insertImage
+						});	
+						
+						
 				   },
 				  content_css: [
 					uix_shortcodes_wp_plugin.url + 'css/uixscform.editor.css'
