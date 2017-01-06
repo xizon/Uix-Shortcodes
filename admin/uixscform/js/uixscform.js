@@ -92,6 +92,8 @@
 								$obj.find( '.preview-box' ).html( $( '.uixscform-livepreview-btn-target' ).html() );
 							}			
 							
+							/*-- Init tinymce --*/
+							uixscform_editorInit( $obj.find( '.uixscform-mce-editor textarea.mce' ).attr( 'id' ) );
 							
 							
 

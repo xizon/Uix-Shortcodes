@@ -20,7 +20,7 @@ Licensed under the [GPL3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ### Description
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 21+ shortcodes. Currently, Uix Shortcodes supports: `container`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)`, `recent posts with custom template` and `author card`.
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. Currently, Uix Shortcodes supports: `container`, `parallax`, `image slider`, `timeline`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)`, `recent posts with custom template` and `author card`.
 
 
 The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
@@ -32,6 +32,14 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 
 ### Updates
+
+#### = 1.4.0 =
+
+* Added editor form field type.
+* Added "Image Slider" shortcode (new).
+* Added "Timeline" shortcode (new).
+* Optimized the directory and file structure, delete the unnecessary files.
+
 
 #### = 1.3.6 =
 
@@ -182,45 +190,45 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ###Screenshot
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-3.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-3.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-9.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-9.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-8.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-8.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-1.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-1.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-2.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-2.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-4.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-4.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-5.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-5.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-6.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-6.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-7.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-7.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-10.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-10.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-11.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-11.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-12.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-12.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-13.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-13.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-14.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-14.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-15.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-15.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-16.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-16.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-17.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-17.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-18.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-18.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-19.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-19.jpg)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/assets/screenshot-20.jpg)
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-20.jpg)
 
 
 

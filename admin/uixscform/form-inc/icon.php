@@ -31,7 +31,7 @@ class UixSCFormType_Icon {
 			$social = false;
 			
 			//Icon list here ( without ajax that is to increase speed. )
-			$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'assets/add-ons/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector uixscform-icon-selector" id="icon-selector-'.$id.'"></span>';
+			$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'admin/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector uixscform-icon-selector" id="icon-selector-'.$id.'"></span>';
 			
 			if ( is_array( $default ) && !empty( $default ) ) {
 				$social = $default[ 'social' ];
@@ -41,7 +41,7 @@ class UixSCFormType_Icon {
 				if ( $social ) {
 					
 					//Icon list here ( without ajax that is to increase speed. )
-					$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'assets/add-ons/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector uixscform-icon-selector icon-social" id="icon-selector-'.$id.'-social"></span>';
+					$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'admin/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector uixscform-icon-selector icon-social" id="icon-selector-'.$id.'-social"></span>';
 					
 				} 
 			}

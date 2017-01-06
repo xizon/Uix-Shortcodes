@@ -1315,3 +1315,52 @@ function uixscform_curModalID() {
 };
 
 
+
+	   
+
+/*! 
+ * ************************************
+ * Initialize editor
+ *************************************
+ */	
+function uixscform_editorInit( id ){
+	( function( $ ) {
+	"use strict";
+		$( function() {
+            
+			if ( id != undefined ) {
+				
+				var vid = id.replace( '-editor', '' );
+				tinyMCE.execCommand( 'mceRemoveEditor', true, id );
+				tinymce.init({
+					selector:  'textarea#' + id,
+					height : 200,
+					menubar: false,
+					plugins: 'textcolor image media hr',
+				    toolbar: 'undo redo | forecolor backcolor styleselect | bold italic | bullist numlist outdent indent | hr image',
+					setup:function(ed) {
+					   ed.on( 'change', function(e) {
+						   var newvalue = ed.getContent().replace(/\r?\n/gm, '');
+						   
+						   //Encode editor value in order to add new textarea
+						   newvalue = newvalue.replace(/'/g, '&apos;' )
+											  .replace(/"/g, '&quot;' );
+						   
+						   $( 'textarea#' + vid ).val( newvalue ).trigger( 'change' );
+					   });
+				   },
+				  content_css: [
+					uix_shortcodes_wp_plugin.url + 'css/uixscform.editor.css'
+				  ]
+				});	
+			}
+			
+
+		} );
+		
+	} ) ( jQuery );
+	
+
+}
+
+

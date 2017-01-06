@@ -31,8 +31,8 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'radio-image',
 			'default'        => array(
-									'boxed'        => UixShortcodes::plug_directory() .'assets/images/container/style-1.jpg',
-									'fullwidth'     => UixShortcodes::plug_directory() .'assets/images/container/style-2.jpg',
+									'boxed'        => UixShortcodes::plug_directory() .'admin/uixscform/images/container/style-1.jpg',
+									'fullwidth'     => UixShortcodes::plug_directory() .'admin/uixscform/images/container/style-2.jpg',
 				                ),
 			/* If the toggle of switch with radio is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(

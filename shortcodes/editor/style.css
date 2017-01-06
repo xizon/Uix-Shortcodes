@@ -33,36 +33,36 @@ i.uix-shortcodes-icon{
 }
 .uix-shortcodes-col-average-4:before{
 	content:' ';
-	background:url(img/average-4.png) no-repeat top center;
+	background:url(../../admin/uixscform/images/column/average-4.png) no-repeat top center;
 }
 
 .uix-shortcodes-col-average-3:before{
 	content:' ';
-	background:url(img/average-3.png) no-repeat  top center;
+	background:url(../../admin/uixscform/images/column/average-3.png) no-repeat  top center;
 }
 .uix-shortcodes-col-average-2:before{
 	content:' ';
-	background:url(img/average-2.png) no-repeat  top center;
+	background:url(../../admin/uixscform/images/column/average-2.png) no-repeat  top center;
 }
 
 .uix-shortcodes-col-1_3-2_3:before{
 	content:' ';
-	background:url(img/1_3-2_3.png) no-repeat  top center;
+	background:url(../../admin/uixscform/images/column/1_3-2_3.png) no-repeat  top center;
 }
 
 .uix-shortcodes-col-2_3-1_3:before{
 	content:' ';
-	background:url(img/2_3-1_3.png) no-repeat  top center;
+	background:url(../../admin/uixscform/images/column/2_3-1_3.png) no-repeat  top center;
 }
 
 .uix-shortcodes-col-1_4-3_4:before{
 	content:' ';
-	background:url(img/1_4-3_4.png) no-repeat  top center;
+	background:url(../../admin/uixscform/images/column/1_4-3_4.png) no-repeat  top center;
 }
 
 .uix-shortcodes-col-3_4-1_4:before{
 	content:' ';
-	background:url(img/3_4-1_4.png) no-repeat  top center;
+	background:url(../../admin/uixscform/images/column/3_4-1_4.png) no-repeat  top center;
 }
 
 

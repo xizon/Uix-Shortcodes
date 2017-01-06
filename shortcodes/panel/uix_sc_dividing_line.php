@@ -30,12 +30,12 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'radio-image',
 			'default'        => array(
-									'solid'     => UixShortcodes::plug_directory() .'assets/images/line/line-style-1.png',
-									'double'    => UixShortcodes::plug_directory() .'assets/images/line/line-style-2.png',
-									'dashed'    => UixShortcodes::plug_directory() .'assets/images/line/line-style-3.png',
-									'dotted'    => UixShortcodes::plug_directory() .'assets/images/line/line-style-4.png',
-									'shadow'    => UixShortcodes::plug_directory() .'assets/images/line/line-style-5.png',
-									'gradient'  => UixShortcodes::plug_directory() .'assets/images/line/line-style-6.png',
+									'solid'     => UixShortcodes::plug_directory() .'admin/uixscform/images/line/line-style-1.png',
+									'double'    => UixShortcodes::plug_directory() .'admin/uixscform/images/line/line-style-2.png',
+									'dashed'    => UixShortcodes::plug_directory() .'admin/uixscform/images/line/line-style-3.png',
+									'dotted'    => UixShortcodes::plug_directory() .'admin/uixscform/images/line/line-style-4.png',
+									'shadow'    => UixShortcodes::plug_directory() .'admin/uixscform/images/line/line-style-5.png',
+									'gradient'  => UixShortcodes::plug_directory() .'admin/uixscform/images/line/line-style-6.png',
 									
 				                )
 		

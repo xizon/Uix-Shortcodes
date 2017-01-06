@@ -140,7 +140,19 @@ $args =
 		
 		),
 
-
+		array(
+			'id'             => 'uix_sc_editor',
+			'title'          => __( 'Editor', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'editor',
+			'default'        => array(
+									'row'     => 5,
+									'format'  => true
+				                )
+		
+		),
 		
 		array(
 			'id'             => 'uix_sc_textarea',

@@ -2236,7 +2236,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                             <tr>
                                                 <td><?php _e( 'Marker', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'String', 'uix-shortcodes' ); ?></td>
-                                                <td>/wp-content/plugins/uix-shortcodes/assets/images/map/map-location.png<br><img src="<?php echo $imgpath; ?>sc-preview-elements-22.jpg" alt="" /></td>
+                                                <td>/wp-content/plugins/uix-shortcodes/admin/uixscform/images/map/map-location.png<br><img src="<?php echo $imgpath; ?>sc-preview-elements-22.jpg" alt="" /></td>
                                                 <td><?php _e( 'Custom a pin (location marker) to be used on the map.', 'uix-shortcodes' ); ?></td>
                                             </tr>   
                                             

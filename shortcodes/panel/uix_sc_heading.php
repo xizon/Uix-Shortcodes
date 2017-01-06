@@ -44,8 +44,8 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'radio-image',
 			'default'        => array(
-									'grand-fill-yellow'   => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-1.jpg',
-									'grand'               => UixShortcodes::plug_directory() .'assets/images/heading/heading-style-2.jpg',
+									'grand-fill-yellow'   => UixShortcodes::plug_directory() .'admin/uixscform/images/heading/heading-style-1.jpg',
+									'grand'               => UixShortcodes::plug_directory() .'admin/uixscform/images/heading/heading-style-2.jpg',
 				                ),
 			/* If the toggle of switch with radio is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(

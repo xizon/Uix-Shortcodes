@@ -110,9 +110,6 @@ if ( $sid == -1 && is_admin() ) {
 					var after = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_after );
 					var temp = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_looptemp );
 					
-					
-			
-				
 					code = "[uix_recent_posts show='"+uixscform_floatval( uix_sc_rposts_num )+"' before='"+before+"' after='"+after+"']"+temp+"[/uix_recent_posts]";
 					
 					

@@ -228,11 +228,11 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 		//featured image
 		$thumbnail_src  =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
 		$post_thumbnail_src  =  $thumbnail_src[0];  
-		$post_thumbnail = '<img class="uix-sc-recent-posts-thumbnail" src="'.$post_thumbnail_src.'" alt="'.esc_attr( get_the_title() ).'">';
+		$post_thumbnail = '<img class="uix-sc-recent-posts-thumbnail" src="'.esc_url( $post_thumbnail_src ).'" alt="'.esc_attr( get_the_title() ).'">';
 		if ( empty( $post_thumbnail_src ) ) $post_thumbnail = '';
 	  
 	  
-		$return_string .= str_replace( '[uix_recent_posts_link]', get_permalink(),
+		$return_string .= str_replace( '[uix_recent_posts_link]', esc_url( get_permalink() ),
 		           str_replace( '[uix_recent_posts_title]', esc_attr( get_the_title() ),
 				   str_replace( '[uix_recent_posts_date_m]', get_the_time('m'),
 				   str_replace( '[uix_recent_posts_date_M]', get_the_time('M'),
@@ -1258,7 +1258,7 @@ function uix_sc_fun_map( $atts, $content = null ) {
 		'longitude' => '-122.4414289',
 		'zoom' => 14,
 		'name' => 'SEO San Francisco, CA, Gough Street, San Francisco, CA',
-		'marker' => UixShortcodes::plug_directory().'assets/images/map/map-location.png',
+		'marker' => UixShortcodes::plug_directory().'admin/uixscform/images/map/map-location.png',
 		
 	 ), $atts ) );
 	 
@@ -1269,7 +1269,7 @@ function uix_sc_fun_map( $atts, $content = null ) {
     $map_zoom = $zoom;	 //Map zoom
     $map_name = $name;	 //Map place name
     $map_height = $height;	 //Map height
-    $map_marker = UixShortcodes::plug_directory().'assets/images/map/map-location.png'; //Map marker 
+    $map_marker = UixShortcodes::plug_directory().'admin/uixscform/images/map/map-location.png'; //Map marker 
 	 
 	
     $return_string = '';
