@@ -61,8 +61,8 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 <?php
 
 	
-	$newFilePath                = get_stylesheet_directory() . '/uix-shortcodes-style.css';
-	$newFilePath2               = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
+	$newFilePath                = get_stylesheet_directory() . '/uix-shortcodes-custom.css';
+	$newFilePath2               = get_stylesheet_directory() . '/assets/css/uix-shortcodes-custom.css';
 	$org_cssname_uix_shortcodes = UixShortcodes::core_css_file( 'name' );
 	$org_csspath_uix_shortcodes = UixShortcodes::core_css_file();
 	

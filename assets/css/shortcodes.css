@@ -30,6 +30,7 @@
 	18. Author Card  
 	19. Buttons
     20. Image Slider 
+    21. Timeline
 
 
 */
@@ -198,6 +199,8 @@ img.uix-sc-img,
 .uix-sc-client:after,
 .uix-sc-imageslider:before,
 .uix-sc-imageslider:after,
+.uix-sc-timeline:before,
+.uix-sc-timeline:after,
 .uix-sc-testimonials:before,
 .uix-sc-testimonials:after {
   display: table;
@@ -215,6 +218,7 @@ img.uix-sc-img,
 .uix-sc-card:after,
 .uix-sc-client:after,
 .uix-sc-imageslider:after,
+.uix-sc-timeline:after,
 .uix-sc-testimonials:after {
 	padding-top: 0;
 	clear: both;
@@ -2536,3 +2540,90 @@ img.uix-sc-img,
 		position: relative;
 	}
 		 
+
+
+
+/* ====================================================== 
+   21. Timeline               
+/* ====================================================== */
+.uix-sc-container-fullwidth .uix-sc-timeline {
+	padding: 2em;
+}
+
+.uix-sc-timeline {
+	text-align: center;	
+}
+
+	.uix-sc-timeline .uix-sc-timestamp {
+		margin-bottom: 20px;
+		padding: 0px 40px;
+		align-items: center;
+		font-weight: 100;
+	}
+
+	.uix-sc-timeline > div {
+		float: left;	
+	}
+
+
+	.uix-sc-timeline .uix-sc-timeline-status {
+		padding: 0 30px;
+		border-top: 2px solid #D6DCE0;
+		position: relative;
+	}
+
+	.uix-sc-timeline .uix-sc-timeline-date {
+		font-size: 12px;
+		
+	}
+
+
+		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-title {
+			font-weight: 600;
+			padding: 1.2em 0;
+			display: block;
+			margin-top: .2em;
+			font-size: 14px;
+		}
+
+		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+			content: "";
+			width: 25px;
+			height: 25px;
+			background-color: white;
+			-webkit-border-radius: 25px; 
+			-moz-border-radius: 25px; 
+			border-radius: 25px;
+			border: 1px solid #ddd;
+			position: absolute;
+			top: -15px;
+			left: 42%;
+		}
+
+		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status {
+			border-top: 2px solid #A2BF2F;
+		}
+
+		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+			background-color: #A2BF2F;
+			border: none;
+		}
+
+		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status .uix-sc-timeline-status-title {
+			color: #A2BF2F;
+		}
+
+@media (max-width: 768px) {
+
+	.uix-sc-timeline > div {
+		float: none;
+
+	}
+	
+		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+			left: 48%;
+		}
+	
+}
+
+

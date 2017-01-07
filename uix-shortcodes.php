@@ -955,8 +955,8 @@ class UixShortcodes {
 	 *
 	 */
 	public static function core_css_file_exists() {
-		  $newFilePath      = get_stylesheet_directory() . '/uix-shortcodes-style.css';
-	      $newFilePath2     = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
+		  $newFilePath      = get_stylesheet_directory() . '/uix-shortcodes-custom.css';
+	      $newFilePath2     = get_stylesheet_directory() . '/assets/css/uix-shortcodes-custom.css';
 		  if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
 			  return true;
 		  } else {
@@ -973,8 +973,8 @@ class UixShortcodes {
 		
 		//default style
 		$validPath    = self::plug_directory() .'assets/css/shortcodes.css';
-		$newFilePath  = get_stylesheet_directory() . '/uix-shortcodes-style.css';
-		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-shortcodes-style.css';
+		$newFilePath  = get_stylesheet_directory() . '/uix-shortcodes-custom.css';
+		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-shortcodes-custom.css';
 		
 		//shortcodes themes
 		$shortcodes_style = get_option( 'uix_sc_opt_style', 'elegant' );
@@ -1003,24 +1003,24 @@ class UixShortcodes {
 		
 	    //custom stylesheet for WP theme directory
 		if ( file_exists( $newFilePath ) ) {
-			$validPath = get_template_directory_uri() . '/uix-shortcodes-style.css';
+			$validPath = get_template_directory_uri() . '/uix-shortcodes-custom.css';
 			if ( $type == 'dir' ) {
-				$validPath = get_template_directory() . '/uix-shortcodes-style.css';
+				$validPath = get_template_directory() . '/uix-shortcodes-custom.css';
 			}
 		}
 		
 		
 		if ( file_exists( $newFilePath2 ) ) {
-			$validPath = get_template_directory_uri() . '/assets/css/uix-shortcodes-style.css';
+			$validPath = get_template_directory_uri() . '/assets/css/uix-shortcodes-custom.css';
 			if ( $type == 'dir' ) {
-				$validPath = get_template_directory() . '/assets/css/uix-shortcodes-style.css';
+				$validPath = get_template_directory() . '/assets/css/uix-shortcodes-custom.css';
 			}
 
 		}
 		
 		if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
 			if ( $type == 'name' ) {
-				$validPath = 'uix-shortcodes-style.css';
+				$validPath = 'uix-shortcodes-custom.css';
 			}
 		}
 		

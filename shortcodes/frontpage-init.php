@@ -7,10 +7,45 @@
 add_filter( 'widget_text', 'do_shortcode' ); //text widgets.
 add_filter( 'the_excerpt', 'do_shortcode' ); //excerpt.
 add_filter( 'comment_text', 'do_shortcode' ); //comment.
+
+
+/*
+
+	TABLE OF CONTENTS
+	---------------------------
 	
+	1. Hello ( Demo for development )
+	2. Hello2 ( Demo for development )    
+	3. Container  
+	4. Progress Bar
+	5. Icons
+	6. Recent Posts
+	7. Pricing
+	8. Column
+	9. Button
+	10. Share Buttons
+	11. Accordion & Tabs
+	12. Video
+	13. Audio
+	14. Code
+	15. Portfolio
+	16. Team
+	17. Features
+	18. Client
+	19. Testimonials
+	20. Map
+	21. Heading
+	22. Dividing Line
+	23. Contact Form
+	24. Author Card
+	25. Image Slider
+	26. Timeline
+
+*/
+
 
 //----------------------------------------------------------------------------------------------------
-// Hello
+// 1. Hello ( Demo for development )
 //----------------------------------------------------------------------------------------------------
 
 function uix_sc_fun_hello( $atts, $content = null ){
@@ -34,7 +69,7 @@ add_shortcode( 'uix_hello', 'uix_sc_fun_hello' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Hello2
+// 2. Hello2 ( Demo for development )
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_hello2( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -55,7 +90,7 @@ add_shortcode( 'uix_hello2', 'uix_sc_fun_hello2' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Container
+// 3. Container
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_container( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -117,7 +152,7 @@ add_shortcode( 'uix_container', 'uix_sc_fun_container' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Progress Bar
+// 4. Progress Bar
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_progress_bar( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -176,7 +211,7 @@ add_shortcode( 'uix_progress_bar', 'uix_sc_fun_progress_bar' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Icons
+// 5. Icons
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_icons( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -201,7 +236,7 @@ add_shortcode( 'uix_icons', 'uix_sc_fun_icons' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Recent Posts
+// 6. Recent Posts
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_recent_posts( $atts, $content = null ) {
 	extract( shortcode_atts( array( 
@@ -259,7 +294,7 @@ add_shortcode( 'uix_recent_posts', 'uix_sc_fun_recent_posts' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Pricing
+// 7. Pricing
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_pricing( $atts, $content = null ){
 	
@@ -323,7 +358,7 @@ add_shortcode( 'uix_pricing_item', 'uix_sc_fun_pricing_item' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Column
+// 8. Column
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_column_wrapper( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -366,7 +401,7 @@ add_shortcode( 'uix_column', 'uix_sc_fun_column' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Button
+// 9. Button
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_button( $atts, $content = null ) {
 	extract( shortcode_atts( array( 
@@ -416,7 +451,7 @@ add_shortcode( 'uix_button', 'uix_sc_fun_button' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Share Buttons
+// 10. Share Buttons
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_share_buttons( $atts, $content = null ) {
 	extract( shortcode_atts( array( 
@@ -482,7 +517,7 @@ add_shortcode( 'uix_share_buttons', 'uix_sc_fun_share_buttons' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Accordion & Tabs
+// 11. Accordion & Tabs
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_toggle( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -606,7 +641,7 @@ add_shortcode( 'uix_toggle_group', 'uix_sc_fun_toggle_group' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Video
+// 12. Video
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_video( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -629,7 +664,7 @@ add_shortcode( 'uix_video', 'uix_sc_fun_video' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Audio
+// 13. Audio
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_audio( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -664,7 +699,7 @@ add_shortcode( 'uix_audio', 'uix_sc_fun_audio' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Code
+// 14. Code
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_code( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -737,7 +772,7 @@ function uix_sc_fun_syntaxhighlighter(){
 
 
 //----------------------------------------------------------------------------------------------------
-// Portfolio
+// 15. Portfolio
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -862,7 +897,7 @@ add_shortcode( 'uix_portfolio_item', 'uix_sc_fun_portfolio_item' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Team
+// 16. Team
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_team_wrapper( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -1028,7 +1063,7 @@ add_shortcode( 'uix_team_item', 'uix_sc_fun_team_item' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Features
+// 17. Features
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_features_wrapper( $atts, $content = null ){
 	extract( shortcode_atts( array( 
@@ -1134,7 +1169,7 @@ add_shortcode( 'uix_features_item', 'uix_sc_fun_features_item' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Client
+// 18. Client
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_client_wrapper( $atts, $content = null ){
 	
@@ -1188,7 +1223,7 @@ add_shortcode( 'uix_client_item', 'uix_sc_fun_client_item' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Testimonials
+// 19. Testimonials
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_testimonials_wrapper( $atts, $content = null ){
 	
@@ -1246,7 +1281,7 @@ function uix_sc_fun_testimonials_item( $atts, $content = null ){
 add_shortcode( 'uix_testimonials_item', 'uix_sc_fun_testimonials_item' );
 
 //----------------------------------------------------------------------------------------------------
-// Map
+// 20. Map
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_map( $atts, $content = null ) {
 	extract( shortcode_atts( array( 
@@ -1476,7 +1511,7 @@ add_shortcode( 'uix_map', 'uix_sc_fun_map' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Heading
+// 21. Heading
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_heading( $atts, $content = null ) {
 	extract( shortcode_atts( array( 
@@ -1582,7 +1617,7 @@ function uix_sc_fun_subheading( $atts, $content = null ) {
 add_shortcode( 'uix_heading_sub', 'uix_sc_fun_subheading' );
 
 //----------------------------------------------------------------------------------------------------
-// Dividing Line
+// 22. Dividing Line
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_dividing_line( $atts, $content = null ) {
 	extract( shortcode_atts( array( 
@@ -1625,7 +1660,7 @@ add_shortcode( 'uix_dividing_line', 'uix_sc_fun_dividing_line' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Contact Form
+// 23. Contact Form
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_contact_form( $atts, $content = null ) {
 	
@@ -1664,7 +1699,7 @@ add_shortcode( 'uix_contact_form', 'uix_sc_fun_contact_form' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Author Card
+// 24. Author Card
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_authorcard( $atts, $content = null ) {
 	extract( shortcode_atts( array( 
@@ -1730,12 +1765,12 @@ add_shortcode( 'uix_authorcard', 'uix_sc_fun_authorcard' );
 
 
 //----------------------------------------------------------------------------------------------------
-// Image Slider
+// 25. Image Slider
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_imageslider_wrapper( $atts, $content = null ){
 	extract( shortcode_atts( array( 
 		'effect' => 'slide',
-		'target' => 0,
+		'target' => 1,
 		'loop' => 'true',
 		'speed' => 1000,
 		'timing' => 7000,
@@ -1762,9 +1797,11 @@ function uix_sc_fun_imageslider_wrapper( $atts, $content = null ){
 	</div>                              
    ';
 	
-	$return_string = str_replace( '{target}', $targetcode, $return_string );
+   $return_string = UixShortcodes::do_callback( $return_string );
+   $return_string = str_replace( '{target}', $targetcode, $return_string );
    
-   return UixShortcodes::do_callback( $return_string );
+   return $return_string;
+	
    
 }
 add_shortcode( 'uix_imageslider', 'uix_sc_fun_imageslider_wrapper' );
@@ -1805,3 +1842,59 @@ function uix_sc_fun_imageslider_item( $atts, $content = null ){
 }
 
 add_shortcode( 'uix_imageslider_item', 'uix_sc_fun_imageslider_item' );
+
+
+
+
+//----------------------------------------------------------------------------------------------------
+// 26. Timeline
+//----------------------------------------------------------------------------------------------------
+function uix_sc_fun_timeline_wrapper( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		'color' => '#a2bf2f',
+		
+	 ), $atts ) );
+	
+	
+   $return_string = '
+   <div class="uix-sc-timeline">
+	  '.$content.'
+	</div><!-- /.uix-sc-timeline -->                         
+   ';
+	
+   $return_string = UixShortcodes::do_callback( $return_string );
+   $return_string = str_replace( '{color}', $color, $return_string );
+   
+   return $return_string;
+   
+}
+add_shortcode( 'uix_timeline', 'uix_sc_fun_timeline_wrapper' );
+
+//-----
+function uix_sc_fun_timeline_item( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		'date' => '',
+		'status' => '',
+		'highlight' => 'true',
+		
+	 ), $atts ) );
+	
+	
+   $return_string = ' 
+	<div'.( $highlight == 'true' ? ' class="uix-sc-timeline-complete"' : '' ).'>
+		<div class="uix-sc-timestamp">
+		<span class="uix-sc-timeline-date">'.$date.'<span>
+		</div>
+		<div class="uix-sc-timeline-status" '.( $highlight == 'true' ? 'style="border-color:{color};"' : '' ).'>
+		<span class="uix-sc-timeline-status-dot" '.( $highlight == 'true' ? 'style="background-color:{color};"' : '' ).'></span>
+		<span class="uix-sc-timeline-status-title" '.( $highlight == 'true' ? 'style="color:{color};"' : '' ).'>'.$status.'</span>
+		</div>
+	</div>															                                                          
+   ';
+  
+  
+
+   return UixShortcodes::do_callback( $return_string );
+}
+
+add_shortcode( 'uix_timeline_item', 'uix_sc_fun_timeline_item' );

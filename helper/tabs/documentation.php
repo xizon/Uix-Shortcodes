@@ -1946,10 +1946,10 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                          
                                             
                                             <tr>
-                                                <td><?php _e( 'Color', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Highlight Color', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
                                                 <td><img src="<?php echo $imgpath; ?>sc-preview-elements-13.jpg" alt="" /></td>
-                                                <td><?php _e( 'Set a color for the button. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a highlight color for each item. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
                                             </tr>  
                                             
                             
@@ -1957,7 +1957,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
                                                 <td>-</td>
-                                                <td><?php _e( 'Per group contains <code>Date</code> and <code>Status</code> of your slider within each sub-group.<br>', 'uix-shortcodes' ); ?>
+                                                <td><?php _e( 'Per group contains <code>Highlight</code>, <code>Date</code> and <code>Status</code> of your timeline within each sub-group.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
                                                 
@@ -1976,10 +1976,10 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 <pre class="brush: css;">
 &nbsp;
 [uix_timeline color='#a2bf2f']
-[uix_timeline_item  date='4/22/2016' status='Project Created'][/uix_timeline_item]
-[uix_timeline_item  date='11/15/2016' status='Process: developing'][/uix_timeline_item]
-[uix_timeline_item  date='1/6/2017' status='Project Approval'][/uix_timeline_item]
-[uix_timeline_item  date='TBD' status='Project Completed'][/uix_timeline_item]
+[uix_timeline_item date='4/22/2016' status='Project Created' highlight='true'][/uix_timeline_item]
+[uix_timeline_item date='11/15/2016' status='Process: developing' highlight='true'][/uix_timeline_item]
+[uix_timeline_item date='1/6/2017' status='Project Approval' highlight='true'][/uix_timeline_item]
+[uix_timeline_item date='TBD' status='Project Completed' highlight='false'][/uix_timeline_item]
 [/uix_timeline]
 &nbsp;
 </pre>

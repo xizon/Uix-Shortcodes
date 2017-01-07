@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Fri Jan 06 2017 19:58:45 GMT+0800 (CST)\n"
+"POT-Revision-Date: Sun Jan 08 2017 03:41:05 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,11 +99,12 @@ msgstr ""
 #: /helper/tabs/documentation.php:1116 ../helper/tabs/documentation.php:1189 ..
 #: /helper/tabs/documentation.php:1354 ../helper/tabs/documentation.php:1488 ..
 #: /helper/tabs/documentation.php:1575 ../helper/tabs/documentation.php:1681 ..
-#: /helper/tabs/documentation.php:1795 ../helper/tabs/documentation.php:1971 ..
-#: /helper/tabs/documentation.php:2139 ../helper/tabs/documentation.php:2264 ..
-#: /helper/tabs/documentation.php:2473 ../helper/tabs/documentation.php:2564 ..
-#: /helper/tabs/documentation.php:2759 ../helper/tabs/documentation.php:2863 ..
-#: /helper/tabs/documentation.php:2956 ../helper/tabs/documentation.php:3019
+#: /helper/tabs/documentation.php:1795 ../helper/tabs/documentation.php:1909 ..
+#: /helper/tabs/documentation.php:1989 ../helper/tabs/documentation.php:2166 ..
+#: /helper/tabs/documentation.php:2334 ../helper/tabs/documentation.php:2459 ..
+#: /helper/tabs/documentation.php:2668 ../helper/tabs/documentation.php:2759 ..
+#: /helper/tabs/documentation.php:2954 ../helper/tabs/documentation.php:3058 ..
+#: /helper/tabs/documentation.php:3151 ../helper/tabs/documentation.php:3214
 msgid "Preview"
 msgstr ""
 
@@ -374,12 +375,13 @@ msgstr ""
 #: /helper/tabs/documentation.php:1003 ../helper/tabs/documentation.php:1137 ..
 #: /helper/tabs/documentation.php:1206 ../helper/tabs/documentation.php:1374 ..
 #: /helper/tabs/documentation.php:1507 ../helper/tabs/documentation.php:1594 ..
-#: /helper/tabs/documentation.php:1699 ../helper/tabs/documentation.php:1823 ..
-#: /helper/tabs/documentation.php:2002 ../helper/tabs/documentation.php:2161 ..
-#: /helper/tabs/documentation.php:2283 ../helper/tabs/documentation.php:2492 ..
-#: /helper/tabs/documentation.php:2582 ../helper/tabs/documentation.php:2778 ..
-#: /helper/tabs/documentation.php:2881 ../helper/tabs/documentation.php:2973 ..
-#: /helper/tabs/documentation.php:3049
+#: /helper/tabs/documentation.php:1699 ../helper/tabs/documentation.php:1815 ..
+#: /helper/tabs/documentation.php:1930 ../helper/tabs/documentation.php:2018 ..
+#: /helper/tabs/documentation.php:2197 ../helper/tabs/documentation.php:2356 ..
+#: /helper/tabs/documentation.php:2478 ../helper/tabs/documentation.php:2687 ..
+#: /helper/tabs/documentation.php:2777 ../helper/tabs/documentation.php:2973 ..
+#: /helper/tabs/documentation.php:3076 ../helper/tabs/documentation.php:3168 ..
+#: /helper/tabs/documentation.php:3244
 msgid "Admin Screenshots"
 msgstr ""
 
@@ -389,12 +391,13 @@ msgstr ""
 #: /helper/tabs/documentation.php:1017 ../helper/tabs/documentation.php:1148 ..
 #: /helper/tabs/documentation.php:1220 ../helper/tabs/documentation.php:1386 ..
 #: /helper/tabs/documentation.php:1519 ../helper/tabs/documentation.php:1606 ..
-#: /helper/tabs/documentation.php:1711 ../helper/tabs/documentation.php:1835 ..
-#: /helper/tabs/documentation.php:2015 ../helper/tabs/documentation.php:2173 ..
-#: /helper/tabs/documentation.php:2297 ../helper/tabs/documentation.php:2505 ..
-#: /helper/tabs/documentation.php:2594 ../helper/tabs/documentation.php:2790 ..
-#: /helper/tabs/documentation.php:2893 ../helper/tabs/documentation.php:2985 ..
-#: /helper/tabs/documentation.php:3061 ..
+#: /helper/tabs/documentation.php:1711 ../helper/tabs/documentation.php:1826 ..
+#: /helper/tabs/documentation.php:1941 ../helper/tabs/documentation.php:2030 ..
+#: /helper/tabs/documentation.php:2210 ../helper/tabs/documentation.php:2368 ..
+#: /helper/tabs/documentation.php:2492 ../helper/tabs/documentation.php:2700 ..
+#: /helper/tabs/documentation.php:2789 ../helper/tabs/documentation.php:2985 ..
+#: /helper/tabs/documentation.php:3088 ../helper/tabs/documentation.php:3180 ..
+#: /helper/tabs/documentation.php:3256 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:133 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:149 ..
 #: /shortcodes/panel/uix_sc_testimonials.php:85
@@ -407,12 +410,13 @@ msgstr ""
 #: /helper/tabs/documentation.php:1018 ../helper/tabs/documentation.php:1149 ..
 #: /helper/tabs/documentation.php:1221 ../helper/tabs/documentation.php:1387 ..
 #: /helper/tabs/documentation.php:1520 ../helper/tabs/documentation.php:1607 ..
-#: /helper/tabs/documentation.php:1712 ../helper/tabs/documentation.php:1836 ..
-#: /helper/tabs/documentation.php:2016 ../helper/tabs/documentation.php:2174 ..
-#: /helper/tabs/documentation.php:2298 ../helper/tabs/documentation.php:2506 ..
-#: /helper/tabs/documentation.php:2595 ../helper/tabs/documentation.php:2791 ..
-#: /helper/tabs/documentation.php:2894 ../helper/tabs/documentation.php:2986 ..
-#: /helper/tabs/documentation.php:3062
+#: /helper/tabs/documentation.php:1712 ../helper/tabs/documentation.php:1827 ..
+#: /helper/tabs/documentation.php:1942 ../helper/tabs/documentation.php:2031 ..
+#: /helper/tabs/documentation.php:2211 ../helper/tabs/documentation.php:2369 ..
+#: /helper/tabs/documentation.php:2493 ../helper/tabs/documentation.php:2701 ..
+#: /helper/tabs/documentation.php:2790 ../helper/tabs/documentation.php:2986 ..
+#: /helper/tabs/documentation.php:3089 ../helper/tabs/documentation.php:3181 ..
+#: /helper/tabs/documentation.php:3257
 msgid "Type"
 msgstr ""
 
@@ -422,12 +426,13 @@ msgstr ""
 #: /helper/tabs/documentation.php:1019 ../helper/tabs/documentation.php:1150 ..
 #: /helper/tabs/documentation.php:1222 ../helper/tabs/documentation.php:1388 ..
 #: /helper/tabs/documentation.php:1521 ../helper/tabs/documentation.php:1608 ..
-#: /helper/tabs/documentation.php:1713 ../helper/tabs/documentation.php:1837 ..
-#: /helper/tabs/documentation.php:2017 ../helper/tabs/documentation.php:2175 ..
-#: /helper/tabs/documentation.php:2299 ../helper/tabs/documentation.php:2507 ..
-#: /helper/tabs/documentation.php:2596 ../helper/tabs/documentation.php:2792 ..
-#: /helper/tabs/documentation.php:2895 ../helper/tabs/documentation.php:2987 ..
-#: /helper/tabs/documentation.php:3063
+#: /helper/tabs/documentation.php:1713 ../helper/tabs/documentation.php:1828 ..
+#: /helper/tabs/documentation.php:1943 ../helper/tabs/documentation.php:2032 ..
+#: /helper/tabs/documentation.php:2212 ../helper/tabs/documentation.php:2370 ..
+#: /helper/tabs/documentation.php:2494 ../helper/tabs/documentation.php:2702 ..
+#: /helper/tabs/documentation.php:2791 ../helper/tabs/documentation.php:2987 ..
+#: /helper/tabs/documentation.php:3090 ../helper/tabs/documentation.php:3182 ..
+#: /helper/tabs/documentation.php:3258
 msgid "Default"
 msgstr ""
 
@@ -438,15 +443,16 @@ msgstr ""
 #: /helper/tabs/documentation.php:1151 ../helper/tabs/documentation.php:1223 ..
 #: /helper/tabs/documentation.php:1389 ../helper/tabs/documentation.php:1522 ..
 #: /helper/tabs/documentation.php:1609 ../helper/tabs/documentation.php:1714 ..
-#: /helper/tabs/documentation.php:1838 ../helper/tabs/documentation.php:2018 ..
-#: /helper/tabs/documentation.php:2176 ../helper/tabs/documentation.php:2300 ..
-#: /helper/tabs/documentation.php:2392 ../helper/tabs/documentation.php:2401 ..
-#: /helper/tabs/documentation.php:2409 ../helper/tabs/documentation.php:2416 ..
-#: /helper/tabs/documentation.php:2423 ../helper/tabs/documentation.php:2431 ..
-#: /helper/tabs/documentation.php:2508 ../helper/tabs/documentation.php:2597 ..
-#: /helper/tabs/documentation.php:2683 ../helper/tabs/documentation.php:2793 ..
-#: /helper/tabs/documentation.php:2896 ../helper/tabs/documentation.php:2988 ..
-#: /helper/tabs/documentation.php:3064 ../shortcodes/panel/uix_sc_form_bar.php:
+#: /helper/tabs/documentation.php:1829 ../helper/tabs/documentation.php:1944 ..
+#: /helper/tabs/documentation.php:2033 ../helper/tabs/documentation.php:2213 ..
+#: /helper/tabs/documentation.php:2371 ../helper/tabs/documentation.php:2495 ..
+#: /helper/tabs/documentation.php:2587 ../helper/tabs/documentation.php:2596 ..
+#: /helper/tabs/documentation.php:2604 ../helper/tabs/documentation.php:2611 ..
+#: /helper/tabs/documentation.php:2618 ../helper/tabs/documentation.php:2626 ..
+#: /helper/tabs/documentation.php:2703 ../helper/tabs/documentation.php:2792 ..
+#: /helper/tabs/documentation.php:2878 ../helper/tabs/documentation.php:2988 ..
+#: /helper/tabs/documentation.php:3091 ../helper/tabs/documentation.php:3183 ..
+#: /helper/tabs/documentation.php:3259 ../shortcodes/panel/uix_sc_form_bar.php:
 #: 210 ../shortcodes/panel/uix_sc_form_pricing_col3.php:76 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col3.php:224 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col3.php:373 ..
@@ -466,16 +472,17 @@ msgstr ""
 #: /helper/tabs/documentation.php:152 ../helper/tabs/documentation.php:160 ..
 #: /helper/tabs/documentation.php:471 ../helper/tabs/documentation.php:513 ..
 #: /helper/tabs/documentation.php:666 ../helper/tabs/documentation.php:758 ..
-#: /helper/tabs/documentation.php:1720 ../helper/tabs/documentation.php:2024 ..
-#: /helper/tabs/documentation.php:2032 ../helper/tabs/documentation.php:2082 ..
-#: /helper/tabs/documentation.php:2182 ../helper/tabs/documentation.php:2315 ..
-#: /helper/tabs/documentation.php:2331 ../helper/tabs/documentation.php:2339 ..
-#: /helper/tabs/documentation.php:2424 ../helper/tabs/documentation.php:2515 ..
-#: /helper/tabs/documentation.php:2523 ../helper/tabs/documentation.php:2604 ..
-#: /helper/tabs/documentation.php:2652 ../helper/tabs/documentation.php:2660 ..
-#: /helper/tabs/documentation.php:2668 ../helper/tabs/documentation.php:2800 ..
-#: /helper/tabs/documentation.php:2809 ../helper/tabs/documentation.php:2919 ..
-#: /helper/tabs/documentation.php:2926
+#: /helper/tabs/documentation.php:1720 ../helper/tabs/documentation.php:1835 ..
+#: /helper/tabs/documentation.php:1950 ../helper/tabs/documentation.php:2219 ..
+#: /helper/tabs/documentation.php:2227 ../helper/tabs/documentation.php:2277 ..
+#: /helper/tabs/documentation.php:2377 ../helper/tabs/documentation.php:2510 ..
+#: /helper/tabs/documentation.php:2526 ../helper/tabs/documentation.php:2534 ..
+#: /helper/tabs/documentation.php:2619 ../helper/tabs/documentation.php:2710 ..
+#: /helper/tabs/documentation.php:2718 ../helper/tabs/documentation.php:2799 ..
+#: /helper/tabs/documentation.php:2847 ../helper/tabs/documentation.php:2855 ..
+#: /helper/tabs/documentation.php:2863 ../helper/tabs/documentation.php:2995 ..
+#: /helper/tabs/documentation.php:3004 ../helper/tabs/documentation.php:3114 ..
+#: /helper/tabs/documentation.php:3121
 msgid "Selector"
 msgstr ""
 
@@ -483,15 +490,16 @@ msgstr ""
 #: /helper/tabs/documentation.php:152 ../helper/tabs/documentation.php:160 ..
 #: /helper/tabs/documentation.php:471 ../helper/tabs/documentation.php:513 ..
 #: /helper/tabs/documentation.php:1720 ../helper/tabs/documentation.php:1766 ..
-#: /helper/tabs/documentation.php:2024 ../helper/tabs/documentation.php:2032 ..
-#: /helper/tabs/documentation.php:2082 ../helper/tabs/documentation.php:2182 ..
-#: /helper/tabs/documentation.php:2315 ../helper/tabs/documentation.php:2331 ..
-#: /helper/tabs/documentation.php:2339 ../helper/tabs/documentation.php:2424 ..
-#: /helper/tabs/documentation.php:2515 ../helper/tabs/documentation.php:2523 ..
-#: /helper/tabs/documentation.php:2604 ../helper/tabs/documentation.php:2652 ..
-#: /helper/tabs/documentation.php:2660 ../helper/tabs/documentation.php:2668 ..
-#: /helper/tabs/documentation.php:2800 ../helper/tabs/documentation.php:2809 ..
-#: /helper/tabs/documentation.php:2904
+#: /helper/tabs/documentation.php:1835 ../helper/tabs/documentation.php:1950 ..
+#: /helper/tabs/documentation.php:2219 ../helper/tabs/documentation.php:2227 ..
+#: /helper/tabs/documentation.php:2277 ../helper/tabs/documentation.php:2377 ..
+#: /helper/tabs/documentation.php:2510 ../helper/tabs/documentation.php:2526 ..
+#: /helper/tabs/documentation.php:2534 ../helper/tabs/documentation.php:2619 ..
+#: /helper/tabs/documentation.php:2710 ../helper/tabs/documentation.php:2718 ..
+#: /helper/tabs/documentation.php:2799 ../helper/tabs/documentation.php:2847 ..
+#: /helper/tabs/documentation.php:2855 ../helper/tabs/documentation.php:2863 ..
+#: /helper/tabs/documentation.php:2995 ../helper/tabs/documentation.php:3004 ..
+#: /helper/tabs/documentation.php:3099
 msgid "Returns a String"
 msgstr ""
 
@@ -501,7 +509,7 @@ msgid ""
 "the container will be center."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:2815 ..
+#: ../helper/tabs/documentation.php:57 ../helper/tabs/documentation.php:3010 ..
 #: /shortcodes/panel/uix_sc_dividing_line.php:57
 msgid "Width"
 msgstr ""
@@ -522,18 +530,19 @@ msgstr ""
 #: /helper/tabs/documentation.php:1237 ../helper/tabs/documentation.php:1245 ..
 #: /helper/tabs/documentation.php:1537 ../helper/tabs/documentation.php:1544 ..
 #: /helper/tabs/documentation.php:1631 ../helper/tabs/documentation.php:1638 ..
-#: /helper/tabs/documentation.php:1844 ../helper/tabs/documentation.php:2055 ..
-#: /helper/tabs/documentation.php:2091 ../helper/tabs/documentation.php:2098 ..
-#: /helper/tabs/documentation.php:2190 ../helper/tabs/documentation.php:2197 ..
-#: /helper/tabs/documentation.php:2215 ../helper/tabs/documentation.php:2224 ..
-#: /helper/tabs/documentation.php:2231 ../helper/tabs/documentation.php:2324 ..
-#: /helper/tabs/documentation.php:2346 ../helper/tabs/documentation.php:2377 ..
-#: /helper/tabs/documentation.php:2384 ../helper/tabs/documentation.php:2417 ..
-#: /helper/tabs/documentation.php:2432 ../helper/tabs/documentation.php:2531 ..
-#: /helper/tabs/documentation.php:2612 ../helper/tabs/documentation.php:2620 ..
-#: /helper/tabs/documentation.php:2628 ../helper/tabs/documentation.php:2636 ..
-#: /helper/tabs/documentation.php:2699 ../helper/tabs/documentation.php:2816 ..
-#: /helper/tabs/documentation.php:2824 ../helper/tabs/documentation.php:2912
+#: /helper/tabs/documentation.php:1864 ../helper/tabs/documentation.php:1871 ..
+#: /helper/tabs/documentation.php:2039 ../helper/tabs/documentation.php:2250 ..
+#: /helper/tabs/documentation.php:2286 ../helper/tabs/documentation.php:2293 ..
+#: /helper/tabs/documentation.php:2385 ../helper/tabs/documentation.php:2392 ..
+#: /helper/tabs/documentation.php:2410 ../helper/tabs/documentation.php:2419 ..
+#: /helper/tabs/documentation.php:2426 ../helper/tabs/documentation.php:2519 ..
+#: /helper/tabs/documentation.php:2541 ../helper/tabs/documentation.php:2572 ..
+#: /helper/tabs/documentation.php:2579 ../helper/tabs/documentation.php:2612 ..
+#: /helper/tabs/documentation.php:2627 ../helper/tabs/documentation.php:2726 ..
+#: /helper/tabs/documentation.php:2807 ../helper/tabs/documentation.php:2815 ..
+#: /helper/tabs/documentation.php:2823 ../helper/tabs/documentation.php:2831 ..
+#: /helper/tabs/documentation.php:2894 ../helper/tabs/documentation.php:3011 ..
+#: /helper/tabs/documentation.php:3019 ../helper/tabs/documentation.php:3107
 msgid "Number"
 msgstr ""
 
@@ -543,7 +552,7 @@ msgid ""
 "automatically calculates the container height if the value is"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/uix_sc_container.php:88
+#: ../helper/tabs/documentation.php:71 ../shortcodes/panel/uix_sc_container.php:89
 msgid "Vertically Center Content"
 msgstr ""
 
@@ -553,9 +562,10 @@ msgstr ""
 #: /helper/tabs/documentation.php:860 ../helper/tabs/documentation.php:871 ..
 #: /helper/tabs/documentation.php:1551 ../helper/tabs/documentation.php:1624 ..
 #: /helper/tabs/documentation.php:1646 ../helper/tabs/documentation.php:1653 ..
-#: /helper/tabs/documentation.php:2063 ../helper/tabs/documentation.php:2353 ..
-#: /helper/tabs/documentation.php:2360 ../helper/tabs/documentation.php:2393 ..
-#: /helper/tabs/documentation.php:2643
+#: /helper/tabs/documentation.php:1842 ../helper/tabs/documentation.php:1849 ..
+#: /helper/tabs/documentation.php:1856 ../helper/tabs/documentation.php:2258 ..
+#: /helper/tabs/documentation.php:2548 ../helper/tabs/documentation.php:2555 ..
+#: /helper/tabs/documentation.php:2588 ../helper/tabs/documentation.php:2838
 msgid "Boolean"
 msgstr ""
 
@@ -563,7 +573,7 @@ msgstr ""
 msgid "When enabled, the content of container is placed in the middle."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:79 ../shortcodes/panel/uix_sc_container.php:103
+#: ../helper/tabs/documentation.php:79 ../shortcodes/panel/uix_sc_container.php:104
 msgid "Background Image"
 msgstr ""
 
@@ -575,12 +585,12 @@ msgstr ""
 #: /helper/tabs/documentation.php:1616 ../helper/tabs/documentation.php:1727 ..
 #: /helper/tabs/documentation.php:1735 ../helper/tabs/documentation.php:1743 ..
 #: /helper/tabs/documentation.php:1750 ../helper/tabs/documentation.php:1757 ..
-#: /helper/tabs/documentation.php:2039 ../helper/tabs/documentation.php:2047 ..
-#: /helper/tabs/documentation.php:2206 ../helper/tabs/documentation.php:2238 ..
-#: /helper/tabs/documentation.php:2307 ../helper/tabs/documentation.php:2410 ..
-#: /helper/tabs/documentation.php:2643 ../helper/tabs/documentation.php:2677 ..
-#: /helper/tabs/documentation.php:2684 ../helper/tabs/documentation.php:2691 ..
-#: /helper/tabs/documentation.php:3071 ../helper/tabs/documentation.php:3080
+#: /helper/tabs/documentation.php:2234 ../helper/tabs/documentation.php:2242 ..
+#: /helper/tabs/documentation.php:2401 ../helper/tabs/documentation.php:2433 ..
+#: /helper/tabs/documentation.php:2502 ../helper/tabs/documentation.php:2605 ..
+#: /helper/tabs/documentation.php:2838 ../helper/tabs/documentation.php:2872 ..
+#: /helper/tabs/documentation.php:2879 ../helper/tabs/documentation.php:2886 ..
+#: /helper/tabs/documentation.php:3266 ../helper/tabs/documentation.php:3275
 msgid "String"
 msgstr ""
 
@@ -590,7 +600,7 @@ msgid ""
 "upload."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/uix_sc_container.php:127
+#: ../helper/tabs/documentation.php:89 ../shortcodes/panel/uix_sc_container.php:128
 msgid "Background Color"
 msgstr ""
 
@@ -599,41 +609,44 @@ msgid "Set a color for the container background. "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
-#: /helper/tabs/documentation.php:2026 ../helper/tabs/documentation.php:2034 ..
-#: /helper/tabs/documentation.php:2517 ../helper/tabs/documentation.php:2654 ..
-#: /helper/tabs/documentation.php:2662 ../helper/tabs/documentation.php:2670
+#: /helper/tabs/documentation.php:1952 ../helper/tabs/documentation.php:2221 ..
+#: /helper/tabs/documentation.php:2229 ../helper/tabs/documentation.php:2712 ..
+#: /helper/tabs/documentation.php:2849 ../helper/tabs/documentation.php:2857 ..
+#: /helper/tabs/documentation.php:2865
 msgid "You can add a custom color with color palette. "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
-#: /helper/tabs/documentation.php:2026 ../helper/tabs/documentation.php:2034 ..
-#: /helper/tabs/documentation.php:2333 ../helper/tabs/documentation.php:2426 ..
-#: /helper/tabs/documentation.php:2517 ../helper/tabs/documentation.php:2654 ..
-#: /helper/tabs/documentation.php:2662 ../helper/tabs/documentation.php:2670
+#: /helper/tabs/documentation.php:1952 ../helper/tabs/documentation.php:2221 ..
+#: /helper/tabs/documentation.php:2229 ../helper/tabs/documentation.php:2528 ..
+#: /helper/tabs/documentation.php:2621 ../helper/tabs/documentation.php:2712 ..
+#: /helper/tabs/documentation.php:2849 ../helper/tabs/documentation.php:2857 ..
+#: /helper/tabs/documentation.php:2865
 msgid "Click on the "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
-#: /helper/tabs/documentation.php:2026 ../helper/tabs/documentation.php:2034 ..
-#: /helper/tabs/documentation.php:2333 ../helper/tabs/documentation.php:2426 ..
-#: /helper/tabs/documentation.php:2517 ../helper/tabs/documentation.php:2654 ..
-#: /helper/tabs/documentation.php:2662 ../helper/tabs/documentation.php:2670 ..
-#: /shortcodes/panel/uix_sc_container.php:145 ..
-#: /shortcodes/panel/uix_sc_container.php:229 ..
+#: /helper/tabs/documentation.php:1952 ../helper/tabs/documentation.php:2221 ..
+#: /helper/tabs/documentation.php:2229 ../helper/tabs/documentation.php:2528 ..
+#: /helper/tabs/documentation.php:2621 ../helper/tabs/documentation.php:2712 ..
+#: /helper/tabs/documentation.php:2849 ../helper/tabs/documentation.php:2857 ..
+#: /helper/tabs/documentation.php:2865 ../shortcodes/panel/uix_sc_container.php:
+#: 146 ../shortcodes/panel/uix_sc_container.php:230 ..
 #: /shortcodes/panel/uix_sc_form_icon.php:46 ../shortcodes/panel/uix_sc_heading.
 #: php:121 ../shortcodes/panel/uix_sc_heading.php:318
 msgid "other color"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:92 ../helper/tabs/documentation.php:154 ..
-#: /helper/tabs/documentation.php:2026 ../helper/tabs/documentation.php:2034 ..
-#: /helper/tabs/documentation.php:2333 ../helper/tabs/documentation.php:2426 ..
-#: /helper/tabs/documentation.php:2517 ../helper/tabs/documentation.php:2654 ..
-#: /helper/tabs/documentation.php:2662 ../helper/tabs/documentation.php:2670
+#: /helper/tabs/documentation.php:1952 ../helper/tabs/documentation.php:2221 ..
+#: /helper/tabs/documentation.php:2229 ../helper/tabs/documentation.php:2528 ..
+#: /helper/tabs/documentation.php:2621 ../helper/tabs/documentation.php:2712 ..
+#: /helper/tabs/documentation.php:2849 ../helper/tabs/documentation.php:2857 ..
+#: /helper/tabs/documentation.php:2865
 msgid "link at the bottom of the color selector."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:97 ../shortcodes/panel/uix_sc_container.php:272
+#: ../helper/tabs/documentation.php:97 ../shortcodes/panel/uix_sc_container.php:273
 msgid "Parallax"
 msgstr ""
 
@@ -656,7 +669,7 @@ msgid "Wrapper Margin"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:115 ../shortcodes/panel/uix_sc_container.php:
-#: 291
+#: 292
 msgid "Use the input fields below to customize the margin of container wrapper."
 msgstr ""
 
@@ -665,7 +678,7 @@ msgid "Content Padding"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:122 ../shortcodes/panel/uix_sc_container.php:
-#: 310
+#: 311
 msgid ""
 "Use the input fields below to customize the padding of content from "
 "container."
@@ -673,7 +686,7 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:127 ../helper/tabs/documentation.php:137 ..
 #: /helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
-#: /helper/tabs/documentation.php:159 ../shortcodes/panel/uix_sc_container.php:172
+#: /helper/tabs/documentation.php:159 ../shortcodes/panel/uix_sc_container.php:173
 msgid "Border"
 msgstr ""
 
@@ -681,33 +694,33 @@ msgstr ""
 msgid "When enabled, it will add a custom border for container."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:137 ../helper/tabs/documentation.php:2401
+#: ../helper/tabs/documentation.php:137 ../helper/tabs/documentation.php:2596
 msgid "To set up the following properties, the "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:137 ../helper/tabs/documentation.php:2369 ..
-#: /helper/tabs/documentation.php:2401
+#: ../helper/tabs/documentation.php:137 ../helper/tabs/documentation.php:2564 ..
+#: /helper/tabs/documentation.php:2596
 msgid "checkbox should be checked."
 msgstr ""
 
 #: ../helper/tabs/documentation.php:144 ../shortcodes/panel/uix_sc_container.php:
-#: 194
+#: 195
 msgid "Border Width"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
-#: /helper/tabs/documentation.php:159 ../helper/tabs/documentation.php:2376 ..
-#: /helper/tabs/documentation.php:2383 ../helper/tabs/documentation.php:2409 ..
-#: /helper/tabs/documentation.php:2416 ../helper/tabs/documentation.php:2423 ..
-#: /helper/tabs/documentation.php:2431
+#: /helper/tabs/documentation.php:159 ../helper/tabs/documentation.php:2571 ..
+#: /helper/tabs/documentation.php:2578 ../helper/tabs/documentation.php:2604 ..
+#: /helper/tabs/documentation.php:2611 ../helper/tabs/documentation.php:2618 ..
+#: /helper/tabs/documentation.php:2626
 msgid "depends on"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:144 ../helper/tabs/documentation.php:151 ..
-#: /helper/tabs/documentation.php:159 ../helper/tabs/documentation.php:2376 ..
-#: /helper/tabs/documentation.php:2383 ../helper/tabs/documentation.php:2409 ..
-#: /helper/tabs/documentation.php:2416 ../helper/tabs/documentation.php:2423 ..
-#: /helper/tabs/documentation.php:2431
+#: /helper/tabs/documentation.php:159 ../helper/tabs/documentation.php:2571 ..
+#: /helper/tabs/documentation.php:2578 ../helper/tabs/documentation.php:2604 ..
+#: /helper/tabs/documentation.php:2611 ../helper/tabs/documentation.php:2618 ..
+#: /helper/tabs/documentation.php:2626
 msgid "option"
 msgstr ""
 
@@ -716,7 +729,7 @@ msgid "It will determine the width of the container border in pixels."
 msgstr ""
 
 #: ../helper/tabs/documentation.php:151 ../shortcodes/panel/uix_sc_container.php:
-#: 209
+#: 210
 msgid "Border Color"
 msgstr ""
 
@@ -725,7 +738,7 @@ msgid "Set a color for the container border. "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:159 ../shortcodes/panel/uix_sc_container.php:
-#: 252
+#: 253
 msgid "Border Style"
 msgstr ""
 
@@ -772,11 +785,12 @@ msgstr ""
 #: /helper/tabs/documentation.php:1143 ../helper/tabs/documentation.php:1215 ..
 #: /helper/tabs/documentation.php:1381 ../helper/tabs/documentation.php:1514 ..
 #: /helper/tabs/documentation.php:1601 ../helper/tabs/documentation.php:1706 ..
-#: /helper/tabs/documentation.php:1830 ../helper/tabs/documentation.php:2010 ..
-#: /helper/tabs/documentation.php:2168 ../helper/tabs/documentation.php:2292 ..
-#: /helper/tabs/documentation.php:2500 ../helper/tabs/documentation.php:2589 ..
-#: /helper/tabs/documentation.php:2785 ../helper/tabs/documentation.php:2888 ..
-#: /helper/tabs/documentation.php:2980 ../helper/tabs/documentation.php:3056
+#: /helper/tabs/documentation.php:1821 ../helper/tabs/documentation.php:1936 ..
+#: /helper/tabs/documentation.php:2025 ../helper/tabs/documentation.php:2205 ..
+#: /helper/tabs/documentation.php:2363 ../helper/tabs/documentation.php:2487 ..
+#: /helper/tabs/documentation.php:2695 ../helper/tabs/documentation.php:2784 ..
+#: /helper/tabs/documentation.php:2980 ../helper/tabs/documentation.php:3083 ..
+#: /helper/tabs/documentation.php:3175 ../helper/tabs/documentation.php:3251
 msgid "Options"
 msgstr ""
 
@@ -811,7 +825,7 @@ msgid "Permalink"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:378 ../helper/tabs/documentation.php:455 ..
-#: /helper/tabs/documentation.php:2306 ../helper/tabs/documentation.php:2676 ..
+#: /helper/tabs/documentation.php:2501 ../helper/tabs/documentation.php:2871 ..
 #: /shortcodes/panel/uix_sc_form_bar.php:200 ../shortcodes/panel/uix_sc_form_bar.
 #: php:202 ../shortcodes/panel/uix_sc_form_pricing_col3.php:28 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col3.php:177 ..
@@ -878,12 +892,13 @@ msgstr ""
 #: ../helper/tabs/documentation.php:406 ../helper/tabs/documentation.php:697 ..
 #: /helper/tabs/documentation.php:781 ../helper/tabs/documentation.php:1171 ..
 #: /helper/tabs/documentation.php:1563 ../helper/tabs/documentation.php:1667 ..
-#: /helper/tabs/documentation.php:1779 ../helper/tabs/documentation.php:1855 ..
-#: /helper/tabs/documentation.php:2111 ../helper/tabs/documentation.php:2250 ..
-#: /helper/tabs/documentation.php:2445 ../helper/tabs/documentation.php:2544 ..
-#: /helper/tabs/documentation.php:2710 ../helper/tabs/documentation.php:2835 ..
-#: /helper/tabs/documentation.php:2938 ../helper/tabs/documentation.php:3007 ..
-#: /helper/tabs/documentation.php:3092
+#: /helper/tabs/documentation.php:1779 ../helper/tabs/documentation.php:1895 ..
+#: /helper/tabs/documentation.php:1974 ../helper/tabs/documentation.php:2050 ..
+#: /helper/tabs/documentation.php:2306 ../helper/tabs/documentation.php:2445 ..
+#: /helper/tabs/documentation.php:2640 ../helper/tabs/documentation.php:2739 ..
+#: /helper/tabs/documentation.php:2905 ../helper/tabs/documentation.php:3030 ..
+#: /helper/tabs/documentation.php:3133 ../helper/tabs/documentation.php:3202 ..
+#: /helper/tabs/documentation.php:3287
 msgid "Example"
 msgstr ""
 
@@ -987,7 +1002,7 @@ msgstr ""
 msgid "Button Label"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:501 ../helper/tabs/documentation.php:2041
+#: ../helper/tabs/documentation.php:501 ../helper/tabs/documentation.php:2236
 msgid "That is the text you would like displayed on the button."
 msgstr ""
 
@@ -1002,12 +1017,12 @@ msgstr ""
 msgid "Button Link"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:508 ../helper/tabs/documentation.php:2049
+#: ../helper/tabs/documentation.php:508 ../helper/tabs/documentation.php:2244
 msgid "A destination link for the button."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:512 ../helper/tabs/documentation.php:2023 ..
-#: /helper/tabs/documentation.php:2918 ../shortcodes/panel/uix_sc_form_button.php:
+#: ../helper/tabs/documentation.php:512 ../helper/tabs/documentation.php:2218 ..
+#: /helper/tabs/documentation.php:3113 ../shortcodes/panel/uix_sc_form_button.php:
 #: 44 ../shortcodes/panel/uix_sc_form_pricing_col3.php:107 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col3.php:256 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col3.php:405 ..
@@ -1030,7 +1045,7 @@ msgstr ""
 msgid "Open in new tab"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:522 ../helper/tabs/documentation.php:2065
+#: ../helper/tabs/documentation.php:522 ../helper/tabs/documentation.php:2260
 msgid "When enabled, the button link to open in a new tab."
 msgstr ""
 
@@ -1121,7 +1136,9 @@ msgstr ""
 #: /helper/tabs/documentation.php:1029 ../helper/tabs/documentation.php:1132 ..
 #: /helper/tabs/documentation.php:1160 ../helper/tabs/documentation.php:1201 ..
 #: /helper/tabs/documentation.php:1256 ../helper/tabs/documentation.php:1369 ..
-#: /helper/tabs/documentation.php:1398
+#: /helper/tabs/documentation.php:1398 ../helper/tabs/documentation.php:1810 ..
+#: /helper/tabs/documentation.php:1882 ../helper/tabs/documentation.php:1925 ..
+#: /helper/tabs/documentation.php:1961
 msgid "You can click"
 msgstr ""
 
@@ -1132,15 +1149,19 @@ msgstr ""
 #: /helper/tabs/documentation.php:1132 ../helper/tabs/documentation.php:1160 ..
 #: /helper/tabs/documentation.php:1201 ../helper/tabs/documentation.php:1256 ..
 #: /helper/tabs/documentation.php:1369 ../helper/tabs/documentation.php:1398 ..
+#: /helper/tabs/documentation.php:1810 ../helper/tabs/documentation.php:1882 ..
+#: /helper/tabs/documentation.php:1925 ../helper/tabs/documentation.php:1961 ..
 #: /shortcodes/panel/uix_sc_form_accordion.php:68 ..
 #: /shortcodes/panel/uix_sc_form_client.php:54 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:40 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:134 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:40 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:435 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:42 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:136 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:38 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:428 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:121 ..
 #: /shortcodes/panel/uix_sc_form_tabs.php:66 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:79 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:95 ..
+#: /shortcodes/panel/uix_sc_form_timeline.php:50 ..
 #: /shortcodes/panel/uix_sc_testimonials.php:36
 msgid "click here to add an item"
 msgstr ""
@@ -1149,7 +1170,8 @@ msgstr ""
 #: /helper/tabs/documentation.php:734 ../helper/tabs/documentation.php:768 ..
 #: /helper/tabs/documentation.php:998 ../helper/tabs/documentation.php:1029 ..
 #: /helper/tabs/documentation.php:1132 ../helper/tabs/documentation.php:1160 ..
-#: /helper/tabs/documentation.php:1256 ../helper/tabs/documentation.php:1398
+#: /helper/tabs/documentation.php:1256 ../helper/tabs/documentation.php:1398 ..
+#: /helper/tabs/documentation.php:1882 ../helper/tabs/documentation.php:1961
 msgid "button to add a new item"
 msgstr ""
 
@@ -1160,11 +1182,12 @@ msgid "Transition Effect"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:666 ../helper/tabs/documentation.php:758 ..
-#: /helper/tabs/documentation.php:2919 ../helper/tabs/documentation.php:2926
+#: /helper/tabs/documentation.php:3114 ../helper/tabs/documentation.php:3121
 msgid "Returns a Number"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:668 ../helper/tabs/documentation.php:760
+#: ../helper/tabs/documentation.php:668 ../helper/tabs/documentation.php:760 ..
+#: /helper/tabs/documentation.php:1837
 msgid "Controls the animation type. The following values are allowed:"
 msgstr ""
 
@@ -1180,16 +1203,19 @@ msgstr ""
 #: ../helper/tabs/documentation.php:680 ../helper/tabs/documentation.php:764 ..
 #: /helper/tabs/documentation.php:909 ../helper/tabs/documentation.php:1025 ..
 #: /helper/tabs/documentation.php:1156 ../helper/tabs/documentation.php:1252 ..
-#: /helper/tabs/documentation.php:1394 ../shortcodes/panel/uix_sc_form_accordion.
+#: /helper/tabs/documentation.php:1394 ../helper/tabs/documentation.php:1878 ..
+#: /helper/tabs/documentation.php:1957 ../shortcodes/panel/uix_sc_form_accordion.
 #: php:62 ../shortcodes/panel/uix_sc_form_client.php:48 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:34 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:128 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:34 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:429 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:97 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:36 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:130 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:32 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:422 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:115 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:99 ..
 #: /shortcodes/panel/uix_sc_form_tabs.php:60 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:73 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:89 ..
+#: /shortcodes/panel/uix_sc_form_timeline.php:44 ..
 #: /shortcodes/panel/uix_sc_testimonials.php:30
 msgid "List Item"
 msgstr ""
@@ -1197,7 +1223,8 @@ msgstr ""
 #: ../helper/tabs/documentation.php:681 ../helper/tabs/documentation.php:765 ..
 #: /helper/tabs/documentation.php:910 ../helper/tabs/documentation.php:1026 ..
 #: /helper/tabs/documentation.php:1157 ../helper/tabs/documentation.php:1253 ..
-#: /helper/tabs/documentation.php:1395
+#: /helper/tabs/documentation.php:1395 ../helper/tabs/documentation.php:1879 ..
+#: /helper/tabs/documentation.php:1958
 msgid "Group"
 msgstr ""
 
@@ -1237,7 +1264,8 @@ msgid ""
 "optional attributes to customize the portfolio layout. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:1369
+#: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:1369 ..
+#: /helper/tabs/documentation.php:1810 ../helper/tabs/documentation.php:1925
 msgid "button to unlimited add items."
 msgstr ""
 
@@ -1252,7 +1280,7 @@ msgid "To set up the project destination URL by clicking "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:828 ../helper/tabs/documentation.php:915 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:231
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:233
 msgid "set up destination URL with this project"
 msgstr ""
 
@@ -1264,7 +1292,7 @@ msgstr ""
 #: ../helper/tabs/documentation.php:852 ../helper/tabs/documentation.php:1228 ..
 #: /shortcodes/editor/tinymce-plugin-lang.php:36 ..
 #: /shortcodes/panel/uix_sc_form_client.php:29 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:28 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:30 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:29
 msgid "Column"
 msgstr ""
@@ -1276,7 +1304,7 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/documentation.php:859 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:43
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:45
 msgid "Filterable by Category"
 msgstr ""
 
@@ -1289,9 +1317,9 @@ msgid ""
 "Name\"</strong> input for per project.</em><br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:870 ../helper/tabs/documentation.php:2062 ..
+#: ../helper/tabs/documentation.php:870 ../helper/tabs/documentation.php:2257 ..
 #: /shortcodes/panel/uix_sc_form_button.php:119 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:58
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:60
 msgid "Open link in new tab"
 msgstr ""
 
@@ -1303,14 +1331,14 @@ msgstr ""
 msgid "This option is valid when you use "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:874 ../helper/tabs/documentation.php:2046 ..
+#: ../helper/tabs/documentation.php:874 ../helper/tabs/documentation.php:2241 ..
 #: /shortcodes/panel/uix_sc_form_button.php:94 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:243
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:245
 msgid "Destination URL"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:880 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:73
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:75
 msgid "Radius of Fillet Image"
 msgstr ""
 
@@ -1319,7 +1347,7 @@ msgid "To set the fillet radius in pixels for project picture."
 msgstr ""
 
 #: ../helper/tabs/documentation.php:888 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:86
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:88
 msgid "Class Prefix"
 msgstr ""
 
@@ -1365,8 +1393,7 @@ msgid ""
 "You'll see the best results with 2 and 3 columns when you want them evenly "
 "spaced. If you need to make a 2 column section. You can unlimited add items "
 "on the content of the popup window. Relatively speaking, make a 3 column "
-"section. Per section insert \"for a maximum of 3\" and you can repeat the same "
-"procedure to insert more sections.<br>"
+"section. <br>"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:1028
@@ -1481,9 +1508,8 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:1369
 msgid ""
-"This shortcode allows you to add a new client section of 3 or 4 column. Per "
-"section insert \"for a maximum of 3 or 4\" and you can repeat the same "
-"procedure to insert more sections. "
+"This shortcode allows you to add a new client section of 2, 3, 4, 5 or 6 "
+"column. "
 msgstr ""
 
 #: ../helper/tabs/documentation.php:1397
@@ -1685,7 +1711,7 @@ msgstr ""
 msgid "The introduction of this author. The textarea is supported by HTML tags."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1749 ../helper/tabs/documentation.php:2038 ..
+#: ../helper/tabs/documentation.php:1749 ../helper/tabs/documentation.php:2233 ..
 #: /shortcodes/panel/uix_sc_form_authorcard.php:81 ..
 #: /shortcodes/panel/uix_sc_form_button.php:84
 msgid "Link Text"
@@ -1717,17 +1743,111 @@ msgstr ""
 msgid "String & Selector"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1768 ../helper/tabs/documentation.php:2906
+#: ../helper/tabs/documentation.php:1768 ../helper/tabs/documentation.php:3101
 msgid ""
 "There are many different types of social media. You can choose custom button "
 "types."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1815
+#: ../helper/tabs/documentation.php:1807 ../shortcodes/editor/tinymce-plugin-lang.
+#: php:31
+msgid "Image Slider"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1810
+msgid ""
+"This shortcode allows you to build, organize and display slideshow into any "
+"existing WordPress theme. "
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1834 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:29
+msgid "Effect"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1841 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:43
+msgid "Automatically Transition"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1844
+msgid "Setup a slideshow for the slider to animate automatically."
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1848 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:57
+msgid "Show Paging Navigation"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1851
+msgid "Create navigation for paging control of each slide."
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1855 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:72
+msgid "Show Arrow Navigation"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1858
+msgid "Create previous/next arrow navigation."
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1863
+msgid "Speed of Images Appereance (ms)"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1866
+msgid "Set the speed of animations, in milliseconds."
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1870
+msgid "Delay Between Images (ms)"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1873
+msgid "Set the speed of the slideshow cycling, in milliseconds"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1881
+msgid ""
+"Per group contains <code>Image</code>, <code>Destination URL</code>, "
+"<code>Slider title</code> and <code>Slider introduction</code> of your "
+"slider within each sub-group. The textarea is supported by HTML tags.<br>"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1922 ../shortcodes/editor/tinymce-plugin-lang.
+#: php:32
+msgid "Timeline"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1925
+msgid ""
+"This shortcode allows you to build a simple, interactive, historical "
+"timeline that showcases your life history or your company’s story in a "
+"responsive horizontal chronological order based on the year and the date of "
+"your posts."
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1949 ../shortcodes/panel/uix_sc_form_timeline.
+#: php:30
+msgid "Highlight Color"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1952
+msgid "Set a highlight color for each item. "
+msgstr ""
+
+#: ../helper/tabs/documentation.php:1960
+msgid ""
+"Per group contains <code>Highlight</code>, <code>Date</code> and "
+"<code>Status</code> of your timeline within each sub-group.<br>"
+msgstr ""
+
+#: ../helper/tabs/documentation.php:2010
 msgid "Column Builder"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1819
+#: ../helper/tabs/documentation.php:2014
 msgid ""
 "Uix Shortcodes plugin comes with 7 sample columns. You can use the layout of "
 "columns shortcode to create a beautiful showcase. Click shortcodes and add "
@@ -1735,18 +1855,18 @@ msgid ""
 "columns tag <code>[uix_column] ... [/uix_column]</code>."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1843 ..
+#: ../helper/tabs/documentation.php:2038 ..
 #: /shortcodes/panel/uix_sc_form_column_1_3__2_3.php:26 ..
 #: /shortcodes/panel/uix_sc_form_column_2_3__1_3.php:26 ..
 #: /shortcodes/panel/uix_sc_form_column_3_4__1_4.php:26 ..
 #: /shortcodes/panel/uix_sc_form_column_average_2.php:26 ..
 #: /shortcodes/panel/uix_sc_form_column_average_3.php:26 ..
 #: /shortcodes/panel/uix_sc_form_column_average_4.php:26 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:127
+#: /shortcodes/panel/uix_sc_form_hello.php:120
 msgid "Padding (px)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1846 ..
+#: ../helper/tabs/documentation.php:2041 ..
 #: /shortcodes/panel/uix_sc_form_column_1_3__2_3.php:27 ..
 #: /shortcodes/panel/uix_sc_form_column_1_4__3_4.php:27 ..
 #: /shortcodes/panel/uix_sc_form_column_2_3__1_3.php:27 ..
@@ -1754,353 +1874,353 @@ msgstr ""
 #: /shortcodes/panel/uix_sc_form_column_average_2.php:27 ..
 #: /shortcodes/panel/uix_sc_form_column_average_3.php:27 ..
 #: /shortcodes/panel/uix_sc_form_column_average_4.php:27 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:128
+#: /shortcodes/panel/uix_sc_form_hello.php:121
 msgid ""
 "Use the input fields below to customize the padding of your column shortcode."
 " Measurement units is pixels (px)."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1990
+#: ../helper/tabs/documentation.php:2185
 msgid "Web Elements Builder"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1994
+#: ../helper/tabs/documentation.php:2189
 msgid "Buttons"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1997
+#: ../helper/tabs/documentation.php:2192
 msgid ""
 "This shortcode enables you to add flat buttons to all of your posts and/or "
 "pages.<br>"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1998
+#: ../helper/tabs/documentation.php:2193
 msgid "To set up the more properties by clicking"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1998 ../helper/tabs/documentation.php:2073 ..
+#: ../helper/tabs/documentation.php:2193 ../helper/tabs/documentation.php:2268 ..
 #: /shortcodes/panel/uix_sc_form_button.php:145
 msgid "click on the set more attributes"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:1998
+#: ../helper/tabs/documentation.php:2193
 msgid "button on the content of the popup window."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2026
+#: ../helper/tabs/documentation.php:2221
 msgid "Set a color for the button. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2031 ../shortcodes/panel/uix_sc_form_button.
+#: ../helper/tabs/documentation.php:2226 ../shortcodes/panel/uix_sc_form_button.
 #: php:70
 msgid "Text Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2034
+#: ../helper/tabs/documentation.php:2229
 msgid "Set a color for the text. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2040 ../helper/tabs/documentation.php:2207 ..
+#: ../helper/tabs/documentation.php:2235 ../helper/tabs/documentation.php:2402 ..
 #: /shortcodes/panel/uix_sc_form_button.php:86
 msgid "Link to"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2054 ../helper/tabs/documentation.php:2911 ..
+#: ../helper/tabs/documentation.php:2249 ../helper/tabs/documentation.php:3106 ..
 #: /shortcodes/panel/uix_sc_form_button.php:105 ..
 #: /shortcodes/panel/uix_sc_form_share_buttons.php:47
 msgid "Fillet Radius"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2057
+#: ../helper/tabs/documentation.php:2252
 msgid "To set the fillet radius in pixels for button appearance."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2073
+#: ../helper/tabs/documentation.php:2268
 msgid "To set up the following properties by clicking"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2073
+#: ../helper/tabs/documentation.php:2268
 msgid "button."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2081 ../helper/tabs/documentation.php:2522
+#: ../helper/tabs/documentation.php:2276 ../helper/tabs/documentation.php:2717
 msgid "Icon's Name"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2084 ../helper/tabs/documentation.php:2525
+#: ../helper/tabs/documentation.php:2279 ../helper/tabs/documentation.php:2720
 msgid "Returns the Font Awesome library for each icon's"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2084 ../helper/tabs/documentation.php:2525
+#: ../helper/tabs/documentation.php:2279 ../helper/tabs/documentation.php:2720
 msgid "suffix text."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2084 ../helper/tabs/documentation.php:2525
+#: ../helper/tabs/documentation.php:2279 ../helper/tabs/documentation.php:2720
 msgid "Like this:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2084
+#: ../helper/tabs/documentation.php:2279
 msgid "Note: that will be pure text button if icon does not choose."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2090 ../shortcodes/panel/uix_sc_form_button.
+#: ../helper/tabs/documentation.php:2285 ../shortcodes/panel/uix_sc_form_button.
 #: php:214
 msgid "Font-Size for Button"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2093
+#: ../helper/tabs/documentation.php:2288
 msgid "The font size of button in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2097 ../helper/tabs/documentation.php:2345 ..
+#: ../helper/tabs/documentation.php:2292 ../helper/tabs/documentation.php:2540 ..
 #: /shortcodes/panel/uix_sc_form_button.php:228 ..
 #: /shortcodes/panel/uix_sc_heading.php:163
 msgid "Letter Spacing"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2100
+#: ../helper/tabs/documentation.php:2295
 msgid "The letter spacing of button in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2150
+#: ../helper/tabs/documentation.php:2345
 msgid "Google Maps"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2153
+#: ../helper/tabs/documentation.php:2348
 msgid ""
 "You can use this shortcode to display a Google Map anywhere on the page. "
 "Customize the style of your map if you like. It provides a variety of out-of-"
 "the-box image styles to choose from. And you can upload a custom marker icon."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2155
+#: ../helper/tabs/documentation.php:2350
 msgid "Get Latitude and Longitude:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2155
+#: ../helper/tabs/documentation.php:2350
 msgid "Get Latitude Longitude"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2181 ../shortcodes/panel/uix_sc_map.php:28
+#: ../helper/tabs/documentation.php:2376 ../shortcodes/panel/uix_sc_map.php:28
 msgid "Map Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2184
+#: ../helper/tabs/documentation.php:2379
 msgid "Create your own Google Maps style."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2189 ../shortcodes/panel/uix_sc_map.php:50
+#: ../helper/tabs/documentation.php:2384 ../shortcodes/panel/uix_sc_map.php:50
 msgid "Map Width"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2192
+#: ../helper/tabs/documentation.php:2387
 msgid ""
 "It will determine the width of the map in pixels or relative percentage. "
 "There are two types of length units:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2196 ../shortcodes/panel/uix_sc_map.php:64
+#: ../helper/tabs/documentation.php:2391 ../shortcodes/panel/uix_sc_map.php:64
 msgid "Map Height"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2199
+#: ../helper/tabs/documentation.php:2394
 msgid "Defines height of the map in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2205 ../shortcodes/panel/uix_sc_map.php:77
+#: ../helper/tabs/documentation.php:2400 ../shortcodes/panel/uix_sc_map.php:78
 msgid "Place Name"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2208
+#: ../helper/tabs/documentation.php:2403
 msgid "Input an address to show on the map."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2214 ../shortcodes/panel/uix_sc_map.php:87
+#: ../helper/tabs/documentation.php:2409 ../shortcodes/panel/uix_sc_map.php:88
 msgid "Latitude"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2217
+#: ../helper/tabs/documentation.php:2412
 msgid "Input a separate latitude value."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2223 ../shortcodes/panel/uix_sc_map.php:97
+#: ../helper/tabs/documentation.php:2418 ../shortcodes/panel/uix_sc_map.php:98
 msgid "Longitude"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2226
+#: ../helper/tabs/documentation.php:2421
 msgid "Input a separate longitude value."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2230 ../shortcodes/panel/uix_sc_map.php:108
+#: ../helper/tabs/documentation.php:2425 ../shortcodes/panel/uix_sc_map.php:109
 msgid "Zoom"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2233
+#: ../helper/tabs/documentation.php:2428
 msgid "Map scale at various zoom levels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2237 ../shortcodes/panel/uix_sc_map.php:123
+#: ../helper/tabs/documentation.php:2432 ../shortcodes/panel/uix_sc_map.php:124
 msgid "Marker"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2240
+#: ../helper/tabs/documentation.php:2435
 msgid "Custom a pin (location marker) to be used on the map."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2276 ../shortcodes/editor/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2471 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:38
 msgid "Special Heading"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2279
+#: ../helper/tabs/documentation.php:2474
 msgid "This shortcode lets you add a special heading into your page."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2308 ../shortcodes/panel/uix_sc_heading.php:32
+#: ../helper/tabs/documentation.php:2503 ../shortcodes/panel/uix_sc_heading.php:32
 msgid "Text Here"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2309
+#: ../helper/tabs/documentation.php:2504
 msgid "The heading title."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2314 ../shortcodes/panel/uix_sc_heading.php:41
+#: ../helper/tabs/documentation.php:2509 ../shortcodes/panel/uix_sc_heading.php:41
 msgid "Choose Title Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2317
+#: ../helper/tabs/documentation.php:2512
 msgid ""
 "Using background clip for text with CSS fallback if select the first one. "
 "You can select a background image from the WordPress Media Library, could "
 "also upload a new image."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2323 ../helper/tabs/documentation.php:2530 ..
+#: ../helper/tabs/documentation.php:2518 ../helper/tabs/documentation.php:2725 ..
 #: /shortcodes/panel/uix_sc_form_button.php:28 ..
 #: /shortcodes/panel/uix_sc_form_icon.php:81 ../shortcodes/panel/uix_sc_heading.
 #: php:89
 msgid "Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2326
+#: ../helper/tabs/documentation.php:2521
 msgid "The heading size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2330 ../shortcodes/panel/uix_sc_heading.php:103
+#: ../helper/tabs/documentation.php:2525 ../shortcodes/panel/uix_sc_heading.php:103
 msgid "Heading Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2333
+#: ../helper/tabs/documentation.php:2528
 msgid "Set a color for the heading. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2333 ../helper/tabs/documentation.php:2426
+#: ../helper/tabs/documentation.php:2528 ../helper/tabs/documentation.php:2621
 msgid ""
 "You can add a custom color with color palette. Browsers use a default "
 "stylesheet to render webpages if the value is empty. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2338 ../shortcodes/panel/uix_sc_heading.php:148
+#: ../helper/tabs/documentation.php:2533 ../shortcodes/panel/uix_sc_heading.php:148
 msgid "Alignment"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2341
+#: ../helper/tabs/documentation.php:2536
 msgid ""
 "Specifies the horizontal alignment of text in an element. The following "
 "values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2348
+#: ../helper/tabs/documentation.php:2543
 msgid "The letter spacing of heading in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2352 ../shortcodes/panel/uix_sc_heading.php:178
+#: ../helper/tabs/documentation.php:2547 ../shortcodes/panel/uix_sc_heading.php:178
 msgid "Uppercase of Text"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2355
+#: ../helper/tabs/documentation.php:2550
 msgid "When enabled, controls text to upper case."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2359 ../helper/tabs/documentation.php:2369 ..
-#: /helper/tabs/documentation.php:2376 ../helper/tabs/documentation.php:2383 ..
+#: ../helper/tabs/documentation.php:2554 ../helper/tabs/documentation.php:2564 ..
+#: /helper/tabs/documentation.php:2571 ../helper/tabs/documentation.php:2578 ..
 #: /shortcodes/panel/uix_sc_heading.php:193
 msgid "Underline"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2362
+#: ../helper/tabs/documentation.php:2557
 msgid "When enabled, it will add a horizontal line for heading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2369
+#: ../helper/tabs/documentation.php:2564
 msgid "To set up the following properties, the"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2376 ../helper/tabs/documentation.php:2635 ..
+#: ../helper/tabs/documentation.php:2571 ../helper/tabs/documentation.php:2830 ..
 #: /shortcodes/panel/uix_sc_form_bar.php:116 ../shortcodes/panel/uix_sc_heading.
 #: php:212
 msgid "Line Width"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2379
+#: ../helper/tabs/documentation.php:2574
 msgid ""
 "It will determine the width of the horizontal line in pixels to the heading. "
 "There are two types of length units: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2383 ../shortcodes/panel/uix_sc_heading.php:227
+#: ../helper/tabs/documentation.php:2578 ../shortcodes/panel/uix_sc_heading.php:227
 msgid "Line Height"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2386
+#: ../helper/tabs/documentation.php:2581
 msgid "It will determine the height of the horizontal line in pixels to the heading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2395
+#: ../helper/tabs/documentation.php:2590
 msgid "When enabled, you can set more properties for Description."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2409
+#: ../helper/tabs/documentation.php:2604
 msgid "isplayed Text"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2412
+#: ../helper/tabs/documentation.php:2607
 msgid "Some relevant text for the heading."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2416 ../shortcodes/panel/uix_sc_heading.php:282
+#: ../helper/tabs/documentation.php:2611 ../shortcodes/panel/uix_sc_heading.php:282
 msgid "Font Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2419
+#: ../helper/tabs/documentation.php:2614
 msgid "The description font size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2423 ../shortcodes/panel/uix_sc_heading.php:298
+#: ../helper/tabs/documentation.php:2618 ../shortcodes/panel/uix_sc_heading.php:298
 msgid "Description Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2426
+#: ../helper/tabs/documentation.php:2621
 msgid "Set a color for the description of heading. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2431 ../helper/tabs/documentation.php:2823 ..
+#: ../helper/tabs/documentation.php:2626 ../helper/tabs/documentation.php:3018 ..
 #: /shortcodes/panel/uix_sc_dividing_line.php:71 ..
 #: /shortcodes/panel/uix_sc_heading.php:343
 msgid "Opacity"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2434
+#: ../helper/tabs/documentation.php:2629
 msgid ""
 "The description transparency. It inherits the color of the heading in order "
 "that showes the difference between them two."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2486
+#: ../helper/tabs/documentation.php:2681
 msgid "Icons"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2488
+#: ../helper/tabs/documentation.php:2683
 msgid ""
 "This shortcode implements the Font Awesome icon font in WordPress through "
 "shortcodes. Add icons in the form of single icons, sets, lists, buttons and "
@@ -2109,27 +2229,27 @@ msgid ""
 "method and the resulting image style."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2514 ../helper/tabs/documentation.php:2808 ..
+#: ../helper/tabs/documentation.php:2709 ../helper/tabs/documentation.php:3003 ..
 #: /shortcodes/panel/uix_sc_dividing_line.php:46 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:288 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:281 ..
 #: /shortcodes/panel/uix_sc_form_icon.php:28
 msgid "Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2517
+#: ../helper/tabs/documentation.php:2712
 msgid "Set a color for the icon. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2533
+#: ../helper/tabs/documentation.php:2728
 msgid "The icon size in pixels."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2575 ../shortcodes/editor/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2770 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:48
 msgid "Progress Bar"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2578
+#: ../helper/tabs/documentation.php:2773
 msgid ""
 "This shortcode allows you add progress bars. Choose unlimited colors for "
 "each individual progress segment. Animate the segment and/or text. Customize "
@@ -2138,52 +2258,52 @@ msgid ""
 "customization."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2603 ../shortcodes/panel/uix_sc_form_bar.php:
+#: ../helper/tabs/documentation.php:2798 ../shortcodes/panel/uix_sc_form_bar.php:
 #: 27 ../shortcodes/panel/uix_sc_form_tabs.php:29
 msgid "Choose Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2606
+#: ../helper/tabs/documentation.php:2801
 msgid "You can choose vertical tabs or horizontal tabs. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2606
+#: ../helper/tabs/documentation.php:2801
 msgid "The following values are allowed:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2611 ../shortcodes/panel/uix_sc_form_bar.php:
+#: ../helper/tabs/documentation.php:2806 ../shortcodes/panel/uix_sc_form_bar.php:
 #: 58 ../shortcodes/panel/uix_sc_form_bar.php:72
 msgid "Bar Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2614
+#: ../helper/tabs/documentation.php:2809
 msgid "Size of the bar in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2619 ../shortcodes/panel/uix_sc_form_bar.php:89
+#: ../helper/tabs/documentation.php:2814 ../shortcodes/panel/uix_sc_form_bar.php:89
 msgid "Percent"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2622
+#: ../helper/tabs/documentation.php:2817
 msgid ""
 "The percent number the progress bar should have. Should be a number from 0 – "
 "100."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2627 ../shortcodes/panel/uix_sc_form_bar.php:
+#: ../helper/tabs/documentation.php:2822 ../shortcodes/panel/uix_sc_form_bar.php:
 #: 103
 msgid "Percentage & Icon Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2630
+#: ../helper/tabs/documentation.php:2825
 msgid "Size of the percentage or icon in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2638
+#: ../helper/tabs/documentation.php:2833
 msgid "Width of the bar line in px."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2642 ../shortcodes/editor/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2837 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:42 ../shortcodes/panel/uix_sc_form_bar.php:129 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:52 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:128 ..
@@ -2191,178 +2311,178 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2645
+#: ../helper/tabs/documentation.php:2840
 msgid "Using Icon instead of percentage. Default value is empty."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2651 ../shortcodes/panel/uix_sc_form_bar.php:
+#: ../helper/tabs/documentation.php:2846 ../shortcodes/panel/uix_sc_form_bar.php:
 #: 162
 msgid "Bar Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2654
+#: ../helper/tabs/documentation.php:2849
 msgid "Set a color for the bar. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2659
+#: ../helper/tabs/documentation.php:2854
 msgid "Track Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2662
+#: ../helper/tabs/documentation.php:2857
 msgid "Set a color for the track for the bar. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2667 ../shortcodes/panel/uix_sc_form_bar.php:
+#: ../helper/tabs/documentation.php:2862 ../shortcodes/panel/uix_sc_form_bar.php:
 #: 188
 msgid "Percentage & Icon Color"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2670
+#: ../helper/tabs/documentation.php:2865
 msgid "Set a color for the displayed percentage or icon. "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2679
+#: ../helper/tabs/documentation.php:2874
 msgid "The progress bar's title/name. Could be left blank."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2686
+#: ../helper/tabs/documentation.php:2881
 msgid "The progress bar's description. Could be left blank."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2690 ../shortcodes/panel/uix_sc_form_bar.php:
+#: ../helper/tabs/documentation.php:2885 ../shortcodes/panel/uix_sc_form_bar.php:
 #: 224
 msgid "Displayed Units"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2693
+#: ../helper/tabs/documentation.php:2888
 msgid "The progress bar's displayed units. Could be left blank."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2698
+#: ../helper/tabs/documentation.php:2893
 msgid "Margin"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2701
+#: ../helper/tabs/documentation.php:2896
 msgid "Use the input fields below to customize the margin of progress bar."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2771 ../shortcodes/editor/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:2966 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:39
 msgid "Dividing Line"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2774
+#: ../helper/tabs/documentation.php:2969
 msgid ""
 "This shortcode lets you create a visual divider between elements and "
 "sections on your pages."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2799 ../shortcodes/panel/uix_sc_dividing_line.
+#: ../helper/tabs/documentation.php:2994 ../shortcodes/panel/uix_sc_dividing_line.
 #: php:27
 msgid "Choose Line Style"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2802
+#: ../helper/tabs/documentation.php:2997
 msgid "Choose a type for your separator."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2811
+#: ../helper/tabs/documentation.php:3006
 msgid "Set a color for the separator. There are two colors of line:"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2818
+#: ../helper/tabs/documentation.php:3013
 msgid "Set a width for the separator. There are two types of length units: "
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2826
+#: ../helper/tabs/documentation.php:3021
 msgid "The separator transparency. It inherits your choice of color."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2874 ../shortcodes/editor/tinymce-plugin-lang.
+#: ../helper/tabs/documentation.php:3069 ../shortcodes/editor/tinymce-plugin-lang.
 #: php:41
 msgid "Share Buttons"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2877
+#: ../helper/tabs/documentation.php:3072
 msgid ""
 "This shortcode enables you to add share buttons to all of your posts and/or "
 "pages. It takes that unique url and share it on the social page "
 "automagically."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2903 ..
+#: ../helper/tabs/documentation.php:3098 ..
 #: /shortcodes/panel/uix_sc_form_share_buttons.php:29
 msgid "Choose Type of Button"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2904 ../shortcodes/panel/uix_sc_form_hello.
-#: php:315
+#: ../helper/tabs/documentation.php:3099 ../shortcodes/panel/uix_sc_form_hello.
+#: php:308
 msgid "Multiple Selector"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2914
+#: ../helper/tabs/documentation.php:3109
 msgid "To set the fillet radius in pixels for social share buttons."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2921
+#: ../helper/tabs/documentation.php:3116
 msgid "Set a color for social share buttons."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2925 ..
+#: ../helper/tabs/documentation.php:3120 ..
 #: /shortcodes/panel/uix_sc_form_share_buttons.php:76
 msgid "Button Size"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2928
+#: ../helper/tabs/documentation.php:3123
 msgid "Set a size for social share buttons."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2967
+#: ../helper/tabs/documentation.php:3162
 msgid "Contact Form(Use Commenting Form Template)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:2969
+#: ../helper/tabs/documentation.php:3164
 msgid ""
 "This shortcode allows page embed a contact form which take your WordPress "
 "comment template."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3040
+#: ../helper/tabs/documentation.php:3235
 msgid "Code Highlight Builder"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3045
+#: ../helper/tabs/documentation.php:3240
 msgid ""
 "This shortcode allows you to easily post syntax-highlighted code to your "
 "site without losing it's formatting."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3070 ../shortcodes/panel/uix_sc_form_code.php:
+#: ../helper/tabs/documentation.php:3265 ../shortcodes/panel/uix_sc_form_code.php:
 #: 27
 msgid "Language"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3073
+#: ../helper/tabs/documentation.php:3268
 msgid ""
 "Syntax highlighting has become pretty standard on most tutorial sites (as "
 "you can see below) and there are many options available, all depending on "
 "what languages you use and how you want your code snippets to be displayed."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3079 ../shortcodes/panel/uix_sc_form_code.php:
+#: ../helper/tabs/documentation.php:3274 ../shortcodes/panel/uix_sc_form_code.php:
 #: 72
 msgid "Source code"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3082
+#: ../helper/tabs/documentation.php:3277
 msgid "Copying code into textarea."
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3122
+#: ../helper/tabs/documentation.php:3317
 msgid "Preview (editor)"
 msgstr ""
 
-#: ../helper/tabs/documentation.php:3127
+#: ../helper/tabs/documentation.php:3322
 msgid "Preview (output)"
 msgstr ""
 
@@ -2401,7 +2521,7 @@ msgstr ""
 #: ../helper/tabs/usage.php:31
 msgid ""
 "There is a second way, make a new Cascading Style Sheet (CSS) document which "
-"name to <strong>uix-shortcodes-style.css</strong> to your templates "
+"name to <strong>uix-shortcodes-custom.css</strong> to your templates "
 "directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-"
 "content/themes/{your-theme}/assets/css/</code> ). You can connect to your "
 "site via an FTP client, make the changes and then upload the file back to "
@@ -2419,19 +2539,19 @@ msgid ""
 "Shortcodes will use it as a default script to your WordPress Theme."
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:788
+#: ../shortcodes/frontpage-init.php:823
 msgid "All"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1287
+#: ../shortcodes/frontpage-init.php:1321
 msgid "+"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1288
+#: ../shortcodes/frontpage-init.php:1322
 msgid "-"
 msgstr ""
 
-#: ../shortcodes/frontpage-init.php:1654
+#: ../shortcodes/frontpage-init.php:1688
 msgid "Comments are closed."
 msgstr ""
 
@@ -2444,8 +2564,8 @@ msgid "Column Form"
 msgstr ""
 
 #: ../shortcodes/editor/tinymce-plugin-lang.php:14 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:45 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:504
+#: /shortcodes/panel/uix_sc_form_hello.php:38 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:497
 msgid "Text"
 msgstr ""
 
@@ -2530,7 +2650,7 @@ msgid "Insert Contact Form"
 msgstr ""
 
 #: ../shortcodes/panel/uix_sc_container.php:62 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:34
+#: /shortcodes/panel/uix_sc_form_hello.php:27
 #, php-format
 msgid ""
 "You can custom the boxed width of the container for Uix Shortcodes "
@@ -2543,50 +2663,51 @@ msgid ""
 "<strong>\"0\"</strong>."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_container.php:109 ..
+#: ../shortcodes/panel/uix_sc_container.php:110 ..
 #: /shortcodes/panel/uix_sc_form_authorcard.php:45 ..
 #: /shortcodes/panel/uix_sc_form_client.php:89 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:193 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:491 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:186 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:484 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:71 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:147 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:155 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:170 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:161 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:157 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:172 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:123 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:139 ..
-#: /shortcodes/panel/uix_sc_heading.php:81 ../shortcodes/panel/uix_sc_map.php:129 
+#: /shortcodes/panel/uix_sc_heading.php:81 ../shortcodes/panel/uix_sc_map.php:130 
 #: ../shortcodes/panel/uix_sc_testimonials.php:76
 msgid "Remove image"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_container.php:110 ..
+#: ../shortcodes/panel/uix_sc_container.php:111 ..
 #: /shortcodes/panel/uix_sc_form_authorcard.php:46 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:194 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:492 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:187 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:485 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:72 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:148 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:156 ..
-#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:171 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:158 ..
+#: /shortcodes/panel/uix_sc_form_portfolio_grid.php:173 ..
 #: /shortcodes/panel/uix_sc_form_team_fullwidth.php:124 ..
 #: /shortcodes/panel/uix_sc_form_team_grid.php:140 ..
-#: /shortcodes/panel/uix_sc_heading.php:82 ../shortcodes/panel/uix_sc_map.php:130 
+#: /shortcodes/panel/uix_sc_heading.php:82 ../shortcodes/panel/uix_sc_map.php:131 
 #: ../shortcodes/panel/uix_sc_testimonials.php:77
 msgid "Upload"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_container.php:290
+#: ../shortcodes/panel/uix_sc_container.php:291
 msgid "Wrapper Margin (px)"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_container.php:309
+#: ../shortcodes/panel/uix_sc_container.php:310
 msgid "Content Padding (px)"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_container.php:352
+#: ../shortcodes/panel/uix_sc_container.php:353
 msgid "Add a Container"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_container.php:366
+#: ../shortcodes/panel/uix_sc_container.php:367
 msgid "Content here..."
 msgstr ""
 
@@ -2814,73 +2935,62 @@ msgstr ""
 msgid "Column One Fourth"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:26 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:120
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:28 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:122
 msgid "Note: multiple items per column"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:69 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:163 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:70
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:71 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:165 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:68
 msgid "Feature Title"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:80 ..
-#: /shortcodes/panel/uix_sc_form_features_col2.php:174 ..
-#: /shortcodes/panel/uix_sc_form_features_col3.php:82
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:82 ..
+#: /shortcodes/panel/uix_sc_form_features_col2.php:176 ..
+#: /shortcodes/panel/uix_sc_form_features_col3.php:80
 msgid ""
 "Some description text here. You can add a lot of it or can choose to leave "
 "it blank."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:214
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:216
 msgid "Left Block"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:215
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:217
 msgid "Right Block"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col2.php:260
+#: ../shortcodes/panel/uix_sc_form_features_col2.php:262
 msgid "Insert Features (2 Column)"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_features_col3.php:26
-msgid ""
-"Note: 3 items per row. Per section insert for a maximum of "
-"<strong>3</strong>."
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_features_col3.php:147
+#: ../shortcodes/panel/uix_sc_form_features_col3.php:145
 msgid "Insert Features (3 Column)"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:26 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:605
-msgid "Note: 3 items per row.Per section insert \"for a maximum of 3\"."
-msgstr ""
-
-#: ../shortcodes/panel/uix_sc_form_hello.php:72
+#: ../shortcodes/panel/uix_sc_form_hello.php:65
 msgid "Radio"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:109
+#: ../shortcodes/panel/uix_sc_form_hello.php:102
 msgid "Slider"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:145
+#: ../shortcodes/panel/uix_sc_form_hello.php:138
 msgid "Editor"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:159
+#: ../shortcodes/panel/uix_sc_form_hello.php:152
 msgid "Textarea"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:173
+#: ../shortcodes/panel/uix_sc_form_hello.php:166
 msgid "Textarea(by default value)"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:175 ..
+#: ../shortcodes/panel/uix_sc_form_hello.php:168 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col3.php:132 ..
 #: /shortcodes/panel/uix_sc_form_pricing_col4.php:132
 msgid ""
@@ -2888,68 +2998,74 @@ msgid ""
 "Description</s>"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:187 ..
+#: ../shortcodes/panel/uix_sc_form_hello.php:180 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:65 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:141
+#: /shortcodes/panel/uix_sc_form_hello2.php:141 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:162
 msgid "Upload Image"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:190 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:488 ..
+#: ../shortcodes/panel/uix_sc_form_hello.php:183 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:481 ..
 #: /shortcodes/panel/uix_sc_form_hello2.php:68 ..
-#: /shortcodes/panel/uix_sc_form_hello2.php:144 ../shortcodes/panel/uix_sc_map.
-#: php:126
+#: /shortcodes/panel/uix_sc_form_hello2.php:144 ..
+#: /shortcodes/panel/uix_sc_form_imageslider.php:158 ..
+#: /shortcodes/panel/uix_sc_map.php:127
 msgid "Image URL"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:212
+#: ../shortcodes/panel/uix_sc_form_hello.php:205
 msgid "Short Text"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:224
+#: ../shortcodes/panel/uix_sc_form_hello.php:217
 msgid "Short Units Text"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:246 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:596
+#: ../shortcodes/panel/uix_sc_form_hello.php:239 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:589
 msgid "set up links with toggle"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:258 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:608
+#: ../shortcodes/panel/uix_sc_form_hello.php:251 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:601
 msgid "Toggle URL"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:270
+#: ../shortcodes/panel/uix_sc_form_hello.php:263
 msgid "Toggle URL2"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:298
+#: ../shortcodes/panel/uix_sc_form_hello.php:291
 msgid "Select"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:299
+#: ../shortcodes/panel/uix_sc_form_hello.php:292
 msgid "This is infomation."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:333
+#: ../shortcodes/panel/uix_sc_form_hello.php:326
 msgid "This is Icon Selector "
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:347 ..
-#: /shortcodes/panel/uix_sc_form_hello.php:357
+#: ../shortcodes/panel/uix_sc_form_hello.php:340 ..
+#: /shortcodes/panel/uix_sc_form_hello.php:350
 msgid "Color Map"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:371
+#: ../shortcodes/panel/uix_sc_form_hello.php:364
 msgid "Checkbox"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:385
+#: ../shortcodes/panel/uix_sc_form_hello.php:378
 msgid "Toggle for Checkbox"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_hello.php:670
+#: ../shortcodes/panel/uix_sc_form_hello.php:598
+msgid "Note: 3 items per row.Per section insert \"for a maximum of 3\"."
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_hello.php:663
 msgid "Demo Form 1"
 msgstr ""
 
@@ -3028,42 +3144,74 @@ msgstr ""
 msgid "Add a Icon"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:59
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:35
+msgid "Slide"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:36
+msgid "Fade"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:87
+msgid "Speed of Images Appereance"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:100
+msgid "Delay Between Images"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:174
+msgid "Destination URL and can be left blank, e.g., http://your.site.com"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:186
+msgid "Slider title"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:202
+msgid "Slider introduction"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_imageslider.php:256
+msgid "Insert Image Slider"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:61
 msgid "This option is valid when you use destination URL."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:87
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:89
 msgid ""
 "Prefix string attached to the classes of all elements generated by the "
 "portfolio, the default value is &quot;<strong>uix-sc-portfolio-"
 "</strong>&quot;."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:103
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:105
 msgid "click here to add a item"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:152
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:154
 msgid "Thumbnail"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:167
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:169
 msgid "Full Preview"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:181
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:183
 msgid "Project Title"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:192
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:194
 msgid "Category"
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:206
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:208
 msgid "The description of this project."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:294
+#: ../shortcodes/panel/uix_sc_form_portfolio_grid.php:296
 msgid "Insert Portfolio Section"
 msgstr ""
 
@@ -3225,6 +3373,22 @@ msgstr ""
 msgid "Insert Team Grid"
 msgstr ""
 
+#: ../shortcodes/panel/uix_sc_form_timeline.php:80
+msgid "Highlight"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_timeline.php:100
+msgid "Date, e.g., 1/6/2017"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_timeline.php:111
+msgid "Project Status Here"
+msgstr ""
+
+#: ../shortcodes/panel/uix_sc_form_timeline.php:163
+msgid "Insert Timeline"
+msgstr ""
+
 #: ../shortcodes/panel/uix_sc_form_video.php:32
 msgid ""
 "Copy the video's URL from your web browser's address bar while viewing the "
@@ -3267,13 +3431,13 @@ msgstr ""
 msgid "It default to using a 100% width."
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_map.php:124
+#: ../shortcodes/panel/uix_sc_map.php:125
 msgid ""
 "By default, a marker uses a standard image. Markers can display custom "
 "images, in which case they are usually referred to as \"icons.\""
 msgstr ""
 
-#: ../shortcodes/panel/uix_sc_map.php:159
+#: ../shortcodes/panel/uix_sc_map.php:160
 msgid "Embed a Google Map"
 msgstr ""
 

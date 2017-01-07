@@ -171,7 +171,7 @@ $args =
 				'desc'           => '',
 				'value'          => '',
 				'class'          => 'dynamic-row-uix_sc_imageslider_listitem_url', /*class of list item */
-				'placeholder'    => __( 'Destination URL, e.g., http://your.site.com', 'uix-shortcodes' ),
+				'placeholder'    => __( 'Destination URL and can be left blank, e.g., http://your.site.com', 'uix-shortcodes' ),
 				'type'           => 'text',
 				'default'        => ''
 

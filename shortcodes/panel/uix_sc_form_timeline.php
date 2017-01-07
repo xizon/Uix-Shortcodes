@@ -11,7 +11,7 @@ $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content
  */
 $form_id = 'uix_sc_form_timeline';
 
-$clone_max = 15; // Maximum of clone form 
+$clone_max = 30; // Maximum of clone form 
 
 /**
  * Form Type
@@ -27,7 +27,7 @@ $args =
 	 
 		array(
 			'id'             => 'uix_sc_timeline_list_color',
-			'title'          => __( 'Color', 'uix-shortcodes' ),
+			'title'          => __( 'Highlight Color', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
@@ -51,6 +51,11 @@ $args =
 									'clone_class'               => [ 
 									
 										array(
+											'id'        => 'dynamic-row-uix_sc_timeline_listitem_highlight',
+											'type'      => 'checkbox'
+										), 
+		
+										array(
 											'id'        => 'dynamic-row-uix_sc_timeline_listitem_date',
 											'type'      => 'text'
 										), 
@@ -68,6 +73,22 @@ $args =
 									
 		),
 		
+		
+
+			array(
+				'id'             => 'uix_sc_timeline_listitem_highlight',
+				'title'          => __( 'Highlight', 'uix-shortcodes' ),
+				'desc'           => '',
+				'value'          => '',
+		        'class'          => 'dynamic-row-uix_sc_timeline_listitem_highlight', /*class of list item */
+				'placeholder'    => '',
+				'type'           => 'checkbox',
+				'default'        => array(
+										'checked'  => true
+									)
+
+
+			),	
 		
 		
 			array(
@@ -127,7 +148,8 @@ if ( $sid == -1 && is_admin() ) {
 	 
 		/* List Item - Register clone vars ( step 1) */
 		UixSCFormCore::reg_clone_vars( 'uix_sc_timeline_list', 
-									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_date', $form_html )
+									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_highlight', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_date', $form_html )
 									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_status', $form_html )
 									 );
 	 
@@ -149,13 +171,14 @@ if ( $sid == -1 && is_admin() ) {
 					var show_list_item = '';
 					for ( var i=0; i<=list_num; i++ ){
 						
-						var _uid  = ( i == 0 ) ? '#' : '#'+i+'-',
-							_date = $( _uid+'uix_sc_timeline_listitem_date' ).val(),
-							_status  = $( _uid+'uix_sc_timeline_listitem_status' ).val();
+						var _uid       = ( i == 0 ) ? '#' : '#'+i+'-',
+							_date      = $( _uid+'uix_sc_timeline_listitem_date' ).val(),
+							_highlight = $( _uid+'uix_sc_timeline_listitem_highlight-checkbox' ).is( ":checked" ),
+							_status    = $( _uid+'uix_sc_timeline_listitem_status' ).val();
 							
 							
 						if ( _date != undefined && _date != '' ) {
-							show_list_item += "<br>[uix_timeline_item data='"+_date+"' status='"+_status+"'][/uix_timeline_item]";
+							show_list_item += "<br>[uix_timeline_item data='"+uixscform_shortcodeHTMLEcode( _date )+"' status='"+uixscform_shortcodeHTMLEcode( _status )+"' highlight='"+_highlight+"'][/uix_timeline_item]";
 						}
 							
 						

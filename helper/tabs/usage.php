@@ -28,7 +28,7 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
         
         <blockquote class="uix-bg-custom-blockquote">
 			<p class="uix-bg-custom-desc">
-			   <?php _e( 'There is a second way, make a new Cascading Style Sheet (CSS) document which name to <strong>uix-shortcodes-style.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes\'s function of "Custom CSS" is still valid.', 'uix-shortcodes' ); ?>
+			   <?php _e( 'There is a second way, make a new Cascading Style Sheet (CSS) document which name to <strong>uix-shortcodes-custom.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes\'s function of "Custom CSS" is still valid.', 'uix-shortcodes' ); ?>
 
 			</p>    
 			<p class="uix-bg-custom-desc">
