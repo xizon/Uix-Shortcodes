@@ -280,8 +280,7 @@ if ( $sid == -1 && is_admin() ) {
 							
 						
 						if ( _photo != undefined && _photo != '' ) {
-							show_list_item += "<br>[uix_imageslider_item "+_item_v_url+" "+_item_v_title+" "+_item_v_desc+" image='"+_item_v_photo+"']";
-							show_list_item += "<br>[/uix_imageslider_item]";
+							show_list_item += "<br>[uix_imageslider_item "+_item_v_url+" "+_item_v_title+" "+_item_v_desc+" image='"+_item_v_photo+"'][/uix_imageslider_item]";
 						}
 							
 						

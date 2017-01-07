@@ -24,19 +24,18 @@ $form_type = [
 $args = 
 	[
 	
+	 
 		array(
-			'id'             => 'uix_sc_timeline_list_effect',
-			'title'          => __( 'Column', 'uix-shortcodes' ),
+			'id'             => 'uix_sc_timeline_list_color',
+			'title'          => __( 'Color', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => 'slide',
+			'value'          => '#a2bf2f',
 			'placeholder'    => '',
-			'type'           => 'radio',
-			'default'        => array(
-		                            'slide'  => __( 'Slide', 'uix-shortcodes' ),
-		                            'fade'  => __( 'Fade', 'uix-shortcodes' ),
-								)
+			'type'           => 'color',
+			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
 		
 		),
+	
 	
 	 
 		//------list begin
@@ -52,19 +51,15 @@ $args =
 									'clone_class'               => [ 
 									
 										array(
-											'id'        => 'dynamic-row-uix_sc_timeline_listitem_photo',
-											'type'      => 'image'
+											'id'        => 'dynamic-row-uix_sc_timeline_listitem_date',
+											'type'      => 'text'
 										), 
 		
 										array(
-											'id'        => 'dynamic-row-uix_sc_timeline_listitem_url',
+											'id'        => 'dynamic-row-uix_sc_timeline_listitem_status',
 											'type'      => 'text'
 										), 
 									
-										array(
-											'id'        => 'dynamic-row-uix_sc_timeline_listitem_intro',
-											'type'      => 'textarea'
-										), 
 										
 
 									 ],
@@ -74,50 +69,32 @@ $args =
 		),
 		
 		
+		
 			array(
-				'id'             => 'uix_sc_timeline_listitem_photo',
+				'id'             => 'uix_sc_timeline_listitem_date',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_timeline_listitem_photo', /*class of list item */
-				'placeholder'    => __( 'Image URL', 'uix-shortcodes' ),
-				'type'           => 'image',
-				'default'        => array(
-										'remove_btn_text'  => __( 'Remove image', 'uix-shortcodes' ),
-										'upload_btn_text'  => __( 'Upload Logo', 'uix-shortcodes' ),
-									)
-			
+				'class'          => 'dynamic-row-uix_sc_timeline_listitem_date', /*class of list item */
+				'placeholder'    => __( 'Date, e.g., 1/6/2017', 'uix-shortcodes' ),
+				'type'           => 'text',
+				'default'        => ''
+
 			),	
 			
 
 			array(
-				'id'             => 'uix_sc_timeline_listitem_url',
+				'id'             => 'uix_sc_timeline_listitem_status',
 				'title'          => '',
 				'desc'           => '',
-				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_timeline_listitem_url', /*class of list item */
-				'placeholder'    => __( 'Destination URL, e.g., http://your.timelinesite.com', 'uix-shortcodes' ),
+				'value'          => __( 'Project Status Here', 'uix-shortcodes' ),
+				'class'          => 'dynamic-row-uix_sc_timeline_listitem_status', /*class of list item */
+				'placeholder'    => '',
 				'type'           => 'text',
 				'default'        => ''
 
 			),
 
-			
-			array(
-				'id'             => 'uix_sc_timeline_listitem_intro',
-				'title'          => '',
-				'desc'           => '',
-				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_timeline_listitem_intro', /*class of list item */
-				'placeholder'    => __( 'The Introduction of this member.', 'uix-shortcodes' ),
-				'type'           => 'textarea',
-				'default'        => array(
-										'row'     => 5,
-										'format'  => true
-									)
-			
-			),
-		
 	
 			
 		
@@ -150,9 +127,8 @@ if ( $sid == -1 && is_admin() ) {
 	 
 		/* List Item - Register clone vars ( step 1) */
 		UixSCFormCore::reg_clone_vars( 'uix_sc_timeline_list', 
-									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_photo', $form_html )
-									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_intro', $form_html ) 
-									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_url', $form_html )  
+									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_date', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_status', $form_html )
 									 );
 	 
 		
@@ -174,30 +150,19 @@ if ( $sid == -1 && is_admin() ) {
 					for ( var i=0; i<=list_num; i++ ){
 						
 						var _uid  = ( i == 0 ) ? '#' : '#'+i+'-',
-							_photo = $( _uid+'uix_sc_timeline_listitem_photo' ).val(),
-							_url  = $( _uid+'uix_sc_timeline_listitem_url' ).val(),
-							_desc = $( _uid+'uix_sc_timeline_listitem_intro' ).val();
+							_date = $( _uid+'uix_sc_timeline_listitem_date' ).val(),
+							_status  = $( _uid+'uix_sc_timeline_listitem_status' ).val();
 							
 							
-							
-							
-						var _item_v_photo = ( _photo != undefined ) ? encodeURI( _photo ) : '',
-							_item_v_url  = ( _url != undefined && _url != '' ) ? "url='"+encodeURI( _url )+"'" : '',
-							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '';
-							
-						
-						if ( _photo != undefined ) {
-							show_list_item += "<br>[uix_timeline_item "+_item_v_url+" image='"+_item_v_photo+"']";
-							show_list_item += "<br>[uix_timeline_item_desc]"+ _item_v_desc +"[/uix_timeline_item_desc]";					
-							show_list_item += "<br>[/uix_timeline_item]";
-		
+						if ( _date != undefined && _date != '' ) {
+							show_list_item += "<br>[uix_timeline_item data='"+_date+"' status='"+_status+"'][/uix_timeline_item]";
 						}
 							
 						
 					}
 		
 		
-					code = "[uix_timeline effect='"+uix_sc_timeline_list_effect+"']"+show_list_item+"<br>[/uix_timeline]";
+					code = "[uix_timeline color='"+uix_sc_timeline_list_color+"']"+show_list_item+"<br>[/uix_timeline]";
 
 			
 				

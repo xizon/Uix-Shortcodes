@@ -1803,7 +1803,6 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                         
                    
   
-                       <!-- ````````````````````````````````````````````````````````````````` -->
                        
                        <div class="uix-list-title"><?php _e( 'Image Slider', 'uix-shortcodes' ); ?></div>
                        <div class="uix-list-content">
@@ -1898,12 +1897,9 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
 <pre class="brush: css;">
 &nbsp;
 [uix_imageslider effect='slide' loop='true' paging='false' arrows='true' speed='1000' timing='2000']
-[uix_imageslider_item  url='https://google.com' title='Title1' desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' image='http://your.website.com/slider-index-1.jpg']
-[/uix_imageslider_item]
-[uix_imageslider_item title='Title' image='http://your.website.com/slider-index-2.jpg']
-[/uix_imageslider_item]
-[uix_imageslider_item image='http://your.website.com/slider-index-3.jpg']
-[/uix_imageslider_item]
+[uix_imageslider_item  url='https://google.com' title='Title1' desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' image='http://your.website.com/slider-index-1.jpg'][/uix_imageslider_item]
+[uix_imageslider_item title='Title' image='http://your.website.com/slider-index-2.jpg'][/uix_imageslider_item]
+[uix_imageslider_item image='http://your.website.com/slider-index-3.jpg'][/uix_imageslider_item]
 [/uix_imageslider]
 &nbsp;
 </pre>
@@ -1918,8 +1914,89 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                        
                        </div><!-- /.uix-list-content -->
                        
+                       
+                        <!-- ````````````````````````````````````````````````````````````````` -->
+                       
     
-    
+
+                       <div class="uix-list-title"><?php _e( 'Timeline', 'uix-shortcodes' ); ?></div>
+                       <div class="uix-list-content">
+                          
+                           <p><?php _e( 'This shortcode allows you to build a simple, interactive, historical timeline that showcases your life history or your company’s story in a responsive horizontal chronological order based on the year and the date of your posts.', 'uix-shortcodes' ); ?><br><?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to unlimited add items.', 'uix-shortcodes' ); ?>
+                           
+                            </p>
+                            
+                            <div class="uix-d-tabs">
+                                <h3><?php _e( 'Admin Screenshots', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-54.jpg" alt="" />
+                                </div>
+
+                                
+                                <h3 class="arg"><?php _e( 'Options', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                    <div class="uix-table-all">
+                                        <table>
+                                            <tr>
+                                                <th><?php _e( 'Name', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Type', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Default', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Description', 'uix-shortcodes' ); ?></th>
+                                            </tr>
+                         
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Color', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td><img src="<?php echo $imgpath; ?>sc-preview-elements-13.jpg" alt="" /></td>
+                                                <td><?php _e( 'Set a color for the button. ', 'uix-shortcodes' ); ?><?php _e( 'You can add a custom color with color palette. ', 'uix-shortcodes' ); ?><?php _e( 'Click on the ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'other color', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link at the bottom of the color selector.', 'uix-shortcodes' ); ?><br><img src="<?php echo $imgpath; ?>sc-preview-other-color.jpg" alt="" /></td>
+                                            </tr>  
+                                            
+                            
+                                            <tr>
+                                                <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Per group contains <code>Date</code> and <code>Status</code> of your slider within each sub-group.<br>', 'uix-shortcodes' ); ?>
+                                                <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
+                                                
+                                                
+                                                </td>
+                                            </tr>  
+                                           
+                                          
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                
+                                <h3><?php _e( 'Example', 'uix-shortcodes' ); ?></h3>
+                                <div>
+<pre class="brush: css;">
+&nbsp;
+[uix_timeline color='#a2bf2f']
+[uix_timeline_item  date='4/22/2016' status='Project Created'][/uix_timeline_item]
+[uix_timeline_item  date='11/15/2016' status='Process: developing'][/uix_timeline_item]
+[uix_timeline_item  date='1/6/2017' status='Project Approval'][/uix_timeline_item]
+[uix_timeline_item  date='TBD' status='Project Completed'][/uix_timeline_item]
+[/uix_timeline]
+&nbsp;
+</pre>
+                                </div>
+                                
+                              
+                                <h3><?php _e( 'Preview', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                   <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-55.jpg" alt="" />
+                                </div>
+                            </div><!-- .uix-d-tabs --> 
+                       
+                       </div><!-- /.uix-list-content -->
+                       
+                       
+                       <!-- ````````````````````````````````````````````````````````````````` -->
+                       
     
      
 
