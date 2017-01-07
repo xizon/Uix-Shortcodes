@@ -56,7 +56,7 @@ $args_1 =
 										), 								
 
 									 ],
-									'max'                       => 30
+									'max'                       => 15
 				                )
 									
 		),
@@ -150,7 +150,7 @@ $args_2 =
 																			
 
 									 ],
-									'max'                       => 30
+									'max'                       => 15
 				                )
 									
 		),
@@ -261,7 +261,7 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					/* List Item ( step 2)  */
-					var list_num = 30;
+					var list_num = 15;
 					
 			
 					var show_list_item_1 = '';

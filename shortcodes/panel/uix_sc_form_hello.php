@@ -23,13 +23,6 @@ $form_type = [
 $args = 
 	[
 		array(
-			'desc'           => __( 'Note: 3 items per row.Per section insert "for a maximum of 3".', 'uix-shortcodes' ),
-			'type'           => 'text'
-		
-		),
-		
-		
-		array(
 			'id'             => 'uix_sc_tipinfo',
 			'desc'           => sprintf( __( 'You can custom the boxed width of the container for Uix Shortcodes stylesheets. <a target="_blank" href="%1$s">click here to custom</a>', 'uix-shortcodes' ), admin_url( 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ),
 			'type'           => 'note',

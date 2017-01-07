@@ -994,7 +994,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                        <div class="uix-list-title"><?php _e( 'Features Boxes', 'uix-shortcodes' ); ?></div>
                        <div class="uix-list-content">
                            <p><?php _e( 'This shortcode will add a new  features or services section from your editor toolbar.<br>
-You\'ll see the best results with 2 and 3 columns when you want them evenly spaced. If you need to make a 2 column section. You can unlimited add items on the content of the popup window. Relatively speaking, make a 3 column section. Per section insert "for a maximum of 3" and you can repeat the same procedure to insert more sections.<br>', 'uix-shortcodes' ); ?>
+You\'ll see the best results with 2 and 3 columns when you want them evenly spaced. If you need to make a 2 column section. You can unlimited add items on the content of the popup window. Relatively speaking, make a 3 column section. <br>', 'uix-shortcodes' ); ?>
 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.
                             
                             </p>
@@ -1366,7 +1366,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                        <div class="uix-list-title"><?php _e( 'List Of Clients', 'uix-shortcodes' ); ?></div>
                        <div class="uix-list-content">
                        
-                           <p><?php _e( 'This shortcode allows you to add a new client section of 3 or 4 column. Per section insert "for a maximum of 3 or 4" and you can repeat the same procedure to insert more sections. ', 'uix-shortcodes' ); ?><br><?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to unlimited add items.', 'uix-shortcodes' ); ?>
+                           <p><?php _e( 'This shortcode allows you to add a new client section of 2, 3, 4, 5 or 6 column. ', 'uix-shortcodes' ); ?><br><?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to unlimited add items.', 'uix-shortcodes' ); ?>
                            
                             </p>
                             

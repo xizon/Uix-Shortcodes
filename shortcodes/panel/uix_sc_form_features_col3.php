@@ -22,11 +22,6 @@ $form_type = [
 $args = 
 	[
 	
-		array(
-			'desc'           => __( 'Note: 3 items per row. Per section insert for a maximum of <strong>3</strong>.', 'uix-shortcodes' ),
-			'type'           => 'text'
-		
-		),
 	 
 		//------list begin
 		array(
@@ -57,7 +52,7 @@ $args =
 																			
 
 									 ],
-									'max'                       => 3
+									'max'                       => 30
 				                )
 									
 		),
@@ -148,7 +143,7 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					/* List Item ( step 2)  */
-					var list_num = 3;
+					var list_num = 30;
 					
 			
 					var show_list_item = '';
@@ -170,7 +165,7 @@ if ( $sid == -1 && is_admin() ) {
 							
 						
 						//last column
-						var lastcol = ( i == list_num ) ? " last='1'" : '';
+						var lastcol = ( i >=3 && i % 3 == 0 ) ? " last='1'" : '';
 						
 						
 						if ( _title != undefined ) {
