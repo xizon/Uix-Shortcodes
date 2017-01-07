@@ -75,10 +75,11 @@ $args =
 			'desc'           => __( 'The browser automatically calculates the container height if the value is <strong>"0"</strong>.', 'uix-shortcodes' ),
 			'value'          => 300,
 			'placeholder'    => '',
-			'type'           => 'short-text',
+			'type'           => 'short-units-text',
 			'default'        => array(
-									'units'  => 'px'
-								)
+									'units'  => [ 'px', 'vh' ],
+									'units_id'  => 'uix_sc_container_height_units'
+				                )
 		
 		
 		),	
@@ -357,7 +358,7 @@ if ( $sid == -1 && is_admin() ) {
 					   uix_sc_container_result_bgcolor = ( uix_sc_container_bgcolor_other != '' ) ? "bgcolor='"+uix_sc_container_bgcolor_other+"'" : "bgcolor='"+uix_sc_container_bgcolor+"'",
 					   uix_sc_container_result_bgimage = ( uix_sc_container_bgimage != '' ) ? "bgimage='"+encodeURI( uix_sc_container_bgimage )+"' bgimage_repeat='"+uix_sc_container_bgimage_repeat+"' bgimage_position='"+uix_sc_container_bgimage_position+"' bgimage_attachment='"+uix_sc_container_bgimage_attachment+"' bgimage_size='"+uix_sc_container_bgimage_size+"'" : "",
 					   uix_sc_container_result_bgcolor,
-					   uix_sc_container_result_height = ( uix_sc_container_height != '' && uix_sc_container_height != 0 ) ? uixscform_floatval( uix_sc_container_height ) + 'px' : 'auto',
+					   uix_sc_container_result_height = ( uix_sc_container_height != '' && uix_sc_container_height != 0 ) ? uixscform_floatval( uix_sc_container_height ) + uix_sc_container_height_units : 'auto',
 					   uix_sc_container_result_bordercolor = ( uix_sc_container_border_color_other != '' ) ? uix_sc_container_border_color_other : uix_sc_container_border_color,
 					   uix_sc_container_result_border = ( uixscform_toggleSwitchCheckboxVal( 'uix_sc_container_border_toggle' ) === true ) ? "borderwidth='"+uixscform_floatval( uix_sc_container_border_width )+"px' borderstyle='"+uix_sc_container_border_style+"' bordercolor='"+uix_sc_container_result_bordercolor+"'" : '';
 					
