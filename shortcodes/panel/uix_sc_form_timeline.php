@@ -9,9 +9,9 @@ $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content
 /**
  * Form ID
  */
-$form_id = 'uix_sc_form_client';
+$form_id = 'uix_sc_form_timeline';
 
-$clone_max = 50; // Maximum of clone form 
+$clone_max = 15; // Maximum of clone form 
 
 /**
  * Form Type
@@ -25,18 +25,15 @@ $args =
 	[
 	
 		array(
-			'id'             => 'uix_sc_client_list_col',
+			'id'             => 'uix_sc_timeline_list_effect',
 			'title'          => __( 'Column', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => 3,
+			'value'          => 'slide',
 			'placeholder'    => '',
 			'type'           => 'radio',
 			'default'        => array(
-		                            '6'  => '6',
-		                            '5'  => '5',
-									'4'  => '4',
-									'3'  => '3',
-									'2'  => '2',
+		                            'slide'  => __( 'Slide', 'uix-shortcodes' ),
+		                            'fade'  => __( 'Fade', 'uix-shortcodes' ),
 								)
 		
 		),
@@ -44,7 +41,7 @@ $args =
 	 
 		//------list begin
 		array(
-			'id'             => 'uix_sc_client_list',
+			'id'             => 'uix_sc_timeline_list',
 			'title'          => __( 'List Item', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
@@ -55,17 +52,17 @@ $args =
 									'clone_class'               => [ 
 									
 										array(
-											'id'        => 'dynamic-row-uix_sc_client_listitem_logo',
+											'id'        => 'dynamic-row-uix_sc_timeline_listitem_photo',
 											'type'      => 'image'
 										), 
 		
 										array(
-											'id'        => 'dynamic-row-uix_sc_client_listitem_url',
+											'id'        => 'dynamic-row-uix_sc_timeline_listitem_url',
 											'type'      => 'text'
 										), 
 									
 										array(
-											'id'        => 'dynamic-row-uix_sc_client_listitem_intro',
+											'id'        => 'dynamic-row-uix_sc_timeline_listitem_intro',
 											'type'      => 'textarea'
 										), 
 										
@@ -78,12 +75,12 @@ $args =
 		
 		
 			array(
-				'id'             => 'uix_sc_client_listitem_logo',
+				'id'             => 'uix_sc_timeline_listitem_photo',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_client_listitem_logo', /*class of list item */
-				'placeholder'    => __( 'Logo URL', 'uix-shortcodes' ),
+				'class'          => 'dynamic-row-uix_sc_timeline_listitem_photo', /*class of list item */
+				'placeholder'    => __( 'Image URL', 'uix-shortcodes' ),
 				'type'           => 'image',
 				'default'        => array(
 										'remove_btn_text'  => __( 'Remove image', 'uix-shortcodes' ),
@@ -94,12 +91,12 @@ $args =
 			
 
 			array(
-				'id'             => 'uix_sc_client_listitem_url',
+				'id'             => 'uix_sc_timeline_listitem_url',
 				'title'          => '',
 				'desc'           => '',
 				'value'          => '',
-				'class'          => 'dynamic-row-uix_sc_client_listitem_url', /*class of list item */
-				'placeholder'    => __( 'Destination URL, e.g., http://your.clientsite.com', 'uix-shortcodes' ),
+				'class'          => 'dynamic-row-uix_sc_timeline_listitem_url', /*class of list item */
+				'placeholder'    => __( 'Destination URL, e.g., http://your.timelinesite.com', 'uix-shortcodes' ),
 				'type'           => 'text',
 				'default'        => ''
 
@@ -107,12 +104,12 @@ $args =
 
 			
 			array(
-				'id'             => 'uix_sc_client_listitem_intro',
+				'id'             => 'uix_sc_timeline_listitem_intro',
 				'title'          => '',
 				'desc'           => '',
-				'value'          => __( 'The Introduction of this member.', 'uix-shortcodes' ),
-				'class'          => 'dynamic-row-uix_sc_client_listitem_intro', /*class of list item */
-				'placeholder'    => '',
+				'value'          => '',
+				'class'          => 'dynamic-row-uix_sc_timeline_listitem_intro', /*class of list item */
+				'placeholder'    => __( 'The Introduction of this member.', 'uix-shortcodes' ),
 				'type'           => 'textarea',
 				'default'        => array(
 										'row'     => 5,
@@ -152,10 +149,10 @@ if ( $sid == -1 && is_admin() ) {
 	if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
 	 
 		/* List Item - Register clone vars ( step 1) */
-		UixSCFormCore::reg_clone_vars( 'uix_sc_client_list', 
-									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_logo', $form_html )
-									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_intro', $form_html ) 
-									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_client_listitem_url', $form_html )  
+		UixSCFormCore::reg_clone_vars( 'uix_sc_timeline_list', 
+									  UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_photo', $form_html )
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_intro', $form_html ) 
+									  .UixSCFormCore::dynamic_form_code( 'dynamic-row-uix_sc_timeline_listitem_url', $form_html )  
 									 );
 	 
 		
@@ -165,7 +162,7 @@ if ( $sid == -1 && is_admin() ) {
 		'use strict';
 			$( function() {
 
-				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Client Lists', 'uix-shortcodes' ) ); ?>					
+				<?php echo UixSCFormCore::uixscform_callback( $form_js, $form_id, __( 'Insert Timeline', 'uix-shortcodes' ) ); ?>					
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					
@@ -177,22 +174,22 @@ if ( $sid == -1 && is_admin() ) {
 					for ( var i=0; i<=list_num; i++ ){
 						
 						var _uid  = ( i == 0 ) ? '#' : '#'+i+'-',
-							_logo = $( _uid+'uix_sc_client_listitem_logo' ).val(),
-							_url  = $( _uid+'uix_sc_client_listitem_url' ).val(),
-							_desc = $( _uid+'uix_sc_client_listitem_intro' ).val();
+							_photo = $( _uid+'uix_sc_timeline_listitem_photo' ).val(),
+							_url  = $( _uid+'uix_sc_timeline_listitem_url' ).val(),
+							_desc = $( _uid+'uix_sc_timeline_listitem_intro' ).val();
 							
 							
 							
 							
-						var _item_v_logo = ( _logo != undefined ) ? encodeURI( _logo ) : '',
+						var _item_v_photo = ( _photo != undefined ) ? encodeURI( _photo ) : '',
 							_item_v_url  = ( _url != undefined && _url != '' ) ? "url='"+encodeURI( _url )+"'" : '',
 							_item_v_desc = ( _desc != undefined ) ? uixscform_shortcodeTextareaPrint( _desc ) : '';
 							
 						
-						if ( _logo != undefined ) {
-							show_list_item += "<br>[uix_client_item "+_item_v_url+" col='"+uix_sc_client_list_col+"' logo='"+_item_v_logo+"']";
-							show_list_item += "<br>[uix_client_item_desc]"+ _item_v_desc +"[/uix_client_item_desc]";					
-							show_list_item += "<br>[/uix_client_item]";
+						if ( _photo != undefined ) {
+							show_list_item += "<br>[uix_timeline_item "+_item_v_url+" image='"+_item_v_photo+"']";
+							show_list_item += "<br>[uix_timeline_item_desc]"+ _item_v_desc +"[/uix_timeline_item_desc]";					
+							show_list_item += "<br>[/uix_timeline_item]";
 		
 						}
 							
@@ -200,7 +197,7 @@ if ( $sid == -1 && is_admin() ) {
 					}
 		
 		
-					code = "[uix_client]"+show_list_item+"<br>[/uix_client]";
+					code = "[uix_timeline effect='"+uix_sc_timeline_list_effect+"']"+show_list_item+"<br>[/uix_timeline]";
 
 			
 				

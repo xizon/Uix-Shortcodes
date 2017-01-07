@@ -11,6 +11,8 @@ $cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content
  */
 $form_id = 'uix_sc_form_features_col2';
 
+$clone_max = 15; // Maximum of clone form 
+
 /**
  * Form Type
  */
@@ -56,7 +58,7 @@ $args_1 =
 										), 								
 
 									 ],
-									'max'                       => 15
+									'max'                       => $clone_max
 				                )
 									
 		),
@@ -150,7 +152,7 @@ $args_2 =
 																			
 
 									 ],
-									'max'                       => 15
+									'max'                       => $clone_max
 				                )
 									
 		),
@@ -261,7 +263,7 @@ if ( $sid == -1 && is_admin() ) {
 				<?php echo UixSCFormCore::send_before( $form_js_vars, $form_id ); ?> 
 				/*--**************** Custom shortcode begin ****************-- */
 					/* List Item ( step 2)  */
-					var list_num = 15;
+					var list_num = <?php echo $clone_max; ?>;
 					
 			
 					var show_list_item_1 = '';

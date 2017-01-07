@@ -682,7 +682,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td>-</td>
                                                 <td><?php _e( 'Per group contains <code>Accordion Title</code> and <code>Accordion Content</code> within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.<br>
-                                                <img src="<?php echo $imgpath; ?>sc-preview-content-11.jpg" alt="" />
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
                                                 </td>
                                             </tr>  
                                            
@@ -766,7 +766,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td>-</td>
                                                 <td><?php _e( 'Per group contains <code>Tab Title</code> and <code>Tab Content</code> within each sub-group. The textarea is supported by HTML tags.', 'uix-shortcodes' ); ?><br>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.<br>
-                                                <img src="<?php echo $imgpath; ?>sc-preview-content-14.jpg" alt="" />
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
                                                 </td>
                                             </tr>  
                                            
@@ -911,7 +911,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td>-</td>
                                                 <td><?php _e( 'Per group contains <code>Thumbnail</code>, <code>Full Preview</code>, <code>Project Title</code>, <code>Category Name</code>, <code>Description of Project</code> and <code>Destination URL</code> within each sub-group. Upload a thumbnail as cover. You can also upload a full preview image that it is an optional choice. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item.', 'uix-shortcodes' ); ?> <br>
-                                                <img src="<?php echo $imgpath; ?>sc-preview-content-47.jpg" alt="" /><br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" /><br>
                                                 <?php _e( 'To set up the project destination URL by clicking ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'set up destination URL with this project', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link on the content of the popup window.', 'uix-shortcodes' ); ?><br>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-46.jpg" alt="" /><br>
                                                 
@@ -1027,7 +1027,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td>-</td>
                                                 <td><?php _e( 'Per group contains <code>Feature Title</code>, <code>Description</code> and <code>Feature Icon</code> within each sub-group, and you can create your own custom color palette. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <?php _e( 'Multiple items per column.<br>', 'uix-shortcodes' ); ?>
-                                                <img src="<?php echo $imgpath; ?>sc-preview-content-19.jpg" alt="" />
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
                                                 </td>
                                             </tr>  
                                            
@@ -1158,7 +1158,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td>-</td>
                                                 <td><?php _e( 'Per group contains <code>Avatar</code>, <code>Name</code>, <code>Position</code> and <code>Details</code> for the customer giving within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.<br>
-                                                <img src="<?php echo $imgpath; ?>sc-preview-content-24.jpg" alt="" />
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
                                                 </td>
                                             </tr>  
                                            
@@ -1254,7 +1254,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td>-</td>
                                                 <td><?php _e( 'Per group contains <code>Avatar</code>, <code>Name</code>, <code>Position</code>, <code>Introduction</code> and <code>Social Network</code> of your team member within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <br>
-                                                <img src="<?php echo $imgpath; ?>sc-preview-content-29.jpg" alt="" /><br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" /><br>
                                                 <?php _e( 'To set up the member social media links by clicking ', 'uix-shortcodes' ); ?><strong>"<?php _e( 'set up links with social network', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'link on the content of the popup window.<br>', 'uix-shortcodes' ); ?>
                                                 <img src="<?php echo $imgpath; ?>sc-preview-content-30.jpg" alt="" /><br>
                                                 
@@ -1396,7 +1396,7 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                                                 <td>-</td>
                                                 <td><?php _e( 'Per group contains <code>LOGO</code> and <code>Introduction</code> of your client member within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
                                                 <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>. <?php _e( 'Multiple items per column.<br>', 'uix-shortcodes' ); ?>
-                                                <img src="<?php echo $imgpath; ?>sc-preview-content-35.jpg" alt="" />
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
                                                 
                                                 
                                                 </td>
@@ -1803,6 +1803,124 @@ You\'ll see the best results with 2 and 3 columns when you want them evenly spac
                         
                    
   
+                       <!-- ````````````````````````````````````````````````````````````````` -->
+                       
+                       <div class="uix-list-title"><?php _e( 'Image Slider', 'uix-shortcodes' ); ?></div>
+                       <div class="uix-list-content">
+                          
+                           <p><?php _e( 'This shortcode allows you to build, organize and display slideshow into any existing WordPress theme. ', 'uix-shortcodes' ); ?><br><?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to unlimited add items.', 'uix-shortcodes' ); ?>
+                           
+                            </p>
+                            
+                            <div class="uix-d-tabs">
+                                <h3><?php _e( 'Admin Screenshots', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                     <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-52.jpg" alt="" />
+                                </div>
+
+                                
+                                <h3 class="arg"><?php _e( 'Options', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                    <div class="uix-table-all">
+                                        <table>
+                                            <tr>
+                                                <th><?php _e( 'Name', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Type', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Default', 'uix-shortcodes' ); ?></th>
+                                                <th><?php _e( 'Description', 'uix-shortcodes' ); ?></th>
+                                            </tr>
+                         
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Effect', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>slide</td>
+                                                <td><?php _e( 'Controls the animation type. The following values are allowed:', 'uix-shortcodes' ); ?><code>slide</code>, <code>fade</code>.</td>
+                                            </tr>    
+                                           
+                                            <tr>
+                                                <td><?php _e( 'Automatically Transition', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
+                                                <td>true</td>
+                                                <td><?php _e( 'Setup a slideshow for the slider to animate automatically.', 'uix-shortcodes' ); ?></td>
+                                            </tr> 
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Show Paging Navigation', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
+                                                <td>false</td>
+                                                <td><?php _e( 'Create navigation for paging control of each slide.', 'uix-shortcodes' ); ?></td>
+                                            </tr> 
+                                                    
+                                            <tr>
+                                                <td><?php _e( 'Show Arrow Navigation', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Boolean', 'uix-shortcodes' ); ?></td>
+                                                <td>true</td>
+                                                <td><?php _e( 'Create previous/next arrow navigation.', 'uix-shortcodes' ); ?></td>
+                                            </tr>                                        
+                                                                                                                                              
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Speed of Images Appereance (ms)', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>1000</td>
+                                                <td><?php _e( 'Set the speed of animations, in milliseconds.', 'uix-shortcodes' ); ?></td>
+                                            </tr>  
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Delay Between Images (ms)', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Number', 'uix-shortcodes' ); ?></td>
+                                                <td>7000</td>
+                                                <td><?php _e( 'Set the speed of the slideshow cycling, in milliseconds', 'uix-shortcodes' ); ?></td>
+                                            </tr>   
+                                           
+                            
+                                            <tr>
+                                                <td><?php _e( 'List Item', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Group', 'uix-shortcodes' ); ?></td>
+                                                <td>-</td>
+                                                <td><?php _e( 'Per group contains <code>Image</code>, <code>Destination URL</code>, <code>Slider title</code> and <code>Slider introduction</code> of your slider within each sub-group. The textarea is supported by HTML tags.<br>', 'uix-shortcodes' ); ?>
+                                                <?php _e( 'You can click', 'uix-shortcodes' ); ?> <strong>"<?php _e( 'click here to add an item', 'uix-shortcodes' ); ?>"</strong> <?php _e( 'button to add a new item', 'uix-shortcodes' ); ?>.<br>
+                                                <img src="<?php echo $imgpath; ?>sc-preview-content-add.jpg" alt="" />
+                                                
+                                                
+                                                </td>
+                                            </tr>  
+                                           
+                                          
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                
+                                <h3><?php _e( 'Example', 'uix-shortcodes' ); ?></h3>
+                                <div>
+<pre class="brush: css;">
+&nbsp;
+[uix_imageslider effect='slide' loop='true' paging='false' arrows='true' speed='1000' timing='2000']
+[uix_imageslider_item  url='https://google.com' title='Title1' desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' image='http://your.website.com/slider-index-1.jpg']
+[/uix_imageslider_item]
+[uix_imageslider_item title='Title' image='http://your.website.com/slider-index-2.jpg']
+[/uix_imageslider_item]
+[uix_imageslider_item image='http://your.website.com/slider-index-3.jpg']
+[/uix_imageslider_item]
+[/uix_imageslider]
+&nbsp;
+</pre>
+                                </div>
+                                
+                              
+                                <h3><?php _e( 'Preview', 'uix-shortcodes' ); ?></h3>
+                                <div>
+                                   <img class="show-image" src="<?php echo $imgpath; ?>sc-preview-content-53.jpg" alt="" />
+                                </div>
+                            </div><!-- .uix-d-tabs --> 
+                       
+                       </div><!-- /.uix-list-content -->
+                       
+    
+    
+    
      
 
                     </div> <!-- /.uix-documentation-content -->

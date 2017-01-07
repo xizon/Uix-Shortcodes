@@ -836,7 +836,7 @@ function uix_sc_fun_portfolio_item( $atts, $content = null ){
         <div class="{classprefix}item" data-groups=\'["'.UixShortcodes::transform_slug( $type ).'"]\'>
             <span class="{classprefix}image" {imagefillet}>
                 <a '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'">
-                <img src="'.$image.'" id="'.UixShortcodes::get_attachment_id( $image ).'" alt="" {imagefillet}>
+                <img src="'.esc_url( $image ).'" id="'.UixShortcodes::get_attachment_id( $image ).'" alt="" {imagefillet}>
                 </a>
             </span>
             <h3><a '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'">'.$title.'</a></h3>
@@ -953,7 +953,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 		<div class="uix-sc-card-item">
 		  <div class="uix-sc-card-item-left uix-sc-gray">
 					<div class="uix-sc-card-item-left-imgbox" {avatarheight}>
-						<img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
+						<img src="'.esc_url( $avatarURL ).'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
 					</div>
 		  </div>
 		  <div class="uix-sc-card-item-body">
@@ -995,7 +995,7 @@ function uix_sc_fun_team_item( $atts, $content = null ){
 	   $return_string = '
 		<div class="uix-sc-gallery-list '.$col_class.' uix-sc-gray">
 			<div class="uix-sc-gallery-list-imgbox" {avatarheight}>
-				<img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
+				<img src="'.esc_url( $avatarURL ).'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
 				'.( !empty( $position )  ? '<span class="uix-sc-gallery-list-position">'.$position.'</span>' : '' ).'
 			</div>
 			<div class="uix-sc-gallery-list-info">
@@ -1156,8 +1156,7 @@ function uix_sc_fun_client_item( $atts, $content = null ){
 	extract( shortcode_atts( array( 
 		  'logo' => '',
 		  'url' => '',
-		  'col' => 3,
-		  'last' => 0
+		  'col' => 3
 	 ), $atts ) );
 	 
 
@@ -1173,7 +1172,7 @@ function uix_sc_fun_client_item( $atts, $content = null ){
    $return_string = ' 
 		<div class="uix-sc-client-li uix-sc-client-li-'.$col.'" data-url="'.esc_url( $url ).'">
 			<p class="uix-sc-img">
-			   '.( !empty( $url ) ? '<a href="'.esc_url( $url ).'" target="_blank">' : '' ).'<img src="'.$logo.'" alt="">'.( !empty( $url ) ? '</a>' : '' ).'
+			   '.( !empty( $url ) ? '<a href="'.esc_url( $url ).'" target="_blank">' : '' ).'<img src="'.esc_url( $logo ).'" alt="">'.( !empty( $url ) ? '</a>' : '' ).'
 			</p>
 			'.$desc.'	
 		</div>																	                                                          
@@ -1233,7 +1232,7 @@ function uix_sc_fun_testimonials_item( $atts, $content = null ){
         <li>
            '.$desc.'
 		   <div class="uix-sc-testimonials-signature">
-		       '.( !empty( $avatar )  ? '<img class="uix-sc-testimonials-avatar" src="'.$avatar.'" alt="'.$name.'" />': '<span class="uix-sc-testimonials-no-avatar"></span>' ).'
+		       '.( !empty( $avatar )  ? '<img class="uix-sc-testimonials-avatar" src="'.esc_url( $avatar ).'" alt="'.$name.'" />': '<span class="uix-sc-testimonials-no-avatar"></span>' ).'
 		       <strong '.( !empty( $avatar )  ? '': 'class="uix-sc-testimonials-pure-text"' ).'>'.$name.'</strong> - '.$position.'
 		   </div>														                                                    
         </li>    
@@ -1712,7 +1711,7 @@ function uix_sc_fun_authorcard( $atts, $content = null ) {
 					'.$social_out_3.'
 					</h3> 	 
 				</div>
-				<div class="uix-authorcard-pic"><img src="'.$avatarURL.'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'"></div>
+				<div class="uix-authorcard-pic"><img src="'.esc_url( $avatarURL ).'" id="'.UixShortcodes::get_attachment_id( $avatarURL ).'" alt="'.esc_attr( $name ).'"></div>
 			</div>
 			<div class="uix-authorcard-middle">'.$content.'</div> 
 			<a class="uix-authorcard-final" href="'.$btnurl.'" rel="author">'.$btnlabel.'</a> 
@@ -1726,3 +1725,83 @@ function uix_sc_fun_authorcard( $atts, $content = null ) {
 }
 
 add_shortcode( 'uix_authorcard', 'uix_sc_fun_authorcard' );
+
+
+
+
+//----------------------------------------------------------------------------------------------------
+// Image Slider
+//----------------------------------------------------------------------------------------------------
+function uix_sc_fun_imageslider_wrapper( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		'effect' => 'slide',
+		'target' => 0,
+		'loop' => 'true',
+		'speed' => 1000,
+		'timing' => 7000,
+		'paging' => 'false',
+		'arrows' => 'true',
+		
+	 ), $atts ) );
+	
+	
+	//target
+	$targetcode = ( $target == 1 ) ? ' target="_blank"' : '';
+
+   $return_string = '
+   <div class="uix-sc-imageslider-wrapper">
+	   <div class="uix-sc-imageslider" id="uix-imageslider-'.uniqid().'">
+			<div class="uix-sc-imageslider-container">
+				<div class="flexslider" data-loop="'.$loop.'" data-speed="'.$speed.'" data-timing="'.$timing.'" data-paging="'.$paging.'" data-arrows="'.$arrows.'" data-animation="'.$effect.'">
+					<ul class="slides">
+						'.$content.'
+					</ul><!-- .uix-sc-imageslider-slides -->
+				</div><!-- .flexslider -->
+			</div><!-- .uix-sc-imageslider-container -->
+		</div><!-- /.uix-sc-imageslider -->
+	</div>                              
+   ';
+	
+	$return_string = str_replace( '{target}', $targetcode, $return_string );
+   
+   return UixShortcodes::do_callback( $return_string );
+   
+}
+add_shortcode( 'uix_imageslider', 'uix_sc_fun_imageslider_wrapper' );
+
+//-----
+function uix_sc_fun_imageslider_item( $atts, $content = null ){
+	extract( shortcode_atts( array( 
+		  'image' => '',
+		  'url' => '',
+		  'title' => '',
+		  'desc' => '',
+	 ), $atts ) );
+	 
+
+	$image = ( !empty( $image ) ) ? $image : UixSCFormCore::logo_placeholder();
+	$intro = '';
+	
+	if ( !empty( $title ) || !empty( $desc ) ) {
+		$intro = '
+		  <div class="slide-text">
+		      '.( !empty( $title ) ? '<div class="slide-title">'.$title.'</div>' : '' ).'
+			  '.( !empty( $desc ) ? '<div class="slide-byline">'.$desc.'</div>' : '' ).'
+		  </div>
+		';
+	}
+
+   
+   $return_string = ' 
+		<li>
+		  '.( !empty( $url ) ? '<a href="'.esc_url( $url ).'" {target}>' : '' ).'<img src="'.esc_url( $image ).'" alt="">'.( !empty( $url ) ? '</a>' : '' ).'
+		  '.$intro.'
+		</li>																                                                          
+   ';
+  
+  
+
+   return UixShortcodes::do_callback( $return_string );
+}
+
+add_shortcode( 'uix_imageslider_item', 'uix_sc_fun_imageslider_item' );

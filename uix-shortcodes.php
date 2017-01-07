@@ -231,7 +231,7 @@ class UixShortcodes {
 				  if( $_GET[ 'tab' ] == 'documentation' && $_GET[ 'page' ] == self::CUSPAGE ) {
 					  
 						wp_enqueue_script( 'accTabs' );
-						wp_enqueue_style( 'accTabs' );
+						wp_enqueue_style( 'accTabs-uix-shortcodes' );
 						wp_enqueue_script( 'syntaxhighlighter-core' );
 						wp_enqueue_script( 'syntaxhighlighter-autoloader' );
 						wp_enqueue_style( 'syntaxhighlighter' );

@@ -219,7 +219,23 @@
 								classes: 'uix-widget-btn uix_sc_form_authorcard-widget_btn',
 								onclick: function() {
 								}
-							},												
+							},	
+							
+							{
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_16' ),
+								classes: 'uix-widget-btn uix_sc_form_imageslider-widget_btn',
+								onclick: function() {
+								}
+							},	
+							
+							{
+								text: ed.getLang( 'uix_sc_custom_tinymce_plugin.lang_17' ),
+								classes: 'uix-widget-btn uix_sc_form_timeline-widget_btn',
+								onclick: function() {
+								}
+							},		
+							
+							
 											
 						]
 							
