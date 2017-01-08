@@ -1338,7 +1338,7 @@ function uixscform_editorInit( id ){
 					height : 200,
 					menubar: false,
 					plugins: 'textcolor image media hr',
-				    toolbar: 'undo redo removeformat  | forecolor backcolor styleselect | bold italic | bullist numlist outdent indent | hr uixsc_image',
+				    toolbar: 'undo redo removeformat  | forecolor backcolor styleselect | uixsc_link uixsc_unlink bold italic | bullist numlist outdent indent | hr uixsc_image',
 					setup:function(ed) {
 					   ed.on( 'change', function(e) {
 						   var newvalue = ed.getContent().replace(/\r?\n/gm, '');
@@ -1382,6 +1382,80 @@ function uixscform_editorInit( id ){
 						  tooltip: uix_shortcodes_wp_plugin.lang_mce_image,
 						  onclick: uixsc_mce_insertImage
 						});	
+						
+						
+						// Add link button
+						ed.addButton('uixsc_link', {
+							icon: 'mce-ico mce-i-link',
+							tooltip: uix_shortcodes_wp_plugin.lang_mce_link_title,
+							onclick: function (e) {
+								
+								var urlRegex     = /<a href="(.*?)"/g,
+									urlMatch     = '',
+									selectedtxt  = ed.selection.getContent(),
+									curlabel     = selectedtxt.replace(/<a\b[^>]*>/i, '' ).replace(/<\/a>/i, '' ),
+									curlinkURL   = '';
+								
+								while( urlMatch = urlRegex.exec( selectedtxt ) ){
+									curlinkURL = urlMatch[1];
+								}	
+
+								ed.windowManager.open( {
+									title: uix_shortcodes_wp_plugin.lang_mce_link_title,
+									body: [
+									{
+										type: 'textbox',
+										label: uix_shortcodes_wp_plugin.lang_mce_link_field_url,
+										name: 'link_url',
+										value: curlinkURL,
+										placeholder: 'https://',
+										multiline: true,
+										minWidth: 500,
+										minHeight: 30,
+									},
+									{
+										type: 'textbox',
+										label: uix_shortcodes_wp_plugin.lang_mce_link_field_text,
+										name: 'link_text',
+										value: curlabel,
+										multiline: true,
+										minWidth: 500,
+										minHeight: 30,
+									},	   
+										
+									{
+										type: 'checkbox',
+										name: 'link_target',
+										label: ' ',
+										text: ' ' + uix_shortcodes_wp_plugin.lang_mce_link_field_win,
+									},
+				
+										
+									],
+									onsubmit: function( e ) {
+										
+										var curtxt      = ( e.data.link_text != '' ) ? e.data.link_text : e.data.link_url,
+											target      = ( e.data.link_target ) ? 'target="_blank"' : '';
+										
+										ed.insertContent( '<a href="' + e.data.link_url + '" ' + target + '>' + curtxt + '</a>');
+									}
+								});
+							}
+						});
+						
+						
+						//Delete link button
+						ed.addButton('uixsc_unlink', {
+							icon: 'mce-ico mce-i-unlink',
+							tooltip: uix_shortcodes_wp_plugin.lang_mce_unlink_title,
+							onclick: function (e) {
+								
+								var selectedtxt  = ed.selection.getContent();
+								selectedtxt = selectedtxt.replace(/<a\b[^>]*>/i, '' ).replace(/<\/a>/i, '' );
+								ed.insertContent(  selectedtxt );
+								
+							}
+						});
 						
 						
 				   },

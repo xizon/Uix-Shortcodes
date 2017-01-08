@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Sun Jan 08 2017 03:41:05 GMT+0800 (CST)\n"
+"POT-Revision-Date: Mon Jan 09 2017 01:29:55 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Select Files"
 msgstr ""
 
-#: ../admin/uixscform/init.php:102 ../admin/uixscform/init.php:597
+#: ../admin/uixscform/init.php:102 ../admin/uixscform/init.php:602
 msgid "Insert"
 msgstr ""
 
@@ -85,15 +85,37 @@ msgstr ""
 msgid "Insert Image"
 msgstr ""
 
-#: ../admin/uixscform/init.php:282
+#: ../admin/uixscform/init.php:104
+msgid "Remove link"
+msgstr ""
+
+#: ../admin/uixscform/init.php:105
+msgid "Insert/Edit link"
+msgstr ""
+
+#: ../admin/uixscform/init.php:106
+msgid "URL"
+msgstr ""
+
+#: ../admin/uixscform/init.php:107 ../helper/tabs/documentation.php:1749 ..
+#: /helper/tabs/documentation.php:2233 ../shortcodes/panel/uix_sc_form_authorcard.
+#: php:81 ../shortcodes/panel/uix_sc_form_button.php:84
+msgid "Link Text"
+msgstr ""
+
+#: ../admin/uixscform/init.php:108
+msgid "Open link in a new tab"
+msgstr ""
+
+#: ../admin/uixscform/init.php:287
 msgid "Exit live preview"
 msgstr ""
 
-#: ../admin/uixscform/init.php:597
+#: ../admin/uixscform/init.php:602
 msgid "Cancel"
 msgstr ""
 
-#: ../admin/uixscform/init.php:597 ../helper/tabs/documentation.php:416 ..
+#: ../admin/uixscform/init.php:602 ../helper/tabs/documentation.php:416 ..
 #: /helper/tabs/documentation.php:626 ../helper/tabs/documentation.php:719 ..
 #: /helper/tabs/documentation.php:814 ../helper/tabs/documentation.php:982 ..
 #: /helper/tabs/documentation.php:1116 ../helper/tabs/documentation.php:1189 ..
@@ -108,7 +130,7 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: ../admin/uixscform/init.php:658
+#: ../admin/uixscform/init.php:663
 msgid ""
 "<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
 "shortcode does not support live preview, please check out it directly on "
@@ -1709,12 +1731,6 @@ msgstr ""
 
 #: ../helper/tabs/documentation.php:1745
 msgid "The introduction of this author. The textarea is supported by HTML tags."
-msgstr ""
-
-#: ../helper/tabs/documentation.php:1749 ../helper/tabs/documentation.php:2233 ..
-#: /shortcodes/panel/uix_sc_form_authorcard.php:81 ..
-#: /shortcodes/panel/uix_sc_form_button.php:84
-msgid "Link Text"
 msgstr ""
 
 #: ../helper/tabs/documentation.php:1751 ..

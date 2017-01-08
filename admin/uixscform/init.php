@@ -97,10 +97,15 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					//Register core functions 
 					wp_register_script( 'uixscform-functions', self::plug_directory() .'js/uixscform.functions.min.js', array( 'jquery' ), self::VERSION, true );
 					wp_localize_script( 'uixscform-functions',  'uix_shortcodes_wp_plugin', array( 
-						'url'               => self::plug_directory(),
-						'lang_media_title'  => __( 'Select Files', 'uix-shortcodes' ),
-						'lang_media_text'  => __( 'Insert', 'uix-shortcodes' ),
-                        'lang_mce_image'    => __( 'Insert Image', 'uix-shortcodes' ),
+						'url'                       => self::plug_directory(),
+						'lang_media_title'          => __( 'Select Files', 'uix-shortcodes' ),
+						'lang_media_text'           => __( 'Insert', 'uix-shortcodes' ),
+                        'lang_mce_image'            => __( 'Insert Image', 'uix-shortcodes' ),
+						'lang_mce_unlink_title'     => __( 'Remove link', 'uix-shortcodes' ),
+						'lang_mce_link_title'       => __( 'Insert/Edit link', 'uix-shortcodes' ),
+						'lang_mce_link_field_url'   => __( 'URL', 'uix-shortcodes' ),
+						'lang_mce_link_field_text'  => __( 'Link Text', 'uix-shortcodes' ),
+						'lang_mce_link_field_win'   => __( 'Open link in a new tab', 'uix-shortcodes' ),
 					 ) );	
 				    wp_enqueue_script( 'uixscform-functions' );
 
