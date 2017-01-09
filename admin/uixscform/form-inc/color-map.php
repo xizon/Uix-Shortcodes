@@ -44,9 +44,9 @@ class UixSCFormType_ColorMap {
 								        
 										<div class="uixscform-color-selector-toggles">
 											<input type="text" class="wp-color-input" id="'.$id.'" name="'.$name.'" value="'.$value.'">
-										</div>	
-										<span class="uixscform-color-selector-label">'.( !empty( $desc ) ? $desc : __( 'Add Custom Color', 'uix-shortcodes' ) ).'</span>		
-								
+										</div>
+										
+										'.( !empty( $desc ) ? '<p class="info">'.$desc.'</p>' : '' ).'
 								</div>
 
 								
