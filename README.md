@@ -10,8 +10,6 @@ Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
 
 [Plugin for Wordpress at WordPress.org Repository](https://wordpress.org/plugins/uix-shortcodes/)
 
-[Video Demo](https://youtu.be/DCpGXKRvz1E)
-
 
 
 ### Licensing
@@ -19,6 +17,10 @@ Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
 Licensed under the [GPL3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ### Description
+
+
+[![Uix Shortcodes Live Demo](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/video-cover.jpg)](https://youtu.be/DCpGXKRvz1E "Uix Shortcodes Live Demo")
+
 
 Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. Currently, Uix Shortcodes supports: `container`, `parallax`, `image slider`, `timeline`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)`, `recent posts with custom template` and `author card`.
 
