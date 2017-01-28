@@ -24,7 +24,7 @@ The content elements are the heart of any page builder. These are the elements s
 A variety of optional styles are available for Uix ShortCodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.
 
 
-https://www.youtube.com/watch?v=DCpGXKRvz1E
+https://www.youtube.com/watch?v=8bX2vyA5iT4
 
 
 = Custom Usage =
