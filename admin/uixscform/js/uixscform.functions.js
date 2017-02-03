@@ -969,7 +969,7 @@ jQuery( document ).ready( function() {
 function uixscform_shortcodeTextareaPrint( str ) {
 	
 	//checking for "undefined" in replace-regexp
-	if ( str != undefined ) {
+	if ( typeof str !== typeof undefined ) {
 		str = uixscform_getHTML( str );
 		str = str.toString().replace(/\s/g," ").replace(/\"/g, '&quot;' ).replace(/\'/g, '&apos;' );
 		str = str.replace(/<br\w*\/*>/g,"[br]");
@@ -1130,7 +1130,7 @@ function uixscform_html_listTran( str, type ) {
 	
 	if ( str != '' ) {
 		
-		if ( str != undefined ) {
+		if ( typeof str !== typeof undefined ) {
 			str = str.toString().replace(/(\r)*\n/g, '<br>' );
 		}
 
@@ -1208,7 +1208,7 @@ function uixscform_insertToTextarea( s ) {
 function uixscform_insertCodes( content, conid ) {
 	
 	if ( conid == 'content' ) {
-		window.send_to_editor( content );
+		wp.media.editor.insert( content );
 		uixscform_closeWin();
 	} else {
 		( function( $ ) {
@@ -1329,7 +1329,7 @@ function uixscform_editorInit( id ){
 	"use strict";
 		$( function() {
             
-			if ( id != undefined ) {
+			if ( typeof id !== typeof undefined ) {
 				
 				var vid = id.replace( '-editor', '' );
 				tinyMCE.execCommand( 'mceRemoveEditor', true, id );

@@ -35,6 +35,11 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+#### = 1.4.1 =
+
+* Resolved compatibility errors that may occur with the editor.
+
+
 #### = 1.4.0 =
 
 * Added editor form field type.

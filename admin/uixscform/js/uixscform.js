@@ -56,7 +56,7 @@
 				e.preventDefault();
 				
 				var widget_ID               = $( this ).data( 'id' ),
-					contentID               = ( $( this ).data( 'target' ) != undefined ) ? $( this ).data( 'target' ) : 'content',
+					contentID               = ( typeof $( this ).data( 'target' ) !== typeof undefined ) ? $( this ).data( 'target' ) : 'content',
 					widget_ID               = 0,
 				    widgets                 = { 'ID': widget_ID, 'contentID': contentID, 'title': $title },
 				    code                    = '',
@@ -94,9 +94,7 @@
 							
 							/*-- Init tinymce --*/
 							uixscform_editorInit( $obj.find( '.uixscform-mce-editor textarea.mce' ).attr( 'id' ) );
-							
-							
-
+	
 							/*-- Count new modal height --*/
 							var newmHeight = 0,
 								hEx        = 0,
