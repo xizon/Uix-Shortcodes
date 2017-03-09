@@ -14,13 +14,13 @@ $form_id = 'uix_sc_form_button';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 	 
 		array(
@@ -46,7 +46,7 @@ $args =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 	
@@ -58,7 +58,7 @@ $args =
 			'value'          => '',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#b2de70', '#eae081', '#eead8f', '#fdc8e2', '#8ec0e7',  '#3d9ae8', '#9ebfcc', '#8a8482',  '#dddddd' ]
+			'default'        => array( '#b2de70', '#eae081', '#eead8f', '#fdc8e2', '#8ec0e7',  '#3d9ae8', '#9ebfcc', '#8a8482',  '#dddddd' )
 		
 		),
 		
@@ -72,7 +72,7 @@ $args =
 			'value'          => '#ffffff',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#ffffff', '#000000', '#888888' ]
+			'default'        => array( '#ffffff', '#000000', '#888888' )
 		
 		
 		),
@@ -143,7 +143,7 @@ $args =
 			'default'        => array(
 			                        'btn_textclass' => 'table-link-icon',
 			                        'btn_text'      => __( 'click on the set more attributes', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_btn_attrs-uix_sc_btn_icon', 'uix_sc_btn_attrs-uix_sc_btn_fontsize', 'uix_sc_btn_attrs-uix_sc_btn_letterspacing', 'uix_sc_btn_attrs-uix_sc_btn_color_other', 'uix_sc_btn_attrs-uix_sc_btn_hovercolor_other', 'uix_sc_btn_attrs-uix_sc_btn_txtcolor_other' ]
+									'toggle_class'  => array( 'uix_sc_btn_attrs-uix_sc_btn_icon', 'uix_sc_btn_attrs-uix_sc_btn_fontsize', 'uix_sc_btn_attrs-uix_sc_btn_letterspacing', 'uix_sc_btn_attrs-uix_sc_btn_color_other', 'uix_sc_btn_attrs-uix_sc_btn_hovercolor_other', 'uix_sc_btn_attrs-uix_sc_btn_txtcolor_other' )
 				                )
 		
 		),	
@@ -243,7 +243,7 @@ $args =
 
 		
 	
-	]
+	)
 ;
 
 

@@ -15,13 +15,13 @@ $form_id = 'uix_sc_form_pricing_col4';
  * Form Type
  */
 
-$form_type = [
+$form_type = array(
     'list' => 4
-];
+);
 
 
 $args_1 = 
-	[
+	array(
 	
 		array(
 			'id'             => 'uix_sc_pricing_col4_one_title',
@@ -48,7 +48,7 @@ $args_1 =
 			'value'          => '#d59a3e',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -109,7 +109,7 @@ $args_1 =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -164,11 +164,11 @@ $args_1 =
 		),	
 
 	
-	]
+	)
 ;
 
 $args_2 = 
-	[
+	array(
 
 	
 		array(
@@ -196,7 +196,7 @@ $args_2 =
 			'value'          => '#d59a3e',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -257,7 +257,7 @@ $args_2 =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -312,12 +312,12 @@ $args_2 =
 		),	
 		
 	
-	]
+	)
 ;
 
 
 $args_3 = 
-	[
+	array(
 	
 
 		array(
@@ -345,7 +345,7 @@ $args_3 =
 			'value'          => '#d59a3e',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -406,7 +406,7 @@ $args_3 =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -461,11 +461,11 @@ $args_3 =
 		),	
 		
 	
-	]
+	)
 ;
 
 $args_4 = 
-	[
+	array(
 	
 
 		array(
@@ -493,7 +493,7 @@ $args_4 =
 			'value'          => '#d59a3e',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -554,7 +554,7 @@ $args_4 =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -609,7 +609,7 @@ $args_4 =
 		),	
 		
 	
-	]
+	)
 ;
 
 

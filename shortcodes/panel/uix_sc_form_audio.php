@@ -14,13 +14,13 @@ $form_id = 'uix_sc_form_audio';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 		array(
 			'id'             => 'uix_sc_audio_url',
@@ -55,7 +55,7 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'short-units-text',
 			'default'        => array(
-									'units'  => [ '%', 'px' ],
+									'units'  => array( '%', 'px' ),
 									'units_id'  => 'uix_sc_audio_width_units'
 				                )
 		
@@ -106,7 +106,7 @@ $args =
 	
 		
 	
-	]
+	)
 ;
 
 $form_html = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args, 'html' );

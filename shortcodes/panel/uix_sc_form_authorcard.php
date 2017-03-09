@@ -14,14 +14,14 @@ $form_id = 'uix_sc_form_authorcard';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 
 $args = 
-	[
+	array(
 	
 		array(
 			'id'             => 'uix_sc_authorcard_primary_color',
@@ -30,7 +30,7 @@ $args =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 
@@ -173,7 +173,7 @@ $args =
 
 
 	
-	]
+	)
 ;
 
 

@@ -14,13 +14,13 @@ $form_id = 'uix_sc_form_code';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 
 		array(
 			'id'             => 'uix_sc_code_lan',
@@ -83,7 +83,7 @@ $args =
 	
 		
 	
-	]
+	)
 ;
 
 

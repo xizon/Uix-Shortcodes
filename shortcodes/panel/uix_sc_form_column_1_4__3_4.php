@@ -14,12 +14,12 @@ $form_id = 'uix_sc_form_column_1_4__3_4';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 $args = 
-	[
+	array(
 	
 	    array(
 			'id'             => 'uix_sc_col_1_4__3_4_padding',
@@ -40,7 +40,7 @@ $args =
 		),
 		
 	
-	]
+	)
 ;
 
 

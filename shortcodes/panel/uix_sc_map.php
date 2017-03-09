@@ -14,13 +14,13 @@ $form_id = 'uix_sc_map';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 	 
 	    array(
@@ -53,7 +53,7 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'short-units-text',
 			'default'        => array(
-									'units'  => [ '%', 'px' ],
+									'units'  => array( '%', 'px' ),
 									'units_id'  => 'uix_sc_map_width_units'
 				                )
 		
@@ -67,7 +67,7 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'short-units-text',
 			'default'        => array(
-									'units'  => [ 'px', 'vh' ],
+									'units'  => array( 'px', 'vh' ),
 									'units_id'  => 'uix_sc_map_height_units'
 				                )
 		
@@ -134,7 +134,7 @@ $args =
 		),	
 		
 	
-	]
+	)
 ;
 
 

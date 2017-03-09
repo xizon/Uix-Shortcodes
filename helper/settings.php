@@ -106,36 +106,36 @@ function uix_sc_options_page(){
 	} 
 	
 	$tabs = array();
-	$tabs[] = [
+	$tabs[] = array(
 	    'tab'     =>  'about', 
 		'title'   =>  __( 'About', 'uix-shortcodes' )
-	];
+	);
 
-	$tabs[] = [
+	$tabs[] = array(
 	    'tab'     =>  'usage', 
 		'title'   =>  __( 'How to use?', 'uix-shortcodes' )
-	];
+	);
 	
-	$tabs[] = [
+	$tabs[] = array(
 	    'tab'     =>  'documentation', 
 		'title'   =>  __( 'Documentation', 'uix-shortcodes' )
-	];
+	);
 	
 	
-	$tabs[] = [
+	$tabs[] = array(
 	    'tab'     =>  'credits', 
 		'title'   =>  __( 'Credits', 'uix-shortcodes' )
-	];
+	);
 	
-	$tabs[] = [
+	$tabs[] = array(
 	    'tab'     =>  'general-settings', 
 		'title'   =>  __( '<i class="dashicons dashicons-admin-generic"></i> General Settings', 'uix-shortcodes' )
-	];
+	);
 	
-	$tabs[] = [
+	$tabs[] = array(
 	    'tab'     =>  'custom-css', 
 		'title'   =>  __( '<i class="dashicons dashicons-welcome-view-site"></i> Custom CSS', 'uix-shortcodes' )
-	];	
+	);
 	
 
 	

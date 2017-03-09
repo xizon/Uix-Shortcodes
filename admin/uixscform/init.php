@@ -212,7 +212,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 				return false;
 		
 			// Define our variable as an empty array to avoid bugs if $plugin_array is empty
-			$slugs = [];
+			$slugs = array();
 		
 			foreach ( $plugin_array as $plugin_slug=>$values ){
 				$slugs[] = basename(
@@ -900,7 +900,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 					$_class   = ( isset( $key['class'] ) ) ? $key['class'] : '';
 					$_toggle  = ( isset( $key['toggle'] ) ) ? $key['toggle'] : '';
 					
-					$args = [
+					$args = array(
 						'title'             => $_title,
 						'desc'              => $_desc,
 						'default'           => $_default,
@@ -912,7 +912,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 						'class'             => $_class,
 						'toggle'            => $_toggle
 	
-					];
+					);
 				
 					
 					//icon

@@ -16,13 +16,13 @@ $clone_max = 30; // Maximum of clone form
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 	 
 		array(
@@ -32,7 +32,7 @@ $args =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 	
@@ -48,7 +48,7 @@ $args =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_timeline_listitem_highlight',
@@ -67,7 +67,7 @@ $args =
 									
 										
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -126,7 +126,7 @@ $args =
 
 		
 	
-	]
+	)
 ;
 
 

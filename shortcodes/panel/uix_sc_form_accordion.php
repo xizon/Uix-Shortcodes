@@ -17,13 +17,13 @@ $clone_max = 30; // Maximum of clone form
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 		
 		array(
@@ -66,7 +66,7 @@ $args =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 										array(
 											'id'        => 'dynamic-row-uix_sc_accordion_listitem_title',
 											'type'      => 'text'
@@ -77,7 +77,7 @@ $args =
 										), 
 	
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -119,7 +119,7 @@ $args =
 
 		
 	
-	]
+	)
 ;
 
 $form_html = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args, 'html' );

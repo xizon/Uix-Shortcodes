@@ -14,13 +14,13 @@ $form_id = 'uix_sc_form_share_buttons';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 
 	
@@ -28,7 +28,7 @@ $args =
 			'id'             => 'uix_sc_share_btn_name',
 			'title'          => __( 'Choose Type of Button', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => [ '1', '2', '3' ], //It takes a variable like [ ]  if the value is empty.
+			'value'          => array( '1', '2', '3' ), //It takes a variable like [ ]  if the value is empty.
 			'placeholder'    => '',
 			'type'           => 'multiselect',
 			'default'        => array(
@@ -94,7 +94,7 @@ $args =
 
 		
 	
-	]
+	)
 ;
 
 

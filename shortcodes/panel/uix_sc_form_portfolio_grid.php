@@ -16,13 +16,13 @@ $clone_max = 100; // Maximum of clone form
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 	
 		array(
@@ -103,7 +103,7 @@ $args =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add a item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_portfolio_grid_listitem_image',
@@ -133,12 +133,12 @@ $args =
 										array(
 											'id'              => 'dynamic-row-uix_sc_portfolio_grid_listitem_toggle',
 											'type'            => 'toggle',
-											'toggle_class'    => [ 'dynamic-row-uix_sc_portfolio_grid_url' ]
+											'toggle_class'    => array( 'dynamic-row-uix_sc_portfolio_grid_url' )
 										), 	
 															
 							
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -231,7 +231,7 @@ $args =
 				'type'           => 'toggle',
 				'default'        => array(
 										'btn_text'      => __( 'set up destination URL with this project', 'uix-shortcodes' ),
-										'toggle_class'  => [ 'dynamic-row-uix_sc_portfolio_grid_url' ]
+										'toggle_class'  => array( 'dynamic-row-uix_sc_portfolio_grid_url' )
 									)
 			
 			),	
@@ -259,7 +259,7 @@ $args =
 
 		
 	
-	]
+	)
 ;
 
 

@@ -16,13 +16,13 @@ $clone_max = 15; // Maximum of clone form
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => 2
-];
+);
 
 
 $args_1 = 
-	[
+	array(
 	
 		array(
 			'desc'           => __( 'Note: multiple items per column', 'uix-shortcodes' ),
@@ -40,7 +40,7 @@ $args_1 =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_features_col2_one_listitem_title',
@@ -57,7 +57,7 @@ $args_1 =
 											'type'      => 'icon'
 										), 								
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -112,11 +112,11 @@ $args_1 =
 
 		
 	
-	]
+	)
 ;
 
 $args_2 = 
-	[
+	array(
 	
 		array(
 			'desc'           => __( 'Note: multiple items per column', 'uix-shortcodes' ),
@@ -134,7 +134,7 @@ $args_2 =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_features_col2_two_listitem_title',
@@ -151,7 +151,7 @@ $args_2 =
 										), 									
 																			
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -206,7 +206,7 @@ $args_2 =
 
 		
 	
-	]
+	)
 ;
 
 //---

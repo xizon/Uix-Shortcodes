@@ -14,13 +14,13 @@ $form_id = 'uix_sc_form_icon';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 	 
 		array(
@@ -30,7 +30,7 @@ $args =
 			'value'          => '#333333',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#007fff', '#0E90D2', '#4BB1CF', '#5F9EA0', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#a2bf2f', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#e0b0ff', '#b57edc', '#843179', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ,'#800000' ]
+			'default'        => array( '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#007fff', '#0E90D2', '#4BB1CF', '#5F9EA0', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#a2bf2f', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#e0b0ff', '#b57edc', '#843179', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ,'#800000' )
 		
 		),
 		
@@ -44,7 +44,7 @@ $args =
 			'type'           => 'toggle',
 			'default'        => array(
 			                        'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_icon_color_other_class' ]
+									'toggle_class'  => array( 'uix_sc_icon_color_other_class' )
 				                )
 		
 		),	
@@ -90,7 +90,7 @@ $args =
 		),
 		
 	
-	]
+	)
 ;
 
 $form_html = UixSCFormCore::add_form( $cid, $sid, $form_id, $form_type, $args, 'html' );

@@ -14,12 +14,12 @@ $form_id = 'uix_sc_form_column_average_2';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 $args = 
-	[
+	array(
 	
 	    array(
 			'id'             => 'uix_sc_col_average_2_padding',
@@ -41,7 +41,7 @@ $args =
 	
 	
 
-	]
+	)
 ;
 
 

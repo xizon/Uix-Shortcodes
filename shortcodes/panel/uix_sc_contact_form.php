@@ -14,12 +14,12 @@ $form_id = 'uix_sc_contact_form';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 $args = 
-	[
+	array(
 	
 	
 		array(
@@ -34,7 +34,7 @@ $args =
 		),
 	
 
-	]
+	)
 ;
 
 

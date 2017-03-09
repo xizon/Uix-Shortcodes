@@ -14,13 +14,13 @@ $form_id = 'uix_sc_form_bar';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 		array(
 			'id'             => 'uix_sc_bar_shape',
@@ -37,14 +37,14 @@ $args =
 			'toggle'        => array(
 			                        array(
 										'trigger_id'           => 'uix_sc_bar_shape-circular', /* {item id}-{option id} */
-										'toggle_class'         => [ 'uix_sc_bar_circular_size_toggle_class' ],
-										'toggle_remove_class'  => [ 'uix_sc_bar_square_size_toggle_class' ]
+										'toggle_class'         => array( 'uix_sc_bar_circular_size_toggle_class' ),
+										'toggle_remove_class'  => array( 'uix_sc_bar_square_size_toggle_class' )
 
 									),
 			                        array(
 										'trigger_id'           => 'uix_sc_bar_shape-square', /* {item id}-{option id} */
-										'toggle_class'         => [ 'uix_sc_bar_square_size_toggle_class' ],
-										'toggle_remove_class'  => [ 'uix_sc_bar_circular_size_toggle_class' ]
+										'toggle_class'         => array( 'uix_sc_bar_square_size_toggle_class' ),
+										'toggle_remove_class'  => array( 'uix_sc_bar_circular_size_toggle_class' )
 
 									),
 						
@@ -76,7 +76,7 @@ $args =
 				'placeholder'    => '',
 				'type'           => 'short-units-text',
 				'default'        => array(
-										'units'  => [ '%', 'px' ],
+										'units'  => array( '%', 'px' ),
 										'units_id'  => 'uix_sc_bar_square_size_units'
 									)
 			
@@ -137,7 +137,7 @@ $args =
 			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_bar_icon_toggle', /* {item id}-{option id} */
-									'toggle_class'  => [ 'uix_sc_bar_icon_toggle_class', 'uix_sc_bar_iconsize_toggle_class' ]
+									'toggle_class'  => array( 'uix_sc_bar_icon_toggle_class', 'uix_sc_bar_iconsize_toggle_class' )
 				                )	
 		
 		
@@ -164,7 +164,7 @@ $args =
 			'value'          => '#a2bf2f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#007fff', '#0E90D2', '#4BB1CF', '#5F9EA0', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#a2bf2f', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#e0b0ff', '#b57edc', '#843179', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ,'#800000' ]
+			'default'        => array( '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#007fff', '#0E90D2', '#4BB1CF', '#5F9EA0', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#a2bf2f', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#e0b0ff', '#b57edc', '#843179', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ,'#800000' )
 		
 		),
 		
@@ -178,7 +178,7 @@ $args =
 			'value'          => '#f1f1f1',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#ffffff', '#473f3f',  '#bebebe', '#dcdcdc', '#f1f1f1' ]
+			'default'        => array( '#ffffff', '#473f3f',  '#bebebe', '#dcdcdc', '#f1f1f1' )
 		
 		),
 	
@@ -190,7 +190,7 @@ $args =
 			'value'          => '#473f3f',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#ffffff', '#473f3f',  '#bebebe', '#dcdcdc', '#f1f1f1' ]
+			'default'        => array( '#ffffff', '#473f3f',  '#bebebe', '#dcdcdc', '#f1f1f1' )
 		
 		),
 		
@@ -231,7 +231,7 @@ $args =
 		
 
 	
-	]
+	)
 ;
 
 

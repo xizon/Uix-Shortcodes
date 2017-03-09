@@ -14,13 +14,13 @@ $form_id = 'uix_sc_container';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 
 	    array(
@@ -38,15 +38,15 @@ $args =
 			'toggle'        => array(
 			                        array(
 										'trigger_id'           => 'uix_sc_container_layout-boxed', /* {item id}-{option id} */
-										'toggle_class'         => [ 'uix_sc_container_layout_boxedtip_toggle_class' ],
-										'toggle_remove_class'  => [ ]
+										'toggle_class'         => array( 'uix_sc_container_layout_boxedtip_toggle_class' ),
+										'toggle_remove_class'  => array()
 
 									),
 									
 			                        array(
 										'trigger_id'           => 'uix_sc_container_layout-fullwidth', /* {item id}-{option id} */
-										'toggle_class'         => [ ],
-										'toggle_remove_class'  => [ 'uix_sc_container_layout_boxedtip_toggle_class' ]
+										'toggle_class'         => array(),
+										'toggle_remove_class'  => array( 'uix_sc_container_layout_boxedtip_toggle_class' )
 
 									),	
 										
@@ -77,7 +77,7 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'short-units-text',
 			'default'        => array(
-									'units'  => [ 'px', 'vh' ],
+									'units'     => array( 'px', 'vh' ),
 									'units_id'  => 'uix_sc_container_height_units'
 				                )
 		
@@ -130,7 +130,7 @@ $args =
 			'value'          => '',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+			'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 		
 		),
 		
@@ -144,7 +144,7 @@ $args =
 			'type'           => 'toggle',
 			'default'        => array(
 			                        'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_container_bgcolor_other_class' ]
+									'toggle_class'  => array( 'uix_sc_container_bgcolor_other_class' )
 				                )
 		
 		),	
@@ -181,10 +181,10 @@ $args =
 			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_container_border_toggle', /* {item id}-{option id} */
-									'toggle_class'  => [ 'uix_sc_container_border_width_toggle_class', 'uix_sc_container_border_color_toggle_class', 'uix_sc_container_border_style_toggle_class', 'uix_sc_container_border_color_toggle_toggle_class', 'uix_sc_container_border_color_other_class_class' ],
+									'toggle_class'  => array( 'uix_sc_container_border_width_toggle_class', 'uix_sc_container_border_color_toggle_class', 'uix_sc_container_border_style_toggle_class', 'uix_sc_container_border_color_toggle_toggle_class', 'uix_sc_container_border_color_other_class_class' ),
 									
 									/* if this toggle contains another toggle, please specifies "toggle_not_class" in order that default hiding form is still valid . */
-									'toggle_not_class'  => [ 'uix_sc_container_border_color_other_class_class' ]
+									'toggle_not_class'  => array( 'uix_sc_container_border_color_other_class_class' )
 				                )	
 		
 		
@@ -213,7 +213,7 @@ $args =
 				'class'          => 'toggle-row uix_sc_container_border_color_toggle_class', /*class of toggle item */
 				'placeholder'    => '',
 				'type'           => 'color',
-				'default'        => [ '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' ]
+				'default'        => array( '#a2bf2f', '#d59a3e', '#DD514C', '#FA9ADF', '#4BB1CF',  '#0E90D2', '#5F9EA0', '#473f3f',  '#bebebe' )
 			
 			),
 			
@@ -228,7 +228,7 @@ $args =
 				'type'           => 'toggle',
 				'default'        => array(
 										'btn_text'      => __( 'other color', 'uix-shortcodes' ),
-										'toggle_class'  => [ 'uix_sc_container_border_color_other_class' ]
+										'toggle_class'  => array( 'uix_sc_container_border_color_other_class' )
 									)
 			
 			),	
@@ -324,7 +324,7 @@ $args =
 		),
 			
 	
-	]
+	)
 ;
 
 

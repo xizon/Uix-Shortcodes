@@ -35,6 +35,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+
+##### = 1.4.2 =
+
+* Compatible with low version PHP (5.3+)
+* Fixed some minor errors in the low version of PHP.
+
+
 #### = 1.4.1 =
 
 * Resolved compatibility errors that may occur with the editor.

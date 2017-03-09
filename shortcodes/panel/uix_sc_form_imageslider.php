@@ -16,13 +16,13 @@ $clone_max = 15; // Maximum of clone form
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 		array(
 			'id'             => 'uix_sc_imageslider_list_effect',
@@ -119,7 +119,7 @@ $args =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_imageslider_listitem_photo',
@@ -142,7 +142,7 @@ $args =
 										), 
 										
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -218,7 +218,7 @@ $args =
 
 		
 	
-	]
+	)
 ;
 
 

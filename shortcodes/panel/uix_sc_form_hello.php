@@ -16,12 +16,12 @@ $clone_max = 3; // Maximum of clone form
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 $args = 
-	[
+	array(
 		array(
 			'id'             => 'uix_sc_tipinfo',
 			'desc'           => sprintf( __( 'You can custom the boxed width of the container for Uix Shortcodes stylesheets. <a target="_blank" href="%1$s">click here to custom</a>', 'uix-shortcodes' ), admin_url( 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ),
@@ -76,20 +76,20 @@ $args =
 			'toggle'        => array(
 			                        array(
 										'trigger_id'           => 'uix_sc_radio-1', /* {item id}-{option id} */
-										'toggle_class'         => [ 'xxx_toggle_class' ],
-										'toggle_remove_class'  => [ 'yyy_toggle_class', 'zzz_toggle_class' ]
+										'toggle_class'         => array( 'xxx_toggle_class' ),
+										'toggle_remove_class'  => array( 'yyy_toggle_class', 'zzz_toggle_class' )
 
 									),
 			                        array(
 										'trigger_id'           => 'uix_sc_radio-2', /* {item id}-{option id} */
-										'toggle_class'         => [ 'yyy_toggle_class' ],
-										'toggle_remove_class'  => [ 'xxx_toggle_class', 'zzz_toggle_class' ]
+										'toggle_class'         => array( 'yyy_toggle_class' ),
+										'toggle_remove_class'  => array( 'xxx_toggle_class', 'zzz_toggle_class' )
 
 									),
 			                        array(
 										'trigger_id'           => 'uix_sc_radio-3', /* {item id}-{option id} */
-										'toggle_class'         => [ 'zzz_toggle_class' ],
-										'toggle_remove_class'  => [ 'xxx_toggle_class', 'yyy_toggle_class' ]
+										'toggle_class'         => array( 'zzz_toggle_class' ),
+										'toggle_remove_class'  => array( 'xxx_toggle_class', 'yyy_toggle_class' )
 
 									),
 									
@@ -220,7 +220,7 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'short-units-text',
 			'default'        => array(
-									'units'  => [ 'px', 'em', '%' ],
+									'units'  => array( 'px', 'em', '%' ),
 									'units_id'  => 'uix_sc_shortunitstext_units'
 				                )
 		
@@ -237,7 +237,7 @@ $args =
 			'default'        => array(
 		                            //'btn_textclass' => 'table-link-icon',
 			                        'btn_text'      => __( 'set up links with toggle', 'uix-shortcodes' ),
-									'toggle_class'  => [ 'uix_sc_toggle_url_class', 'uix_sc_toggle_url2_class', 'uix_sc_toggle_urlalign_class' ]
+									'toggle_class'  => array( 'uix_sc_toggle_url_class', 'uix_sc_toggle_url2_class', 'uix_sc_toggle_urlalign_class' )
 				                )
 		
 		),	
@@ -283,7 +283,7 @@ $args =
 			'value'          => '#333333',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#007fff', '#0E90D2', '#4BB1CF', '#5F9EA0', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#a2bf2f', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#e0b0ff', '#b57edc', '#843179', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ,'#800000' ]
+			'default'        => array( '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c', '#c3b091', '#c0c0c0', '#808080', '#464646', '#333333', '#000080', '#084c9e', '#007fff', '#0E90D2', '#4BB1CF', '#5F9EA0', '#00ffff', '#7fffd4', '#008080', '#228b22', '#808000', '#a2bf2f', '#7fff00', '#bfff00', '#ffd700', '#daa520', '#ff7f50', '#fa8072', '#fc0fc0', '#ff77ff', '#e0b0ff', '#b57edc', '#843179', '#E1A0A1', '#D84F51', '#dc143c', '#990002' ,'#800000' )
 		
 		),
 		array(
@@ -307,7 +307,7 @@ $args =
 			'id'             => 'uix_sc_multiselect',
 			'title'          => __( 'Multiple Selector', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => [ '1', '3' ], //It takes a variable like [ ]  if the value is empty.
+			'value'          => array( '1', '3' ), //It takes a variable like [ ]  if the value is empty.
 			'placeholder'    => '',
 			'type'           => 'multiselect',
 			'default'        => array(
@@ -386,11 +386,11 @@ $args =
 			/* If the toggle of switch with checkbox is enabled, the target id require class like "toggle-row" */
 			'toggle'        => array(
 									'trigger_id'  => 'uix_sc_checkbox_toggle', /* {item id}-{option id} */
-									'toggle_class'  => [ 'uix_sc_checkbox_toggle_text_class' ],
+									'toggle_class'  => array( 'uix_sc_checkbox_toggle_text_class' ),
 									
 									/* if this toggle contains another toggle, please specifies "toggle_not_class" in order that default hiding form is still valid . */
 									/*
-									'toggle_not_class'  => [ '' ]
+									'toggle_not_class'  => array()
 									*/
 									
 				                )	
@@ -426,7 +426,7 @@ $args =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 										array(
 											'id'        => 'dynamic-row-uix_sc_listitem_imgURL',
 											'type'      => 'image'
@@ -461,12 +461,12 @@ $args =
 										array(
 											'id'              => 'dynamic-row-uix_sc_listitem_toggle',
 											'type'            => 'toggle',
-											'toggle_class'    => [ 'dynamic-row-uix_sc_listitem_toggle_url', 'dynamic-row-uix_sc_listitem_toggle_icon' ]
+											'toggle_class'    => array( 'dynamic-row-uix_sc_listitem_toggle_url', 'dynamic-row-uix_sc_listitem_toggle_icon' )
 										), 									
 										
 										
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -542,7 +542,7 @@ $args =
 				'class'          => 'dynamic-row-uix_sc_listitem_color', /*class of list item */
 				'placeholder'    => '',
 				'type'           => 'color',
-				'default'        => [ '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c' ]
+				'default'        => array( '#fffff0', '#f5f5dc', '#f5deb3', '#d2b48c' )
 			
 			),	
 			
@@ -587,7 +587,7 @@ $args =
 				'type'           => 'toggle',
 				'default'        => array(
 										'btn_text'      => __( 'set up links with toggle', 'uix-shortcodes' ),
-										'toggle_class'  => [ 'dynamic-row-uix_sc_listitem_toggle_url', 'dynamic-row-uix_sc_listitem_toggle_icon' ]
+										'toggle_class'  => array( 'dynamic-row-uix_sc_listitem_toggle_url', 'dynamic-row-uix_sc_listitem_toggle_icon' )
 									)
 			
 			),	
@@ -633,7 +633,7 @@ $args =
 	
 		
 
-	]
+	)
 ;
 
 

@@ -16,13 +16,13 @@ $clone_max = 30; // Maximum of clone form
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 		array(
 			'id'             => 'uix_sc_team_grid_listitem_col',
@@ -93,7 +93,7 @@ $args =
 			'type'           => 'list',
 			'default'        => array(
 									'btn_text'                  => __( 'click here to add an item', 'uix-shortcodes' ),
-									'clone_class'               => [ 
+									'clone_class'               => array(
 									
 										array(
 											'id'        => 'dynamic-row-uix_sc_team_grid_listitem_avatar',
@@ -117,10 +117,10 @@ $args =
 										array(
 											'id'              => 'dynamic-row-uix_sc_team_grid_listitem_toggle',
 											'type'            => 'toggle',
-											'toggle_class'    => [ 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_4_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_4_icon' ]
+											'toggle_class'    => array( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_4_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_4_icon' )
 										), 	
 
-									 ],
+									 ),
 									'max'                       => $clone_max
 				                )
 									
@@ -192,7 +192,7 @@ $args =
 				'type'           => 'toggle',
 				'default'        => array(
 										'btn_text'      => __( 'set up links with social network', 'uix-shortcodes' ),
-										'toggle_class'  => [ 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon' ]
+										'toggle_class'  => array( 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_1_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_2_icon', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_url', 'dynamic-row-uix_sc_team_grid_listitem_toggle_3_icon' )
 									)
 			
 			),	
@@ -289,7 +289,7 @@ $args =
 
 		
 	
-	]
+	)
 ;
 
 

@@ -1,7 +1,7 @@
 <?php
 $iconName = isset( $_POST['iconName'] ) ? $_POST[ 'iconName' ] : ''; //default value with ajax
 $g        = 'class="b flaticon"';
-$icons    = [
+$icons    = array(
 '<span '.$g.'><i class="flaticon flaticon-add"></i></span>',
 '<span '.$g.'><i class="flaticon flaticon-add-1"></i></span>',
 '<span '.$g.'><i class="flaticon flaticon-add-2"></i></span>',
@@ -382,7 +382,7 @@ $icons    = [
 '<span '.$g.'><i class="flaticon flaticon-worldwide-1"></i></span>',
 '<span '.$g.'><i class="flaticon flaticon-zoom-in"></i></span>',
 '<span '.$g.'><i class="flaticon flaticon-zoom-out"></i></span>',
-];
+);
 
 echo '<div class="uixscform-icon-selector">';
 foreach ( $icons as $value ) {

@@ -14,13 +14,13 @@ $form_id = 'uix_sc_dividing_line';
 /**
  * Form Type
  */
-$form_type = [
+$form_type = array(
     'list' => false
-];
+);
 
 
 $args = 
-	[
+	array(
 	
 	    array(
 			'id'             => 'uix_sc_dividing_line_style',
@@ -48,7 +48,7 @@ $args =
 			'value'          => '#333',
 			'placeholder'    => '',
 			'type'           => 'color',
-			'default'        => [ '#333', '#fff' ]
+			'default'        => array( '#333', '#fff' )
 		
 		),
 		
@@ -60,7 +60,7 @@ $args =
 			'placeholder'    => '',
 			'type'           => 'short-units-text',
 			'default'        => array(
-									'units'  => [ '%', 'px' ],
+									'units'  => array( '%', 'px' ),
 									'units_id'  => 'uix_sc_dividing_line_width_units'
 				                )
 		
@@ -87,7 +87,7 @@ $args =
 		
 		
 			
-	]
+	)
 ;
 
 
