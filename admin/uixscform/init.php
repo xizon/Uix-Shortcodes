@@ -272,6 +272,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			 echo '<div class="uixscform-sub-window uixscform-icon-selector-btn-target" id="" style="display:none;">';
 			 require_once ( dirname( __FILE__ ) . '/'.self::icon_attr( 'selector' ) );
 			 echo '</div>';
+			 
 	
 		 }
 		
@@ -294,30 +295,41 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 * Returns icon attributes
 		 *
 		 */
-		 public static function icon_attr( $type = 'prefix' ) {
+		 public static function icon_attr( $type = 'prefix', $social = false ) {
 			 
 			$icontype = get_option( 'uix_sc_opt_icontype', 'fontawesome' );
 			 
-			if ( $type == 'prefix' ) {
-				if ( $icontype == 'fontawesome' ) {
+			if ( !$social ) {
+				if ( $type == 'prefix' ) {
+					if ( $icontype == 'fontawesome' ) {
+						return 'fa fa-';
+					}
+					if ( $icontype == 'flaticon' ) {
+						return 'flaticon flaticon-';
+					}
+
+				}
+
+				if ( $type == 'selector' ) {
+					if ( $icontype == 'fontawesome' ) {
+						return 'fontawesome/font-awesome-custom.php';
+					}
+					if ( $icontype == 'flaticon' ) {
+						return 'flaticon/font-flaticon-custom.php';
+					}
+
+				}	
+			} else {
+				if ( $type == 'prefix' ) {
 					return 'fa fa-';
+
 				}
-				if ( $icontype == 'flaticon' ) {
-					return 'flaticon flaticon-';
-				}
-				
-			}
-			 
-			if ( $type == 'selector' ) {
-				if ( $icontype == 'fontawesome' ) {
+
+				if ( $type == 'selector' ) {
 					return 'fontawesome/font-awesome-custom.php';
+
 				}
-				if ( $icontype == 'flaticon' ) {
-					return 'flaticon/font-flaticon-custom.php';
-				}
-				
 			}
-			 
 
 			 
 		 }

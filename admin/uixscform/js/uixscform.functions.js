@@ -879,10 +879,16 @@ jQuery( document ).ready( function() {
 				
 				//current modal box ID
 				var curmID          = uixscform_curModalID(),
-					$socialIcon     = jQuery( '#'+curmID+' .iconslist-box .b:not(.social)' ),
+					$allIcon        = jQuery( '#'+curmID+' .iconslist-box .b' ),
+					$socialIcon     = jQuery( '#'+curmID+' .iconslist-box .b.social' ),
 				    $socialTitle    = jQuery( '#'+curmID+' .iconslist-box .uixscform-icon-social-title' )
 
 				//console.log( curmID );
+				
+				//default list for icons 
+				$socialIcon.hide();	
+				$socialTitle.hide();	
+				
 				
 				//hide main modal content
 				jQuery( '#'+curmID+' .ajax-temp' ).css( 'visibility', 'hidden' );
@@ -893,12 +899,10 @@ jQuery( document ).ready( function() {
 				
 	
 				//social icons
-				if ( $this.hasClass( 'icon-social' ) ) {
-					$socialIcon.hide();	
-					$socialTitle.hide();		
-				} else {
+				if ( $( this ).hasClass( 'icon-social' ) ) {	
+					$allIcon.hide();
+					$socialTitle.hide();
 					$socialIcon.show();	
-					$socialTitle.show();		
 				}
 				
 		

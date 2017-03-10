@@ -20,31 +20,33 @@ class UixSCFormType_Icon {
 		$jscode      = '';
 		$jscode_vars = '';
 		
-		$tips = ( !empty( $placeholder ) ) ? $placeholder : __( 'Choose Icon', 'uix-shortcodes' );
-		$iconselector = UixSCFormCore::icon_attr( 'selector' );
-		$iconprefix   = UixSCFormCore::icon_attr( 'prefix' );
+		$tips            = ( !empty( $placeholder ) ) ? $placeholder : __( 'Choose Icon', 'uix-shortcodes' );
+		$iconselector    = UixSCFormCore::icon_attr( 'selector' );
+		$iconprefix      = UixSCFormCore::icon_attr( 'prefix' );
+		$socialclass     = '';
 		
 		
 		
 		if ( $type == 'icon' ) {
 			
 			$social = false;
+
+			if ( is_array( $default ) && !empty( $default ) ) {
+				$social = $default[ 'social' ];
+			
+				if ( $social ) {
+					
+					$iconselector = UixSCFormCore::icon_attr( 'selector', true );
+					$iconprefix   = UixSCFormCore::icon_attr( 'prefix', true );
+					$socialclass  = 'icon-social';
+					
+				} 
+	
+			}
 			
 			//Icon list here ( without ajax that is to increase speed. )
 			$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'admin/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector uixscform-icon-selector" id="icon-selector-'.$id.'"></span>';
-			
-			if ( is_array( $default ) && !empty( $default ) ) {
-				$social = $default[ 'social' ];
 				
-				if ( $social ) $iconselector = 'fontawesome/font-awesome-social.php';
-				
-				if ( $social ) {
-					
-					//Icon list here ( without ajax that is to increase speed. )
-					$iconlist = '<span contain-id="icon-selector-'.$id.''.( ( $social ) ? '-social' : '' ).'" list-url="'.UixSCFormCore::plug_filepath().'admin/uixscform/'.$iconselector.'" target-id="'.$id.'" name="'.$name.'" preview-id="'.$id.'-preview" class="icon-selector uixscform-icon-selector icon-social" id="icon-selector-'.$id.'-social"></span>';
-					
-				} 
-			}
 			
 			$field = '
 					<tr'.$class.'>
@@ -56,7 +58,7 @@ class UixSCFormType_Icon {
 								
 									<div class="uixscform-icon-selector-icon-preview" id="'.$id.'-preview">'.( ( !empty( $value ) ) ? '<i class="'.$iconprefix.''.$value.'"></i>' : '' ).'</div>
 
-									<a href="javascript:" id="'.$id.'-choosebtn" class="uixscform-icon-selector-btn" title="'.esc_attr__( 'Choose Icon', 'uix-shortcodes' ).'"><i class="fa fa-question"></i></a>
+									<a href="javascript:" id="'.$id.'-choosebtn" class="uixscform-icon-selector-btn '.$socialclass.'" title="'.esc_attr__( 'Choose Icon', 'uix-shortcodes' ).'"><i class="fa fa-question"></i></a>
 
 									<a href="javascript:" class="uixscform-icon-clear">&times;</a>
 

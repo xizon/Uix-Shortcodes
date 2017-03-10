@@ -365,7 +365,7 @@ img.uix-sc-img,
 .uix-sc-container,
 .uix-sc-container.uix-sc-container-boxed {
 	margin: 0 auto;
-	max-width: none !important;
+	max-width: 100%;
 	padding: 0 15px !important;
 	position: relative;
 	overflow: hidden;
@@ -2488,6 +2488,8 @@ img.uix-sc-img,
    20. Image Slider                
 /* ====================================================== */
 .uix-sc-imageslider{
+	max-width: 100%;
+	overflow: hidden;
 }
 
 	.uix-sc-imageslider .uix-sc-flex-control-paging {

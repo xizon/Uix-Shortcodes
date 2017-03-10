@@ -474,7 +474,7 @@ foreach ( $all_icons as $value ) {
 echo '<strong class="uixscform-icon-social-title">'.__( 'Social:', 'uix-shortcodes' ).'</strong>';
 
 foreach ( $social_icons as $value ) {
-	$v = str_replace( '"></i></span>', '', str_replace( '<span '.$g.'><i class="fa fa-', '', $value ) );
+	$v = str_replace( '"></i></span>', '', str_replace( '<span '.$gs.'><i class="fa fa-', '', $value ) );
 	if ( $v == $iconName ) {
 		echo str_replace( 'class="b fontawesome"', 'class="b fontawesome active"', $value );
 	} else {
