@@ -1345,11 +1345,10 @@ function uixscform_editorInit( id ){
 				    toolbar: 'undo redo removeformat  | forecolor backcolor styleselect | uixsc_link uixsc_unlink bold italic | bullist numlist outdent indent | hr uixsc_image',
 					setup:function(ed) {
 					   ed.on( 'change', function(e) {
-						   var newvalue = ed.getContent().replace(/\r?\n/gm, '');
-						   
-						   //Encode editor value in order to add new textarea
-						   newvalue = newvalue.replace(/'/g, '&apos;' )
-											  .replace(/"/g, '&quot;' );
+						   var newvalue = ed.getContent()
+												 .replace(/\r?\n/gm, '')
+												 .replace(/&nbsp;/g, ' ')
+						                         .replace( /..\/wp-content\/uploads\//g, uix_shortcodes_wp_plugin.upload_dir_url );
 						   
 						   $( 'textarea#' + vid ).val( newvalue ).trigger( 'change' );
 					   });

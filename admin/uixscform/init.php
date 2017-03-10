@@ -94,10 +94,16 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 				 ) 
 			  {
     
+					//Fix the image path of the editor
+					$upload_dir     = wp_upload_dir();
+				    $upload_dir_url = trailingslashit( $upload_dir[ 'baseurl' ] );
+			 
+				  
 					//Register core functions 
 					wp_register_script( 'uixscform-functions', self::plug_directory() .'js/uixscform.functions.min.js', array( 'jquery' ), self::VERSION, true );
 					wp_localize_script( 'uixscform-functions',  'uix_shortcodes_wp_plugin', array( 
 						'url'                       => self::plug_directory(),
+						'upload_dir_url'            => $upload_dir_url,
 						'lang_media_title'          => __( 'Select Files', 'uix-shortcodes' ),
 						'lang_media_text'           => __( 'Insert', 'uix-shortcodes' ),
                         'lang_mce_image'            => __( 'Insert Image', 'uix-shortcodes' ),

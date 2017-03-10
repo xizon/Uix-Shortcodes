@@ -321,9 +321,10 @@ $args =
 		
 		),
 		
+		
 		array(
-			'id'             => 'uix_sc_icon',
-			'title'          => __( 'This is Icon Selector ', 'uix-shortcodes' ),
+			'id'             => 'uix_sc_demoicon_name',
+			'title'          => __( 'Icon', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => '',
 			'placeholder'    => '',
@@ -740,6 +741,7 @@ if ( $sid == -1 && is_admin() ) {
 				
 					/* Output */
 					_vhtml = '';
+				    _vhtml += '<hr>Editor: '+uix_sc_editor;
 					_vhtml += '<hr>Text: '+uix_sc_text;
 					_vhtml += '<hr>Textarea: '+uix_sc_textarea;
 				    _vhtml += '<hr>ToggleSwitch: '+uixscform_toggleSwitchCheckboxVal( 'uix_sc_checkbox_toggle' );
@@ -748,7 +750,7 @@ if ( $sid == -1 && is_admin() ) {
 					_vhtml += '<hr>Select: '+uix_sc_select;
 					_vhtml += '<hr>Upload Image: '+encodeURI( uix_sc_image );
 					_vhtml += '<hr>Toggle URL: '+encodeURI( uix_sc_toggle_url );
-					_vhtml += '<hr>Icon: '+uix_sc_icon;
+					_vhtml += '<hr>Icon: '+uix_sc_demoicon_name;
 					_vhtml += '<hr>Radio: '+uix_sc_radio;
 					_vhtml += '<hr>Slider: '+uix_sc_slider+uix_sc_slider_units;
 					_vhtml += '<hr>Color Map Value: '+uix_sc_colormap;
