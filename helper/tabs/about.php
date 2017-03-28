@@ -20,5 +20,13 @@ if( !isset( $_GET[ 'tab' ] ) || $_GET[ 'tab' ] == 'about' ) {
            <?php _e( '<strong>If you like this plug-in, you can check out my free and high-quality themes with Uix Shortcodes for you to download.</strong> <h4><a href="https://uiux.cc/" target="_blank">Click here to check out</a></h4>', 'uix-shortcodes' ); ?>
         </p>      
 
+          <p>
+            <?php 
+				$embed_code = wp_oembed_get('https://www.youtube.com/watch?v=8bX2vyA5iT4', array('width'=>560, 'height'=>315 )); 
+				echo $embed_code;										 
+			  ?>
+        
+        </p>   
+
 
 <?php } ?>

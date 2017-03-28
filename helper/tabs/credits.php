@@ -22,7 +22,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'credits' ) {
             <li><a href="https://github.com/Vestride/Shuffle" target="_blank" rel="nofollow"><?php _e( 'Shuffle (filtering and sorting)', 'uix-shortcodes' ); ?></a></li>
             <li><a href="https://github.com/desandro/imagesloaded" target="_blank" rel="nofollow"><?php _e( 'imagesloaded', 'uix-shortcodes' ); ?></a></li>
             <li><a href="https://github.com/xizon/easy-pie-chart" target="_blank" rel="nofollow"><?php _e( 'Easy Pie Chart', 'uix-shortcodes' ); ?></a></li>
-            <li><a href="http://www.flaticon.com" target="_blank" rel="nofollow"><?php _e( 'Flaticon', 'uix-shortcodes' ); ?></a></li>
+            <li><a href="http://www.flaticon.com/packs/essential-set-2" target="_blank" rel="nofollow"><?php _e( 'Flaticon icon font: Essential Set', 'uix-shortcodes' ); ?></a></li>
         
          
 

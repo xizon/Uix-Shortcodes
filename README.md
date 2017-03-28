@@ -1,4 +1,4 @@
-# Uix Shortcodes
+fi# Uix Shortcodes
 This is a WordPress Plugin. Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
 
 Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
@@ -34,6 +34,20 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 
 ### Updates
+
+##### = 1.4.5 =
+
+* Upgraded core form API. ( For developers, custom modules are much simpler! )
+* Optimized core custom functions.
+* Added function of template parameters.
+* Added function of form javascripts output when in ajax or default state.
+* Improve the stability of the plug-in.
+* Optimized core HTML tags for front-end.
+* Optimized core stylesheets for front-end.
+* Fixed some shortcode tags that did not show.
+* Fixed some minor bugs for live preview.
+* W3C markup validation.
+
 
 
 ##### = 1.4.2 =
@@ -260,7 +274,7 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 - [Shuffle](https://github.com/Vestride/Shuffle)
 - [imagesloaded](https://github.com/desandro/imagesloaded)
 - [Easy Pie Chart](https://github.com/xizon/easy-pie-chart)
-- [Flaticon](http://www.flaticon.com)
+- [Flaticon icon font: Essential Set]("http://www.flaticon.com/packs/essential-set-2)
 
 
 

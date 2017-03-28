@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.4.2
+ * Version:     1.4.5
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -21,7 +21,7 @@ class UixShortcodes {
 	const PREFIX      = 'uix';
 	const CUSPAGE     = 'uix-shortcodes-custom-submenu-page';
 	const MAPAPI      = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
-	const DEMOFORM    = 0;
+	const DEMOFORM    = 0; //Show test form when this value is "1" (For developer)
 	
 	
 	/**
@@ -329,13 +329,19 @@ class UixShortcodes {
 				break;	
 			case 'contact-form':
 				$newname = 'uix_sc_contact_form';
-				break;							
+				break;
+			case 'timeline':
+				$newname = 'uix_sc_form_timeline';
+				break;	
+			case 'imageslider':
+				$newname = 'uix_sc_form_imageslider';
+				break;		
 			default:
 				$newname = $name;
 				break;
 		}
 		
-		$folder = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/panel/';
+		$folder = self::templates_panel_directory();
 		$file   = $folder.''.$newname.'.php';
 		
 		if ( file_exists( $file ) ) require_once $file;
@@ -345,6 +351,44 @@ class UixShortcodes {
 		
   
 	}
+	
+	/*
+	 * Returns current theme
+	 *
+	 *
+	 */
+	public static function theme() {
+		return get_option( 'uix_sc_opt_style', 'elegant' );	
+	}
+	
+	/*
+	 * Returns current shortcode templates panel directory.
+	 *
+	 *
+	 */
+	public static function templates_panel_directory( $front = false ) {
+	
+		//shortcodes themes
+		$shortcodes_style = self::theme();
+		
+		if ( !$front ) {
+			$default_dir      = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/default/panel/';
+			$cur_dir          = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/'.$shortcodes_style.'/panel/';
+		} else {
+			$default_dir      = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/default/';
+			$cur_dir          = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/'.$shortcodes_style.'/';	
+		}
+
+		
+
+		if( is_dir( UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/'.$shortcodes_style ) ) {
+		    return $cur_dir;
+		} else {
+			return $default_dir;
+		}
+	}
+	
+	
 
 	/*
 	 * Returns current plugin version.
@@ -431,7 +475,8 @@ class UixShortcodes {
 	 */
 	public static function do_my_shortcodes() {
 	
-		  require_once UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/frontpage-init.php';
+		$file = self::templates_panel_directory( true ) . 'frontpage-init.php';
+		if ( file_exists( $file ) ) require_once $file;
 	
 	}
 	
@@ -977,7 +1022,7 @@ class UixShortcodes {
 		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-shortcodes-custom.css';
 		
 		//shortcodes themes
-		$shortcodes_style = get_option( 'uix_sc_opt_style', 'elegant' );
+		$shortcodes_style = self::theme();
 		$filenames        = array();
 		$filepath         = UIX_SHORTCODES_PLUGIN_DIR. 'assets/css/';
 		
@@ -1136,7 +1181,181 @@ class UixShortcodes {
 		
 	}
 	
+	/*
+	 * Initialize sections template parameters
+	 *
+	 *
+	 */
+	public static function init_template_parameters( $id ) {
+
+		//Form ID
+		$form_id = $id;
+
+		//Sections template parameters
+		$sid     = ( isset( $_POST[ 'sectionID' ] ) ) ? $_POST[ 'sectionID' ] : -1;
+		$pid     = ( isset( $_POST[ 'postID' ] ) ) ? $_POST[ 'postID' ] : 0;
+		$cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content';
+
+		$vars = array(
+			'sid'        => $sid,
+			'pid'        => $pid,
+			'cid'      => $cid,
+			'form_id'    => $form_id
+		);
+		
+		return $vars;
+
+	}
+			
+	
+	
+	
+	
+	/*
+	 * Form javascripts output when in ajax or default state
+	 *
+	 *
+	 */
+	public static function form_scripts( $arr ) {
+		
+	
+		if ( is_array( $arr ) && sizeof( $arr ) >= 6 ) {
+		
+			//basic
+			$title            = $arr[ 'title' ];
+			$form_id          = $arr[ 'form_id' ];
+			$cid            = $arr[ 'content_id' ];
+			$sid              = $arr[ 'section_id' ];
+			$fields_args      = $arr[ 'fields' ];
+			$form_js_template = $arr[ 'js_template' ];
+			$multi_columns    = false;
+			$form_html        = '';
+			$form_js          = '';
+			$form_js_vars     = '';
+
+			if ( is_array( $fields_args ) ) {
+
+				foreach( $fields_args as $v ) :
+					if ( isset( $v[ 'title' ] ) && !empty( $v[ 'title' ] ) ) {
+						$multi_columns = true;
+						break;
+						
+					}
+				endforeach;
+				
+				if ( $multi_columns ) $form_html .= UixSCFormCore::form_before( $cid, $sid, $form_id );
+				
+				foreach( $fields_args as $v ) :
+					$column_title = '';
+					if ( isset( $v[ 'title' ] ) && !empty( $v[ 'title' ] ) ) {
+						$column_title  = $v[ 'title' ];
+					}
+					
+					$form_html    .= UixSCFormCore::add_form( $cid, $sid, $form_id, $v[ 'type' ], $v[ 'values' ], 'html', $column_title );
+					$form_js      .= UixSCFormCore::add_form( $cid, $sid, $form_id, $v[ 'type' ], $v[ 'values' ], 'js' );
+					$form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $v[ 'type' ], $v[ 'values' ], 'js_vars' );
+	
+				endforeach;
+				
+				if ( $multi_columns ) $form_html .= UixSCFormCore::form_after();
+				
+
+			}
+			
+			
+			
+			//clone
+			$clone                       = $arr[ 'clone' ];
+			$clone_enable                = false;
+			$clone_trigger_id            = '';
+			$clone_max                   = 1;
+			$clone_fields_group          = '';
+		
+
+			if ( is_array( $clone ) && sizeof( $clone ) >= 1 ) {
+				$clone_enable                = true;
+				$clone_fields_group          = $clone[ 'fields_group' ];
+
+				if ( isset( $clone[ 'max' ] ) ) {
+					$clone_max = $clone[ 'max' ];
+				}
+	
+			}
+
+
+
+			// ---------- Returns actions of javascript
+			if ( $sid == -1 && is_admin() ) {
+				$currentScreen = get_current_screen();
+				if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
+				
+						//List Item - Register clone vars ( step 1)
+						if ( $clone_enable && is_array( $clone_fields_group ) ) {
+						
+							foreach( $clone_fields_group as $v ) :
+								
+								$clone_fields        = $v[ 'fields' ];
+								$clone_trigger_id    = $v[ 'trigger_id' ];
+								$clone_fields_value  = '';
+								
+								
+								foreach( $clone_fields as $name ) :
+									
+									$toggle = '';
+									if( self::inc_str( $name, '_toggle' ) && !self::inc_str( $name, '_toggle_' ) ) {
+										$toggle = 'toggle';
+									}
+									if( self::inc_str( $name, '_toggle_' ) ) {
+										$toggle = 'toggle-row';
+									}								
+									
+									$clone_fields_value .= UixSCFormCore::dynamic_form_code( 'dynamic-row-'.$name.'', $form_html, $toggle );
+							
+								endforeach;
+
+								UixSCFormCore::reg_clone_vars( $clone_trigger_id, $clone_fields_value );
+								
+							endforeach;
+						
+						}
+
+
+						?>
+						<script type="text/javascript">
+						( function($) {
+						'use strict';
+							$( function() { 
+								<?php
+					             echo UixSCFormCore::uixscform_callback( $form_js, $form_id, $title );
+					             echo UixSCFormCore::send_before( $form_js_vars, $form_id );
+					             echo $form_js_template; //Custom shortcode
+					             echo UixSCFormCore::send_after( $form_id );
+					            ?>
+						} ) ( jQuery );
+						</script>
+						<?php
+
+				}
+
+			}
+
+
+			// ---------- Returns form with ajax
+			if ( $sid >= 0 && is_admin() ) {
+				echo $form_html;	
+			}
+			
+			
+		}
+	
+
+	}
+
+
+	
+	
 	
 }
 
 add_action( 'plugins_loaded', array( 'UixShortcodes', 'init' ) );
+

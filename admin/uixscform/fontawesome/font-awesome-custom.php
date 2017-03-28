@@ -83,7 +83,6 @@ $social_icons = array(
 '<span '.$gs.'><i class="fa fa-paypal"></i></span>',
 '<span '.$gs.'><i class="fa fa-pied-piper"></i></span>',
 '<span '.$gs.'><i class="fa fa-pied-piper-alt"></i></span>',
-'<span '.$gs.'><i class="fa fa-ra"></i></span>',
 '<span '.$gs.'><i class="fa fa-rebel"></i></span>',
 '<span '.$gs.'><i class="fa fa-sellsy"></i></span>',
 '<span '.$gs.'><i class="fa fa-share-alt"></i></span>',

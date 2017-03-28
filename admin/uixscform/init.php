@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 1.6
+ * @version		: 1.7
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,8 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '1.6';
-		const CUSTOMTEMP = 'shortcodes/panel/';
+		const VERSION    = '1.7';
 	
 		
 		/**
@@ -70,8 +69,8 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		public static function frontpage_scripts() {
 			
 			//Add Icons
-			wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.css', array(), '4.5.0', 'all');
-			wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.css', array(), '1.0', 'all');
+			wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.min.css', array(), '4.5.0', 'all');
+			wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.min.css', array(), '1.0', 'all');
 			
 	
 		}
@@ -116,8 +115,8 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 				    wp_enqueue_script( 'uixscform-functions' );
 
 					//Add Icons
-					wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.css', array(), '4.5.0', 'all' );
-					wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.css', array(), '1.0', 'all' );
+					wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.min.css', array(), '4.5.0', 'all' );
+					wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.min.css', array(), '1.0', 'all' );
 
 					//UixSCForm
 					wp_enqueue_style( 'uixscform', self::plug_directory() .'css/uixscform.min.css', false, self::VERSION, 'all' );
@@ -247,7 +246,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 */
 		public static function call_ajax_sections_tempfilepath( $name ) {
 			
-			include self::plug_filepath().self::CUSTOMTEMP."{$name}.php";
+			include UixShortcodes::templates_panel_directory() . "{$name}.php";
 		}
 		
 	
@@ -668,21 +667,35 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 */
 		public static function load_uixscform_ajax_shortcodepreview() {
 			
-			
+			$output       = '';
 			$previewcode  = isset( $_POST['previewcode'] ) ? $_POST[ 'previewcode' ] : '';
-			$previewcode  = str_replace( '\\\'', "'",
-							str_replace( '<br>', '',
+			$previewcode  = str_replace( '\\\'', "'", //step 2
+							str_replace( '<br>', '', //step 1
 							$previewcode 
 						   ));
 			
 			
+			
 			//Separately need loaded script files for live preview
-			if ( self::inc_str( $previewcode, '[uix_map' ) || self::inc_str( $previewcode, '[uix_code' ) || self::inc_str( $previewcode, '[uix_contact_form' ) ) {
+			if ( 
+				self::inc_str( $previewcode, '[uix_map' ) || 
+				self::inc_str( $previewcode, '[uix_code' ) || 
+				self::inc_str( $previewcode, '[uix_contact_form' ) 
+			) {
 				_e( '<div class="uixscform-form-container"><p class="info info-warning">This shortcode does not support live preview, please check out it directly on front end page.</p></div>', 'uix-shortcodes' );
 				die();
 			}
+
 			
-			echo do_shortcode( $previewcode );
+			$output = do_shortcode( $previewcode );
+			
+			
+			//Fix image path error for MCE editor
+			$output  = str_replace( '\\', '', $output );
+			
+			
+			echo $output;
+			
 			
 			die();
 		}

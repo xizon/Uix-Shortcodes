@@ -6,7 +6,6 @@
  */
 
 
-
 /**
  * To add buttons to the editor
  *
@@ -31,7 +30,7 @@ add_filter( "mce_external_plugins", "uix_sc_add_buttons" );
  */
 function uix_sc_form_output(){
 	if ( get_post_type() != 'uix_page_builder' ) {
-		foreach ( glob( dirname(__FILE__). "/panel/*.php") as $file ) {
+		foreach ( glob( UixShortcodes::templates_panel_directory() . "*.php") as $file ) {
 			
 			if ( UixShortcodes::DEMOFORM == 0 ) {
 				if ( !UixShortcodes::inc_str( $file, 'hello' ) ) {
