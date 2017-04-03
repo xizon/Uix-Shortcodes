@@ -261,9 +261,9 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 	  while ( have_posts() ) : the_post();
 	  
 		//featured image
-		$thumbnail_src  =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
+		$thumbnail_src       =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
 		$post_thumbnail_src  =  $thumbnail_src[0];  
-		$post_thumbnail = '<img class="uix-sc-recent-posts-thumbnail" src="'.esc_url( $post_thumbnail_src ).'" alt="'.esc_attr( get_the_title() ).'">';
+		$post_thumbnail      = '<img class="uix-sc-recent-posts-thumbnail" src="'.esc_url( $post_thumbnail_src ).'" alt="'.esc_attr( get_the_title() ).'">';
 		if ( empty( $post_thumbnail_src ) ) $post_thumbnail = '';
 	  
 	  
@@ -278,13 +278,15 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 				   UixShortcodes::decode( $content )
 				   ))))))))
 				   .PHP_EOL;
-	
-	
-		 
+
+
 	  endwhile;
 	endif;
 	
 	wp_reset_query();
+	
+
+	$return_string = str_replace( '[/p]', '', str_replace( '[p]', '', $return_string ) );
 	
 	return UixShortcodes::do_callback( $before.$return_string.$after );
 }

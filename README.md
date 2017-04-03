@@ -35,6 +35,14 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### = 1.4.6 =
+
+* Fixed bug of displaying recent posts in a horizontal row.
+* Optimized core javascripts structure of front-end. Easy to call from ajax.
+* Added a javascript function of front-end: $.uix_sc_init();
+
+
+
 ##### = 1.4.5 =
 
 * Upgraded core form API. ( For developers, custom modules are much simpler! )
