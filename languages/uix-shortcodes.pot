@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Wed Mar 29 2017 02:21:01 GMT+0800 (CST)\n"
+"POT-Revision-Date: Sat Apr 08 2017 14:07:07 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: ../uix-shortcodes.php:418 ../helper/settings.php:116
+#: ../uix-shortcodes.php:418 ../helper/settings.php:134
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-shortcodes.php:517 ../helper/settings.php:97
+#: ../uix-shortcodes.php:517 ../helper/settings.php:115
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
@@ -223,23 +223,23 @@ msgstr ""
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../helper/settings.php:111
+#: ../helper/settings.php:129
 msgid "About"
 msgstr ""
 
-#: ../helper/settings.php:121
+#: ../helper/settings.php:139
 msgid "Documentation"
 msgstr ""
 
-#: ../helper/settings.php:127
+#: ../helper/settings.php:145
 msgid "Credits"
 msgstr ""
 
-#: ../helper/settings.php:132
+#: ../helper/settings.php:150
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: ../helper/settings.php:137
+#: ../helper/settings.php:155
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
@@ -337,22 +337,21 @@ msgstr ""
 msgid "Settings saved."
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:47
-msgid ""
-"You can overview the original styles to overwrite it. It will be on creating "
-"new styles to your website, without modifying original <code>.css</code> "
-"files."
-msgstr ""
-
-#: ../helper/tabs/custom-css.php:52
+#: ../helper/tabs/custom-css.php:94
 msgid "Paste your CSS code"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:99 ../helper/tabs/custom-css.php:136
+#: ../helper/tabs/custom-css.php:96
+msgid ""
+"You could add new styles code to your website, without modifying original ."
+"css files."
+msgstr ""
+
+#: ../helper/tabs/custom-css.php:122 ../helper/tabs/custom-css.php:159
 msgid "CSS file root directory:"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:104
+#: ../helper/tabs/custom-css.php:127
 msgid "Close"
 msgstr ""
 
@@ -2684,19 +2683,19 @@ msgstr ""
 msgid "Container"
 msgstr ""
 
-#: ../shortcodes/templates/default/frontpage-init.php:823
+#: ../shortcodes/templates/default/frontpage-init.php:825
 msgid "All"
 msgstr ""
 
-#: ../shortcodes/templates/default/frontpage-init.php:1322
+#: ../shortcodes/templates/default/frontpage-init.php:1324
 msgid "+"
 msgstr ""
 
-#: ../shortcodes/templates/default/frontpage-init.php:1323
+#: ../shortcodes/templates/default/frontpage-init.php:1325
 msgid "-"
 msgstr ""
 
-#: ../shortcodes/templates/default/frontpage-init.php:1689
+#: ../shortcodes/templates/default/frontpage-init.php:1691
 msgid "Comments are closed."
 msgstr ""
 

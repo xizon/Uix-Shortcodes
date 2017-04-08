@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.4.6
+ * Version:     1.4.7
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1080,9 +1080,9 @@ class UixShortcodes {
 	 * Returns .js file name of custom shortcodes script 
 	 *
 	 */
-	public static function core_js_file() {
+	public static function core_js_file( $type = 'uri' ) {
 		
-		$validPath    = self::plug_directory() .'assets/js/shortcodes.js';
+		$validPath    = self::plug_directory() .'assets/js/uix-shortcodes.js';
 		$newFilePath  = get_stylesheet_directory() . '/uix-shortcodes-custom.js';
 		$newFilePath2 = get_stylesheet_directory() . '/assets/js/uix-shortcodes-custom.js';
 	
@@ -1094,6 +1094,15 @@ class UixShortcodes {
 		if ( file_exists( $newFilePath2 ) ) {
 			$validPath = get_template_directory_uri() . '/assets/js/uix-shortcodes-custom.js';
 		}
+		
+		if ( $type == 'name' ) {
+			if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
+				$validPath = 'uix-shortcodes-custom.js';
+			} else {
+				$validPath = 'uix-shortcodes.js';
+			}
+		}
+		
 		
 		return $validPath;
 		

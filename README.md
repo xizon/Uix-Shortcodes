@@ -35,6 +35,12 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### = 1.4.7 =
+
+* Optimized admin panel of Custom CSS.
+
+
+
 ##### = 1.4.6 =
 
 * Fixed bug of displaying recent posts in a horizontal row.
