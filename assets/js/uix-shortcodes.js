@@ -35,7 +35,7 @@ var uix_sc = (function ( $, window, document ) {
 	if( $.isFunction( $.fn.waitForImages ) ){
 		$( 'body' ).waitForImages( pageLoaded );
 	} else {
-		$( window ).load( pageLoaded );
+		$( window ).on( 'load', pageLoaded );
 	}
 
     $( document ).ready( documentReady );
