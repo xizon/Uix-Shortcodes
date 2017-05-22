@@ -21,6 +21,22 @@ $form_type = array(
     'list' => false
 );
 
+//Show All Categories as Links
+
+$categories = get_categories( array(
+    'orderby' => 'name',
+    'order'   => 'ASC'
+) );
+$categories_value = array( 'all' => esc_html__( '- All -', 'uix-shortcodes' ) );
+
+
+if ( ! empty( $categories ) ) {
+	foreach( $categories as $category ) {
+		UixShortcodes::array_push_associative( $categories_value, array( $category->term_id => esc_html( $category->cat_name ) ) );
+	}
+}
+//print_r($categories_value);
+									  
 $args = 
 	array(
 	
@@ -36,6 +52,34 @@ $args =
 				                )
 		
 		),
+		
+	    array(
+			'id'             => 'uix_sc_rposts_order',
+			'title'          => esc_html__( 'Order By', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'radio',
+			'default'        => array(
+									'DESC'  => 'desc',
+									'ASC'  => 'asc',
+		                            'rand'  => 'rand'
+				                )
+		
+		),
+	
+		array(
+			'id'             => 'uix_sc_rposts_cats',
+			'title'          => esc_html__( 'Select Category', 'uix-shortcodes' ),
+			'desc'           => esc_html__( 'Get all posts related to particular category name.', 'uix-shortcodes' ),
+			'value'          => '',
+			'placeholder'    => '',
+			'type'           => 'select',
+			'default'        => $categories_value
+
+		),
+		
+		
 		array(
 			'id'             => 'uix_sc_rposts_looptemp',
 			'title'          => esc_html__( 'Loop Template', 'uix-shortcodes' ),
@@ -105,11 +149,15 @@ UixShortcodes::form_scripts( array(
 		'title'                   => esc_html__( 'Recent Posts', 'uix-shortcodes' ),
 	    'js_template'             => '
 		
-			var before = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_before );
-			var after = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_after );
-			var temp = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_looptemp );
+			var before   = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_before ),
+				after    = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_after ),
+				temp     = uixscform_shortcodeUsableHtmlToAttr( uix_sc_rposts_looptemp ),
+				cat_slug = uixscform_strToSlug( uix_sc_rposts_cats );
 
-			code = "[uix_recent_posts show=\'"+uixscform_floatval( uix_sc_rposts_num )+"\' before=\'"+before+"\' after=\'"+after+"\']"+temp+"[/uix_recent_posts]";
+
+
+
+			code = "[uix_recent_posts order=\'"+uix_sc_rposts_order+"\' cat=\'"+cat_slug+"\' show=\'"+uixscform_floatval( uix_sc_rposts_num )+"\' before=\'"+before+"\' after=\'"+after+"\']"+temp+"[/uix_recent_posts]";
 		
 		
 		'

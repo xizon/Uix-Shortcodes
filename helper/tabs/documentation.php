@@ -368,7 +368,25 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                                 <td>5</td>
                                                 <td><?php _e( 'Set the number of posts to display per page there.', 'uix-shortcodes' ); ?></td>
                                             </tr>
+                                            
                                             <tr>
+                                                <td><?php _e( 'Order By', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Selector', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>desc</td>
+                                                <td><?php _e( 'Designates the ascending or descending order of the posts. The following values are allowed:', 'uix-shortcodes' ); ?><code>DESC</code>, <code>ASC</code>, <code>rand</code>. </td>
+                                            </tr> 
+                                            
+                                            
+                                            <tr>
+                                                <td><?php _e( 'Select Category', 'uix-shortcodes' ); ?></td>
+                                                <td><?php _e( 'Dropdown', 'uix-shortcodes' ); ?><br><em class="prop">(<?php _e( 'Returns a String', 'uix-shortcodes' ); ?>)</em></td>
+                                                <td>all</td>
+                                                <td><?php _e( 'Get all posts related to particular category name.', 'uix-shortcodes' ); ?></td>
+                                            </tr>           
+                                            
+                                            
+                                            <tr>
+                                               
                                                 <td><?php _e( 'Loop Template', 'uix-shortcodes' ); ?></td>
                                                 <td><?php _e( 'HTML|String', 'uix-shortcodes' ); ?></td>
                                                 <td>[p]&lt;li&gt;&lt;a href="[uix_recent_posts_link]"&gt;[uix_recent_posts_title]&lt;/a&gt;&lt;/li&gt;[/p]</td>
@@ -407,7 +425,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
                                 <div>
 <pre class="brush: css;">
 &nbsp;
-[uix_recent_posts show='5' before='&lt;ul&gt;' after='&lt;/ul&gt;'][p]&lt;li&gt;&lt;a href="[uix_recent_posts_link]"&gt;[uix_recent_posts_title]&lt;/a&gt;&lt;/li&gt;[/p][/uix_recent_posts]
+[uix_recent_posts order='DESC' cat='all' show='5' before='&lt;ul&gt;' after='&lt;/ul&gt;'][p]&lt;li&gt;&lt;a href="[uix_recent_posts_link]"&gt;[uix_recent_posts_title]&lt;/a&gt;&lt;/li&gt;[/p][/uix_recent_posts]
 &nbsp;
 </pre>
                                 </div>   

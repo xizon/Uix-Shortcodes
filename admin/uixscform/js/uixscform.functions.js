@@ -1477,3 +1477,21 @@ function uixscform_editorInit( id ){
 }
 
 
+
+/*! 
+ * ************************************
+ * Generate human-readable url slugs from any ordinary string.
+ *************************************
+ */	
+function uixscform_strToSlug( str ){
+	if ( typeof( str ) == 'string' && str.length > 0 ) {
+		var pattern = new RegExp("[`~!+%@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）&;|{}【】\"；：”“'。，、？]");
+		var rs = ""; 
+		for (var i = 0; i < str.length; i++) { 
+			rs = rs+str.substr( i, 1 ).replace( pattern, '' ); 
+		} 
+
+		rs = rs.replace(/ /g, '-').toLowerCase();
+		return rs;
+	}
+}

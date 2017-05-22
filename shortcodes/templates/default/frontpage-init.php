@@ -243,6 +243,8 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 		'show' => 5, 
 		'before' => '&lt;ul&gt;', 
 		'after' => '&lt;/ul&gt;', 
+		'cat' => 'all', 
+		'order' => 'desc', 
 		
 	 ), $atts ) );
 	 
@@ -250,15 +252,62 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 	 $before = wp_specialchars_decode( $before ).PHP_EOL;
 	 $after = wp_specialchars_decode( $after ).PHP_EOL;
 	 
-	 $return_string = '';
-	query_posts( array( 
-		'orderby' => 'date', 
-		'order' => 'DESC' , 
-		'showposts' => $show 
-	) );
+	if ( $cat != 'all' ) {
+		
+		if ( $order != 'rand' ) {
+			$wp_query = new WP_Query( array(
+							'post_type'       => 'post',
+							'orderby'         => 'title',
+							'order'           => $order,
+							'cat'             => $cat,
+							'posts_per_page'  => $show ,
+							'post_status'     => 'publish',
+						)
+			);	
+		} else {
+			$wp_query = new WP_Query( array(
+							'post_type'       => 'post',
+							'orderby'         => 'rand',
+							'cat'             => $cat,
+							'posts_per_page'  => $show ,
+							'post_status'     => 'publish',
+						)
+			);	
+		}
+		
+
 	
-	if ( have_posts() ) :
-	  while ( have_posts() ) : the_post();
+	} else {
+		
+		if ( $order != 'rand' ) {
+			$wp_query = new WP_Query( array(
+							'post_type'       => 'post',
+							'orderby'         => 'title',
+							'order'           => $order,
+							'posts_per_page'  => $show ,
+							'post_status'     => 'publish',
+						)
+			);	
+		} else {
+			$wp_query = new WP_Query( array(
+							'post_type'       => 'post',
+							'orderby'         => 'rand',
+							'posts_per_page'  => $show ,
+							'post_status'     => 'publish',
+						)
+			);	
+		}
+		
+
+	
+	}
+
+	
+	
+	 $return_string = '';
+
+	if ( $wp_query->have_posts() ) {
+	  while ( $wp_query->have_posts() ) : $wp_query->the_post();
 	  
 		//featured image
 		$thumbnail_src       =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
@@ -281,9 +330,10 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 
 
 	  endwhile;
-	endif;
+	}
 	
-	wp_reset_query();
+	// Reset post data to prevent conflicts with the main query 
+	wp_reset_postdata();
 	
 
 	$return_string = str_replace( '[/p]', '', str_replace( '[p]', '', $return_string ) );

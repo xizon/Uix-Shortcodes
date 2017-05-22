@@ -35,6 +35,14 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### = 1.4.8 =
+
+* Added function of display only a particular category for the Recent Posts shortcode.
+* Added support of order type for the Recent Posts shortcode.
+* Fixed some bugs for core form.
+
+
+
 ##### = 1.4.7 =
 
 * Optimized admin panel of Custom CSS.

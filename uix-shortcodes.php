@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.4.7
+ * Version:     1.4.8
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1215,9 +1215,27 @@ class UixShortcodes {
 		return $vars;
 
 	}
-			
-	
-	
+
+	/*
+	 * Append associative array elements
+	 *
+	 *
+	 */
+	public static function array_push_associative(&$arr) {
+	   $args = func_get_args();
+	   $ret  = null;
+	   foreach ($args as $arg) {
+		   if (is_array($arg)) {
+			   foreach ($arg as $key => $value) {
+				   $arr[$key] = $value;
+				   $ret++;
+			   }
+		   }else{
+			   $arr[$arg] = "";
+		   }
+	   }
+	   return $ret;
+	}	
 	
 	
 	/*

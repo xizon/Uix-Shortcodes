@@ -16,9 +16,8 @@ if( !isset( $_GET[ 'tab' ] ) || $_GET[ 'tab' ] == 'about' ) {
          <p>
            <?php _e( 'A variety of optional styles are available for Uix ShortCodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.', 'uix-shortcodes' ); ?>
         </p>  
-         <p>
-           <?php _e( '<strong>If you like this plug-in, you can check out my free and high-quality themes with Uix Shortcodes for you to download.</strong> <h4><a href="https://uiux.cc/" target="_blank">Click here to check out</a></h4>', 'uix-shortcodes' ); ?>
-        </p>      
+
+                   
 
           <p>
             <?php 
@@ -27,6 +26,21 @@ if( !isset( $_GET[ 'tab' ] ) || $_GET[ 'tab' ] == 'about' ) {
 			  ?>
         
         </p>   
+
+       
+        <hr>
+         <p>
+           <?php _e( '<strong>If you like this plugin, you could sponsor me. I can spend less time thinking about private monetization channels and instead work more on content that benefits the Uix Shortcodes, e.g. more functions, shortcode themes, videos and extensions! Thanks.</strong>', 'uix-shortcodes' ); ?>
+        </p>        
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="9RTA29RH9Q8YW">
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		</form>         
+                    
+
+
+
 
 
 <?php } ?>
