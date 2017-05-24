@@ -4,8 +4,6 @@ This is a WordPress Plugin. Uix Shortcodes brings an amazing set of beautiful an
 Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
 
 
-[Donate Me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYZLU7UZNQ6CE)
-
 [Plugin URI](https://uiux.cc/wp-plugins/uix-shortcodes/)
 
 [Plugin for Wordpress at WordPress.org Repository](https://wordpress.org/plugins/uix-shortcodes/)
@@ -322,3 +320,8 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
 > Note: Making a new javascrpt (.js) document which name to **uix-shortcodes-custom.js** to your templates directory (`/wp-content/themes/{your-theme}/` or `/wp-content/themes/{your-theme}/assets/js/`). Once you have created an existing JS file, Uix Shortcodes will use it as a default script to your WordPress Theme.
 
 
+
+### Donations
+Donations would be more than welcome :)
+
+[![Donate](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYZLU7UZNQ6CE)
