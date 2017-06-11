@@ -377,23 +377,25 @@ function uix_sc_fun_pricing_item( $atts, $content = null ){
 	 ), $atts ) );
 
 
-   $id = uniqid();
-   $col_last = ( $last == 1 ) ? 'uix-sc-col-last' : '';
-   $col_num = ( $col == 4 ) ? 'uix-sc-col-3' : 'uix-sc-col-4';
+   $id             = uniqid();
+   $col_last       = ( $last == 1 ) ? 'uix-sc-col-last' : '';
+   $col_num        = ( $col == 4 ) ? 'uix-sc-col-3' : 'uix-sc-col-4';
+   $price_num      = UixShortcodes::get_numerics( UixShortcodes::get_subtags( 'uix_pricing_item_price', $content ) );
+   $price_currency = UixShortcodes::get_unit_txt( UixShortcodes::get_subtags( 'uix_pricing_item_price', $content ) );
  
    $return_string = '
-   <div class="'.$col_num.' '.$col_last.' uix-sc-price-border-hover" data-tcolor="'.$imcolor.'" id="uix-sc-col-js-'.$id.'">
+   <div class="'.$col_num.' '.$col_last.' uix-sc-price-border-hover" data-bcolor="'.UixShortcodes::color_transform( $bcolor ).'" data-tcolor="'.$imcolor.'" id="uix-sc-col-js-'.$id.'">
        <div class="uix-sc-price-bg-hover uix-sc-price-init-height">
 	       <div class="uix-sc-price-border '.$class.'">
 				<div class="uix-sc-price-level">'.UixShortcodes::get_subtags( 'uix_pricing_item_level', $content ).'</div>
-				<div class="uix-sc-price-num" style="color:'.$imcolor.'">'.UixShortcodes::get_subtags( 'uix_pricing_item_price', $content ).' <span class="uix-sc-price-period">'.$period.'</span></div>
+				<div class="uix-sc-price-num" style="color:'.$imcolor.'"><span class="uix-sc-price-currency">'.$price_currency.'</span><span class="uix-sc-price-num-text">'.$price_num.'</span><span class="uix-sc-price-period">'.$period.'</span></div>
 				
 				<div class="uix-sc-price-excerpt">
 					'.UixShortcodes::get_subtags( 'uix_pricing_item_desc', $content ).'
 				</div>
 				<a href="'.$url.'" target="'.$target.'" class="uix-sc-btn uix-sc-btn-'.$bcolor.'">'.UixShortcodes::get_subtags( 'uix_pricing_item_button', $content ).'</a>
 				
-				<hr>
+				<div class="uix-sc-price-hr"></div>
 				<div class="uix-sc-price-detail">
 					'.UixShortcodes::get_subtags( 'uix_pricing_item_detail', $content ).'
 				</div>
@@ -1789,7 +1791,7 @@ function uix_sc_fun_authorcard( $atts, $content = null ) {
 
 
    $return_string = '
-   <div class="uix-sc-authorcard-wrapper">
+   <div class="uix-sc-authorcard-wrapper" data-primary-color="'.$primarycolor.'">
 		<div class="uix-authorcard" style="border-top-color: '.$primarycolor.';">
 			<div class="uix-authorcard-top">
 				<div class="uix-authorcard-text">

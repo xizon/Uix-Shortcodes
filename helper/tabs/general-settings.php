@@ -100,6 +100,16 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
                         
                     </label>
                     
+                     <label>
+                        <input name="uix_sc_opt_style" type="radio" value="rich" class="tog" <?php echo ( get_option( 'uix_sc_opt_style' ) == 'rich' ) ? 'checked' : ''; ?> />
+                        <span class="sp-con">
+                            <img src="<?php echo UixShortcodes::plug_directory(); ?>assets/images/themes/rich.png" alt="">
+                            <span class="title"><?php _e( 'Rich', 'uix-shortcodes' ); ?></span>
+                        </span>
+                        
+                    </label>        
+                    
+                    
             </td>         
             
           </tr>

@@ -25,6 +25,8 @@ Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve 
 
 The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
 
+The Uix Shortcodes consists of several core features that are key to support multi-style switch. According to current progress, some styles can be summarized as follows: **Elegant (default), Slant, Rich.**
+
 A variety of optional styles are available for Uix ShortCodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.
 
 
@@ -33,21 +35,28 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
-##### = 1.4.8 =
+
+##### = 1.4.9 (June 11, 2017) =
+
+* Added a new style "Rich" for shortcodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.
+* Optimized front-end styles.
+* Added color conversion function color_transform().
+
+
+##### = 1.4.8  (May 23, 2017) =
 
 * Added function of display only a particular category for the Recent Posts shortcode.
 * Added support of order type for the Recent Posts shortcode.
 * Fixed some bugs for core form.
 
 
-
-##### = 1.4.7 =
+##### = 1.4.7 (April 8, 2017) =
 
 * Optimized admin panel of Custom CSS.
 
 
 
-##### = 1.4.6 =
+##### = 1.4.6 (April 3, 2017) =
 
 * Fixed bug of displaying recent posts in a horizontal row.
 * Optimized core javascripts structure of front-end. Easy to call from ajax.
@@ -55,7 +64,7 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 
 
-##### = 1.4.5 =
+##### = 1.4.5  (April 1, 2017) =
 
 * Upgraded core form API. ( For developers, custom modules are much simpler! )
 * Optimized core custom functions.
@@ -69,19 +78,18 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 * W3C markup validation.
 
 
-
-##### = 1.4.2 =
+##### = 1.4.2  (March 21, 2017) =
 
 * Compatible with low version PHP (5.3+)
 * Fixed some minor errors in the low version of PHP.
 
 
-#### = 1.4.1 =
+##### = 1.4.1 (March 5, 2017) =
 
 * Resolved compatibility errors that may occur with the editor.
 
 
-#### = 1.4.0 =
+##### = 1.4.0 (February 1, 2017) =
 
 * Added editor form field type.
 * Added "Image Slider" shortcode (new).
@@ -90,14 +98,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 * Change the default container boxed width to compatible with bootstrap 3.x. (You can customize core CSS and locate to `.uix-sc-container`.)
 
 
-#### = 1.3.6 =
+##### = 1.3.6 (January 16, 2017) =
 
 * Optimized the live preview for the admin panel.
 * Optimized the front-end shortcode.
 
 
-
-#### = 1.3.5 (2016 final version)=
+##### = 1.3.5 (January 2, 2017) ( Final Version, 2016 ) =
 
 * Optimized form selectors.
 * Supported Uix Shortcodes for the theme customizer screen.
@@ -105,25 +112,25 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 * Fixed some minor bugs for version 1.3.0.
 
 
-#### = 1.3.1=
+##### = 1.3.1 (December 25, 2016) =
 
 * Optimized the pop-up window experience.
 * Optimized the shortcodes-slant.css.
 
 
-#### = 1.3.0=
+##### = 1.3.0 (December 12, 2016) =
 
 * Added the live preview shortcode.
 * Optimized shortcodes core script for front-end and admin panel.
 
 
-#### = 1.2.6=
+##### = 1.2.6 (December 8, 2016) =
 
 * Fixed some minor bugs for version 1.2.5.
 * Optimized the container shortcode.
 
 
-#### = 1.2.5=
+##### = 1.2.5 (December 2, 2016)=
 
 * Optimized core stylesheets for front-end.
 * Optimized form for admin panel.
@@ -137,7 +144,7 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 * Supports custom Uix Shortcodes core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
 
-#### = 1.2.0=
+##### = 1.2.0 (November 12, 2016) =
 
 * Optimized shortcodes script for front-end.
 * Fixed a minor error in prograss bar.
@@ -145,25 +152,25 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 * Removed some unnecessary attributes for shortcode.
 
 
-#### = 1.1.8=
+##### = 1.1.8 (November 2, 2016) =
 
 * Optimized switcher from back-end.
 * WordPress 4.7 compatible.
 
 
-#### = 1.1.7=
+##### = 1.1.7 (August 23, 2016) =
 
 * Fixed some bugs.
 
 
 
-#### = 1.1.6=
+##### = 1.1.6 (July 12, 2016) =
 
 * Fix some bugs of custom CSS admin panel.
 * Older version themes are functionally compatible.
 * Fixed some bugs.
 
-#### = 1.1.5=
+##### = 1.1.5 (June 2, 2016)  =
 
 * Used ajax form & improved the running speed greatly.
 * Optimized back-end structure.
@@ -174,16 +181,16 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 * Fixed some bugs.
 
 
-#### = 1.1.2=
+##### = 1.1.2 (June 1, 2016)  =
 
 * Fixed some bugs.
 
-#### = 1.1.1=
+##### = 1.1.1 (April 22, 2016)  =
 
 * Optimized the selector of buttons.
 * Enhanced editor and forms compatibility.
 
-#### = 1.1.0=
+##### = 1.1.0 (April 4, 2016) =
 
 * Optimized for tablet display.
 * Improved event binding from the plugin main JavaScript file.
@@ -193,35 +200,36 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 
 
-#### = 1.0.5=
+##### = 1.0.5 (March 25, 2016) =
 
 * Multi-style support. Go to "Uix ShortCodes -> Settings -> General Settings", you can choose the shortcodes style you want.
 * Core CSS optimization.
 * Optimized shortcodes script.
 
 
-#### = 1.0.4=
+##### = 1.0.4 (March 3, 2016) =
 
 * Added "Author Card" shortcode.
 * Core CSS optimization.
 
-#### = 1.0.3=
+##### = 1.0.3 (February 25, 2016) =
 
 * Fix custom CSS function in the WordPress administration screens.
 
-#### = 1.0.2=
+##### = 1.0.2 (February 22, 2016) =
 
 * Fix parse error for tinyColorPicker sometimes.
 * Other optimizations.
 
-#### = 1.0.1=
+##### = 1.0.1 (January 15, 2016) =
 
 * Optimized HTML format of textarea
 
 
-#### = 1.0.0=
+##### = 1.0.0 (December 22, 2015) =
 
 * First release.
+
 
 
 ### Tested under
@@ -235,7 +243,9 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 - WP 4.5.2
 - WP 4.5.3
 - WP 4.6.*
-- WP 4.7
+- WP 4.7.*
+- WP 4.8
+
 
 ###Screenshot
 

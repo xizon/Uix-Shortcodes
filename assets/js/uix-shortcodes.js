@@ -8,23 +8,24 @@
 	TABLE OF CONTENTS
 	---------------------------
 
-
-	1. Accordion & Tabs
-	2. Progress Bar
-	3. Pricing
-    4. Parallax
-    5. Testimonials
-	6. prettyPhoto
-	7. Filterable
-	8. Buttons
-	9. Image Slider
-	10. Apply the original scripts
+    1. Through the Pricing Styling Parameters to determine the style
+	2. Accordion & Tabs
+	3. Progress Bar
+	4. Pricing
+    5. Parallax
+    6. Testimonials
+	7. prettyPhoto
+	8. Filterable
+	9. Buttons
+	10. Image Slider
+	11. Apply the original scripts
 
 
 ************************************* */
 
 
 var templateUrl  = wp_theme_root_path.templateUrl;
+var styleName    = 'elegant';
 
 var uix_sc = (function ( $, window, document ) {
     'use strict';
@@ -76,10 +77,44 @@ var uix_sc = (function ( $, window, document ) {
 }( jQuery, window, document ) );
 
 
+/*!
+ *************************************
+ * 1. Through the Pricing Styling Parameters to determine the style
+ *************************************
+ */
+uix_sc = ( function ( uix_sc, $, window, document ) {
+    'use strict';
+
+
+    var documentReady = function( $ ) {
+
+		var curStyle  = $( '#uix-shortcodes-css' ).attr( 'href' );
+		
+		if( typeof curStyle != typeof undefined ) {
+			
+			if ( curStyle.indexOf( 'shortcodes.css' ) >= 0 ) styleName = 'elegant';
+			if ( curStyle.indexOf( 'shortcodes-slant.css' ) >= 0 ) styleName = 'slant';
+			if ( curStyle.indexOf( 'shortcodes-rich.css' ) >= 0 ) styleName = 'rich';
+		
+		}
+
+
+	};
+
+
+    uix_sc.stylesname = {
+        documentReady : documentReady
+    };
+
+    uix_sc.components.documentReady.push( documentReady );
+    return uix_sc;
+
+}( uix_sc, jQuery, window, document ) );
+
 
 /*!
  *************************************
- * 1. Accordion & Tabs
+ * 2. Accordion & Tabs
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -239,7 +274,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 2. Progress Bar
+ * 3. Progress Bar
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -418,7 +453,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 3. Pricing
+ * 4. Pricing
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -427,8 +462,10 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
     var documentReady = function( $ ) {
 
+		
 		//Initialize the height
 		$( '.uix-sc-price' ).each( function(){
+			
 
 				//returns new id
 				var $this            = $( this ),
@@ -455,15 +492,30 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 				if ( priceBGH_Max > 0 ) {
 					if ( $( document.body ).width() > 768 ){
-
+						
+					    // Initialize the height of all columns
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', priceBGH_Max + 'px' );
-						if ( $initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).length > 0 ) {
-							var ty = Math.abs(parseInt($initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css('transform').split(',')[5]));
-							if ( !isNaN(ty) ) {
-								$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).css( 'height', priceBGH_Max + ty*2 + 'px' );
+						
+						// Actived columns
+						$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).each( function() {
+							
+							if ( styleName == 'elegant' || styleName == 'slant' ) {
+								var ty = Math.abs( parseInt( $( this ).css('transform').split(',')[5]));
+								if ( !isNaN(ty) ) {
+									$( this ).css( 'height', priceBGH_Max + ty*2 + 'px' );
+								}
+							}
+							
+							if ( styleName == 'rich' ) {
+								var textColor = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'tcolor' ),
+									btnColor  = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'bcolor' );
+								
+								$( this ).css( 'background-color', btnColor );
 							}
 
-						}
+						});	
+						
+					
 
 
 					} else {
@@ -480,16 +532,17 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 			var $this        = $( this ),
 				hw           = 6,
-				defaultColor = $this.find( '.uix-sc-price-border' ).css( 'border-color' );
+				defaultColor = $this.find( '.uix-sc-price-border' ).css( 'border-color' ),
+				textColor    = $this.data( 'tcolor' ),
+				btnColor     = $this.data( 'bcolor' );
 
-			if ( $this.css( 'top' ) != '0px' ) {
-
+			if ( styleName == 'elegant' ) {
 				$this.hover(function() {
 					$(this).find( '.uix-sc-price-border' ).css({
-						"border-color": $this.data( 'tcolor' ),
-						"-webkit-box-shadow": "inset 0 0px 0px "+hw+"px " + $this.data( 'tcolor' ),
-						"-moz-box-shadow": "inset 0 0px 0px "+hw+"px " + $this.data( 'tcolor' ),
-						"box-shadow": "inset 0 0px 0px "+hw+"px " + $this.data( 'tcolor' )
+						"border-color": textColor,
+						"-webkit-box-shadow": "inset 0 0px 0px "+hw+"px " + textColor,
+						"-moz-box-shadow": "inset 0 0px 0px "+hw+"px " + textColor,
+						"box-shadow": "inset 0 0px 0px "+hw+"px " + textColor
 					});
 				},function() {
 					$(this).find( '.uix-sc-price-border' ).css({
@@ -499,12 +552,11 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 						"box-shadow": "none"
 					});
 				});
-
 			}
 
+		});	
 
-		});
-
+	
 
 	};
 
@@ -522,7 +574,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 4. Parallax
+ * 5. Parallax
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -561,7 +613,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 5. Testimonials
+ * 6. Testimonials
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -602,7 +654,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 6. prettyPhoto
+ * 7. prettyPhoto
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -635,7 +687,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 7. Filterable
+ * 8. Filterable
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -707,7 +759,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 8. Buttons
+ * 9. Buttons
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -760,7 +812,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*!
  *************************************
- * 9. Image Slider
+ * 10. Image Slider
  *************************************
  */
 uix_sc = ( function ( uix_sc, $, window, document ) {
@@ -825,7 +877,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 /*! 
  * ************************************
- * 10. Apply the original scripts
+ * 11. Apply the original scripts
  * 
  * Usage: if ( $.isFunction( $.uix_sc_init ) ) { $.uix_sc_init(); }
  *
@@ -853,9 +905,6 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 	});
 	
 } ) ( jQuery );
-
-
-
 
 
 

@@ -6,7 +6,10 @@
 	 Author URI: https://uiux.cc
 	 License: GPLv2 or later
 	
-	
+	Theme: Elegant (default)
+	---------------------------
+
+
 	TABLE OF CONTENTS
 	---------------------------
 	
@@ -1188,11 +1191,12 @@ img.uix-sc-img,
 		list-style: disc;
 	}
 	
-	
-	.uix-sc-price-black hr{
-		border-color: rgba(0,0,0,.2);
+
+	.uix-sc-price .uix-sc-price-hr {
+		margin: 1.625em 0;
+		border-top: 1px solid rgba(0,0,0,.05);
 	}
-	
+
 	.uix-sc-price-border{
 		padding-top: 1em;
 		border: 1px solid #090909;
@@ -1205,7 +1209,7 @@ img.uix-sc-img,
 	}
 	
 	.uix-sc-price-border,
-	.uix-sc-price-border hr{
+	.uix-sc-price-border .uix-sc-price-hr {
 		-moz-transition: .2s ease-in-out; 
 		-o-transition: .2s ease-in-out; 
 		-webkit-transition: .2s ease-in-out;  
@@ -1229,9 +1233,18 @@ img.uix-sc-img,
 		line-height: 1;
 		padding: .3em 0;
 	}
+
+	.uix-sc-price-currency {
+
+	}
+
+	.uix-sc-price-num-text {
+		
+	}
 	
 	.uix-sc-price-period{
 		font-size: 14px;
+		padding-left: .2em;
 	}
 	
 	

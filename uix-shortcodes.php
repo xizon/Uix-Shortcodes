@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.4.8
+ * Version:     1.4.9
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1153,6 +1153,145 @@ class UixShortcodes {
 		 }
 	
 	}
+	
+	/*
+	 * Get numbers from string
+	 *
+	 *
+	 */
+	public static function get_numerics( $str ) {
+	
+		if ( $str ) {
+			if ( preg_match_all( '/\d+(\.\d+)?/', $str, $matches ) ) {
+				return $matches[0][0];
+			} else {
+				return 0;
+			}	
+		} else {
+			return 0;
+		}
+
+	}
+	
+	/*
+	 * Get text of unit from string
+	 *
+	 *
+	 */
+	public static function get_unit_txt( $str ) {
+		return str_replace( self::get_numerics( $str ), '', $str );
+	}
+	
+	
+	/*
+	 * Get text of unit from string
+	 *
+	 *
+	 */
+	public static function color_transform( $str ) {
+		
+		if( self::inc_str( $str, '#' ) ) { 
+			switch( $str ) {
+				case '#a2bf2f':
+					return 'green';
+
+				  break;
+				case '#d59a3e':
+					return 'yellow';
+
+				  break;
+
+				case '#DD514C':
+					return 'red';	 
+				  break;
+
+				case '#FA9ADF':
+					return 'pink';	
+
+				  break;
+
+				case '#4BB1CF':
+					return 'blue'; 
+				  break;
+
+				case '#0E90D2':
+					return 'darkblue'; 
+				  break;	  
+
+
+				case '#5F9EA0':
+					return 'cadetblue';
+				  break;
+
+				case '#473f3f':
+					return 'black';
+				  break;
+
+
+				case '#bebebe':
+					return 'gray';
+				  break;       
+
+
+				default:
+					return 'green';
+
+			}
+	
+		} else {
+			switch( $str ) {
+				case 'green':
+					return '#a2bf2f';
+
+				  break;
+				case 'yellow':
+					return '#d59a3e';
+
+				  break;
+
+				case 'red':
+					return '#DD514C';	 
+				  break;
+
+				case 'pink':
+					return '#FA9ADF';	
+
+				  break;
+
+				case 'blue':
+					return '#4BB1CF'; 
+				  break;
+
+				case 'darkblue':
+					return '#0E90D2'; 
+				  break;	  
+
+
+				case 'cadetblue':
+					return '#5F9EA0';
+				  break;
+
+				case 'black':
+					return '#473f3f';
+				  break;
+
+
+				case 'gray':
+					return '#bebebe';
+				  break;       
+
+
+				default:
+					return '#a2bf2f';
+
+			}
+
+		}
+		
+
+	}
+	
+	
 	
 	/*
 	 * Returns correctly icon class name of frond-end output
