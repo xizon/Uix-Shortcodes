@@ -97,10 +97,10 @@ $map_marker    = isset( $_GET[ 'marker' ] ) && !empty( $_GET[ 'marker' ] ) ? $_G
 					var latitude = <?php echo $map_latitude;?>,
 						longitude = <?php echo $map_longitude;?>,
 						map_zoom = <?php echo $map_zoom;?>;
-
-
+						
+						
 						<?php if ( $map_height == '100%' ) { ?>
-						$( '#google-container-<?php echo $id; ?>' ).css( 'height', $( document.body ).height() + 'px' );
+						$( '#google-container-<?php echo $id; ?>' ).css( 'height', $( window ).height() + 'px' );
 						<?php } ?>
 
 

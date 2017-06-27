@@ -938,16 +938,28 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 		$( '.uix-sc-map-preview-container' ).each( function( index )  {
 
-			var $frame = $( this );
+			var $frame    = $( this ),
+				fullclass = $frame.parent( 'div' ).attr( 'class' ),
+			    curheight = $frame.data( 'height' );
 
 			$frame.prev( '.uix-sc-map-preview-tmpl' ).load( uixScRootUrl + 'admin/preview/map.html', function( response, status, xhr ) {
 
 				response = response.replace(/\<script([^>]+)\>/g, '' ).replace(/\<\/script\>/g, '' );
 
+				//If it is full screen map
+				if( typeof fullclass != typeof undefined ) {
+					if ( fullclass.indexOf( 'full' ) > 0 ) {
+						
+						$frame.css( 'height', $( window ).height() + 'px' );
+						curheight = '100%';
+					} 		
+				}
+
+				
 				$frame.UixSCTmpl( response, {
 					pluginPath : uixScRootUrl,
 					width      : $frame.data( 'width' ),
-					height     : $frame.data( 'height' ),
+					height     : curheight,
 					style      : $frame.data( 'style' ),
 					latitude   : $frame.data( 'latitude' ),
 					longitude  : $frame.data( 'longitude' ),
