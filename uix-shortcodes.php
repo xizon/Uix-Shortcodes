@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.4.9
+ * Version:     1.5.0
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -20,7 +20,6 @@ class UixShortcodes {
 
 	const PREFIX      = 'uix';
 	const CUSPAGE     = 'uix-shortcodes-custom-submenu-page';
-	const MAPAPI      = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	const DEMOFORM    = 0; //Show test form when this value is "1" (For developer)
 	
 	
@@ -128,8 +127,9 @@ class UixShortcodes {
 		// Main stylesheets and scripts to Front-End
 		wp_register_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver(), true );
 		wp_localize_script( self::PREFIX . '-shortcodes',  'wp_theme_root_path', array( 
-			'templateUrl' => get_stylesheet_directory_uri()
-		 ) );		
+			'templateUrl'   => get_stylesheet_directory_uri(),
+			'uixScRootUrl'  => self::plug_directory()
+		 ) );
 		
 		// Admin panel stylesheets
 		wp_register_style( self::PREFIX . '-shortcodes-admin', self::plug_directory() .'shortcodes/editor/style.css', false, self::ver(), 'all' );
@@ -524,6 +524,14 @@ class UixShortcodes {
 			
 		);
 	
+		add_submenu_page(
+			self::CUSPAGE,
+			__( 'How to use?', 'uix-shortcodes' ),
+			__( 'How to use?', 'uix-shortcodes' ),
+			'manage_options',
+			'admin.php?page='.self::CUSPAGE.'&tab=usage'
+		);	  
+		 
         //Add sub links
 		add_submenu_page(
 			self::CUSPAGE,

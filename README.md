@@ -35,6 +35,11 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### = 1.5.0 (June 27, 2017) =
+
+* Optimize the embedding method of Google Maps.
+* Fix the display of posts that do not match the error.  ( For blog module )
+
 
 ##### = 1.4.9 (June 11, 2017) =
 

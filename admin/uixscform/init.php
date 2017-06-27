@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 1.8
+ * @version		: 1.9  (June 27, 2017)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,8 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '1.8';
+		const VERSION    = '1.9';
+		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		
 		/**
@@ -678,7 +679,6 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			
 			//Separately need loaded script files for live preview
 			if ( 
-				self::inc_str( $previewcode, '[uix_map' ) || 
 				self::inc_str( $previewcode, '[uix_code' ) || 
 				self::inc_str( $previewcode, '[uix_contact_form' ) 
 			) {

@@ -141,10 +141,13 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 						
 						var dialog_uix_shortcodes = $( "#uix-shortcodes-view-css-container, .uix-shortcodes-dialog-mask" );  
 						
-						$( "#uix_shortcodes_view_css" ).click( function() {
+						
+						$( "#uix_shortcodes_view_css" ).on( "click", function( e ) {
+						    e.preventDefault();
 							dialog_uix_shortcodes.show();
 						});
-						$( "#uix_shortcodes_close_css" ).click( function() {
+						$( "#uix_shortcodes_close_css" ).on( "click", function( e ) {
+						    e.preventDefault();
 							dialog_uix_shortcodes.hide();
 						});
 					

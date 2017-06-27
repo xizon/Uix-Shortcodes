@@ -29,11 +29,11 @@
 	14. Testimonials Carousel 
 	15. Media
 	16. Progress Bar
-	17. Google Map     
+	17. Timeline    
 	18. Author Card  
 	19. Buttons
     20. Image Slider 
-    21. Timeline
+
 
 
 */
@@ -2258,49 +2258,88 @@ img.uix-sc-img,
 		
 
 /* ====================================================== 
-   17. Google Map                 
-/* ====================================================== */	
-.uix-sc-map-output .full-map  {
-	height: 100vh !important;
-}
-.google-map-zoom-in, 
-.google-map-zoom-out {
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-    margin-left: 10px;
-    background-repeat: no-repeat;
-    -webkit-background-size: 32px 64px;
-    -moz-background-size: 32px 64px;
-    background-size: 32px 64px;
-    opacity: .7;
-    z-index: 3;
-    font-size: 30px;
-    color: #fff;
+   17. Timeline               
+/* ====================================================== */
+.uix-sc-container-fullwidth .uix-sc-timeline {
+	padding: 2em;
 }
 
-.no-touch .google-map-zoom-in:hover, 
-.no-touch .google-map-zoom-out:hover {
-    opacity: 1;
+.uix-sc-timeline {
+	text-align: center;	
 }
 
-.google-map-zoom-in:hover, 
-.google-map-zoom-out:hover {
-    opacity: 1;
-}
+	.uix-sc-timeline .uix-sc-timestamp {
+		margin-bottom: 20px;
+		padding: 0px 40px;
+		align-items: center;
+		font-weight: 100;
+	}
 
-@media only screen and (min-width: 768px) {
-    .google-map-zoom-in, 
-	.google-map-zoom-out {
-        margin-left: 50px;
-    }
-}
+	.uix-sc-timeline > div {
+		float: left;	
+	}
 
-.google-map-zoom-in {
-    margin-top: 50px;
-    margin-bottom: 1px;
-}	  
-		  
+
+	.uix-sc-timeline .uix-sc-timeline-status {
+		padding: 0 30px;
+		border-top: 2px solid #D6DCE0;
+		position: relative;
+	}
+
+	.uix-sc-timeline .uix-sc-timeline-date {
+		font-size: 12px;
+		
+	}
+
+
+		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-title {
+			font-weight: 600;
+			padding: 1.2em 0;
+			display: block;
+			margin-top: .2em;
+			font-size: 14px;
+		}
+
+		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+			content: "";
+			width: 25px;
+			height: 25px;
+			background-color: white;
+			-webkit-border-radius: 25px; 
+			-moz-border-radius: 25px; 
+			border-radius: 25px;
+			border: 1px solid #ddd;
+			position: absolute;
+			top: -15px;
+			left: 42%;
+		}
+
+		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status {
+			border-top: 2px solid #A2BF2F;
+		}
+
+		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+			background-color: #A2BF2F;
+			border: none;
+		}
+
+		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status .uix-sc-timeline-status-title {
+			color: #A2BF2F;
+		}
+
+@media (max-width: 768px) {
+
+	.uix-sc-timeline > div {
+		float: none;
+
+	}
+	
+		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+			left: 48%;
+		}
+	
+}
+  
 		  
 /* ====================================================== 
    18. Author Card        
@@ -2623,88 +2662,5 @@ img.uix-sc-img,
 		 
 
 
-
-/* ====================================================== 
-   21. Timeline               
-/* ====================================================== */
-.uix-sc-container-fullwidth .uix-sc-timeline {
-	padding: 2em;
-}
-
-.uix-sc-timeline {
-	text-align: center;	
-}
-
-	.uix-sc-timeline .uix-sc-timestamp {
-		margin-bottom: 20px;
-		padding: 0px 40px;
-		align-items: center;
-		font-weight: 100;
-	}
-
-	.uix-sc-timeline > div {
-		float: left;	
-	}
-
-
-	.uix-sc-timeline .uix-sc-timeline-status {
-		padding: 0 30px;
-		border-top: 2px solid #D6DCE0;
-		position: relative;
-	}
-
-	.uix-sc-timeline .uix-sc-timeline-date {
-		font-size: 12px;
-		
-	}
-
-
-		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-title {
-			font-weight: 600;
-			padding: 1.2em 0;
-			display: block;
-			margin-top: .2em;
-			font-size: 14px;
-		}
-
-		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
-			content: "";
-			width: 25px;
-			height: 25px;
-			background-color: white;
-			-webkit-border-radius: 25px; 
-			-moz-border-radius: 25px; 
-			border-radius: 25px;
-			border: 1px solid #ddd;
-			position: absolute;
-			top: -15px;
-			left: 42%;
-		}
-
-		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status {
-			border-top: 2px solid #A2BF2F;
-		}
-
-		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status .uix-sc-timeline-status-dot {
-			background-color: #A2BF2F;
-			border: none;
-		}
-
-		.uix-sc-timeline > div.uix-sc-timeline-complete .uix-sc-timeline-status .uix-sc-timeline-status-title {
-			color: #A2BF2F;
-		}
-
-@media (max-width: 768px) {
-
-	.uix-sc-timeline > div {
-		float: none;
-
-	}
-	
-		.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
-			left: 48%;
-		}
-	
-}
 
 

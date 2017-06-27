@@ -18,13 +18,16 @@
 	8. Filterable
 	9. Buttons
 	10. Image Slider
-	11. Apply the original scripts
+	11. Initialize the map container
+	12. Apply the original scripts
+	
 
 
 ************************************* */
 
 
 var templateUrl  = wp_theme_root_path.templateUrl;
+var uixScRootUrl = wp_theme_root_path.uixScRootUrl;
 var styleName    = 'elegant';
 
 var uix_sc = (function ( $, window, document ) {
@@ -75,6 +78,54 @@ var uix_sc = (function ( $, window, document ) {
 
     return uix_sc;
 }( jQuery, window, document ) );
+
+
+
+(function($){
+  var cache = {};
+
+  $.UixSCTmpl = function UixSCTmpl(str, data){
+	  
+
+  // Figure out if we're getting a template, or if we need to
+  // load the template - and be sure to cache the result.
+   // The HTML code "<div data-tmpl="0"></div>" is order to fixed "Maximum call stack size exceeded"
+  var fn = !/\W/.test(str) ?
+      cache[str] = cache[str] ||
+      UixSCTmpl( ( document.getElementById( str ) === null ? '<div data-tmpl="0"></div>' + str : document.getElementById(str).innerHTML ) ) :
+
+      // Generate a reusable function that will serve as a template
+      // generator (and which will be cached).
+      new Function("obj",
+        "var p=[],print=function(){p.push.apply(p,arguments);};" +
+
+        // Introduce the data as local variables using with(){}
+        "with(obj){p.push('" +
+
+        // Convert the template into pure JavaScript
+        str
+          .replace(/[\r\t\n]/g, " ")
+          .split("<%").join("\t")
+          .replace(/((^|%>)[^\t]*)'/g, "$1\r")
+          .replace(/\t=(.*?)%>/g, "',$1,'")
+          .split("\t").join("');")
+          .split("%>").join("p.push('")
+          .split("\r").join("\\'")
+      + "');}return p.join('');");
+
+    // Provide some basic currying to the user
+    return data ? fn( data ) : fn;
+  };
+
+  $.fn.UixSCTmpl = function(str, data){
+    return this.each(function(){
+
+		var curData = $.UixSCTmpl( str, data );
+        $( this ).html( curData );
+		
+    });
+  };
+})(jQuery);	
 
 
 /*!
@@ -874,10 +925,58 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 }( uix_sc, jQuery, window, document ) );
 
 
+/*!
+ *************************************
+ * 11. Initialize the map container
+ *************************************
+ */
+uix_sc = ( function ( uix_sc, $, window, document ) {
+    'use strict';
+
+
+    var documentReady = function( $ ) {
+
+		$( '.uix-sc-map-preview-container' ).each( function( index )  {
+
+			var $frame = $( this );
+
+			$frame.prev( '.uix-sc-map-preview-tmpl' ).load( uixScRootUrl + 'admin/preview/map.html', function( response, status, xhr ) {
+
+				response = response.replace(/\<script([^>]+)\>/g, '' ).replace(/\<\/script\>/g, '' );
+
+				$frame.UixSCTmpl( response, {
+					pluginPath : uixScRootUrl,
+					width      : $frame.data( 'width' ),
+					height     : $frame.data( 'height' ),
+					style      : $frame.data( 'style' ),
+					latitude   : $frame.data( 'latitude' ),
+					longitude  : $frame.data( 'longitude' ),
+					zoom       : $frame.data( 'zoom' ),
+					name       : $frame.data( 'name' ),
+					marker     : $frame.data( 'marker' )
+				} );
+			});
+
+		});
+
+
+	};
+
+
+    uix_sc.map = {
+        documentReady : documentReady
+    };
+
+    uix_sc.components.documentReady.push( documentReady );
+    return uix_sc;
+
+}( uix_sc, jQuery, window, document ) );
+
+
 
 /*! 
  * ************************************
- * 11. Apply the original scripts
+ * 12. Apply the original scripts
  * 
  * Usage: if ( $.isFunction( $.uix_sc_init ) ) { $.uix_sc_init(); }
  *
@@ -905,6 +1004,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 	});
 	
 } ) ( jQuery );
+
 
 
 
