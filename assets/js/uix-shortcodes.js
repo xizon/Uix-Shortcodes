@@ -557,13 +557,6 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 								}
 							}
 							
-							if ( styleName == 'rich' ) {
-								var textColor = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'tcolor' ),
-									btnColor  = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'bcolor' );
-								
-								$( this ).css( 'background-color', btnColor );
-							}
-
 						});	
 						
 					
@@ -571,7 +564,24 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 					} else {
 						$initHeight.find( '.uix-sc-price-border' ).css( 'height', 'auto' );
+
+						
 					}
+					
+					
+					// Actived columns
+					$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).each( function() {
+
+						if ( styleName == 'rich' ) {
+							var textColor = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'tcolor' ),
+								btnColor  = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'bcolor' );
+
+							$( this ).css( 'background-color', btnColor );
+						}
+
+					});	
+						
+					
 
 				}
 

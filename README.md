@@ -35,6 +35,11 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+##### = 1.5.1 (July 9, 2017) =
+
+* Fixed an issue of background with the activation of the pricing on mobile devices.
+
+
 ##### = 1.5.0 (June 27, 2017) =
 
 * Optimize the embedding method of Google Maps.
