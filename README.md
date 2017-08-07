@@ -35,6 +35,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 
 ### Updates
 
+
+##### = 1.5.2 (August 7, 2017) =
+
+* Fixed a display bug for the editor form type.
+* Added the editor's source code mode.
+
+
 ##### = 1.5.1 (July 9, 2017) =
 
 * Fixed an issue of background with the activation of the pricing on mobile devices.

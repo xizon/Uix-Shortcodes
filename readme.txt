@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,11 @@ Note: Making a new javascrpt (.js) document which name to <strong>"uix-shortcode
 
 
 == Changelog ==
+
+= 1.5.2 (August 7, 2017) =
+
+* Fixed a display bug for the editor form type.
+* Added the editor's source code mode.
 
 
 = 1.5.1 (July 9, 2017) =

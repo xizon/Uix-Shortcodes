@@ -24,8 +24,8 @@ $form_type = array(
 
 $args = 
 	array(
-	
 
+		
 	    array(
 			'id'             => 'uix_sc_container_layout',
 			'title'          => esc_html__( 'Choose Layout', 'uix-shortcodes' ),
@@ -325,7 +325,8 @@ $args =
 								)
 		
 		),
-			
+		
+
 	
 	)
 ;
