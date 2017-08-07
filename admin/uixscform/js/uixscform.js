@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version 1.0.0
+	* Version 2.0
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -92,8 +92,13 @@
 								$obj.find( '.preview-box' ).html( $( '.uixscform-livepreview-btn-target' ).html() );
 							}			
 							
+							
 							/*-- Init tinymce --*/
-							uixscform_editorInit( $obj.find( '.uixscform-mce-editor textarea.mce' ).attr( 'id' ) );
+							$obj.find( '.uixscform-mce-editor' ).each( function()  {
+								uixscform_editorInit( $( this ).find( 'textarea.mce' ).attr( 'id' ) );
+							});
+							
+							
 	
 							/*-- Count new modal height --*/
 							var newmHeight = 0,
