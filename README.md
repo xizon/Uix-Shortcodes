@@ -36,6 +36,13 @@ A variety of optional styles are available for Uix ShortCodes. Go to **"Uix Shor
 ### Updates
 
 
+##### = 1.5.3 (August 29, 2017) =
+
+* Fixed a script conflict bug in the backend.
+* Fixed a bug for settings page can not be used normally.
+
+
+
 ##### = 1.5.2 (August 7, 2017) =
 
 * Fixed a display bug for the editor form type.
