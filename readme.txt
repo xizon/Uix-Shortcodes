@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
