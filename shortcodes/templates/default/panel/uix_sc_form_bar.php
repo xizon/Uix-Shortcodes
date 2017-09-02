@@ -7,7 +7,7 @@ if ( !class_exists( 'UixShortcodes' ) ) {
  * Initialize sections template parameters
  * ----------------------------------------------------
  */
-$form_vars = UixShortcodes::init_template_parameters( 'uix_sc_form_bar' );
+$form_vars = UixShortcodes::init_template_parameters( basename( __FILE__, '.php' ) );
 if ( !is_array( $form_vars ) ) return;
 foreach ( $form_vars as $key => $v ) :
 	$$key = $v;

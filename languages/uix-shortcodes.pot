@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-08-07 14:22+0000\n"
+"POT-Creation-Date: 2017-09-02 04:14+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -250,6 +250,21 @@ msgstr ""
 
 #: helper/tabs/custom-css.php:131
 msgid "Close"
+msgstr ""
+
+#: helper/tabs/documentation.php:16
+msgid "Online Documentation"
+msgstr ""
+
+#: helper/tabs/documentation.php:20
+msgid ""
+"Detailed parameters introduction and shortcode examples can refer to the "
+"online documentation."
+msgstr ""
+
+#: helper/tabs/documentation.php:25
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\" rel=\"noopener\">Check Out Here</a>"
 msgstr ""
 
 #: helper/tabs/general-settings.php:50

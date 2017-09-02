@@ -102,6 +102,13 @@ Note: Making a new javascrpt (.js) document which name to <strong>"uix-shortcode
 == Changelog ==
 
 
+= 1.5.4 (September 2, 2017) =
+
+* Added Online Documentation. (Removed the original embedded documentation, reducing the size of the plug-in )
+* Upgraded core API for theme developer customization.
+
+
+
 = 1.5.3 (August 29, 2017) =
 
 * Fixed a script conflict bug in the backend.

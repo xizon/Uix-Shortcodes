@@ -11,9 +11,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'usage' ) {
            <?php _e( '<h4 class="uix-bg-custom-title">1. After activating your theme, you can see a prompt pointed out as absolutely critical. Go to <strong>"Appearance -> Install Plugins"</strong>.
 Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/plugins/) And upload files there.)</h4>', 'uix-shortcodes' ); ?>
         </p>  
-        <p>
-           <img src="<?php echo UixShortcodes::plug_directory(); ?>helper/img/plug.jpg" alt="">
-        </p> 
+
         <p>
            <?php _e( '<h4 class="uix-bg-custom-title">2. Go to your WordPress admin panel, edit or create a new post (or page). You’ll see our tiny little button in the toolbar, preceded by a separator:</h4>', 'uix-shortcodes' ); ?>
   
