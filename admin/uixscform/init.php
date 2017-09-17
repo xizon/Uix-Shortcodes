@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 2.1  (August 29, 2017)
+ * @version		: 2.2  (September 16, 2017)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '2.1';
+		const VERSION    = '2.2';
 		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		
@@ -121,6 +121,12 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 
 					//UixSCForm
 					wp_enqueue_style( 'uixscform', self::plug_directory() .'css/uixscform.min.css', false, self::VERSION, 'all' );
+					//RTL		
+					if ( is_rtl() ) {
+						wp_enqueue_style( 'uixscform-rtl', self::plug_directory() .'css/uixscform.min-rtl.css', false, self::VERSION, 'all' );
+					} 
+				  
+				  
 					if( $currentScreen->base === "customize" ) {
 						wp_enqueue_style( 'uixscform-depth', self::plug_directory() .'css/uixscform.depth.css', false, self::VERSION, 'all' );
 					}	

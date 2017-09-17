@@ -19,6 +19,13 @@ i.mce-i-icon {
     padding-right: 2px
 }
 
+.rtl i.mce-i-icon {
+    margin-left: auto;
+	margin-right: -2px;
+    padding-right: auto;
+	padding-left: 2px;
+}
+
 i.uix-shortcodes-icon{
 	background-image:url(icon.png);
 }
@@ -28,9 +35,15 @@ i.uix-shortcodes-icon{
 
 .uix-shortcodes-col:before{
 	display: inline-block;
-	width:145px;
-	height:17px;
+	width: 145px;
+	height: 17px;
 }
+
+.rtl .uix-shortcodes-col:before{
+	margin-left: -125px;
+}
+
+
 .uix-shortcodes-col-average-4:before{
 	content:' ';
 	background:url(../../admin/uixscform/images/column/average-4.png) no-repeat top center;
@@ -88,6 +101,11 @@ i.uix-shortcodes-icon{
 	-moz-border-radius: 5px; 
 	border-radius: 5px;
 }  
+
+.rtl .uix-shortcodes-dialog {  
+    padding:20px 20px 0 0;
+}  
+
 
 .uix-shortcodes-dialog-mask{
 	display:none;

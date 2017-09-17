@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.5.4
+ * Version:     1.5.5
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -123,6 +123,8 @@ class UixShortcodes {
 								
 		// Add shortcodes style to Front-End
 		wp_register_style( self::PREFIX . '-shortcodes', self::core_css_file(), false, self::ver(), 'all' );
+	    wp_register_style( self::PREFIX . '-shortcodes-rtl', str_replace( '.css', '-rtl.css', self::core_css_file() ), false, self::ver(), 'all' );
+		
 	
 		// Main stylesheets and scripts to Front-End
 		wp_register_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver(), true );
@@ -132,8 +134,7 @@ class UixShortcodes {
 		 ) );
 		
 		// Admin panel stylesheets
-		wp_register_style( self::PREFIX . '-shortcodes-admin', self::plug_directory() .'shortcodes/editor/style.css', false, self::ver(), 'all' );
-
+		wp_register_style( self::PREFIX . '-shortcodes-admin', self::plug_directory() .'shortcodes/editor/style.min.css', false, self::ver(), 'all' );
 
 
 	}
@@ -160,6 +161,11 @@ class UixShortcodes {
 		wp_enqueue_style( 'syntaxhighlighter' );
 		wp_enqueue_script( 'bgParallax' );
 		wp_enqueue_style( self::PREFIX . '-shortcodes' );
+		//RTL		
+		if ( is_rtl() ) {
+			wp_enqueue_style( self::PREFIX . '-shortcodes-rtl' );
+		}
+		
 		wp_enqueue_script( self::PREFIX . '-shortcodes' );
 
 	}
@@ -196,6 +202,11 @@ class UixShortcodes {
 					wp_enqueue_style( 'prettyPhoto' );
 					wp_enqueue_script( 'bgParallax' );
 					wp_enqueue_style( self::PREFIX . '-shortcodes' );
+					//RTL		
+					if ( is_rtl() ) {
+						wp_enqueue_style( self::PREFIX . '-shortcodes-rtl' );
+					}
+				  
 					wp_enqueue_script( self::PREFIX . '-shortcodes' );			
 
 			  } 
@@ -222,7 +233,7 @@ class UixShortcodes {
 				   self::inc_str( $currentScreen->base, '_page_' ) 
 				 ) 
 			  {
-				  wp_enqueue_style( self::PREFIX . '-shortcodes-admin' );
+				  wp_enqueue_style( self::PREFIX . '-shortcodes-admin' ); 
 	  
 			  } 
 			  

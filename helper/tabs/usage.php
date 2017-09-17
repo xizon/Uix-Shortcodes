@@ -6,6 +6,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'usage' ) {
 ?>
 
+                   
+
+          <p>
+            <?php 
+				$embed_code = wp_oembed_get('https://www.youtube.com/watch?v=8bX2vyA5iT4', array('width'=>560, 'height'=>315 )); 
+				echo $embed_code;										 
+			  ?>
+        
+        </p>   
 
         <p>
            <?php _e( '<h4 class="uix-bg-custom-title">1. After activating your theme, you can see a prompt pointed out as absolutely critical. Go to <strong>"Appearance -> Install Plugins"</strong>.

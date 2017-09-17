@@ -20,20 +20,58 @@ Licensed under the [GPL3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
 [![Uix Shortcodes Live Demo](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/video-cover.jpg)](https://www.youtube.com/watch?v=8bX2vyA5iT4 "Uix Shortcodes Live Demo")
 
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. Currently, Uix Shortcodes supports: `container`, `parallax`, `image slider`, `timeline`, `columns`, `buttons`, `progress bar`, `google maps`, `special heading`, `pricing table`, `icons`, `features boxes`, `testimonials carousel`, `team`, `list of clients`, `responsive video`, `audio`, `accordion`, `dividing line`, `tabs`, `code with highlighter`, `share buttons`, `contact form(use commenting form template)`, `portfolio(support lightbox)`, `recent posts with custom template` and `author card`.
-
-
-The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
 
 The Uix Shortcodes consists of several core features that are key to support multi-style switch. According to current progress, some styles can be summarized as follows: **Elegant (default), Slant, Rich.**
 
 A variety of optional styles are available for Uix ShortCodes. Go to **"Uix ShortCodes -> Settings -> General Settings"**, you can choose the shortcodes style you want.
 
 
+**Included Modules**
+
+The currently available default elements:
+
+* container
+* parallax
+* image slider
+* timeline
+* columns
+* buttons
+* progress bar
+* google maps
+* special heading
+* pricing table
+* icons
+* features boxes
+* testimonials carousel
+* team
+* list of clients
+* responsive video
+* audio
+* accordion
+* dividing line
+* tabs
+* code with highlighter
+* share buttons
+* contact form(use commenting form template)
+* portfolio(support lightbox)
+* recent posts with custom template
+* author card
+
+
+
+
 #####Very easy to use :)
 
 
 ### Updates
+
+
+##### = 1.5.5 (September 16, 2017) =
+
+* Supports Right-To-Left (RTL) direction and updated the core stylesheet file of front-end.
+* Supports Right-To-Left (RTL) direction in admin panel.
+
 
 
 ##### = 1.5.4 (September 2, 2017) =

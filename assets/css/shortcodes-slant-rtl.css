@@ -1,0 +1,508 @@
+/*
+
+	 Uix Shortcodes (RTL)
+	 Plugin URI: https://uiux.cc/wp-plugins/uix-shortcodes/
+	 Author: UIUX Lab
+	 Author URI: https://uiux.cc
+	 License: GPLv2 or later
+
+	Theme: Slant
+	---------------------------
+	
+	
+	TABLE OF CONTENTS
+	---------------------------
+	
+	1. Basic   
+	2. Portfolio  
+	3. Features   
+	4. Pricing  
+    5. Accordion
+	6. Tabs
+	7. Gallery list (Team)
+	8. Card list   
+	9. Client 
+	10. Testimonials Carousel 
+	11. Media
+	12. Progress Bar
+	13. Timeline 
+	14. Author Card    
+    15. Image Slider 
+    16. Buttons
+    
+
+
+*/
+/* ====================================================== 
+   1. Basic                               
+/* ====================================================== */
+
+	/* 
+	 * Common uix-sc-col-umns definitions
+	 */
+.uix-sc-col-1, .uix-sc-col-2, .uix-sc-col-3, .uix-sc-col-4, .uix-sc-col-5, .uix-sc-col-6, .uix-sc-col-7, .uix-sc-col-8, .uix-sc-col-9, .uix-sc-col-10, .uix-sc-col-11, .uix-sc-col-12 {
+    float: right;
+    margin: 0 0 0 3%;
+}
+
+.uix-sc-tl {
+    text-align: right;
+}
+
+.uix-sc-tr {
+    text-align: left;
+}
+
+.flexslider,
+.uix-sc-flexslider {
+    direction: ltr !important;
+}
+
+
+/* ====================================================== 
+   2. Portfolio                               
+/* ====================================================== */
+.uix-sc-container-fullwidth .uix-sc-portfolio-wrapper {
+    padding: 2em;
+}
+
+.uix-sc-portfolio-tiles {
+    margin: 0 -2.5em 0 0;
+}
+
+.uix-sc-portfolio-tiles .uix-sc-portfolio-item {
+    margin: 1.5em 2.5em .5em 0;
+    float: right;
+}
+
+.uix-sc-portfolio-tiles .uix-sc-portfolio-item > .uix-sc-portfolio-image:before {
+    right: auto;
+    left: 15px;
+}
+
+.uix-sc-portfolio-tiles .uix-sc-portfolio-item .uix-sc-portfolio-content {
+    left: auto;
+    right: 0;
+}
+
+.uix-sc-portfolio-tiles .uix-sc-portfolio-item .uix-sc-portfolio-content a.uix-sc-portfolio-link {
+    left: auto;
+    right: 0;
+}
+
+@media screen and (max-width: 1280px) {
+	
+    .uix-sc-portfolio-tiles {
+        margin: -1.25em -1.25em 0 0;
+    }
+
+    .uix-sc-portfolio-tiles.uix-sc-portfolio-col4 .uix-sc-portfolio-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+
+    .uix-sc-portfolio-tiles.uix-sc-portfolio-col3 .uix-sc-portfolio-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+
+    .uix-sc-portfolio-tiles.uix-sc-portfolio-col2 .uix-sc-portfolio-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .uix-sc-portfolio-tiles {
+        margin: -2.5em -2.5em 0 0;
+    }
+
+    .uix-sc-portfolio-tiles.uix-sc-portfolio-col4 .uix-sc-portfolio-item,
+	.uix-sc-portfolio-tiles.uix-sc-portfolio-col3 .uix-sc-portfolio-item,
+	.uix-sc-portfolio-tiles.uix-sc-portfolio-col2 .uix-sc-portfolio-item {
+        margin: 2.5em 2.5em 0 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .uix-sc-portfolio-tiles {
+        margin: -1.25em -1.25em 0 0;
+    }
+
+    .uix-sc-portfolio-tiles.uix-sc-portfolio-col4 .uix-sc-portfolio-item,
+	.uix-sc-portfolio-tiles.uix-sc-portfolio-col3 .uix-sc-portfolio-item,
+	.uix-sc-portfolio-tiles.uix-sc-portfolio-col2 .uix-sc-portfolio-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+}
+
+
+
+/*-- Categories --*/ 
+.uix-sc-portfolio-cat-list li {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+
+
+/* ====================================================== 
+   3. Features                              
+/* ====================================================== */
+
+.uix-sc-feature-icon-side i {
+    margin-right: auto;
+    margin-left: .4em;
+}
+
+
+
+/* ====================================================== 
+   4. Pricing                              
+/* ====================================================== */
+   
+.uix-sc-price ul,
+	.uix-sc-price ol {
+    padding-left: auto !important;
+    padding-right: 20px !important;
+}
+
+.uix-sc-price li:before {
+    margin-right: auto;
+    margin-left: .5em;
+}
+
+.uix-sc-price-border:after {
+    left: auto;
+    right: 0;
+	border-width: 60px 0 0 300px;
+}
+
+.uix-sc-price-level {
+    text-align: right;
+}
+
+.uix-sc-price-period:before {
+    padding-right: auto;
+    padding-left: .2em;
+}
+
+.uix-sc-price-detail {
+    text-align: right;
+}
+	
+	
+/* ====================================================== 
+   5. Accordion                              
+/* ====================================================== */
+.uix-sc-accordion .uix-sc-spoiler .uix-sc-spoiler-title:before {
+	padding: 0 0 0 10px;
+
+}
+
+
+/* ====================================================== 
+   6. Tabs                              
+/* ====================================================== */
+.uix-sc-tabs .uix-sc-tabs-title li {
+    margin-left: auto;
+    margin-right: -1px;
+    float: right;
+}
+
+.uix-sc-tabs .uix-sc-tabs-title li:first-child {
+    margin-right: 0;
+}
+		
+	
+	
+
+/* Vertical tabs */
+
+.uix-sc-tabs.uix-sc-tabs-vertical .uix-sc-tabs-title {
+    float: right;
+}
+
+.uix-sc-tabs.uix-sc-tabs-vertical .uix-sc-spoiler-group {
+    float: right;
+}
+
+.uix-sc-tabs.uix-sc-tabs-vertical .uix-sc-tabs-title li {
+	border-left: 1px solid #000;
+    border-right: none;
+}
+
+.uix-sc-tabs.uix-sc-tabs-vertical .uix-sc-tabs-title li.active {
+	border-right-color: #000;
+    border-left-color: #fff;
+}
+
+.uix-sc-tabs.uix-sc-tabs-horizontal .uix-sc-tabs-title li.active {
+	border-right-color: #fff;
+    border-left-color: #000;
+}	
+	
+
+/* ----------  */
+
+
+@media (max-width: 768px) {
+	
+ 
+    .uix-sc-tabs.uix-sc-tabs-vertical .uix-sc-tabs-title li {
+        border-left: none;
+    }
+}	
+
+
+/* ====================================================== 
+   7. Gallery list (Team)                              
+/* ====================================================== */
+
+.uix-sc-gallery {
+    margin: 0 -2.5em 0 0;
+}
+
+.uix-sc-gallery .uix-sc-gallery-list {
+    margin: 1.5em 2.5em .5em 0;
+    float: right;
+}
+
+.uix-sc-gallery-list .uix-sc-gallery-list-position {
+    right: auto;
+    left: 0;
+}
+
+@media screen and (max-width: 1280px) {
+	
+    .uix-sc-gallery {
+        margin: -1.25em -1.25em 0 0;
+    }
+
+    .uix-sc-gallery .uix-sc-gallery-list-col4 {
+        margin: 1.25em 1.25em 0 0;
+    }
+
+    .uix-sc-gallery .uix-sc-gallery-list-col3 {
+        margin: 1.25em 1.25em 0 0;
+    }
+
+    .uix-sc-gallery .uix-sc-gallery-list-col2 {
+        margin: 1.25em 1.25em 0 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .uix-sc-gallery {
+        margin: -2.5em -2.5em 0 0;
+    }
+
+    .uix-sc-gallery .uix-sc-gallery-list-col4,
+	.uix-sc-gallery .uix-sc-gallery-list-col3,
+	.uix-sc-gallery .uix-sc-gallery-list-col2 {
+        margin: 2.5em 2.5em 0 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .uix-sc-gallery {
+        margin: -1.25em -1.25em 0 0;
+    }
+
+    .uix-sc-gallery .uix-sc-gallery-list-col4,
+	.uix-sc-gallery .uix-sc-gallery-list-col3,
+	.uix-sc-gallery .uix-sc-gallery-list-col2 {
+        margin: 1.25em 1.25em 0 0;
+    }
+}
+
+
+
+
+/* ====================================================== 
+   8. Card list                           
+/* ====================================================== */
+.uix-sc-card-item-body {
+    padding-left: auto;
+    padding-right: 2em;
+}
+
+.uix-sc-card-item-left {
+    padding-right: auto;
+    padding-left: 10px;
+}
+
+.uix-sc-card-item-list {
+    padding-left: auto;
+    padding-right: 0;
+}
+	
+	
+	
+
+/* ----------  */
+
+
+@media (max-width: 768px) {
+ 
+
+    .uix-sc-card-item-body {
+        padding-left: auto;
+        padding-right: 0;
+    }
+}
+
+/* ====================================================== 
+   9. Client                           
+/* ====================================================== */
+.uix-sc-client-li {
+    float: right;
+}
+
+	 
+	 
+/* ====================================================== 
+   10. Testimonials Carousel                           
+/* ====================================================== */
+.uix-sc-testimonials .uix-sc-testimonials-content {
+    float: right;
+}
+
+.uix-sc-testimonials .uix-sc-testimonials-signature {
+    float: left;
+    text-align: left;
+}
+
+.uix-sc-testimonials .uix-sc-testimonials-signature img.uix-sc-testimonials-avatar {
+    float: left;
+    margin: .6em 0 1em 1em;
+}
+
+.uix-sc-testimonials .uix-sc-testimonials-signature .uix-sc-testimonials-no-avatar {
+    float: left;
+}
+
+.uix-sc-testimonials .uix-sc-testimonials-signature strong.uix-sc-testimonials-pure-text {
+    padding-left: auto;
+    padding-right: 100px;
+}
+					 
+	 
+/* ====================================================== 
+   11. Media                     
+/* ====================================================== */
+.uix-sc-embed-responsive iframe,
+	.uix-sc-embed-responsive embed,
+	.uix-sc-embed-responsive object,
+	.uix-sc-embed-responsive video {
+    left: auto;
+    right: 0;
+}
+
+
+/* ====================================================== 
+   12. Progress Bar                     
+/* ====================================================== */
+.uix-sc-bar-box .uix-sc-bar-desc{
+	padding-left: auto;
+	padding-right: .3em;
+	
+}
+
+.uix-sc-bar-box .uix-sc-bar .uix-sc-bar-percent {
+    left: auto;
+    right: 0;
+}
+		
+	
+/* square */
+.uix-sc-bar-box.uix-sc-bar-box-square > div {
+    text-align: right;
+}
+
+.uix-sc-bar-box.uix-sc-bar-box-square .uix-sc-bar .uix-sc-bar-text {
+    right: auto;
+    left: 0;
+}
+
+/* ====================================================== 
+   13. Timeline               
+/* ====================================================== */
+.uix-sc-timeline > div {
+    float: right;
+}
+
+.uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+    left: auto;
+    right: 42%;
+}
+
+@media (max-width: 768px) {
+    .uix-sc-timeline .uix-sc-timeline-status .uix-sc-timeline-status-dot {
+        right: 48%;
+    }
+}
+
+		  
+		  
+/* ====================================================== 
+   14. Author Card        
+/* ====================================================== */	
+
+.uix-authorcard-top .uix-authorcard-text {
+    padding-left: auto;
+    padding-right: 1em;
+}
+
+.uix-authorcard-top .uix-authorcard-text a {
+    margin: 0 .7em 0 0;
+}
+
+.uix-authorcard-top .uix-authorcard-pic {
+    right: auto;
+    left: 1.5em;
+}
+
+.uix-authorcard-middle {
+    padding: 1em 1em 0 2em;
+}
+
+.uix-authorcard-middle p {
+    padding: 0 2em 0 1em;
+}
+
+.uix-authorcard-final {
+    text-align: left;
+}
+
+.uix-authorcard-final .uix-authorcard-text {
+    margin-left: auto;
+    margin-right: .5em;
+}	    
+		
+
+
+/* ====================================================== 
+   15. Image Slider                
+/* ====================================================== */
+
+.uix-sc-imageslider .slides li .slide-text {
+    left: auto;
+    right: 0;
+}
+
+
+
+/**
+ *  16. Buttons
+ * ----------------------------------------------------------------------------
+ */
+ 
+.uix-sc-btn {
+    margin: 1em 0 .7em 1em;	
+}
+
+.uix-sc-btn .fa {
+    margin: 0 0 0 .4em;
+}

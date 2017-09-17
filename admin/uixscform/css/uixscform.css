@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version 2.1
+	* Version 2.2
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -834,7 +834,7 @@
     border-top-left-radius: 3px;
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-bottom-left-radius: 3px;
-    border-bottom-right-left: 3px;
+    border-bottom-left-radius: 3px;
     top: 7px;
     left: 3px;
 }

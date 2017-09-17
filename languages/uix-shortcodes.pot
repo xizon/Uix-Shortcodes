@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-02 04:14+0000\n"
+"POT-Creation-Date: 2017-09-17 12:40+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,33 +23,33 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: uix-shortcodes.php:417 uix-shortcodes.php:538 uix-shortcodes.php:539
+#: uix-shortcodes.php:428 uix-shortcodes.php:549 uix-shortcodes.php:550
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:418 uix-shortcodes.php:529 uix-shortcodes.php:530
-#: helper/settings.php:134
+#: uix-shortcodes.php:429 uix-shortcodes.php:540 uix-shortcodes.php:541
+#: helper/settings.php:171
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:517 helper/settings.php:115
+#: uix-shortcodes.php:528 helper/settings.php:152
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:518 shortcodes/editor/tinymce-plugin-lang.php:16
+#: uix-shortcodes.php:529 shortcodes/editor/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:546 uix-shortcodes.php:547
+#: uix-shortcodes.php:557 uix-shortcodes.php:558
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:554 uix-shortcodes.php:555
+#: uix-shortcodes.php:565 uix-shortcodes.php:566
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:931
+#: uix-shortcodes.php:942
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -59,23 +59,23 @@ msgstr ""
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: helper/settings.php:129
+#: helper/settings.php:166
 msgid "About"
 msgstr ""
 
-#: helper/settings.php:139
+#: helper/settings.php:176
 msgid "Documentation"
 msgstr ""
 
-#: helper/settings.php:145
+#: helper/settings.php:182
 msgid "Credits"
 msgstr ""
 
-#: helper/settings.php:150
+#: helper/settings.php:187
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: helper/settings.php:155
+#: helper/settings.php:192
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgstr ""
 msgid "Select Files"
 msgstr ""
 
-#: admin/uixscform/init.php:108 admin/uixscform/init.php:620
+#: admin/uixscform/init.php:108 admin/uixscform/init.php:626
 msgid "Insert"
 msgstr ""
 
@@ -113,19 +113,19 @@ msgstr ""
 msgid "Open link in a new tab"
 msgstr ""
 
-#: admin/uixscform/init.php:294
+#: admin/uixscform/init.php:300
 msgid "Exit live preview"
 msgstr ""
 
-#: admin/uixscform/init.php:620
+#: admin/uixscform/init.php:626
 msgid "Cancel"
 msgstr ""
 
-#: admin/uixscform/init.php:620
+#: admin/uixscform/init.php:626
 msgid "Preview"
 msgstr ""
 
-#: admin/uixscform/init.php:685
+#: admin/uixscform/init.php:691
 msgid ""
 "<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
 "shortcode does not support live preview, please check out it directly on "
@@ -137,51 +137,146 @@ msgid ""
 "Uix Shortcodes brings an amazing set of beautiful and useful elements to "
 "your site that lets you do nifty things with very little effort. It makes it "
 "easy and quick to add the shortcode you need to achieve the page layout or "
-"function you desire. It provides easy to use over 26+ shortcodes. Currently, "
-"Uix Shortcodes supports: <code>\"container\"</code>, <code>"
-"\"parallax\"</code>, <code>\"image slider\"</code>, <code>\"timeline\"</code>"
-", <code>\"columns\"</code>, <code>\"buttons\"</code>, <code>\"progress "
-"bar\"</code>, <code>\"google maps\"</code>, <code>\"special heading\"</code>,"
-" <code>\"pricing table\"</code>, <code>\"icons\"</code>, <code>\"features "
-"boxes\"</code>, <code>\"testimonials carousel\"</code>, <code>\"team\"</code>"
-", <code>\"list of clients\"</code>, <code>\"responsive video\"</code>, <code>"
-"\"audio\"</code>, <code>\"accordion\"</code>, <code>\"dividing line\"</code>,"
-" <code>\"tabs\"</code>, <code>\"code with highlighter\"</code>, <code>"
-"\"share buttons\"</code>, <code>\"contact form(use commenting form template)"
-"\"</code>, <code>\"portfolio(support lightbox)\"</code>, <code>\"recent "
-"posts with custom template\"</code> and <code>\"author card\"</code>."
-msgstr ""
-
-#: helper/tabs/about.php:14
-msgid ""
-"The content elements are the heart of any page builder. These are the "
-"elements shortcodes that come with theme. You may customize the shortcode by "
+"function you desire. It provides easy to use over 26+ shortcodes. The "
+"content elements are the heart of any page builder. These are the elements "
+"shortcodes that come with theme. You may customize the shortcode by "
 "changing/adding the parameters. <strong>\"Content Shortcode\"</strong>, "
 "<strong>\"Column Shortcode\"</strong>, <strong>\"Web Elements "
 "Shortcode\"</strong>, <strong>\"Container Shortcode\"</strong>, and so on. "
 "They could be used together."
 msgstr ""
 
-#: helper/tabs/about.php:18
+#: helper/tabs/about.php:15
 msgid ""
 "The Uix Shortcodes consists of several core features that are key to support "
 "multi-style switch. According to current progress, some styles can be "
 "summarized as follows: <strong>Elegant (default), Slant, Rich.</strong>"
 msgstr ""
 
-#: helper/tabs/about.php:22
+#: helper/tabs/about.php:19
 msgid ""
 "A variety of optional styles are available for Uix ShortCodes. Go to **\"Uix "
 "ShortCodes -> Settings -> General Settings\"**, you can choose the "
 "shortcodes style you want."
 msgstr ""
 
+#: helper/tabs/about.php:24
+msgid "Included Modules "
+msgstr ""
+
+#: helper/tabs/about.php:27
+msgid "The currently available default elements:"
+msgstr ""
+
+#: helper/tabs/about.php:30
+msgid "container"
+msgstr ""
+
+#: helper/tabs/about.php:31
+msgid "parallax"
+msgstr ""
+
+#: helper/tabs/about.php:32
+msgid "image slider"
+msgstr ""
+
+#: helper/tabs/about.php:33
+msgid "timeline"
+msgstr ""
+
+#: helper/tabs/about.php:34
+msgid "columns"
+msgstr ""
+
+#: helper/tabs/about.php:35
+msgid "buttons"
+msgstr ""
+
+#: helper/tabs/about.php:36
+msgid "progress bar"
+msgstr ""
+
+#: helper/tabs/about.php:37
+msgid "google maps"
+msgstr ""
+
 #: helper/tabs/about.php:38
+msgid "special heading"
+msgstr ""
+
+#: helper/tabs/about.php:39
+msgid "pricing table"
+msgstr ""
+
+#: helper/tabs/about.php:40
+msgid "icons"
+msgstr ""
+
+#: helper/tabs/about.php:41
+msgid "features boxes"
+msgstr ""
+
+#: helper/tabs/about.php:42
+msgid "testimonials carousel"
+msgstr ""
+
+#: helper/tabs/about.php:43
+msgid "team"
+msgstr ""
+
+#: helper/tabs/about.php:44
+msgid "list of clients"
+msgstr ""
+
+#: helper/tabs/about.php:45
+msgid "responsive video"
+msgstr ""
+
+#: helper/tabs/about.php:46
+msgid "audio"
+msgstr ""
+
+#: helper/tabs/about.php:47
+msgid "accordion"
+msgstr ""
+
+#: helper/tabs/about.php:48
+msgid "dividing line"
+msgstr ""
+
+#: helper/tabs/about.php:49
+msgid "tabs"
+msgstr ""
+
+#: helper/tabs/about.php:50
+msgid "code with highlighter"
+msgstr ""
+
+#: helper/tabs/about.php:51
+msgid "share buttons"
+msgstr ""
+
+#: helper/tabs/about.php:52
+msgid "contact form(use commenting form template)"
+msgstr ""
+
+#: helper/tabs/about.php:53
+msgid "portfolio(support lightbox)"
+msgstr ""
+
+#: helper/tabs/about.php:54
+msgid "recent posts with custom template"
+msgstr ""
+
+#: helper/tabs/about.php:55
+msgid "author card"
+msgstr ""
+
+#: helper/tabs/about.php:62
 msgid ""
-"<strong>If you like this plugin, you could sponsor me. I can spend less time "
-"thinking about private monetization channels and instead work more on "
-"content that benefits the Uix Shortcodes, e.g. more functions, shortcode "
-"themes, videos and extensions! Thanks.</strong>"
+"<strong>If you like this plug-in, you can check out my free and high-quality "
+"themes with Uix Shortcodes for you to download.</strong> <h4><a href=\"https:"
+"//uiux.cc/\" target=\"_blank\">Click here to check out</a></h4>"
 msgstr ""
 
 #: helper/tabs/credits.php:11
@@ -291,7 +386,7 @@ msgstr ""
 msgid "Rich"
 msgstr ""
 
-#: helper/tabs/usage.php:11
+#: helper/tabs/usage.php:20
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">1. After activating your theme, you can "
 "see a prompt pointed out as absolutely critical. Go to <strong>\"Appearance -"
@@ -300,14 +395,14 @@ msgid ""
 "content/plugins/) And upload files there.)</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:18
+#: helper/tabs/usage.php:25
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">2. Go to your WordPress admin panel, edit "
 "or create a new post (or page). You’ll see our tiny little button in the "
 "toolbar, preceded by a separator:</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:31
+#: helper/tabs/usage.php:38
 msgid ""
 "There is a second way, make a new Cascading Style Sheet (CSS) document which "
 "name to <strong>uix-shortcodes-custom.css</strong> to your templates "
@@ -319,7 +414,7 @@ msgid ""
 "Shortcodes's function of \"Custom CSS\" is still valid."
 msgstr ""
 
-#: helper/tabs/usage.php:35
+#: helper/tabs/usage.php:42
 msgid ""
 "<b>Note:<b> Making a new javascrpt (.js) document which name to <strong>uix-"
 "shortcodes-custom.js</strong> to your templates directory ( <code>/wp-"
