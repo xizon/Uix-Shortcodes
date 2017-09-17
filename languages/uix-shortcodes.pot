@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-17 12:40+0000\n"
+"POT-Creation-Date: 2017-09-17 13:36+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,33 +23,33 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: uix-shortcodes.php:428 uix-shortcodes.php:549 uix-shortcodes.php:550
+#: uix-shortcodes.php:437 uix-shortcodes.php:558 uix-shortcodes.php:559
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:429 uix-shortcodes.php:540 uix-shortcodes.php:541
+#: uix-shortcodes.php:438 uix-shortcodes.php:549 uix-shortcodes.php:550
 #: helper/settings.php:171
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:528 helper/settings.php:152
+#: uix-shortcodes.php:537 helper/settings.php:152
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:529 shortcodes/editor/tinymce-plugin-lang.php:16
+#: uix-shortcodes.php:538 shortcodes/editor/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:557 uix-shortcodes.php:558
+#: uix-shortcodes.php:566 uix-shortcodes.php:567
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:565 uix-shortcodes.php:566
+#: uix-shortcodes.php:574 uix-shortcodes.php:575
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:942
+#: uix-shortcodes.php:951
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -329,22 +329,56 @@ msgstr ""
 msgid "Settings saved."
 msgstr ""
 
-#: helper/tabs/custom-css.php:98
+#: helper/tabs/custom-css.php:90
+msgid "You have already used custom stylesheet files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:97
+#, php-format
+msgid ""
+"1) Making a new Cascading Style Sheet (CSS) document which name to <strong>"
+"uix-shortcodes-custom.css</strong> and <strong>uix-shortcodes-custom-rtl."
+"css</strong> to your templates directory ( <code>/wp-content/themes/{your-"
+"theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> )."
+" You can connect to your site via an FTP client, make the changes and then "
+"upload the file back to the server. Once you have created an existing CSS "
+"file, Uix Shortcodes will use it as a default style sheet instead of the <a "
+"href=\"%1$s\" target=\"_blank\">%2$s</a> and <a href=\"%3$s\" "
+"target=\"_blank\">%4$s</a> to your WordPress Theme. Of course, Uix "
+"Shortcodes's function of \"Custom CSS\" is still valid."
+msgstr ""
+
+#: helper/tabs/custom-css.php:104
+#, php-format
+msgid ""
+"2) Making a new javascrpt (.js) document which name to <strong>uix-"
+"shortcodes-custom.js</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/js/</code> ). Once you have created an existing JS file, Uix "
+"Shortcodes will use it as a default script instead of the \"<a href=\"%1$s\" "
+"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
+msgstr ""
+
+#: helper/tabs/custom-css.php:116
 msgid "Paste your CSS code"
 msgstr ""
 
-#: helper/tabs/custom-css.php:100
+#: helper/tabs/custom-css.php:118
 msgid ""
 "You could add new styles code to your website, without modifying original ."
 "css files."
 msgstr ""
 
-#: helper/tabs/custom-css.php:126 helper/tabs/custom-css.php:166
+#: helper/tabs/custom-css.php:142 helper/tabs/custom-css.php:182
 msgid "CSS file root directory:"
 msgstr ""
 
-#: helper/tabs/custom-css.php:131
+#: helper/tabs/custom-css.php:147 helper/tabs/custom-css.php:213
 msgid "Close"
+msgstr ""
+
+#: helper/tabs/custom-css.php:208 helper/tabs/custom-css.php:248
+msgid "RTL CSS file root directory:"
 msgstr ""
 
 #: helper/tabs/documentation.php:16
@@ -402,25 +436,12 @@ msgid ""
 "toolbar, preceded by a separator:</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:38
+#: helper/tabs/usage.php:32
 msgid ""
-"There is a second way, make a new Cascading Style Sheet (CSS) document which "
-"name to <strong>uix-shortcodes-custom.css</strong> to your templates "
-"directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-"
-"content/themes/{your-theme}/assets/css/</code> ). You can connect to your "
-"site via an FTP client, make the changes and then upload the file back to "
-"the server. Once you have created an existing CSS file, Uix Shortcodes will "
-"use it as a default style sheet to your WordPress Theme. Of course, Uix "
-"Shortcodes's function of \"Custom CSS\" is still valid."
-msgstr ""
-
-#: helper/tabs/usage.php:42
-msgid ""
-"<b>Note:<b> Making a new javascrpt (.js) document which name to <strong>uix-"
-"shortcodes-custom.js</strong> to your templates directory ( <code>/wp-"
-"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
-"/assets/js/</code> ). Once you have created an existing JS file, Uix "
-"Shortcodes will use it as a default script to your WordPress Theme."
+"<h4 class=\"uix-bg-custom-title\">3. You can overview the original styles to "
+"overwrite it. It will be on creating new styles to your website, without "
+"modifying original .css files. Go to \"Uix Shortcodes\" in the WordPress "
+"Administration Screens, then link to a specific tab like \"Custom CSS\".</h4>"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:12

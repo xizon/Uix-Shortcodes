@@ -123,7 +123,7 @@ class UixShortcodes {
 								
 		// Add shortcodes style to Front-End
 		wp_register_style( self::PREFIX . '-shortcodes', self::core_css_file(), false, self::ver(), 'all' );
-	    wp_register_style( self::PREFIX . '-shortcodes-rtl', str_replace( '.css', '-rtl.css', self::core_css_file() ), false, self::ver(), 'all' );
+	    wp_register_style( self::PREFIX . '-shortcodes-rtl', self::to_rtl_css( self::core_css_file() ), false, self::ver(), 'all' );
 		
 	
 		// Main stylesheets and scripts to Front-End
@@ -257,7 +257,16 @@ class UixShortcodes {
 
 	}
 	
-
+		
+	/*
+	 * Returns RTL stylesheet name or directory
+	 *
+	 *
+	 */
+	public static function to_rtl_css( $str ) {	
+		return str_replace( '.css', '-rtl.css', $str );
+	}
+	
 	
 	/*
 	 * Call the specified form  [Use for theme]

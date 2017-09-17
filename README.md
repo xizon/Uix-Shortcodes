@@ -316,7 +316,19 @@ The currently available default elements:
 - WP 4.8
 
 
-###Screenshot
+### Frequently Asked Questions
+
+##### How to completely customize the Uix Shortcodes stylesheets?
+
+You can go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS". 
+
+There is a second way, make a new Cascading Style Sheet (CSS) document which name to **"uix-shortcodes-custom.css"** and **uix-shortcodes-custom-rtl.css** to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/css/" ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
+
+Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-custom.js"** to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/js/" ). Once you have created an existing JS file, Uix Shortcodes will use it as a default script to your WordPress Theme.
+
+
+
+### Screenshot
 
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-3.jpg)
 
@@ -360,9 +372,9 @@ The currently available default elements:
 
 
 
-###Credits
+### Credits
 
-#####I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
+##### I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [jQuery Accessible Tabs](https://github.com/nomensa/jquery.accessible-tabs.git)
@@ -377,26 +389,15 @@ The currently available default elements:
 
 
 
-###How to use?
+### How to use?
 
 1.After activating your theme, you can see a prompt pointed out as absolutely critical. Go to **"Appearance -> Install Plugins"**.
 Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/plugins/) And upload files there.)
 
-![](https://github.com/xizon/Uix-Shortcodes/blob/master/helper/img/plug.jpg)
 
 2.Go to your WordPress admin panel, edit or create a new post (or page). You’ll see our tiny little button in the toolbar, preceded by a separator.
 
-
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/helper/img/button.jpg)
-
-
-3.You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS".
-
-
-> There is a second way, make a new Cascading Style Sheet (CSS) document which name to **uix-shortcodes-custom.css** to your **templates directory** (`/wp-content/themes/{your-theme}/` or `/wp-content/themes/{your-theme}/assets/css/`). You can connect to your site via an **FTP** client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
-
-
-> Note: Making a new javascrpt (.js) document which name to **uix-shortcodes-custom.js** to your templates directory (`/wp-content/themes/{your-theme}/` or `/wp-content/themes/{your-theme}/assets/js/`). Once you have created an existing JS file, Uix Shortcodes will use it as a default script to your WordPress Theme.
 
 
 

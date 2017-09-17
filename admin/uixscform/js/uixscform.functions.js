@@ -1444,7 +1444,7 @@ function uixscform_editorInit( id ){
 					selector:  'textarea#' + id,
 					height : 200,
 					menubar: false,
-					plugins: 'textcolor image media hr customCode',
+					plugins: 'textcolor image media hr customCode colorpicker',
 				    toolbar: 'undo redo removeformat  | forecolor backcolor styleselect | uixsc_link uixsc_unlink bold italic | bullist numlist outdent indent | hr uixsc_image customCode',
 					setup:function(ed) {
 					   ed.on( 'change', function(e) {
