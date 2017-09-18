@@ -116,6 +116,10 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
               <?php _e( 'Paste your CSS code', 'uix-shortcodes' ); ?>
               <hr>
               <p class="uix-bg-custom-desc-note"><?php _e( 'You could add new styles code to your website, without modifying original .css files.', 'uix-shortcodes' ); ?></p>
+			  <p class="uix-bg-custom-desc-note"><?php _e( 'Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets.', 'uix-shortcodes' ); ?></p>
+           
+				
+           
             </th>
             <td>
               <textarea name="uix_sc_opt_cssnewcode" class="regular-text" rows="25" style="width:98%;"><?php echo esc_textarea( get_option( 'uix_sc_opt_cssnewcode' ) ); ?></textarea>
@@ -130,58 +134,32 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	ob_start();
 	
 		UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $cssfiletype );
-		$filesystem_uix_shortcodes_out = ob_get_contents();
+		$out = ob_get_contents();
 	ob_end_clean();
 	
-	if ( empty( $filesystem_uix_shortcodes_out ) ) {
+	if ( empty( $out ) ) {
 		
-		$style_org_code_uix_shortcodes = UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $cssfiletype );
+		$sourcecode = UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes, $cssfiletype );
 		
 		echo '
 		
-		         <p>'.__( 'CSS file root directory:', 'uix-shortcodes' ).' 
-				     <a href="javascript:" id="uix_shortcodes_view_css" >'.$org_csspath_uix_shortcodes.'</a>
-					 <div class="uix-shortcodes-dialog-mask uix-shortcodes-dialog-mask1"></div>
-					 <div class="uix-shortcodes-dialog" id="uix-shortcodes-view-css-container">  
-						<textarea rows="15" style=" width:95%;" class="regular-text">'.$style_org_code_uix_shortcodes.'</textarea>
-						<a href="javascript:" id="uix_shortcodes_close_css" class="close button button-primary">'.__( 'Close', 'uix-shortcodes' ).'</a>  
+		         <div class="uix-shortcodes-dialog-wrapper">
+				    '.esc_html__( 'CSS file root directory:', 'uix-shortcodes' ).' 
+				     <a href="javascript:" class="uix-shortcodes-viewcss-btn" >'.$org_csspath_uix_shortcodes.'</a>
+					 <div class="uix-shortcodes-dialog-mask"></div>
+					 <div class="uix-shortcodes-dialog">  
+						<textarea rows="15" style=" width:95%;" class="regular-text">'.$sourcecode.'</textarea>
+						<a href="javascript:" class="close button button-primary">'.esc_html__( 'Close', 'uix-shortcodes' ).'</a>  
 					</div>
-				 </p>
-				<script type="text/javascript">
-					
-				( function($) {
-					
-					"use strict";
-					
-					$( function() {
-						
-						var dialog_uix_shortcodes = $( "#uix-shortcodes-view-css-container, .uix-shortcodes-dialog-mask1" );  
-						
-						
-						$( "#uix_shortcodes_view_css" ).on( "click", function( e ) {
-						    e.preventDefault();
-							dialog_uix_shortcodes.show();
-						});
-						$( "#uix_shortcodes_close_css" ).on( "click", function( e ) {
-						    e.preventDefault();
-							dialog_uix_shortcodes.hide();
-						});
-					
-			
-					} );
-					
-				} ) ( jQuery );
-				
-				</script>
-		
+				 </div>
 		';	
 
 	} else {
 		
 		echo '
-		         <p>'.__( 'CSS file root directory:', 'uix-shortcodes' ).' 
+		         <div>'.esc_html__( 'CSS file root directory:', 'uix-shortcodes' ).' 
 				     <a href="'.$org_csspath_uix_shortcodes.'" target="_blank">'.$org_csspath_uix_shortcodes.'</a>
-				 </p>
+				 </div>
 
 		';	
 		
@@ -196,58 +174,34 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	ob_start();
 	
 		UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes_rtl, $cssfiletype );
-		$filesystem_uix_shortcodes_out = ob_get_contents();
+		$out = ob_get_contents();
 	ob_end_clean();
 	
-	if ( empty( $filesystem_uix_shortcodes_out ) ) {
+	if ( empty( $out ) ) {
 		
-		$style_org_code_uix_shortcodes_rtl = UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes_rtl, $cssfiletype );
+		$sourcecode_rtl = UixShortcodes::wpfilesystem_read_file( 'uix_sc_customcss', 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css', $filepath, $org_cssname_uix_shortcodes_rtl, $cssfiletype );
 		
 		echo '
 		
-		         <p>'.__( 'RTL CSS file root directory:', 'uix-shortcodes' ).' 
-				     <a href="javascript:" id="uix_shortcodes_view_css_rtl" >'.$org_csspath_uix_shortcodes_rtl.'</a>
-					 <div class="uix-shortcodes-dialog-mask uix-shortcodes-dialog-mask2"></div>
-					 <div class="uix-shortcodes-dialog" id="uix-shortcodes-view-css-rtl-container">  
-						<textarea rows="15" style=" width:95%;" class="regular-text">'.$style_org_code_uix_shortcodes_rtl.'</textarea>
-						<a href="javascript:" id="uix_shortcodes_close_css_rtl" class="close button button-primary">'.__( 'Close', 'uix-shortcodes' ).'</a>  
+		         <div class="uix-shortcodes-dialog-wrapper">
+				     '.esc_html__( 'RTL CSS file root directory:', 'uix-shortcodes' ).' 
+				     <a href="javascript:" class="uix-shortcodes-viewcss-btn" >'.$org_csspath_uix_shortcodes_rtl.'</a>
+					 <div class="uix-shortcodes-dialog-mask"></div>
+					 <div class="uix-shortcodes-dialog">  
+						<textarea rows="15" style=" width:95%;" class="regular-text">'.$sourcecode_rtl.'</textarea>
+						<a href="javascript:" class="close button button-primary">'.esc_html__( 'Close', 'uix-shortcodes' ).'</a>  
 					</div>
-				 </p>
-				<script type="text/javascript">
-					
-				( function($) {
-					
-					"use strict";
-					
-					$( function() {
-						
-						var dialog_uix_shortcodes = $( "#uix-shortcodes-view-css-rtl-container, .uix-shortcodes-dialog-mask2" );  
-						
-						
-						$( "#uix_shortcodes_view_css_rtl" ).on( "click", function( e ) {
-						    e.preventDefault();
-							dialog_uix_shortcodes.show();
-						});
-						$( "#uix_shortcodes_close_css_rtl" ).on( "click", function( e ) {
-						    e.preventDefault();
-							dialog_uix_shortcodes.hide();
-						});
-					
+				 </div>
 			
-					} );
-					
-				} ) ( jQuery );
-				
-				</script>
 		
 		';	
 
 	} else {
 		
 		echo '
-		         <p>'.__( 'RTL CSS file root directory:', 'uix-shortcodes' ).' 
+		         <div>'.esc_html__( 'RTL CSS file root directory:', 'uix-shortcodes' ).' 
 				     <a href="'.$org_csspath_uix_shortcodes_rtl.'" target="_blank">'.$org_csspath_uix_shortcodes_rtl.'</a>
-				 </p>
+				 </div>
 
 		';	
 		

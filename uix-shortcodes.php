@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.5.5
+ * Version:     1.5.6
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -237,20 +237,6 @@ class UixShortcodes {
 	  
 			  } 
 			  
-			  if ( isset( $_GET[ 'tab' ] ) && isset( $_GET[ 'page' ] ) ) {
-				  
-				  if( $_GET[ 'tab' ] == 'documentation' && $_GET[ 'page' ] == self::CUSPAGE ) {
-					  
-						wp_enqueue_script( 'accTabs' );
-						wp_enqueue_style( 'accTabs-uix-shortcodes' );
-						wp_enqueue_script( 'syntaxhighlighter-core' );
-						wp_enqueue_script( 'syntaxhighlighter-autoloader' );
-						wp_enqueue_style( 'syntaxhighlighter' );
-					
-		  
-				  }  
-			  }
-	
 			  
 		  }
 		  

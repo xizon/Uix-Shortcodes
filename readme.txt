@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,15 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 
 
 == Changelog ==
+
+
+= 1.5.6 (September 17, 2017) =
+
+* Added color picker plugin to TinyMCE Editor.
+* Optimized the directory and file structure, delete the unnecessary files and codes.
+* Improve the Uix Shortcods assistant(helper) experience in admin panel.
+
+
 
 = 1.5.5 (September 16, 2017) =
 

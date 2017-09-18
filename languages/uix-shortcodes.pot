@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-17 13:36+0000\n"
+"POT-Creation-Date: 2017-09-18 04:05+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,59 +23,59 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: uix-shortcodes.php:437 uix-shortcodes.php:558 uix-shortcodes.php:559
+#: uix-shortcodes.php:423 uix-shortcodes.php:544 uix-shortcodes.php:545
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:438 uix-shortcodes.php:549 uix-shortcodes.php:550
-#: helper/settings.php:171
+#: uix-shortcodes.php:424 uix-shortcodes.php:535 uix-shortcodes.php:536
+#: helper/settings.php:63
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:537 helper/settings.php:152
+#: uix-shortcodes.php:523 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:538 shortcodes/editor/tinymce-plugin-lang.php:16
+#: uix-shortcodes.php:524 shortcodes/editor/tinymce-plugin-lang.php:16
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:566 uix-shortcodes.php:567
+#: uix-shortcodes.php:552 uix-shortcodes.php:553
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:574 uix-shortcodes.php:575
+#: uix-shortcodes.php:560 uix-shortcodes.php:561
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:951
+#: uix-shortcodes.php:937
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
 msgstr ""
 
-#: helper/settings.php:8
+#: helper/settings.php:35
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: helper/settings.php:166
+#: helper/settings.php:58
 msgid "About"
 msgstr ""
 
-#: helper/settings.php:176
+#: helper/settings.php:68
 msgid "Documentation"
 msgstr ""
 
-#: helper/settings.php:182
+#: helper/settings.php:74
 msgid "Credits"
 msgstr ""
 
-#: helper/settings.php:187
+#: helper/settings.php:79
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: helper/settings.php:192
+#: helper/settings.php:84
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
@@ -369,15 +369,19 @@ msgid ""
 "css files."
 msgstr ""
 
-#: helper/tabs/custom-css.php:142 helper/tabs/custom-css.php:182
+#: helper/tabs/custom-css.php:119
+msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
+msgstr ""
+
+#: helper/tabs/custom-css.php:147 helper/tabs/custom-css.php:160
 msgid "CSS file root directory:"
 msgstr ""
 
-#: helper/tabs/custom-css.php:147 helper/tabs/custom-css.php:213
+#: helper/tabs/custom-css.php:152 helper/tabs/custom-css.php:192
 msgid "Close"
 msgstr ""
 
-#: helper/tabs/custom-css.php:208 helper/tabs/custom-css.php:248
+#: helper/tabs/custom-css.php:187 helper/tabs/custom-css.php:202
 msgid "RTL CSS file root directory:"
 msgstr ""
 

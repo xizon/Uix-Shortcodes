@@ -67,6 +67,14 @@ The currently available default elements:
 ### Updates
 
 
+##### = 1.5.6 (September 17, 2017) =
+
+* Added color picker plugin to TinyMCE Editor.
+* Optimized the directory and file structure, delete the unnecessary files and codes.
+* Improve the Uix Shortcods assistant(helper) experience in admin panel.
+
+
+
 ##### = 1.5.5 (September 16, 2017) =
 
 * Supports Right-To-Left (RTL) direction and updated the core stylesheet file of front-end.
