@@ -1023,6 +1023,20 @@ class UixShortcodes {
 		  }	
 	}
 	
+
+	/**
+	 * Determine whether the javascript core file exists
+	 *
+	 */
+	public static function core_js_file_exists() {
+		  $newFilePath      = get_stylesheet_directory() . '/uix-shortcodes-custom.js';
+	      $newFilePath2     = get_stylesheet_directory() . '/assets/js/uix-shortcodes-custom.js';
+		  if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
+			  return true;
+		  } else {
+			  return false;
+		  }	
+	}
 	
 	/**
 	 * Returns .css file name of custom shortcodes 

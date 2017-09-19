@@ -20,15 +20,15 @@
 		 * Custom CSS
 		 * ---------------------------------------------------
 		 */
-		var uix_sc_dialog_wrapper = '.uix-shortcodes-dialog-wrapper',
-			uix_sc_dialog         = '.uix-shortcodes-dialog-mask, .uix-shortcodes-dialog';
-		$( '.uix-shortcodes-viewcss-btn' ).on( 'click', function( e ) {
+		var uix_sc_dialog_wrapper = '.uix-popwin-dialog-wrapper',
+			uix_sc_dialog         = '.uix-popwin-dialog-mask, .uix-popwin-dialog';
+		$( '.uix-popwin-viewcss-btn' ).on( 'click', function( e ) {
 			e.preventDefault();
 			$( this ).closest( uix_sc_dialog_wrapper ).find( uix_sc_dialog ).show();
 			
 		});
 		
-		$( '.uix-shortcodes-dialog .close' ).on( 'click', function( e ) {
+		$( '.uix-popwin-dialog .close' ).on( 'click', function( e ) {
 			e.preventDefault();
 			$( this ).closest( uix_sc_dialog_wrapper ).find( uix_sc_dialog ).hide();
 		});

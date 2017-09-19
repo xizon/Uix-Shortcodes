@@ -86,7 +86,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
         <?php wp_nonce_field( 'uix_sc_customcss' ); ?>
         
           <?php if ( UixShortcodes::core_css_file_exists() ) :  ?>
-				<p class="uix-bg-custom-desc" style="color: green;">
+				<p class="uix-bg-custom-info-msg">
 					<i class="dashicons dashicons-smiley"></i> <?php _e( 'You have already used custom stylesheet files.', 'uix-shortcodes' ); ?>
 				</p>  
           <?php else:  ?>
@@ -94,20 +94,29 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 
 
 				   <?php
-				   printf( __( '1) Making a new Cascading Style Sheet (CSS) document which name to <strong>uix-shortcodes-custom.css</strong> and <strong>uix-shortcodes-custom-rtl.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet instead of the <a href="%1$s" target="_blank">%2$s</a> and <a href="%3$s" target="_blank">%4$s</a> to your WordPress Theme. Of course, Uix Shortcodes\'s function of "Custom CSS" is still valid.', 'uix-shortcodes' ), $org_csspath_uix_shortcodes, $org_cssname_uix_shortcodes, UixShortcodes::to_rtl_css( $org_csspath_uix_shortcodes ), UixShortcodes::to_rtl_css( $org_cssname_uix_shortcodes ) );   
+				   printf( __( '- Making a new Cascading Style Sheet (CSS) document which name to <strong>uix-shortcodes-custom.css</strong> and <strong>uix-shortcodes-custom-rtl.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet instead of the <a href="%1$s" target="_blank">%2$s</a> and <a href="%3$s" target="_blank">%4$s</a> to your WordPress Theme. Of course, Uix Shortcodes\'s function of "Custom CSS" is still valid.', 'uix-shortcodes' ), $org_csspath_uix_shortcodes, $org_cssname_uix_shortcodes, UixShortcodes::to_rtl_css( $org_csspath_uix_shortcodes ), UixShortcodes::to_rtl_css( $org_cssname_uix_shortcodes ) );   
 				   ?>
 
-				</p>    
+				</p>  
+          <?php endif;  ?> 
+        
+            
+          <?php if ( UixShortcodes::core_js_file_exists() ) :  ?>
+				<p class="uix-bg-custom-info-msg">
+					<i class="dashicons dashicons-smiley"></i> <?php _e( 'You have already used custom JavaScript files.', 'uix-shortcodes' ); ?>
+				</p>  
+          <?php else:  ?>
 				<p class="uix-bg-custom-desc">
 
 				   <?php
-				   printf( __( '2) Making a new javascrpt (.js) document which name to <strong>uix-shortcodes-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Shortcodes will use it as a default script instead of the "<a href="%1$s" target="_blank">%2$s</a>" to your WordPress Theme.', 'uix-shortcodes' ), $org_jspath_uix_shortcodes, $org_jsname_uix_shortcodes );   
+				   printf( __( '- Making a new javascrpt (.js) document which name to <strong>uix-shortcodes-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Shortcodes will use it as a default script instead of the "<a href="%1$s" target="_blank">%2$s</a>" to your WordPress Theme.', 'uix-shortcodes' ), $org_jspath_uix_shortcodes, $org_jsname_uix_shortcodes );   
 				   ?>
 
 				</p>    
           
           <?php endif;  ?> 
-        
+              
+            
 
             
         <table class="form-table">
@@ -143,11 +152,11 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 		
 		echo '
 		
-		         <div class="uix-shortcodes-dialog-wrapper">
+		         <div class="uix-popwin-dialog-wrapper">
 				    '.esc_html__( 'CSS file root directory:', 'uix-shortcodes' ).' 
-				     <a href="javascript:" class="uix-shortcodes-viewcss-btn" >'.$org_csspath_uix_shortcodes.'</a>
-					 <div class="uix-shortcodes-dialog-mask"></div>
-					 <div class="uix-shortcodes-dialog">  
+				     <a href="javascript:" class="uix-popwin-viewcss-btn" >'.$org_csspath_uix_shortcodes.'</a>
+					 <div class="uix-popwin-dialog-mask"></div>
+					 <div class="uix-popwin-dialog">  
 						<textarea rows="15" style=" width:95%;" class="regular-text">'.$sourcecode.'</textarea>
 						<a href="javascript:" class="close button button-primary">'.esc_html__( 'Close', 'uix-shortcodes' ).'</a>  
 					</div>
@@ -183,11 +192,11 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 		
 		echo '
 		
-		         <div class="uix-shortcodes-dialog-wrapper">
+		         <div class="uix-popwin-dialog-wrapper">
 				     '.esc_html__( 'RTL CSS file root directory:', 'uix-shortcodes' ).' 
-				     <a href="javascript:" class="uix-shortcodes-viewcss-btn" >'.$org_csspath_uix_shortcodes_rtl.'</a>
-					 <div class="uix-shortcodes-dialog-mask"></div>
-					 <div class="uix-shortcodes-dialog">  
+				     <a href="javascript:" class="uix-popwin-viewcss-btn" >'.$org_csspath_uix_shortcodes_rtl.'</a>
+					 <div class="uix-popwin-dialog-mask"></div>
+					 <div class="uix-popwin-dialog">  
 						<textarea rows="15" style=" width:95%;" class="regular-text">'.$sourcecode_rtl.'</textarea>
 						<a href="javascript:" class="close button button-primary">'.esc_html__( 'Close', 'uix-shortcodes' ).'</a>  
 					</div>
