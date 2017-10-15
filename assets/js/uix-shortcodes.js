@@ -644,18 +644,29 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
     var documentReady = function( $ ) {
 
-		uix_sc_parallaxInit();
-		$( window ).on( 'resize', function() {
-		   uix_sc_parallaxInit();
-
+		
+        var $window       = $( window ),
+		    windowWidth   = $window.width();
+		
+		uix_sc_parallaxInit( windowWidth );
+		
+		$window.on('resize', function() {
+			windowWidth = $window.width();
+			$( '.uix-pb-parallax' ).removeData( 'activated' );
+			uix_sc_parallaxInit( windowWidth );
 		});
-
-		function uix_sc_parallaxInit() {
+		
+		function uix_sc_parallaxInit( w ) {
 			$( '.uix-sc-parallax' ).each(function() {
-				$( this ).bgParallax( "50%", $( this ).data( 'parallax' ) );
+				
+				if ( w <= 768 ){
+					 $( this ).bgParallax( "0%", 0 );
+				} else {
+					$( this ).bgParallax( "50%", $( this ).data( 'parallax' ) );	
+				}
 			});
-		};
-
+			
+		}
 
 	};
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-18 04:05+0000\n"
+"POT-Creation-Date: 2017-10-15 11:13+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -336,7 +336,7 @@ msgstr ""
 #: helper/tabs/custom-css.php:97
 #, php-format
 msgid ""
-"1) Making a new Cascading Style Sheet (CSS) document which name to <strong>"
+"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
 "uix-shortcodes-custom.css</strong> and <strong>uix-shortcodes-custom-rtl."
 "css</strong> to your templates directory ( <code>/wp-content/themes/{your-"
 "theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> )."
@@ -348,40 +348,44 @@ msgid ""
 "Shortcodes's function of \"Custom CSS\" is still valid."
 msgstr ""
 
-#: helper/tabs/custom-css.php:104
+#: helper/tabs/custom-css.php:106
+msgid "You have already used custom JavaScript files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:112
 #, php-format
 msgid ""
-"2) Making a new javascrpt (.js) document which name to <strong>uix-"
-"shortcodes-custom.js</strong> to your templates directory ( <code>/wp-"
+"- Making a new javascrpt (.js) document which name to <strong>uix-shortcodes-"
+"custom.js</strong> to your templates directory ( <code>/wp-"
 "content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
 "/assets/js/</code> ). Once you have created an existing JS file, Uix "
 "Shortcodes will use it as a default script instead of the \"<a href=\"%1$s\" "
 "target=\"_blank\">%2$s</a>\" to your WordPress Theme."
 msgstr ""
 
-#: helper/tabs/custom-css.php:116
+#: helper/tabs/custom-css.php:125
 msgid "Paste your CSS code"
 msgstr ""
 
-#: helper/tabs/custom-css.php:118
+#: helper/tabs/custom-css.php:127
 msgid ""
 "You could add new styles code to your website, without modifying original ."
 "css files."
 msgstr ""
 
-#: helper/tabs/custom-css.php:119
+#: helper/tabs/custom-css.php:128
 msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
 msgstr ""
 
-#: helper/tabs/custom-css.php:147 helper/tabs/custom-css.php:160
+#: helper/tabs/custom-css.php:156 helper/tabs/custom-css.php:169
 msgid "CSS file root directory:"
 msgstr ""
 
-#: helper/tabs/custom-css.php:152 helper/tabs/custom-css.php:192
+#: helper/tabs/custom-css.php:161 helper/tabs/custom-css.php:201
 msgid "Close"
 msgstr ""
 
-#: helper/tabs/custom-css.php:187 helper/tabs/custom-css.php:202
+#: helper/tabs/custom-css.php:196 helper/tabs/custom-css.php:211
 msgid "RTL CSS file root directory:"
 msgstr ""
 
@@ -448,6 +452,10 @@ msgid ""
 "Administration Screens, then link to a specific tab like \"Custom CSS\".</h4>"
 msgstr ""
 
+#: helper/tabs/usage.php:37
+msgid "&tab=custom-css\">Add custom stylesheets by clicking here</a>"
+msgstr ""
+
 #: shortcodes/editor/tinymce-plugin-lang.php:12
 msgid "Hello Form"
 msgstr ""
@@ -471,7 +479,7 @@ msgid "Content"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:18
-#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:149
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:154
 msgid "Recent Posts"
 msgstr ""
 
@@ -618,7 +626,7 @@ msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:47
 #: shortcodes/templates/default/panel/uix_sc_container.php:350
-msgid "Container"
+msgid "Container/Parallax"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:48
@@ -719,11 +727,20 @@ msgstr ""
 msgid "-"
 msgstr ""
 
-#: shortcodes/templates/default/frontpage-init.php:875
+#: shortcodes/templates/default/frontpage-init.php:324
+msgid ",&nbsp;"
+msgstr ""
+
+#: shortcodes/templates/default/frontpage-init.php:331
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: shortcodes/templates/default/frontpage-init.php:905
 msgid "All"
 msgstr ""
 
-#: shortcodes/templates/default/frontpage-init.php:1537
+#: shortcodes/templates/default/frontpage-init.php:1567
 msgid "Comments are closed."
 msgstr ""
 
@@ -1875,14 +1892,34 @@ msgid "Excerpt"
 msgstr ""
 
 #: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:96
+msgid "Categories with hyperlinks)"
+msgstr ""
+
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:97
+msgid "Categories"
+msgstr ""
+
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:98
+msgid "HTML attributes of categories"
+msgstr ""
+
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:99
 msgid "Featured image"
 msgstr ""
 
-#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:112
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:100
+msgid "Featured image URL"
+msgstr ""
+
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:101
+msgid "Format slug"
+msgstr ""
+
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:117
 msgid "Output text before the &lt;a&gt; of the link"
 msgstr ""
 
-#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:122
+#: shortcodes/templates/default/panel/uix_sc_form_recent_posts.php:127
 msgid "Output text after the &lt;/a&gt; of the link"
 msgstr ""
 

@@ -44,7 +44,7 @@ function uix_sc_custom_tinymce_plugin_translation() {
 		'lang_29' => __( 'Contact Form', 'uix-shortcodes' ),
 		'lang_30' => __( 'Code', 'uix-shortcodes' ),
 		'lang_31' => __( 'Portfolio', 'uix-shortcodes' ),
-		'lang_32' => __( 'Container', 'uix-shortcodes' ),
+		'lang_32' => __( 'Container/Parallax', 'uix-shortcodes' ),
 		'lang_33' => __( 'Progress Bar', 'uix-shortcodes' ),
 		'lang_34' => __( 'Author Card', 'uix-shortcodes' ),
 		

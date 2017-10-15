@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.5.6
+Stable tag: 1.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,15 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 
 
 == Changelog ==
+
+
+= 1.5.7 (October 14, 2017) =
+
+* Fixed some bugs for parallax and container shortcodes for mobile.
+* Optimized the Container/Parallax shortcode.
+* Optimized the Progress Bar shortcode for mobile.
+* Added some new placeholders(featured image, categories) for the posts shortcode output.
+
 
 
 = 1.5.6 (September 17, 2017) =

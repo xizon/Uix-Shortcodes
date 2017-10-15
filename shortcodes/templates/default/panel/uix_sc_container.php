@@ -281,7 +281,7 @@ $args =
 			'default'        => array(
 			                        'units_id'  => 'uix_sc_container_parallax_units',
 									'units'  => '',
-									'min'   => 0,
+									'min'   => -10,
 									'max'   => 10,
 									'step'  => 0.1
 				                )
@@ -347,7 +347,7 @@ UixShortcodes::form_scripts( array(
 										),
 
 									),
-		'title'                   => esc_html__( 'Container', 'uix-shortcodes' ),
+		'title'                   => esc_html__( 'Container/Parallax', 'uix-shortcodes' ),
 	    'js_template'             => '
 		
 		   var uix_sc_container_result_vertical_center = ( uix_sc_container_vertical_center === false ) ? "vertical_center=\'"+uix_sc_container_vertical_center+"\'" : \'\',

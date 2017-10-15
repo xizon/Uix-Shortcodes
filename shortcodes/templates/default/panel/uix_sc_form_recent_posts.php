@@ -93,7 +93,12 @@ $args =
                       <code>[uix_recent_posts_date_d]</code> --&gt;  '.esc_html__( 'Day', 'uix-shortcodes' ).'<br>
                       <code>[uix_recent_posts_date_y]</code> --&gt;  '.esc_html__( 'Year', 'uix-shortcodes' ).'<br>
                       <code>[uix_recent_posts_excerpt]</code> --&gt;  '.esc_html__( 'Excerpt', 'uix-shortcodes' ).'<br>
-					  <code>[uix_recent_posts_thumbnail]</code> --&gt;  '.esc_html__( 'Featured image', 'uix-shortcodes' ).'
+					  <code>[uix_recent_posts_cat_link]</code> --&gt;  '.esc_html__( 'Categories with hyperlinks)', 'uix-shortcodes' ).'<br>
+					  <code>[uix_recent_posts_cat_text]</code> --&gt;  '.esc_html__( 'Categories', 'uix-shortcodes' ).'<br>
+					  <code>[uix_recent_posts_cat_attr]</code> --&gt;  '.esc_html__( 'HTML attributes of categories', 'uix-shortcodes' ).'<br>
+					  <code>[uix_recent_posts_thumbnail]</code> --&gt;  '.esc_html__( 'Featured image', 'uix-shortcodes' ).'<br>
+					  <code>[uix_recent_posts_thumbnail_url]</code> --&gt;  '.esc_html__( 'Featured image URL', 'uix-shortcodes' ).'<br>
+					  <code>[uix_recent_posts_format]</code> --&gt;  '.esc_html__( 'Format slug', 'uix-shortcodes' ).'
 					  
                   </strong>
 			',

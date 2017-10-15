@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.5.7 (October 14, 2017) =
+
+* Fixed some bugs for parallax and container shortcodes for mobile.
+* Optimized the Container/Parallax shortcode.
+* Optimized the Progress Bar shortcode for mobile.
+* Added some new placeholders(featured image, categories) for the posts shortcode output.
+
 
 ##### = 1.5.6 (September 17, 2017) =
 

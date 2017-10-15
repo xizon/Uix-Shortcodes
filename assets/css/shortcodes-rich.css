@@ -14,7 +14,7 @@
 	---------------------------
 	
 	1. Basic
-	2. Container    
+	2. Container/Parallax    
 	3. Portfolio  
 	4. Dividing Line 
 	5. Heading 
@@ -364,7 +364,7 @@ img.uix-sc-img,
 
 
 /* ====================================================== 
-   2. Container ( Compatible with Bootstrap 3.x )                           
+   2. Container/Parallax ( Compatible with Bootstrap 3.x )                           
 /* ====================================================== */
 .uix-sc-container,
 .uix-sc-container.uix-sc-container-boxed {
@@ -375,6 +375,23 @@ img.uix-sc-img,
 	overflow: hidden;
 
 }
+
+@media all and (max-width: 768px) {
+	/* Parallax */
+	.uix-sc-container {
+		background-position: center center !important;
+		background-attachment: scroll !important;
+		-webkit-background-size: cover !important;
+		-moz-background-size: cover !important;
+		background-size: cover !important;
+	}
+	
+	.uix-sc-container-body {
+		padding: 25px !important;
+	}
+
+}
+
 
 @media (max-width: 767px) {
     .uix-sc-container,
@@ -2280,6 +2297,20 @@ img.uix-sc-img,
 		}
 		
 	
+@media all and (max-width: 768px) {
+	
+	.uix-sc-bar-box {
+		width: 100% !important;
+		margin-bottom: 25px !important;
+	}
+	
+	.uix-sc-bar-box > div {
+		width: auto !important;
+	}
+	
+		
+}
+
 /* square */
 .uix-sc-bar-box.uix-sc-bar-box-square{
 	position: relative;

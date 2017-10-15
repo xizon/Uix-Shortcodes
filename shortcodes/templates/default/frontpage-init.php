@@ -302,18 +302,43 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 
 	
 	
+	/**
+	 *  Custom posts loop structure
+	 *
+	 */
 	 $return_string = '';
 
 	if ( $wp_query->have_posts() ) {
 	  while ( $wp_query->have_posts() ) : $wp_query->the_post();
 	  
 		//featured image
-		$thumbnail_src       =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
+		$thumbnail_src       =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'post-thumbnail' );
 		$post_thumbnail_src  =  $thumbnail_src[0];  
 		$post_thumbnail      = '<img class="uix-sc-recent-posts-thumbnail" src="'.esc_url( $post_thumbnail_src ).'" alt="'.esc_attr( get_the_title() ).'">';
 		if ( empty( $post_thumbnail_src ) ) $post_thumbnail = '';
+
+		
 	  
-	  
+		//Parse WP Posts Categories
+		//Used between list items, there is a space after the comma
+		$separate_meta = esc_html__( ',&nbsp;', 'uix-shortcodes' );
+		$post_cats     = array();
+		$categories    = get_the_category();
+
+
+		foreach ( $categories as $category ) { 
+
+			$post_cats[] = '<a title="'.esc_attr( sprintf( __( 'View all posts in %s', 'uix-shortcodes' ), $category->name ) ).'" data-cat-id="'.esc_attr( $category->term_id ).'" href="'.esc_url( get_category_link( $category->term_id ) ).'">'.esc_html( $category->name ).'</a>';
+		}
+
+		$post_cats = join( $separate_meta, $post_cats );	
+
+
+		//categories filterable
+		$cat_text  = wp_strip_all_tags( $post_cats );
+		$cat_attr  = sanitize_title( $cat_text );
+		
+		
 		$return_string .= str_replace( '[uix_recent_posts_link]', esc_url( get_permalink() ),
 		           str_replace( '[uix_recent_posts_title]', esc_attr( get_the_title() ),
 				   str_replace( '[uix_recent_posts_date_m]', get_the_time('m'),
@@ -321,9 +346,14 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 				   str_replace( '[uix_recent_posts_date_d]', get_the_time('d'),
 				   str_replace( '[uix_recent_posts_date_y]', get_the_time('y'),
 				   str_replace( '[uix_recent_posts_excerpt]', get_the_excerpt(),
+				   str_replace( '[uix_recent_posts_cat_link]', $post_cats,	
+				   str_replace( '[uix_recent_posts_cat_text]', $cat_text,  
+				   str_replace( '[uix_recent_posts_cat_attr]', $cat_attr,	   
 				   str_replace( '[uix_recent_posts_thumbnail]', $post_thumbnail,
+				   str_replace( '[uix_recent_posts_thumbnail_url]', esc_url( $post_thumbnail_src ),
+				   str_replace( '[uix_recent_posts_format]', get_post_format(),
 				   UixShortcodes::decode( $content )
-				   ))))))))
+				   )))))))))))))
 				   .PHP_EOL;
 
 
