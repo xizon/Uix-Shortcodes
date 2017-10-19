@@ -249,8 +249,8 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 	 ), $atts ) );
 	 
 	 
-	 $before = wp_specialchars_decode( $before ).PHP_EOL;
-	 $after = wp_specialchars_decode( $after ).PHP_EOL;
+	 $before = UixShortcodes::decode_shortcode_htmlAttr( $before ).PHP_EOL;
+	 $after = UixShortcodes::decode_shortcode_htmlAttr( $after ).PHP_EOL;
 	 
 	if ( $cat != 'all' ) {
 		
@@ -313,7 +313,7 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 	  
 		//featured image
 		$thumbnail_src       =  wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'post-thumbnail' );
-		$post_thumbnail_src  =  $thumbnail_src[0];  
+		$post_thumbnail_src  =  ( !empty( $thumbnail_src[0] ) ) ? $thumbnail_src[0] : UixSCFormCore::photo_placeholder();
 		$post_thumbnail      = '<img class="uix-sc-recent-posts-thumbnail" src="'.esc_url( $post_thumbnail_src ).'" alt="'.esc_attr( get_the_title() ).'">';
 		if ( empty( $post_thumbnail_src ) ) $post_thumbnail = '';
 
@@ -352,7 +352,7 @@ function uix_sc_fun_recent_posts( $atts, $content = null ) {
 				   str_replace( '[uix_recent_posts_thumbnail]', $post_thumbnail,
 				   str_replace( '[uix_recent_posts_thumbnail_url]', esc_url( $post_thumbnail_src ),
 				   str_replace( '[uix_recent_posts_format]', get_post_format(),
-				   UixShortcodes::decode( $content )
+				   UixShortcodes::decode_shortcode_htmlAttr( $content )
 				   )))))))))))))
 				   .PHP_EOL;
 
@@ -870,13 +870,13 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
    $col_class = '';
     switch ( $col ) {
         case 4:
-            $col_class = '{classprefix}col4';
+            $col_class = $classprefix.'col4';
             break;
         case 3:
-            $col_class = '{classprefix}col3';
+            $col_class = $classprefix.'col3';
             break;
         case 2:
-            $col_class = '{classprefix}col2';
+            $col_class = $classprefix.'col2';
             break;
     }
    
@@ -1378,7 +1378,7 @@ function uix_sc_fun_map( $atts, $content = null ) {
 		
 	 ), $atts ) );
 	
-	if ( empty ( $marker ) ) $marker = UixShortcodes::plug_directory().'admin/uixscform/images/map/map-location.png';
+	if ( empty ( $marker ) ) $marker = UixShortcodes::plug_directory().'includes/uixscform/images/map/map-location.png';
 	 
     $return_string = '<div class="uix-sc-map-preview-tmpl"></div><div class="uix-sc-map-preview-container" data-width="'.esc_attr( $width ).'" data-height="'.esc_attr( $height ).'" data-style='.esc_attr( $style ).' data-latitude='.floatval( $latitude ).' data-longitude='.floatval( $longitude ).' data-zoom='.floatval( $zoom ).' data-name='.urlencode_deep( $name ).' data-marker='.esc_url( $marker ).'"></div>';
 	
@@ -1563,7 +1563,7 @@ function uix_sc_fun_contact_form( $atts, $content = null ) {
 	
 
 	// If comments are closed and there are comments,let's leave a little note,shall we?
-	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) {
+	if ( ! comments_open() && post_type_supports( get_post_type(), 'comments' ) ) {
 		$return_string = '<p class="no-comments uix-sc-no-comments">'.__( 'Comments are closed.', 'uix-shortcodes' ).'</p>';
 	} 
 
@@ -1701,8 +1701,8 @@ function uix_sc_fun_imageslider_item( $atts, $content = null ){
 	if ( !empty( $title ) || !empty( $desc ) ) {
 		$intro = '
 		  <div class="slide-text">
-		      '.( !empty( $title ) ? '<div class="slide-title">'.$title.'</div>' : '' ).'
-			  '.( !empty( $desc ) ? '<div class="slide-byline">'.$desc.'</div>' : '' ).'
+		      '.( !empty( $title ) ? '<div class="slide-title">'.UixShortcodes::decode_shortcode_htmlAttr( $title ).'</div>' : '' ).'
+			  '.( !empty( $desc ) ? '<div class="slide-byline">'.UixShortcodes::decode_shortcode_htmlAttr( $desc ).'</div>' : '' ).'
 		  </div>
 		';
 	}

@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.5.7
+Stable tag: 1.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,19 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 
 
 == Changelog ==
+
+= 1.5.8 (October 17, 2017) =
+
+* New: New API rebuilds. (Important!)
+* New: Upgraded core API for developer customization.
+* New: Support a particularly simple custom form and template API.
+* New: Add stylesheets of Recent Posts shortcode on your front-end pages.
+* Tweak: Optimize the interface user experience.
+* Tweak: Removed ajax method of all modules pop-window in admin panel, reduce High CPU Usage of Wordpress.
+* Tweak: Each module manages the response speed by more than 10 times.
+* Tweak: Simplifies all module APIs.
+* Tweak: Reference jQuery Templates plugin to create pure HTML templates of front-end page.
+* Tweak: Optimized array loop efficiency.
 
 
 = 1.5.7 (October 14, 2017) =

@@ -963,7 +963,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 				fullclass = $frame.parent( 'div' ).attr( 'class' ),
 			    curheight = $frame.data( 'height' );
 
-			$frame.prev( '.uix-sc-map-preview-tmpl' ).load( uixScRootUrl + 'admin/preview/map.html', function( response, status, xhr ) {
+			$frame.prev( '.uix-sc-map-preview-tmpl' ).load( uixScRootUrl + 'includes/preview/map.html', function( response, status, xhr ) {
 
 				response = response.replace(/\<script([^>]+)\>/g, '' ).replace(/\<\/script\>/g, '' );
 

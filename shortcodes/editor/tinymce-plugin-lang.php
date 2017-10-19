@@ -9,6 +9,7 @@ if ( ! class_exists( '_WP_Editors' ) )
 
 function uix_sc_custom_tinymce_plugin_translation() {
     $strings = array(
+		'lang_demo_enable' => UixShortcodes::DEMOFORM,
 	    'lang_demo_1' => __( 'Hello Form', 'uix-shortcodes' ),
 		'lang_demo_2' => __( 'Column Form', 'uix-shortcodes' ),
 		'lang_demo_3' => __( 'Text', 'uix-shortcodes' ),
@@ -30,8 +31,8 @@ function uix_sc_custom_tinymce_plugin_translation() {
 		'lang_15' => __( 'Client', 'uix-shortcodes' ),
 		'lang_16' => __( 'Image Slider', 'uix-shortcodes' ),
 		'lang_17' => __( 'Timeline', 'uix-shortcodes' ),
-		'lang_18' => __( 'Testimonials', 'uix-shortcodes' ),
-		'lang_19' => __( 'Responsive Video', 'uix-shortcodes' ),
+		'lang_18' => __( 'Testimonials Carousel', 'uix-shortcodes' ),
+		'lang_19' => __( 'Video', 'uix-shortcodes' ),
 		'lang_20' => __( 'Audio', 'uix-shortcodes' ),
 		'lang_21' => __( 'Column', 'uix-shortcodes' ),
 		'lang_22' => __( 'Web Elements', 'uix-shortcodes' ),
@@ -42,7 +43,7 @@ function uix_sc_custom_tinymce_plugin_translation() {
 		'lang_27' => __( 'Icon', 'uix-shortcodes' ),
 		'lang_28' => __( 'Google Map', 'uix-shortcodes' ),
 		'lang_29' => __( 'Contact Form', 'uix-shortcodes' ),
-		'lang_30' => __( 'Code', 'uix-shortcodes' ),
+		'lang_30' => __( 'Source Code', 'uix-shortcodes' ),
 		'lang_31' => __( 'Portfolio', 'uix-shortcodes' ),
 		'lang_32' => __( 'Container/Parallax', 'uix-shortcodes' ),
 		'lang_33' => __( 'Progress Bar', 'uix-shortcodes' ),

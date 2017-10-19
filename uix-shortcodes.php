@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.5.7
+ * Version:     1.5.8
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -78,7 +78,7 @@ class UixShortcodes {
 	 *
 	 */
 	public static function includes() {
-		require_once UIX_SHORTCODES_PLUGIN_DIR.'admin/uixscform/init.php';
+		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/uixscform/init.php';
 	}
 	
 	
@@ -264,83 +264,86 @@ class UixShortcodes {
 		$newname = $name;
 		
 		switch ( $name ) {
+			case 'container':
+				$newname = 'uix_sc_module_container';
+				break;				
 			case 'pricing-3-col':
-				$newname = 'uix_sc_form_pricing_col3';
+				$newname = 'uix_sc_module_pricing_col3';
 				break;
 			case 'pricing-4-col':
-				$newname = 'uix_sc_form_pricing_col4';
+				$newname = 'uix_sc_module_pricing_col4';
 				break;
 			case 'features-2-col':
-				$newname = 'uix_sc_form_features_col2';
+				$newname = 'uix_sc_module_features_col2';
 				break;
 			case 'features-3-col':
-				$newname = 'uix_sc_form_features_col3';
+				$newname = 'uix_sc_module_features_col3';
 				break;
 			case 'team-grid':
-				$newname = 'uix_sc_form_team_grid';
+				$newname = 'uix_sc_module_team_grid';
 				break;
 			case 'team-fullwidth':
-				$newname = 'uix_sc_form_team_fullwidth';
+				$newname = 'uix_sc_module_team_fullwidth';
 				break;
 			case 'progress-bar':
-				$newname = 'uix_sc_form_bar';
+				$newname = 'uix_sc_module_bar';
 				break;
 			case 'testimonials':
-				$newname = 'uix_sc_testimonials';
+				$newname = 'uix_sc_module_testimonials';
 				break;
 			case 'map':
-				$newname = 'uix_sc_map';
+				$newname = 'uix_sc_module_map';
 				break;
 			case 'heading':
-				$newname = 'uix_sc_heading';
+				$newname = 'uix_sc_module_heading';
 				break;
 			case 'video':
-				$newname = 'uix_sc_form_video';
+				$newname = 'uix_sc_module_video';
 				break;
 			case 'tabs':
-				$newname = 'uix_sc_form_tabs';
+				$newname = 'uix_sc_module_tabs';
 				break;	
 			case 'share-buttons':
-				$newname = 'uix_sc_form_share_buttons';
+				$newname = 'uix_sc_module_share_buttons';
 				break;	
 			case 'recent-posts':
-				$newname = 'uix_sc_form_recent_posts';
+				$newname = 'uix_sc_module_recent_posts';
 				break;	
 			case 'portfolio':
-				$newname = 'uix_sc_form_portfolio_grid';
+				$newname = 'uix_sc_module_portfolio_grid';
 				break;					
 			case 'icon':
-				$newname = 'uix_sc_form_icon';
+				$newname = 'uix_sc_module_icon';
 				break;	
 			case 'code':
-				$newname = 'uix_sc_form_code';
+				$newname = 'uix_sc_module_code';
 				break;	
 			case 'client':
-				$newname = 'uix_sc_form_client';
+				$newname = 'uix_sc_module_client';
 				break;		
 			case 'button':
-				$newname = 'uix_sc_form_button';
+				$newname = 'uix_sc_module_button';
 				break;		
 			case 'authorcard':
-				$newname = 'uix_sc_form_authorcard';
+				$newname = 'uix_sc_module_authorcard';
 				break;			
 			case 'audio':
-				$newname = 'uix_sc_form_audio';
+				$newname = 'uix_sc_module_audio';
 				break;				
 			case 'accordion':
-				$newname = 'uix_sc_form_accordion';
+				$newname = 'uix_sc_module_accordion';
 				break;			
 			case 'dividing-line':
-				$newname = 'uix_sc_dividing_line';
+				$newname = 'uix_sc_module_dividing_line';
 				break;	
 			case 'contact-form':
-				$newname = 'uix_sc_contact_form';
+				$newname = 'uix_sc_module_contact_form';
 				break;
 			case 'timeline':
-				$newname = 'uix_sc_form_timeline';
+				$newname = 'uix_sc_module_timeline';
 				break;	
 			case 'imageslider':
-				$newname = 'uix_sc_form_imageslider';
+				$newname = 'uix_sc_module_imageslider';
 				break;		
 			default:
 				$newname = $name;
@@ -351,8 +354,6 @@ class UixShortcodes {
 		$file   = $folder.''.$newname.'.php';
 		
 		if ( file_exists( $file ) ) require_once $file;
-		
-		
 		
 		
   
@@ -378,8 +379,8 @@ class UixShortcodes {
 		$shortcodes_style = self::theme();
 		
 		if ( !$front ) {
-			$default_dir      = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/default/panel/';
-			$cur_dir          = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/'.$shortcodes_style.'/panel/';
+			$default_dir      = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/default/modules/';
+			$cur_dir          = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/'.$shortcodes_style.'/modules/';
 		} else {
 			$default_dir      = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/default/';
 			$cur_dir          = UIX_SHORTCODES_PLUGIN_DIR.'shortcodes/templates/'.$shortcodes_style.'/';	
@@ -971,6 +972,22 @@ class UixShortcodes {
 		  } 
 	}	 
 	
+	/*
+	 * Output a string of attributes in the shortcode with HTML
+	 *
+	 *
+	 */
+	public static function decode_shortcode_htmlAttr( $str ) {
+	
+		return  str_replace( '&lt;', "<",	
+				str_replace( '&gt;', ">",	
+				str_replace( '&amp;#91;', "[",	
+				str_replace( '&amp;#93;', "]",			
+				$str 
+				) ) ) );
+		
+	}
+			
 	
 	
 	/*
@@ -980,8 +997,19 @@ class UixShortcodes {
 	 */
 	public static function do_callback( $str ) {
 	
-	    $str = str_replace( '<p>[', "[", $str );
-		$str = str_replace( ']</p>', "]", $str );
+		//Filters a string cleaned and escaped for output
+		$str =  str_replace( ']</p>', "]",	
+				str_replace( '<p>[', "[", 		
+				str_replace( '&amp;#39;', "&#39;", 	   
+				str_replace( '&amp;#34;', "&#34;", 
+				str_replace( '&amp;#91;', "&#91;",			   
+				str_replace( '&amp;#93;', "&#93;",	
+				str_replace( '&amp;nbsp;', " ",
+				str_replace( '&amp;#91;br&amp;#93;', "<br>",	
+				$str 
+				) ) ) ) ) ) ) );
+		
+		
 		$value = do_shortcode( $str );
 
 		
@@ -993,16 +1021,15 @@ class UixShortcodes {
 		   '<li>', '</li>', '<ul>', '</ul>', '<ol>', '</ol>', '<p>', '</p>', '<br>', '"', "'"
 		  );  
 		
-		//remove <br> or <br /> tags
+		//Remove <br> or <br /> tags
 		$value = preg_replace( '/(<br\s*\/>)+/', '', $value );
 		
-		//remove empty paragraph tags
+		//Remove empty paragraph tags
 		$value = preg_replace( '/<div(.*?)>([\s]*)<\/p>/', "<div$1>", $value );
 		$value = preg_replace( '/<p>([\s]*)<\/div>/', "</div>", $value );
 		
 		$value = str_replace( $searcharray[ 'sc_str' ], $replacearray[ 'sc_str' ], $value );
 		
-
 	    return  $value;
 
 	}
@@ -1136,33 +1163,6 @@ class UixShortcodes {
 		
 	}
 	
-	
-	
-	
-	/*
-	 * Decode template for shortcode attributes
-	 *
-	 *
-	 */
-	public static function decode( $str ) {
-
-
-         if ( $str ) {
-			 $restr = str_replace( '&#8217;', '\'',
-					   str_replace( '&#8221;', '"',
-					   str_replace( '&apos;', '\'',
-					   str_replace( '&quot;', '"',
-					   wp_specialchars_decode( $str )
-					   ))));
-					   
-	 
-		 } else {
-		    $restr = $str;
-		 }
-		 
-		 return $restr;
-
-	}
 	
 	
 	
@@ -1357,31 +1357,7 @@ class UixShortcodes {
 		
 	}
 	
-	/*
-	 * Initialize sections template parameters
-	 *
-	 *
-	 */
-	public static function init_template_parameters( $id ) {
 
-		//Form ID
-		$form_id = $id;
-
-		//Sections template parameters
-		$sid     = ( isset( $_POST[ 'sectionID' ] ) ) ? $_POST[ 'sectionID' ] : -1;
-		$pid     = ( isset( $_POST[ 'postID' ] ) ) ? $_POST[ 'postID' ] : 0;
-		$cid     = ( isset( $_POST[ 'contentID' ] ) ) ? $_POST[ 'contentID' ] : 'content';
-
-		$vars = array(
-			'sid'        => $sid,
-			'pid'        => $pid,
-			'cid'      => $cid,
-			'form_id'    => $form_id
-		);
-		
-		return $vars;
-
-	}
 
 	/*
 	 * Append associative array elements
@@ -1405,148 +1381,7 @@ class UixShortcodes {
 	}	
 	
 	
-	/*
-	 * Form javascripts output when in ajax or default state
-	 *
-	 *
-	 */
-	public static function form_scripts( $arr ) {
-		
-	
-		if ( is_array( $arr ) && sizeof( $arr ) >= 6 ) {
-		
-			//basic
-			$title            = $arr[ 'title' ];
-			$form_id          = $arr[ 'form_id' ];
-			$cid            = $arr[ 'content_id' ];
-			$sid              = $arr[ 'section_id' ];
-			$fields_args      = $arr[ 'fields' ];
-			$form_js_template = $arr[ 'js_template' ];
-			$multi_columns    = false;
-			$form_html        = '';
-			$form_js          = '';
-			$form_js_vars     = '';
 
-			if ( is_array( $fields_args ) ) {
-
-				foreach( $fields_args as $v ) :
-					if ( isset( $v[ 'title' ] ) && !empty( $v[ 'title' ] ) ) {
-						$multi_columns = true;
-						break;
-						
-					}
-				endforeach;
-				
-				if ( $multi_columns ) $form_html .= UixSCFormCore::form_before( $cid, $sid, $form_id );
-				
-				foreach( $fields_args as $v ) :
-					$column_title = '';
-					if ( isset( $v[ 'title' ] ) && !empty( $v[ 'title' ] ) ) {
-						$column_title  = $v[ 'title' ];
-					}
-					
-					$form_html    .= UixSCFormCore::add_form( $cid, $sid, $form_id, $v[ 'type' ], $v[ 'values' ], 'html', $column_title );
-					$form_js      .= UixSCFormCore::add_form( $cid, $sid, $form_id, $v[ 'type' ], $v[ 'values' ], 'js' );
-					$form_js_vars .= UixSCFormCore::add_form( $cid, $sid, $form_id, $v[ 'type' ], $v[ 'values' ], 'js_vars' );
-	
-				endforeach;
-				
-				if ( $multi_columns ) $form_html .= UixSCFormCore::form_after();
-				
-
-			}
-			
-			
-			
-			//clone
-			$clone                       = $arr[ 'clone' ];
-			$clone_enable                = false;
-			$clone_trigger_id            = '';
-			$clone_max                   = 1;
-			$clone_fields_group          = '';
-		
-
-			if ( is_array( $clone ) && sizeof( $clone ) >= 1 ) {
-				$clone_enable                = true;
-				$clone_fields_group          = $clone[ 'fields_group' ];
-
-				if ( isset( $clone[ 'max' ] ) ) {
-					$clone_max = $clone[ 'max' ];
-				}
-	
-			}
-
-
-
-			// ---------- Returns actions of javascript
-			if ( $sid == -1 && is_admin() ) {
-				$currentScreen = get_current_screen();
-				if( $currentScreen->base === "post" || $currentScreen->base === "widgets" || $currentScreen->base === "customize" || UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) ) {
-				
-						//List Item - Register clone vars ( step 1)
-						if ( $clone_enable && is_array( $clone_fields_group ) ) {
-						
-							foreach( $clone_fields_group as $v ) :
-								
-								$clone_fields        = $v[ 'fields' ];
-								$clone_trigger_id    = $v[ 'trigger_id' ];
-								$clone_fields_value  = '';
-								
-								
-								foreach( $clone_fields as $name ) :
-									
-									$toggle = '';
-									if( self::inc_str( $name, '_toggle' ) && !self::inc_str( $name, '_toggle_' ) ) {
-										$toggle = 'toggle';
-									}
-									if( self::inc_str( $name, '_toggle_' ) ) {
-										$toggle = 'toggle-row';
-									}								
-									
-									$clone_fields_value .= UixSCFormCore::dynamic_form_code( 'dynamic-row-'.$name.'', $form_html, $toggle );
-							
-								endforeach;
-
-								UixSCFormCore::reg_clone_vars( $clone_trigger_id, $clone_fields_value );
-								
-							endforeach;
-						
-						}
-
-
-						?>
-						<script type="text/javascript">
-						( function($) {
-						'use strict';
-							$( function() { 
-								<?php
-					             echo UixSCFormCore::uixscform_callback( $form_js, $form_id, $title );
-					             echo UixSCFormCore::send_before( $form_js_vars, $form_id );
-					             echo $form_js_template; //Custom shortcode
-					             echo UixSCFormCore::send_after( $form_id );
-					            ?>
-						} ) ( jQuery );
-						</script>
-						<?php
-
-				}
-
-			}
-
-
-			// ---------- Returns form with ajax
-			if ( $sid >= 0 && is_admin() ) {
-				echo $form_html;	
-			}
-			
-			
-		}
-	
-
-	}
-
-
-	
 	
 	
 }

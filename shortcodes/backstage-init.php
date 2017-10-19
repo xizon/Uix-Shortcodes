@@ -33,7 +33,7 @@ function uix_sc_form_output(){
 		foreach ( glob( UixShortcodes::templates_panel_directory() . "*.php") as $file ) {
 			
 			if ( UixShortcodes::DEMOFORM == 0 ) {
-				if ( !UixShortcodes::inc_str( $file, 'hello' ) ) {
+				if ( !UixShortcodes::inc_str( $file, '_sample_hello' ) ) {
 					include $file;
 				}	
 			} else {
