@@ -343,8 +343,8 @@ The currently available default elements:
 - WP 4.5.3
 - WP 4.6.*
 - WP 4.7.*
-- WP 4.8
-
+- WP 4.8.*
+- WP 4.9
 
 ### Frequently Asked Questions
 
