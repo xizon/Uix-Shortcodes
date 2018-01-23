@@ -26,8 +26,8 @@
 ************************************* */
 
 
-var templateUrl  = wp_theme_root_path.templateUrl;
-var uixScRootUrl = wp_theme_root_path.uixScRootUrl;
+var templateUrl  = wp_plug_uixsc_root_path.templateUrl;
+var uixScRootUrl = wp_plug_uixsc_root_path.uixScRootUrl;
 var styleName    = 'elegant';
 
 var uix_sc = (function ( $, window, document ) {

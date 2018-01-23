@@ -128,7 +128,7 @@ class UixShortcodes {
 	
 		// Main stylesheets and scripts to Front-End
 		wp_register_script( self::PREFIX . '-shortcodes', self::core_js_file(), array( 'jquery' ), self::ver(), true );
-		wp_localize_script( self::PREFIX . '-shortcodes',  'wp_theme_root_path', array( 
+		wp_localize_script( self::PREFIX . '-shortcodes',  'wp_plug_uixsc_root_path', array( 
 			'templateUrl'   => get_stylesheet_directory_uri(),
 			'uixScRootUrl'  => self::plug_directory()
 		 ) );
