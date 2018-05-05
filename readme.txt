@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code
 Requires at least: 4.2
 Tested up to: 4.9
-Stable tag: 1.5.8
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,15 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 
 
 == Changelog ==
+
+
+= 1.6.0 (May 3, 2018) =
+
+* Fix: Fixed a bug with custom styles and child themes that if site uses a child theme when you create a custom css/js file in child theme folder, the plugin tries to connect style with path located in the parent theme folder.
+* Fix: Solved the problem that instagram widget call data is not displayed.
+* Tweak: Updated some third-party plugins to the latest version.
+
+
 
 = 1.5.8 (October 17, 2017) =
 

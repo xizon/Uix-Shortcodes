@@ -8,13 +8,14 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.5.8
+ * Version:     1.6.0
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
  * Text Domain: uix-shortcodes
  * Domain Path: /languages
  */
+
 
 class UixShortcodes {
 
@@ -106,8 +107,8 @@ class UixShortcodes {
 		wp_register_script( 'easypiechart', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );
 
 		//flexslider
-		wp_register_script( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/jquery.flexslider.min.js', array( 'jquery' ), '2.5.0', true );	
-		wp_register_style( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/flexslider.css', false, '2.5.0', 'all' );
+		wp_register_script( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/jquery.flexslider.min.js', array( 'jquery' ), '2.7.0', true );	
+		wp_register_style( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/flexslider.min.css', false, '2.7.0', 'all' );
 		
 		// prettyPhoto
 		wp_register_script( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );
@@ -950,7 +951,7 @@ class UixShortcodes {
 			  $contentdir = UIX_SHORTCODES_PLUGIN_DIR.$path; 
 		  } 
 		  if ( $type == 'theme' ) {
-			  $contentdir = trailingslashit( get_template_directory() ).$path; 
+			  $contentdir = trailingslashit( get_stylesheet_directory() ).$path; 
 		  } 	  
 		
 		  
@@ -1103,17 +1104,17 @@ class UixShortcodes {
 		
 	    //custom stylesheet for WP theme directory
 		if ( file_exists( $newFilePath ) ) {
-			$validPath = get_template_directory_uri() . '/uix-shortcodes-custom.css';
+			$validPath = get_stylesheet_directory_uri() . '/uix-shortcodes-custom.css';
 			if ( $type == 'dir' ) {
-				$validPath = get_template_directory() . '/uix-shortcodes-custom.css';
+				$validPath = get_stylesheet_directory() . '/uix-shortcodes-custom.css';
 			}
 		}
 		
 		
 		if ( file_exists( $newFilePath2 ) ) {
-			$validPath = get_template_directory_uri() . '/assets/css/uix-shortcodes-custom.css';
+			$validPath = get_stylesheet_directory_uri() . '/assets/css/uix-shortcodes-custom.css';
 			if ( $type == 'dir' ) {
-				$validPath = get_template_directory() . '/assets/css/uix-shortcodes-custom.css';
+				$validPath = get_stylesheet_directory() . '/assets/css/uix-shortcodes-custom.css';
 			}
 
 		}
@@ -1142,12 +1143,12 @@ class UixShortcodes {
 		$newFilePath2 = get_stylesheet_directory() . '/assets/js/uix-shortcodes-custom.js';
 	
 		if ( file_exists( $newFilePath ) ) {
-			$validPath = get_template_directory_uri() . '/uix-shortcodes-custom.js';
+			$validPath = get_stylesheet_directory_uri() . '/uix-shortcodes-custom.js';
 		}
 		
 	
 		if ( file_exists( $newFilePath2 ) ) {
-			$validPath = get_template_directory_uri() . '/assets/js/uix-shortcodes-custom.js';
+			$validPath = get_stylesheet_directory_uri() . '/assets/js/uix-shortcodes-custom.js';
 		}
 		
 		if ( $type == 'name' ) {

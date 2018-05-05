@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.6.0 (May 3, 2018) =
+
+* Fix: Fixed a bug with custom styles and child themes that if site uses a child theme when you create uix-shortcodes-custom.css in child theme folder, Uix Shortcodes plugin tries to connect style with path located in the parent theme folder.
+* Fix: Solved the problem that instagram widget call data is not displayed.
+* Tweak: Updated some third-party plugins to the latest version.
+
+
 
 ##### = 1.5.8 (October 17, 2017) =
 
