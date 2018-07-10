@@ -8,7 +8,7 @@ if( !isset( $_GET[ 'tab' ] ) || $_GET[ 'tab' ] == 'about' ) {
 
 
         <p>
-           <?php _e( 'Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort. It makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. <strong>"Content Shortcode"</strong>, <strong>"Column Shortcode"</strong>, <strong>"Web Elements Shortcode"</strong>, <strong>"Container Shortcode"</strong>, and so on. They could be used together.', 'uix-shortcodes' ); ?>
+           <?php _e( 'Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort. It makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. <strong>"Content Shortcode"</strong>, <strong>"Column Shortcode"</strong>, <strong>"Web Elements Shortcode"</strong>, <strong>"Container Shortcode"</strong>, and so on. They could be used together. <strong style="color:red">It is compatible with Gutenberg.</strong>', 'uix-shortcodes' ); ?>
         </p>  
         
          <p>

@@ -20,7 +20,7 @@ Licensed under the [GPL3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
 [![Uix Shortcodes Live Demo](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/video-cover.jpg)](https://www.youtube.com/watch?v=8bX2vyA5iT4 "Uix Shortcodes Live Demo")
 
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together. **It is compatible with Gutenberg. **
 
 The Uix Shortcodes consists of several core features that are key to support multi-style switch. According to current progress, some styles can be summarized as follows: **Elegant (default), Slant, Rich.**
 
@@ -65,6 +65,15 @@ The currently available default elements:
 
 
 ### Updates
+
+
+
+##### = 1.6.2 (July 7, 2018) =
+
+* Fix: Fixed issue where color picker does not display.
+* Tweak: Compatible with Gutenberg, the "Uix Shortcodes Attributes" settings can be found in the Extended Settings section with the Gutenberg block editor. 
+
+
 
 ##### = 1.6.0 (May 3, 2018) =
 

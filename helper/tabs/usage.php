@@ -28,6 +28,18 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
         <p>
            <img src="<?php echo UixShortcodes::plug_directory(); ?>helper/img/button.jpg" alt="">
         </p> 
+        
+        
+        <p class="uix-bg-custom-desc">
+           <?php _e( '<h4 class="uix-bg-custom-title">2-2. For Gutenberg. We should now be able to see our block in the <strong>Add Block</strong> menu.</h4>', 'uix-shortcodes' ); ?>
+        </p>  
+   
+        <p>
+           <img src="<?php echo UixShortcodes::plug_directory(); ?>helper/img/gutenberg-go.jpg" alt=""> 
+        </p> 
+            
+        
+        
         <p>
            <?php _e( '<h4 class="uix-bg-custom-title">3. You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS".</h4>', 'uix-shortcodes' ); ?>
   

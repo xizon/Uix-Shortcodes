@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.6.0
+ * Version:     1.6.2
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -80,6 +80,10 @@ class UixShortcodes {
 	 */
 	public static function includes() {
 		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/uixscform/init.php';
+		
+		//Enable gutenberg settings for Uix Shortcodes
+		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/admin/block-init.php';
+		
 	}
 	
 	
@@ -135,7 +139,7 @@ class UixShortcodes {
 		 ) );
 		
 		// Admin panel stylesheets
-		wp_register_style( self::PREFIX . '-shortcodes-admin', self::plug_directory() .'shortcodes/editor/style.min.css', false, self::ver(), 'all' );
+		wp_register_style( self::PREFIX . '-shortcodes-editor', self::plug_directory() .'shortcodes/editor/style.min.css', false, self::ver(), 'all' );
 
 
 	}
@@ -234,7 +238,7 @@ class UixShortcodes {
 				   self::inc_str( $currentScreen->base, '_page_' ) 
 				 ) 
 			  {
-				  wp_enqueue_style( self::PREFIX . '-shortcodes-admin' ); 
+				  wp_enqueue_style( self::PREFIX . '-shortcodes-editor' ); 
 	  
 			  } 
 			  
@@ -243,7 +247,7 @@ class UixShortcodes {
 		  
 
 	}
-	
+
 		
 	/*
 	 * Returns RTL stylesheet name or directory
@@ -397,7 +401,33 @@ class UixShortcodes {
 	}
 	
 	
+	/*
+	 * Returns current shortcode templates panel directory URL.
+	 *
+	 *
+	 */
+	public static function templates_panel_directory_URL( $front = false ) {
+	
+		//shortcodes themes
+		$shortcodes_style = self::theme();
+		
+		if ( !$front ) {
+			$default_dir      = UIX_SHORTCODES_PLUGIN_URL.'shortcodes/templates/default/modules/';
+			$cur_dir          = UIX_SHORTCODES_PLUGIN_URL.'shortcodes/templates/'.$shortcodes_style.'/modules/';
+		} else {
+			$default_dir      = UIX_SHORTCODES_PLUGIN_URL.'shortcodes/templates/default/';
+			$cur_dir          = UIX_SHORTCODES_PLUGIN_URL.'shortcodes/templates/'.$shortcodes_style.'/';	
+		}
 
+		
+
+		if( is_dir( UIX_SHORTCODES_PLUGIN_URL.'shortcodes/templates/'.$shortcodes_style ) ) {
+		    return $cur_dir;
+		} else {
+			return $default_dir;
+		}
+	}
+	
 	/*
 	 * Returns current plugin version.
 	 *
@@ -994,7 +1024,9 @@ class UixShortcodes {
 	/*
 	 * Callback function of "do shortcodes"
 	 *
+	 * Avoid being escaped in different editors.
 	 *
+	 * @since 0.2.0
 	 */
 	public static function do_callback( $str ) {
 	
@@ -1015,11 +1047,11 @@ class UixShortcodes {
 
 		
 		 $searcharray[ 'sc_str' ] = array(
-		   '[li]', '[/li]', '[ul]', '[/ul]', '[ol]', '[/ol]', '[p]', '[/p]', '[br]', '&#8243;', '&#8242;'
+		   '[li]', '[/li]', '[ul]', '[/ul]', '[ol]', '[/ol]', '[s]', '[/s]', '[strong]', '[/strong]', '[b]', '[/b]', '[em]', '[/em]', '[i]', '[/i]', '[u]', '[/u]', '[del]', '[/del]', '[blockquote]', '[/blockquote]', '[p]', '[/p]', '[br]', '&#8243;', '&#8242;'
 		
 		  );
 		  $replacearray[ 'sc_str' ] = array(
-		   '<li>', '</li>', '<ul>', '</ul>', '<ol>', '</ol>', '<p>', '</p>', '<br>', '"', "'"
+		   '<li>', '</li>', '<ul>', '</ul>', '<ol>', '</ol>', '<s>', '</s>', '<strong>', '</strong>', '<b>', '</b>', '<em>', '</em>', '<i>', '</i>', '<u>', '</u>', '<del>', '</del>', '<blockquote>', '</blockquote>', '<p>', '</p>', '<br>', '"', "'"
 		  );  
 		
 		//Remove <br> or <br /> tags
@@ -1383,6 +1415,41 @@ class UixShortcodes {
 	
 	
 
+	/**
+	 * Checks whether we're currently loading a Gutenberg page
+	 *
+	 * @return boolean Whether Gutenberg is being loaded.
+	 *
+	 * @since 3.1.0
+	 */
+	public static function is_gutenberg_page() {
+		global $post;
+
+		if ( ! is_admin() ) {
+			return false;
+		}
+
+		if ( get_current_screen()->base !== 'post' ) {
+			return false;
+		}
+
+		if ( isset( $_GET['classic-editor'] ) ) {
+			return false;
+		}
+
+		if ( function_exists( 'gutenberg_can_edit_post' ) && ! gutenberg_can_edit_post( $post ) ) {
+			return false;
+		}
+
+
+		if ( ! function_exists( 'gutenberg_can_edit_post' ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	
 	
 	
 }

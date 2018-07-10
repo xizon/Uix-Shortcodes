@@ -1,12 +1,12 @@
-=== Uix Shortcodes ===
+=== Uix Shortcodes - Compatible with Gutenberg ===
 Contributors: uiuxlab
 Donate link: https://uiux.cc
 Author URI: https://uiux.cc
 Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
-Tags: shortcode, shortcodes, short code
+Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
-Tested up to: 4.9
-Stable tag: 1.6.0
+Tested up to: 4.9.7
+Stable tag: 1.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ Uix Shortcodes brings an amazing set of beautiful and useful elements to your si
 == Description ==
 
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together.
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together. **It is compatible with Gutenberg. **
 
 
 The Uix Shortcodes consists of several core features that are key to support multi-style switch. According to current progress, some styles can be summarized as follows: **Elegant (default), Slant, Rich.**
@@ -111,6 +111,13 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 
 
 == Changelog ==
+
+
+= 1.6.2 (July 7, 2018) =
+
+* Fix: Fixed issue where color picker does not display.
+* Tweak: Compatible with Gutenberg, the "Uix Shortcodes Attributes" settings can be found in the Extended Settings section with the Gutenberg block editor. 
+
 
 
 = 1.6.0 (May 3, 2018) =

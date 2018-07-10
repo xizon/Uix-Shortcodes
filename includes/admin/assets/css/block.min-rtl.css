@@ -1,0 +1,68 @@
+/*
+	* Uix Shortcodes Stylesheets (RTL)
+	* Author: UIUX Lab
+	* Twitter: @uiux_lab
+	* Author URL: https://uiux.cc
+	
+	* Dual licensed under the MIT and GPL licenses:
+	* http://www.opensource.org/licenses/mit-license.php
+	* http://www.gnu.org/licenses/gpl.html
+
+
+	TABLE OF CONTENTS
+	---------------------------
+	
+	1. jQuery Accessible Tabs
+	2. Elements Navigation
+
+*/
+
+/* 1. jQuery Accessible Tabs
+-------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+	
+	
+	.uix-shortcodes-block-col-tabs.js-tabs {
+		margin: 0 0;
+	}
+	
+	/* Tabs control text */
+	.js-tabs_control-text {
+		direction: rtl;
+		left: auto;
+		right: -999em;
+	}
+	
+	/* Tabs control */
+	.uix-shortcodes-block-col-tabs.js-tabs .js-tabs_control {
+		float: right;
+	}
+	
+	.uix-shortcodes-block-col-tabs.js-tabs .js-tabs_control li {
+		float: right;
+		margin: 0 0 0 6px;
+	}
+
+
+}
+
+
+/* 2. Elements Navigation
+-------------------------------------------------------------- */
+
+.uix-shortcodes-block-col {
+	float: right;
+	margin-right: auto;
+	margin-left: 15px;
+	
+}
+
+
+
+.uix-shortcodes-block-col .t {
+	left: auto;
+	right: 0;
+	margin-left: auto;
+	margin-right: 1px;
+	
+}

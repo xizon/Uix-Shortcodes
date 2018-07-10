@@ -1,0 +1,289 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; 
+}
+
+
+/*
+ * Display the block
+ * 
+ */
+if ( !function_exists( 'uix_shortcodes_block' ) ) {
+	
+	add_action( 'admin_footer', 'uix_shortcodes_block' );  
+	function uix_shortcodes_block() {  
+    ?>
+ 
+	<script>
+	// block.js
+//	( function( blocks, components, element ) {
+//		var el = element.createElement,
+//			source = blocks.source;
+//
+//
+//		/*=========================== */
+//		/*=========================== */
+//		function RandomImage( props ) {
+//			var src = props.firstMeta;
+//
+//			return el( 'img', {
+//				src: src,
+//				alt: props.firstMeta
+//			} );
+//		}
+//
+//		blocks.registerBlockType( 'myplugin/random-image', {
+//			title: 'Demo Random Image',
+//
+//			icon: 'admin-generic',
+//
+//			category: 'common',
+//
+//			attributes: {
+//				firstMeta: {
+//					type: 'string',
+//					source: 'attribute',
+//					attribute: 'alt',
+//					selector: 'img',
+//				}
+//			},
+//
+//			edit: function( props ) {
+//				var _val = props.attributes.firstMeta,
+//					children;
+//
+//				function setCategory( event ) {
+//					var selected = event.target.querySelector( 'option:checked' );
+//					props.setAttributes( { firstMeta: selected.value } );
+//					event.preventDefault();
+//				}
+//
+//				children = [];
+//				if ( _val ) {
+//					children.push( RandomImage( { firstMeta: _val } ) );
+//				}
+//
+//				children.push(
+//					el( 'select', { value: _val, onChange: setCategory },
+//						el( 'option', null, '- Select -' ),
+//						el( 'option', { value: 'sports' }, 'Sports' ),
+//						el( 'option', { value: 'animals' }, 'Animals' ),
+//						el( 'option', { value: 'nature' }, 'Nature' )
+//					)
+//				);
+//
+//				return el( 'form', { onSubmit: setCategory }, children );
+//			},
+//
+//
+//			save: function( props ) {
+//				// Rendering in PHP
+//				return RandomImage( { firstMeta: props.attributes.firstMeta } );
+//			}
+//		} );
+//
+//
+//		/*=========================== */
+//		/*=========================== */
+//		blocks.registerBlockType( 'myplugin/demo-sc', {
+//			title: 'Demo SC',
+//
+//			icon: 'admin-generic',
+//
+//			category: 'common',
+//
+//			attributes: {
+//				firstMeta_2: {
+//					type: 'string'
+//				}
+//			},
+//
+//			edit: function( props ) {
+//				var _val = props.attributes.firstMeta_2;
+//
+//				//default value here
+//				if ( typeof _val == typeof undefined ) {
+//					_val = "[uix_features col='2']<br>[uix_features_col_left]";
+//				} 
+//
+//
+//				function onChangeValue( newValue ) {
+//					props.setAttributes( { firstMeta_2: newValue } );
+//				}
+//
+//				return el(
+//					components.TextareaControl,
+//					{
+//						onChange: onChangeValue,
+//						value: _val,
+//						rows  : 1,
+//						label: 'Meta 1',
+//						type: 'text'
+//					}
+//				);
+//			},
+//
+//			save: function( props ) {
+//				// Rendering in PHP
+//				return el( 'div', { }, props.attributes.firstMeta_2 );
+//			}
+//		} );
+//
+//
+//		/*=========================== */
+//		/*=========================== */
+//		var blockStyle = { backgroundColor: '#900', color: '#fff', padding: '20px' };
+//		blocks.registerBlockType( 'myplugin/demo-p', {
+//			title: 'Demo P',
+//
+//			icon: 'admin-generic',
+//
+//			category: 'common',
+//
+//			edit: function() {
+//				return el( 'p', { style: blockStyle }, 'Hello editor.' );
+//			},
+//
+//
+//			save: function() {
+//
+//				// Rendering in PHP
+//				return el( 'p', { style: blockStyle }, 'Hello saved content.' );
+//			}
+//
+//		} );
+//
+//
+//		/*=========================== */
+//		/*=========================== */
+//		var btnStyle     = { backgroundColor: '#7AD03A', color: '#fff', borderColor: '#5EB83C', textAlign: 'center', fontFamily: 'Helvetica, Arial' },
+//			btnClassName = 'button uix-shortcodes-open-btn';
+//
+//		blocks.registerBlockType( 'myplugin/demo-html', {
+//			title: 'Demo HTML',
+//
+//			icon: 'admin-generic',
+//
+//			category: 'common',
+//
+//			attributes: {
+//				firstMeta_3: {
+//					type: 'string'
+//				}
+//			},
+//
+//
+//
+//			edit: function( props ) {
+//				var children = [],
+//					cid      = 'js-cur-' + props.id;
+//
+//
+//				children.push(
+//					el( 'a', 
+//					   { 
+//							style     : btnStyle, 
+//							className : btnClassName,
+//							href      : 'javascript:void(0)',
+//							id        : cid
+//						}, 
+//					'[ / ] Add Uix Shortodes' )
+//				);
+//
+//
+//				var _val    = props.attributes.firstMeta_3,
+//					_valNew = jQuery( '[data-block-id="' + cid +'"]' ).attr( 'data-block-value' );
+//
+//
+//				function onChangeValue( newValue ) {
+//					//console.log( _valNew );
+//					props.setAttributes( { firstMeta_3: newValue } );
+//				}
+//
+//				//default value here
+//				if ( typeof _val == typeof undefined ) {
+//					_val = '';
+//				} 
+//				if ( typeof _valNew != typeof undefined ) {
+//					_val = _valNew;
+//
+//					//Get the new value that the textarea already exists
+//					onChangeValue( _val );
+//				} 
+//
+//				//Trigger the value change of the textarea
+//				jQuery( document ).on( 'click', '#js-cur-' + props.id, function() {
+//					onChangeValue( _val );
+//				});
+//
+//				children.push(
+//					el(
+//						components.TextareaControl,
+//						{
+//							onChange: onChangeValue,
+//							value: _val,
+//							rows  : 3,
+//							label: 'Shortcode'
+//						}
+//					)
+//				);
+//
+//
+//
+//				return el( 'div', { }, children );
+//			},
+//
+//
+//			save: function( props ) {
+//				// Rendering in PHP
+//				return el( 'div', { }, props.attributes.firstMeta_3 );
+//			}
+//
+//		} );
+//
+//
+//	} )(
+//		window.wp.blocks,
+//		window.wp.components,
+//		window.wp.element
+//	);
+//
+//
+//	( function( $ ) {
+//	"use strict";
+//
+//		$( function() {
+//
+//			$( document ).on( 'click', '.uix-shortcodes-open-btn', function() {
+//
+//				var _id       = $( this ).attr( 'id' ),
+//					_textarea = $( this ).next( '.components-base-control' ).find( 'textarea' ),
+//					_code     = "[uix_pricing] [uix_pricing_item target='' class='' url='#' period='' bcolor='green' imcolor='#d59a3e' col='3'] [uix_pricing_item_level]free[/uix_pricing_item_level] [uix_pricing_item_price]$49[/uix_pricing_item_price] [uix_pricing_item_desc]Some description text here.[/uix_pricing_item_desc] [uix_pricing_item_button]TRY FOR FREE[/uix_pricing_item_button] [uix_pricing_item_detail][ul][li]Feature Description[/li][li]Another Feature Description[/li][li][s]Invalid Feature Description[/s][/li][/ul][/uix_pricing_item_detail] [/uix_pricing_item] [uix_pricing_item target='' class='uix-sc-price-important' url='#' period='' bcolor='green' imcolor='#d59a3e' col='3'] [uix_pricing_item_level]premium[/uix_pricing_item_level] [uix_pricing_item_price]$69[/uix_pricing_item_price] [uix_pricing_item_desc]Some description text here.[/uix_pricing_item_desc] [uix_pricing_item_button]BUY[/uix_pricing_item_button] [uix_pricing_item_detail][ul][li]Feature Description[/li][li]Another Feature Description[/li][li]Another Feature Description[/li][li][s]Invalid Feature Description[/s][/li][/ul][/uix_pricing_item_detail] [/uix_pricing_item] [uix_pricing_item target='' class='' url='#' period='' bcolor='green' imcolor='#d59a3e' col='3' last='1'] [uix_pricing_item_level]professional[/uix_pricing_item_level] [uix_pricing_item_price]$109[/uix_pricing_item_price] [uix_pricing_item_desc]Some description text here.[/uix_pricing_item_desc] [uix_pricing_item_button]BUY[/uix_pricing_item_button] [uix_pricing_item_detail][ul][li]Feature Description[/li][li]Another Feature Description[/li][li]Another Feature Description[/li][li][s]Invalid Feature Description[/s][/li][li]Another Feature Description[/li][/ul][/uix_pricing_item_detail] [/uix_pricing_item] [/uix_pricing]";
+//
+//
+//
+//				//Temporarily store the current shortcode
+//				_textarea.attr( {
+//					'data-block-id'    : _id,
+//					'data-block-value' : _code
+//				} );
+//
+//
+//
+//
+//			});
+//		} );
+//
+//
+//	} ) ( jQuery );
+
+
+	</script>
+
+        
+        
+<?php  
+	}  
+}
+
+ 
