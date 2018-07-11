@@ -128,13 +128,7 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 					onChangeValue( _val );
 				} 
 
-				//Trigger the value change of the textarea
-				jQuery( document ).on( 'click', '#js-cur-' + props.id, function() {
-					onChangeValue( _val );
-				});
-				jQuery( document ).off( 'click.UIXSC_FORMPOP_INSERT' ).on( 'click.UIXSC_FORMPOP_INSERT', '.uixscform-modal-save-btn', function() {
-					onChangeValue( _val );
-				});			
+	
 
 				children.push(
 					el(
