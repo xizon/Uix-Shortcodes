@@ -2230,7 +2230,7 @@ function uixscform_insertToTextarea( s ) {
  */	
 function uixscform_insertToBlockTextarea( s ) {
       return (typeof s != "string") ? s :  
-		  s.replace(/<br\w*\/*>/g,"[br]")
+		  s.replace(/<br\w*\/*>/g,"")//required
 			 .replace(/<s>/g,"[s]")
 			 .replace(/<\/s>/g,"[\/s]")
 			 .replace(/<strong>/g,"[strong]")
@@ -2248,10 +2248,7 @@ function uixscform_insertToBlockTextarea( s ) {
 			 .replace(/<blockquote>/g,"[blockquote]")
 			 .replace(/<\/blockquote>/g,"[\/blockquote]")
 			 .replace(/<p>/g,"[p]")
-			 .replace(/<\/p>/g,"[\/p]")
-	  
-	         //Remove last [br]
-	         .replace(/\[br\]\s*$/,"");
+			 .replace(/<\/p>/g,"[\/p]");
 	  
 };
 
