@@ -285,19 +285,19 @@
 						e.preventDefault();
 						
 						var $previewBtn    = $( '#' + $( this ).attr( 'id' ).replace( '_savebtn', '_preview_codebtn' ) ),
-							$blockTextarea = $( 'textarea[data-block-id="'+$obj.data( 'block-id' )+'"]' );
+							$blockText     = $( 'p[data-block-id="'+$obj.data( 'block-id' )+'"]' );
 						uixscform_insertCodes( $previewBtn.data( 'code' ), $previewBtn.data( 'contentID' ) );
 						
 						
 						//Push the value to block (gutenberg)
 						//Temporarily store the current shortcode
 						var blockTextareaVal = uixscform_insertToBlockTextarea( $previewBtn.data( 'code' ) );
-						if ( $blockTextarea.length > 0 ) {
-							$blockTextarea
+						if ( $blockText.length > 0 ) {
+							$blockText
 										.attr( {
 											'data-block-value' : blockTextareaVal
 										} )
-										.val( blockTextareaVal );
+										.html( blockTextareaVal );
 						
 						}
 

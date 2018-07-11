@@ -128,21 +128,20 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 					onChangeValue( _val );
 				} 
 
-	
 
+
+				//@https://wordpress.org/gutenberg/handbook/blocks/introducing-attributes-and-editable-fields/
 				children.push(
-					el(
-						components.TextareaControl,
+					
+					el( 
+						wp.editor.RichText, 
 						{
+							tagName: 'p',
 							onChange: onChangeValue,
-							value: _val,
-							rows  : 3,
-							label: 'Shortcode'
+							value: _val
 						}
 					)
 				);
-
-
 
 				return el( 'div', { }, children );
 			},
