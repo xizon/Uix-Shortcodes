@@ -71,7 +71,7 @@ The currently available default elements:
 ##### = 1.6.2 (July 7, 2018) =
 
 * Fix: Fixed issue where color picker does not display.
-* Tweak: Compatible with Gutenberg, the "Uix Shortcodes Attributes" settings can be found in the Extended Settings section with the Gutenberg block editor. 
+* Tweak: Compatible with Gutenberg, we should now be able to see our block in the Add Block menu.
 
 
 
