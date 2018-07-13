@@ -67,6 +67,12 @@ The currently available default elements:
 ### Updates
 
 
+##### = 1.6.3 (July 13, 2018) =
+
+* Fix: Fixed an issue when your theme uses more meta boxes.
+* New: Add meta boxes API. Provides a compatible solution for some personalized themes that require Uix Shortcodes.
+
+
 
 ##### = 1.6.2 (July 7, 2018) =
 

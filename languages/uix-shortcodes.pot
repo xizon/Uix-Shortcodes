@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-07-10 18:58+0000\n"
+"POT-Creation-Date: 2018-07-13 18:52+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,33 +23,33 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-shortcodes.php:455 uix-shortcodes.php:576 uix-shortcodes.php:577
+#: uix-shortcodes.php:461 uix-shortcodes.php:582 uix-shortcodes.php:583
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:456 uix-shortcodes.php:567 uix-shortcodes.php:568
+#: uix-shortcodes.php:462 uix-shortcodes.php:573 uix-shortcodes.php:574
 #: helper/settings.php:63
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:555 helper/settings.php:44
+#: uix-shortcodes.php:561 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:556 shortcodes/editor/tinymce-plugin-lang.php:17
+#: uix-shortcodes.php:562 shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:584 uix-shortcodes.php:585
+#: uix-shortcodes.php:590 uix-shortcodes.php:591
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:592 uix-shortcodes.php:593
+#: uix-shortcodes.php:598 uix-shortcodes.php:599
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:969
+#: uix-shortcodes.php:975
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -422,7 +422,7 @@ msgstr ""
 msgid "[ / ] Add Uix Shortodes"
 msgstr ""
 
-#: includes/admin/block-init.php:244
+#: includes/admin/block-init.php:240
 msgid "Choose Shortcode You Want"
 msgstr ""
 
@@ -694,6 +694,50 @@ msgstr ""
 #: shortcodes/templates/default/config.php:183
 #: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:225
 msgid "Author Card"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controller-upload.php:29
+msgid "Select an image"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controller-upload.php:30
+msgid "remove image"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:421
+msgid "Group Title"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:587
+msgid "Field Title"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1437
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:227
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:229
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:44
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:378
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:43
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:218
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:392
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:566
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:61
+msgid "Title"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1438
+msgid "Value"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1461
+msgid "Remove field"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1495
+msgid "Add a custom attribute"
 msgstr ""
 
 #: includes/uixscform/components/ui-form.php:56
@@ -1048,21 +1092,6 @@ msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_bar.php:208
 msgid "Percentage & Icon Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:227
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:229
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:44
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:378
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:43
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:218
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:392
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:566
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:61
-msgid "Title"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_bar.php:238

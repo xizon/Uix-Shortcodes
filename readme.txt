@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Tested up to: 4.9.7
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ Uix Shortcodes brings an amazing set of beautiful and useful elements to your si
 == Description ==
 
 
-Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together. **It is compatible with Gutenberg. **
+Uix Shortcodes makes it easy and quick to add the shortcode you need to achieve the page layout or function you desire. It provides easy to use over 26+ shortcodes. The content elements are the heart of any page builder. These are the elements shortcodes that come with theme. You may customize the shortcode by changing/adding the parameters. **"Content Shortcode"**, **"Column Shortcode"**, **"Web Elements Shortcode"**, **"Container Shortcode"**, and so on. They could be used together. **It is compatible with Gutenberg.**
 
 
 The Uix Shortcodes consists of several core features that are key to support multi-style switch. According to current progress, some styles can be summarized as follows: **Elegant (default), Slant, Rich.**
@@ -72,13 +72,20 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
 
 == Frequently Asked Questions ==
 
-= How to completely customize the Uix Shortcodes stylesheets? =
+= FAQ 1: How to completely customize the Uix Shortcodes stylesheets? =
 
 You can go to "Uix Shortcodes" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS". 
 
 There is a second way, make a new Cascading Style Sheet (CSS) document which name to **"uix-shortcodes-custom.css"** and **uix-shortcodes-custom-rtl.css** to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/css/" ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Shortcodes will use it as a default style sheet to your WordPress Theme. Of course, Uix Shortcodes's function of "Custom CSS" is still valid.
 
 Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-custom.js"** to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/js/" ). Once you have created an existing JS file, Uix Shortcodes will use it as a default script to your WordPress Theme.
+
+
+= FAQ 2: How To Insert Shortcode With Gutenberg? =
+
+We should now be able to see our block in the Add Block menu.</h4>
+
+
 
 
 == Screenshots ==
@@ -111,6 +118,13 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 
 
 == Changelog ==
+
+
+
+= 1.6.3 (July 13, 2018) =
+
+* Fix: Fixed an issue when your theme uses more meta boxes.
+* New: Add meta boxes API. Provides a compatible solution for some personalized themes that require Uix Shortcodes.
 
 
 = 1.6.2 (July 7, 2018) =

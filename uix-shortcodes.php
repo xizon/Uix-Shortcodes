@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.6.2
+ * Version:     1.6.3
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -84,6 +84,11 @@ class UixShortcodes {
 		//Enable gutenberg settings for Uix Shortcodes
 		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/admin/block-init.php';
 		
+		//Add custom meta boxes API. 
+		//Provides a compatible solution for some personalized themes that require Uix Shortcodes.
+		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/admin/uix-custom-metaboxes/init.php';
+		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/admin/uix-custom-metaboxes/controller-upload.php';
+		
 	}
 	
 	
@@ -94,6 +99,7 @@ class UixShortcodes {
 	 */
 	public static function register_scripts() {
 		
+	
 		// jQuery Accessible Tabs
 		wp_register_script( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1' );
 		wp_register_style( 'accTabs-uix-shortcodes', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all' );
@@ -1450,6 +1456,16 @@ class UixShortcodes {
 	}
 
 	
+			
+	/**
+	 * Filters content and keeps only allowable HTML elements.
+	 *
+	 */
+	public static function kses( $html ){
+		
+		return wp_kses( $html, wp_kses_allowed_html( 'post' ) );
+
+	}
 	
 	
 }
