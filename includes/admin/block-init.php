@@ -84,7 +84,7 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 			category: 'common',
 
 			attributes: {
-				firstMeta_3: {
+				customMeta_text: {
 					type: 'string'
 				}
 			},
@@ -94,8 +94,13 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 			edit: function( props ) {
 				var children = [],
 					cid      = 'js-cur-' + props.id;
-
-
+				
+				//Compatible with older versions below 5.9.8
+				if ( typeof props.id === typeof undefined ) {
+					cid      = 'js-cur-' + props.clientId;
+				}
+				
+				
 				children.push(
 					el( 'a', 
 					   { 
@@ -108,37 +113,19 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 				);
 
 
-				var _val    = props.attributes.firstMeta_3,
-					_valNew = jQuery( '[data-block-id="' + cid +'"]' ).attr( 'data-block-value' );
-
-
-				function onChangeValue( newValue ) {
-					//console.log( _valNew );
-					props.setAttributes( { firstMeta_3: newValue } );
-				}
-
-				//default value here
-				if ( typeof _val == typeof undefined ) {
-					_val = '';
-				} 
-				if ( typeof _valNew != typeof undefined ) {
-					_val = _valNew;
-
-					//Get the new value that the textarea already exists
-					onChangeValue( _val );
-				} 
-
-
-
+			
 				//@https://wordpress.org/gutenberg/handbook/blocks/introducing-attributes-and-editable-fields/
 				children.push(
 					
 					el( 
 						wp.editor.RichText, 
 						{
-							tagName: 'p',
-							onChange: onChangeValue,
-							value: _val
+							tagName  : 'p',
+							format   : 'string',
+							value    : props.attributes.customMeta_text,
+							onChange : function( content ) {
+								props.setAttributes( { customMeta_text: content } );
+							}
 						}
 					)
 				);
@@ -149,7 +136,16 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 
 			save: function( props ) {
 				// Rendering in PHP
-				return el( 'div', { }, props.attributes.firstMeta_3 );
+				
+				var newVal     = props.attributes.customMeta_text;
+				newVal = newVal.replace(/<br\s*[\/]?>/gi, '[br]' );
+
+				return wp.element.createElement( wp.editor.RichText.Content, {
+					tagName : 'div', 
+					format  : 'string',
+					value   : newVal
+				} );
+				//return el( 'div', { }, props.attributes.customMeta_text );
 			}
 
 		} );

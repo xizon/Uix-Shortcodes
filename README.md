@@ -66,6 +66,11 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.6.4 (September 4, 2018) =
+
+* Fix: Fixed some compatibility issues with Uix Shortcodes plugin under Gutenberg.
+
+
 
 ##### = 1.6.3 (July 13, 2018) =
 

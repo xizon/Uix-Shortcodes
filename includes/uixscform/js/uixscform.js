@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form
-	* Version: 4.2.0
+	* Version: 4.2.1
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -298,6 +298,36 @@
 											'data-block-value' : blockTextareaVal
 										} )
 										.html( blockTextareaVal );
+							
+							
+							//Used to modify the block’s edit component. 
+							//It receives the original block BlockEdit component and returns a new wrapped component.
+							//@https://wordpress.org/gutenberg/handbook/extensibility/extending-blocks/
+							var el                    = wp.element.createElement,
+								withInspectorControls = wp.compose.createHigherOrderComponent( function( BlockEdit ) {
+								return function( props ) {
+									return el(
+										wp.element.Fragment,
+										{},
+										el(
+											BlockEdit,
+											props
+										),
+										el(
+											wp.editor.InspectorControls,
+											{},
+											el(
+												wp.components.PanelBody,
+												{},
+												'My custom control'
+											)
+										)
+									);
+								};
+							}, 'withInspectorControls' );
+
+							wp.hooks.addFilter( 'editor.BlockEdit', 'my-plugin/with-inspector-controls', withInspectorControls );			
+
 						
 						}
 
