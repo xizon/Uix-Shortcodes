@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form
-	* Version: 4.2.1
+	* Version: 4.2.2
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -285,50 +285,45 @@
 						e.preventDefault();
 						
 						var $previewBtn    = $( '#' + $( this ).attr( 'id' ).replace( '_savebtn', '_preview_codebtn' ) ),
-							$blockText     = $( 'p[data-block-id="'+$obj.data( 'block-id' )+'"]' );
+							$blockText     = $( '[class*="cid-'+$obj.data( 'block-id' )+'"]' );
 						uixscform_insertCodes( $previewBtn.data( 'code' ), $previewBtn.data( 'contentID' ) );
 						
 						
 						//Push the value to block (gutenberg)
 						//Temporarily store the current shortcode
 						var blockTextareaVal = uixscform_insertToBlockTextarea( $previewBtn.data( 'code' ) );
-						if ( $blockText.length > 0 ) {
-							$blockText
-										.attr( {
-											'data-block-value' : blockTextareaVal
-										} )
-										.html( blockTextareaVal );
-							
-							
-							//Used to modify the block’s edit component. 
-							//It receives the original block BlockEdit component and returns a new wrapped component.
-							//@https://wordpress.org/gutenberg/handbook/extensibility/extending-blocks/
-							var el                    = wp.element.createElement,
-								withInspectorControls = wp.compose.createHigherOrderComponent( function( BlockEdit ) {
-								return function( props ) {
-									return el(
-										wp.element.Fragment,
-										{},
-										el(
-											BlockEdit,
-											props
-										),
-										el(
-											wp.editor.InspectorControls,
-											{},
-											el(
-												wp.components.PanelBody,
-												{},
-												'My custom control'
-											)
-										)
-									);
-								};
-							}, 'withInspectorControls' );
-
-							wp.hooks.addFilter( 'editor.BlockEdit', 'my-plugin/with-inspector-controls', withInspectorControls );			
-
 						
+						
+						if ( $blockText.length > 0 ) {
+							
+							$blockText.html( blockTextareaVal )
+							            .promise().done( function() {
+								
+								
+								         
+								
+											//Trigger javascript on gutenberg (block editor) save
+											//@https://wordpress.org/gutenberg/handbook/extensibility/extending-blocks/
+											function addNewBlockValue( props, blockType ) {
+												
+												//console.log( 'save-------------' + props );
+												
+												//Avoid conflicts with other blocks
+												if( blockType.name === 'myplugin/block-uix-shortcodes' && $obj.data( 'block-id' ).indexOf( props.cid ) >= 0 && typeof props.cid != undefined ) {
+													return Object.assign( props, { value: blockTextareaVal } );
+												}
+												return props;
+											}
+
+											wp.hooks.addFilter(
+												'blocks.getSaveContent.extraProps',
+												'myplugin/block-uix-shortcodes',
+												addNewBlockValue
+											);		
+										
+								
+										});
+							
 						}
 
 						

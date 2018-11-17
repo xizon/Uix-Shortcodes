@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version: 4.2.1
+	* Version: 4.2.2
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -9,6 +9,22 @@
 	* http://www.opensource.org/licenses/mit-license.php
 	* http://www.gnu.org/licenses/gpl.html
 */
+
+/* Fix style conflicts in gutenberg */
+.iconslist-box.active:before,
+.uixscform-table-wrapper tr.active:before,
+.uixscform-modal-box:before,
+.uixscform-modal-box .preview-box:before,
+.uixscform-modal-button:before,
+.uixscform-form-container .uixscform-box span.active:before,
+.uixscform-color-selector span:before,
+.dynamic-row.active:before,
+.uixscform-box.active:before {
+	display: none;
+}
+
+
+
 .uixscform-modal-box {
     position: fixed;
     top: 50%;
@@ -286,6 +302,7 @@
 }
 
 
+
 .uixscform-modal-buttons .uixscform-modal-button-primary,
 .uixscform-modal-button-primary{
     background-color: RGBA(122, 208, 58, 1) !important;
@@ -481,9 +498,6 @@
 .uixscform-form-container .uixscform-box:hover .info.info-fly {
 	display: block;	
 }
-
-
-
 
 
 .uixscform-form-container .info.info-error,
@@ -1601,10 +1615,11 @@ a.uixscform-icon-clear {
     height: 15px;
     border: 1px solid #DDDDDD;
     cursor: pointer;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
 }
+
 
 .uixscform-color-selector span:hover,
 .uixscform-color-selector span.active {

@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.6.5 (November 17, 2018) =
+
+* Fix: Fixed a bug where multiple blocks saved Uix Shortcodes.
+* Fix: Fixed some style conflicts in controls.
+* Tweak: Compatible with the new core gutenberg editor, ready for version 5.0.
+
+
 ##### = 1.6.4 (September 4, 2018) =
 
 * Fix: Fixed some compatibility issues with Uix Shortcodes plugin under Gutenberg.
@@ -371,7 +378,9 @@ The currently available default elements:
 - WP 4.6.*
 - WP 4.7.*
 - WP 4.8.*
-- WP 4.9
+- WP 4.9.*
+- WP 5.0.0 Beta
+
 
 ### Frequently Asked Questions
 

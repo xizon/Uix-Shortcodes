@@ -27,9 +27,7 @@ var UIXSC_BLOCK_CURRENT_ID = null;
 		
 		    e.preventDefault();
 
-			var _id       = $( this ).attr( 'id' ),
-				_text     = $( this ).next( '.editor-rich-text' ).find( '.components-autocomplete > p' ),
-				_code     = '';
+			var _id       = $( this ).attr( 'id' );
 
 	
 			//Push the block ID to Uix Shortcodes Form
@@ -49,13 +47,6 @@ var UIXSC_BLOCK_CURRENT_ID = null;
 			});	
 
 					
-			
-			//Temporarily store the current shortcode
-			_text.attr( {
-				'data-block-id'    : _id,
-				'data-block-value' : _code
-			} );
-
 
 		});
 		

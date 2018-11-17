@@ -66,42 +66,94 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
     ?>
  
 	<script>
-	// block.js
-	( function( blocks, components, element ) {
-		var el     = element.createElement,
-			source = blocks.source;
+	var el                = wp.element.createElement,
+		Fragment          = wp.element.Fragment,
+		registerBlockType = wp.blocks.registerBlockType,
+		RichText          = wp.editor.RichText,
+		BlockControls     = wp.editor.BlockControls,
+		AlignmentToolbar  = wp.editor.AlignmentToolbar,
+		BlockSelector     = 'div',
+		btnStyle          = { 
+			backgroundColor: '#7AD03A', 
+			color: '#fff', 
+			borderColor: '#5EB83C', 
+			textAlign: 'center', 
+			fontFamily: 'Helvetica, Arial' 
+		},
+		btnClassName      = 'button uix-shortcodes-open-btn';
 
+	/**
+	 * A custom SVG path taken from fontastic
+	*/
+	var mupluginIcon = el( 'svg', { width: 24, height: 24, viewBox: '0 0 18 18' },
+	  el('path', { d: "M0 1v14h16v-14h-16zM15 14h-14v-12h14v12zM14 3h-12v10h12v-10zM7 8h-1v1h-1v1h-1v-1h1v-1h1v-1h-1v-1h-1v-1h1v1h1v1h1v1zM11 10h-3v-1h3v1z", fill: '#74D053' } )
+	);
 
-	
-		var btnStyle     = { backgroundColor: '#7AD03A', color: '#fff', borderColor: '#5EB83C', textAlign: 'center', fontFamily: 'Helvetica, Arial' },
-			btnClassName = 'button uix-shortcodes-open-btn';
+		
+		
 
-		blocks.registerBlockType( 'myplugin/block-uix-shortcodes', {
-			title: '<?php echo esc_attr__( 'Add Uix Shortcodes', 'uix-shortcodes' ); ?>',
+	registerBlockType( 'myplugin/block-uix-shortcodes', {
+		title: '<?php echo esc_attr__( 'Add Uix Shortcodes', 'uix-shortcodes' ); ?>',
 
-			icon: 'editor-code',
+		icon: mupluginIcon,
 
-			category: 'common',
+		category: 'common',
 
-			attributes: {
-				customMeta_text: {
-					type: 'string'
-				}
+		attributes: {
+			customMeta_text: {
+				type: 'string',
+				source: 'html',
+				selector: BlockSelector,
 			},
+			//ID will be passed to the background for use
+			cid: {
+				type: 'string',
+			},
+			alignment: {
+				type: 'string',
+			}
+		},
+
+		edit: function( props ) {
+			var content    = props.attributes.customMeta_text,
+				alignment  = props.attributes.alignment,
+				cid        = 'js-cur-' + props.clientId;
+
+			//Update the ID after loaded blocks
+			props.setAttributes( { 
+				cid            : props.clientId
+			} );
+
+			
+			function onChangeContent( newContent ) {
+				props.setAttributes( { 
+					customMeta_text: newContent,
+					cid            : props.clientId
+				} );
+			}
+
+			function onChangeAlignment( newAlignment ) {
+				props.setAttributes( { alignment: newAlignment } );
+			}
+			
 
 
+			return (
+				el(
+					Fragment,
+					null,
+					el(
+						BlockControls,
+						null,
+						el(
+							AlignmentToolbar,
+							{
+								value: alignment,
+								onChange: onChangeAlignment
+							}
+						)
+					),
 
-			edit: function( props ) {
-				var children = [],
-					cid      = 'js-cur-' + props.id;
-				
-				//Compatible with older versions below 5.9.8
-				if ( typeof props.id === typeof undefined ) {
-					cid      = 'js-cur-' + props.clientId;
-				}
-				
-				
-				children.push(
 					el( 'a', 
 					   { 
 							style     : btnStyle, 
@@ -109,54 +161,54 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 							href      : 'javascript:void(0)',
 							id        : cid
 						}, 
-					'<?php echo esc_attr__( '[ / ] Add Uix Shortodes', 'uix-shortcodes' ); ?>' )
-				);
+					'<?php echo esc_attr__( '[ / ] Add Uix Shortodes', 'uix-shortcodes' ); ?>' ),
 
-
-			
-				//@https://wordpress.org/gutenberg/handbook/blocks/introducing-attributes-and-editable-fields/
-				children.push(
-					
-					el( 
-						wp.editor.RichText, 
+					el(
+						RichText,
 						{
-							tagName  : 'p',
-							format   : 'string',
-							value    : props.attributes.customMeta_text,
-							onChange : function( content ) {
-								props.setAttributes( { customMeta_text: content } );
-							}
+							key             : 'editable',
+							tagName         : BlockSelector,
+							className       : props.className + ' cid-' + cid,
+							style           : { textAlign: alignment },
+							onChange        : onChangeContent,
+							value           : content
 						}
 					)
-				);
+				)
+			);
+		},
 
-				return el( 'div', { }, children );
-			},
-
-
-			save: function( props ) {
-				// Rendering in PHP
-				
-				var newVal     = props.attributes.customMeta_text;
-				newVal = newVal.replace(/<br\s*[\/]?>/gi, '[br]' );
-
-				return wp.element.createElement( wp.editor.RichText.Content, {
-					tagName : 'div', 
-					format  : 'string',
-					value   : newVal
-				} );
-				//return el( 'div', { }, props.attributes.customMeta_text );
+		save: function( props ) {
+			// Rendering in PHP
+			
+			var content   = props.attributes.customMeta_text,
+				alignment = props.attributes.alignment,
+				newVal    = content;
+			
+		
+			//Trigger the saving of empty data
+			//Solve the problem of data being pushed to the back end of the 
+			//rich text editor to save null values
+			if ( typeof content === typeof undefined ) {
+				newVal = '&nbsp;';
 			}
+	
+			
+			newVal = newVal.replace(/<br\s*[\/]?>/gi, '[br]' );
 
-		} );
+			return el( RichText.Content, {
+				tagName         : BlockSelector,
+				className       : props.className,
+				style           : { textAlign: alignment },
+				value           : newVal,
+				cid             : props.attributes.cid  //ID will be passed to the background for use
+			} );
+
+		}
+	} );	
 
 
-	} )(
-		window.wp.blocks,
-		window.wp.components,
-		window.wp.element
-	);
-
+	
 	</script>
 
         
