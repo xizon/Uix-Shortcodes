@@ -66,12 +66,11 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
     ?>
  
 	<script>
+
+		
 	var el                = wp.element.createElement,
 		Fragment          = wp.element.Fragment,
 		registerBlockType = wp.blocks.registerBlockType,
-		RichText          = wp.editor.RichText,
-		BlockControls     = wp.editor.BlockControls,
-		AlignmentToolbar  = wp.editor.AlignmentToolbar,
 		BlockSelector     = 'div',
 		btnStyle          = { 
 			backgroundColor: '#7AD03A', 
@@ -90,11 +89,10 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 	);
 
 		
-		
 
 	registerBlockType( 'myplugin/block-uix-shortcodes', {
 		title: '<?php echo esc_attr__( 'Add Uix Shortcodes', 'uix-shortcodes' ); ?>',
-
+	
 		icon: mupluginIcon,
 
 		category: 'common',
@@ -143,10 +141,10 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 					Fragment,
 					null,
 					el(
-						BlockControls,
+						wp.editor.BlockControls,
 						null,
 						el(
-							AlignmentToolbar,
+							wp.editor.AlignmentToolbar,
 							{
 								value: alignment,
 								onChange: onChangeAlignment
@@ -164,7 +162,7 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 					'<?php echo esc_attr__( '[ / ] Add Uix Shortodes', 'uix-shortcodes' ); ?>' ),
 
 					el(
-						RichText,
+						wp.editor.RichText,
 						{
 							key             : 'editable',
 							tagName         : BlockSelector,
@@ -196,7 +194,7 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 			
 			newVal = newVal.replace(/<br\s*[\/]?>/gi, '[br]' );
 
-			return el( RichText.Content, {
+			return el( wp.editor.RichText.Content, {
 				tagName         : BlockSelector,
 				className       : props.className,
 				style           : { textAlign: alignment },
@@ -206,7 +204,6 @@ if ( !function_exists( 'uix_shortcodes_block' ) ) {
 
 		}
 	} );	
-
 
 	
 	</script>
