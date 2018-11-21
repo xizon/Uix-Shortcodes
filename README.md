@@ -66,7 +66,7 @@ The currently available default elements:
 
 ### Updates
 
-##### = 1.6.6 (November 22, 2018) =
+##### = 1.6.7 (November 22, 2018) =
 
 * Fix: Solved the block display problem of the new version of the Gutenberg editor.
 
