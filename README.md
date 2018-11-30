@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.6.8 (November 30, 2018) =
+
+* Fix: Solved some problems under PHP7 and Gutenberg.
+
+
+
 ##### = 1.6.7 (November 22, 2018) =
 
 * Fix: Solved the block display problem of the new version of the Gutenberg editor.

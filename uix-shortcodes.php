@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.6.7
+ * Version:     1.6.8
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1430,28 +1430,47 @@ class UixShortcodes {
 	 */
 	public static function is_gutenberg_page() {
 		global $post;
-
 		if ( ! is_admin() ) {
 			return false;
 		}
-
-		if ( get_current_screen()->base !== 'post' ) {
+		/*
+		 * There have been reports of specialized loading scenarios where `get_current_screen`
+		 * does not exist. In these cases, it is safe to say we are not loading Gutenberg.
+		 */
+		if ( ! function_exists( 'get_current_screen' ) ) {
 			return false;
 		}
-
+		
+		//Need to add more function judgment
+		if ( isset( $_GET['post'] ) && 
+			! empty( $_GET['post'] ) && 
+			get_current_screen()->base !== 'post' 
+		 ) {
+			return false;
+		}
+		
 		if ( isset( $_GET['classic-editor'] ) ) {
 			return false;
 		}
-
-		if ( function_exists( 'gutenberg_can_edit_post' ) && ! gutenberg_can_edit_post( $post ) ) {
-			return false;
-		}
-
-
+		
+		//Need to add more function judgment
 		if ( ! function_exists( 'gutenberg_can_edit_post' ) ) {
 			return false;
 		}
+		
+		if ( ! gutenberg_can_edit_post( $post ) ) {
+			return false;
+		}
+		
+		 
 
+		//Required class UixSCFormCore::init()
+		global $pagenow;
+		if ( $pagenow === "edit.php" ) {
+			return false;
+		}
+
+		
 		return true;
 	}
 
