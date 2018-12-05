@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.6.8
+ * Version:     1.7.0
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -129,9 +129,6 @@ class UixShortcodes {
 		wp_register_script( 'syntaxhighlighter-autoloader', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
 		wp_register_style( 'syntaxhighlighter', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all' );
 					
-		// Parallax
-		wp_register_script( 'bgParallax', self::plug_directory() .'assets/add-ons/parallax/jquery.bgParallax.js', array( 'jquery' ), '1.1.3', true );		
-								
 		// Add shortcodes style to Front-End
 		wp_register_style( self::PREFIX . '-shortcodes', self::core_css_file(), false, self::ver(), 'all' );
 	    wp_register_style( self::PREFIX . '-shortcodes-rtl', self::to_rtl_css( self::core_css_file() ), false, self::ver(), 'all' );
@@ -170,7 +167,6 @@ class UixShortcodes {
 		wp_enqueue_script( 'syntaxhighlighter-core' );
 		wp_enqueue_script( 'syntaxhighlighter-autoloader' );
 		wp_enqueue_style( 'syntaxhighlighter' );
-		wp_enqueue_script( 'bgParallax' );
 		wp_enqueue_style( self::PREFIX . '-shortcodes' );
 		//RTL		
 		if ( is_rtl() ) {
@@ -211,7 +207,6 @@ class UixShortcodes {
 					wp_enqueue_style( 'flexslider' );
 					wp_enqueue_script( 'prettyPhoto' );
 					wp_enqueue_style( 'prettyPhoto' );
-					wp_enqueue_script( 'bgParallax' );
 					wp_enqueue_style( self::PREFIX . '-shortcodes' );
 					//RTL		
 					if ( is_rtl() ) {

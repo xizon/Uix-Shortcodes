@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.7.0 (December 6, 2018) =
+
+* Fix: Fixed a bug where block data could not be saved in real time.
+* Fix: Fixed shortcode of block dependencies.
+* Fix: Solved some problems under Gutenberg.
+* Tweak: Removed the parallax plugin and added a new parallax method.
+
 
 ##### = 1.6.8 (November 30, 2018) =
 

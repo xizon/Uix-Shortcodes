@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Tested up to: 4.9.8
-Stable tag: 1.6.8
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,14 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.7.0 (December 6, 2018) =
+
+* Fix: Fixed a bug where block data could not be saved in real time.
+* Fix: Fixed shortcode of block dependencies.
+* Fix: Solved some problems under Gutenberg.
+* Tweak: Removed the parallax plugin and added a new parallax method.
+
 
 = 1.6.8 (November 30, 2018) =
 

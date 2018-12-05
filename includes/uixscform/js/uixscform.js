@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form
-	* Version: 4.2.2
+	* Version: 4.2.3
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -288,10 +288,10 @@
 							$blockText     = $( '[class*="cid-'+$obj.data( 'block-id' )+'"]' );
 						uixscform_insertCodes( $previewBtn.data( 'code' ), $previewBtn.data( 'contentID' ) );
 						
-						
 						//Push the value to block (gutenberg)
 						//Temporarily store the current shortcode
-						var blockTextareaVal = uixscform_insertToBlockTextarea( $previewBtn.data( 'code' ) );
+						var blockTextareaVal       = uixscform_insertToBlockTextarea( $previewBtn.data( 'code' ) ),
+							blockTextareaValFilled = 0;
 						
 						
 						if ( $blockText.length > 0 ) {
@@ -300,27 +300,49 @@
 							            .promise().done( function() {
 								
 								
-								         
+								            //Trigger save as draft when inserted shortcode
+								            //Need a delay
+											setTimeout( function() {
+												$( '.editor-post-save-draft' ).trigger( 'click' );
+											}, 1500 );
+
 								
+								            //Avoid saving invalidation data when you first fill 
+								            //a rich text editor with a shortcode.
 											//Trigger javascript on gutenberg (block editor) save
 											//@https://wordpress.org/gutenberg/handbook/extensibility/extending-blocks/
 											function addNewBlockValue( props, blockType ) {
 												
-												//console.log( 'save-------------' + props );
+												//console.log( 'save-------------' + blockTextareaValFilled );
 												
+
 												//Avoid conflicts with other blocks
 												if( blockType.name === 'myplugin/block-uix-shortcodes' && $obj.data( 'block-id' ).indexOf( props.cid ) >= 0 && typeof props.cid != undefined ) {
+													
+													
+													if ( blockTextareaValFilled >= 1 ) {
+														wp.hooks.removeFilter(
+															'blocks.getSaveContent.extraProps',
+															'myplugin/block-uix-shortcodes',
+															addNewBlockValue
+														);	  
+													}
+													
+													blockTextareaValFilled++;
 													return Object.assign( props, { value: blockTextareaVal } );
 												}
 												return props;
 											}
-
+								
+								           
 											wp.hooks.addFilter(
 												'blocks.getSaveContent.extraProps',
 												'myplugin/block-uix-shortcodes',
 												addNewBlockValue
-											);		
+											);
 										
+								
+								
 								
 										});
 							

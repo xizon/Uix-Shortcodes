@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form Functions
-	* Version: 4.2.2
+	* Version: 4.2.3
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc

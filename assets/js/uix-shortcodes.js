@@ -638,6 +638,74 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
  * 5. Parallax
  *************************************
  */
+
+/* 
+ *************************************
+ * Parallax Effect
+ *
+ * @param  {Number} speed     - The speed of movement between elements.
+ * @param  {JSON} bg          - Specify the background display. Default value: { enable: true, xPos: '50%' }
+ * @return {Void}             - The constructor.
+ *************************************
+ */
+
+( function ( $ ) {
+    $.fn.uix_sc_parallax = function( options ) {
+ 
+        // This is the easiest way to have default options.
+        var settings = $.extend({
+			speed    : 0.25,
+			bg       : { enable: true, xPos: '50%' }
+        }, options );
+ 
+        this.each( function() {
+			
+			var bgEff      = settings.bg,
+				$this      = $( this ),
+				bgXpos     = '50%',
+				speed      = -parseFloat( settings.speed );
+			
+		
+	
+			//Prohibit transition delay
+			$this.css( {
+				'transition': 'none'
+			} );
+
+		    $( window ).on( 'scroll touchmove', function( e ){
+				scrollUpdate();
+			});
+			
+			
+			//Initialize the position of the background
+			if ( bgEff ) {
+				//background parallax
+				$this.css('background-position', bgXpos + ' ' + (-$this.offset().top*speed) + 'px' );
+			
+			} 
+			
+			
+			function scrollUpdate() {
+				var scrolled = $( window ).scrollTop(),
+					st       = $this.offset().top - scrolled;
+				
+
+				if ( bgEff ) {
+					//background parallax
+					$this.css('background-position', bgXpos + ' ' + ( 0 - ( st * speed ) ) + 'px' );
+				}
+				
+			}
+
+			
+			
+		});
+ 
+    };
+ 
+}( jQuery ));
+
+
 uix_sc = ( function ( uix_sc, $, window, document ) {
     'use strict';
 
@@ -657,14 +725,9 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 		});
 		
 		function uix_sc_parallaxInit( w ) {
-			$( '.uix-sc-parallax' ).each(function() {
-				
-				if ( w <= 768 ){
-					 $( this ).bgParallax( "0%", 0 );
-				} else {
-					$( this ).bgParallax( "50%", $( this ).data( 'parallax' ) );	
-				}
-			});
+		$( '.uix-sc-parallax' ).each(function() {
+			$( this ).uix_sc_parallax( { speed: $( this ).data( 'parallax' ) } );
+		});
 			
 		}
 
