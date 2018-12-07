@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-07-13 18:52+0000\n"
+"POT-Creation-Date: 2018-12-07 10:33+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,33 +23,33 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-shortcodes.php:461 uix-shortcodes.php:582 uix-shortcodes.php:583
+#: uix-shortcodes.php:456 uix-shortcodes.php:577 uix-shortcodes.php:578
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:462 uix-shortcodes.php:573 uix-shortcodes.php:574
+#: uix-shortcodes.php:457 uix-shortcodes.php:568 uix-shortcodes.php:569
 #: helper/settings.php:63
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:561 helper/settings.php:44
+#: uix-shortcodes.php:556 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:562 shortcodes/editor/tinymce-plugin-lang.php:17
+#: uix-shortcodes.php:557 shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:590 uix-shortcodes.php:591
+#: uix-shortcodes.php:585 uix-shortcodes.php:586
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:598 uix-shortcodes.php:599
+#: uix-shortcodes.php:593 uix-shortcodes.php:594
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:975
+#: uix-shortcodes.php:970
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -254,26 +254,22 @@ msgid "Flexslider"
 msgstr ""
 
 #: helper/tabs/credits.php:21
-msgid "jQuery Parallax"
-msgstr ""
-
-#: helper/tabs/credits.php:22
 msgid "Shuffle (filtering and sorting)"
 msgstr ""
 
-#: helper/tabs/credits.php:23
+#: helper/tabs/credits.php:22
 msgid "imagesloaded"
 msgstr ""
 
-#: helper/tabs/credits.php:24
+#: helper/tabs/credits.php:23
 msgid "Easy Pie Chart"
 msgstr ""
 
-#: helper/tabs/credits.php:25
+#: helper/tabs/credits.php:24
 msgid "Flaticon icon font: Essential Set"
 msgstr ""
 
-#: helper/tabs/credits.php:26
+#: helper/tabs/credits.php:25
 msgid "jQuery Templates plugin"
 msgstr ""
 
@@ -414,15 +410,15 @@ msgstr ""
 msgid "&tab=custom-css\">Add custom stylesheets by clicking here</a>"
 msgstr ""
 
-#: includes/admin/block-init.php:80
+#: includes/admin/block-init.php:28
 msgid "Add Uix Shortcodes"
 msgstr ""
 
-#: includes/admin/block-init.php:107
+#: includes/admin/block-init.php:29
 msgid "[ / ] Add Uix Shortodes"
 msgstr ""
 
-#: includes/admin/block-init.php:240
+#: includes/admin/block-init.php:120
 msgid "Choose Shortcode You Want"
 msgstr ""
 
