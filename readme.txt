@@ -1,12 +1,12 @@
 === Uix Shortcodes - Compatible with Gutenberg ===
 Contributors: uiuxlab
-Donate link: https://uiux.cc
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYZLU7UZNQ6CE
 Author URI: https://uiux.cc
 Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
-Tested up to: 4.9.8
-Stable tag: 1.7.0
+Tested up to: 5.0.0
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,12 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.7.1 (December 7, 2018) =
+
+* Fix: Fixed display problem with admin screen.
+* Tweak: Compatible with the new core gutenberg editor for version 5.0.
+
 
 = 1.7.0 (December 6, 2018) =
 

@@ -12,14 +12,14 @@ if ( !function_exists( 'uix_shortcodes_block_script' ) ) {
 	add_action( 'admin_enqueue_scripts', 'uix_shortcodes_block_script' );
 	function uix_shortcodes_block_script() {
 		
-		  if ( UixShortcodes::is_gutenberg_page() ) {
+		  if ( UixShortcodes::is_gutenberg_plug_page() ) {
 
 
 				wp_register_script( 'uix_shortcodes_block_handle', UixShortcodes::plug_directory() .'includes/admin/assets/js/block.min.js', array( 'jquery', 'uixscform', 'wp-block-library' ), UixShortcodes::ver(), true );
 
 
 				$curid      = get_the_ID();
-				$post_id    = empty( $curid ) ? $_GET['post_id'] : $curid;
+				$post_id    = empty( $curid ) && isset( $_GET['post_id'] ) ? $_GET['post_id'] : $curid;
 
 
 				$translation_array = array(
@@ -64,7 +64,7 @@ if ( !function_exists( 'uix_shortcodes_modules' ) ) {
 	add_action( 'admin_footer', 'uix_shortcodes_modules' );  
 	function uix_shortcodes_modules() {  
 		
-		 if ( UixShortcodes::is_gutenberg_page() ) {
+		 if ( UixShortcodes::is_gutenberg_plug_page() ) {
 			 
 			  include UixShortcodes::templates_panel_directory( true ) . 'config.php';
 

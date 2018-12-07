@@ -37,7 +37,7 @@ add_filter( "mce_external_plugins", "uix_sc_add_buttons" );
 function uix_sc_remove_tiny_mce_buttons_from_editor( $buttons ) {
 	$remove_buttons = array();
 
-	if ( UixShortcodes::is_gutenberg_page() ) {
+	if ( UixShortcodes::is_gutenberg_plug_page() ) {
 		
 		//Remove the shortcodes button when gutenberg is enabled
 		$remove_buttons = array(

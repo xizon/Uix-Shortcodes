@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.7.1 (December 7, 2018) =
+
+* Fix: Fixed display problem with admin screen.
+* Tweak: Compatible with the new core gutenberg editor for version 5.0.
+
+
 ##### = 1.7.0 (December 6, 2018) =
 
 * Fix: Fixed a bug where block data could not be saved in real time.
