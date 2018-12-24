@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.7.1
+ * Version:     1.7.2
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1421,55 +1421,92 @@ class UixShortcodes {
 	 *
 	 * @return boolean Whether Gutenberg is being loaded.
 	 *
-	 * @since 3.1.0
 	 */
 	public static function is_gutenberg_plug_page() {
 		global $post;
+		global $wp_version;
+		
 		if ( ! is_admin() ) {
 			return false;
 		}
 		
-		/*
-		 * Whether the classic editor plugin is used.
-		 */
-		//for WordPress 5.0.x compatibility.
-		if ( file_exists( WP_PLUGIN_DIR . '/classic-editor/classic-editor.php' ) && class_exists( 'Classic_Editor' ) ) {
-			return false;
-		}
-		//for Uix Plugins
-		if ( get_post_type() == 'uix_products' || get_post_type() == 'uix-slideshow' ) {
-			return false;
-		}
-		
-	
-		/*
-		 * There have been reports of specialized loading scenarios where `get_current_screen`
-		 * does not exist. In these cases, it is safe to say we are not loading Gutenberg.
-		 */
-		if ( ! function_exists( 'get_current_screen' ) ) {
-			return false;
-		}
-		
-		//Need to add more function judgment
-		if ( get_current_screen()->base !== 'post' ) {
-			return false;
-		}
-	
-		if ( isset( $_GET['classic-editor'] ) ) {
-			return false;
-		}
-		
+		if ( $wp_version < '5.0.0' ) {
+			
+			/*
+			 * There have been reports of specialized loading scenarios where `get_current_screen`
+			 * does not exist. In these cases, it is safe to say we are not loading Gutenberg.
+			 */
+			if ( ! function_exists( 'get_current_screen' ) ) {
+				return false;
+			}
 
-		
-		//Need to add more function judgment
-		//for WordPress 5.0.x compatibility.
-		if ( function_exists( 'gutenberg_can_edit_post' ) ) {
-			if ( ! gutenberg_can_edit_post( $post ) ) {
+			//Need to add more function judgment
+			if ( isset( $_GET['post'] ) && 
+				! empty( $_GET['post'] ) && 
+				get_current_screen()->base !== 'post' 
+			 ) {
+				return false;
+			}
+
+			if ( isset( $_GET['classic-editor'] ) ) {
 				return false;
 			}	
+			
+		
+			//Need to add more function judgment
+			if ( ! function_exists( 'gutenberg_can_edit_post' ) ) {
+				return false;
+			}
+
+			if ( ! gutenberg_can_edit_post( $post ) ) {
+				return false;
+			}
+			
+			
+		} else {
+			
+			/*
+			 * Whether the classic editor plugin is used.
+			 */
+			//for WordPress 5.0.x compatibility.
+			if ( file_exists( WP_PLUGIN_DIR . '/classic-editor/classic-editor.php' ) && class_exists( 'Classic_Editor' ) ) {
+				return false;
+			}
+			//for Uix Plugins
+			if ( get_post_type() == 'uix_products' || get_post_type() == 'uix-slideshow' ) {
+				return false;
+			}
+
+
+			/*
+			 * There have been reports of specialized loading scenarios where `get_current_screen`
+			 * does not exist. In these cases, it is safe to say we are not loading Gutenberg.
+			 */
+			if ( ! function_exists( 'get_current_screen' ) ) {
+				return false;
+			}
+
+			//Need to add more function judgment
+			if ( get_current_screen()->base !== 'post' ) {
+				return false;
+			}
+
+			if ( isset( $_GET['classic-editor'] ) ) {
+				return false;
+			}
+	
+			//Need to add more function judgment
+			//for WordPress 5.0.x compatibility.
+			if ( function_exists( 'gutenberg_can_edit_post' ) ) {
+				if ( ! gutenberg_can_edit_post( $post ) ) {
+					return false;
+				}	
+			}
+
+			
+			
 		}
 		
-
 
 		//Required class UixSCFormCore::init()
 		global $pagenow;
@@ -1478,11 +1515,8 @@ class UixShortcodes {
 		}
 		
 		
-
-		
 		return true;
 	}
-
 	
 			
 	/**

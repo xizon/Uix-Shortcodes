@@ -66,6 +66,10 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.7.2 (December 24, 2018) =
+
+* Fix: Fixed a bug that the plugin icon on the toolbar not showing.
+
 
 ##### = 1.7.1 (December 7, 2018) =
 
