@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.7.2
+ * Version:     1.7.3
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1027,7 +1027,7 @@ class UixShortcodes {
 	 *
 	 * Avoid being escaped in different editors.
 	 *
-	 * @since 0.2.0
+	 * @since 0.2.1
 	 */
 	public static function do_callback( $str ) {
 	
@@ -1056,7 +1056,9 @@ class UixShortcodes {
 		  );  
 		
 		//Remove <br> or <br /> tags
-		$value = preg_replace( '/(<br\s*\/>)+/', '', $value );
+		//Fixed a bug that if you create columns and add text with new lines it doesn’t show the line break.
+		//@https://wordpress.org/support/topic/content-beak-tag/#post-11062590
+		$value = preg_replace( '/((\>|\])(\s*?)\<br\s*\/>)+/', '>', $value );
 		
 		//Remove empty paragraph tags
 		$value = preg_replace( '/<div(.*?)>([\s]*)<\/p>/', "<div$1>", $value );

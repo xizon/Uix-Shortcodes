@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.7.3 (January 8, 2019) =
+
+* Fix: if you create columns and add text with new lines it doesn’t show the line break.
+
+
+
 ##### = 1.7.2 (December 24, 2018) =
 
 * Fix: Fixed a bug that the plugin icon on the toolbar not showing.
