@@ -131,6 +131,7 @@ registerBlockType( 'myplugin/block-uix-shortcodes', {
 			alignment  = props.attributes.alignment,
 			cid        = 'js-cur-' + props.clientId;
 
+
 		//Update the ID after loaded blocks
 		props.setAttributes( { 
 			cid            : props.clientId
@@ -199,16 +200,22 @@ registerBlockType( 'myplugin/block-uix-shortcodes', {
 			newVal    = content;
 
 
-
 		//Trigger the saving of empty data
 		//Solve the problem of data being pushed to the back end of the 
 		//rich text editor to save null values
 		if ( typeof content === typeof undefined ) {
 			newVal = '&nbsp;';
-		}
+			
+		} 
+	
 
 
-		newVal = newVal.replace(/<br\s*[\/]?>/gi, '[br]' );
+		newVal = newVal
+		    .replace(/<\/p\s*[\/]?>/gi, '[/p]' )
+		    .replace(/<p\s*[\/]?>/gi, '[p]' )
+			.replace(/<br\s*[\/]?>/gi, '[br]' )
+		    .replace(/\[\/p\]\[br\]/gi, '[/p]' )
+			.replace(/\[br\]$/, '');
 
 
 		return uixscBlockEl( RichText.Content, {

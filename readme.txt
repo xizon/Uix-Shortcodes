@@ -120,10 +120,11 @@ We should now be able to see our block in the Add Block menu.</h4>
 == Changelog ==
 
 
-= 1.7.3 (January 8, 2019) =
+= 1.7.3 (January 13, 2019) =
 
 * Fix: if you create columns and add text with new lines it doesn’t show the line break.
-
+* Fix: Fixed some compatibility issues with Uix Shortcodes plugin under Gutenberg.
+* Fix: Fixed a problem with block initial save and multiple segment code data conflicts.
 
 
 = 1.7.2 (December 24, 2018) =

@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version: 4.2.3
+	* Version: 4.2.4
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -2369,4 +2369,45 @@ a.uixscform-icon-clear {
     }
 }
 
+
+/* Textarea Copy
+-------------------------------------------------------------- */
+.uixscform-cmd-textarea {
+  /* box-sizing: padding-box; */
+    overflow: hidden;
+  /* demo only: */
+    padding: 10px;
+    width: 320px;
+    font-size: 14px;
+    display: block;
+    border-radius: 7px;
+    border: 6px solid #556677;
+}
+
+.uixscform-cmd-btn {
+    position: relative;
+    width: 320px;
+    height: 3rem;
+    color: #fff;
+    background: #556677;
+    font-size: 16px;
+    border-radius: 3rem;
+    cursor: pointer;
+    overflow: hidden;
+	text-align: center;
+	margin-top: 15px;
+	transition: .1s ease-in-out;
+}
+
+.uixscform-cmd-btn i {
+	font-size: 18px;
+	margin-right: .5rem;
+}
+.uixscform-cmd-btn.ok {
+    width: 50px;
+}
+
+.uixscform-cmd-btn.ok i {
+	margin-right: 0;
+}
 

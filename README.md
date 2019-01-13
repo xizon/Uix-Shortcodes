@@ -1,7 +1,7 @@
 fi# Uix Shortcodes
 This is a WordPress Plugin. Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
 
-Copyright (c) 2016 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
+Copyright (c) 2019 UIUX Lab [@uiux_lab](http://twitter.com/uiux_lab)
 
 
 [Plugin URI](https://uiux.cc/wp-plugins/uix-shortcodes/)
@@ -67,10 +67,11 @@ The currently available default elements:
 ### Updates
 
 
-##### = 1.7.3 (January 8, 2019) =
+##### = 1.7.3 (January 13, 2019) =
 
 * Fix: if you create columns and add text with new lines it doesn’t show the line break.
-
+* Fix: Fixed some compatibility issues with Uix Shortcodes plugin under Gutenberg.
+* Fix: Fixed a problem with block initial save and multiple segment code data conflicts.
 
 
 ##### = 1.7.2 (December 24, 2018) =

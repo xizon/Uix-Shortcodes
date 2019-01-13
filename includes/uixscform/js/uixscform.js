@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form
-	* Version: 4.2.3
+	* Version: 4.2.4
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -286,72 +286,62 @@
 						
 						var $previewBtn    = $( '#' + $( this ).attr( 'id' ).replace( '_savebtn', '_preview_codebtn' ) ),
 							$blockText     = $( '[class*="cid-'+$obj.data( 'block-id' )+'"]' );
-						uixscform_insertCodes( $previewBtn.data( 'code' ), $previewBtn.data( 'contentID' ) );
 						
-						//Push the value to block (gutenberg)
-						//Temporarily store the current shortcode
-						var blockTextareaVal       = uixscform_insertToBlockTextarea( $previewBtn.data( 'code' ) ),
-							blockTextareaValFilled = 0;
-						
-						
+
 						if ( $blockText.length > 0 ) {
 							
-							$blockText.html( blockTextareaVal )
-							            .promise().done( function() {
-								
-								
-								            //Trigger save as draft when inserted shortcode
-								            //Need a delay
-											setTimeout( function() {
-												$( '.editor-post-save-draft' ).trigger( 'click' );
-											}, 1500 );
 
-								
-								            //Avoid saving invalidation data when you first fill 
-								            //a rich text editor with a shortcode.
-											//Trigger javascript on gutenberg (block editor) save
-											//@https://wordpress.org/gutenberg/handbook/extensibility/extending-blocks/
-											function addNewBlockValue( props, blockType ) {
-												
-												//console.log( 'save-------------' + blockTextareaValFilled );
-												
+							//Push the value to block (gutenberg)
+							//Temporarily store the current shortcode
+							var blockTextareaVal = uixscform_insertToBlockTextarea( $previewBtn.data( 'code' ) );
 
-												//Avoid conflicts with other blocks
-												if( blockType.name === 'myplugin/block-uix-shortcodes' && $obj.data( 'block-id' ).indexOf( props.cid ) >= 0 && typeof props.cid != undefined ) {
-													
-													
-													if ( blockTextareaValFilled >= 1 ) {
-														wp.hooks.removeFilter(
-															'blocks.getSaveContent.extraProps',
-															'myplugin/block-uix-shortcodes',
-															addNewBlockValue
-														);	  
-													}
-													
-													blockTextareaValFilled++;
-													return Object.assign( props, { value: blockTextareaVal } );
-												}
-												return props;
-											}
-								
-								           
-											wp.hooks.addFilter(
-												'blocks.getSaveContent.extraProps',
-												'myplugin/block-uix-shortcodes',
-												addNewBlockValue
-											);
-										
-								
-								
-								
-										});
 							
+							//Generate shortcode
+							curSaveBtn.closest( '.uixscform-form-container' ).html( '<textarea id="cmd-textarea-'+$obj.data( 'block-id' )+'" class="uixscform-cmd-textarea" rows="8">'+blockTextareaVal+'</textarea><button id="cmd-copybtn-'+$obj.data( 'block-id' )+'" type="button" class="uixscform-cmd-btn"><i class="fa fa-clipboard" aria-hidden="true"></i>'+curSaveBtn.data( 'tbtn-txt' )+'</button>' ).promise().done( function() {
+								
+								var _textarea     = document.getElementById( 'cmd-textarea-'+$obj.data( 'block-id' ) ),
+									_copyTextarea = document.getElementById( 'cmd-copybtn-'+$obj.data( 'block-id' ) ),
+									_copyFun      = function( type ) {
+										
+										document.execCommand( 'copy',false, _textarea.select() );
+
+										if ( type == 1 ) {
+											_copyTextarea.classList.add( 'ok' );
+											_copyTextarea.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
+
+											//All elements close for Uix Shortcodes Form
+											setTimeout( function(){
+												$( document ).UixSCFormPopClose();
+												$blockText.focus();
+											}, 1000 );			
+										}
+
+									};
+								
+
+								_copyTextarea.addEventListener( 'click',function( e ) {
+								    e.preventDefault();
+									_copyFun( 1 );
+								});
+								
+								_textarea.addEventListener( 'click',function() {
+									_copyFun( 2 );
+								});							
+								
+								
+							});
+	
+							
+							
+						} else {
+							
+							uixscform_insertCodes( $previewBtn.data( 'code' ), $previewBtn.data( 'contentID' ) );
+							
+							//All elements close for Uix Shortcodes Form
+							$( document ).UixSCFormPopClose();
+		
 						}
 
-						
-
-						//All elements close for Uix Shortcodes Form
-						$( document ).UixSCFormPopClose();
 						
 						return false;
 					}
@@ -933,8 +923,11 @@
 			$( '#' + renderTempID ).val( htmlcode );
 		
 			
+			//Clean all temporary values
+			$( '.uixscform-modal-button.uixscform-modal-button-icon' ).data( 'code', '' );
+
 			//Render HTML Viewport (Relative to the front of the page)
-			$( '#'+tempID+'_preview_codebtn' ).data( {
+			$( '.uixscform-modal-button.uixscform-modal-button-icon#'+tempID+'_preview_codebtn' ).data( {
 				'code'      : uixscform_format_text_decode( htmlcode ),
 				'contentID' : contentID
 			} );
