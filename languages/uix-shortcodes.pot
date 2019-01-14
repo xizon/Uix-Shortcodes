@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-01-13 19:33+0000\n"
+"POT-Creation-Date: 2019-01-14 06:59+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -96,7 +96,7 @@ msgid "Select Files"
 msgstr ""
 
 #: includes/uixscform/init.php:107
-#: includes/uixscform/components/ui-wrapper.php:47
+#: includes/uixscform/components/ui-wrapper.php:46
 msgid "Insert"
 msgstr ""
 
@@ -124,10 +124,6 @@ msgstr ""
 
 #: includes/uixscform/init.php:113
 msgid "Open link in a new tab"
-msgstr ""
-
-#: includes/uixscform/init.php:304
-msgid "Exit live preview"
 msgstr ""
 
 #: includes/uixscform/init.php:807
@@ -830,15 +826,15 @@ msgstr ""
 msgid "Generate shortcode"
 msgstr ""
 
-#: includes/uixscform/components/ui-wrapper.php:45
+#: includes/uixscform/components/ui-wrapper.php:51
 msgid "Copy to clipboard"
 msgstr ""
 
-#: includes/uixscform/components/ui-wrapper.php:53
+#: includes/uixscform/components/ui-wrapper.php:51
 msgid "Cancel"
 msgstr ""
 
-#: includes/uixscform/components/ui-wrapper.php:53
+#: includes/uixscform/components/ui-wrapper.php:51
 msgid "Preview"
 msgstr ""
 
