@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version: 4.2.4
+	* Version: 4.2.5
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -2372,41 +2372,86 @@ a.uixscform-icon-clear {
 
 /* Textarea Copy
 -------------------------------------------------------------- */
+.uixscform-cmd-textarea-container {
+	position: absolute;
+	width: calc(100% - 20px);
+	height: calc(100% - 10px);
+	top: 10px;
+	left: 15px;
+	display: none;
+	background: #fff;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;	
+    z-index: 559902;
+   /*coordinate of wordpress*/
+}
+
+.uixscform-cmd-textarea-container.active {
+	display: block;
+}
+
 .uixscform-cmd-textarea {
   /* box-sizing: padding-box; */
     overflow: hidden;
   /* demo only: */
     padding: 10px;
-    width: 320px;
+    width: 98% !important;
     font-size: 14px;
     display: block;
-    border-radius: 7px;
-    border: 6px solid #556677;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	border-radius: 3px;
+    border: 6px solid #DCDCDC;
+	max-height: 70%;
 }
+
+
+.uixscform-cmd-btn-box {
+	display: block;
+	text-align: center;
+	position: absolute;
+	bottom: 12px;
+	width: 100%;	
+}
+
 
 .uixscform-cmd-btn {
     position: relative;
-    width: 320px;
-    height: 3rem;
     color: #fff;
-    background: #556677;
-    font-size: 16px;
-    border-radius: 3rem;
+    background-color: #CFCFCF;
+    font-size: 14px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	border-radius: 3px;
     cursor: pointer;
     overflow: hidden;
 	text-align: center;
-	margin-top: 15px;
-	transition: .1s ease-in-out;
+	font-weight: 600;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    padding: 6px 22px;
+    margin: 15px 10px 0 0;
+}
+
+.uixscform-cmd-btn span {
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+	display: inline-block;
 }
 
 .uixscform-cmd-btn i {
-	font-size: 18px;
 	margin-right: .5rem;
 }
-.uixscform-cmd-btn.ok {
-    width: 50px;
+.uixscform-cmd-btn.ok span {
+    width: 0;
 }
 
+.uixscform-cmd-btn.uixscform-modal-button-secondary i,
 .uixscform-cmd-btn.ok i {
 	margin-right: 0;
 }

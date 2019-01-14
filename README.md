@@ -67,6 +67,11 @@ The currently available default elements:
 ### Updates
 
 
+##### = 1.7.4 (January 14, 2019) =
+
+* Tweak: Optimized the experience of inserting block code into blocks.
+
+
 ##### = 1.7.3 (January 13, 2019) =
 
 * Fix: if you create columns and add text with new lines it doesn’t show the line break.

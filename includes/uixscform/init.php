@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 4.2.4  (January 13, 2019)
+ * @version		: 4.2.5  (January 14, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '4.2.4';
+		const VERSION    = '4.2.5';
 		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		
@@ -301,7 +301,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 
 			 echo '<div class="uixscform-sub-window uixscform-livepreview-btn-target" id="" style="display:none;">';
 			 echo '<div></div>';
-			 echo '<span class="uixscform-sub-window-buttons"><input type="button" class="uixscform-modal-button uixscform-modal-button-alert uixscform-modal-exitpreview-btn"  value="'.__( 'Exit live preview', 'uix-shortcodes' ).'" /></span>';
+			 echo '<span class="uixscform-sub-window-buttons"><button type="button" class="uixscform-modal-button uixscform-modal-button-alert uixscform-modal-exitpreview-btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></buttopn></span>';
 			 echo '</div>';
 
 		 }

@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form
-	* Version: 4.2.4
+	* Version: 4.2.5
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -283,10 +283,10 @@
 					if ( e.type == 'click' ) {
 						
 						e.preventDefault();
+						e.stopPropagation();
 						
 						var $previewBtn    = $( '#' + $( this ).attr( 'id' ).replace( '_savebtn', '_preview_codebtn' ) ),
 							$blockText     = $( '[class*="cid-'+$obj.data( 'block-id' )+'"]' );
-						
 
 						if ( $blockText.length > 0 ) {
 							
@@ -297,40 +297,73 @@
 
 							
 							//Generate shortcode
-							curSaveBtn.closest( '.uixscform-form-container' ).html( '<textarea id="cmd-textarea-'+$obj.data( 'block-id' )+'" class="uixscform-cmd-textarea" rows="8">'+blockTextareaVal+'</textarea><button id="cmd-copybtn-'+$obj.data( 'block-id' )+'" type="button" class="uixscform-cmd-btn"><i class="fa fa-clipboard" aria-hidden="true"></i>'+curSaveBtn.data( 'tbtn-txt' )+'</button>' ).promise().done( function() {
+							var $cmdTerxAreaContainer = curSaveBtn.parent().parent().prev( '.uixscform-cmd-textarea-container' ),
+								cmdTerxAreaID         = $cmdTerxAreaContainer.data( 'tid' );
+							
+							$cmdTerxAreaContainer.addClass( 'active' );
+							$cmdTerxAreaContainer.find( 'textarea' ).val( blockTextareaVal );
+							
+							if ( typeof cmdTerxAreaID === typeof undefined ) {
 								
-								var _textarea     = document.getElementById( 'cmd-textarea-'+$obj.data( 'block-id' ) ),
-									_copyTextarea = document.getElementById( 'cmd-copybtn-'+$obj.data( 'block-id' ) ),
-									_copyFun      = function( type ) {
-										
-										document.execCommand( 'copy',false, _textarea.select() );
-
-										if ( type == 1 ) {
-											_copyTextarea.classList.add( 'ok' );
-											_copyTextarea.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
-
-											//All elements close for Uix Shortcodes Form
-											setTimeout( function(){
-												$( document ).UixSCFormPopClose();
-												$blockText.focus();
-											}, 1000 );			
-										}
-
-									};
+								$cmdTerxAreaContainer.data( 'tid', $obj.data( 'block-id' ) );
+								$cmdTerxAreaContainer.find( 'textarea' ).attr( 'id', 'cmd-textarea-'+$obj.data( 'block-id' ) );
+								$cmdTerxAreaContainer.find( '.uixscform-modal-button-primary' ).attr( 'id', 'cmd-copybtn-'+$obj.data( 'block-id' ) );
+								$cmdTerxAreaContainer.find( '.uixscform-modal-button-alert' ).attr( 'id', 'cmd-cancelbtn-'+$obj.data( 'block-id' ) );
 								
+								var textareaID      = '#' + $cmdTerxAreaContainer.find( 'textarea' ).attr( 'id' ),
+									copyBtnID       = '#' + $cmdTerxAreaContainer.find( '.uixscform-modal-button-primary' ).attr( 'id' ),
+									cancelBtnID     = '#' + $cmdTerxAreaContainer.find( '.uixscform-modal-button-alert' ).attr( 'id' ),
+									cmdCopyFun      = function( type ) {
 
-								_copyTextarea.addEventListener( 'click',function( e ) {
-								    e.preventDefault();
-									_copyFun( 1 );
+														$cmdTerxAreaContainer.find( 'textarea' ).select();
+
+														try {
+															var status = document.execCommand('copy');
+															if( !status ) {
+																console.error( 'Cannot copy text.' );
+															}else{
+																console.log( 'The text is now on the clipboard.' );
+															}
+														} catch (err) {
+															console.log( 'Unable to copy.' );
+														}
+
+
+														if ( type == 1 ) {
+															$cmdTerxAreaContainer.find( '.uixscform-modal-button-primary' ).addClass( 'ok' ).html( '<i class="fa fa-check" aria-hidden="true"></i>' );
+
+															//All elements close for Uix Shortcodes Form
+															setTimeout( function(){
+																$( document ).UixSCFormPopClose();
+																$blockText.focus();
+															}, 1500 );		
+														}
+
+													};
+
+
+
+
+								$( document ).on( 'click', cancelBtnID, function( e ) {
+									e.preventDefault();
+									$cmdTerxAreaContainer.removeClass( 'active' );
 								});
+
+								$( document ).on( 'click', copyBtnID, function( e ) {
+									e.preventDefault();
+									cmdCopyFun( 1 );
+								});
+
+
+								$( document ).on( 'click', textareaID, function() {
+									cmdCopyFun( 2 );
+								});			
 								
-								_textarea.addEventListener( 'click',function() {
-									_copyFun( 2 );
-								});							
+							}
+							
+
+							
 								
-								
-							});
-	
 							
 							
 						} else {

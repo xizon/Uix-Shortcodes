@@ -91,7 +91,9 @@ var uixscBlockEl      = wp.element.createElement,
 		color: '#fff', 
 		borderColor: '#5EB83C', 
 		textAlign: 'center', 
-		fontFamily: 'Helvetica, Arial' 
+		fontFamily: 'Helvetica, Arial',
+		outline: 'none',
+		textDecoration: 'none'
 	},
 	btnClassName      = 'button uix-shortcodes-open-btn';
 
@@ -150,7 +152,6 @@ registerBlockType( 'myplugin/block-uix-shortcodes', {
 		function onChangeAlignment( newAlignment ) {
 			props.setAttributes( { alignment: newAlignment } );
 		}
-
 
 
 		return (
