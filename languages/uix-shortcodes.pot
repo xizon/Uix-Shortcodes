@@ -80,7 +80,7 @@ msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
 #: includes/admin/block-init.php:28
-msgid "Add Uix Shortcodes"
+msgid "Uix Shortcodes"
 msgstr ""
 
 #: includes/admin/block-init.php:29

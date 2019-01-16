@@ -82,11 +82,11 @@ var UIXSC_BLOCK_CURRENT_ID = null;
  * ---------------------------------------------------
  */
 var uixscBlockEl      = wp.element.createElement,
-	Fragment          = wp.element.Fragment,
-	registerBlockType = wp.blocks.registerBlockType,
-	RichText          = wp.editor.RichText,
-	BlockSelector     = 'div',
-	btnStyle          = { 
+	uixscFragment          = wp.element.Fragment,
+	uixscRegisterBlockType = wp.blocks.registerBlockType,
+	uixscRichText          = wp.editor.RichText,
+	uixscBlockSelector     = 'div',
+	uixscBtnStyle          = { 
 		backgroundColor: '#7AD03A', 
 		color: '#fff', 
 		borderColor: '#5EB83C', 
@@ -95,21 +95,21 @@ var uixscBlockEl      = wp.element.createElement,
 		outline: 'none',
 		textDecoration: 'none'
 	},
-	btnClassName      = 'button uix-shortcodes-open-btn';
+	uixscBtnClassName      = 'button uix-shortcodes-open-btn';
 
 /**
  * A custom SVG path taken from fontastic
 */
-var mupluginIcon = uixscBlockEl( 'svg', { width: 24, height: 24, viewBox: '0 0 18 18' },
+var uixscBlockIcon = uixscBlockEl( 'svg', { width: 24, height: 24, viewBox: '0 0 18 18' },
   uixscBlockEl('path', { d: "M0 1v14h16v-14h-16zM15 14h-14v-12h14v12zM14 3h-12v10h12v-10zM7 8h-1v1h-1v1h-1v-1h1v-1h1v-1h-1v-1h-1v-1h1v1h1v1h1v1zM11 10h-3v-1h3v1z", fill: '#74D053' } )
 );
 
 
 
-registerBlockType( 'myplugin/block-uix-shortcodes', {
+uixscRegisterBlockType( 'myplugin/block-uix-shortcodes', {
 	title: uix_shortcodes_block_vars.send_string_block_title,
 
-	icon: mupluginIcon,
+	icon: uixscBlockIcon,
 
 	category: 'common',
 
@@ -117,7 +117,7 @@ registerBlockType( 'myplugin/block-uix-shortcodes', {
 		customMeta_text: {
 			type: 'string',
 			source: 'html',
-			selector: BlockSelector,
+			selector: uixscBlockSelector,
 		},
 		//ID will be passed to the background for use
 		cid: {
@@ -156,7 +156,7 @@ registerBlockType( 'myplugin/block-uix-shortcodes', {
 
 		return (
 			uixscBlockEl(
-				Fragment,
+				uixscFragment,
 				null,
 				uixscBlockEl(
 					wp.editor.BlockControls,
@@ -172,17 +172,17 @@ registerBlockType( 'myplugin/block-uix-shortcodes', {
 
 				uixscBlockEl( 'a', 
 				   { 
-						style     : btnStyle, 
-						className : btnClassName,
+						style     : uixscBtnStyle, 
+						className : uixscBtnClassName,
 						href      : 'javascript:void(0)',
 						id        : cid
 					}, uix_shortcodes_block_vars.send_string_block_btn_title ),
 
 				uixscBlockEl(
-					RichText,
+					uixscRichText,
 					{
 						key             : 'editable',
-						tagName         : BlockSelector,
+						tagName         : uixscBlockSelector,
 						className       : props.className + ' cid-' + cid,
 						style           : { textAlign: alignment },
 						onChange        : onChangeContent,
@@ -219,8 +219,8 @@ registerBlockType( 'myplugin/block-uix-shortcodes', {
 			.replace(/\[br\]$/, '');
 
 
-		return uixscBlockEl( RichText.Content, {
-			tagName         : BlockSelector,
+		return uixscBlockEl( uixscRichText.Content, {
+			tagName         : uixscBlockSelector,
 			className       : props.className,
 			style           : { textAlign: alignment },
 			value           : newVal,

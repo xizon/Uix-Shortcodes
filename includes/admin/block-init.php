@@ -25,7 +25,7 @@ if ( !function_exists( 'uix_shortcodes_block_script' ) ) {
 				$translation_array = array(
 					'send_string_plugin_url'       => UixShortcodes::plug_directory(),
 					'send_string_postid'           => $post_id,
-					'send_string_block_title'       => esc_attr__( 'Add Uix Shortcodes', 'uix-shortcodes' ),
+					'send_string_block_title'       => esc_attr__( 'Uix Shortcodes', 'uix-shortcodes' ),
 					'send_string_block_btn_title'   => esc_attr__( '[ / ] Click here to add shortode', 'uix-shortcodes' )
 				);
 
