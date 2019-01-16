@@ -14,6 +14,7 @@
 	
 	1. jQuery Accessible Tabs
 	2. Elements Navigation
+    3. Interaction Button
 
 */
 
@@ -290,4 +291,29 @@
 	
 }
 
+/* 3. Interaction Button
+-------------------------------------------------------------- */
+.uix-shortcodes-open-btn.disable {
+	background: #EFEFEF !important;
+	border: none !improtant;
+	color:#909090 !important;
+	border-color: rgba(0,0,0,0) !important;
+	pointer-events: none !important;
+	cursor: default !important;
+	font-style: italic !important;
+	font-size: 16px !important;
+	box-shadow: none !important;
+	text-decoration:  none !important;
+	
+}
 
+.uix-shortcodes-open-btn.disable:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\f05a";
+	margin-right: .5rem;
+}

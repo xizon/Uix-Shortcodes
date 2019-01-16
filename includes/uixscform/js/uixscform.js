@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form
-	* Version: 4.2.5
+	* Version: 4.2.6
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -336,7 +336,12 @@
 															setTimeout( function(){
 																$( document ).UixSCFormPopClose();
 																$blockText.focus();
+
+																$( '.uix-shortcodes-open-btn#' + $obj.data( 'block-id' ) ).addClass( 'disable' ).html( uix_shortcodes_wp_plugin.lang_block_cmd_paste );
+																
+																
 															}, 1500 );		
+															
 														}
 
 													};
