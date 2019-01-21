@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.7.5
+ * Version:     1.7.6
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1428,6 +1428,18 @@ class UixShortcodes {
 		
 		/*
 		 * step 1.
+		 * When I enable the classic editor, I set the block in the setting, but it can't be displayed.
+		 * Only WP version >= 5.0
+		 */
+		if  ( version_compare( get_bloginfo( 'version' ), '5.0', '>=' ) ) {
+			if ( true === function_exists( 'get_current_screen' ) && get_current_screen()->is_block_editor() ) {
+				return true;
+			}	
+		}
+
+		
+		/*
+		 * step 2.
 		 * Whether the classic editor plugin is used.
 		 */
 		//for WordPress 5.0.x compatibility.
@@ -1449,7 +1461,7 @@ class UixShortcodes {
 		}
 		
 		/*
-		 * step 2.
+		 * step 3.
 		 * There have been reports of specialized loading scenarios where `get_current_screen`
 		 * does not exist. In these cases, it is safe to say we are not loading Gutenberg.
 		 */
@@ -1459,7 +1471,7 @@ class UixShortcodes {
 
 		
 		/*
-		 * step 3.
+		 * step 4.
 		 * GUTENBERG core judgment.
 		 */
 		if ( false === defined( 'GUTENBERG_VERSION' ) && false === version_compare( get_bloginfo( 'version' ), '5.0', '>=' ) ) {

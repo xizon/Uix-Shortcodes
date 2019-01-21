@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Tested up to: 5.0.3
-Stable tag: 1.7.5
+Stable tag: 1.7.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,26 +89,27 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Screenshots ==
-1. screenshot-1.jpg
-2. screenshot-2.jpg
-3. screenshot-3.jpg
-4. screenshot-4.jpg
-5. screenshot-5.jpg
-6. screenshot-6.jpg
-7. screenshot-7.jpg
-8. screenshot-8.jpg
-9. screenshot-9.jpg
-10. screenshot-10.jpg
-11. screenshot-11.jpg
-12. screenshot-12.jpg
-13. screenshot-13.jpg
-14. screenshot-14.jpg
-15. screenshot-15.jpg
-16. screenshot-16.jpg
-17. screenshot-17.jpg
-18. screenshot-18.jpg
-19. screenshot-19.jpg
-20. screenshot-20.jpg
+1. screenshot-21.jpg
+2. screenshot-1.jpg
+3. screenshot-2.jpg
+4. screenshot-3.jpg
+5. screenshot-4.jpg
+6. screenshot-5.jpg
+7. screenshot-6.jpg
+8. screenshot-7.jpg
+9. screenshot-8.jpg
+10. screenshot-9.jpg
+11. screenshot-10.jpg
+12. screenshot-11.jpg
+13. screenshot-12.jpg
+14. screenshot-13.jpg
+15. screenshot-14.jpg
+16. screenshot-15.jpg
+17. screenshot-16.jpg
+18. screenshot-17.jpg
+19. screenshot-18.jpg
+20. screenshot-19.jpg
+21. screenshot-20.jpg
 
 
 == Upgrade Notice ==
@@ -118,6 +119,13 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+
+= 1.7.6 (January 21, 2019) =
+
+* Fix: Fixed a bug that when I enable the classic editor, I set the block in the setting, but it can't be displayed.
+
+
 
 = 1.7.5 (January 16, 2019) =
 

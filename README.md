@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.7.6 (January 21, 2019) =
+
+* Fix: Fixed a bug that when I enable the classic editor, I set the block in the setting, but it can't be displayed.
+
+
+
 ##### = 1.7.5 (January 16, 2019) =
 
 * Fix: Solved the block display problem of the new version of the Gutenberg editor.
@@ -443,6 +450,8 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 
 
 ### Screenshot
+
+![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-21.jpg)
 
 ![](https://github.com/xizon/Uix-Shortcodes/blob/master/screenshots/screenshot-3.jpg)
 
