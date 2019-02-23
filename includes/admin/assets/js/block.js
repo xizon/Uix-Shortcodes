@@ -215,7 +215,6 @@ uixscRegisterBlockType( 'myplugin/block-uix-shortcodes', {
 		    .replace(/<\/p\s*[\/]?>/gi, '[/p]' )
 		    .replace(/<p\s*[\/]?>/gi, '[p]' )
 			.replace(/<br\s*[\/]?>/gi, '[br]' )
-		    .replace(/\[\/p\]\[br\]/gi, '[/p]' )
 			.replace(/\[br\]$/, '');
 
 

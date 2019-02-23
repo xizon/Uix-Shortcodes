@@ -725,9 +725,9 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 		});
 		
 		function uix_sc_parallaxInit( w ) {
-		$( '.uix-sc-parallax' ).each(function() {
-			$( this ).uix_sc_parallax( { speed: $( this ).data( 'parallax' ) } );
-		});
+			$( '.uix-sc-parallax' ).each(function() {
+				$( this ).uix_sc_parallax( { speed: $( this ).data( 'parallax' ) } );
+			});
 			
 		}
 

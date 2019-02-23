@@ -66,6 +66,11 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.7.7 (February 23, 2019) =
+
+* Fix:  Solved a bug of Block validation from the Gutenberg editor.
+
+
 
 ##### = 1.7.6 (January 21, 2019) =
 
@@ -434,7 +439,7 @@ The currently available default elements:
 - WP 4.7.*
 - WP 4.8.*
 - WP 4.9.*
-- WP 5.0.0 Beta
+- WP 5.1.*
 
 
 ### Frequently Asked Questions

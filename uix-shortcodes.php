@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.7.6
+ * Version:     1.7.7
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -105,11 +105,17 @@ class UixShortcodes {
 		wp_register_style( 'accTabs-uix-shortcodes', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all' );
 		
 		// Shuffle
-		wp_register_script( 'shuffle', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery' ), '3.1.1', true );
+		wp_register_script( 'shuffle', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery', 'modernizr' ), '3.1.1', true );
 		
 		// Shuffle.js requires Modernizr..
-		wp_register_script( 'modernizr', self::plug_directory() .'assets/add-ons/HTML5/modernizr.min.js', false, '3.3.1', false );
-			
+		if ( is_admin() ) {
+			//Use a fixed version of this, otherwise it will cause layout problems in the admin panle
+			wp_register_script( 'modernizr', self::plug_directory() .'assets/add-ons/HTML5/modernizr.min-3.1.1.js', false, '3.3.1', false );
+		} else {
+			wp_register_script( 'modernizr', self::plug_directory() .'assets/add-ons/HTML5/modernizr.min-3.5.0.js', false, '3.5.0', false );
+		}
+		
+		
 		// Easing
 		wp_register_script( 'jquery-easing', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
 
