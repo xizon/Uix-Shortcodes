@@ -440,6 +440,7 @@ The currently available default elements:
 - WP 4.8.*
 - WP 4.9.*
 - WP 5.1.*
+- WP 5.2.*
 
 
 ### Frequently Asked Questions
