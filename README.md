@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.7.8 (May 31, 2019) =
+
+* New: Support for adding your Google Map API Key to avoid traffic overruns on maps.
+
+
+
 ##### = 1.7.7 (February 23, 2019) =
 
 * Fix:  Solved a bug of Block validation from the Gutenberg editor.

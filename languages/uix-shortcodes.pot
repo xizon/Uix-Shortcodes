@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-01-16 05:24+0000\n"
+"POT-Creation-Date: 2019-05-31 09:30+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,34 +23,34 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-shortcodes.php:456 uix-shortcodes.php:577 uix-shortcodes.php:578
+#: uix-shortcodes.php:462 uix-shortcodes.php:583 uix-shortcodes.php:584
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:457 uix-shortcodes.php:568 uix-shortcodes.php:569
+#: uix-shortcodes.php:463 uix-shortcodes.php:574 uix-shortcodes.php:575
 #: helper/settings.php:63
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:556 helper/settings.php:44
+#: uix-shortcodes.php:562 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:557 includes/admin/block-init.php:28
+#: uix-shortcodes.php:563 includes/admin/block-init.php:28
 #: shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:585 uix-shortcodes.php:586
+#: uix-shortcodes.php:591 uix-shortcodes.php:592
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:593 uix-shortcodes.php:594
+#: uix-shortcodes.php:599 uix-shortcodes.php:600
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:970
+#: uix-shortcodes.php:976
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -358,35 +358,51 @@ msgstr ""
 msgid "Author Card"
 msgstr ""
 
-#: helper/tabs/general-settings.php:29 helper/tabs/custom-css.php:26
+#: helper/tabs/general-settings.php:31 helper/tabs/custom-css.php:26
 msgid "Settings saved."
 msgstr ""
 
-#: helper/tabs/general-settings.php:50
+#: helper/tabs/general-settings.php:54
+msgid "Google Map Settings"
+msgstr ""
+
+#: helper/tabs/general-settings.php:61
+msgid "API Key"
+msgstr ""
+
+#: helper/tabs/general-settings.php:67
+#, php-format
+msgid ""
+"<a href=\"%1$s\" target=\"_blank\">How to \n"
+"Get an API Key?</a> If left blank, the default Key will be used, but it will "
+"have a traffic excess problem that will not display properly."
+msgstr ""
+
+#: helper/tabs/general-settings.php:82
 msgid "Icon Types"
 msgstr ""
 
-#: helper/tabs/general-settings.php:57 helper/tabs/credits.php:16
+#: helper/tabs/general-settings.php:89 helper/tabs/credits.php:16
 msgid "Font Awesome"
 msgstr ""
 
-#: helper/tabs/general-settings.php:64
+#: helper/tabs/general-settings.php:96
 msgid "Flaticon"
 msgstr ""
 
-#: helper/tabs/general-settings.php:80
+#: helper/tabs/general-settings.php:112
 msgid "Choose The Shortcodes Style"
 msgstr ""
 
-#: helper/tabs/general-settings.php:90
+#: helper/tabs/general-settings.php:122
 msgid "Elegant (default)"
 msgstr ""
 
-#: helper/tabs/general-settings.php:98
+#: helper/tabs/general-settings.php:130
 msgid "Slant"
 msgstr ""
 
-#: helper/tabs/general-settings.php:107
+#: helper/tabs/general-settings.php:139
 msgid "Rich"
 msgstr ""
 
@@ -689,15 +705,15 @@ msgid ""
 "//uiux.cc/\" target=\"_blank\">Click here to check out</a></h4>"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:421
+#: includes/admin/uix-custom-metaboxes/init.php:426
 msgid "Group Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:587
+#: includes/admin/uix-custom-metaboxes/init.php:592
 msgid "Field Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1437
+#: includes/admin/uix-custom-metaboxes/init.php:1442
 #: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
@@ -713,15 +729,15 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1438
+#: includes/admin/uix-custom-metaboxes/init.php:1443
 msgid "Value"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1461
+#: includes/admin/uix-custom-metaboxes/init.php:1466
 msgid "Remove field"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1495
+#: includes/admin/uix-custom-metaboxes/init.php:1500
 msgid "Add a custom attribute"
 msgstr ""
 
