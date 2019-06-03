@@ -61,6 +61,10 @@ $args =
 		
 		),
 		
+	
+
+
+	
 		
 	    array(
 			'id'             => 'uix_sc_map_style_tipinfo',
@@ -73,6 +77,23 @@ $args =
 		
 		),	
 		
+	
+	
+		
+		array(
+
+			'id'             => 'uix_sc_map_apikey',
+			'title'          => esc_html__( 'Google API key', 'uix-shortcodes' ),
+			'desc'           => wp_kses( sprintf( __( '<a href="%1$s" target="_blank">How to 
+Get an API Key?</a> If left blank, the default Key will be used, but it will have a traffic excess problem that will not display properly.', 'uix-shortcodes' ), esc_url( '//developers.google.com/maps/documentation/javascript/get-api-key' ) ), wp_kses_allowed_html( 'post' ) ),
+			'value'          => esc_attr( get_option( 'uix_sc_opt_map_api', '' ) ),
+			'placeholder'    => esc_attr__( 'Your own Google API key', 'uix-shortcodes' ),
+			'type'           => 'text',
+		    'callback'       => 'attr',
+		
+		),
+	
+	
 		
 	    array(
 		    /*
@@ -233,7 +254,7 @@ UixSCFormCore::form_scripts( array(
 		 */
 	    'template'              => '
 		  
-		 [uix_map style=\'${uix_sc_map_style}\' width=\'${uix_sc_map_width}${uix_sc_map_width_units}\' height=\'${uix_sc_map_height}${uix_sc_map_height_units}\' latitude=\'${uix_sc_map_latitude}\' longitude=\'${uix_sc_map_longitude}\' zoom=\'${uix_sc_map_zoom}\' name=\'${uix_sc_map_name_attr}\' marker=\'${uix_sc_map_marker}\']
+		 [uix_map style=\'${uix_sc_map_style}\' apikey=\'${uix_sc_map_apikey}\' width=\'${uix_sc_map_width}${uix_sc_map_width_units}\' height=\'${uix_sc_map_height}${uix_sc_map_height_units}\' latitude=\'${uix_sc_map_latitude}\' longitude=\'${uix_sc_map_longitude}\' zoom=\'${uix_sc_map_zoom}\' name=\'${uix_sc_map_name_attr}\' marker=\'${uix_sc_map_marker}\']
 	
 		'
 	

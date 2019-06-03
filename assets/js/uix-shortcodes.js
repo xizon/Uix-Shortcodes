@@ -720,7 +720,6 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 		
 		$window.on('resize', function() {
 			windowWidth = $window.width();
-			$( '.uix-pb-parallax' ).removeData( 'activated' );
 			uix_sc_parallaxInit( windowWidth );
 		});
 		
@@ -1045,6 +1044,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 					width      : $frame.data( 'width' ),
 					height     : curheight,
 					style      : $frame.data( 'style' ),
+					apikey     : $frame.data( 'apikey' ),
 					latitude   : $frame.data( 'latitude' ),
 					longitude  : $frame.data( 'longitude' ),
 					zoom       : $frame.data( 'zoom' ),

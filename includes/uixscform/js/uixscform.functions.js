@@ -1275,9 +1275,9 @@
 			/* 
 			 * The converted form ID is like:
 
-			   uix_pb_module_???-null-uix_pb_???_??-null-1
-			   uix_pb_module_???-null-uix_pb_???_??-null-2
-			   uix_pb_module_???-null-uix_pb_???_??-null-3
+			   uix_sc_module_???-null-uix_sc_???_??-null-1
+			   uix_sc_module_???-null-uix_sc_???_??-null-2
+			   uix_sc_module_???-null-uix_sc_???_??-null-3
 			   ...
 
 			  *
@@ -1686,13 +1686,13 @@
  *
  * Note: Used for controls "toggle", "checkbox", "radio"
  *
- * @param  {string} targetID          - All id of the target control. Like this: uix_pb_???_??, uix_pb_???_??, uix_pb_???_??,
- * @param  {string} curID             - Current control ID. Like this: uix_pb_module_???-null-uix_pb_???_??-null-1
+ * @param  {string} targetID          - All id of the target control. Like this: uix_sc_???_??, uix_sc_???_??, uix_sc_???_??,
+ * @param  {string} curID             - Current control ID. Like this: uix_sc_module_???-null-uix_sc_???_??-null-1
  * @param  {string} obj               - Current control object.
  * @return {string}                   - Converted value matching this (clone) control ID. Note that the prefix has a "#".
-                                            Like this: #uix_pb_module_???-null-uix_pb_???_??-null-,
-											           #uix_pb_module_???-null-uix_pb_???_??-null-1,
-													   #uix_pb_module_???-null-uix_pb_???_??-null-2,
+                                            Like this: #uix_sc_module_???-null-uix_sc_???_??-null-,
+											           #uix_sc_module_???-null-uix_sc_???_??-null-1,
+													   #uix_sc_module_???-null-uix_sc_???_??-null-2,
  
  
  *	 
@@ -2826,11 +2826,11 @@ function uixscform_catlist( str, classprefix ) {
  * Check the value of the attribute "data-targetid" of the already cloned control, 
  * and convert it to the value matching this clone control ID.
  *
- * @param  {string} curControlID      - Current clone control ID. Like this: uix_pb_module_???-null-uix_pb_???_??-null-1
+ * @param  {string} curControlID      - Current clone control ID. Like this: uix_sc_module_???-null-uix_sc_???_??-null-1
  * @param  {string} targetObjID       - The value of the attribute "data-targetid" of the already cloned field. 
-                                            Like this: uix_pb_module_???-null-uix_pb_???_??-null-
-											           uix_pb_module_???-null-uix_pb_???_??-null-1
-													   uix_pb_module_???-null-uix_pb_???_??-null-2
+                                            Like this: uix_sc_module_???-null-uix_sc_???_??-null-
+											           uix_sc_module_???-null-uix_sc_???_??-null-1
+													   uix_sc_module_???-null-uix_sc_???_??-null-2
 									
  * @param  {number}   indexNum      - A default number.
  * @return {string}                 - A new string.
@@ -2881,8 +2881,8 @@ function uixscform_to_cloneControl_targetID( curControlID, targetObjID, indexNum
  * ************************************
  * Clone Character Conversions: Template JSON data key converted to usable
  *
- * @param  {string} str             - A string. Like this:  uix_pb_???_??2__fieldID  or uix_pb_???_??3__fieldVal
- * @return {string}                 - A new string.  Like this:  uix_pb_???_??__fieldID  or uix_pb_???_??__fieldVal
+ * @param  {string} str             - A string. Like this:  uix_sc_???_??2__fieldID  or uix_sc_???_??3__fieldVal
+ * @return {string}                 - A new string.  Like this:  uix_sc_???_??__fieldID  or uix_sc_???_??__fieldVal
  *	
  *************************************
  */
@@ -2906,8 +2906,8 @@ function uixscform_to_cloneControlKey_ToSave( str ) {
  * ************************************
  * Check whether the template JSON data key contains a loop index
  *
- * @param  {string} str             - A string. Like this:  uix_pb_???_??2__fieldID  or uix_pb_???_??3__fieldVal
- * @return {string}                 - A new string.  Like this:  uix_pb_???_??__fieldID  or uix_pb_???_??__fieldVal
+ * @param  {string} str             - A string. Like this:  uix_sc_???_??2__fieldID  or uix_sc_???_??3__fieldVal
+ * @return {string}                 - A new string.  Like this:  uix_sc_???_??__fieldID  or uix_sc_???_??__fieldVal
  *	
  *************************************
  */
@@ -2935,9 +2935,9 @@ function uixscform_to_cloneControlKey_notLoopIndex( str ) {
  * ************************************
  * Clone Character Conversions: Control ID of JSON data value converted to usable ID
  *
- * @param  {string} str             - A string. Like this:  uix_pb_module_???-null-uix_pb_???_??-null-1
+ * @param  {string} str             - A string. Like this:  uix_sc_module_???-null-uix_sc_???_??-null-1
  * @param  {string} sectionID       - The section ID. (Obtained via gridster widget ID.)
- * @return {string}                 - A new string.  Like this:  uix_pb_module_???-null-uix_pb_???_??-null-
+ * @return {string}                 - A new string.  Like this:  uix_sc_module_???-null-uix_sc_???_??-null-
  *	
  *************************************
  */
@@ -3106,11 +3106,11 @@ function uixscform_arr_to_tempjson( arr, json, renderFrontend ) {
  * Convert a valid variable ID for controls
  *
  *
- * @param  {string} str             - A string. Like this:  uix_pb_???_??__fieldID  or uix_pb_???_??__fieldVal
+ * @param  {string} str             - A string. Like this:  uix_sc_???_??__fieldID  or uix_sc_???_??__fieldVal
  * @param  {string} tempID          - Form of module ID.
  * @param  {string} sectionID       - The section ID. (Obtained via gridster widget ID.)
  * @param  {string} colID           - The column ID of each module. Like this: null
- * @return {string}                 - A new string. Like this: uix_pb_module_???-null-uix_pb_???_??-null-
+ * @return {string}                 - A new string. Like this: uix_sc_module_???-null-uix_sc_???_??-null-
  *	
  *	 
  *************************************
@@ -3175,11 +3175,11 @@ function uixscform_clonedata_exists( str ) {
  * Convert the JSON data (saved) ID to a control name
  *
  *
- * @param  {string} str             - A string. Like this:  uix_pb_module_???|[null][uix_pb_???_??][null]
+ * @param  {string} str             - A string. Like this:  uix_sc_module_???|[null][uix_sc_???_??][null]
  * @param  {string} tempID          - Form of module ID.
  * @param  {string} sectionID       - The section ID. (Obtained via gridster widget ID.)
  * @param  {string} colID           - The column ID of each module. Like this: null
- * @return {string}                 - A new string. Like this: uix_pb_???_??
+ * @return {string}                 - A new string. Like this: uix_sc_???_??
  *	
  *	 
  *************************************
@@ -3210,8 +3210,8 @@ function uixscform_to_controlSaveID_ToName( str, tempID, sectionID, colID ) {
  * Convert the valid variable ID to a control name
  *
  *
- * @param  {string} str             - A string. Like this: uix_pb_module_???-null-uix_pb_???_??-null-
- * @return {string}                 - A new string. Like this: uix_pb_???_??
+ * @param  {string} str             - A string. Like this: uix_sc_module_???-null-uix_sc_???_??-null-
+ * @return {string}                 - A new string. Like this: uix_sc_???_??
  *	
  *	 
  *************************************
@@ -3240,11 +3240,11 @@ function uixscform_to_controlVarID_ToName( str ) {
  * Convert a control name to a valid variable ID for controls
  *
  *
- * @param  {string} str             - A string. Like this:  uix_pb_???_??
+ * @param  {string} str             - A string. Like this:  uix_sc_???_??
  * @param  {string} tempID          - Form of module ID.
  * @param  {string} sectionID       - The section ID. (Obtained via gridster widget ID.)
  * @param  {string} colID           - The column ID of each module. Like this: null
- * @return {string}                 - A new string. Like this: uix_pb_module_???-null-uix_pb_???_??-null-
+ * @return {string}                 - A new string. Like this: uix_sc_module_???-null-uix_sc_???_??-null-
  *	
  *
  *************************************
@@ -3268,9 +3268,9 @@ function uixscform_to_controlName_ToVar( str, tempID, sectionID, colID ) {
  * Convert the JSON data (saved) ID to a valid variable ID for controls
  *
  *
- * @param  {string} str             - A string. Like this:  uix_pb_module_???|[null][uix_pb_???_??][null]
+ * @param  {string} str             - A string. Like this:  uix_sc_module_???|[null][uix_sc_???_??][null]
  * @param  {string} sectionID       - The section ID. (Obtained via gridster widget ID.)
- * @return {string}                 - A new string. Like this: uix_pb_module_???-null-uix_pb_???_??-null-
+ * @return {string}                 - A new string. Like this: uix_sc_module_???-null-uix_sc_???_??-null-
  *	
  *	 
  *************************************
@@ -3300,11 +3300,11 @@ function uixscform_to_controlSaveID_ToVar( str, sectionID ) {
  * Convert a control ID to a new ID for JSON data (saved)
  *
  *
- * @param  {string} str             - A string. Like this:  uix_pb_???_?? 
+ * @param  {string} str             - A string. Like this:  uix_sc_???_?? 
  * @param  {string} tempID          - Form of module ID.
  * @param  {string} sectionID       - The section ID. (Obtained via gridster widget ID.)
  * @param  {string} colID           - The column ID of each module. Like this: null
- * @return {string}                 - A new string. Like this: uix_pb_module_???|[null][uix_pb_???_??][null]
+ * @return {string}                 - A new string. Like this: uix_sc_module_???|[null][uix_sc_???_??][null]
  *	
  *	 
  *************************************
@@ -3327,11 +3327,11 @@ function uixscform_to_controlName_fieldSaveID( str, tempID, sectionID, colID ) {
  * Convert the JSON data (saved) ID to be saved
  *
  *
- * @param  {string} str             - A string. Like this:  uix_pb_module_???-null-uix_pb_???_??-null-
+ * @param  {string} str             - A string. Like this:  uix_sc_module_???-null-uix_sc_???_??-null-
  * @param  {string} tempID          - Form of module ID.
  * @param  {string} sectionID       - The section ID. (Obtained via gridster widget ID.)
  * @param  {string} colID           - The column ID of each module. Like this: null
- * @return {string}                 - A new string. Like this: uix_pb_module_???|[null][uix_pb_???_??][null]
+ * @return {string}                 - A new string. Like this: uix_sc_module_???|[null][uix_sc_???_??][null]
  *	
  *	 
  *************************************
@@ -3355,7 +3355,7 @@ function uixscform_to_controlID_ToSave( str, tempID, sectionID, colID ) {
  * ************************************
  * Check if the control ID is valid if it is not valid automatically
  *
- * @param  {string}  str          - A string. Like this: uix_pb_???_??
+ * @param  {string}  str          - A string. Like this: uix_sc_???_??
  * @param  {boolean} reverse      - If true, the converted English letter is used to restore the original form identifier.
  * @return {string}               - A new string.
  * 
@@ -3719,32 +3719,32 @@ function uixscform_cloned_groupStr_frontend( beforeArr, groupTotal, beforeGroupT
     {
         "colID": "null", 
         "sectionID": "null", 
-        "formID": "uix_pb_module_tabs", 
-        "uix_pb_tabs_style__fieldVal": "horizontal", 
-        "uix_pb_tabs_style__fieldID": "uix_pb_module_tabs-null-uix_pb_tabs_style-null-", 		
-        "uix_pb_tabs_listitem_title__fieldVal": "Tab Title", 
-        "uix_pb_tabs_listitem_title__fieldID": "uix_pb_module_tabs-null-uix_pb_tabs_listitem_title-null-", 
-        "uix_pb_tabs_listitem_con__fieldVal": "This is content of the tab.", 
-        "uix_pb_tabs_listitem_con__fieldID": "uix_pb_module_tabs-null-uix_pb_tabs_listitem_con-null-",
-		"uix_pb_tabs_triggerclonelist__fieldID": [
+        "formID": "uix_sc_module_tabs", 
+        "uix_sc_tabs_style__fieldVal": "horizontal", 
+        "uix_sc_tabs_style__fieldID": "uix_sc_module_tabs-null-uix_sc_tabs_style-null-", 		
+        "uix_sc_tabs_listitem_title__fieldVal": "Tab Title", 
+        "uix_sc_tabs_listitem_title__fieldID": "uix_sc_module_tabs-null-uix_sc_tabs_listitem_title-null-", 
+        "uix_sc_tabs_listitem_con__fieldVal": "This is content of the tab.", 
+        "uix_sc_tabs_listitem_con__fieldID": "uix_sc_module_tabs-null-uix_sc_tabs_listitem_con-null-",
+		"uix_sc_tabs_triggerclonelist__fieldID": [
 				{ 
-					"uix_pb_tabs_listitem_title__fieldVal": "Tab Title3" ,
-					"uix_pb_tabs_listitem_title__fieldID": "uix_pb_module_tabs-null-uix_pb_tabs_listitem_title-null-3",
-					"uix_pb_tabs_listitem_con__fieldVal": "This is content of the tab.",
-					"uix_pb_tabs_listitem_con__fieldID": "uix_pb_module_tabs-null-uix_pb_tabs_listitem_con-null-3",
+					"uix_sc_tabs_listitem_title__fieldVal": "Tab Title3" ,
+					"uix_sc_tabs_listitem_title__fieldID": "uix_sc_module_tabs-null-uix_sc_tabs_listitem_title-null-3",
+					"uix_sc_tabs_listitem_con__fieldVal": "This is content of the tab.",
+					"uix_sc_tabs_listitem_con__fieldID": "uix_sc_module_tabs-null-uix_sc_tabs_listitem_con-null-3",
 				},
 				{ 
-					"uix_pb_tabs_listitem_title__fieldVal": "Tab Title2",
-					"uix_pb_tabs_listitem_title__fieldID": "uix_pb_module_tabs-null-uix_pb_tabs_listitem_title-null-2",
-					"uix_pb_tabs_listitem_con__fieldVal": "This is content of the tab.",
-					"uix_pb_tabs_listitem_con__fieldID": "uix_pb_module_tabs-null-uix_pb_tabs_listitem_con-null-2" 
+					"uix_sc_tabs_listitem_title__fieldVal": "Tab Title2",
+					"uix_sc_tabs_listitem_title__fieldID": "uix_sc_module_tabs-null-uix_sc_tabs_listitem_title-null-2",
+					"uix_sc_tabs_listitem_con__fieldVal": "This is content of the tab.",
+					"uix_sc_tabs_listitem_con__fieldID": "uix_sc_module_tabs-null-uix_sc_tabs_listitem_con-null-2" 
 			    },
 			
 			
 		],
 		
-        "uix_pb_module_tabs_temp__fieldVal": "...", 
-        "uix_pb_module_tabs_temp__fieldID": "uix_pb_module_tabs-null-uix_pb_module_tabs_temp-null-"
+        "uix_sc_module_tabs_temp__fieldVal": "...", 
+        "uix_sc_module_tabs_temp__fieldID": "uix_sc_module_tabs-null-uix_sc_module_tabs_temp-null-"
     }
 ]
 

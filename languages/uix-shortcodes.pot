@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-05-31 09:30+0000\n"
+"POT-Creation-Date: 2019-06-03 01:49+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -316,7 +316,7 @@ msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:44
 #: shortcodes/templates/default/config.php:339
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:208
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:229
 msgid "Google Map"
 msgstr ""
 
@@ -375,7 +375,8 @@ msgstr ""
 msgid ""
 "<a href=\"%1$s\" target=\"_blank\">How to \n"
 "Get an API Key?</a> If left blank, the default Key will be used, but it will "
-"have a traffic excess problem that will not display properly."
+"have a traffic excess problem that will not display properly. <br><strong>"
+"You can also specify the Key separately when using the map module.</strong>"
 msgstr ""
 
 #: helper/tabs/general-settings.php:82
@@ -859,11 +860,11 @@ msgstr ""
 msgid "Section"
 msgstr ""
 
-#: includes/uixscform/functions/google-map.php:87
+#: includes/uixscform/functions/google-map.php:95
 msgid "+"
 msgstr ""
 
-#: includes/uixscform/functions/google-map.php:88
+#: includes/uixscform/functions/google-map.php:96
 msgid "-"
 msgstr ""
 
@@ -913,7 +914,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: shortcodes/templates/default/frontpage-init.php:1567
+#: shortcodes/templates/default/frontpage-init.php:1569
 msgid "Comments are closed."
 msgstr ""
 
@@ -970,7 +971,7 @@ msgstr ""
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:211
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:335
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:584
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:184
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:205
 msgid "Image URL"
 msgstr ""
 
@@ -2162,7 +2163,7 @@ msgstr ""
 msgid "Map Style"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:67
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:71
 #, php-format
 msgid ""
 "Click on the exact location you'd like coordinates for. Right-click on the "
@@ -2171,38 +2172,54 @@ msgid ""
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_map.php:86
+msgid "Google API key"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:87
+#, php-format
+msgid ""
+"<a href=\"%1$s\" target=\"_blank\">How to \n"
+"Get an API Key?</a> If left blank, the default Key will be used, but it will "
+"have a traffic excess problem that will not display properly."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:90
+msgid "Your own Google API key"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:107
 msgid "Map Width"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:108
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:129
 msgid "Map Height"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:132
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:153
 msgid "Place Name"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:134
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:155
 msgid "SEO San Francisco, CA, Gough Street, San Francisco, CA"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:143
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:164
 msgid "Latitude"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:154
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:175
 msgid "Longitude"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:166
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:187
 msgid "Zoom"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:181
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:202
 msgid "Marker"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:182
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:203
 msgid ""
 "Markers can display custom images, in which case they are usually referred "
 "to as \"icons.\""

@@ -67,10 +67,10 @@ The currently available default elements:
 ### Updates
 
 
-##### = 1.7.8 (May 31, 2019) =
+##### = 1.8.0 (June 1, 2019) =
 
 * New: Support for adding your Google Map API Key to avoid traffic overruns on maps.
-
+* New: Add a module control for the map API Key.
 
 
 ##### = 1.7.7 (February 23, 2019) =

@@ -1372,15 +1372,17 @@ function uix_sc_fun_map( $atts, $content = null ) {
 		'height' => '285px',
 		'latitude' => '37.7770776',
 		'longitude' => '-122.4414289',
+		'apikey' => '',
 		'zoom' => 14,
 		'name' => 'SEO San Francisco, CA, Gough Street, San Francisco, CA',
 		'marker' => '',
 		
 	 ), $atts ) );
+
 	
 	if ( empty ( $marker ) ) $marker = UixShortcodes::plug_directory().'includes/uixscform/images/map/map-location.png';
 	 
-    $return_string = '<div class="uix-sc-map-preview-tmpl"></div><div class="uix-sc-map-preview-container" data-width="'.esc_attr( $width ).'" data-height="'.esc_attr( $height ).'" data-style='.esc_attr( $style ).' data-latitude='.floatval( $latitude ).' data-longitude='.floatval( $longitude ).' data-zoom='.floatval( $zoom ).' data-name='.urlencode_deep( $name ).' data-marker='.esc_url( $marker ).'"></div>';
+    $return_string = '<div class="uix-sc-map-preview-tmpl"></div><div class="uix-sc-map-preview-container" data-apikey="'.esc_attr( $apikey ).'" data-width="'.esc_attr( $width ).'" data-height="'.esc_attr( $height ).'" data-style="'.esc_attr( $style ).'" data-latitude="'.floatval( $latitude ).'" data-longitude="'.floatval( $longitude ).'" data-zoom="'.floatval( $zoom ).'" data-name="'.urlencode_deep( $name ).'" data-marker="'.esc_url( $marker ).'"></div>';
 	
 	return UixShortcodes::do_callback( $return_string );
 }
