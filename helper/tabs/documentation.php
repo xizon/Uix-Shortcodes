@@ -23,7 +23,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'documentation' ) {
 						<?php 
 							printf( 
 								__('<a href="%s" target="_blank" rel="noopener">Check Out Here</a>', 'uix-shortcodes' ), 
-								esc_url( 'https://uiux.cc/wp-plugins-helper/uix-shortcodes' )
+								esc_url( 'https://xizon.github.io/wp-documentations/uix-shortcodes/' )
 							);
 						?>    
 						   </p>

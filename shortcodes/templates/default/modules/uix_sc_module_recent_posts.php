@@ -98,13 +98,13 @@ $args =
 			'desc'           => '',
 			'value'          => esc_html( '
 				<li>
-					<div class="item-thumb">
+					<div class="uix-sc-imgposts__thumb">
 						<a class="featured-image" href="[uix_recent_posts_link]">[uix_recent_posts_thumbnail]</a>
 					</div>
-					<div class="item-info ">
-						<div class="item-title"><a href="[uix_recent_posts_link]">[uix_recent_posts_title]</a></div>
-						<div class="item-date">[uix_recent_posts_date_M] [uix_recent_posts_date_d], [uix_recent_posts_date_y]</div>
-						<div class="item-desc">[uix_recent_posts_excerpt]</div>	
+					<div class="uix-sc-imgposts__info">
+						<div class="uix-sc-imgposts__info__title"><a href="[uix_recent_posts_link]">[uix_recent_posts_title]</a></div>
+						<div class="uix-sc-imgposts__info__date">[uix_recent_posts_date_M] [uix_recent_posts_date_d], [uix_recent_posts_date_y]</div>
+						<div class="uix-sc-imgposts__info__desc">[uix_recent_posts_excerpt]</div>	
 					</div>
 				</li>
 			' ),
@@ -151,7 +151,7 @@ $args =
 			'id'             => 'uix_sc_rposts_before',
 			'title'          => esc_html__( 'Output text before the &lt;a&gt; of the link', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => esc_html( '<ul class="uix-sc-post-img-list-box">' ),
+			'value'          => esc_html( '<ul class="uix-sc-imgposts">' ),
 			'placeholder'    => '',
 			'type'           => 'text',
 		    'callback'       => 'html-shortcode',

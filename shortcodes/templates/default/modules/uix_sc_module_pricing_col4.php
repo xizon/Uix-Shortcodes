@@ -797,7 +797,7 @@ UixSCFormCore::form_scripts( array(
 
 				{{if uix_sc_pricing_col4_one_hide == 0}}
 
-					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_one_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_one_active == 1}}uix-sc-price-important{{/if}}\' url=\'${uix_sc_pricing_col4_one_btn_link}\' period=\'${uix_sc_pricing_col4_one_period_attr}\' bcolor=\'${uix_sc_pricing_col4_one_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_one_emphasis_color}\' col=\'4\']
+					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_one_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_one_active == 1}}uix-sc-price__important{{/if}}\' url=\'${uix_sc_pricing_col4_one_btn_link}\' period=\'${uix_sc_pricing_col4_one_period_attr}\' bcolor=\'${uix_sc_pricing_col4_one_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_one_emphasis_color}\' col=\'4\']
 					<br>[uix_pricing_item_level]${uix_sc_pricing_col4_one_title}[/uix_pricing_item_level]
 					<br>[uix_pricing_item_price]${uix_sc_pricing_col4_one_currency}${uix_sc_pricing_col4_one_price}[/uix_pricing_item_price]
 					<br>[uix_pricing_item_desc]${uix_sc_pricing_col4_one_desc}[/uix_pricing_item_desc]
@@ -809,7 +809,7 @@ UixSCFormCore::form_scripts( array(
 
 				{{if uix_sc_pricing_col4_two_hide == 0}}
 
-					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_two_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_two_active == 1}}uix-sc-price-important{{/if}}\' url=\'${uix_sc_pricing_col4_two_btn_link}\' period=\'${uix_sc_pricing_col4_two_period_attr}\' bcolor=\'${uix_sc_pricing_col4_two_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_two_emphasis_color}\' col=\'4\']
+					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_two_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_two_active == 1}}uix-sc-price__important{{/if}}\' url=\'${uix_sc_pricing_col4_two_btn_link}\' period=\'${uix_sc_pricing_col4_two_period_attr}\' bcolor=\'${uix_sc_pricing_col4_two_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_two_emphasis_color}\' col=\'4\']
 					<br>[uix_pricing_item_level]${uix_sc_pricing_col4_two_title}[/uix_pricing_item_level]
 					<br>[uix_pricing_item_price]${uix_sc_pricing_col4_two_currency}${uix_sc_pricing_col4_two_price}[/uix_pricing_item_price]
 					<br>[uix_pricing_item_desc]${uix_sc_pricing_col4_two_desc}[/uix_pricing_item_desc]
@@ -821,7 +821,7 @@ UixSCFormCore::form_scripts( array(
 				
 				{{if uix_sc_pricing_col4_three_hide == 0}}
 
-					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_three_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_three_active == 1}}uix-sc-price-important{{/if}}\' url=\'${uix_sc_pricing_col4_three_btn_link}\' period=\'${uix_sc_pricing_col4_three_period_attr}\' bcolor=\'${uix_sc_pricing_col4_three_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_three_emphasis_color}\' col=\'4\']
+					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_three_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_three_active == 1}}uix-sc-price__important{{/if}}\' url=\'${uix_sc_pricing_col4_three_btn_link}\' period=\'${uix_sc_pricing_col4_three_period_attr}\' bcolor=\'${uix_sc_pricing_col4_three_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_three_emphasis_color}\' col=\'4\']
 					<br>[uix_pricing_item_level]${uix_sc_pricing_col4_three_title}[/uix_pricing_item_level]
 					<br>[uix_pricing_item_price]${uix_sc_pricing_col4_three_currency}${uix_sc_pricing_col4_three_price}[/uix_pricing_item_price]
 					<br>[uix_pricing_item_desc]${uix_sc_pricing_col4_three_desc}[/uix_pricing_item_desc]
@@ -833,7 +833,7 @@ UixSCFormCore::form_scripts( array(
 				
 				{{if uix_sc_pricing_col4_four_hide == 0}}
 
-					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_four_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_four_active == 1}}uix-sc-price-important{{/if}}\' url=\'${uix_sc_pricing_col4_four_btn_link}\' period=\'${uix_sc_pricing_col4_four_period_attr}\' bcolor=\'${uix_sc_pricing_col4_four_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_four_emphasis_color}\' col=\'4\' last=\'1\']
+					<br>[uix_pricing_item target=\'{{if uix_sc_pricing_col4_four_btn_win == 1}}_blank{{/if}}\' class=\'{{if uix_sc_pricing_col4_four_active == 1}}uix-sc-price__important{{/if}}\' url=\'${uix_sc_pricing_col4_four_btn_link}\' period=\'${uix_sc_pricing_col4_four_period_attr}\' bcolor=\'${uix_sc_pricing_col4_four_btn_color_name}\' imcolor=\'${uix_sc_pricing_col4_four_emphasis_color}\' col=\'4\' last=\'1\']
 					<br>[uix_pricing_item_level]${uix_sc_pricing_col4_four_title}[/uix_pricing_item_level]
 					<br>[uix_pricing_item_price]${uix_sc_pricing_col4_four_currency}${uix_sc_pricing_col4_four_price}[/uix_pricing_item_price]
 					<br>[uix_pricing_item_desc]${uix_sc_pricing_col4_four_desc}[/uix_pricing_item_desc]

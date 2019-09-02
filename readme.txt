@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Tested up to: 5.2
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,15 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+
+= 1.8.1 (September 2, 2019) =
+
+* Tweak: Replace theme names with BEM naming.
+* Tweak: Change the hook of shortcode init.
+* Tweak: Upload the Documentation of this plugin to github. (https://xizon.github.io/wp-documentations/uix-shortcodes/)
+* Fix:  Fixed a bug for fontawesome compatibility in some modules.
+
 
 
 = 1.8.0 (June 1, 2019) =

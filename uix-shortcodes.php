@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.8.0
+ * Version:     1.8.1
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -43,7 +43,7 @@ class UixShortcodes {
 		add_action( 'admin_init', array( __CLASS__, 'tc_i18n' ) );
 		add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'options_admin_menu' ) );
-		add_action( 'wp_head', array( __CLASS__, 'do_my_shortcodes' ) );
+		add_action( 'init', array( __CLASS__, 'do_my_shortcodes' ) );
 		add_action( 'admin_init', array( __CLASS__, 'do_my_shortcodes' ) );
 		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
 		
@@ -789,7 +789,7 @@ class UixShortcodes {
 	 *
 	 *
 	 */
-	public static function cat_list( $str, $classprefix = 'uix-sc-portfolio-' ) {
+	public static function cat_list( $str, $classprefix = 'uix-sc-portfolio__' ) {
 
 		$list = array();  
 		$html = array();  

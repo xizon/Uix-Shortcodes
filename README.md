@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.8.1 (September 2, 2019) =
+
+* Tweak: Replace theme names with BEM naming.
+* Tweak: Change the hook of shortcode init.
+* Tweak: Upload the Documentation of this plugin to github. (https://xizon.github.io/wp-documentations/uix-shortcodes/)
+* Fix:  Fixed a bug for fontawesome compatibility in some modules.
+
 
 ##### = 1.8.0 (June 1, 2019) =
 

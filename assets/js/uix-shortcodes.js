@@ -179,9 +179,9 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 				//returns new id
 				var $this              = $( this ),
 					tranEfftct         = $this.data( 'effect' ),
-					spoilerContent     = '.uix-sc-spoiler-content',
+					spoilerContent     = '.uix-sc-spoiler__content',
 					speed              = 300,
-					spoilerCloseClass  = 'uix-sc-spoiler-closed',
+					spoilerCloseClass  = 'uix-sc-spoiler--closed',
 					$spoilerBox        = $this.find( '.uix-sc-spoiler' );
 
 
@@ -189,10 +189,10 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 				//Tabs
 				if ( $this.hasClass( 'uix-sc-tabs' ) ) {
 
-					var $tabsLi = $this.find( '.uix-sc-tabs-title li' );
+					var $tabsLi = $this.find( '.uix-sc-tabs__title li' );
 
-					$this.find( '.uix-sc-tabs-title li:eq(0)' ).addClass( 'active' );
-					$this.find( '.uix-sc-spoiler-content:eq(0)' ).show().addClass( 'active' );
+					$this.find( '.uix-sc-tabs__title li:eq(0)' ).addClass( 'active' );
+					$this.find( '.uix-sc-spoiler__content:eq(0)' ).show().addClass( 'active' );
 
 
 
@@ -245,7 +245,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 					$spoilerBox.on( 'click', function( e ) { //prevent the extra click event from $spoilerBox
 
-						var $title = $( '.uix-sc-spoiler-title', this ),
+						var $title = $( '.uix-sc-spoiler__title', this ),
 							$spoiler = $title.parent(),
 							$content = $( this ).find( spoilerContent );
 
@@ -336,7 +336,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 		var barspeed = 1000;
 
-		$( '.uix-sc-bar-box-square' ).each(function() {
+		$( '.uix-sc-bar__box--square' ).each(function() {
 			var $this       = $( this ),
 				perc        = $( '.uix-sc-bar', this).data( 'percent' ),
 				size        = $( '.uix-sc-bar', this).data( 'size' ),
@@ -349,7 +349,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 								.replace(/fa/g, '' )
 								.replace(/flaticon/g, '' )
 								.replace(/-/g, '' ),
-				boxheight   = $( '.uix-sc-bar-info', this).height();
+				boxheight   = $( '.uix-sc-bar__info', this).height();
 
 			//Determines whether the width is 100%
 			if ( $( this ).find( '> div' ).attr( 'style' ).indexOf( '100%' ) >= 0 ) {
@@ -359,15 +359,15 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 			if ( boxheight > 0 ) $( this ).css( { 'height': linewidth + boxheight + 'px' } );
 			$( '.uix-sc-bar', this).css( { 'height': linewidth + 'px', 'width': '100%', 'background': trackcolor } );
-			$( '.uix-sc-bar .uix-sc-bar-percent', this).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } );
-			$( '.uix-sc-bar .uix-sc-bar-text', this).html( '' );
+			$( '.uix-sc-bar .uix-sc-bar__percent', this).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } );
+			$( '.uix-sc-bar .uix-sc-bar__text', this).html( '' );
 
 
-			$this.find( '.uix-sc-bar .uix-sc-bar-text' ).each( function()  {
+			$this.find( '.uix-sc-bar .uix-sc-bar__text' ).each( function()  {
 
-				if ( $this.find( '.uix-sc-bar .uix-sc-bar-percent' ).width() == 0 ) {
+				if ( $this.find( '.uix-sc-bar .uix-sc-bar__percent' ).width() == 0 ) {
 
-					$this.find( '.uix-sc-bar .uix-sc-bar-percent' ).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } ).animate( { percentage: perc, width: perc + '%'  }, {duration: barspeed } );
+					$this.find( '.uix-sc-bar .uix-sc-bar__percent' ).css( { 'height': linewidth + 'px', 'width': 0, 'background': barcolor } ).animate( { percentage: perc, width: perc + '%'  }, {duration: barspeed } );
 
 					var $el = $( this ),
 						value = perc;
@@ -407,17 +407,17 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 		});
 
 
-		$( '.uix-sc-bar-box-circular' ).each(function() {
+		$( '.uix-sc-bar__box-circular' ).each(function() {
 
 			var $this      = $( this ),
 				perc       = $( '.uix-sc-bar', this).data( 'percent' ),
-				size       = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'size' ),
+				size       = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'size' ),
 				sizeNum    = size.replace( 'px', '' ),
-				linewidth  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'linewidth' ),
-				trackcolor = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'trackcolor' ),
-				barcolor   = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'barcolor' ),
-				units      = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'units' ),
-				icon       = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'icon' );
+				linewidth  = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'linewidth' ),
+				trackcolor = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'trackcolor' ),
+				barcolor   = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'barcolor' ),
+				units      = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'units' ),
+				icon       = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'icon' );
 
 			$( '.uix-sc-bar', this ).easyPieChart({
 				animate: barspeed,
@@ -434,28 +434,28 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 		});
 
-		$( '.uix-sc-bar-box-circular' ).each(function() {
+		$( '.uix-sc-bar__box-circular' ).each(function() {
 
-			if ( $( '.uix-sc-bar .uix-sc-bar-percent', this ).text().length == 0 ) {
+			if ( $( '.uix-sc-bar .uix-sc-bar__percent', this ).text().length == 0 ) {
 
 				var $this      = $( this ),
 					perc       = $( '.uix-sc-bar', this).data( 'percent' ),
-					size       = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'size' ),
+					size       = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'size' ),
 					sizeNum    = size.replace( 'px', '' ),
-					linewidth  = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'linewidth' ),
-					trackcolor = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'trackcolor' ),
-					barcolor   = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'barcolor' ),
-					units      = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'units' ),
-					icon       = $( '.uix-sc-bar .uix-sc-bar-percent', this).data( 'icon' ),
+					linewidth  = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'linewidth' ),
+					trackcolor = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'trackcolor' ),
+					barcolor   = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'barcolor' ),
+					units      = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'units' ),
+					icon       = $( '.uix-sc-bar .uix-sc-bar__percent', this).data( 'icon' ),
 					chkicon    = icon
 									.replace(/fa/g, '' )
 									.replace(/flaticon/g, '' )
 									.replace(/-/g, '' ),
-					$txtcont   = $( '.uix-sc-bar', this ).find( '.uix-sc-bar-percent' );
+					$txtcont   = $( '.uix-sc-bar', this ).find( '.uix-sc-bar__percent' );
 
 
 				$( '.uix-sc-bar', this ).data( 'easyPieChart' ).update( perc );
-				$( '.uix-sc-bar', this ).find( '.uix-sc-bar-percent' ).css( { 'line-height': size, 'width': size } ).animate( { percentage: perc }, {duration: barspeed } );
+				$( '.uix-sc-bar', this ).find( '.uix-sc-bar__percent' ).css( { 'line-height': size, 'width': size } ).animate( { percentage: perc }, {duration: barspeed } );
 				$( { percentage: 0 } ).stop(true).animate( { percentage: perc }, {
 					duration : barspeed,
 					step: function () {
@@ -522,14 +522,14 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 				var $this            = $( this ),
 					priceBGH         = Array(),
 					priceBGH_excerpt = Array(),
-					$initHeight      = $this.find( '.uix-sc-price-init-height' );
+					$initHeight      = $this.find( '.uix-sc-price__init-height' );
 
 				$initHeight.each( function( index ) {
 					//Screen protection of height
-					$( this ).find( '.uix-sc-price-border,.uix-sc-price-excerpt' ).css( 'height', 'auto' );
+					$( this ).find( '.uix-sc-price__border,.uix-sc-price__excerpt' ).css( 'height', 'auto' );
 
 					var tempheight = $( this ).height();
-					var tempheight_excerpt = $( this ).find( '.uix-sc-price-excerpt' ).height();
+					var tempheight_excerpt = $( this ).find( '.uix-sc-price__excerpt' ).height();
 					priceBGH.push( tempheight );
 					priceBGH_excerpt.push( tempheight_excerpt );
 
@@ -545,10 +545,10 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 					if ( $( document.body ).width() > 768 ){
 						
 					    // Initialize the height of all columns
-						$initHeight.find( '.uix-sc-price-border' ).css( 'height', priceBGH_Max + 'px' );
+						$initHeight.find( '.uix-sc-price__border' ).css( 'height', priceBGH_Max + 'px' );
 						
 						// Actived columns
-						$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).each( function() {
+						$initHeight.find( '.uix-sc-price__border.uix-sc-price__important' ).each( function() {
 							
 							if ( styleName == 'elegant' || styleName == 'slant' ) {
 								var ty = Math.abs( parseInt( $( this ).css('transform').split(',')[5]));
@@ -563,18 +563,18 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
 
 					} else {
-						$initHeight.find( '.uix-sc-price-border' ).css( 'height', 'auto' );
+						$initHeight.find( '.uix-sc-price__border' ).css( 'height', 'auto' );
 
 						
 					}
 					
 					
 					// Actived columns
-					$initHeight.find( '.uix-sc-price-border.uix-sc-price-important' ).each( function() {
+					$initHeight.find( '.uix-sc-price__border.uix-sc-price__important' ).each( function() {
 
 						if ( styleName == 'rich' ) {
-							var textColor = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'tcolor' ),
-								btnColor  = $( this ).closest( '.uix-sc-price-border-hover' ).data( 'bcolor' );
+							var textColor = $( this ).closest( '.uix-sc-price__border-hover' ).data( 'tcolor' ),
+								btnColor  = $( this ).closest( '.uix-sc-price__border-hover' ).data( 'bcolor' );
 
 							$( this ).css( 'background-color', btnColor );
 						}
@@ -589,24 +589,24 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 		});
 
 		//Border of the hover effect
-		$( '.uix-sc-price-border-hover' ).each( function(){
+		$( '.uix-sc-price__border-hover' ).each( function(){
 
 			var $this        = $( this ),
 				hw           = 6,
-				defaultColor = $this.find( '.uix-sc-price-border' ).css( 'border-color' ),
+				defaultColor = $this.find( '.uix-sc-price__border' ).css( 'border-color' ),
 				textColor    = $this.data( 'tcolor' ),
 				btnColor     = $this.data( 'bcolor' );
 
 			if ( styleName == 'elegant' ) {
 				$this.hover(function() {
-					$(this).find( '.uix-sc-price-border' ).css({
+					$(this).find( '.uix-sc-price__border' ).css({
 						"border-color": textColor,
 						"-webkit-box-shadow": "inset 0 0px 0px "+hw+"px " + textColor,
 						"-moz-box-shadow": "inset 0 0px 0px "+hw+"px " + textColor,
 						"box-shadow": "inset 0 0px 0px "+hw+"px " + textColor
 					});
 				},function() {
-					$(this).find( '.uix-sc-price-border' ).css({
+					$(this).find( '.uix-sc-price__border' ).css({
 						"border-color": defaultColor,
 						"-webkit-box-shadow": "none",
 						"-moz-box-shadow": "none",
@@ -756,8 +756,8 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
     var documentReady = function( $ ) {
 
-		$( '.uix-sc-testimonials-container .flexslider' ).flexslider( {
-			namespace	      : "uix-sc-flex-",
+		$( '.uix-sc-testimonials__container .flexslider' ).flexslider( {
+			namespace	      : "uix-sc-flex__",
 			animation         : 'slide',
 			slideshow         : true,
 			smoothHeight      : true,
@@ -955,7 +955,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
     var documentReady = function( $ ) {
 
-		$( '.uix-sc-imageslider-container .flexslider' ).each( function()  {
+		$( '.uix-sc-imageslider__container .flexslider' ).each( function()  {
 			var $this        = $( this ),
 				dataSpeed    = $this.data( 'speed' ),
 				dataTiming   = $this.data( 'timing' ),
@@ -977,7 +977,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 			if( typeof dataArrows === typeof undefined ) dataArrows = true;
 
 			$this.flexslider({
-				namespace	      : 'uix-sc-flex-',
+				namespace	      : 'uix-sc-flex__',
 				animation         : dataAnim,
 				selector          : '.slides > li',
 				controlNav        : dataPaging,
