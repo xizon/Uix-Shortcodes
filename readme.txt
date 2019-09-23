@@ -124,6 +124,7 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 * Tweak: Enhance the functionality of the uix custom metabox.
 * Tweak: MCEEditor upgrade in form component.
+* Tweak: Upgrade Fontawesome to 5.0+.
 
 
 = 1.8.1 (September 2, 2019) =

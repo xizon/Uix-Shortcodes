@@ -67,7 +67,10 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		public static function frontpage_scripts() {
 			
 			//Add Icons
-			wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.min.css', array(), '4.5.0', 'all');
+            wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/css/all.min.css', false, '5.7.0', 'all' );
+            wp_enqueue_style( 'font-awesome-v4-shims', self::plug_directory() .'fontawesome/css/v4-shims.min.css', array( 'font-awesome' ), '5.7.0', 'all' );    
+
+
 			wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.min.css', array(), '1.0', 'all');
 			
 	
@@ -118,7 +121,9 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 				    wp_enqueue_script( 'uixscform-functions' );
 
 					//Add Icons
-					wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/font-awesome.min.css', array(), '4.5.0', 'all' );
+                    wp_enqueue_style( 'font-awesome', self::plug_directory() .'fontawesome/css/all.min.css', false, '5.7.0', 'all' );
+                    wp_enqueue_style( 'font-awesome-v4-shims', self::plug_directory() .'fontawesome/css/v4-shims.min.css', array( 'font-awesome' ), '5.7.0', 'all' );    
+
 					wp_enqueue_style( 'flaticon', self::plug_directory() .'flaticon/flaticon.min.css', array(), '1.0', 'all' );
 
 					//UixSCForm (Require to enqueue the script before </body> instead of in the <head>.)
