@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes (RTL)
  *
- * @version		: 1.2 (July 13, 2018)
+ * @version		: 1.3 (September 17, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -10,6 +10,20 @@
  *************************************************
  */
 
+/*
+ * 2. Basic
+ * 3. Button
+ * 6. Upload Media Control
+ * 8. Custom Attributes
+*/
+
+
+
+/* 
+ ---------------------------
+ 2. Basic
+ ---------------------------
+ */ 
 .uix-cmb__text--p {
 	border-right: none;
 	margin-right: auto;
@@ -47,8 +61,37 @@ table.uix-cmb tr th {
 	padding-right: 10px;
 }
 
+.uix-cmb__text--div--toggle .uix-cmb__custom-attributes-field__removebtn {
+    right: auto;
+    left: 3px;
+}
+
+.uix-cmb__text--div--toggle__trigger svg {
+    margin-right: auto;
+    margin-left: 5px;
+}
 
 
+/* 
+ ---------------------------
+ 3. Button
+ ---------------------------
+ */ 
+.uix-cmb__btn svg {
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+.uix-cmb__removebtn svg {
+    transform: translate(2.5px,-2.5px);
+}
+
+
+/* 
+ ---------------------------
+ 6. Upload Media Control
+ ---------------------------
+ */ 
 .uix-cmb__upload-wrapper input {
 	text-align: left;
 	left: auto;
@@ -63,17 +106,24 @@ table.uix-cmb tr th {
 }
 
 
-.uix-cmb__upload-wrapper .remove-btn {
+.uix-cmb__upload-wrapper .uix-cmb__removebtn {
 	left: auto;
 	right: 0;
 }
 
 
-.uix-cmb__upload-wrapper .remove-btn:after {
+.uix-cmb__upload-wrapper .uix-cmb__removebtn:after {
 	left: auto;
 	right: 0;
 }
 
+
+
+/* 
+ ---------------------------
+ 8. Custom Attributes
+ ---------------------------
+ */ 
 .uix-cmb__custom-attributes-field table td {
 	text-align: right;
 }
@@ -90,4 +140,10 @@ table.uix-cmb tr th {
 	left: auto;
 }
 
+
+.uix-cmb__custom-attributes-field__addbtn svg,
+.uix-cmb__custom-attributes-field__removebtn svg {
+    margin-right: auto;
+    margin-left: 5px;
+}
 

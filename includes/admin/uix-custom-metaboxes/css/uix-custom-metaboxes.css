@@ -2,15 +2,49 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.2 (July 13, 2018)
+ * @version		: 1.3 (September 17, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
  *
  *************************************************
  */
+/*
+ * 1. Editor
+ * 2. Basic
+ * 3. Botton
+ * 4. Radio
+ * 5. Tabs
+ * 6. Upload Media Control
+ * 7. Toggle
+ * 8. Custom Attributes
+ * 9. Date Picker
+*/
 
-/*---- Basic ----*/
+
+
+/* 
+ ---------------------------
+ 1. Editor
+ ---------------------------
+ */ 
+
+
+.uix-cmb__mce-editor {
+    border: 1px solid #D3D3D3;
+}
+
+.uix-cmb__mce-editor--multi {
+    width: calc(100% - 20px);
+}
+
+
+
+/* 
+ ---------------------------
+ 2. Basic
+ ---------------------------
+ */ 
 .uix-cmb__wrapper {
 	width: 99%;
 	overflow: hidden;
@@ -21,6 +55,96 @@
 	clear: both;
 	width: 99%;
 }
+
+
+
+.uix-cmb__text--div--toggle {
+    position: relative;
+    border: solid 1px #ddd;
+    outline: 3px solid #f5f5f5;
+    background-color: #fdfdfd;  
+    overflow: hidden;
+    margin-bottom: 15px;
+    -moz-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;  
+}
+
+.uix-cmb__text--div--toggle--child {
+    margin-left:15px; 
+    width: calc(100% - 23px);  
+}
+
+
+
+.uix-cmb__text--div--toggle .uix-cmb__custom-attributes-field__removebtn {
+    right: 3px;
+    top: 3px;
+}
+
+.uix-cmb__text--div--toggle:hover {
+    border-color: #333;
+    outline-color: #7d7d7d;
+}
+
+.uix-cmb__text--div--toggle:hover .uix-cmb__text--div--toggle__trigger svg {
+    -webkit-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+
+.uix-cmb__text--div--toggle__trigger svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    -moz-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+    fill: #848484;
+}
+
+.uix-cmb__text--div--toggle__trigger {
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    -moz-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+    color: #848484;
+}
+
+.uix-cmb__text--div--toggle__trigger.active {
+    filter: alpha(opacity=30);  
+    -moz-opacity: 0.3;   
+    opacity: 0.3;
+    border-bottom: 1px dotted #bdb8b8;
+    background: #DCDCDC;
+
+}
+
+.uix-cmb__text--div--toggle__trigger.active svg {
+    width: 15px;
+    height: 15px;
+}
+
+.uix-cmb__text--div--toggle__trigger:hover {
+    color: #23282d;
+}
+
+.uix-cmb__text--div--toggle__div {
+    display: none;
+    padding: 15px 25px 15px 15px;
+}
+
+.uix-cmb__text--div--toggle.active .uix-cmb__text--div--toggle__div {
+    display: block;
+}
+
 
 
 .uix-cmb__text--p {
@@ -34,6 +158,13 @@
 	position: relative;
 }
 
+.uix-cmb__text--row {
+	color: #626262;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 10px;
+	position: relative;
+}
 
 
 #side-sortables .uix-cmb__text--p {
@@ -90,6 +221,12 @@ td .uix-cmb__text--p:last-child {
 	width: 250px !important;
 	margin-right: 10px;
 }
+
+.uix-cmb__text--fullwidth {
+	width: calc(100% - 20px) !important;
+	margin-right: 10px;
+}
+
 
 table.uix-cmb th.uix-cmb__title {
 	width: 18%;	
@@ -235,7 +372,13 @@ table.uix-cmb .uix-cmb__label {
 	padding: 5px 0;
 }
 
-/*---- Button ----*/
+
+
+/* 
+ ---------------------------
+ 3. Button
+ ---------------------------
+ */ 
 .uix-cmb__btn {
     margin-right: 3px;
     text-decoration: none;
@@ -247,14 +390,45 @@ table.uix-cmb .uix-cmb__label {
     margin-bottom: 3px;
 }
 
-.uix-cmb__btn i {
-    font-size: 16px;
-    line-height: 1.2;
+.uix-cmb__btn svg {
+    fill: #0073aa;
+    opacity: 0.57;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
+    margin-right: 5px;
 }
 
 
-/*---- Radio ----*/
+.uix-cmb__removebtn {
+	display: inline-block;
+	padding: 5px;
+	width: 25px;
+	height: 25px;
+    background: #d51212;
+    text-decoration: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+	-webkit-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
+	-moz-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
+	box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
+    text-align: center;
+}
+.uix-cmb__removebtn svg {
+    margin: 0;
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    transform: translate(-2.5px,-2.5px);
+}
+
+/* 
+ ---------------------------
+ 4. Radio
+ ---------------------------
+ */ 
+
 .uix-cmb__radio-selector {
 	padding-top: 5px;
 }
@@ -348,7 +522,12 @@ table.uix-cmb .uix-cmb__label {
     border-color: #76BE61;
 }
 	
-/*---- Tabs ----*/
+
+/* 
+ ---------------------------
+ 5. Tabs
+ ---------------------------
+ */ 
 .uix-cmb__tabsgroup-selector {
     margin: 1em 0;
     padding: 0;
@@ -422,7 +601,12 @@ table.uix-cmb .uix-cmb__label {
     box-shadow: none;
 }
 
-/*---- Upload Media Control ----*/
+
+/* 
+ ---------------------------
+ 6. Upload Media Control
+ ---------------------------
+ */ 
 .uix-cmb__upload-wrapper {
 	position: relative;
 	width: calc( 99% - 20px );
@@ -476,56 +660,12 @@ table.uix-cmb .uix-cmb__label {
 }
 
 
-.uix-cmb__upload-wrapper .remove-btn {
-    display: block;
-	font-size: 12px;
-	line-height: 1 !important;
-	padding: 5px 10px !important;
-	width: 15px;
-	display: block;
-	overflow: hidden;
-	height: 20px;
-	text-transform: capitalize;
+.uix-cmb__upload-wrapper .uix-cmb__removebtn {
 	position: absolute;
 	left: 0;
 	top: 5px;
-	text-indent: -9999em;
 }
 
-
-
-.uix-cmb__upload-wrapper .remove-btn:after {
-	display: block;
-	content: 'x';
-	font-family: sans-serif;
-	font-size: 12px;
-	font-weight: 400;
-	padding: 5px;
-	width: 10px;
-	height: 10px;
-	line-height: 10px;
-	text-indent: 0;
-	position: absolute;
-	left: 0;
-	top: 5px;
-    background: #d51212;
-    color: #fff;
-    text-decoration: none;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 1px solid #ba0202;
-	-webkit-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
-	-moz-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
-	box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
-}
-
-.uix-cmb__upload-wrapper .remove-btn:focus {
-	outline: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
 
 
 .uix-cmb__upload-wrapper .uix-cmb__upload-preview {
@@ -543,10 +683,6 @@ table.uix-cmb .uix-cmb__label {
     overflow: hidden;
 }
 
-
-.uix-cmb__btn--upload-container .remove-btn {
-    line-height: 35px;
-}
 
 .uix-cmb__btn--upload-container:before {
     display: block;
@@ -585,28 +721,84 @@ table.uix-cmb .uix-cmb__label {
 }
 
 
-/*---- Toggle Elements ----*/
-.uix-cmb__toggle-target input,
-.uix-cmb__toggle-target textarea,
-.uix-cmb__toggle-target input:focus,
-.uix-cmb__toggle-target textarea:focus {
-	background: rgba(255,255,255,0);
-	outline: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-	border: none;
-}
-
-.uix-cmb__toggle-target .uix-cmb__short-text {
-	width: 55px !important;
+/* 
+ ---------------------------
+ 7. Toggle
+ ---------------------------
+ */ 
+.uix-cmb__toggle-target {
+    display: block;
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 
-/*---- Custom Attributes ----*/
+/* 
+ ---------------------------
+ 8. Custom Attributes
+ ---------------------------
+ */ 
 .uix-cmb__custom-attributes-field table td {
 	text-align: left;
 	padding-bottom: 0;
+}
+
+.uix-cmb__custom-attributes-field__addbtn__wrapper {
+    display: block;
+    clear: both;
+    padding-top: 10px;
+    height: 50px;
+}
+
+.uix-cmb__custom-attributes-field__addbtn svg,
+.uix-cmb__custom-attributes-field__removebtn svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    -moz-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+.uix-cmb__custom-attributes-field__addbtn {
+    text-decoration: none;
+    color: #0073aa;
+    border: 1px solid #D8F7FF;
+	-webkit-border-radius: 2px; 
+	-moz-border-radius: 2px; 
+	border-radius: 2px;
+    padding: 10px 15px;
+    background: #ECF9FF;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.uix-cmb__custom-attributes-field__addbtn svg {
+    fill: #0073aa;
+    opacity: 0.57;   
+}
+
+
+
+.uix-cmb__custom-attributes-field__removebtn svg {
+    fill: #ddd;
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.uix-cmb__custom-attributes-field__removebtn svg:hover {
+    fill: #f00;
+}
+
+.uix-cmb__custom-attributes-field__removebtn {
+    text-decoration: none;
+	-webkit-border-radius: 2px; 
+	-moz-border-radius: 2px; 
+	border-radius: 2px;
+    padding: 3px;
 }
 
 
@@ -629,6 +821,7 @@ table.uix-cmb .uix-cmb__label {
 
 
 
+
 #side-sortables .uix-cmb__custom-attributes-field__removebtn {
 	right: auto;
 	left: 200px;
@@ -644,32 +837,12 @@ table.uix-cmb .uix-cmb__label {
 }
 
 
-.uix-cmb__custom-attributes-field__addbtn img,
-.uix-cmb__custom-attributes-field__removebtn img {
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
-	border: none !important;
-	background: none !important;
-}
 
-.uix-cmb__custom-attributes-field__addbtn:hover img,
-.uix-cmb__custom-attributes-field__removebtn:hover img {
-	filter: alpha(opacity=80);  
-	-moz-opacity: 0.8;   
-	opacity: 0.8; 
-}
-
-.uix-cmb__custom-attributes-field__addbtn:focus,
-.uix-cmb__custom-attributes-field__removebtn:focus {
-	outline: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
-
-
-/*---- Date Picker ----*/
+/* 
+ ---------------------------
+ 9. Date Picker
+ ---------------------------
+ */ 
 /*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
 * Copyright (c) 2013 jQuery Foundation and other contributors Licensed MIT */
@@ -711,9 +884,24 @@ table.uix-cmb .uix-cmb__label {
 }
 
 
-.ui-datepicker .ui-icon.ui-icon-circle-triangle-e {
-	margin-left: -45px !important;
+
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-e,
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 0 !important;  
+    margin-right: 0 !important; 
+    font-family: Arial, "sans-serif" !important;
+    cursor: pointer !important;
 }
+
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
+    margin-left: -15px !important;
+}
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-e {
+    margin-left: -5px !important;
+}
+
 
 .ui-datepicker .ui-datepicker-header {
 	background: none !important;

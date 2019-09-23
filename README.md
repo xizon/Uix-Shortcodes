@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.8.2 (September 18, 2019) =
+
+* Tweak: Enhance the functionality of the uix custom metabox.
+* Tweak: MCEEditor upgrade in form component.
+
+
 ##### = 1.8.1 (September 2, 2019) =
 
 * Tweak: Replace theme names with BEM naming.

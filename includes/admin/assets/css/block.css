@@ -285,6 +285,11 @@
 	
 }
 
+.uix-shortcodes-block-col .img {
+    display: block;
+    padding-bottom: 15px;
+}
+
 .uix-shortcodes-block-col:hover .t {
 	background: #0085ba;
 	color: #fff;

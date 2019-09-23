@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 4.2.6  (January 16, 2019)
+ * @version		: 4.2.7  (September 18, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '4.2.6';
+		const VERSION    = '4.2.7';
 		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		
@@ -111,6 +111,8 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 						'lang_mce_link_field_url'   => __( 'URL', 'uix-shortcodes' ),
 						'lang_mce_link_field_text'  => __( 'Link Text', 'uix-shortcodes' ),
 						'lang_mce_link_field_win'   => __( 'Open link in a new tab', 'uix-shortcodes' ),
+						'lang_mce_hcode_title'       => __( 'Syntax Highlight Code', 'uix-shortcodes' ),
+						'lang_mce_hcode_field_label' => __( 'Language', 'uix-shortcodes' ),
 						'lang_block_cmd_paste'      => __( 'Use keyboard shortcuts (CTRL+V) to quickly paste text into the editor.', 'uix-shortcodes' ),
 					 ) );	
 				    wp_enqueue_script( 'uixscform-functions' );

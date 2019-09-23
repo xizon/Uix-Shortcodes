@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-06-03 01:49+0000\n"
+"POT-Creation-Date: 2019-09-23 06:57+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -89,45 +89,64 @@ msgid "Choose Shortcode You Want"
 msgstr ""
 
 #: includes/uixscform/init.php:106
+#: includes/admin/uix-custom-metaboxes/init.php:120
 msgid "Select Files"
 msgstr ""
 
 #: includes/uixscform/init.php:107
+#: includes/admin/uix-custom-metaboxes/init.php:121
 #: includes/uixscform/components/ui-wrapper.php:46
 msgid "Insert"
 msgstr ""
 
 #: includes/uixscform/init.php:108
+#: includes/admin/uix-custom-metaboxes/init.php:122
 msgid "Insert Image"
 msgstr ""
 
 #: includes/uixscform/init.php:109
+#: includes/admin/uix-custom-metaboxes/init.php:123
 msgid "Remove link"
 msgstr ""
 
 #: includes/uixscform/init.php:110
+#: includes/admin/uix-custom-metaboxes/init.php:124
 msgid "Insert/Edit link"
 msgstr ""
 
 #: includes/uixscform/init.php:111
+#: includes/admin/uix-custom-metaboxes/init.php:125
 msgid "URL"
 msgstr ""
 
 #: includes/uixscform/init.php:112
+#: includes/admin/uix-custom-metaboxes/init.php:126
 #: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:109
 #: shortcodes/templates/default/modules/uix_sc_module_button.php:106
 msgid "Link Text"
 msgstr ""
 
 #: includes/uixscform/init.php:113
+#: includes/admin/uix-custom-metaboxes/init.php:127
 msgid "Open link in a new tab"
 msgstr ""
 
 #: includes/uixscform/init.php:114
+#: includes/admin/uix-custom-metaboxes/init.php:128
+msgid "Syntax Highlight Code"
+msgstr ""
+
+#: includes/uixscform/init.php:115
+#: includes/admin/uix-custom-metaboxes/init.php:129
+#: shortcodes/templates/default/modules/uix_sc_module_code.php:41
+msgid "Language"
+msgstr ""
+
+#: includes/uixscform/init.php:116
 msgid "Use keyboard shortcuts (CTRL+V) to quickly paste text into the editor."
 msgstr ""
 
-#: includes/uixscform/init.php:808
+#: includes/uixscform/init.php:810
 msgid ""
 "<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
 "shortcode does not support live preview, please check out it directly on "
@@ -706,15 +725,27 @@ msgid ""
 "//uiux.cc/\" target=\"_blank\">Click here to check out</a></h4>"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:426
+#: includes/admin/uix-custom-metaboxes/init.php:130
+#: includes/admin/uix-custom-metaboxes/init.php:1740
+#: includes/uixscform/functions/google-map.php:96
+msgid "-"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:131
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:172
 msgid "Group Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:592
+#: includes/admin/uix-custom-metaboxes/init.php:387
+#: includes/admin/uix-custom-metaboxes/init.php:1367
 msgid "Field Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1442
+#: includes/admin/uix-custom-metaboxes/init.php:1526
+#: includes/admin/uix-custom-metaboxes/init.php:1707
 #: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
@@ -730,16 +761,39 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1443
+#: includes/admin/uix-custom-metaboxes/init.php:1527
+#: includes/admin/uix-custom-metaboxes/init.php:1708
 msgid "Value"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1466
+#: includes/admin/uix-custom-metaboxes/init.php:1552
+#: includes/admin/uix-custom-metaboxes/init.php:1782
 msgid "Remove field"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1500
-msgid "Add a custom attribute"
+#: includes/admin/uix-custom-metaboxes/init.php:1607
+#: includes/admin/uix-custom-metaboxes/init.php:1948
+msgid "Add New"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1709
+msgid "Subtitle"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1710
+msgid "ID"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1711
+msgid "Level"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1712
+msgid "Class Name"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1858
+msgid "Untitled"
 msgstr ""
 
 #: includes/admin/uix-custom-metaboxes/controller-upload.php:29
@@ -862,10 +916,6 @@ msgstr ""
 
 #: includes/uixscform/functions/google-map.php:95
 msgid "+"
-msgstr ""
-
-#: includes/uixscform/functions/google-map.php:96
-msgid "-"
 msgstr ""
 
 #: shortcodes/templates/default/config.php:11
@@ -1132,7 +1182,7 @@ msgstr ""
 #: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:89
 msgid ""
 "Prefix string attached to the classes of all elements generated by the "
-"portfolio, the default value is &quot;<strong>uix-sc-portfolio-</strong>"
+"portfolio, the default value is &quot;<strong>uix-sc-portfolio__</strong>"
 "&quot;."
 msgstr ""
 
@@ -2002,10 +2052,6 @@ msgstr ""
 msgid ""
 "Output a complete commenting form with your theme. Show when you allow the "
 "comments to be displayed."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_code.php:41
-msgid "Language"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_code.php:86
