@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.8.2
+ * Version:     1.8.3
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -115,10 +115,6 @@ class UixShortcodes {
 			wp_register_script( 'modernizr', self::plug_directory() .'assets/add-ons/HTML5/modernizr.min-3.5.0.js', false, '3.5.0', false );
 		}
 		
-		
-		// Easing
-		wp_register_script( 'jquery-easing', self::plug_directory() .'assets/add-ons/easing/jquery.easing.js', array( 'jquery' ), '1.3', false );	
-
 		// Easy Pie Chart
 		wp_register_script( 'easypiechart', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );
 
@@ -163,7 +159,6 @@ class UixShortcodes {
 
 		wp_enqueue_script( 'shuffle' );
 		wp_enqueue_script( 'modernizr' );
-		wp_enqueue_script( 'jquery-easing' );
 		wp_enqueue_script( 'imagesloaded' );
 		wp_enqueue_script( 'easypiechart' );
 		wp_enqueue_script( 'flexslider' );	
@@ -204,9 +199,9 @@ class UixShortcodes {
 				   self::inc_str( $currentScreen->base, '_page_' ) 
 				 ) 
 			  {
+                 
 					wp_enqueue_script( 'shuffle' );
 					wp_enqueue_script( 'modernizr' );
-					wp_enqueue_script( 'jquery-easing' );
 					wp_enqueue_script( 'imagesloaded' );
 					wp_enqueue_script( 'easypiechart' );
 					wp_enqueue_script( 'flexslider' );	

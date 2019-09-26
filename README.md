@@ -66,6 +66,10 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.8.3 (September 24, 2019) =
+
+* Fix: Fixed a bug of imagesLoaded is not defined.
+
 
 ##### = 1.8.2 (September 18, 2019) =
 

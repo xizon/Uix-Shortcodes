@@ -19,7 +19,6 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'credits' ) {
             <li><a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank" rel="nofollow"><?php _e( 'SyntaxHighlighter', 'uix-shortcodes' ); ?></a></li>
             <li><a href="https://github.com/woothemes/FlexSlider" target="_blank" rel="nofollow"><?php _e( 'Flexslider', 'uix-shortcodes' ); ?></a></li>
             <li><a href="https://github.com/Vestride/Shuffle" target="_blank" rel="nofollow"><?php _e( 'Shuffle (filtering and sorting)', 'uix-shortcodes' ); ?></a></li>
-            <li><a href="https://github.com/desandro/imagesloaded" target="_blank" rel="nofollow"><?php _e( 'imagesloaded', 'uix-shortcodes' ); ?></a></li>
             <li><a href="https://github.com/xizon/easy-pie-chart" target="_blank" rel="nofollow"><?php _e( 'Easy Pie Chart', 'uix-shortcodes' ); ?></a></li>
             <li><a href="http://www.flaticon.com/packs/essential-set-2" target="_blank" rel="nofollow"><?php _e( 'Flaticon icon font: Essential Set', 'uix-shortcodes' ); ?></a></li>
             <li><a href="http://github.com/jquery/jquery-tmpl" target="_blank" rel="nofollow"><?php _e( 'jQuery Templates plugin', 'uix-shortcodes' ); ?></a></li>

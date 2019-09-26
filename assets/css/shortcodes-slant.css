@@ -951,6 +951,7 @@ img.uix-sc-img,
     text-align: center;
     text-decoration: none;
     border: none !important;
+    box-shadow: none !important;
 }
 
 .uix-sc-share .fa {

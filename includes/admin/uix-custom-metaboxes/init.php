@@ -156,7 +156,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		*/
 		public static function add() {
 			
-			$all_args = self::$all_config;
+			$all_args = apply_filters( 'uix_custom_metaboxes_vars', self::$all_config );
 			
 			if ( !is_array( $all_args ) ) return;
 			
@@ -205,7 +205,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		*/
 		public static function field_ids() {
 			
-			$all_args = self::$all_config;
+			$all_args = apply_filters( 'uix_custom_metaboxes_vars', self::$all_config );
 			
 			if ( !is_array( $all_args ) ) return;
 			
@@ -256,7 +256,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		*/
 		public static function post_types() {
 			
-			$all_args = self::$all_config;
+			$all_args = apply_filters( 'uix_custom_metaboxes_vars', self::$all_config );
 			
 			if ( !is_array( $all_args ) ) return;
 			
