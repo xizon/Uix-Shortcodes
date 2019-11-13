@@ -5,8 +5,8 @@ Author URI: https://uiux.cc
 Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
-Tested up to: 5.2
-Stable tag: 1.8.3
+Tested up to: 5.3
+Stable tag: 1.8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,14 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.8.4 (November 11, 2019) =
+
+* Fix: Fixed button trigger event for uploading image control.
+* Dev: New loop fields control for richer release types.
+* Tweak: Optimized scalability for components such as uploads.
+
+
 
 = 1.8.3 (September 24, 2019) =
 

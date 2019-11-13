@@ -66,6 +66,13 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.8.4 (November 11, 2019) =
+
+* Fix: Fixed button trigger event for uploading image control.
+* Dev: New loop fields control for richer release types.
+* Tweak: Optimized scalability for components such as uploads.
+
+
 ##### = 1.8.3 (September 24, 2019) =
 
 * Fix: Fixed a bug of imagesLoaded is not defined.
@@ -467,6 +474,8 @@ The currently available default elements:
 - WP 4.9.*
 - WP 5.1.*
 - WP 5.2.*
+- WP 5.3.*
+
 
 
 ### Frequently Asked Questions

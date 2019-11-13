@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.3 (September 17, 2019)
+ * @version		: 1.4 (November 11, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -50,7 +50,29 @@
 	overflow: hidden;
 }
 
+/* Use only one column as a separate module */
+.uix-cmb__wrapper--one-column {
+    text-align: left;
+    padding-left: 10px;
+}
 
+.uix-cmb__wrapper--one-column > #uix_gallery_append {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    
+    .uix-cmb__wrapper--one-column {
+        width: 98%;
+    }
+    
+    .uix-cmb__wrapper:not(.uix-cmb__wrapper--one-column) {
+        padding-left: 10px;
+    }
+}
+
+
+/* -- */
 .uix-cmb__text--div {
 	clear: both;
 	width: 99%;
@@ -617,6 +639,21 @@ table.uix-cmb .uix-cmb__label {
 	
 }
 
+.uix-cmb__upload-wrapper .uix-cmb__btn--upload-container--child .uix-cmb__btn {
+    background: none !important;
+    border: 1px solid #dcdcdc !important;
+    color: #8c8c8c !important;
+}
+
+.uix-cmb__upload-wrapper .uix-cmb__btn--upload-container--child .uix-cmb__btn:hover {
+    background: #f7f7f7 !important;
+}
+
+.uix-cmb__upload-wrapper .uix-cmb__btn--upload-container--child .uix-cmb__btn svg {
+    fill: #a9a9a9 !important;
+}
+
+
 .uix-cmb__upload-wrapper input {
 	border: none;
 	outline: none;
@@ -738,6 +775,10 @@ table.uix-cmb .uix-cmb__label {
  8. Custom Attributes
  ---------------------------
  */ 
+.uix-cmb__custom-attributes-field__append__wrapper {
+    padding-top: 3px;
+}
+
 .uix-cmb__custom-attributes-field table td {
 	text-align: left;
 	padding-bottom: 0;
@@ -748,6 +789,22 @@ table.uix-cmb .uix-cmb__label {
     clear: both;
     padding-top: 10px;
     height: 50px;
+}
+
+.uix-cmb__custom-attributes-field__addbtn__wrapper--multi {
+    height: 65px;
+    border: 1px solid #D8F7FF;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    padding: 10px;
+    background: #ECF9FF;
+    display: inline-block;
+}
+
+.uix-cmb__custom-attributes-field__addbtn__wrapper--multi .uix-cmb__custom-attributes-field__addbtn:last-child {
+    margin-right: 0 !important;
+    border-right: none !important;
 }
 
 .uix-cmb__custom-attributes-field__addbtn svg,
@@ -763,6 +820,7 @@ table.uix-cmb .uix-cmb__label {
 }
 
 .uix-cmb__custom-attributes-field__addbtn {
+    display: inline-block;
     text-decoration: none;
     color: #0073aa;
     border: 1px solid #D8F7FF;
@@ -773,11 +831,38 @@ table.uix-cmb .uix-cmb__label {
     background: #ECF9FF;
     font-weight: normal;
     font-size: 12px;
+    margin-right: 6px;
 }
+    
+
 
 .uix-cmb__custom-attributes-field__addbtn svg {
     fill: #0073aa;
     opacity: 0.57;   
+    
+}
+
+
+.uix-cmb__custom-attributes-field__addbtn:hover svg {
+    fill: #032231;
+}
+
+
+.uix-cmb__custom-attributes-field__addbtn--multi {
+    text-align: center; 
+    border: 1px solid #ECF9FF;
+    border-right: 1px solid #b5dbf5;
+}
+
+.uix-cmb__custom-attributes-field__addbtn--multi > span {
+    display: block;
+    padding: 5px;
+}
+
+.uix-cmb__custom-attributes-field__addbtn--multi svg {
+    width: 20px;
+    height: 20px;
+    margin: 0;
 }
 
 
@@ -821,20 +906,6 @@ table.uix-cmb .uix-cmb__label {
 
 
 
-
-#side-sortables .uix-cmb__custom-attributes-field__removebtn {
-	right: auto;
-	left: 200px;
-}
-
-
-@media (max-width: 768px) {
-
-	.uix-cmb__custom-attributes-field__removebtn {
-		right: auto;
-		left: 200px;
-	}
-}
 
 
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-09-23 06:57+0000\n"
+"POT-Creation-Date: 2019-11-13 16:03+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,34 +23,34 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-shortcodes.php:462 uix-shortcodes.php:583 uix-shortcodes.php:584
+#: uix-shortcodes.php:457 uix-shortcodes.php:578 uix-shortcodes.php:579
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:463 uix-shortcodes.php:574 uix-shortcodes.php:575
+#: uix-shortcodes.php:458 uix-shortcodes.php:569 uix-shortcodes.php:570
 #: helper/settings.php:63
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:562 helper/settings.php:44
+#: uix-shortcodes.php:557 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:563 includes/admin/block-init.php:28
+#: uix-shortcodes.php:558 includes/admin/block-init.php:28
 #: shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:591 uix-shortcodes.php:592
+#: uix-shortcodes.php:586 uix-shortcodes.php:587
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:599 uix-shortcodes.php:600
+#: uix-shortcodes.php:594 uix-shortcodes.php:595
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:976
+#: uix-shortcodes.php:971
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -88,65 +88,65 @@ msgstr ""
 msgid "Choose Shortcode You Want"
 msgstr ""
 
-#: includes/uixscform/init.php:106
+#: includes/uixscform/init.php:109
 #: includes/admin/uix-custom-metaboxes/init.php:120
 msgid "Select Files"
 msgstr ""
 
-#: includes/uixscform/init.php:107
+#: includes/uixscform/init.php:110
 #: includes/admin/uix-custom-metaboxes/init.php:121
 #: includes/uixscform/components/ui-wrapper.php:46
 msgid "Insert"
 msgstr ""
 
-#: includes/uixscform/init.php:108
+#: includes/uixscform/init.php:111
 #: includes/admin/uix-custom-metaboxes/init.php:122
 msgid "Insert Image"
 msgstr ""
 
-#: includes/uixscform/init.php:109
+#: includes/uixscform/init.php:112
 #: includes/admin/uix-custom-metaboxes/init.php:123
 msgid "Remove link"
 msgstr ""
 
-#: includes/uixscform/init.php:110
+#: includes/uixscform/init.php:113
 #: includes/admin/uix-custom-metaboxes/init.php:124
 msgid "Insert/Edit link"
 msgstr ""
 
-#: includes/uixscform/init.php:111
+#: includes/uixscform/init.php:114
 #: includes/admin/uix-custom-metaboxes/init.php:125
 msgid "URL"
 msgstr ""
 
-#: includes/uixscform/init.php:112
+#: includes/uixscform/init.php:115
 #: includes/admin/uix-custom-metaboxes/init.php:126
 #: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:109
 #: shortcodes/templates/default/modules/uix_sc_module_button.php:106
 msgid "Link Text"
 msgstr ""
 
-#: includes/uixscform/init.php:113
+#: includes/uixscform/init.php:116
 #: includes/admin/uix-custom-metaboxes/init.php:127
 msgid "Open link in a new tab"
 msgstr ""
 
-#: includes/uixscform/init.php:114
+#: includes/uixscform/init.php:117
 #: includes/admin/uix-custom-metaboxes/init.php:128
 msgid "Syntax Highlight Code"
 msgstr ""
 
-#: includes/uixscform/init.php:115
+#: includes/uixscform/init.php:118
 #: includes/admin/uix-custom-metaboxes/init.php:129
 #: shortcodes/templates/default/modules/uix_sc_module_code.php:41
 msgid "Language"
 msgstr ""
 
-#: includes/uixscform/init.php:116
+#: includes/uixscform/init.php:119
 msgid "Use keyboard shortcuts (CTRL+V) to quickly paste text into the editor."
 msgstr ""
 
-#: includes/uixscform/init.php:810
+#: includes/uixscform/init.php:815
 msgid ""
 "<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
 "shortcode does not support live preview, please check out it directly on "
@@ -166,6 +166,7 @@ msgid "Column Form"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:15
+#: includes/admin/uix-custom-metaboxes/init.php:2172
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:139
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:595
 msgid "Text"
@@ -562,18 +563,14 @@ msgid "Shuffle (filtering and sorting)"
 msgstr ""
 
 #: helper/tabs/credits.php:22
-msgid "imagesloaded"
-msgstr ""
-
-#: helper/tabs/credits.php:23
 msgid "Easy Pie Chart"
 msgstr ""
 
-#: helper/tabs/credits.php:24
+#: helper/tabs/credits.php:23
 msgid "Flaticon icon font: Essential Set"
 msgstr ""
 
-#: helper/tabs/credits.php:25
+#: helper/tabs/credits.php:24
 msgid "jQuery Templates plugin"
 msgstr ""
 
@@ -726,7 +723,7 @@ msgid ""
 msgstr ""
 
 #: includes/admin/uix-custom-metaboxes/init.php:130
-#: includes/admin/uix-custom-metaboxes/init.php:1740
+#: includes/admin/uix-custom-metaboxes/init.php:1853
 #: includes/uixscform/functions/google-map.php:96
 msgid "-"
 msgstr ""
@@ -740,12 +737,25 @@ msgid "Group Title"
 msgstr ""
 
 #: includes/admin/uix-custom-metaboxes/init.php:387
-#: includes/admin/uix-custom-metaboxes/init.php:1367
+#: includes/admin/uix-custom-metaboxes/init.php:1440
 msgid "Field Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1526
-#: includes/admin/uix-custom-metaboxes/init.php:1707
+#: includes/admin/uix-custom-metaboxes/init.php:1034
+#: includes/admin/uix-custom-metaboxes/init.php:1607
+#: includes/admin/uix-custom-metaboxes/init.php:1816
+#: includes/admin/uix-custom-metaboxes/init.php:2176
+#: includes/admin/uix-custom-metaboxes/init.php:2181
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1035
+#: includes/admin/uix-custom-metaboxes/init.php:2182
+msgid "Select an image"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:1605
+#: includes/admin/uix-custom-metaboxes/init.php:1810
 #: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
@@ -761,47 +771,58 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1527
-#: includes/admin/uix-custom-metaboxes/init.php:1708
+#: includes/admin/uix-custom-metaboxes/init.php:1606
+#: includes/admin/uix-custom-metaboxes/init.php:1811
 msgid "Value"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1552
-#: includes/admin/uix-custom-metaboxes/init.php:1782
-msgid "Remove field"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1607
-#: includes/admin/uix-custom-metaboxes/init.php:1948
+#: includes/admin/uix-custom-metaboxes/init.php:1608
+#: includes/admin/uix-custom-metaboxes/init.php:1817
 msgid "Add New"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1709
+#: includes/admin/uix-custom-metaboxes/init.php:1812
 msgid "Subtitle"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1710
+#: includes/admin/uix-custom-metaboxes/init.php:1813
 msgid "ID"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1711
+#: includes/admin/uix-custom-metaboxes/init.php:1814
 msgid "Level"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1712
+#: includes/admin/uix-custom-metaboxes/init.php:1815
 msgid "Class Name"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1858
+#: includes/admin/uix-custom-metaboxes/init.php:1971
 msgid "Untitled"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/controller-upload.php:29
-msgid "Select an image"
+#: includes/admin/uix-custom-metaboxes/init.php:2171
+msgid "Files"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/controller-upload.php:30
-msgid "remove image"
+#: includes/admin/uix-custom-metaboxes/init.php:2174
+msgid "Custom Content"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:2175
+msgid "Upload Your Files"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:2177
+msgid "Add Files"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:2178
+msgid "Add Text"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:2185
+msgid "Enable Lightbox for this gallery?"
 msgstr ""
 
 #: includes/uixscform/fontawesome/font-awesome-custom.php:473

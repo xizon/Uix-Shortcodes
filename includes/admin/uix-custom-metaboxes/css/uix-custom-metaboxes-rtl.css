@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes (RTL)
  *
- * @version		: 1.3 (September 17, 2019)
+ * @version		: 1.4 (November 11, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -24,6 +24,25 @@
  2. Basic
  ---------------------------
  */ 
+
+/* Use only one column as a separate module */
+.uix-cmb__wrapper--one-column {
+    text-align: right;
+    padding-left: auto;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    
+    .uix-cmb__wrapper:not(.uix-cmb__wrapper--one-column) {
+        padding-right: 10px;
+    }
+}
+
+
+
+/* -- */
+
 .uix-cmb__text--p {
 	border-right: none;
 	margin-right: auto;
@@ -135,15 +154,28 @@ table.uix-cmb tr th {
 }
 
 
-#side-sortables .uix-cmb__custom-attributes-field__removebtn {
-	right: 210px;
-	left: auto;
+.uix-cmb__custom-attributes-field__addbtn__wrapper--multi .uix-cmb__custom-attributes-field__addbtn:last-child {
+    margin-right: auto !important;
+    border-right: 1px solid #ECF9FF !important;
+    margin-left: 0 !important;
+    border-left: none !important;
 }
-
 
 .uix-cmb__custom-attributes-field__addbtn svg,
 .uix-cmb__custom-attributes-field__removebtn svg {
     margin-right: auto;
     margin-left: 5px;
+}
+
+
+.uix-cmb__custom-attributes-field__addbtn {
+    margin-right: auto;
+    margin-left: 6px;
+}
+   
+
+.uix-cmb__custom-attributes-field__addbtn--multi {
+    border-right: 1px solid #ECF9FF;
+    border-left: 1px solid #b5dbf5;
 }
 
