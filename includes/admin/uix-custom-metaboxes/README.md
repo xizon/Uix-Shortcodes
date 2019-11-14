@@ -284,7 +284,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 						'id'            =>  'cus_page_ex_demoname_appear_4',
 						'type'          =>  'date',
 						'title'         =>  esc_html__( 'Date', 'your-theme' ),
-						'desc_primary'  =>  Uix_Custom_Metaboxes::kses( __( 'Enter date of your projects. <strong>(optional)</strong>', 'your-theme' ) ),
+						'desc_primary'  =>  UixShortcodes::kses( __( 'Enter date of your projects. <strong>(optional)</strong>', 'your-theme' ) ),
 						'options'       =>  array( 
 											'format'  => 'MM dd, yy',
 										  )
@@ -384,7 +384,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 //--------------------------------------
 //@print: 
     <?php
-    echo Uix_Custom_Metaboxes::kses( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_appear_3', true ) );
+    echo UixShortcodes::kses( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_appear_3', true ) );
     ?>
 
 //--------------------------------------
@@ -431,7 +431,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
             <li>
                 <strong><?php echo esc_html( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'name' ] ) ); ?></strong>
                 <p>
-                    <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+                    <?php echo UixShortcodes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
                 </p>
             </li>
         <?php
@@ -463,9 +463,9 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                 <section class="slide <?php echo esc_attr( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'classname' ] ) ); ?>" id="<?php echo esc_attr( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'id' ] ) ); ?>" data-level="<?php echo esc_attr( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'level' ] ) ); ?>">
 
                     <h3><?php echo esc_html( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'name' ] ) ); ?></h3>
-                    <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'subtitle' ] ) ); ?>
+                    <?php echo UixShortcodes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'subtitle' ] ) ); ?>
                     <hr>
-                    <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+                    <?php echo UixShortcodes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
 
 
                 <?php   
@@ -479,9 +479,9 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                         <div class="slide slide-child <?php echo esc_attr( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'classname' ] ) ); ?>" id="<?php echo esc_attr( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'id' ] ) ); ?>" data-level="<?php echo esc_attr( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'level' ] ) ); ?>">
 
                             <h3><?php echo esc_html( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'name' ] ) ); ?></h3>
-                            <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'subtitle' ] ) ); ?>
+                            <?php echo UixShortcodes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'subtitle' ] ) ); ?>
                             <hr>
-                            <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+                            <?php echo UixShortcodes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
 
                         </div>  
 
@@ -548,7 +548,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                     }
                     ?>
 
-                    <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+                    <?php echo UixShortcodes::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
 
                 </div>     
             <?php
