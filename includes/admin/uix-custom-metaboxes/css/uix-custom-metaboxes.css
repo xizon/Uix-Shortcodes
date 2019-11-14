@@ -775,7 +775,7 @@ table.uix-cmb .uix-cmb__label {
  8. Custom Attributes
  ---------------------------
  */ 
-.uix-cmb__custom-attributes-field__append__wrapper {
+.uix-cmb__custom-attributes-field {
     padding-top: 3px;
 }
 
