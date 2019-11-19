@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.4 (November 11, 2019)
+ * @version		: 1.5 (November 19, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -904,6 +904,16 @@ table.uix-cmb .uix-cmb__label {
 	top: 30px;
 }
 
+
+.uix-cmb__custom-attributes-field__sortablebtn {
+	position: absolute;
+    right: 30px;
+    top: 10px;
+    cursor: move;
+}
+.uix-cmb__custom-attributes-field__sortablebtn svg g {
+    fill: #ddd;
+}
 
 
 

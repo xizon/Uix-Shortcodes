@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes (RTL)
  *
- * @version		: 1.4 (November 11, 2019)
+ * @version		: 1.5 (November 19, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -177,5 +177,10 @@ table.uix-cmb tr th {
 .uix-cmb__custom-attributes-field__addbtn--multi {
     border-right: 1px solid #ECF9FF;
     border-left: 1px solid #b5dbf5;
+}
+
+.uix-cmb__custom-attributes-field__sortablebtn {
+    right: auto;
+    left: 30px;
 }
 

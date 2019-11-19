@@ -66,6 +66,11 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.8.5 (November 19, 2019) =
+
+* New: Add drag sorting for Uix Custom Metaboxes' Image Gallery.
+
+
 ##### = 1.8.4 (November 11, 2019) =
 
 * Fix: Fixed button trigger event for uploading image control.

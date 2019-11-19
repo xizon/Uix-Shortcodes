@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.4 (November 11, 2019)
+ * @version		: 1.5 (November 19, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -41,7 +41,7 @@ var UixCustomMetaboxes = function( obj ) {
                 UixCustomMetaboxesConstructor.prototype.expandItem.call( this, '.uix-cmb__text--div--toggle__trigger' );
                 UixCustomMetaboxesConstructor.prototype.titleChange.call( this, '.uix-cmb__text--div--toggle', '.uix-cmb__text--div--toggle__trigger', '.uix-cmb__text--div--toggle__title' );          
                 UixCustomMetaboxesConstructor.prototype.upload.call( this );
-                UixCustomMetaboxesConstructor.prototype.editor.call( this );
+                UixCustomMetaboxesConstructor.prototype.editor.call( this, false );
                 UixCustomMetaboxesConstructor.prototype.toggleSelect.call( this );
 				
 			});
@@ -336,22 +336,22 @@ var UixCustomMetaboxes = function( obj ) {
 			//Chain method calls
 			return this;
 		},		
-			
 		
 		/*! 
 		 * 
 		 * Editor
 		 * ---------------------------------------------------
 		 *
+         * @param  {boolean} init          - Whether to reset the editor.
 		 * @return {void}                  - The constructor.
 		 */
-		editor: function() {
+		editor: function( reset ) {
 
 			jQuery( document ).ready( function() {
                 
                
                 //Initialize Editor
-                jQuery( '.uix-cmb__mce-editor' ).UixEditorInit();
+                jQuery( '.uix-cmb__mce-editor' ).UixEditorInit({init: reset});
 
                 
 			});
@@ -545,7 +545,7 @@ var UixCustomMetaboxes = function( obj ) {
                                 
 
                                 //Initialize Editor
-                                UixCustomMetaboxesInit.editor();
+                                UixCustomMetaboxesInit.editor( false );
                                 
                                 
 
@@ -589,6 +589,33 @@ var UixCustomMetaboxes = function( obj ) {
 
 					});	
 
+                    // Custom attributes field ordering
+                    jQuery( '.uix-cmb__custom-attributes-field' ).sortable({
+                        items                   : '.uix-cmb__text--div--toggle--sortable',
+                        handle                  : '.uix-cmb__custom-attributes-field__sortablebtn',
+                        cursor                  : 'move',
+                        scrollSensitivity       : 40,
+                        forcePlaceholderSize    : true,
+                        forceHelperSize         : false,
+                        helper                  : 'clone',
+                        opacity                 : 0.65,
+                        placeholder             : 'wc-metabox-sortable-placeholder',
+                        start:function( event,ui ) {
+                            ui.item.css( 'background-color', '#f6f6f6' );
+                        },
+                        stop:function( event,ui ){
+                            ui.item.removeAttr( 'style' );
+                            
+                            //Initialize Editor
+                            UixCustomMetaboxesInit.editor( true );   
+                            
+                        },
+                        update: function( event, ui ) {
+
+                        }
+                    });       
+                    
+                    
 					
 					
 				} );		
@@ -965,7 +992,8 @@ UixCustomMetaboxesInit.getInstance();
         var settings = $.extend({
             id      : '', 
             toolbar : '', 
-            height  : '' 
+            height  : '',
+            init    : false
         }, options );
  
         this.each( function() {
@@ -974,6 +1002,11 @@ UixCustomMetaboxesInit.getInstance();
                 id       = settings.id, 
                 toolbar  = settings.toolbar, 
                 height   = settings.height;
+            
+            
+            if ( settings.init ) {
+                $this.attr( 'aria-init', 0 );
+            }
 			
             if ( $this.attr( 'aria-init' ) == 0 ) {
                 var _textarea = $this.find( 'textarea' );

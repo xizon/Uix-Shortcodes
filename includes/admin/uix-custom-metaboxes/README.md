@@ -312,7 +312,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                     
                     
 					array(
-						'id'            =>  'uix_themeplugin_multicontent',
+						'id'            =>  'cus_page_ex_demoname_multicontent',
 						'type'          =>  'multi-content',
 						'title'         =>  esc_html__( 'Multiple Content Area', 'your-theme' ),
 						'options'       =>  array( 
@@ -336,7 +336,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					),
 
                     array(
-                        'id'            =>  'uix_themeplugin_multiworks',
+                        'id'            =>  'cus_page_ex_demoname_multiworks',
                         'type'          =>  'multi-portfolio',
                         'title'         =>  '',
                         'options'       =>  array( 
@@ -449,7 +449,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 
     <?php
 
-    $_data = json_decode( get_post_meta( get_the_ID(), 'uix_themeplugin_multicontent', true ), true );
+    $_data = json_decode( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multicontent', true ), true );
 
     if ( is_array( $_data ) && sizeof( $_data ) > 0 ) {
 
@@ -513,7 +513,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
     <?php
     $lightbox_enable = NULL;
 
-    $_data = json_decode( get_post_meta( get_the_ID(), 'uix_themeplugin_multiworks', true ), true );
+    $_data = json_decode( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multiworks', true ), true );
 
     if ( is_array( $_data ) && sizeof( $_data ) > 1 ) {
 
