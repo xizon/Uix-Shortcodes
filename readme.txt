@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Tested up to: 5.3
-Stable tag: 1.8.5
+Stable tag: 1.8.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,13 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.8.6 (November 22, 2019) =
+
+* New: Added zh_CN language support.
+* Fix: Let it work under the "Divi Builder pages", "Elementor" plugin.
+* Tweak: Optimized some styles for form fields.
+
 
 = 1.8.5 (November 19, 2019) =
 

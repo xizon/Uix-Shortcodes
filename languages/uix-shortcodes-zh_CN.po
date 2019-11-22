@@ -1,15 +1,14 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2019-11-22 03:16+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2019-11-22 05:22+0000\n"
+"Last-Translator: chuckie <uiuxlab@gmail.com>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,77 +20,78 @@ msgstr ""
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Generator: Loco https://localise.biz/"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3"
 
 #: uix-shortcodes.php:461 uix-shortcodes.php:582 uix-shortcodes.php:583
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: uix-shortcodes.php:462 uix-shortcodes.php:573 uix-shortcodes.php:574
 #: helper/settings.php:63
 msgid "How to use?"
-msgstr ""
+msgstr "如何使用?"
 
 #: uix-shortcodes.php:561 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
-msgstr ""
+msgstr "Uix短代码设置"
 
 #. Name of the plugin
 #: uix-shortcodes.php:562 includes/admin/block-init.php:28
 #: shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Uix Shortcodes"
-msgstr ""
+msgstr "Uix短代码"
 
 #: uix-shortcodes.php:590 uix-shortcodes.php:591
 msgid "Custom CSS"
-msgstr ""
+msgstr "自定义CSS"
 
 #: uix-shortcodes.php:598 uix-shortcodes.php:599
 msgid "Helper"
-msgstr ""
+msgstr "帮助文档"
 
 #: uix-shortcodes.php:975
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
-msgstr ""
+msgstr "<div class=\"notice notice-success\"><p>操作成功!</p></div>"
 
 #: helper/settings.php:35
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+msgstr "无权限操作此页面."
 
 #: helper/settings.php:58
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: helper/settings.php:68
 msgid "Documentation"
-msgstr ""
+msgstr "文档"
 
 #: helper/settings.php:74
 msgid "Credits"
-msgstr ""
+msgstr "鸣谢"
 
 #: helper/settings.php:79
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
-msgstr ""
+msgstr "<i class=\"dashicons dashicons-admin-generic\"></i> 基础设置"
 
 #: helper/settings.php:84
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
-msgstr ""
+msgstr "<i class=\"dashicons dashicons-welcome-view-site\"></i> 自定义CSS"
 
 #: includes/admin/block-init.php:29
 msgid "[ / ] Click here to add shortode"
-msgstr ""
+msgstr "[ / ] 添加短代码"
 
 #: includes/admin/block-init.php:120
 msgid "Choose Shortcode You Want"
-msgstr ""
+msgstr "选择你想添加的短代码"
 
 #: includes/uixscform/init.php:109
 #: includes/admin/uix-custom-metaboxes/init.php:120
 msgid "Select Files"
-msgstr ""
+msgstr "选择文件"
 
 #: includes/uixscform/init.php:110
 #: includes/admin/uix-custom-metaboxes/init.php:121
@@ -102,39 +102,39 @@ msgstr ""
 #: includes/uixscform/init.php:111
 #: includes/admin/uix-custom-metaboxes/init.php:122
 msgid "Insert Image"
-msgstr ""
+msgstr "插入图片"
 
 #: includes/uixscform/init.php:112
 #: includes/admin/uix-custom-metaboxes/init.php:123
 msgid "Remove link"
-msgstr ""
+msgstr "删除链接"
 
 #: includes/uixscform/init.php:113
 #: includes/admin/uix-custom-metaboxes/init.php:124
 msgid "Insert/Edit link"
-msgstr ""
+msgstr "插入/编辑链接"
 
 #: includes/uixscform/init.php:114
 #: includes/admin/uix-custom-metaboxes/init.php:125
 msgid "URL"
-msgstr ""
+msgstr "网址"
 
 #: includes/uixscform/init.php:115
 #: includes/admin/uix-custom-metaboxes/init.php:126
 #: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:109
 #: shortcodes/templates/default/modules/uix_sc_module_button.php:106
 msgid "Link Text"
-msgstr ""
+msgstr "链接文本"
 
 #: includes/uixscform/init.php:116
 #: includes/admin/uix-custom-metaboxes/init.php:127
 msgid "Open link in a new tab"
-msgstr ""
+msgstr "新窗口打开"
 
 #: includes/uixscform/init.php:117
 #: includes/admin/uix-custom-metaboxes/init.php:128
 msgid "Syntax Highlight Code"
-msgstr ""
+msgstr "代码高亮"
 
 #: includes/uixscform/init.php:118
 #: includes/admin/uix-custom-metaboxes/init.php:129
@@ -144,7 +144,7 @@ msgstr ""
 
 #: includes/uixscform/init.php:119
 msgid "Use keyboard shortcuts (CTRL+V) to quickly paste text into the editor."
-msgstr ""
+msgstr "使用快捷键(CTRL+V)粘贴到编辑器中"
 
 #: includes/uixscform/init.php:815
 msgid ""
@@ -152,6 +152,8 @@ msgid ""
 "shortcode does not support live preview, please check out it directly on "
 "front end page.</p></div>"
 msgstr ""
+"<div class=\"uixscform-form-container\"><p class=\"info info-warning\">"
+"此短代码不支持在线预览，请到页面中预览.</p></div>"
 
 #: shortcodes/editor/tinymce-plugin-lang.php:13
 #: shortcodes/templates/default/config.php:15
@@ -180,7 +182,7 @@ msgstr ""
 #: shortcodes/editor/tinymce-plugin-lang.php:18
 #: shortcodes/templates/default/config.php:72
 msgid "Content"
-msgstr ""
+msgstr "内容区块"
 
 #: shortcodes/editor/tinymce-plugin-lang.php:19
 #: shortcodes/templates/default/config.php:76
@@ -298,7 +300,7 @@ msgstr ""
 #: shortcodes/editor/tinymce-plugin-lang.php:38
 #: shortcodes/templates/default/config.php:285
 msgid "Web Elements"
-msgstr ""
+msgstr "页面元素"
 
 #: shortcodes/editor/tinymce-plugin-lang.php:39
 #: shortcodes/templates/default/config.php:291
@@ -351,7 +353,7 @@ msgstr ""
 #: shortcodes/templates/default/config.php:365
 #: shortcodes/templates/default/modules/uix_sc_module_code.php:118
 msgid "Source Code"
-msgstr ""
+msgstr "源代码"
 
 #: shortcodes/editor/tinymce-plugin-lang.php:47
 #: shortcodes/templates/default/config.php:113
@@ -364,7 +366,7 @@ msgstr ""
 #: shortcodes/templates/default/config.php:59
 #: shortcodes/templates/default/modules/uix_sc_module_container.php:304
 msgid "Container/Parallax"
-msgstr ""
+msgstr "内容/视差容器"
 
 #: shortcodes/editor/tinymce-plugin-lang.php:49
 #: shortcodes/templates/default/config.php:331
@@ -380,11 +382,11 @@ msgstr ""
 
 #: helper/tabs/general-settings.php:31 helper/tabs/custom-css.php:26
 msgid "Settings saved."
-msgstr ""
+msgstr "设置已保存"
 
 #: helper/tabs/general-settings.php:54
 msgid "Google Map Settings"
-msgstr ""
+msgstr "谷歌地图设置"
 
 #: helper/tabs/general-settings.php:61
 msgid "API Key"
@@ -398,10 +400,12 @@ msgid ""
 "have a traffic excess problem that will not display properly. <br><strong>"
 "You can also specify the Key separately when using the map module.</strong>"
 msgstr ""
+"<a href=\"%1$s\" target=\"_blank\">如何获得API Key?</a>"
+"如果保留为空白，将使用默认的密钥，但是会出现流量过多的问题，无法正确显示。<br><strong>您也可以在使用地图模块时单独指定.</strong>"
 
 #: helper/tabs/general-settings.php:82
 msgid "Icon Types"
-msgstr ""
+msgstr "图标样式"
 
 #: helper/tabs/general-settings.php:89 helper/tabs/credits.php:16
 msgid "Font Awesome"
@@ -413,11 +417,11 @@ msgstr ""
 
 #: helper/tabs/general-settings.php:112
 msgid "Choose The Shortcodes Style"
-msgstr ""
+msgstr "短代码风格"
 
 #: helper/tabs/general-settings.php:122
 msgid "Elegant (default)"
-msgstr ""
+msgstr "Elegant (默认)"
 
 #: helper/tabs/general-settings.php:130
 msgid "Slant"
@@ -429,18 +433,18 @@ msgstr ""
 
 #: helper/tabs/documentation.php:16
 msgid "Online Documentation"
-msgstr ""
+msgstr "在线文档"
 
 #: helper/tabs/documentation.php:20
 msgid ""
 "Detailed parameters introduction and shortcode examples can refer to the "
 "online documentation."
-msgstr ""
+msgstr "详细的参数介绍和短代码示例可参考在线文档。"
 
 #: helper/tabs/documentation.php:25
 #, php-format
 msgid "<a href=\"%s\" target=\"_blank\" rel=\"noopener\">Check Out Here</a>"
-msgstr ""
+msgstr "点击查看"
 
 #: helper/tabs/usage.php:20
 msgid ""
@@ -450,6 +454,10 @@ msgid ""
 "Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-"
 "content/plugins/) And upload files there.)</h4>"
 msgstr ""
+"<h4 class=\\\"uix-bg-custom-title\\\">1. 激活主题后你会看到重要提示，进入 <strong>\\\"外观 -> "
+"\"\n"
+"\"安装插件\\\"</strong>.\\n\"\n"
+"\"或者上传插件到你的WordPress目录, 并激活它, 路径为 (/wp-content/plugins/)</h4>"
 
 #: helper/tabs/usage.php:25
 msgid ""
@@ -457,12 +465,15 @@ msgid ""
 "or create a new post (or page). You’ll see our tiny little button in the "
 "toolbar, preceded by a separator:</h4>"
 msgstr ""
+"<h4 class=\"uix-bg-custom-title\">2. 进入创建页面或者发布文章的面板，你可以看到工具栏来使用短代码:</h4>"
 
 #: helper/tabs/usage.php:34
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">2-2. For Gutenberg. We should now be able "
 "to see our block in the <strong>Add Block</strong> menu.</h4>"
 msgstr ""
+"<h4 class=\"uix-bg-custom-title\">2-2. 对于古腾堡。 点击 <strong>Add Block</strong> "
+"添加短代码.</h4>"
 
 #: helper/tabs/usage.php:44
 msgid ""
@@ -471,10 +482,13 @@ msgid ""
 "modifying original .css files. Go to \"Uix Shortcodes\" in the WordPress "
 "Administration Screens, then link to a specific tab like \"Custom CSS\".</h4>"
 msgstr ""
+"<h4 class=\\\"uix-bg-custom-title\\\">9. 您可以无需修改<code>.css</code> \"\n"
+"\"文件，在不修改原始样式的情况下为您的网站创建新样式. 进入 <strong>\\\"Uix短代码 -> 设置 -> "
+"自定义CSS\\\"</strong>."
 
 #: helper/tabs/usage.php:49
 msgid "&tab=custom-css\">Add custom stylesheets by clicking here</a>"
-msgstr ""
+msgstr "&tab=custom-css\">单击此处添加自定义样式表</a>"
 
 #: helper/tabs/custom-css.php:90
 msgid "You have already used custom stylesheet files."
@@ -494,6 +508,13 @@ msgid ""
 "target=\"_blank\">%4$s</a> to your WordPress Theme. Of course, Uix "
 "Shortcodes's function of \"Custom CSS\" is still valid."
 msgstr ""
+"- 制作一个新的样式表（CSS）文档，其名称为 <strong>uix-shortcodes-custom.css</strong>并上传到你的主题目录 "
+"( \"\n"
+"\"<code>/wp-content/themes/{your-theme}/</code> 或者<code>/wp-\"\n"
+"\"content/themes/{your-theme}/assets/css/</code> ). \"\n"
+"\"您可以通过FTP客户端连接到站点，进行更改，然后将文件上传回服务器。 创建现有CSS文件后，Uix短代码会将其用作默认样式  <a "
+"href=\"%1$s\" target=\"_blank\">%2$s</a> and <a href=\"%3$s\" "
+"target=\"_blank\">%4$s</a>。 当然，Uix短代码的“自定义CSS”功能仍然有效。"
 
 #: helper/tabs/custom-css.php:106
 msgid "You have already used custom JavaScript files."
@@ -509,24 +530,28 @@ msgid ""
 "Shortcodes will use it as a default script instead of the \"<a href=\"%1$s\" "
 "target=\"_blank\">%2$s</a>\" to your WordPress Theme."
 msgstr ""
+"- 制作一个新的javascript（.js）文档，将其命名为 <strong>uix-shortcodes-custom.js</strong>\"\n"
+"\"并上传到主题目录 ( <code>/wp-content/themes/{your-theme}/</code> 或者 <code>/wp-\"\n"
+"\"content/themes/{your-theme}/assets/js/</code> ). "
+"创建现有JS文件后，Uix短代码会将其用作默认脚本<a href=\"%1$s\" target=\"_blank\">%2$s</a>"
 
 #: helper/tabs/custom-css.php:125
 msgid "Paste your CSS code"
-msgstr ""
+msgstr "粘贴CSS代码"
 
 #: helper/tabs/custom-css.php:127
 msgid ""
 "You could add new styles code to your website, without modifying original ."
 "css files."
-msgstr ""
+msgstr "您可以在您的网站上添加新样式代码，而无需修改原始.css文件。"
 
 #: helper/tabs/custom-css.php:128
 msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
-msgstr ""
+msgstr "添加 <code>.rtl .your-classname { .. }</code> 建立RTL样式表。"
 
 #: helper/tabs/custom-css.php:156 helper/tabs/custom-css.php:169
 msgid "CSS file root directory:"
-msgstr ""
+msgstr "CSS文件的根目录:"
 
 #: helper/tabs/custom-css.php:161 helper/tabs/custom-css.php:201
 msgid "Close"
@@ -534,13 +559,13 @@ msgstr ""
 
 #: helper/tabs/custom-css.php:196 helper/tabs/custom-css.php:211
 msgid "RTL CSS file root directory:"
-msgstr ""
+msgstr "CSS文件(RTL)的根目录:"
 
 #: helper/tabs/credits.php:11
 msgid ""
 "I would like to give special thanks to credits. The following is a guide to "
 "the list of credits for this plugin:"
-msgstr ""
+msgstr "特别鸣谢："
 
 #: helper/tabs/credits.php:17
 msgid "jQuery Accessible Tabs"
@@ -588,6 +613,12 @@ msgid ""
 "They could be used together. <strong style=\"color:red\">It is compatible "
 "with Gutenberg.</strong>"
 msgstr ""
+"Uix简码为您的网站带来了一组精美而实用的元素，使您只需花费很少的精力即可完成精美的工作。 它使添加所需的简码变得容易快捷，以实现所需的页面布局或功能。 "
+"它提供了易于使用的26种以上的短代码。 内容元素是任何页面构建器的核心。 这些是主题随附的元素短代码。 您可以通过更改/添加参数来自定义简码。 "
+"<strong>\"Content Shortcode\"</strong>, <strong>\"Column Shortcode\"</strong>"
+", <strong>\"Web Elements Shortcode\"</strong>, <strong>\"Container "
+"Shortcode\"</strong>, 等等，它们也可以同时混合使用<strong style=\"color:red\">"
+"插件兼容古腾堡编辑器</strong>"
 
 #: helper/tabs/about.php:15
 msgid ""
@@ -595,21 +626,23 @@ msgid ""
 "multi-style switch. According to current progress, some styles can be "
 "summarized as follows: <strong>Elegant (default), Slant, Rich.</strong>"
 msgstr ""
+"Uix简码包含几个核心功能，这是支持多样式切换的关键。 根据目前的进展，一些样式如下：<strong>Elegant (默认), Slant, Rich."
+"</strong>"
 
 #: helper/tabs/about.php:19
 msgid ""
 "A variety of optional styles are available for Uix ShortCodes. Go to **\"Uix "
 "ShortCodes -> Settings -> General Settings\"**, you can choose the "
 "shortcodes style you want."
-msgstr ""
+msgstr "Uix短代码提供了多种可选样式。 转到**“ Uix短代码->设置->基础设置” **，您可以选择所需的短代码样式。"
 
 #: helper/tabs/about.php:24
 msgid "Included Modules "
-msgstr ""
+msgstr "包含模块"
 
 #: helper/tabs/about.php:27
 msgid "The currently available default elements:"
-msgstr ""
+msgstr "当前可用的元素"
 
 #: helper/tabs/about.php:30
 msgid "container"
@@ -721,6 +754,8 @@ msgid ""
 "themes with Uix Shortcodes for you to download.</strong> <h4><a href=\"https:"
 "//uiux.cc/\" target=\"_blank\">Click here to check out</a></h4>"
 msgstr ""
+"<strong>如果您喜欢此插件，则可以使用Uix短代码查看我的免费和高质量主题，以供下载。.</strong> <h4><a href=\"https:"
+"//uiux.cc/\" target=\"_blank\">点击进入官网</a></h4>"
 
 #: includes/admin/uix-custom-metaboxes/init.php:130
 #: includes/admin/uix-custom-metaboxes/init.php:1853
@@ -2253,6 +2288,8 @@ msgid ""
 "Get an API Key?</a> If left blank, the default Key will be used, but it will "
 "have a traffic excess problem that will not display properly."
 msgstr ""
+"<a href=\"%1$s\" target=\"_blank\">如何获得API Key?</a>"
+"如果保留为空白，将使用默认的密钥，但是会出现流量过多的问题，无法正确显示。"
 
 #: shortcodes/templates/default/modules/uix_sc_module_map.php:90
 msgid "Your own Google API key"
@@ -2324,7 +2361,7 @@ msgstr ""
 msgid ""
 "Uix Shortcodes brings an amazing set of beautiful and useful elements to "
 "your site that lets you do nifty things with very little effort."
-msgstr ""
+msgstr "Uix简码为您的网站带来了一组精美而实用的元素，使您只需花费很少的精力即可完成精美的工作。"
 
 #. URI of the plugin
 msgid "https://uiux.cc/wp-plugins/uix-shortcodes/"

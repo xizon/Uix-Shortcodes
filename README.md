@@ -66,6 +66,14 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.8.6 (November 22, 2019) =
+
+* New: Added zh_CN language support.
+* Fix: Let it work under the "Divi Builder pages", "Elementor" plugin.
+* Tweak: Optimized some styles for form fields.
+
+
 ##### = 1.8.5 (November 19, 2019) =
 
 * New: Add drag sorting for Uix Custom Metaboxes' Image Gallery.

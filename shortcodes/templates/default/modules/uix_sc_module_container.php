@@ -220,16 +220,14 @@ $args =
 	    array(
 			'id'             => 'uix_sc_container_parallax',
 			'title'          => esc_html__( 'Parallax', 'uix-shortcodes' ),
-			'desc'           => '',
+			'desc'           => esc_html__( 'Recommended value: -10.00 to 10.00', 'uix-shortcodes' ),
 			'value'          => 0,
 			'placeholder'    => '',
-			'type'           => 'slider',
+			'type'           => 'short-text',
+		    'callback'       => 'number', 
 			'default'        => array(
-									'units'  => '',
-									'min'   => -10,
-									'max'   => 10,
-									'step'  => 0.01
-				                )
+									'units'  => ''
+								)
 		
 		),
 		

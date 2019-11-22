@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version: 4.2.7
+	* Version: 4.2.8
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -900,6 +900,7 @@
     width: 100%;
     text-align: right;
     background: #fff;
+    line-height: 1;
 }
 
 .uixscform-form-container select {

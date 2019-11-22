@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.8.5
+ * Version:     1.8.6
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -22,32 +22,36 @@ class UixShortcodes {
 	const PREFIX      = 'uix';
 	const CUSPAGE     = 'uix-shortcodes-custom-submenu-page';
 	const DEMOFORM    = 0; //Show test form when this value is "1" (For developer)
-	
-	
+
+    
+    
 	/**
 	 * Initialize
 	 *
 	 */
+	public static function disabled() {
+        return false;
+    }
+    
 	public static function init() {
-		
-		self::setup_constants();
-		self::includes();
-		
-		add_action( 'init', array( __CLASS__, 'register_scripts' ) );
+
+        self::setup_constants();
+        self::includes();
+
+        add_action( 'init', array( __CLASS__, 'register_scripts' ) );
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'actions_links' ), -10 );
-		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ), 999 );
-		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts_fe' ), 999 );
-		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
-		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_custom_stylesheet' ) );
-		add_action( 'current_screen', array( __CLASS__, 'do_register_shortcodes' ) );
-		add_action( 'admin_init', array( __CLASS__, 'tc_i18n' ) );
-		add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
-		add_action( 'admin_menu', array( __CLASS__, 'options_admin_menu' ) );
-		add_action( 'init', array( __CLASS__, 'do_my_shortcodes' ) );
-		add_action( 'admin_init', array( __CLASS__, 'do_my_shortcodes' ) );
-		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
-		
-		
+        add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts' ), 999 );
+        add_action( 'admin_enqueue_scripts', array( __CLASS__, 'backstage_scripts_fe' ), 999 );
+        add_action( 'wp_enqueue_scripts', array( __CLASS__, 'frontpage_scripts' ) );
+        add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_custom_stylesheet' ) );
+        add_action( 'current_screen', array( __CLASS__, 'do_register_shortcodes' ) );
+        add_action( 'admin_init', array( __CLASS__, 'tc_i18n' ) );
+        add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
+        add_action( 'admin_menu', array( __CLASS__, 'options_admin_menu' ) );
+        add_action( 'init', array( __CLASS__, 'do_my_shortcodes' ) );
+        add_action( 'admin_init', array( __CLASS__, 'do_my_shortcodes' ) );
+        add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
+    
 		
 	}
 
@@ -624,6 +628,62 @@ class UixShortcodes {
 	
 	
 	    load_plugin_textdomain( 'uix-shortcodes', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/'  );
+        
+        //move language files to System folder "languages/plugins/yourplugin-<locale>.po"
+        global $wp_filesystem;
+
+        if ( empty( $wp_filesystem ) ) {
+            require_once (ABSPATH . '/wp-admin/includes/file.php');
+            WP_Filesystem();
+        }
+
+        $filenames = array();
+        $filepath = UIX_SHORTCODES_PLUGIN_DIR.'languages/';
+        $systempath = WP_CONTENT_DIR . '/languages/plugins/';
+
+        if ( !$wp_filesystem->is_dir( $systempath ) ) {
+            $wp_filesystem->mkdir( $systempath, FS_CHMOD_DIR );
+        }//endif is_dir( $systempath ) 
+            
+        if ( $wp_filesystem->is_dir( $systempath ) ) {
+            
+            //Only execute one-time scripts
+            $transient = self::PREFIX . '-shortcodes-lang_files_onetime_check';
+            if ( !get_transient( $transient ) ) {
+
+                set_transient( $transient, 'locked', 1800 ); // lock function for 30 Minutes
+
+
+                foreach(glob(dirname(__FILE__)."/languages/*.po") as $file) {
+                    $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+                }
+
+                foreach(glob(dirname(__FILE__)."/languages/*.mo") as $file) {
+                    $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+                }
+
+                foreach ($filenames as $filename) {
+
+                    // Copy
+                    $dir1 = $wp_filesystem->find_folder($filepath);
+                    $file1 = trailingslashit($dir1).$filename;
+
+                    $dir2 = $wp_filesystem->find_folder($systempath);
+                    $file2 = trailingslashit($dir2).$filename;
+
+                    $filecontent = $wp_filesystem->get_contents($file1);
+
+                    $wp_filesystem->put_contents($file2, $filecontent, FS_CHMOD_FILE);  
+
+                }
+                
+
+
+
+            }//endif get_transient( $transient )
+
+            
+        }//endif is_dir( $systempath )   
 		
 
 	}
@@ -1498,5 +1558,13 @@ class UixShortcodes {
 	
 }
 
-add_action( 'plugins_loaded', array( 'UixShortcodes', 'init' ) );
 
+
+//Not applicable to "Divi Builder pages", "Elementor"
+$uix_shortcodes_plugin_init = 'init';
+
+if ( isset( $_GET[ 'et_fb' ] ) ) $uix_shortcodes_plugin_init = 'disabled';
+if ( isset( $_GET[ 'action' ] ) && $_GET[ 'action' ] == 'elementor' ) $uix_shortcodes_plugin_init = 'disabled';
+
+
+add_action( 'plugins_loaded', array( 'UixShortcodes', $uix_shortcodes_plugin_init ) );
