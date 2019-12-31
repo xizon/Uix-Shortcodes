@@ -751,7 +751,7 @@ msgstr ""
 
 #: includes/admin/uix-custom-metaboxes/init.php:1035
 #: includes/admin/uix-custom-metaboxes/init.php:2182
-msgid "Select an image"
+msgid "Select image or video"
 msgstr ""
 
 #: includes/admin/uix-custom-metaboxes/init.php:1605

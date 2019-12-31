@@ -67,6 +67,11 @@ The currently available default elements:
 ### Updates
 
 
+##### = 1.8.7 (December 31, 2019) =
+
+* New: Added support for video formats.
+
+
 ##### = 1.8.6 (November 22, 2019) =
 
 * New: Added zh_CN language support.

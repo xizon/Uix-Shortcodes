@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.5 (November 19, 2019)
+ * @version		: 1.6 (December 31, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -401,6 +401,7 @@ var UixCustomMetaboxes = function( obj ) {
                 
 
                 var selector = '.uix-cmb__upload-target';
+                var videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
                 
                 //Custom selectors
 				jQuery( selector ).each( function()  {
@@ -415,6 +416,15 @@ var UixCustomMetaboxes = function( obj ) {
                     //init button and preview status
                     $this.attr( 'aria-disabled', true );
 					if ( jQuery( '#' + tid ).val() != '' ) {
+                        
+                        //image or video preview
+                        if ( videoReg.test( jQuery( '#' + tid ).val() ) ) {
+                            jQuery( '#' + pid ).html( '<video width="200" height="150" src="'+jQuery( '#' + tid ).val()+'" controls></video>' );
+                        } else {
+                            jQuery( '#' + pid ).html( '<img src="'+jQuery( '#' + tid ).val()+'" alt="">' );
+                        }   
+                        
+                        //
 						$this.next( _closebtn ).show();
 						$this.hide();
 					} else {
@@ -426,7 +436,9 @@ var UixCustomMetaboxes = function( obj ) {
                         event.preventDefault();
 
                         jQuery( '#' + tid ).val( '' );
-                        jQuery( '#' + pid ).find( 'img' ).attr( 'src','' );
+                        
+                        //hide element
+                        jQuery( '#' + pid ).html( '' );
                         jQuery( '#' + pid ).hide();
 
                         jQuery( this ).hide();
@@ -462,7 +474,18 @@ var UixCustomMetaboxes = function( obj ) {
                             upload_frame.on( 'select',function(){
                                 attachment = upload_frame.state().get( 'selection' ).first().toJSON();
                                 jQuery( '#' + tid ).val( attachment.url );
-                                jQuery( '#' + pid ).find( 'img' ).attr( 'src',attachment.url );//image preview
+                                
+                                //image or video preview
+                                if ( videoReg.test( attachment.url ) ) {
+                                    jQuery( '#' + pid ).html( '<video width="200" height="150" src="'+attachment.url+'" controls></video>' );
+                                    jQuery( '#' + tid + '_filetype' ).val( 'video' );
+                                } else {
+                                    jQuery( '#' + pid ).html( '<img src="'+attachment.url+'" alt="">' );
+                                    jQuery( '#' + tid + '_filetype' ).val( 'image' );
+                                }
+                                
+                              
+                                //display element
                                 jQuery( '#' + pid ).show();
 
                                 $thisClick.next( _closebtn ).show();

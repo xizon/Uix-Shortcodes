@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Uix Custom Metaboxes
  *
  * @class 		: Uix_Custom_Metaboxes
- * @version		: 1.5 (November 19, 2019)
+ * @version		: 1.6 (December 31, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -24,7 +24,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		* Custom Meta Boxes Version
 		*
 		*/
-		private static $ver = 1.4;	
+		private static $ver = 1.6;	
 		
 		/**
 		* Holds meta box parameters
@@ -39,7 +39,11 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		*/
 		public static $all_config = array();
 
-
+		/**
+		* Check if wp_nonce_field() exists before using it
+		*
+		*/
+		public static $nonce_field = true;
 
 		/**
 		* Initialize the custom meta box
@@ -368,7 +372,13 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 			
 			global $post;
 
-			wp_nonce_field( basename( __FILE__ ) , 'uix-meta-box-nonce' );
+            if ( self::$nonce_field ) {
+                wp_nonce_field( basename( __FILE__ ) , 'uix-meta-box-nonce' );
+                
+                //
+                self::$nonce_field = false;
+            }
+			
 			
 			
 			?>
@@ -1032,7 +1042,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
             
                                          
             $label_controller_up_remove   = esc_attr__( 'Remove', 'uix-shortcodes' );
-            $label_controller_up_add      = esc_html__( 'Select an image', 'uix-shortcodes' );
+            $label_controller_up_add      = esc_html__( 'Select image or video', 'uix-shortcodes' );
             
             //---
             if ( is_array ( $options ) ) {
@@ -2179,7 +2189,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 
             //upload
             $label_controller_up_remove   = esc_attr__( 'Remove', 'uix-shortcodes' );
-            $label_controller_up_add      = esc_html__( 'Select an image', 'uix-shortcodes' );
+            $label_controller_up_add      = esc_html__( 'Select image or video', 'uix-shortcodes' );
             
             //lightbox
             $label_lightbox = esc_html__( 'Enable Lightbox for this gallery?', 'uix-shortcodes' );

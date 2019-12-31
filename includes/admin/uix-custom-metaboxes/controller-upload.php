@@ -25,9 +25,25 @@ if ( !class_exists( 'Uix_UploadMedia' ) ) {
 			//Enqueue the media scripts
 			wp_enqueue_media();
             
+            
+            //check file type
+            $is_video = false;
+            $file_type = pathinfo( $value,PATHINFO_EXTENSION );
+
+            if( $file_type == 'mp4' || 
+                $file_type == 'avi' || 
+                $file_type == 'wmv' || 
+                $file_type == 'flv' || 
+                $file_type == 'mpg'
+            ) {
+                $is_video = true;
+            }  
+            
 	
 			$code =  '
 			<div class="uix-cmb__btn--upload-container '.( $child ? 'uix-cmb__btn--upload-container--child' : '' ).'">
+            
+                <input type="hidden" id="'.esc_attr( $id ).'_filetype" name="'.esc_attr( $id ).'_filetype" value="'.esc_attr( ( $is_video ? 'video' : 'image' ) ).'"/>
 				
 				<label for="'.esc_attr( $id ).'">'.esc_html( $title ).'</label>
 				'.( !empty( $id ) ? '<input type="text" id="'.esc_attr( $id ).'" class="'.esc_attr( $class ).'" name="'.esc_attr( $name ).'" value="'.esc_attr( $value ).'" placeholder="'.esc_attr( $placeholder ).'" />' : '' ).' 

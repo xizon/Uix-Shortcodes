@@ -259,11 +259,11 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'          =>  'cus_page_ex_demoname_appear_1',
 						'type'        =>  'image',
-						'title'       =>  esc_html__( 'Image', 'your-theme' ),
-						'placeholder' =>  esc_html__( 'Image URL', 'your-theme' ),
+						'title'       =>  esc_html__( 'Image or Video', 'your-theme' ),
+						'placeholder' =>  esc_html__( 'Image or Video URL', 'your-theme' ),
                         'options'     =>  array( 
                                                 'label_controller_up_remove'  => esc_html__( 'Remove', 'your-theme' ),
-                                                'label_controller_up_add'     => esc_html__( 'Select an image', 'your-theme' )
+                                                'label_controller_up_add'     => esc_html__( 'Select a file', 'your-theme' )
                                           )
 					),
 					array(
@@ -348,7 +348,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                                                 ),
                                                 'label_lightbox'              => esc_html__( 'Enable Lightbox for this gallery?', 'your-theme' ),
                                                 'label_controller_up_remove'  => esc_html__( 'Remove', 'your-theme' ),
-                                                'label_controller_up_add'     => esc_html__( 'Select an image', 'your-theme' ), 
+                                                'label_controller_up_add'     => esc_html__( 'Select image or video', 'your-theme' ), 
                                                 'label_html'           => esc_html__( 'Custom Content', 'your-theme' ),
                                                 'label_file'           => esc_html__( 'Upload Your Files', 'your-theme' ),
                                                 'label_upbtn_remove'   => esc_html__( 'Remove', 'your-theme' ),
@@ -635,6 +635,10 @@ if ( !function_exists( 'mytheme_uix_publish_page' ) ) {
 
 ## Updates
 
+
+##### = 1.6 (December 31, 2019) =
+
+* New: Added support for video formats.
 
 
 ##### = 1.4 (November 11, 2019) =
