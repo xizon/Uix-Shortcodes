@@ -66,6 +66,12 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.8.8 (September 25, 2020) =
+
+* Tweak: Compatible with WP 5.5.*.
+* Fix: Modified the style display of the module.
+
+
 
 ##### = 1.8.7 (December 31, 2019) =
 
@@ -493,6 +499,8 @@ The currently available default elements:
 - WP 5.1.*
 - WP 5.2.*
 - WP 5.3.*
+- WP 5.4.*
+- WP 5.5.*
 
 
 

@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version: 4.2.8
+	* Version: 4.2.9
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -1574,6 +1574,16 @@ a.uixscform-icon-clear {
     clear: both;
 }
 
+
+.uixscform-color-selector-toggles .wp-picker-container .wp-color-result {
+	width: 31px !important;
+}
+
+.uixscform-color-selector-toggles .wp-picker-container .color-alpha {
+	height: 28px !important;
+}
+
+
 .uixscform-color-selector-toggles .wp-picker-container .wp-color-result {
     background-image: url(../images/color-bg-3-alpha.png) !important;
     background-repeat: no-repeat !important;
@@ -2435,6 +2445,8 @@ a.uixscform-icon-clear {
     transition: all .5s ease-out;
     padding: 6px 22px;
     margin: 15px 10px 0 0;
+	border: none;
+	outline: none;
 }
 
 .uixscform-cmd-btn span {
