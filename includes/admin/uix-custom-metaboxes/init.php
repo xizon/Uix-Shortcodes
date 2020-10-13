@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Uix Custom Metaboxes
  *
  * @class 		: Uix_Custom_Metaboxes
- * @version		: 1.6 (December 31, 2019)
+ * @version		: 1.7 (October 13, 2020)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -24,7 +24,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		* Custom Meta Boxes Version
 		*
 		*/
-		private static $ver = 1.6;	
+		private static $ver = 1.7;	
 		
 		/**
 		* Holds meta box parameters
@@ -120,6 +120,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
                   
                   
 					wp_localize_script( 'uix-custom-metaboxes',  'uix_custom_metaboxes_lang', array( 
+						'ed_lang'                 => get_locale(),
 						'ed_url'                  => UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/',
 						'ed_media_title'          => __( 'Select Files', 'uix-shortcodes' ),
 						'ed_media_text'           => __( 'Insert', 'uix-shortcodes' ),				

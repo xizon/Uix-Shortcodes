@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Tested up to: 5.5.1
-Stable tag: 1.8.8
+Stable tag: 1.8.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,10 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.8.9 (October 13, 2020) =
+
+* Tweak: Optimized the language support and media insertion of the editor for Uix Custom Meta Boxes.
 
 
 = 1.8.8 (September 25, 2020) =

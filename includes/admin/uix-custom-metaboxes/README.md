@@ -24,6 +24,9 @@ Provides a compatible solution for some personalized themes that require custom 
 - WP 5.1.*
 - WP 5.2.*
 - WP 5.3.*
+- WP 5.4.*
+- WP 5.5.*
+
 
 
 ## Usage
@@ -634,6 +637,11 @@ if ( !function_exists( 'mytheme_uix_publish_page' ) ) {
 
 
 ## Updates
+
+##### = 1.7 (October 13, 2020) =
+
+* Tweak: When the editor inserts a video, it will automatically be converted into a video tag.
+* New: According to the language of the theme, the editor automatically supports multiple languages.
 
 
 ##### = 1.6 (December 31, 2019) =

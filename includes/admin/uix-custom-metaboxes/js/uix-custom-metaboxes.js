@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.6 (December 31, 2019)
+ * @version		: 1.7 (October 13, 2020)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -807,6 +807,8 @@ UixCustomMetaboxesInit.getInstance();
 					convert_urls : false,
 					media_live_embeds: true,
 					//---
+					language_url : (uix_custom_metaboxes_lang.ed_lang != 'en_US' ) ? uix_custom_metaboxes_lang.ed_url +  'js/tinymce/langs/'+uix_custom_metaboxes_lang.ed_lang+'.js' : false,  // site absolute URL
+					//---
 					selector:  'textarea#' + id,
 					height : height,
 					menubar: false,
@@ -832,7 +834,14 @@ UixCustomMetaboxesInit.getInstance();
 							upload_frame.on( 'select',function() {
 								var attachment;
 								attachment = upload_frame.state().get( 'selection' ).first().toJSON();
-								ed.insertContent( '<img src="'+attachment.url+'" alt="">' );
+								
+								//image or video preview
+								var videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
+								if ( videoReg.test( attachment.url ) ) {
+									ed.insertContent( '<video width="400" height="300" src="'+attachment.url+'" controls></video>' );
+								} else {
+									ed.insertContent( '<img src="'+attachment.url+'" alt="">' );
+								}   
 
 								
 							} );
