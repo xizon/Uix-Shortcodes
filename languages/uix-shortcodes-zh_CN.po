@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-11-22 03:16+0000\n"
+"POT-Creation-Date: 2020-10-15 07:00+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
-"PO-Revision-Date: 2019-11-22 05:22+0000\n"
-"Last-Translator: chuckie <uiuxlab@gmail.com>\n"
+"PO-Revision-Date: 2020-10-15 07:08+0000\n"
+"Last-Translator: chuckie\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,36 +21,36 @@ msgstr ""
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.3"
+"X-Loco-Version: 2.4.3; wp-5.5.1"
 
-#: uix-shortcodes.php:461 uix-shortcodes.php:582 uix-shortcodes.php:583
+#: uix-shortcodes.php:450 uix-shortcodes.php:571 uix-shortcodes.php:572
 msgid "Settings"
 msgstr "设置"
 
-#: uix-shortcodes.php:462 uix-shortcodes.php:573 uix-shortcodes.php:574
+#: uix-shortcodes.php:451 uix-shortcodes.php:562 uix-shortcodes.php:563
 #: helper/settings.php:63
 msgid "How to use?"
 msgstr "如何使用?"
 
-#: uix-shortcodes.php:561 helper/settings.php:44
+#: uix-shortcodes.php:550 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
 msgstr "Uix短代码设置"
 
 #. Name of the plugin
-#: uix-shortcodes.php:562 includes/admin/block-init.php:28
+#: uix-shortcodes.php:551 includes/admin/block-init.php:28
 #: shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Uix Shortcodes"
 msgstr "Uix短代码"
 
-#: uix-shortcodes.php:590 uix-shortcodes.php:591
+#: uix-shortcodes.php:579 uix-shortcodes.php:580
 msgid "Custom CSS"
 msgstr "自定义CSS"
 
-#: uix-shortcodes.php:598 uix-shortcodes.php:599
+#: uix-shortcodes.php:587 uix-shortcodes.php:588
 msgid "Helper"
 msgstr "帮助文档"
 
-#: uix-shortcodes.php:975
+#: uix-shortcodes.php:1020
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -88,65 +88,65 @@ msgstr "[ / ] 添加短代码"
 msgid "Choose Shortcode You Want"
 msgstr "选择你想添加的短代码"
 
-#: includes/uixscform/init.php:109
-#: includes/admin/uix-custom-metaboxes/init.php:120
+#: includes/uixscform/init.php:110
+#: includes/admin/uix-custom-metaboxes/init.php:125
 msgid "Select Files"
 msgstr "选择文件"
 
-#: includes/uixscform/init.php:110
-#: includes/admin/uix-custom-metaboxes/init.php:121
+#: includes/uixscform/init.php:111
+#: includes/admin/uix-custom-metaboxes/init.php:126
 #: includes/uixscform/components/ui-wrapper.php:46
 msgid "Insert"
 msgstr ""
 
-#: includes/uixscform/init.php:111
-#: includes/admin/uix-custom-metaboxes/init.php:122
+#: includes/uixscform/init.php:112
+#: includes/admin/uix-custom-metaboxes/init.php:127
 msgid "Insert Image"
 msgstr "插入图片"
 
-#: includes/uixscform/init.php:112
-#: includes/admin/uix-custom-metaboxes/init.php:123
+#: includes/uixscform/init.php:113
+#: includes/admin/uix-custom-metaboxes/init.php:128
 msgid "Remove link"
 msgstr "删除链接"
 
-#: includes/uixscform/init.php:113
-#: includes/admin/uix-custom-metaboxes/init.php:124
+#: includes/uixscform/init.php:114
+#: includes/admin/uix-custom-metaboxes/init.php:129
 msgid "Insert/Edit link"
 msgstr "插入/编辑链接"
 
-#: includes/uixscform/init.php:114
-#: includes/admin/uix-custom-metaboxes/init.php:125
+#: includes/uixscform/init.php:115
+#: includes/admin/uix-custom-metaboxes/init.php:130
 msgid "URL"
 msgstr "网址"
 
-#: includes/uixscform/init.php:115
-#: includes/admin/uix-custom-metaboxes/init.php:126
+#: includes/uixscform/init.php:116
+#: includes/admin/uix-custom-metaboxes/init.php:131
 #: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:109
 #: shortcodes/templates/default/modules/uix_sc_module_button.php:106
 msgid "Link Text"
 msgstr "链接文本"
 
-#: includes/uixscform/init.php:116
-#: includes/admin/uix-custom-metaboxes/init.php:127
+#: includes/uixscform/init.php:117
+#: includes/admin/uix-custom-metaboxes/init.php:132
 msgid "Open link in a new tab"
 msgstr "新窗口打开"
 
-#: includes/uixscform/init.php:117
-#: includes/admin/uix-custom-metaboxes/init.php:128
+#: includes/uixscform/init.php:118
+#: includes/admin/uix-custom-metaboxes/init.php:133
 msgid "Syntax Highlight Code"
 msgstr "代码高亮"
 
-#: includes/uixscform/init.php:118
-#: includes/admin/uix-custom-metaboxes/init.php:129
+#: includes/uixscform/init.php:119
+#: includes/admin/uix-custom-metaboxes/init.php:134
 #: shortcodes/templates/default/modules/uix_sc_module_code.php:41
 msgid "Language"
 msgstr ""
 
-#: includes/uixscform/init.php:119
+#: includes/uixscform/init.php:120
 msgid "Use keyboard shortcuts (CTRL+V) to quickly paste text into the editor."
 msgstr "使用快捷键(CTRL+V)粘贴到编辑器中"
 
-#: includes/uixscform/init.php:815
+#: includes/uixscform/init.php:816
 msgid ""
 "<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
 "shortcode does not support live preview, please check out it directly on "
@@ -168,7 +168,7 @@ msgid "Column Form"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:15
-#: includes/admin/uix-custom-metaboxes/init.php:2172
+#: includes/admin/uix-custom-metaboxes/init.php:2183
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:139
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:595
 msgid "Text"
@@ -261,7 +261,7 @@ msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:32
 #: shortcodes/templates/default/config.php:191
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:230
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:259
 msgid "Image Slider"
 msgstr ""
 
@@ -273,7 +273,7 @@ msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:34
 #: shortcodes/templates/default/config.php:160
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:157
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:254
 msgid "Testimonials Carousel"
 msgstr ""
 
@@ -579,10 +579,6 @@ msgstr ""
 msgid "SyntaxHighlighter"
 msgstr ""
 
-#: helper/tabs/credits.php:20
-msgid "Flexslider"
-msgstr ""
-
 #: helper/tabs/credits.php:21
 msgid "Shuffle (filtering and sorting)"
 msgstr ""
@@ -757,40 +753,40 @@ msgstr ""
 "<strong>如果您喜欢此插件，则可以使用Uix短代码查看我的免费和高质量主题，以供下载。.</strong> <h4><a href=\"https:"
 "//uiux.cc/\" target=\"_blank\">点击进入官网</a></h4>"
 
-#: includes/admin/uix-custom-metaboxes/init.php:130
-#: includes/admin/uix-custom-metaboxes/init.php:1853
+#: includes/admin/uix-custom-metaboxes/init.php:135
+#: includes/admin/uix-custom-metaboxes/init.php:1864
 #: includes/uixscform/functions/google-map.php:96
 msgid "-"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:131
+#: includes/admin/uix-custom-metaboxes/init.php:136
 msgid "Are you sure you want to delete?"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:172
+#: includes/admin/uix-custom-metaboxes/init.php:177
 msgid "Group Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:387
-#: includes/admin/uix-custom-metaboxes/init.php:1440
+#: includes/admin/uix-custom-metaboxes/init.php:398
+#: includes/admin/uix-custom-metaboxes/init.php:1451
 msgid "Field Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1034
-#: includes/admin/uix-custom-metaboxes/init.php:1607
-#: includes/admin/uix-custom-metaboxes/init.php:1816
-#: includes/admin/uix-custom-metaboxes/init.php:2176
-#: includes/admin/uix-custom-metaboxes/init.php:2181
+#: includes/admin/uix-custom-metaboxes/init.php:1045
+#: includes/admin/uix-custom-metaboxes/init.php:1618
+#: includes/admin/uix-custom-metaboxes/init.php:1827
+#: includes/admin/uix-custom-metaboxes/init.php:2187
+#: includes/admin/uix-custom-metaboxes/init.php:2192
 msgid "Remove"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1035
-#: includes/admin/uix-custom-metaboxes/init.php:2182
+#: includes/admin/uix-custom-metaboxes/init.php:1046
+#: includes/admin/uix-custom-metaboxes/init.php:2193
 msgid "Select image or video"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1605
-#: includes/admin/uix-custom-metaboxes/init.php:1810
+#: includes/admin/uix-custom-metaboxes/init.php:1616
+#: includes/admin/uix-custom-metaboxes/init.php:1821
 #: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
@@ -806,57 +802,57 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1606
-#: includes/admin/uix-custom-metaboxes/init.php:1811
+#: includes/admin/uix-custom-metaboxes/init.php:1617
+#: includes/admin/uix-custom-metaboxes/init.php:1822
 msgid "Value"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1608
-#: includes/admin/uix-custom-metaboxes/init.php:1817
+#: includes/admin/uix-custom-metaboxes/init.php:1619
+#: includes/admin/uix-custom-metaboxes/init.php:1828
 msgid "Add New"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1812
+#: includes/admin/uix-custom-metaboxes/init.php:1823
 msgid "Subtitle"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1813
+#: includes/admin/uix-custom-metaboxes/init.php:1824
 msgid "ID"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1814
+#: includes/admin/uix-custom-metaboxes/init.php:1825
 msgid "Level"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1815
+#: includes/admin/uix-custom-metaboxes/init.php:1826
 msgid "Class Name"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1971
+#: includes/admin/uix-custom-metaboxes/init.php:1982
 msgid "Untitled"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:2171
+#: includes/admin/uix-custom-metaboxes/init.php:2182
 msgid "Files"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:2174
+#: includes/admin/uix-custom-metaboxes/init.php:2185
 msgid "Custom Content"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:2175
+#: includes/admin/uix-custom-metaboxes/init.php:2186
 msgid "Upload Your Files"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:2177
+#: includes/admin/uix-custom-metaboxes/init.php:2188
 msgid "Add Files"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:2178
+#: includes/admin/uix-custom-metaboxes/init.php:2189
 msgid "Add Text"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:2185
+#: includes/admin/uix-custom-metaboxes/init.php:2196
 msgid "Enable Lightbox for this gallery?"
 msgstr ""
 
@@ -1016,11 +1012,11 @@ msgstr ""
 msgid "View all posts in %s"
 msgstr ""
 
-#: shortcodes/templates/default/frontpage-init.php:905
+#: shortcodes/templates/default/frontpage-init.php:902
 msgid "All"
 msgstr ""
 
-#: shortcodes/templates/default/frontpage-init.php:1569
+#: shortcodes/templates/default/frontpage-init.php:1608
 msgid "Comments are closed."
 msgstr ""
 
@@ -1036,32 +1032,54 @@ msgstr ""
 msgid "Fade"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:63
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:57
+msgid "Scale"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:64
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:64
 msgid "Automatically Transition"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:74
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:75
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:75
 msgid "Show Paging Navigation"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:86
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:87
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:87
 msgid "Show Arrow Navigation"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:98
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:99
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:99
+msgid "Draggable"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:113
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:114
 msgid "Speed of Images Appereance"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:112
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:128
+#, php-format
+msgid ""
+"Using the CSS animation/transition duration from Uix Shortcodes stylesheets. "
+"<br>You can find this code <code>.uix-sc-slideshow { ... }</code> <br><a "
+"target=\"_blank\" href=\"%1$s\">click here to set speed</a>"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:141
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:130
 msgid "Delay Between Images"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:130
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:159
 #: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:128
 #: shortcodes/templates/default/modules/uix_sc_module_accordion.php:81
 #: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:108
 #: shortcodes/templates/default/modules/uix_sc_module_features_col3.php:52
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:53
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:150
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:568
 #: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:51
 #: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:123
@@ -1072,7 +1090,7 @@ msgstr ""
 msgid "List Item"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:147
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:176
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:141
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:211
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:335
@@ -1081,15 +1099,15 @@ msgstr ""
 msgid "Image URL"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:158
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:187
 msgid "Slider title"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:173
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:202
 msgid "Slider introduction"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:188
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:217
 msgid "Destination URL and can be left blank, e.g., http://your.site.com"
 msgstr ""
 
@@ -1336,20 +1354,20 @@ msgid ""
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:125
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:70
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:167
 #: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:59
 #: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:143
 msgid "Avatar URL"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:140
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:85
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:182
 #: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:158
 msgid "Name"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:158
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:103
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:200
 #: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:176
 msgid "Position"
 msgstr ""
@@ -1803,7 +1821,19 @@ msgid ""
 "it blank."
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:113
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:51
+msgid "Direction"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:57
+msgid "Horizontal"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:58
+msgid "Vertical"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:210
 msgid ""
 "Enter some details for the customer giving this testimonial., E.g., Thank "
 "you from the bottom of our hearts."

@@ -803,49 +803,46 @@ add_shortcode( 'uix_code', 'uix_sc_fun_code' );
 function uix_sc_fun_syntaxhighlighter(){
 	echo '
 	<script type="text/javascript">
-		( function($) {
-			"use strict";
-			
-			function uix_syntaxhighlighter_path() {
-				var args = arguments,
-				result = [];
-				for (var i = 0; i < args.length; i++) {
-					result.push(args[i].replace("$", "'.UixShortcodes::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/"));
-				}
-				return result;
+		function uix_syntaxhighlighter_path() {
+			var args = arguments,
+			result = [];
+			for (var i = 0; i < args.length; i++) {
+				result.push(args[i].replace("$", "'.UixShortcodes::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/"));
 			}
-	
-			$(function () {
-				SyntaxHighlighter.autoloader.apply(null, uix_syntaxhighlighter_path(
-					"applescript            $shBrushAppleScript.js",
-					"actionscript3 as3      $shBrushAS3.js",
-					"bash shell             $shBrushBash.js",
-					"coldfusion cf          $shBrushColdFusion.js",
-					"cpp c                  $shBrushCpp.js",
-					"c# c-sharp csharp      $shBrushCSharp.js",
-					"css                    $shBrushCss.js",
-					"delphi pascal          $shBrushDelphi.js",
-					"diff patch pas         $shBrushDiff.js",
-					"erl erlang             $shBrushErlang.js",
-					"groovy                 $shBrushGroovy.js",
-					"java                   $shBrushJava.js",
-					"jfx javafx             $shBrushJavaFX.js",
-					"js jscript javascript  $shBrushJScript.js",
-					"perl pl                $shBrushPerl.js",
-					"php                    $shBrushPhp.js",
-					"text plain             $shBrushPlain.js",
-					"py python              $shBrushPython.js",
-					"ruby rails ror rb      $shBrushRuby.js",
-					"sass scss              $shBrushSass.js",
-					"scala                  $shBrushScala.js",
-					"sql                    $shBrushSql.js",
-					"vb vbnet               $shBrushVb.js",
-					"xml xhtml xslt html    $shBrushXml.js"
-				));
-				SyntaxHighlighter.all();
-			});
-	
-		} )( jQuery );
+			return result;
+		}
+		
+		setTimeout( function(){
+		    /* Delay to prevent the main function file from not loading */
+			SyntaxHighlighter.autoloader.apply(null, uix_syntaxhighlighter_path(
+				"applescript            $shBrushAppleScript.js",
+				"actionscript3 as3      $shBrushAS3.js",
+				"bash shell             $shBrushBash.js",
+				"coldfusion cf          $shBrushColdFusion.js",
+				"cpp c                  $shBrushCpp.js",
+				"c# c-sharp csharp      $shBrushCSharp.js",
+				"css                    $shBrushCss.js",
+				"delphi pascal          $shBrushDelphi.js",
+				"diff patch pas         $shBrushDiff.js",
+				"erl erlang             $shBrushErlang.js",
+				"groovy                 $shBrushGroovy.js",
+				"java                   $shBrushJava.js",
+				"jfx javafx             $shBrushJavaFX.js",
+				"js jscript javascript  $shBrushJScript.js",
+				"perl pl                $shBrushPerl.js",
+				"php                    $shBrushPhp.js",
+				"text plain             $shBrushPlain.js",
+				"py python              $shBrushPython.js",
+				"ruby rails ror rb      $shBrushRuby.js",
+				"sass scss              $shBrushSass.js",
+				"scala                  $shBrushScala.js",
+				"sql                    $shBrushSql.js",
+				"vb vbnet               $shBrushVb.js",
+				"xml xhtml xslt html    $shBrushXml.js"
+			));
+			SyntaxHighlighter.all();
+		}, 1000 );
+
 	</script>
 	';
 	
@@ -1309,16 +1306,58 @@ add_shortcode( 'uix_client_item', 'uix_sc_fun_client_item' );
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_testimonials_wrapper( $atts, $content = null ){
 	
+	extract( shortcode_atts( array( 
+		'dir' => 'horizontal',
+		'auto' => 'true',
+		'speed' => 1000,
+		'timing' => 7000,
+		'paging' => 'false',
+		'arrows' => 'true',
+		'draggable' => 'false',
+	 ), $atts ) );
+	
+	
+	
+	$testimonials_id = 'testimonials-' . uniqid();
+
 
    $return_string = '
    <div class="uix-sc-testimonials__wrapper">
-	   <div class="uix-sc-testimonials" id="uix-testimonials-'.uniqid().'">
+	   <div class="uix-sc-testimonials" id="uix-testimonials-'.$testimonials_id.'">
 			<div class="uix-sc-testimonials__container">
-				<div class="flexslider">
-					<ul class="slides">
-						'.$content.'
-					</ul><!-- .uix-sc-testimonials__slides -->
-				</div><!-- .flexslider -->
+			
+			   <div data-uix-sc-hybridcontent-slider="1" role="slider" class="uix-sc-hybridcontent-slider"
+				  data-draggable="'.$draggable.'"
+				  data-draggable-cursor="move"	 
+				  data-dir="'.$dir.'"
+				  data-auto="'.$auto.'"
+				  data-loop="false"
+				  data-speed="'.$speed.'"
+				  data-timing="'.$timing.'" 
+				  data-pagination="#uix-sc-hybridcontent-slider__pagination-'.$testimonials_id.'" 
+				  data-next="#uix-sc-hybridcontent-slider__controls-'.$testimonials_id.' .uix-sc-hybridcontent-slider__controls--next" 
+				  data-prev="#uix-sc-hybridcontent-slider__controls-'.$testimonials_id.' .uix-sc-hybridcontent-slider__controls--prev">
+				   <div class="uix-sc-hybridcontent-slider__items">
+					   '.$content.'
+				   </div>
+				  <!-- /.uix-sc-hybridcontent-slider__items -->
+
+				</div>
+			   <!-- /.uix-sc-hybridcontent-slider -->
+
+
+
+				<div class="uix-sc-hybridcontent-slider__pagination" id="uix-sc-hybridcontent-slider__pagination-'.$testimonials_id.'" style="'.($paging == 'false' ? 'display:none' : '').'"></div>
+				<!-- /.uix-sc-hybridcontent-slider__pagination -->
+
+
+				<div class="uix-sc-hybridcontent-slider__controls" id="uix-sc-hybridcontent-slider__controls-'.$testimonials_id.'" style="'.($arrows == 'false' ? 'display:none' : '').'">
+					<a href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+					<a href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				</div>
+				<!-- /.uix-sc-hybridcontent-slider__controls -->    
+			   
+
 			</div><!-- .uix-sc-testimonials__container -->
 		</div><!-- /.uix-sc-testimonials -->
 	</div>
@@ -1346,13 +1385,13 @@ function uix_sc_fun_testimonials_item( $atts, $content = null ){
        
    
    $return_string = '
-        <li>
+	   <div class="uix-sc-hybridcontent-slider__item">
            '.$desc.'
 		   <div class="uix-sc-testimonials__signature">
 		       '.( !empty( $avatar )  ? '<img class="uix-sc-testimonials--avatar" src="'.esc_url( $avatar ).'" alt="'.$name.'" />': '<span class="uix-sc-testimonials--no-avatar"></span>' ).'
 		       <strong '.( !empty( $avatar )  ? '': 'class="uix-sc-testimonials__pure-text"' ).'>'.$name.'</strong> - '.$position.'
-		   </div>														                                                    
-        </li>    
+		   </div>	
+	   </div>	  
    ';
   
   
@@ -1652,27 +1691,56 @@ function uix_sc_fun_imageslider_wrapper( $atts, $content = null ){
 	extract( shortcode_atts( array( 
 		'effect' => 'slide',
 		'target' => 1,
-		'loop' => 'true',
+		'auto' => 'true',
 		'speed' => 1000,
 		'timing' => 7000,
 		'paging' => 'false',
 		'arrows' => 'true',
+		'draggable' => 'false',
 		
 	 ), $atts ) );
 	
 	
 	//target
 	$targetcode = ( $target == 1 ) ? ' target="_blank"' : '';
+	
+	$slider_id = 'imageslider-' . uniqid();
 
    $return_string = '
    <div class="uix-sc-imageslider__wrapper">
-	   <div class="uix-sc-imageslider" id="uix-imageslider-'.uniqid().'">
+	   <div class="uix-sc-imageslider" id="uix-imageslider-'.$slider_id.'">
 			<div class="uix-sc-imageslider__container">
-				<div class="flexslider" data-loop="'.$loop.'" data-speed="'.$speed.'" data-timing="'.$timing.'" data-paging="'.$paging.'" data-arrows="'.$arrows.'" data-animation="'.$effect.'">
-					<ul class="slides">
-						'.$content.'
-					</ul><!-- .uix-sc-imageslider__slides -->
-				</div><!-- .flexslider -->
+			
+				<div role="banner" class="uix-sc-slideshow__wrapper">
+				   <div data-uix-sc-slideshow="1" class="uix-sc-slideshow__outline uix-sc-slideshow uix-sc-slideshow--eff-'.$effect.'" 
+					  data-draggable="'.$draggable.'"
+					  data-draggable-cursor="move"	   
+					  data-auto="'.$auto.'"
+					  data-loop="true"
+					  data-speed="'.$speed.'"
+					  data-timing="'.$timing.'" 
+					  data-count-total="false"
+					  data-count-now="false"
+					  data-controls-pagination=".my-a-slider-pagination-'.$slider_id.'" 
+					  data-controls-arrows=".my-a-slider-arrows-'.$slider_id.'">
+					   <div class="uix-sc-slideshow__inner">
+					       '.$content.'
+					   </div>
+					  <!-- /.uix-sc-slideshow__inner -->
+
+					</div>
+				   <!-- /.uix-sc-slideshow__outline -->
+
+
+				   <div class="uix-sc-slideshow__pagination my-a-slider-pagination-'.$slider_id.'" style="'.($paging == 'false' ? 'display:none' : '').'"></div>
+				   <div class="uix-sc-slideshow__arrows my-a-slider-arrows-'.$slider_id.'" style="'.($arrows == 'false' ? 'display:none' : '').'">
+						<a href="#" class="uix-sc-slideshow__arrows--prev"></a>
+						<a href="#" class="uix-sc-slideshow__arrows--next"></a>
+				   </div>
+
+			   </div>
+			   <!-- /.uix-sc-slideshow__wrapper -->	
+			
 			</div><!-- .uix-sc-imageslider__container -->
 		</div><!-- /.uix-sc-imageslider -->
 	</div>                              
@@ -1702,19 +1770,21 @@ function uix_sc_fun_imageslider_item( $atts, $content = null ){
 	
 	if ( !empty( $title ) || !empty( $desc ) ) {
 		$intro = '
-		  <div class="slide-text">
-		      '.( !empty( $title ) ? '<div class="slide-title">'.UixShortcodes::decode_shortcode_htmlAttr( $title ).'</div>' : '' ).'
-			  '.( !empty( $desc ) ? '<div class="slide-byline">'.UixShortcodes::decode_shortcode_htmlAttr( $desc ).'</div>' : '' ).'
-		  </div>
+			<div class="uix-sc-slideshow__txt">
+				<div>
+					<h3>'.UixShortcodes::decode_shortcode_htmlAttr( $title ).'</h3>
+					<p>	'.UixShortcodes::decode_shortcode_htmlAttr( $desc ).'</p>
+				</div>
+			</div>
 		';
 	}
 
    
    $return_string = ' 
-		<li>
-		  '.( !empty( $url ) ? '<a href="'.esc_url( $url ).'" {target}>' : '' ).'<img src="'.esc_url( $image ).'" alt="">'.( !empty( $url ) ? '</a>' : '' ).'
-		  '.$intro.'
-		</li>																                                                          
+	   <div class="uix-sc-slideshow__item">
+			'.( !empty( $url ) ? '<a href="'.esc_url( $url ).'" {target}>' : '' ).'<img src="'.esc_url( $image ).'" alt="">'.( !empty( $url ) ? '</a>' : '' ).'
+			'.$intro.'
+	   </div>																                                                          
    ';
   
   

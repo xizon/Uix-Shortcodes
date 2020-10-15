@@ -45,6 +45,103 @@ $form_type = array(
 $args = 
 	array(
 		
+	
+		array(
+			'id'             => 'uix_sc_testimonials_list_dir',
+			'title'          => esc_html__( 'Direction', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 'horizontal',
+			'placeholder'    => '',
+			'type'           => 'radio',
+			'default'        => array(
+		                            'horizontal'  => esc_html__( 'Horizontal', 'uix-shortcodes' ),
+				                    'vertical'  => esc_html__( 'Vertical', 'uix-shortcodes' ),
+								)
+		),
+		
+		array(
+			'id'             => 'uix_sc_testimonials_list_auto',
+			'title'          => esc_html__( 'Automatically Transition', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 1, // 0:false  1:true
+			'placeholder'    => '',
+			'type'           => 'checkbox'
+		
+		
+		),
+		
+		array(
+			'id'             => 'uix_sc_testimonials_list_paging',
+			'title'          => esc_html__( 'Show Paging Navigation', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 1, // 0:false  1:true
+			'placeholder'    => '',
+			'type'           => 'checkbox'
+		
+		
+		),	
+		
+		
+		array(
+			'id'             => 'uix_sc_testimonials_list_arrows',
+			'title'          => esc_html__( 'Show Arrow Navigation', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 0, // 0:false  1:true
+			'placeholder'    => '',
+			'type'           => 'checkbox'
+		
+		
+		),	
+	
+	
+		array(
+			'id'             => 'uix_sc_testimonials_list_draggable',
+			'title'          => esc_html__( 'Draggable', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 0, // 0:false  1:true
+			'placeholder'    => '',
+			'type'           => 'checkbox'
+		
+		
+		),	
+	
+	
+	
+		
+		
+		array(
+			'id'             => 'uix_sc_testimonials_list_speed',
+			'title'          => esc_html__( 'Speed of Images Appereance', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 1200,
+			'placeholder'    => '',
+			'type'           => 'short-text',
+			'callback'       => 'number',
+			'default'        => array(
+									'units'  => 'ms'
+								)
+		
+		),	
+	
+	
+		
+		array(
+			'id'             => 'uix_sc_testimonials_list_timing',
+			'title'          => esc_html__( 'Delay Between Images', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 7000,
+			'placeholder'    => '',
+			'type'           => 'short-text',
+			'callback'       => 'number',
+			'default'        => array(
+									'units'  => 'ms'
+								)
+		
+		),	
+		
+	
+	
+	
 		//------ Clone controls list (begin)
 
 		
@@ -183,7 +280,7 @@ UixSCFormCore::form_scripts( array(
 	    'template'              => '
 		
 		
-		    [uix_testimonials]
+		    [uix_testimonials dir=\'${uix_sc_testimonials_list_dir}\' draggable=\'{{if uix_sc_testimonials_list_draggable == 1}}true{{else}}false{{/if}}\' auto=\'{{if uix_sc_testimonials_list_auto == 1}}true{{else}}false{{/if}}\' paging=\'{{if uix_sc_testimonials_list_paging == 1}}true{{else}}false{{/if}}\' arrows=\'{{if uix_sc_testimonials_list_arrows == 1}}true{{else}}false{{/if}}\' speed=\'${uix_sc_testimonials_list_speed}\' timing=\'${uix_sc_testimonials_list_timing}\']
 				<!-- loop start -->
 
 					{{each '.$clone_trigger_id.'}}

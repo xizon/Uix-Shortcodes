@@ -6,7 +6,7 @@ Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Tested up to: 5.5.1
-Stable tag: 1.8.9
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,14 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.9.0 (October 14, 2020) =
+
+* Tweak: Upgraded image slider and testimonials carousel modules.
+* Tweak: When the editor inserts a video, it will automatically be converted into a video tag.
+* New: According to the language of the theme, the editor automatically supports multiple languages.
+* Remove: Remove Flexslider plugin.
+
 
 = 1.8.9 (October 13, 2020) =
 

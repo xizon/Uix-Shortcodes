@@ -53,13 +53,14 @@ $args =
 			'type'           => 'radio',
 			'default'        => array(
 		                            'slide'  => esc_html__( 'Slide', 'uix-shortcodes' ),
-		                            'fade'  => esc_html__( 'Fade', 'uix-shortcodes' ),
+				                    'none'  => esc_html__( 'Fade', 'uix-shortcodes' ),
+		                            'scale'  => esc_html__( 'Scale', 'uix-shortcodes' ),
 								)
 		
 		),
 		
 		array(
-			'id'             => 'uix_sc_imageslider_list_loop',
+			'id'             => 'uix_sc_imageslider_list_auto',
 			'title'          => esc_html__( 'Automatically Transition', 'uix-shortcodes' ),
 			'desc'           => '',
 			'value'          => 1, // 0:false  1:true
@@ -73,7 +74,7 @@ $args =
 			'id'             => 'uix_sc_imageslider_list_paging',
 			'title'          => esc_html__( 'Show Paging Navigation', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => 0, // 0:false  1:true
+			'value'          => 1, // 0:false  1:true
 			'placeholder'    => '',
 			'type'           => 'checkbox'
 		
@@ -85,19 +86,33 @@ $args =
 			'id'             => 'uix_sc_imageslider_list_arrows',
 			'title'          => esc_html__( 'Show Arrow Navigation', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => 1, // 0:false  1:true
+			'value'          => 0, // 0:false  1:true
 			'placeholder'    => '',
 			'type'           => 'checkbox'
 		
 		
 		),	
+	
+	
+		array(
+			'id'             => 'uix_sc_imageslider_list_draggable',
+			'title'          => esc_html__( 'Draggable', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 0, // 0:false  1:true
+			'placeholder'    => '',
+			'type'           => 'checkbox'
+		
+		
+		),	
+	
+	
 		
 		
 		array(
 			'id'             => 'uix_sc_imageslider_list_speed',
 			'title'          => esc_html__( 'Speed of Images Appereance', 'uix-shortcodes' ),
 			'desc'           => '',
-			'value'          => 1000,
+			'value'          => 1200,
 			'placeholder'    => '',
 			'type'           => 'short-text',
 			'callback'       => 'number',
@@ -106,6 +121,20 @@ $args =
 								)
 		
 		),	
+	
+	
+		array(
+			'id'             => 'uix_sc_imageslider_list_speed_tip',
+			'desc'           => wp_kses( sprintf( __( 'Using the CSS animation/transition duration from Uix Shortcodes stylesheets. <br>You can find this code <code>.uix-sc-slideshow { ... }</code> <br><a target="_blank" href="%1$s">click here to set speed</a>', 'uix-shortcodes' ), admin_url( 'admin.php?page='.UixShortcodes::CUSPAGE.'&tab=custom-css' ) ), wp_kses_allowed_html( 'post' ) ),
+			'type'           => 'note',
+			'default'        => array(
+		                            'fullwidth'  => false,
+									'type'       => 'warning'  //error, success, warning, note, default
+				                ),
+		
+		
+		),	
+		
 		
 		array(
 			'id'             => 'uix_sc_imageslider_list_timing',
@@ -254,8 +283,8 @@ UixSCFormCore::form_scripts( array(
 		 
 		 */
 	    'template'              => '
-		
-			[uix_imageslider effect=\'${uix_sc_imageslider_list_effect}\' loop=\'{{if uix_sc_imageslider_list_loop == 1}}true{{else}}false{{/if}}\' paging=\'{{if uix_sc_imageslider_list_paging == 1}}true{{else}}false{{/if}}\' arrows=\'{{if uix_sc_imageslider_list_arrows == 1}}true{{else}}false{{/if}}\' speed=\'${uix_sc_imageslider_list_speed}\' timing=\'${uix_sc_imageslider_list_timing}\']
+		   
+			[uix_imageslider effect=\'${uix_sc_imageslider_list_effect}\' draggable=\'{{if uix_sc_imageslider_list_draggable == 1}}true{{else}}false{{/if}}\' auto=\'{{if uix_sc_imageslider_list_auto == 1}}true{{else}}false{{/if}}\' paging=\'{{if uix_sc_imageslider_list_paging == 1}}true{{else}}false{{/if}}\' arrows=\'{{if uix_sc_imageslider_list_arrows == 1}}true{{else}}false{{/if}}\' speed=\'${uix_sc_imageslider_list_speed}\' timing=\'${uix_sc_imageslider_list_timing}\']
 
 				<!-- loop start -->
 

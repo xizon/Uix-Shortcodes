@@ -30,6 +30,7 @@
     15. Image Slider 
     16. Buttons
     17. Recent Posts
+    18. Custom Hybrid Content Slider      
     
 
 
@@ -54,10 +55,7 @@
     text-align: left;
 }
 
-.flexslider,
-.uix-sc-flexslider {
-    direction: ltr !important;
-}
+
 
 
 /* ====================================================== 
@@ -367,18 +365,19 @@
 /* ====================================================== 
    10. Testimonials Carousel                           
 /* ====================================================== */
-.uix-sc-testimonials .uix-sc-testimonials__content {
-    float: right;
-}
-
 .uix-sc-testimonials .uix-sc-testimonials__signature {
-    float: left;
     text-align: left;
 }
 
+
+.uix-sc-testimonials .uix-sc-testimonials__signature {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAVCAYAAACg/AXsAAAAAXNSR0IArs4c6QAAAStJREFUOBGdkztOxDAURW0mqVjALGBaCnoKBA3lULMEdkHFBlgCLTUFBUugp2CYbkokxEfkY86NYuSMMskLlq6d+L17ZF8l3jkX0H/HF8bDTO48zydB6rp2VVUJcIWePVOYAgkhuLIsC3z3aIncZAgAB2iF9wB9CrKnyTpagIwnqAHIa4YoB06ga5yjtcxxmCDKgSBLTNfoIZrjasqkKHQA94hOozFdRyFtDhtMC/SXQwoZvA5XUA4/GI52AQTbCVEOhFnTc4Fe1Dw09LF1lGWZfgUBboaMaa0DEJCi9JQ2jT13IN57Ad7Q/pgx1juZtEFWFI/RR2yyrM1JkhwuLabtngbCpq5xt120voc2h1eroa9PJ/hG876idU/fw5m1ua9vxuY7uu0rWvd+AUCMgHjKISbfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATB0RVh0UmF3IHByb2ZpbGUgdHlwZSBBUFAxAApnZW5lcmljIHByb2ZpbGUKICAgICAxMjYKNDU3ODY5NjYwMDAwNGQ0ZDAwMmEwMDAwMDAwODAwMDYwMTEyMDAwMzAwMDAwMDAxMDAwMTAwMDAwMTFhMDAwNTAwMDAwMDAxCjAwMDAwMDU2MDExYjAwMDUwMDAwMDAwMTAwMDAwMDVlMDEyODAwMDMwMDAwMDAwMTAwMDIwMDAwMDEzMTAwMDIwMDAwMDAxMQowMDAwMDA2NjAyMTMwMDAzMDAwMDAwMDEwMDAxMDAwMDAwMDAwMDAwMDAwMDAwNDgwMDAwMDAwMTAwMDAwMDQ4MDAwMDAwMDEKNDE2NDZmNjI2NTIwNDk2ZDYxNjc2NTUyNjU2MTY0NzkwMDAwCg90H8cAAASHaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pgo8eDp4bXBtZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEvJyB4OnhtcHRrPSdJbWFnZTo6RXhpZlRvb2wgMTAuMDAnPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6dGlmZj0naHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8nPgogIDx0aWZmOkltYWdlTGVuZ3RoPjIxPC90aWZmOkltYWdlTGVuZ3RoPgogIDx0aWZmOkltYWdlV2lkdGg+MTc8L3RpZmY6SW1hZ2VXaWR0aD4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6eG1wPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvJz4KICA8eG1wOkNyZWF0b3JUb29sPkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpPC94bXA6Q3JlYXRvclRvb2w+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnN0UmVmPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjJwogIHhtbG5zOnhtcE1NPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vJz4KICA8eG1wTU06RGVyaXZlZEZyb20gcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICA8c3RSZWY6ZG9jdW1lbnRJRD54bXAuZGlkOjdFMzcxQzgwODM0MjExRTY4OTcyOTI0RDI0QzlEMTRCPC9zdFJlZjpkb2N1bWVudElEPgogICA8c3RSZWY6aW5zdGFuY2VJRD54bXAuaWlkOjdFMzcxQzdGODM0MjExRTY4OTcyOTI0RDI0QzlEMTRCPC9zdFJlZjppbnN0YW5jZUlEPgogIDwveG1wTU06RGVyaXZlZEZyb20+CiAgPHhtcE1NOkRvY3VtZW50SUQ+eG1wLmRpZDpFRUZDMkIwRjgzNDIxMUU2ODk3MjkyNEQyNEM5RDE0QjwveG1wTU06RG9jdW1lbnRJRD4KICA8eG1wTU06SW5zdGFuY2VJRD54bXAuaWlkOkVFRkMyQjBFODM0MjExRTY4OTcyOTI0RDI0QzlEMTRCPC94bXBNTTpJbnN0YW5jZUlEPgogPC9yZGY6RGVzY3JpcHRpb24+CjwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9J3InPz5vE8IsAAAAAElFTkSuQmCC') no-repeat scroll 20px top transparent;
+}
+
+
 .uix-sc-testimonials .uix-sc-testimonials__signature img.uix-sc-testimonials--avatar {
     float: left;
-    margin: .6em 0 1em 1em;
+    margin: .6em 1em 1em 1em;
 }
 
 .uix-sc-testimonials .uix-sc-testimonials__signature .uix-sc-testimonials--no-avatar {
@@ -387,8 +386,10 @@
 
 .uix-sc-testimonials .uix-sc-testimonials__signature strong.uix-sc-testimonials__pure-text {
     padding-left: auto;
-    padding-right: 100px;
+    padding-right: auto;
+	padding: 0 !important;
 }
+	
 					 
 	 
 /* ====================================================== 
@@ -489,10 +490,56 @@
    15. Image Slider                
 /* ====================================================== */
 
-.uix-sc-imageslider .slides li .slide-text {
+
+/*
+
+	
+	TABLE OF CONTENTS (RTL)
+	---------------------------
+	
+     1. Initialize the slider style
+     2. Pagination dots
+     3. Next/Prev buttons
+
+*/
+/*
+ ---------------------------
+ 1. Initialize the slider style
+ ---------------------------
+ */
+.rtl .uix-sc-slideshow .uix-sc-slideshow__inner .uix-sc-slideshow__item {
     left: auto;
     right: 0;
 }
+
+/*
+ ---------------------------
+ 2. Pagination dots
+ ---------------------------
+ */
+.rtl .uix-sc-slideshow__pagination ul {
+    left: auto;
+    right: 0;
+}
+
+/*
+ ---------------------------
+ 3. Next/Prev buttons
+ ---------------------------
+ */
+.rtl .uix-sc-slideshow__arrows .uix-sc-slideshow__arrows--prev {
+    left: auto;
+    right: 15px;
+	transform: rotate(180deg);
+}
+
+.rtl .uix-sc-slideshow__arrows .uix-sc-slideshow__arrows--next {
+    right: auto;
+    left: 15px;
+    text-align: left;
+	transform: rotate(180deg);
+}
+
 
 
 /* ====================================================== 
@@ -518,3 +565,27 @@
 .uix-sc-imgposts > li .uix-sc-imgposts__info {
     float: right;
 }
+
+
+
+
+
+/* ====================================================== 
+   18. Custom Hybrid Content Slider      
+/* ====================================================== */
+
+
+.uix-sc-hybridcontent-slider__controls .uix-sc-hybridcontent-slider__controls--prev {
+    padding-left: auto;
+	padding-right: 2px;
+	float: right;
+	transform: rotate(180deg);
+}
+
+.uix-sc-hybridcontent-slider__controls .uix-sc-hybridcontent-slider__controls--next {
+    padding-right: auto;
+	padding-left: 2px;
+	float: left;
+	transform: rotate(180deg);
+}
+

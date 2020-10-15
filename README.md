@@ -66,6 +66,15 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.9.0 (October 14, 2020) =
+
+* Tweak: Upgraded image slider and testimonials carousel modules.
+* Tweak: When the editor inserts a video, it will automatically be converted into a video tag.
+* New: According to the language of the theme, the editor automatically supports multiple languages.
+* Remove: Remove Flexslider plugin.
+
+
+
 ##### = 1.8.9 (October 13, 2020) =
 
 * Tweak: Optimized the language support and media insertion of the editor for Uix Custom Meta Boxes.

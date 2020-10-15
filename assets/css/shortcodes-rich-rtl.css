@@ -30,7 +30,7 @@
     15. Image Slider 
     16. Buttons
     17. Recent Posts
-
+    18. Custom Hybrid Content Slider      
 
 */
 /* ====================================================== 
@@ -53,10 +53,7 @@
     text-align: left;
 }
 
-.flexslider,
-.uix-sc-flexslider {
-    direction: ltr !important;
-}
+
 
 
 /* ====================================================== 
@@ -348,14 +345,16 @@
 /* ====================================================== 
    10. Testimonials Carousel                           
 /* ====================================================== */
-.uix-sc-testimonials .uix-sc-testimonials__content {
-    float: right;
-}
 
 .uix-sc-testimonials .uix-sc-testimonials__signature {
-    float: left;
     text-align: left;
 }
+
+
+.uix-sc-testimonials .uix-sc-testimonials__signature {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAVCAYAAACg/AXsAAAAAXNSR0IArs4c6QAAAN9JREFUOBGdkLsNAjEMhhNaBmAAWiToqahokdiC8ja4HViDggVYgZ4G6CipAN3x+o3IybLivNIksf/vu5ztB8uUrzvQSa+cNySorbUHQy8pWA2YrXuAJYG7ZOxHZEd4xY2Ykt8hcOYEJZIW0AKCM8HdyphHi2zdgfyQIdlxjp9TB3sBNORz4JKUwTYApprgJ4v8zgv9Jf+q9xyQvNFbeyFZDEj2MqveFckV9b4KyYZH8kRtLHPBu5DQHFZBwNcUko0vE60xySka1gJ/yQP7QMtE64BpDvNoMBSAoAr1U3pfbVqFOnMBJ6YAAAGidEVYdFJhdyBwcm9maWxlIHR5cGUgQVBQMQAKZ2VuZXJpYyBwcm9maWxlCiAgICAgMTgyCjQ1Nzg2OTY2MDAwMDRkNGQwMDJhMDAwMDAwMDgwMDA2MDExMjAwMDMwMDAwMDAwMTAwMDEwMDAwMDExYTAwMDUwMDAwMDAwMQowMDAwMDA1NjAxMWIwMDA1MDAwMDAwMDEwMDAwMDA1ZTAxMjgwMDAzMDAwMDAwMDEwMDAyMDAwMDAyMTMwMDAzMDAwMDAwMDEKMDAwMTAwMDA4NzY5MDAwNDAwMDAwMDAxMDAwMDAwNjYwMDAwMDAwMDAwMDAwMDQ4MDAwMDAwMDEwMDAwMDA0ODAwMDAwMDAxCjAwMDU5MDAwMDAwNzAwMDAwMDA0MzAzMjMzMzA5MTAxMDAwNzAwMDAwMDA0MDEwMjAzMDBhMDAwMDAwNzAwMDAwMDA0MzAzMQozMDMwYTAwMTAwMDMwMDAwMDAwMWZmZmYwMDAwYTUwMDAwMDUwMDAwMDAwMTAwMDAwMGE4MDAwMDAwMDAwMDAwMDAwYjAwMDAKMDAwNQrHdS0pAAABsmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLycgeDp4bXB0az0nSW1hZ2U6OkV4aWZUb29sIDEwLjAwJz4KPHJkZjpSREYgeG1sbnM6cmRmPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjJz4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnRpZmY9J2h0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvJz4KICA8dGlmZjpJbWFnZUxlbmd0aD4yMTwvdGlmZjpJbWFnZUxlbmd0aD4KICA8dGlmZjpJbWFnZVdpZHRoPjE3PC90aWZmOkltYWdlV2lkdGg+CiA8L3JkZjpEZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KPD94cGFja2V0IGVuZD0ncic/PipPtTQAAAAASUVORK5CYII=') no-repeat scroll 20px top transparent;
+}
+
 
 .uix-sc-testimonials .uix-sc-testimonials__signature img.uix-sc-testimonials--avatar {
     float: left;
@@ -368,8 +367,10 @@
 
 .uix-sc-testimonials .uix-sc-testimonials__signature strong.uix-sc-testimonials__pure-text {
     padding-left: auto;
-    padding-right: 100px;
+    padding-right: auto;
+	padding: 0 !important;
 }
+	
 					 
 	 
 /* ====================================================== 
@@ -468,10 +469,55 @@
    15. Image Slider                
 /* ====================================================== */
 
-.uix-sc-imageslider .slides li .slide-text {
+/*
+
+	
+	TABLE OF CONTENTS (RTL)
+	---------------------------
+	
+     1. Initialize the slider style
+     2. Pagination dots
+     3. Next/Prev buttons
+
+*/
+/*
+ ---------------------------
+ 1. Initialize the slider style
+ ---------------------------
+ */
+.rtl .uix-sc-slideshow .uix-sc-slideshow__inner .uix-sc-slideshow__item {
     left: auto;
     right: 0;
 }
+
+/*
+ ---------------------------
+ 2. Pagination dots
+ ---------------------------
+ */
+.rtl .uix-sc-slideshow__pagination ul {
+    left: auto;
+    right: 0;
+}
+
+/*
+ ---------------------------
+ 3. Next/Prev buttons
+ ---------------------------
+ */
+.rtl .uix-sc-slideshow__arrows .uix-sc-slideshow__arrows--prev {
+    left: auto;
+    right: 15px;
+	transform: rotate(180deg);
+}
+
+.rtl .uix-sc-slideshow__arrows .uix-sc-slideshow__arrows--next {
+    right: auto;
+    left: 15px;
+    text-align: left;
+	transform: rotate(180deg);
+}
+
 
 
 /* ====================================================== 
@@ -497,3 +543,24 @@
     float: right;
 }
 
+
+
+
+/* ====================================================== 
+   18. Custom Hybrid Content Slider      
+/* ====================================================== */
+
+
+.uix-sc-hybridcontent-slider__controls .uix-sc-hybridcontent-slider__controls--prev {
+    padding-left: auto;
+	padding-right: 2px;
+	float: right;
+	transform: rotate(180deg);
+}
+
+.uix-sc-hybridcontent-slider__controls .uix-sc-hybridcontent-slider__controls--next {
+    padding-right: auto;
+	padding-left: 2px;
+	float: left;
+	transform: rotate(180deg);
+}

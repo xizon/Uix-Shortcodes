@@ -1,6 +1,6 @@
 /*
 	* Uix Shortcodes Form Functions
-	* Version: 4.2.9
+	* Version: 4.3.0
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -2617,11 +2617,13 @@ function uixscform_editorInit( id ){
 					convert_urls : false,
 					media_live_embeds: true,
 					//---
+					language_url : (uix_shortcodes_wp_plugin.site_lang != 'en_US' ) ? uix_shortcodes_wp_plugin.url +  'js/tinymce/langs/'+uix_shortcodes_wp_plugin.site_lang+'.js' : false,  // site absolute URL
+					//---
 					selector:  'textarea#' + id,
 					height : editorH,
 					menubar: false,
 					plugins: 'textcolor image media hr customCode colorpicker lists fullscreen',		
-				    toolbar: 'removeformat formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote alignleft aligncenter alignright uixsc_link uixsc_unlink | outdent indent superscript subscript hr uixsc_image uixsc_highlightcode media customCode',
+				    toolbar: 'removeformat formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote alignleft aligncenter alignright | uixsc_link uixsc_unlink outdent indent superscript subscript hr uixsc_image uixsc_highlightcode media customCode',
 					setup:function( ed ) {
 						
 						
@@ -2660,8 +2662,15 @@ function uixscform_editorInit( id ){
 							upload_frame.on( 'select',function() {
 								var attachment;
 								attachment = upload_frame.state().get( 'selection' ).first().toJSON();
-								ed.insertContent( '<img src="'+attachment.url+'" alt="">' );
-
+								
+								//image or video preview
+								var videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
+								if ( videoReg.test( attachment.url ) ) {
+									ed.insertContent( '<video width="400" height="300" src="'+attachment.url+'" controls></video>' );
+								} else {
+									ed.insertContent( '<img src="'+attachment.url+'" alt="">' );
+								}   
+							
 								
 							} );
 

@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.8.9
+ * Version:     1.9.0
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -103,11 +103,7 @@ class UixShortcodes {
 	 */
 	public static function register_scripts() {
 		
-	
-		// jQuery Accessible Tabs
-		wp_register_script( 'accTabs', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.js', array( 'jquery' ), '0.1.1' );
-		wp_register_style( 'accTabs-uix-shortcodes', self::plug_directory() .'assets/add-ons/accTabs/jquery.accTabs.css', false, '0.1.1', 'all' );
-		
+
 		// Shuffle
 		wp_register_script( 'shuffle', self::plug_directory() .'assets/add-ons/shuffle/jquery.shuffle.js', array( 'jquery', 'modernizr' ), '3.1.1', true );
 		
@@ -122,10 +118,7 @@ class UixShortcodes {
 		// Easy Pie Chart
 		wp_register_script( 'easypiechart', self::plug_directory() .'assets/add-ons/piechart/jquery.easypiechart.min.js', array( 'jquery' ), '2.1.7', true );
 
-		//flexslider
-		wp_register_script( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/jquery.flexslider.min.js', array( 'jquery' ), '2.7.0', true );	
-		wp_register_style( 'flexslider', self::plug_directory() .'assets/add-ons/flexslider/flexslider.min.css', false, '2.7.0', 'all' );
-		
+
 		// prettyPhoto
 		wp_register_script( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );
 		wp_register_style( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.css', false, '3.1.5', 'all' );
@@ -165,8 +158,6 @@ class UixShortcodes {
 		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'imagesloaded' );
 		wp_enqueue_script( 'easypiechart' );
-		wp_enqueue_script( 'flexslider' );	
-		wp_enqueue_style( 'flexslider' );
 		wp_enqueue_script( 'prettyPhoto' );
 		wp_enqueue_style( 'prettyPhoto' );
 		wp_enqueue_script( 'syntaxhighlighter-core' );
@@ -208,8 +199,6 @@ class UixShortcodes {
 					wp_enqueue_script( 'modernizr' );
 					wp_enqueue_script( 'imagesloaded' );
 					wp_enqueue_script( 'easypiechart' );
-					wp_enqueue_script( 'flexslider' );	
-					wp_enqueue_style( 'flexslider' );
 					wp_enqueue_script( 'prettyPhoto' );
 					wp_enqueue_style( 'prettyPhoto' );
 					wp_enqueue_style( self::PREFIX . '-shortcodes' );
