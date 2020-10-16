@@ -36,10 +36,6 @@ if ( !function_exists( 'uix_shortcodes_block_script' ) ) {
 				wp_enqueue_script( 'uix_shortcodes_block_handle' );
 
 
-				//jQuery Accessible Tabs
-				wp_enqueue_script( 'accTabs', UixShortcodes::plug_directory() .'includes/admin/assets/js/jquery.accTabs.js', array( 'jquery' ), '0.1.1', true );
-
-
 				//Main
 				wp_enqueue_style( UixShortcodes::PREFIX . '-shortcodes-block-admin', UixShortcodes::plug_directory() .'includes/admin/assets/css/block.min.css', false, UixShortcodes::ver(), 'all' );
 				//RTL		

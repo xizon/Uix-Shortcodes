@@ -106,6 +106,23 @@ $args =
 		
 		),	
 		
+	
+		array(
+			'id'             => 'uix_sc_portfolio_grid_config_layout',
+			'title'          => esc_html__( 'Layout', 'uix-shortcodes' ),
+			'desc'           => '',
+			'value'          => 'standard',
+			'placeholder'    => '',
+			'type'           => 'radio',
+			'default'        => array(
+									'standard'  => esc_html__( 'Standard', 'uix-shortcodes' ),
+									'masonry'  => esc_html__( 'Masonry', 'uix-shortcodes' ),
+								)
+		
+		
+		),	
+	
+	
 		array(
 			'id'             => 'uix_sc_portfolio_grid_config_urlwindow',
 			'title'          => esc_html__( 'Open link in new tab', 'uix-shortcodes' ),
@@ -308,7 +325,7 @@ UixSCFormCore::form_scripts( array(
 		 */
 	    'template'              => '
 		
-			[uix_portfolio filterable=\'${uix_sc_portfolio_grid_config_filterable}\' classprefix=\'${uix_sc_portfolio_grid_config_class_prefix_attr}\' col=\'${uix_sc_portfolio_grid_config_grid}\' imagefillet=\'${uix_sc_portfolio_grid_config_thumbnail_fillet}%\']
+			[uix_portfolio layout=\'${uix_sc_portfolio_grid_config_layout}\' filterable=\'${uix_sc_portfolio_grid_config_filterable}\' classprefix=\'${uix_sc_portfolio_grid_config_class_prefix_attr}\' col=\'${uix_sc_portfolio_grid_config_grid}\' imagefillet=\'${uix_sc_portfolio_grid_config_thumbnail_fillet}%\']
 
 				<!-- loop start -->
 

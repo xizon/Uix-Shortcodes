@@ -859,6 +859,7 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
 		  'classprefix' => 'uix-sc-portfolio__',
 		  'col' => '3',
 		  'filterable' => 1,
+		  'layout' => 'standard'
           
 	 ), $atts ) );
 	 
@@ -876,12 +877,11 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
             $col_class = $classprefix.'col--2';
             break;
     }
-   
-   
 
+	
    $return_string = '
-   <div class="uix-sc-portfolio__wrapper">
-	   <div class="'.$classprefix.'tiles '.$col_class.'" id="'.$classprefix.'filter-stage-'.$id.'">
+   <div class="uix-sc-portfolio__wrapper" data-show-type="'.esc_attr( $layout ).''.(esc_attr( ( $filterable == 1 ? '|filter' : '' ) )).'" data-filter-id="'.(esc_attr( ( $filterable == 1 ? '#nav-filters-'.$classprefix.'cat-list-'.$id : '' ) )).'">
+	   <div class="'.$classprefix.'tiles '.$col_class.'">
 			  '.$content.'
 		</div><!-- /.'.$classprefix.'tiles -->   
 	</div><!-- /.uix-sc-portfolio__wrapper --> 
@@ -897,7 +897,7 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
    
    if ( $filterable == 1 ) {
 	   $catlist = '
-		<div class="'.$classprefix.'cat-list uix-sc-filterable" data-classprefix="'.$classprefix.'" data-filter-id="'.$id.'" id="'.$classprefix.'cat-list-'.$id.'">
+		<div class="'.$classprefix.'cat-list uix-sc-filterable" data-classprefix="'.$classprefix.'" id="nav-filters-'.$classprefix.'cat-list-'.$id.'">
 			<ul>
 				<li class="current"><a href="javascript:" data-group="all">'.__( 'All', 'uix-shortcodes' ).'</a></li>
 				'.UixShortcodes::cat_list( $return_string, $classprefix ).'

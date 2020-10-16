@@ -453,22 +453,18 @@ img.uix-sc-img,
 }
 
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item h3 {
-    display: block;
-    overflow: hidden;
-    height: 15px;
-/* Compatible with IE */
-    text-overflow: ellipsis;
-    white-space: nowrap;
     margin: 1em 0 .3em;
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 600;
-    text-align: center;
+    padding: 0;
 }
 
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item h3,
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item h3 a {
-    color: #090909;
+	font-size: 16px;
+	text-decoration: none;
+	box-shadow: none;
+	text-align: center;
+	display: block;
+	border: none;
 }
 
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item h3 a:hover {
@@ -492,7 +488,6 @@ img.uix-sc-img,
     position: absolute;
     top: 0;
     left: 0;
-    margin: 1.5em;
     filter: alpha(opacity=0);
     -moz-opacity: 0;
     opacity: 0;
@@ -505,7 +500,7 @@ img.uix-sc-img,
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 69%;
+    height: calc(100% - 50px) !important;
 }
 
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item .uix-sc-portfolio__content a {
@@ -617,8 +612,49 @@ img.uix-sc-img,
 
 
 
+/* Filter or Masonry (Need muuri.js )*/
+/* You can directly use uix-core-grid__col-* to control the width of the item */
+.uix-sc-portfolio__wrapper[data-show-type*="filter"] > .uix-sc-portfolio__tiles,
+.uix-sc-portfolio__wrapper[data-show-type*="masonry"] > .uix-sc-portfolio__tiles {
+    position: relative;
+  /* required */
+    overflow: inherit;
+    width: calc(100% + 15px);
+}
+
+.uix-sc-portfolio__wrapper[data-show-type*="filter"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item,
+.uix-sc-portfolio__wrapper[data-show-type*="masonry"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item {
+  /* required */
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.uix-sc-portfolio__wrapper[data-show-type*="filter"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item > div,
+.uix-sc-portfolio__wrapper[data-show-type*="masonry"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item > div {
+    width: calc(100% - 15px);
+    height: 100%;
+}
+
+.uix-sc-portfolio__wrapper[data-show-type*="filter"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item.muuri-item-dragging,
+.uix-sc-portfolio__wrapper[data-show-type*="masonry"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item.muuri-item-dragging {
+    z-index: 3;
+}
+
+.uix-sc-portfolio__wrapper[data-show-type*="filter"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item.muuri-item-releasing,
+.uix-sc-portfolio__wrapper[data-show-type*="masonry"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item.muuri-item-releasing {
+    z-index: 2;
+}
+
+.uix-sc-portfolio__wrapper[data-show-type*="filter"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item.muuri-item-hidden,
+.uix-sc-portfolio__wrapper[data-show-type*="masonry"] > .uix-sc-portfolio__tiles .uix-sc-portfolio__item.muuri-item-hidden {
+    z-index: 0;
+}
+
+
+
 /*-- Categories --*/ 
-.uix-sc-portfolio__cat {
+.uix-sc-portfolio__cat-list {
     clear: both;
     margin-bottom: 25px;
     font-size: 13px;
@@ -626,37 +662,37 @@ img.uix-sc-img,
     padding: .5em 0 1.5em;
 }
 
-.uix-sc-portfolio__cat:before,
-.uix-sc-portfolio__cat:after {
+.uix-sc-portfolio__cat-list:before,
+.uix-sc-portfolio__cat-list:after {
     display: table;
     content: "";
     line-height: 0;
 }
 
-.uix-sc-portfolio__cat:after {
+.uix-sc-portfolio__cat-list:after {
     clear: both;
 }
 
-.uix-sc-portfolio__cat ul,
-.uix-sc-portfolio__cat li {
+.uix-sc-portfolio__cat-list ul,
+.uix-sc-portfolio__cat-list li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.uix-sc-portfolio__cat li {
+.uix-sc-portfolio__cat-list li {
     display: inline;
     margin-right: 20px;
 }
 
-.uix-sc-portfolio__cat li a {
+.uix-sc-portfolio__cat-list li a {
     color: #666;
     text-decoration: none;
 }
 
-.uix-sc-portfolio__cat li a:hover,
-.uix-sc-portfolio__cat li.current > a,
-.uix-sc-portfolio__cat li a.current {
+.uix-sc-portfolio__cat-list li a:hover,
+.uix-sc-portfolio__cat-list li.current > a,
+.uix-sc-portfolio__cat-list li a.current {
     color: #000;
 }
 
@@ -2434,7 +2470,7 @@ img.uix-sc-img,
 	bottom: 0;
 	z-index: 15;
 	pointer-events: none;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) 50%, transparent);
+	background: linear-gradient(0deg, rgb(0 0 0 / 51%), rgba(0, 0, 0, 0.2) 36%, transparent);
 	transition: all 0.3s ease;
 	opacity: 0;
 }
@@ -3029,6 +3065,7 @@ img.uix-sc-img,
 
 .uix-sc-hybridcontent-slider .uix-sc-hybridcontent-slider__items > .uix-sc-hybridcontent-slider__item {
     height: 100%;
+	width: 100%;
 	user-select: none;
 }
 

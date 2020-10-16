@@ -122,10 +122,12 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 = 1.9.0 (October 14, 2020) =
 
+* New: Use `Muuri` plug-in to make filtering and masonry effects.
 * Tweak: Upgraded image slider and testimonials carousel modules.
 * Tweak: When the editor inserts a video, it will automatically be converted into a video tag.
 * New: According to the language of the theme, the editor automatically supports multiple languages.
 * Remove: Remove Flexslider plugin.
+* Remove: Remove shuffle.js and modernizr.js.
 
 
 = 1.8.9 (October 13, 2020) =

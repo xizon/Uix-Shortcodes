@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2020-10-15 07:00+0000\n"
+"POT-Creation-Date: 2020-10-16 02:27+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,34 +23,34 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-shortcodes.php:450 uix-shortcodes.php:571 uix-shortcodes.php:572
+#: uix-shortcodes.php:460 uix-shortcodes.php:581 uix-shortcodes.php:582
 msgid "Settings"
 msgstr ""
 
-#: uix-shortcodes.php:451 uix-shortcodes.php:562 uix-shortcodes.php:563
+#: uix-shortcodes.php:461 uix-shortcodes.php:572 uix-shortcodes.php:573
 #: helper/settings.php:63
 msgid "How to use?"
 msgstr ""
 
-#: uix-shortcodes.php:550 helper/settings.php:44
+#: uix-shortcodes.php:560 helper/settings.php:44
 msgid "Uix Shortcodes Settings"
 msgstr ""
 
 #. Name of the plugin
-#: uix-shortcodes.php:551 includes/admin/block-init.php:28
+#: uix-shortcodes.php:561 includes/admin/block-init.php:28
 #: shortcodes/editor/tinymce-plugin-lang.php:17
 msgid "Uix Shortcodes"
 msgstr ""
 
-#: uix-shortcodes.php:579 uix-shortcodes.php:580
+#: uix-shortcodes.php:589 uix-shortcodes.php:590
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-shortcodes.php:587 uix-shortcodes.php:588
+#: uix-shortcodes.php:597 uix-shortcodes.php:598
 msgid "Helper"
 msgstr ""
 
-#: uix-shortcodes.php:1020
+#: uix-shortcodes.php:1030
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "[ / ] Click here to add shortode"
 msgstr ""
 
-#: includes/admin/block-init.php:120
+#: includes/admin/block-init.php:116
 msgid "Choose Shortcode You Want"
 msgstr ""
 
@@ -555,7 +555,7 @@ msgid "SyntaxHighlighter"
 msgstr ""
 
 #: helper/tabs/credits.php:21
-msgid "Shuffle (filtering and sorting)"
+msgid "Muuri"
 msgstr ""
 
 #: helper/tabs/credits.php:22
