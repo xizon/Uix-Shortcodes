@@ -905,7 +905,7 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
 	   $catlist = '
 		<div class="'.$classprefix.'cat-list uix-sc-filterable" data-classprefix="'.$classprefix.'" id="nav-filters-'.$classprefix.'cat-list-'.$id.'">
 			<ul>
-				<li class="current"><a href="javascript:" data-group="all">'.__( 'All', 'uix-shortcodes' ).'</a></li>
+				<li class="current-cat"><a href="javascript:void(0)" data-normal="1" data-group="all">'.__( 'All', 'uix-shortcodes' ).'</a></li>
 				'.UixShortcodes::cat_list( $return_string, $classprefix ).'
 			</ul>
 		</div> <!-- /.'.$classprefix.'cat-list -->
@@ -1358,8 +1358,8 @@ function uix_sc_fun_testimonials_wrapper( $atts, $content = null ){
 
 
 				<div class="uix-sc-hybridcontent-slider__controls" id="uix-sc-hybridcontent-slider__controls-'.$testimonials_id.'" style="'.($arrows == 'false' ? 'display:none' : '').'">
-					<a href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-					<a href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					<a data-normal="1" href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+					<a data-normal="1" href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 				</div>
 				<!-- /.uix-sc-hybridcontent-slider__controls -->    
 			   

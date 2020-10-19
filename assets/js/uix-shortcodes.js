@@ -867,6 +867,26 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 			}	
 
 			
+			//Standard layout 
+			//--
+			// When all items have loaded refresh their
+			// dimensions and layout the grid.
+			if ( galleryType.indexOf( 'filter' ) >= 0 && galleryType.indexOf( 'standard' ) >= 0 ) {
+				imagesLoaded( $grid ).on( 'always', function() {
+					var itemH = [];
+					$allItems.each( function( index ) {
+						var tempheight = $( this ).find( '.uix-sc-portfolio__image' ).height();
+						itemH.push( tempheight );
+
+					} );
+
+					$grid.find( '.uix-sc-portfolio__image' ).css( 'height', Math.max.apply( Math, itemH ) + 'px' );
+				});	
+			}
+
+
+
+			
 			if ( galleryType.indexOf( 'filter' ) >= 0 || galleryType.indexOf( 'masonry' ) >= 0 ) {
 
 				var MuuriGrid = new Muuri( $grid.get(0), {
@@ -1548,7 +1568,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 
                     _dotActive = ( i == 0 ) ? 'class="is-active"' : '';
 
-                    _dot += '<li><a '+_dotActive+' data-index="'+i+'" href="javascript:"></a></li>';
+                    _dot += '<li><a '+_dotActive+' data-normal="1" data-index="'+i+'" href="javascript:void(0)"></a></li>';
                 }
                 _dot += '</ul>';
 
@@ -1591,7 +1611,10 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
                 var _prev = $( arrowsID ).find( '.uix-sc-slideshow__arrows--prev' ),
                     _next = $( arrowsID ).find( '.uix-sc-slideshow__arrows--next' );
 
-                $( arrowsID ).find( 'a' ).attr( 'href', 'javascript:' );
+                $( arrowsID ).find( 'a' ).attr( {
+					'href': 'javascript:void(0)',
+					'data-normal': 1
+				} );
 
                 $( arrowsID ).find( 'a' ).removeClass( 'is-disabled' );
                 if ( !loop ) {
@@ -2256,7 +2279,7 @@ uix_sc = ( function ( uix_sc, $, window, document ) {
 							var _dot       = '';
 							_dot += '<ul class="uix-sc-hybridcontent-slider__pagination--default">';
 							for ( var i = 0; i < itemTotal; i++ ) {
-								_dot += '<li><a data-target-index="'+i+'" href="javascript:void(0);"></a></li>';
+								_dot += '<li><a data-normal="1" data-target-index="'+i+'" href="javascript:void(0);"></a></li>';
 							}
 							_dot += '</ul>';
 

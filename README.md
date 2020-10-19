@@ -66,9 +66,11 @@ The currently available default elements:
 
 ### Updates
 
-##### = 1.9.1 (October 19, 2020) =
+##### = 1.9.2 (October 19, 2020) =
 
+* Fix: The portfolio module is compatible with other common themes and plugins.
 * Fix: Let it work under the "Divi Builder pages", "Elementor" plugin.
+
 
 
 ##### = 1.9.0 (October 14, 2020) =

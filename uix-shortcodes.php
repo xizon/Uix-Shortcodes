@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.9.1
+ * Version:     1.9.2
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -870,7 +870,7 @@ class UixShortcodes {
 			}  
 			
 			foreach ( $list as $key ) {
-				array_push( $html, '<li><a href="javascript:" data-group="'.$key[ 'slug' ].'">'.$key[ 'name' ].'</a></li>' );
+				array_push( $html, '<li><a href="javascript:void(0)" data-normal="1" data-group="'.$key[ 'slug' ].'">'.$key[ 'name' ].'</a></li>' );
 			}
 			$html = array_unique( $html );
 			

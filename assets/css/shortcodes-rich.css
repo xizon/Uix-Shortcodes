@@ -458,6 +458,8 @@ img.uix-sc-img,
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item h3 {
     margin: 1em 0 .3em;
     padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item h3,
@@ -479,6 +481,7 @@ img.uix-sc-img,
     text-align: center;
     font-size: 12px;
     margin-top: .3em;
+	height: auto !important;
 }
 
 .uix-sc-portfolio__tiles .uix-sc-portfolio__item .uix-sc-portfolio__content {
@@ -694,11 +697,10 @@ img.uix-sc-img,
 }
 
 .uix-sc-portfolio__cat-list li a:hover,
-.uix-sc-portfolio__cat-list li.current > a,
-.uix-sc-portfolio__cat-list li a.current {
-    color: #000;
+.uix-sc-portfolio__cat-list li.current-cat > a,
+.uix-sc-portfolio__cat-list li a.current-cat {
+    color: #000 !important;
 }
-
 
 
 /* ====================================================== 
