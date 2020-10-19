@@ -789,8 +789,14 @@ function uix_sc_fun_code( $atts, $content = null ){
 	 ), $atts ) );
 	 
 	
-	add_action( 'wp_footer', 'uix_sc_fun_syntaxhighlighter', 100 );
-	
+	//Not applicable to "Divi Builder pages", "Elementor"
+	if ( ! function_exists('et_divi_builder_deactivate_if_theme_uses_builder') &&
+		 ! function_exists('elementor_load_plugin_textdomain')
+	   ) {
+		add_action( 'wp_footer', 'uix_sc_fun_syntaxhighlighter', 100 );
+	}
+
+
 	$return_string = str_replace( ']', '&#93;', str_replace( '[', '&#91;', $content ) );
 	
 	

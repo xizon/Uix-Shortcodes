@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.9.0
+ * Version:     1.9.1
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -159,9 +159,18 @@ class UixShortcodes {
 		wp_enqueue_script( 'easypiechart' );
 		wp_enqueue_script( 'prettyPhoto' );
 		wp_enqueue_style( 'prettyPhoto' );
-		wp_enqueue_script( 'syntaxhighlighter-core' );
-		wp_enqueue_script( 'syntaxhighlighter-autoloader' );
-		wp_enqueue_style( 'syntaxhighlighter' );
+		
+		
+		//Not applicable to "Divi Builder pages", "Elementor"
+		if ( ! function_exists('et_divi_builder_deactivate_if_theme_uses_builder') &&
+			 ! function_exists('elementor_load_plugin_textdomain')
+		   ) {
+			wp_enqueue_script( 'syntaxhighlighter-core' );
+			wp_enqueue_script( 'syntaxhighlighter-autoloader' );
+			wp_enqueue_style( 'syntaxhighlighter' );
+		}
+		
+
 		
 		
 		//Core
@@ -1559,11 +1568,4 @@ class UixShortcodes {
 
 
 
-//Not applicable to "Divi Builder pages", "Elementor"
-$uix_shortcodes_plugin_init = 'init';
-
-if ( isset( $_GET[ 'et_fb' ] ) ) $uix_shortcodes_plugin_init = 'disabled';
-if ( isset( $_GET[ 'action' ] ) && $_GET[ 'action' ] == 'elementor' ) $uix_shortcodes_plugin_init = 'disabled';
-
-
-add_action( 'plugins_loaded', array( 'UixShortcodes', $uix_shortcodes_plugin_init ) );
+add_action( 'plugins_loaded', array( 'UixShortcodes', 'init' ) );

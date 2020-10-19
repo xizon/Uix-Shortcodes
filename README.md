@@ -66,6 +66,11 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.9.1 (October 19, 2020) =
+
+* Fix: Let it work under the "Divi Builder pages", "Elementor" plugin.
+
+
 ##### = 1.9.0 (October 14, 2020) =
 
 * New: Use `Muuri` plug-in to make filtering and masonry effects.
