@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.7 (October 13, 2020)
+ * @version		: 1.8 (October 21, 2020))
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -38,7 +38,10 @@
     width: calc(100% - 20px);
 }
 
-
+.uix-cmb__mce-editor div.mce-toolbar-grp {
+    border-bottom: 1px solid #fff;
+    background: #f9f9f9;
+}
 
 /* 
  ---------------------------
@@ -50,15 +53,42 @@
 	overflow: hidden;
 }
 
+.uix-cmb__wrapper ::placeholder {
+	color: #D2D2D2;
+}
+
+
+.uix-cmb__wrapper input[type=color], 
+.uix-cmb__wrapper input[type=date], 
+.uix-cmb__wrapper input[type=datetime-local], 
+.uix-cmb__wrapper input[type=datetime], 
+.uix-cmb__wrapper input[type=email], 
+.uix-cmb__wrapper input[type=month], 
+.uix-cmb__wrapper input[type=number], 
+.uix-cmb__wrapper input[type=password], 
+.uix-cmb__wrapper input[type=search], 
+.uix-cmb__wrapper input[type=tel], 
+.uix-cmb__wrapper input[type=text], 
+.uix-cmb__wrapper input[type=time], 
+.uix-cmb__wrapper input[type=url], 
+.uix-cmb__wrapper input[type=week], 
+.uix-cmb__wrapper select, 
+.uix-cmb__wrapper textarea {
+    border-color: #D3D3D3;
+}
+
+.uix-cmb__wrapper .wp-picker-container .wp-color-result {
+    border-color: #D3D3D3;
+}
+
+
+
 /* Use only one column as a separate module */
 .uix-cmb__wrapper--one-column {
     text-align: left;
     padding-left: 10px;
 }
 
-.uix-cmb__wrapper--one-column > #uix_gallery_append {
-    margin-top: 10px;
-}
 
 @media (max-width: 768px) {
     
@@ -189,22 +219,22 @@
 }
 
 
-#side-sortables .uix-cmb__text--p {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__text--p {
 	float: none;
 	width: 100%;
 	border-right: none;
 }
 
-#side-sortables .uix-cmb__text--p input {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__text--p input {
 	width: 190px !important;
 }
 
-#side-sortables .uix-cmb__text--p:first-child input {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__text--p:first-child input {
 	width: 150px !important;
 }
 
 
-#side-sortables .uix-cmb__text--div {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__text--div {
 	border-bottom: 1px solid #E9E9E9;
 	margin-bottom: 10px;
 }
@@ -231,7 +261,7 @@
 }
 
 
-td .uix-cmb__text--p:last-child {
+body.uix-cmb__bodyclass td .uix-cmb__text--p:last-child {
 	border: none;
 }
 
@@ -255,17 +285,17 @@ table.uix-cmb th.uix-cmb__title {
 }
 
 
-#side-sortables .wp-picker-container .iris-slider {
+body.uix-cmb__bodyclass #side-sortables .wp-picker-container .iris-slider {
 	margin-left: -10px;
 }
 
-#side-sortables .uix-cmb__normal-text {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__normal-text {
 	max-width: 95%;
 }
 
 
-#side-sortables th,
-#side-sortables tr > td {
+body.uix-cmb__bodyclass #side-sortables th,
+body.uix-cmb__bodyclass #side-sortables tr > td {
 	width: 99%;
 	float: left;
 	text-align: left;
@@ -273,24 +303,24 @@ table.uix-cmb th.uix-cmb__title {
 
 
 
-#side-sortables th {
+body.uix-cmb__bodyclass #side-sortables th {
 	padding: 10px;
 	padding-bottom: 0;
 }
 
-#side-sortables tr > td {
+body.uix-cmb__bodyclass #side-sortables tr > td {
 	padding-top: 3px;
 }
 
-#side-sortables tr {
+body.uix-cmb__bodyclass #side-sortables tr {
 	border-bottom: 1px solid #E9E9E9;
 }
 
-#side-sortables .uix-cmb__description {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__description {
 	padding-right: 10px;
 }
 
-#side-sortables .uix-cmb__radio-selector label {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__radio-selector label {
 	display: block;
 	padding: 5px 0;
 }
@@ -887,7 +917,7 @@ table.uix-cmb .uix-cmb__label {
 }
 
 
-#side-sortables .uix-cmb__custom-attributes-field__addbtn {
+body.uix-cmb__bodyclass #side-sortables .uix-cmb__custom-attributes-field__addbtn {
 	padding-top: 10px;
 }
 
@@ -916,9 +946,6 @@ table.uix-cmb .uix-cmb__label {
 }
 
 
-
-
-
 /* 
  ---------------------------
  9. Date Picker
@@ -927,7 +954,7 @@ table.uix-cmb .uix-cmb__label {
 /*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
 * Copyright (c) 2013 jQuery Foundation and other contributors Licensed MIT */
-.ui-datepicker {
+body.uix-cmb__bodyclass .ui-datepicker {
 	width: 17em;
 	padding: .7em 1em 0 .7em !important;
 	display: none;
@@ -942,7 +969,7 @@ table.uix-cmb .uix-cmb__label {
 }
 
 
-.ui-datepicker .ui-icon {
+body.uix-cmb__bodyclass .ui-datepicker .ui-icon {
 	background: #B5B8BC !important;
 	color: #fff !important;
 	-webkit-border-radius: 25px !important; 
@@ -959,15 +986,15 @@ table.uix-cmb .uix-cmb__label {
 	
 }
 
-.ui-datepicker .ui-corner-all {
+body.uix-cmb__bodyclass .ui-datepicker .ui-corner-all {
 	background: none !important;
 	border: none !important;
 }
 
 
 
-.ui-datepicker .ui-icon.ui-icon-circle-triangle-e,
-.ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
+body.uix-cmb__bodyclass .ui-datepicker .ui-icon.ui-icon-circle-triangle-e,
+body.uix-cmb__bodyclass .ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
     width: 20px !important;
     height: 20px !important;
     margin-left: 0 !important;  
@@ -976,22 +1003,22 @@ table.uix-cmb .uix-cmb__label {
     cursor: pointer !important;
 }
 
-.ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
+body.uix-cmb__bodyclass .ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
     margin-left: -15px !important;
 }
-.ui-datepicker .ui-icon.ui-icon-circle-triangle-e {
+body.uix-cmb__bodyclass .ui-datepicker .ui-icon.ui-icon-circle-triangle-e {
     margin-left: -5px !important;
 }
 
 
-.ui-datepicker .ui-datepicker-header {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-header {
 	background: none !important;
 	border: none !important;
 }
 
-.ui-datepicker .ui-state-default, 
-.ui-datepicker .ui-widget-content .ui-state-default, 
-.ui-datepicker .ui-widget-header .ui-state-default {
+body.uix-cmb__bodyclass .ui-datepicker .ui-state-default, 
+body.uix-cmb__bodyclass .ui-datepicker .ui-widget-content .ui-state-default, 
+body.uix-cmb__bodyclass .ui-datepicker .ui-widget-header .ui-state-default {
     border: none !important;
     background: rgba(255,255,255,0) !important;
     color: #595959 !important;;
@@ -1000,41 +1027,41 @@ table.uix-cmb .uix-cmb__label {
 
 
 
-.ui-datepicker .ui-state-highlight {
+body.uix-cmb__bodyclass .ui-datepicker .ui-state-highlight {
 	color: #D54E21  !important;
 	background: rgba(0,0,0,0) !important;
 	font-weight: bold !important;
 }
 
-.ui-datepicker .ui-datepicker-header {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-header {
 	position: relative;
 	padding: .2em 0;
 }
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-prev,
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-next {
 	position: absolute;
 	top: 2px;
 	width: 1.8em;
 	height: 1.8em;
 }
-.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-prev-hover,
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-next-hover {
 	top: 1px;
 }
-.ui-datepicker .ui-datepicker-prev {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-prev {
 	left: 2px;
 }
-.ui-datepicker .ui-datepicker-next {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-next {
 	right: 2px;
 }
-.ui-datepicker .ui-datepicker-prev-hover {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-prev-hover {
 	left: 1px;
 }
-.ui-datepicker .ui-datepicker-next-hover {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-next-hover {
 	right: 1px;
 }
-.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker .ui-datepicker-next span {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-prev span,
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-next span {
 	display: block;
 	position: absolute;
 	left: 50%;
@@ -1042,43 +1069,43 @@ table.uix-cmb .uix-cmb__label {
 	top: 50%;
 	margin-top: -8px;
 }
-.ui-datepicker .ui-datepicker-title {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-title {
 	margin: 0 2.3em;
 	line-height: 1.8em;
 	text-align: center;
 }
-.ui-datepicker .ui-datepicker-title select {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
 	margin: 1px 0;
 }
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year {
+body.uix-cmb__bodyclass .ui-datepicker select.ui-datepicker-month,
+body.uix-cmb__bodyclass .ui-datepicker select.ui-datepicker-year {
 	width: 45%;
 }
-.ui-datepicker table {
+body.uix-cmb__bodyclass .ui-datepicker table {
 	width: 100%;
 	font-size: .9em;
 	border-collapse: collapse;
 	margin: 0 0 .4em;
 }
-.ui-datepicker th {
+body.uix-cmb__bodyclass .ui-datepicker th {
 	padding: .7em .3em;
 	text-align: center;
 	font-weight: bold;
 	border: 0;
 }
-.ui-datepicker td {
+body.uix-cmb__bodyclass .ui-datepicker td {
 	border: 0;
 	padding: 1px;
 }
-.ui-datepicker td span,
-.ui-datepicker td a {
+body.uix-cmb__bodyclass .ui-datepicker td span,
+body.uix-cmb__bodyclass .ui-datepicker td a {
 	display: block;
 	padding: .2em;
 	text-align: right;
 	text-decoration: none;
 }
-.ui-datepicker .ui-datepicker-buttonpane {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-buttonpane {
 	background-image: none;
 	margin: .7em 0 0 0;
 	padding: 0 .2em;
@@ -1086,7 +1113,7 @@ table.uix-cmb .uix-cmb__label {
 	border-right: 0;
 	border-bottom: 0;
 }
-.ui-datepicker .ui-datepicker-buttonpane button {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-buttonpane button {
 	float: right;
 	margin: .5em .2em .4em;
 	cursor: pointer;
@@ -1094,77 +1121,83 @@ table.uix-cmb .uix-cmb__label {
 	width: auto;
 	overflow: visible;
 }
-.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
 	float: left;
 }
 
 /* with multiple calendars */
-.ui-datepicker.ui-datepicker-multi {
+body.uix-cmb__bodyclass .ui-datepicker.ui-datepicker-multi {
 	width: auto;
 }
-.ui-datepicker-multi .ui-datepicker-group {
+body.uix-cmb__bodyclass .ui-datepicker-multi .ui-datepicker-group {
 	float: left;
 }
-.ui-datepicker-multi .ui-datepicker-group table {
+body.uix-cmb__bodyclass .ui-datepicker-multi .ui-datepicker-group table {
 	width: 95%;
 	margin: 0 auto .4em;
 }
-.ui-datepicker-multi-2 .ui-datepicker-group {
+body.uix-cmb__bodyclass .ui-datepicker-multi-2 .ui-datepicker-group {
 	width: 50%;
 }
-.ui-datepicker-multi-3 .ui-datepicker-group {
+body.uix-cmb__bodyclass .ui-datepicker-multi-3 .ui-datepicker-group {
 	width: 33.3%;
 }
-.ui-datepicker-multi-4 .ui-datepicker-group {
+body.uix-cmb__bodyclass .ui-datepicker-multi-4 .ui-datepicker-group {
 	width: 25%;
 }
-.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
-.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+body.uix-cmb__bodyclass .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+body.uix-cmb__bodyclass .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
 	border-left-width: 0;
 }
-.ui-datepicker-multi .ui-datepicker-buttonpane {
+body.uix-cmb__bodyclass .ui-datepicker-multi .ui-datepicker-buttonpane {
 	clear: left;
 }
-.ui-datepicker-row-break {
+body.uix-cmb__bodyclass .ui-datepicker-row-break {
 	clear: both;
 	width: 100%;
 	font-size: 0;
 }
 
 /* RTL support */
-.ui-datepicker-rtl {
+body.uix-cmb__bodyclass .ui-datepicker-rtl {
 	direction: rtl;
 }
-.ui-datepicker-rtl .ui-datepicker-prev {
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-prev {
 	right: 2px;
 	left: auto;
 }
-.ui-datepicker-rtl .ui-datepicker-next {
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-next {
 	left: 2px;
 	right: auto;
 }
-.ui-datepicker-rtl .ui-datepicker-prev:hover {
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-prev:hover {
 	right: 1px;
 	left: auto;
 }
-.ui-datepicker-rtl .ui-datepicker-next:hover {
+.body.uix-cmb__bodyclass ui-datepicker-rtl .ui-datepicker-next:hover {
 	left: 1px;
 	right: auto;
 }
-.ui-datepicker-rtl .ui-datepicker-buttonpane {
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-buttonpane {
 	clear: right;
 }
-.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-buttonpane button {
 	float: left;
 }
-.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
-.ui-datepicker-rtl .ui-datepicker-group {
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-group {
 	float: right;
 }
-.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
-.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+body.uix-cmb__bodyclass .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
 	border-right-width: 0;
 	border-left-width: 1px;
+}
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-title select {
+    margin-right: 5px;
+}
+body.uix-cmb__bodyclass .ui-datepicker .ui-datepicker-title select:last-child {
+    margin-right: 0;
 }
 
 

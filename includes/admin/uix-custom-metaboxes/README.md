@@ -170,6 +170,33 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 
 
 					array(
+						'id'            =>  'cus_page_ex_demoname_s6',
+						'type'          =>  'radio',
+						'title'         =>  esc_html__( 'Switch(Associated)', 'your-theme' ),
+						'desc_primary'  =>  esc_html__( 'Can control multiple forms to display or hide.', 'your-theme' ),
+
+						'default'     =>  'my-switch-1',
+						'options'     =>  array( 
+											'radio_type'  => 'switch',
+											'value'       =>  array(
+												'my-switch-1'       =>  esc_html__( 'My Switch 1', 'your-theme' ),
+												'my-switch-2'       =>  esc_html__( 'My Switch 2', 'your-theme' )
+											 ),
+											'target_ids'      =>  array(
+												'my-switch-1'       =>  '',
+												'my-switch-2'       =>  array( 
+																			'cus_page_ex_demoname_7', 
+																			'cus_page_ex_demoname_8', 
+																			'cus_page_ex_demoname_9'
+																		),
+											 ),
+										  )
+
+					),
+
+
+
+					array(
 						'id'          =>  'cus_page_ex_demoname_7',
 						'type'        =>  'radio',
 						'title'       =>  esc_html__( 'Radio Image', 'your-theme' ),
@@ -637,6 +664,13 @@ if ( !function_exists( 'mytheme_uix_publish_page' ) ) {
 
 
 ## Updates
+
+##### = 1.8 (October 21, 2020) =
+
+* Tweak: Beautify the appearance of the editor.
+* New: Added the switch using radios, which can control the hide and display of other fields.
+* New: Added color selector transparency settings.
+
 
 ##### = 1.7 (October 13, 2020) =
 

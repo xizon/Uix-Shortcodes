@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Uix Custom Metaboxes
  *
  * @class 		: Uix_Custom_Metaboxes
- * @version		: 1.7 (October 13, 2020)
+ * @version		: 1.8 (October 21, 2020)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -24,7 +24,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		* Custom Meta Boxes Version
 		*
 		*/
-		private static $ver = 1.7;	
+		private static $ver = 1.8;	
 		
 		/**
 		* Holds meta box parameters
@@ -53,6 +53,10 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 			
 			self::$vars = $vars;
 			
+			//Adds one or more classes to the body tag in the dashboard.
+			add_filter( 'admin_body_class', array( __CLASS__, 'admin_body_class' ) );
+			
+			
 			//Push parameters of different post types
 			array_push( self::$all_config, self::$vars );
 			
@@ -76,6 +80,17 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		}
 
         
+		/*
+		 * Adds one or more classes to the body tag in the dashboard.
+		 *
+		 *
+		 */	
+		public static function admin_body_class( $classes ) {
+			return "$classes uix-cmb__bodyclass";
+		}
+	
+		
+		
 
 		/**
 		* The TinyMCE "syntax-highlight-code" and "code" buttons is not included with WP by default
@@ -143,6 +158,12 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					//Colorpicker
 					wp_enqueue_style( 'wp-color-picker' );
 					wp_enqueue_script( 'wp-color-picker' );	
+				  
+				    //Colorpicker alpha plugin
+				    $wp_color_picker_alpha_uri_name = version_compare( get_bloginfo( 'version' ), '5.5.0', '>=' ) ? 'wp-color-picker-alpha/up-5.5.0/wp-color-picker-alpha.min.js' : 'wp-color-picker-alpha/default/wp-color-picker-alpha.min.js';
+					wp_enqueue_script( 'wp-color-picker-alpha', UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/js/' . $wp_color_picker_alpha_uri_name, array( 'wp-color-picker', 'uix-custom-metaboxes' ), '2.1.2', true );
+
+				     
 				  
 				    //date picker
 				    wp_enqueue_script('jquery-ui-datepicker');
@@ -1395,6 +1416,29 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 								}
 								
 							
+								//toggle switch id
+								$toggle_switch_id = '';
+								if ( isset( $options[ 'target_ids' ] )             && 
+									 is_array( $options[ 'target_ids' ][ $key ] )  && 
+									 isset( $options[ 'target_ids' ][ $key ] ) ) 
+								{
+									
+                                    $v_switch = $options[ 'target_ids' ][ $key ];
+									
+									//Target ids
+									if ( is_array( $v_switch ) && !empty( $v_switch ) ) {
+
+										foreach ( $v_switch as $tid_value ) {
+											$toggle_switch_id .= ''.$tid_value.','; 		
+										}	
+
+									}	
+									
+                                    
+								}	
+								
+								
+								
 								?>
 								
 								
@@ -1406,6 +1450,11 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 									<span data-value="<?php echo esc_attr( $key ); ?>" class="img <?php if ( $default == esc_attr( $key ) || empty( $default ) ) { echo 'active'; } else { echo ''; }; ?>">
 									  <img alt="" src="<?php echo esc_url( $value ); ?>">
 									</span>
+								<?php } ?>	
+						  
+						  
+								<?php if ( $radio_type == 'switch' ) { ?>
+									<label data-value="<?php echo esc_attr( $key ); ?>" data-switch-ids="<?php echo esc_attr( $toggle_switch_id ); ?>" class="<?php if ( $br ) { echo 'uix-cmb__label'; } else { echo ''; }; ?> uix-cmb__radio-text uix-cmb__switch-radios <?php if ( $default == esc_attr( $key ) || empty( $default ) ) { echo 'active'; } else { echo ''; }; ?>"><input type="radio" name="<?php echo esc_attr( $id ); ?>_r" value="<?php echo esc_attr( $key ); ?>" <?php echo esc_html( $checked ); ?>/><?php echo UixShortcodes::kses( $value ); ?></label>
 								<?php } ?>	
 									
 			

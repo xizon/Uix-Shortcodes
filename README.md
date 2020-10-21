@@ -66,6 +66,12 @@ The currently available default elements:
 
 ### Updates
 
+##### = 1.9.3 (October 21, 2020) =
+
+* Fix: Optimized the color transparency control, compatible with WP 5.5.0 and above.
+* Tweak: Expand and optimize Uix Custom Meta Boxes.
+
+
 ##### = 1.9.2 (October 19, 2020) =
 
 * Fix: The portfolio module is compatible with other common themes and plugins.
