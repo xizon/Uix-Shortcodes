@@ -66,7 +66,7 @@ The currently available default elements:
 
 ### Updates
 
-##### = 1.9.3 (October 21, 2020) =
+##### = 1.9.4 (October 21, 2020) =
 
 * Fix: Optimized the color transparency control, compatible with WP 5.5.0 and above.
 * Tweak: Expand and optimize Uix Custom Meta Boxes.

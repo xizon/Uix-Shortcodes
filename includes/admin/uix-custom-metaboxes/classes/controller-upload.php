@@ -4,9 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-if ( !class_exists( 'Uix_UploadMedia' ) ) {
+if ( !class_exists( 'Uix_Cmb_UploadMedia' ) ) {
 	
-	class Uix_UploadMedia {
+	class Uix_Cmb_UploadMedia {
 		
 		public static function add( $args, $echo = true ) {
 			

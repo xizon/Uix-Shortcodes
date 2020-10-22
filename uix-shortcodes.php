@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.9.3
+ * Version:     1.9.4
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -91,7 +91,6 @@ class UixShortcodes {
 		//Add custom meta boxes API. 
 		//Provides a compatible solution for some personalized themes that require Uix Shortcodes.
 		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/admin/uix-custom-metaboxes/init.php';
-		require_once UIX_SHORTCODES_PLUGIN_DIR.'includes/admin/uix-custom-metaboxes/controller-upload.php';
 		
 	}
 	
