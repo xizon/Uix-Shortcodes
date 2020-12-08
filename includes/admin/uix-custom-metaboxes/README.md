@@ -664,6 +664,11 @@ if ( !function_exists( 'mytheme_uix_publish_page' ) ) {
 
 ## Updates
 
+##### = 1.9 (December 8, 2020) =
+
+* Tweak: Upgraded the uploading control.
+
+
 ##### = 1.8 (October 21, 2020) =
 
 * Tweak: Refactored structure of the custom metaboxes controller.

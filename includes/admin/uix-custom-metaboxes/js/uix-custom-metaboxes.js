@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.8 (October 21, 2020)
+ * @version		: 1.9 (December 8, 2020)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -457,7 +457,10 @@ var UixCustomMetaboxes = function( obj ) {
 
                 var selector = '.uix-cmb__upload-target';
                 var videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
-                
+				var imgReg   = /^.*\.(gif|jpe?g|tiff|png|webp|bmp)$/gi;
+				var placeholderImg = '<svg width="135" style="padding: 50px 40px;border: 1px solid #ddd;pointer-events: none;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 6px 30px 0 rgba(0,0,0,0.1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.55 122.88" enable-background="new 0 0 24 24" transform="scale(0.7) translate(-30 -55)"><path d="M102.55,122.88H0V0h77.66l24.89,26.44L102.55,122.88L102.55,122.88z M25.51,53.72h15.67V43.33H25.51V32.56 l15.67,0V21.85H25.51V11.08h15.67V7.83H8.43v106.23h85.77V32.36H71.52V7.83H56.86v3.29H41.18v10.71l15.68,0V32.6H41.18v10.49h15.68 v24.99c0,7.9-6.46,14.36-14.36,14.36l-2.63,0c-7.9,0-14.36-6.46-14.36-14.36V53.72L25.51,53.72z M36.28,63.07h10.28v4.06 c0,2.23-2.12,4.05-4.71,4.05h-0.86c-2.59,0-4.71-1.83-4.71-4.05V63.07L36.28,63.07L36.28,63.07z"></path></svg>';
+
+				
                 //Custom selectors
 				jQuery( selector ).each( function()  {
 					var $this     = jQuery( this ),
@@ -465,19 +468,32 @@ var UixCustomMetaboxes = function( obj ) {
 					    pid       = $this.data( 'insert-preview' ).replace(/\{id\}/g, uuid ),
 						tid       = $this.data( 'insert-img' ).replace(/\{id\}/g, uuid ),
 						_closebtn = '.uix-cmb__removebtn';
-         
-                
-                    
+
+					
                     //init button and preview status
                     $this.attr( 'aria-disabled', true );
-					if ( jQuery( '#' + tid ).val() != '' ) {
+					
+					
+					//The RegExp object keeps track of the lastIndex where a match occurred, so on 
+					//subsequent matches it will start from the last used index, instead of 0.
+					videoReg.lastIndex = 0;
+					imgReg.lastIndex = 0;	
+
+
+					
+					
+					var element = jQuery( '#' + tid ).val();
+					if ( element != '' ) {
                         
                         //image or video preview
-                        if ( videoReg.test( jQuery( '#' + tid ).val() ) ) {
-                            jQuery( '#' + pid ).html( '<video width="200" height="150" src="'+jQuery( '#' + tid ).val()+'" controls></video>' );
-                        } else {
-                            jQuery( '#' + pid ).html( '<img src="'+jQuery( '#' + tid ).val()+'" alt="">' );
-                        }   
+						if ( videoReg.test( element ) ) {
+							jQuery( '#' + pid ).html( '<video width="200" height="150" src="'+element+'" controls></video>' );
+						} else if ( imgReg.test( element ) ) {
+							jQuery( '#' + pid ).html( '<img src="'+element+'" alt="">' );
+						} else {
+							jQuery( '#' + pid ).html( '<img src="'+element+'" style="display: none"><a href="'+element+'" target="_blank" style="display: block;max-width: 180px;max-height: 197px;overflow: hidden;">'+placeholderImg+'</a>' );
+						}
+			
                         
                         //
 						$this.next( _closebtn ).show();
@@ -529,15 +545,29 @@ var UixCustomMetaboxes = function( obj ) {
                             upload_frame.on( 'select',function(){
                                 attachment = upload_frame.state().get( 'selection' ).first().toJSON();
                                 jQuery( '#' + tid ).val( attachment.url );
-                                
-                                //image or video preview
-                                if ( videoReg.test( attachment.url ) ) {
-                                    jQuery( '#' + pid ).html( '<video width="200" height="150" src="'+attachment.url+'" controls></video>' );
+                        
+								
+								//The RegExp object keeps track of the lastIndex where a match occurred, so on 
+								//subsequent matches it will start from the last used index, instead of 0.
+								videoReg.lastIndex = 0;
+								imgReg.lastIndex = 0;	
+
+                            
+								var element = attachment.url;
+						
+								//image or video preview
+								if ( videoReg.test( element ) ) {
+                                    jQuery( '#' + pid ).html( '<video width="200" height="150" src="'+element+'" controls></video>' );
                                     jQuery( '#' + tid + '_filetype' ).val( 'video' );
-                                } else {
-                                    jQuery( '#' + pid ).html( '<img src="'+attachment.url+'" alt="">' );
+								} else if ( imgReg.test( element ) ) {
+                                    jQuery( '#' + pid ).html( '<img src="'+element+'" alt="">' );
                                     jQuery( '#' + tid + '_filetype' ).val( 'image' );
-                                }
+								} else {
+                                    jQuery( '#' + pid ).html( '<img src="'+element+'" style="display: none"><a href="'+element+'" target="_blank" style="display: block;max-width: 180px;max-height: 197px;overflow: hidden;">'+placeholderImg+'</a>' );
+                                    jQuery( '#' + tid + '_filetype' ).val( 'file' );
+								}
+
+								
                                 
                               
                                 //display element
@@ -571,6 +601,13 @@ var UixCustomMetaboxes = function( obj ) {
 			//Chain method calls
 			return this;
 		},
+			
+			
+			
+			
+			
+			
+			
 
 
 			
@@ -867,6 +904,7 @@ UixCustomMetaboxesInit.getInstance();
 					selector:  'textarea#' + id,
 					height : height,
 					menubar: false,
+					extended_valid_elements: "a[*],svg[*],defs[*],pattern[*],desc[*],metadata[*],g[*],mask[*],path[*],line[*],marker[*],rect[*],circle[*],ellipse[*],polygon[*],polyline[*],linearGradient[*],radialGradient[*],stop[*],image[*],view[*],text[*],textPath[*],title[*],tspan[*],glyph[*],symbol[*],switch[*],use[*]",
 					plugins: 'textcolor image media hr customCode colorpicker lists fullscreen',		
 				    toolbar: toolbar,
 					setup:function( ed ) {
@@ -890,13 +928,29 @@ UixCustomMetaboxesInit.getInstance();
 								var attachment;
 								attachment = upload_frame.state().get( 'selection' ).first().toJSON();
 								
-								//image or video preview
+								//
 								var videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
-								if ( videoReg.test( attachment.url ) ) {
-									ed.insertContent( '<video width="400" height="300" src="'+attachment.url+'" controls></video>' );
+								var imgReg   = /^.*\.(gif|jpe?g|tiff|png|webp|bmp)$/gi;
+								var placeholderImg = '<svg width="135" x="0px" y="0px" viewBox="0 0 102.55 122.88" transform="scale(0.7) translate(-30 -55)"><path fill="#333" d="M102.55,122.88H0V0h77.66l24.89,26.44L102.55,122.88L102.55,122.88z M25.51,53.72h15.67V43.33H25.51V32.56 l15.67,0V21.85H25.51V11.08h15.67V7.83H8.43v106.23h85.77V32.36H71.52V7.83H56.86v3.29H41.18v10.71l15.68,0V32.6H41.18v10.49h15.68 v24.99c0,7.9-6.46,14.36-14.36,14.36l-2.63,0c-7.9,0-14.36-6.46-14.36-14.36V53.72L25.51,53.72z M36.28,63.07h10.28v4.06 c0,2.23-2.12,4.05-4.71,4.05h-0.86c-2.59,0-4.71-1.83-4.71-4.05V63.07L36.28,63.07L36.28,63.07z"/></svg>';
+								
+								
+								//The RegExp object keeps track of the lastIndex where a match occurred, so on 
+								//subsequent matches it will start from the last used index, instead of 0.
+								videoReg.lastIndex = 0;
+								imgReg.lastIndex = 0;	
+								
+								
+								var element = attachment.url;
+								
+								//image or video preview
+								if ( videoReg.test( element ) ) {
+                                    ed.insertContent( '<video width="400" height="300" src="'+element+'" controls></video>' );
+								} else if ( imgReg.test( element ) ) {
+                                    ed.insertContent( '<img src="'+element+'" alt="">' );
 								} else {
-									ed.insertContent( '<img src="'+attachment.url+'" alt="">' );
-								}   
+									ed.insertContent( '<img style="display:none;" class="mce-ed-intertplaceholder d-none" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="null"><a class="mce-ed-intertfile d-block" href="'+element+'" target="_blank" style="display: block;max-width: 100px;max-height: 120px;padding-top: 18px;">'+placeholderImg+'</a>' );
+								}
+		
 
 								
 							} );

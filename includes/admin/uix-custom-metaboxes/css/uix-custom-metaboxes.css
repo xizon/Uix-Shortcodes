@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.8 (October 21, 2020))
+ * @version		: 1.9 (December 8, 2020))
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -728,12 +728,15 @@ table.uix-cmb .uix-cmb__label {
 	position: absolute;
 	left: 0;
 	top: 5px;
+	z-index: 3;
 }
 
 
 
 .uix-cmb__upload-wrapper .uix-cmb__upload-preview {
     margin: 0;
+	position: relative;
+	z-index: 0;
 }
 
 
