@@ -66,6 +66,12 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 1.9.6 (December 21, 2020) =
+
+* Fix: Fixed a JavaScript bug for Uix Shortcodes Form in WP 5.6.
+
+
 ##### = 1.9.5 (December 8, 2020) =
 
 * Tweak: Upgraded the uploading control.
@@ -534,7 +540,7 @@ The currently available default elements:
 - WP 5.3.*
 - WP 5.4.*
 - WP 5.5.*
-
+- WP 5.6.*
 
 
 ### Frequently Asked Questions

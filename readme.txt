@@ -5,8 +5,8 @@ Author URI: https://uiux.cc
 Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
-Tested up to: 5.5.1
-Stable tag: 1.9.5
+Tested up to: 5.6
+Stable tag: 1.9.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,12 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+
+
+= 1.9.6 (December 21, 2020) =
+
+* Fix: Fixed a JavaScript bug for Uix Shortcodes Form in WP 5.6.
 
 
 = 1.9.5 (December 8, 2020) =
