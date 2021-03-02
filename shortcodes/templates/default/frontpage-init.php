@@ -788,16 +788,14 @@ function uix_sc_fun_code( $atts, $content = null ){
 		'language' => '',
 	 ), $atts ) );
 	 
+
+
+	$return_string = str_replace( ']', '&#93;', 
+					 str_replace( '[', '&#91;',
+					 str_replace( 'class="brush: ', 'data-language="'.$language.'" class="'.$language.' brush:',
+					 $content 
+					 ) ) );
 	
-	//Not applicable to "Divi Builder pages", "Elementor"
-	if ( ! function_exists('et_divi_builder_deactivate_if_theme_uses_builder') &&
-		 ! function_exists('elementor_load_plugin_textdomain')
-	   ) {
-		add_action( 'wp_footer', 'uix_sc_fun_syntaxhighlighter', 100 );
-	}
-
-
-	$return_string = str_replace( ']', '&#93;', str_replace( '[', '&#91;', $content ) );
 	
 	
 
@@ -805,55 +803,6 @@ function uix_sc_fun_code( $atts, $content = null ){
    
 }
 add_shortcode( 'uix_code', 'uix_sc_fun_code' );
-
-function uix_sc_fun_syntaxhighlighter(){
-	echo '
-	<script type="text/javascript">
-		function uix_syntaxhighlighter_path() {
-			var args = arguments,
-			result = [];
-			for (var i = 0; i < args.length; i++) {
-				result.push(args[i].replace("$", "'.UixShortcodes::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/"));
-			}
-			return result;
-		}
-		
-		setTimeout( function(){
-		    /* Delay to prevent the main function file from not loading */
-			SyntaxHighlighter.autoloader.apply(null, uix_syntaxhighlighter_path(
-				"applescript            $shBrushAppleScript.js",
-				"actionscript3 as3      $shBrushAS3.js",
-				"bash shell             $shBrushBash.js",
-				"coldfusion cf          $shBrushColdFusion.js",
-				"cpp c                  $shBrushCpp.js",
-				"c# c-sharp csharp      $shBrushCSharp.js",
-				"css                    $shBrushCss.js",
-				"delphi pascal          $shBrushDelphi.js",
-				"diff patch pas         $shBrushDiff.js",
-				"erl erlang             $shBrushErlang.js",
-				"groovy                 $shBrushGroovy.js",
-				"java                   $shBrushJava.js",
-				"jfx javafx             $shBrushJavaFX.js",
-				"js jscript javascript  $shBrushJScript.js",
-				"perl pl                $shBrushPerl.js",
-				"php                    $shBrushPhp.js",
-				"text plain             $shBrushPlain.js",
-				"py python              $shBrushPython.js",
-				"ruby rails ror rb      $shBrushRuby.js",
-				"sass scss              $shBrushSass.js",
-				"scala                  $shBrushScala.js",
-				"sql                    $shBrushSql.js",
-				"vb vbnet               $shBrushVb.js",
-				"xml xhtml xslt html    $shBrushXml.js"
-			));
-			SyntaxHighlighter.all();
-		}, 1000 );
-
-	</script>
-	';
-	
- 
-}
 
 
 //----------------------------------------------------------------------------------------------------

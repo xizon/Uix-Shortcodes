@@ -67,6 +67,11 @@ The currently available default elements:
 ### Updates
 
 
+##### = 1.9.7 (March 1, 2021) =
+
+* Fix: Delete SyntaxHighlighter to improve the compatibility of plug-ins.
+
+
 ##### = 1.9.6 (December 21, 2020) =
 
 * Fix: Fixed a JavaScript bug for Uix Shortcodes Form in WP 5.6.
@@ -608,10 +613,9 @@ Note: Making a new javascrpt (.js) document which name to **"uix-shortcodes-cust
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [jQuery Accessible Tabs](https://github.com/nomensa/jquery.accessible-tabs.git)
 - [prettyPhoto](http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/#prettyPhoto)
-- [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/)
 - [Flexslider](http://flexslider.woothemes.com/)
 - [jQuery Parallax](https://github.com/IanLunn/jQuery-Parallax)
-- [Shuffle](https://github.com/Vestride/Shuffle)
+- [Muuri](https://github.com/haltu/muuri)
 - [imagesloaded](https://github.com/desandro/imagesloaded)
 - [Easy Pie Chart](https://github.com/xizon/easy-pie-chart)
 - [Flaticon icon font: Essential Set]("http://www.flaticon.com/packs/essential-set-2)

@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     1.9.6
+ * Version:     1.9.7
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -112,10 +112,6 @@ class UixShortcodes {
 		wp_register_script( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );
 		wp_register_style( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.css', false, '3.1.5', 'all' );
 				
-		// SyntaxHighlighter
-		wp_register_script( 'syntaxhighlighter-core', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shCore.js', false, '3.0.83', true );
-		wp_register_script( 'syntaxhighlighter-autoloader', self::plug_directory() .'assets/add-ons/syntaxhighlighter/scripts/shAutoloader.js', false, '3.0.83', true );
-		wp_register_style( 'syntaxhighlighter', self::plug_directory() .'assets/add-ons/syntaxhighlighter/styles/shCoreDefault.css', false, '3.0.83', 'all' );
 		
 		// Muuri
 		wp_register_script( 'muuri', self::plug_directory() .'assets/add-ons/muuri/muuri.min.js', false, '0.8.0', true );
@@ -159,17 +155,6 @@ class UixShortcodes {
 		wp_enqueue_script( 'prettyPhoto' );
 		wp_enqueue_style( 'prettyPhoto' );
 		
-		
-		//Not applicable to "Divi Builder pages", "Elementor"
-		if ( ! function_exists('et_divi_builder_deactivate_if_theme_uses_builder') &&
-			 ! function_exists('elementor_load_plugin_textdomain')
-		   ) {
-			wp_enqueue_script( 'syntaxhighlighter-core' );
-			wp_enqueue_script( 'syntaxhighlighter-autoloader' );
-			wp_enqueue_style( 'syntaxhighlighter' );
-		}
-		
-
 		
 		
 		//Core
