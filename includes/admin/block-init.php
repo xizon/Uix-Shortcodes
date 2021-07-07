@@ -26,6 +26,8 @@ if ( !function_exists( 'uix_shortcodes_block_script' ) ) {
 					'send_string_plugin_url'       => UixShortcodes::plug_directory(),
 					'send_string_postid'           => $post_id,
 					'send_string_block_title'       => esc_attr__( 'Uix Shortcodes', 'uix-shortcodes' ),
+					'send_string_block_cover'       => UixShortcodes::plug_directory() . 'helper/img/gutenberg-cover.jpg',
+					'send_string_block_desc'        => esc_attr__( 'Bring an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.', 'uix-shortcodes' ),
 					'send_string_block_btn_title'   => esc_attr__( '[ / ] Click here to add shortode', 'uix-shortcodes' )
 				);
 

@@ -1,6 +1,6 @@
 /*
 	* Plugin: Uix Shortcodes Form
-	* Version: 4.3.2
+	* Version: 4.3.5
 	* Author: UIUX Lab
 	* Twitter: @uiux_lab
 	* Author URL: https://uiux.cc
@@ -904,7 +904,7 @@
 }
 
 .uixscform-form-container select {
-    background: #F8F8F8;
+    background-color: #F8F8F8;
 	margin-bottom: 5px;
 }
 

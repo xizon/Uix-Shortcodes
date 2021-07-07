@@ -142,7 +142,7 @@ UixSCFormCore::form_scripts( array(
 		 */
 	    'template'              => '
 		
-		    [uix_code language=\'${uix_sc_code_lan}\']<pre class=\'brush: ${uix_sc_code_lan};\'>${uix_sc_code_content}</pre>[/uix_code]
+		    [uix_code language=\'${uix_sc_code_lan}\']${uix_sc_code_content}[/uix_code]
 
 		'
     )

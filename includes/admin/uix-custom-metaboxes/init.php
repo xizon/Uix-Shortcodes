@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Uix Custom Metaboxes
  *
  * @class 		: Uix_Custom_Metaboxes
- * @version		: 1.9 (December 8, 2020)
+ * @version		: 2.0 (July 5, 2021)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -24,7 +24,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		* Custom Meta Boxes Version
 		*
 		*/
-		private static $ver = 1.9;	
+		private static $ver = 2.0;	
 		
 		/**
 		* Holds meta box parameters
@@ -45,6 +45,28 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		*/
 		public static $nonce_field = true;
 
+		
+		
+		/**
+		* Name of the stylesheet and JavaScript.
+		*
+		*/
+		public static $handle = 'uix-cmb';
+
+		
+		
+        /*
+         * Callback the directory URL
+         *
+         *
+         */
+		public static function get_directory() {
+			return UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/';
+		}
+	
+		
+		
+		
 		/**
 		* Initialize the custom meta box
 		*
@@ -176,7 +198,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		*/    
 //        public static function mce_external_plugins($plugins) {   
 //
-//            $plugins['code'] = UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/editor/plugins/syntax-highlight-code/prism.js';
+//            $plugins['code'] = self::get_directory() .'editor/plugins/syntax-highlight-code/prism.js';
 //            return $plugins;
 //        }
 //        add_filter('mce_external_plugins', 'my_mce_external_plugins');
@@ -202,22 +224,29 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 			  {
     
 				
-					wp_enqueue_style( 'uix-custom-metaboxes', UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min.css', false, self::$ver, 'all' );
+					wp_enqueue_style( self::$handle, self::get_directory() .'css/uix-custom-metaboxes.min.css', false, self::$ver, 'all' );
 					//RTL		
 					if ( is_rtl() ) {
-						wp_enqueue_style( 'uix-custom-metaboxes-rtl', UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min-rtl.css', false, self::$ver, 'all' );
+						wp_enqueue_style( self::$handle . '-rtl', self::get_directory() .'css/uix-custom-metaboxes.min-rtl.css', false, self::$ver, 'all' );
 					} 
 				  
 				  
-					wp_enqueue_script( 'uix-custom-metaboxes', UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/js/uix-custom-metaboxes.min.js', array( 'jquery' ), self::$ver, true );
+					//Fix the image path of the editor
+					$upload_dir     = wp_upload_dir();
+				    $upload_dir_url = trailingslashit( $upload_dir[ 'baseurl' ] );
+				  
+				  
+					wp_enqueue_script( self::$handle, self::get_directory() .'js/uix-custom-metaboxes.min.js', array( 'jquery' ), self::$ver, true );
                   
                   
-					wp_localize_script( 'uix-custom-metaboxes',  'uix_custom_metaboxes_lang', array( 
+					wp_localize_script( self::$handle,  'uix_custom_metaboxes_lang', array( 
 						'ed_lang'                 => get_locale(),
-						'ed_url'                  => UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/',
+						'ed_url'                  => self::get_directory() .'',
+						'upload_dir_url'          => $upload_dir_url,
 						'ed_media_title'          => __( 'Select Files', 'uix-shortcodes' ),
 						'ed_media_text'           => __( 'Insert', 'uix-shortcodes' ),				
 						'ed_image'                => __( 'Insert Image', 'uix-shortcodes' ),
+						'ed_sourcecode_title'     => __( 'Source Code', 'uix-shortcodes' ),
 						'ed_unlink_title'         => __( 'Remove link', 'uix-shortcodes' ),
 						'ed_link_title'           => __( 'Insert/Edit link', 'uix-shortcodes' ),
 						'ed_link_field_url'       => __( 'URL', 'uix-shortcodes' ),
@@ -239,7 +268,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 				  
 				    //Colorpicker alpha plugin
 				    $wp_color_picker_alpha_uri_name = version_compare( get_bloginfo( 'version' ), '5.5.0', '>=' ) ? 'wp-color-picker-alpha/up-5.5.0/wp-color-picker-alpha.min.js' : 'wp-color-picker-alpha/default/wp-color-picker-alpha.min.js';
-					wp_enqueue_script( 'wp-color-picker-alpha', UixShortcodes::plug_directory() .'includes/admin/uix-custom-metaboxes/js/' . $wp_color_picker_alpha_uri_name, array( 'wp-color-picker', 'uix-custom-metaboxes' ), '2.1.2', true );
+					wp_enqueue_script( 'wp-color-picker-alpha', self::get_directory() .'js/' . $wp_color_picker_alpha_uri_name, array( 'wp-color-picker', self::$handle ), '2.1.2', true );
 
 				     
 				  
@@ -435,14 +464,15 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		* Parse JSON data from Editor
 		*
 		*/        
-		public static function parse_json_data_from_editor( $str ){
-			
-            $result = wp_specialchars_decode( self::unicode_decode( $str ) );
-                                             
-			return $result;
+		public static function parse_jsondata_from_editor( $str ){                       
+			return wp_specialchars_decode( self::unicode_decode( $str ) );
 		}
         
-        
+        //Compatible with Uix Custom Metaboxes 1.9 and below
+		public static function parse_json_data_from_editor( $str ){                       
+			return wp_specialchars_decode( self::unicode_decode( $str ) );
+		}
+		
 			
         
         
@@ -458,7 +488,108 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
         } 
 		   
         
-        
+
+
+		/*
+		 * Filter the JSON Data of the Editor in order to save to the database
+		 *
+		 *
+		 */
+		public static function encode_jsondata_for_editor_to_database( $str ) {
+
+			//Spacing (For this to work on a html page you might want to replace the spaces with four &nbsp;)
+			$str = preg_replace( "/\t/", "    ", $str ); 
+			
+			//Escaping for HTML blocks.
+			$str = esc_html( $str );
+
+		    return $str;
+
+		}
+
+		/*
+		 * Filter the JSON Data of the Textarea in order to save to the database
+		 *
+		 *
+		 */
+		public static function encode_jsondata_for_textarea_to_database( $str ) {
+
+			//End Of Line
+			$str = str_replace( PHP_EOL, '<br>', $str );
+			
+			//Spacing (For this to work on a html page you might want to replace the spaces with four &nbsp;)
+			$str = preg_replace( "/\t/", "    ", $str ); 
+			
+			//Escaping for HTML blocks. ( !Required )
+			$str = esc_html( $str ); 
+			
+			
+		    return $str;
+
+		}
+		
+		
+		
+		/*
+		 * Filter the JSON Data of the JSON Result in order to save to the database
+		 * Delete `\r\n`, `\n`, `\r`, `\t`, otherwise JSON cannot be stored in the database
+		 *
+		 */
+		public static function encode_jsondata_for_jsonRes_to_database( $str ) {
+
+			//
+			
+			//End Of Line
+			//Delete `\r\n`, `\n`, `\r`
+			$str = str_replace( '\\\\r\\\\n', "<br>", $str ); 	
+			$str = str_replace( '\\\\r', "<br>", $str ); 	
+			$str = str_replace( '\\\\n', "<br>", $str ); 	
+			
+			//Spacing (For this to work on a html page you might want to replace the spaces with four &nbsp;)
+			//Delete `\t`
+			$str = str_replace( '\\\\t', "&nbsp;&nbsp;&nbsp;&nbsp;", $str ); 	
+
+			
+			//Escaping for HTML blocks. ( !Required )
+			$str = esc_html( $str );
+			
+			
+		    return $str;
+
+		}
+		
+		
+		
+		
+		/*
+		 * Automatically allocate space (including line breaks and spaces) 
+		 * from JSON data to Textarea control
+		 *
+		 *
+		 */
+		public static function autospace_to_textarea_from_jsondata( $str ) {
+
+			$str_encode = esc_textarea( $str );
+			$str_decode = wp_specialchars_decode( $str_encode );
+			
+			$res = preg_replace( "/<br\s*\/?>/", PHP_EOL, $str_decode );
+			
+		    return $res;
+			
+
+		}
+
+		/*
+		 * Automatically allocate space (including line breaks and spaces) 
+		 * from JSON data to Front Pages
+		 *
+		 *
+		 */
+		public static function autospace_to_front_from_jsondata( $str ) {
+		    return preg_replace("/\s/", "&nbsp;", $str);
+		}
+		
+
 		
 		/**
 		* Callback function to show fields in meta box.
@@ -695,15 +826,20 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					
 					if ( isset( $_POST[ $id . '_attrs_title' ] ) ) {
 						$custom_attrs          = array();
-						$field_values_array_1  = $_POST[ $id . '_attrs_title' ];
-						$field_values_array_2  = $_POST[ $id . '_attrs_value' ];
+						$field_titles = $_POST[ $id . '_attrs_title' ];
+						$field_values  = $_POST[ $id . '_attrs_value' ];
 
 
-						foreach( $field_values_array_1 as $index => $value ) {	
+						foreach( $field_titles as $index => $value ) {	
 							if ( !empty( $value ) ) {
+								
+								$title = $field_titles[ $index ];
+								$content = $field_values[ $index ];
+								
+								
 								array_push( $custom_attrs, array(
-																	'name'  => esc_attr( $value ),
-																	'value' => esc_attr( $field_values_array_2[ $index ] )
+																	'name'  => esc_attr( $title ),
+																	'value' => esc_attr( $content )
 																) );		
 							}
 
@@ -720,86 +856,56 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
                 
 				if ( $type == 'multi-content' ) {
 					
-					if ( isset( $_POST[ $id . '_attrs_title' ] ) ) {
+					if ( isset( $_POST[ $id . '_resultData' ] ) ) {
 						$custom_attrs          = array();
-						$field_values_array_1  = $_POST[ $id . '_attrs_title' ];
-						$field_values_array_2  = $_POST[ $id . '_attrs_value' ];
-                        $field_values_array_3  = $_POST[ $id . '_attrs_id' ];
-                        $field_values_array_4  = $_POST[ $id . '_attrs_subtitle' ];
-                        $field_values_array_5  = $_POST[ $id . '_attrs_level' ];
-                        $field_values_array_6  = $_POST[ $id . '_attrs_classname' ];
+						$field_ids  = $_POST[ $id . '_attrs_id' ];
+						$field_titles  = $_POST[ $id . '_attrs_title' ];
+						$field_values  = $_POST[ $id . '_attrs_value' ];
+                        $field_descs  = $_POST[ $id . '_attrs_desc' ];
+                        $field_parents  = $_POST[ $id . '_attrs_parent' ];
+                        $field_classnames  = $_POST[ $id . '_attrs_classname' ];
                         
                  
-                        //var_dump( $field_values_array_1 );
-                        //var_dump( $field_values_array_5 );
+                        //var_dump( self::encode_jsondata_for_jsonRes_to_database( $_POST[ $id . '_resultData' ] ) );
                         //wp_die();
                     
-						foreach( $field_values_array_1 as $index => $value ) {	
+						$parent_all = array();
+						foreach( $field_ids as $index => $value ) {	
 							if ( !empty( $value ) ) {
                                 
-                                $title = $field_values_array_1[ $index ];
-                                $item_id = $field_values_array_3[ $index ];
-                                $level_id = $field_values_array_5[ $index ];
-                                $sub_title = $field_values_array_4[ $index ];
-                                $classname = $field_values_array_6[ $index ];
-                                $content = $field_values_array_2[ $index ];
-                                
-                                
-                                //level 2
-                                $level_2 = array();
-                                foreach( $field_values_array_1 as $index_2 => $value ) {
-                                    if ( !empty( $value ) ) {
-                                        
-                                        
-                                        $title_2 = $field_values_array_1[ $index_2 ];
-                                        $item_id_2 = $field_values_array_3[ $index_2 ];
-                                        $level_id_2 = $field_values_array_5[ $index_2 ];
-                                        $sub_title_2 = $field_values_array_4[ $index_2 ];
-                                        $classname_2 = $field_values_array_6[ $index_2 ];
-                                        $content_2 = $field_values_array_2[ $index_2 ];
+                                $title = $field_titles[ $index ];
+                                $item_id = $field_ids[ $index ];
+                                $parent_id = $field_parents[ $index ];
+                                $desc = $field_descs[ $index ];
+                                $classname = $field_classnames[ $index ];
+                                $content = $field_values[ $index ];
+                          
+								$_item = array(
+												'name'  => esc_attr( $title ),
+												'id' => esc_attr( $item_id ),
+									            'parent' => esc_attr( $parent_id ),
+												'desc' => self::encode_jsondata_for_textarea_to_database( $desc ),
+												'classname' => esc_attr( $classname ),
+									            'value' => self::encode_jsondata_for_editor_to_database( $content )
+											);
+								
+								array_push( $parent_all, $_item );  
 
-                                        
-                                        if ( !empty( $level_id_2 ) && $level_id_2 == $item_id ) {
-                                       
-                                            array_push( $level_2, array(
-                                                                        'name'  => esc_attr( $title_2 ),
-                                                                        'value' => esc_html( $content_2 ),
-                                                                        'id' => esc_attr( $item_id_2 ),
-                                                                        'subtitle' => esc_html( $sub_title_2 ),
-                                                                        'level' => esc_attr( $level_id_2 ),
-                                                                        'classname' => esc_attr( $classname_2 ),
-                                                                        'content' => ''
-                                                                    ) );
-
-                                        }     
-   
-                                    }
-                                }
-                                
-
-                                //level 1
-                                $level_1 = array();
-                                if ( empty( $level_id ) ) {
-                                    $level_1 = array(
-                                                    'name'  => esc_attr( $title ),
-                                                    'value' => esc_html( $content ),
-                                                    'id' => esc_attr( $item_id ),
-                                                    'subtitle' => esc_html( $sub_title ),
-                                                    'level' => esc_attr( $level_id ),
-                                                    'classname' => esc_attr( $classname ),
-                                                    'content' => $level_2
-                                                );
-                                }
-                                
-
-                                
-                                //---
-                                array_push( $custom_attrs, $level_1 );
-                               
 
 							}
 
 						}
+						
+								
+						//---
+						$all_data = array(
+										'all_data'  => self::encode_jsondata_for_jsonRes_to_database( $_POST[ $id . '_resultData' ] ),
+							            'all_reverse_data'  => self::encode_jsondata_for_jsonRes_to_database( $_POST[ $id . '_resultReverseData' ] ),
+										'list'  => $parent_all				
+									);
+						
+						array_push( $custom_attrs, $all_data );  
+
               
 						$post_val = self::json_encode_to_update_post_meta( $custom_attrs );
                    
@@ -816,22 +922,22 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
                     $custom_attrs = array();
 					if ( isset( $_POST[ $id . '_attrs_type' ] ) ) {
 						
-						$field_values_array_1  = $_POST[ $id . '_attrs_type' ];
-						$field_values_array_2  = $_POST[ $id . '_attrs_value' ];
-                        $field_values_array_3  = $_POST[ $id . '_attrs_file' ];
+						$field_types  = $_POST[ $id . '_attrs_type' ];
+						$field_values  = $_POST[ $id . '_attrs_value' ];
+                        $field_files  = $_POST[ $id . '_attrs_file' ];
                         
                     
-						foreach( $field_values_array_1 as $index => $value ) {	
+						foreach( $field_types as $index => $value ) {	
 							if ( !empty( $value ) ) {
                                 
-                                $type = $field_values_array_1[ $index ];
-                                $html = $field_values_array_2[ $index ];
-                                $file = $field_values_array_3[ $index ];
+                                $type = $field_types[ $index ];
+                                $html = $field_values[ $index ];
+                                $file = $field_files[ $index ];
                              
                                 array_push( $custom_attrs, array(
                                                     'type'  => esc_attr( $type ),
-                                                    'value' => esc_html( $html ),
-                                                    'filePath' => esc_html( $file ),
+                                                    'value' => self::encode_jsondata_for_editor_to_database( $html ),
+                                                    'filePath' => esc_url( $file ),
                                                 ) );
                                
 

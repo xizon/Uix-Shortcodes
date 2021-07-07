@@ -1,15 +1,3 @@
-/*
-	* Uix Shortcodes Form Functions
-	* Version: 4.3.2
-	* Author: UIUX Lab
-	* Twitter: @uiux_lab
-	* Author URL: https://uiux.cc
-	
-	* Dual licensed under the MIT and GPL licenses:
-	* http://www.opensource.org/licenses/mit-license.php
-	* http://www.gnu.org/licenses/gpl.html
-*/
-
 /*!
  * ************************************
  * Initialize Global
@@ -2487,13 +2475,13 @@ function uixscform_isJSON( str ){
 		
 		if ( typeof(tinymce) !== 'undefined' ) {
 			
-			tinymce.PluginManager.add('customCode', function(editor) {
+			tinymce.PluginManager.add('uixsc_customcode', function(editor) {
 				function showDialog() {
 					var win = editor.windowManager.open({
-						title: "Source code",
+						title: uix_shortcodes_wp_plugin.lang_mce_sourcecode_title,
 						body: {
 							type: 'textbox',
-							name: 'customCode',
+							name: 'uixsc_customcode',
 							multiline: true,
 							minWidth: editor.getParam("code_dialog_width", 600),
 							minHeight: editor.getParam("code_dialog_height", Math.min(tinymce.DOM.getViewPort().h - 200, 500)),
@@ -2508,7 +2496,7 @@ function uixscform_isJSON( str ){
 
 							if(editor.readonly != true){
 								editor.undoManager.transact(function() {
-									editor.setContent(e.data.customCode);
+									editor.setContent(e.data.uixsc_customcode);
 								});
 							}
 
@@ -2521,12 +2509,12 @@ function uixscform_isJSON( str ){
 
 					// Gecko has a major performance issue with textarea
 					// contents so we need to set it when all reflows are done
-					win.find('#customCode').value(editor.getContent({source_view: true}));
+					win.find('#uixsc_customcode').value(editor.getContent({source_view: true}));
 
 					//disable source code editing while in readonly mode
 					if(editor.readonly){
-						var id = win.find('#customCode')[0]._id;
-						$(win.find('#customCode')[0]._elmCache[id]).prop('readonly', true);
+						var id = win.find('#uixsc_customcode')[0]._id;
+						$(win.find('#uixsc_customcode')[0]._elmCache[id]).prop('readonly', true);
 					}
 
 					//This was an attempt to disable the "save" button but nothing I've tried is working. 
@@ -2546,16 +2534,16 @@ function uixscform_isJSON( str ){
 
 				editor.addCommand("mceCustomCodeEditor", showDialog);
 
-				editor.addButton('customCode', {
+				editor.addButton('uixsc_customcode', {
 					icon: 'code',
-					tooltip: 'Source code',
+					tooltip: uix_shortcodes_wp_plugin.lang_mce_sourcecode_title,
 					onclick: showDialog,
-					classes:'customCode'
+					classes:'uixsc_customcode'
 				});
 
-				editor.addMenuItem('customCode', {
+				editor.addMenuItem('uixsc_customcode', {
 					icon: 'code',
-					text: 'Source code',
+					text: uix_shortcodes_wp_plugin.lang_mce_sourcecode_title,
 					context: 'tools',
 					onclick: showDialog
 				});
@@ -2592,8 +2580,8 @@ function uixscform_editorInit( id ){
 			selector:  'textarea#' + id,
 			height : editorH,
 			menubar: false,
-			plugins: 'textcolor image media hr customCode colorpicker lists fullscreen',		
-			toolbar: 'removeformat formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote alignleft aligncenter alignright | uixsc_link uixsc_unlink outdent indent superscript subscript hr uixsc_image uixsc_highlightcode media customCode',
+			plugins: 'textcolor image media hr uixsc_customcode colorpicker lists fullscreen',		
+			toolbar: 'removeformat formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote alignleft aligncenter alignright | uixsc_link uixsc_unlink outdent indent superscript subscript hr uixsc_image uixsc_highlightcode media uixsc_customcode',
 			setup:function( ed ) {
 
 
@@ -2789,8 +2777,11 @@ function uixscform_editorInit( id ){
 
 							],
 							onsubmit: function( e ) {
-
-								ed.insertContent( '<pre class="brush: ' + e.data.lang + ';"">' + e.data.content + '</pre>');
+								
+								
+								var _content = e.data.content.replace(/(\r)*\n/g, "<br>" );
+								
+								ed.insertContent( '<pre data-language="' + e.data.lang + '" class="' + e.data.lang + ' brush: ' + e.data.lang + ';">' + _content + '</pre>');
 							}
 						});
 					}

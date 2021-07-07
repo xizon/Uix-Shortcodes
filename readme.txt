@@ -5,8 +5,8 @@ Author URI: https://uiux.cc
 Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
-Tested up to: 5.6
-Stable tag: 1.9.7
+Tested up to: 5.7.2
+Stable tag: 1.9.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,13 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.9.8 (July 5, 2021) =
+
+* Fix: Fixed the display and escaping problem of the code block in the editor.
+* Tweak: Performance optimization of dynamic forms (use virtual tree to update dom) for Custom Meta Boxes.
+* Tweak: Optimized the escape compatibility issue of the editor control for Custom Meta Boxes.
+
 
 = 1.9.7 (March 1, 2021) =
 

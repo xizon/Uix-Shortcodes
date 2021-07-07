@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 4.3.2  (December 21, 2020)
+ * @version		: 4.3.5  (July 5, 2021)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '4.3.2';
+		const VERSION    = '4.3.5';
 		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		
@@ -109,6 +109,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 						'upload_dir_url'            => $upload_dir_url,
 						'lang_media_title'          => __( 'Select Files', 'uix-shortcodes' ),
 						'lang_media_text'           => __( 'Insert', 'uix-shortcodes' ),
+						'lang_mce_sourcecode_title' => __( 'Source Code', 'uix-shortcodes' ),
                         'lang_mce_image'            => __( 'Insert Image', 'uix-shortcodes' ),
 						'lang_mce_unlink_title'     => __( 'Remove link', 'uix-shortcodes' ),
 						'lang_mce_link_title'       => __( 'Insert/Edit link', 'uix-shortcodes' ),
@@ -815,7 +816,6 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 			
 			//Separately need loaded script files for live preview
 			if ( 
-				self::inc_str( $previewcode, '[uix_code' ) || 
 				self::inc_str( $previewcode, '[uix_contact_form' ) 
 			) {
 				_e( '<div class="uixscform-form-container"><p class="info info-warning">This shortcode does not support live preview, please check out it directly on front end page.</p></div>', 'uix-shortcodes' );

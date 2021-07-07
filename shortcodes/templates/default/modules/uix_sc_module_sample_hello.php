@@ -734,31 +734,39 @@ UixSCFormCore::form_scripts( array(
 		 */
 	    'template'              => '
 		
+            [uix_hello]
+ 
+				<h4>Text:</h4> ${uix_sc_hello_text}
+				<hr><h4>Textarea:</h4> ${uix_sc_hello_textarea}
+				...
+
+				<hr>
+				<h4>List:</h4>
+
+				<ul>
+
+					<!-- loop start -->
+
+						{{each '.$clone_trigger_id.'}}
+							{{if uix_sc_hello_listitem_imgtitle != ""}}
+
+								<li>${uix_sc_hello_listitem_imgtitle} <img src="${uix_sc_hello_listitem_imgURL}" alt="" width="50" height="50"></li>
+
+							{{/if}}
+
+						{{/each}}	
+
+					<!-- loop end -->	
+
+				</ul>
 
 
-			<h4>Text:</h4> ${uix_sc_hello_text}
-			<hr><h4>Textarea:</h4> ${uix_sc_hello_textarea}
-			...
+				<hr>
+				<h4>Editor:</h4>
+				${uix_sc_hello_editor}
 
-            <hr>
-            <h4>List:</h4>
-			
-            <ul>
 
-				<!-- loop start -->
-
-					{{each '.$clone_trigger_id.'}}
-						{{if uix_sc_hello_listitem_imgtitle != ""}}
-
-							<li>${uix_sc_hello_listitem_imgtitle} <img src="${uix_sc_hello_listitem_imgURL}" alt="" width="50" height="50"></li>
-
-						{{/if}}
-
-					{{/each}}	
-
-				<!-- loop end -->	
-			
-			</ul>
+            [/uix_hello]
 
 
 		'

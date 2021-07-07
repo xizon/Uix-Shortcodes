@@ -789,16 +789,15 @@ function uix_sc_fun_code( $atts, $content = null ){
 	 ), $atts ) );
 	 
 
+	$_code = '<pre class="brush: '.$language.';">'.$content.'</pre>';
 
 	$return_string = str_replace( ']', '&#93;', 
 					 str_replace( '[', '&#91;',
 					 str_replace( 'class="brush: ', 'data-language="'.$language.'" class="'.$language.' brush:',
-					 $content 
+					 $_code
 					 ) ) );
 	
 	
-	
-
    return UixShortcodes::do_callback( $return_string );
    
 }

@@ -108,9 +108,14 @@ var uixscBlockIcon = uixscBlockEl( 'svg', { width: 24, height: 24, viewBox: '0 0
 
 uixscRegisterBlockType( 'myplugin/block-uix-shortcodes', {
 	title: uix_shortcodes_block_vars.send_string_block_title,
-
+	example: {
+		attributes: {
+			cover: uix_shortcodes_block_vars.send_string_block_cover
+		},
+		viewportWidth: 800
+	},
 	icon: uixscBlockIcon,
-
+    description: uix_shortcodes_block_vars.send_string_block_desc,
 	category: 'common',
 
 	attributes: {

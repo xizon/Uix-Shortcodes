@@ -298,6 +298,11 @@
 
 /* 3. Interaction Button
 -------------------------------------------------------------- */
+
+.uix-shortcodes-open-btn:not(.disable) {
+	color: #fff !important;
+}
+
 .uix-shortcodes-open-btn.disable {
 	background: #EFEFEF !important;
 	border: none !improtant;
@@ -314,11 +319,17 @@
 
 .uix-shortcodes-open-btn.disable:before {
 	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
 	font-size: inherit;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	content: "\f05a";
+	content: ">";
 	margin-right: .5rem;
+	font-size: 12px;
+	font-family: serif;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1;
+	transform: translateY(-2px);
+	
 }

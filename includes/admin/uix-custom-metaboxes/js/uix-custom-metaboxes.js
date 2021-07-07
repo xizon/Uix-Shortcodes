@@ -2,18 +2,18 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.9 (December 8, 2020)
+ * @version		: 2.0 (July 5, 2021)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
  *
  *************************************************
  */
-var UixCustomMetaboxes = function( obj ) {
+const UixCustomMetaboxes = function( obj ) {
 	"use strict";
 
 
-	var UixCustomMetaboxesConstructor = function( obj ) {
+	const UixCustomMetaboxesConstructor = function( obj ) {
 		this.init = obj;
 	};
 
@@ -86,7 +86,7 @@ var UixCustomMetaboxes = function( obj ) {
 		titleChange: function( wrapper, trigger, title ) {
 
 			jQuery( document ).ready( function() {
-                jQuery( document ).off( 'input.UixTitle change.UixTitle' ).on( 'input.UixTitle change.UixTitle', title, function() {
+                jQuery( document ).off( 'change.UixTitle' ).on( 'change.UixTitle', title, function() {
                     jQuery( this ).closest( wrapper ).find( trigger + '> span' ).html( jQuery( this ).val() );
                 }); 
                 
@@ -113,25 +113,25 @@ var UixCustomMetaboxes = function( obj ) {
 	
 				jQuery( selector ).each(function(){
 
-					var $this = jQuery( this ),
+					const $this = jQuery( this ),
 						tid   = $this.data( 'target-id' );
 					
 					
 					//get all switch ids
-					var allSwitchIds = '';
+					let allSwitchIds = '';
 					$this.find( '[data-switch-ids]' ).each( function()  {
 						allSwitchIds += jQuery( this ).attr( 'data-switch-ids' );
 					});
 
 					//Switch with radios
-					var switchFun = function( curSel ) {
+					const switchFun = function( curSel ) {
 						
 						$this.find( '[data-switch-ids]' ).each( function()  {
-							var _targetID      = jQuery( this ).attr( 'data-switch-ids' ),
+							const _targetID      = jQuery( this ).attr( 'data-switch-ids' ),
 								_targetIDs     = UixGetRealIds( _targetID  );
 
 							if ( _targetIDs != '' ) {
-								var	_$wrapper = jQuery( _targetIDs ).closest( 'tr' );
+								const	_$wrapper = jQuery( _targetIDs ).closest( 'tr' );
 								_$wrapper.hide();	
 							}
 
@@ -146,7 +146,7 @@ var UixCustomMetaboxes = function( obj ) {
 						
 						
 						//
-						var switchTargetID = curSel.attr( 'data-switch-ids' ),
+						const switchTargetID = curSel.attr( 'data-switch-ids' ),
 							switchTargetIDs = UixGetRealIds( switchTargetID  );
 
 						if ( switchTargetIDs != '' ) {
@@ -165,7 +165,7 @@ var UixCustomMetaboxes = function( obj ) {
 					
 						//Do not use preventDefault()
 						//---------
-						var _curValue = jQuery( this ).attr( 'data-value' );
+						const _curValue = jQuery( this ).attr( 'data-value' );
 						$this.find( '[data-value]' ).removeClass( 'active' );
 						jQuery( '#' + tid ).val( _curValue );
 						jQuery( this ).addClass( 'active' );
@@ -211,9 +211,9 @@ var UixCustomMetaboxes = function( obj ) {
 				jQuery( selector ).each(function(){
 
 					
-					var $this = jQuery( this );
+					const $this = jQuery( this );
 
-                    var tid = $this.attr( 'data-toggle-id' );
+                    const tid = $this.attr( 'data-toggle-id' );
                     if ( $this.hasClass( 'active' ) ) {
                         if ( tid != '' || typeof tid !== typeof undefined ) {
                             $this.closest( '[data-target-id]' ).find( '.uix-cmb__toggle-target' ).hide();
@@ -222,7 +222,7 @@ var UixCustomMetaboxes = function( obj ) {
                     }
 
 					$this.on( "click", function() {
-						var tid = jQuery( this ).attr( 'data-toggle-id' );
+						const tid = jQuery( this ).attr( 'data-toggle-id' );
 						$this.removeClass( 'active' );
 
 						if ( tid != '' || typeof tid !== typeof undefined ) {
@@ -261,7 +261,7 @@ var UixCustomMetaboxes = function( obj ) {
 				jQuery( selector ).each(function(){
 
 					
-					var $this = jQuery( this ),
+					const $this = jQuery( this ),
 						tabID = $this.attr( 'id' );
 					
 					//Create ID
@@ -275,7 +275,7 @@ var UixCustomMetaboxes = function( obj ) {
 					$this.find( '> ul' ).each(function() {
 						// For each set of tabs, we want to keep track of
 						// which tab is active and its associated content
-						var $active, content, links = jQuery( this ).find( 'a' );
+						let $active, content, links = jQuery( this ).find( 'a' );
 
 						// If the location.hash matches one of the links, use that as the active tab.
 						// If no match is found, use the first link as the initial active tab.
@@ -369,7 +369,7 @@ var UixCustomMetaboxes = function( obj ) {
 					
 					jQuery( selector ).each( function(){
 
-						var $this  = jQuery( this ),
+						const $this  = jQuery( this ),
 							format = $this.data( 'format' );
 
 						$this.datepicker({
@@ -427,8 +427,10 @@ var UixCustomMetaboxes = function( obj ) {
 
 			jQuery( document ).ready( function() {
                 
-                //Initialize Select of Toggle
-                jQuery( '.uix-cmb__wrapper.uix-cmb__custom-attributes-field' ).UixToggleSelectInit();
+                //Initialize Select of Toggle (include parent category)
+                jQuery( '.uix-cmb__wrapper.uix-cmb__custom-attributes-field.uix-cmb__custom-attributes-field--customlevel' ).UixToggleSelectInit();
+				
+				//Initialize Select of Toggle
                 jQuery( '.uix-cmb__text--div--toggle__simple-sel' ).UixToggleSimpleSelectInit({ type: 'file'});
 
                 
@@ -455,16 +457,16 @@ var UixCustomMetaboxes = function( obj ) {
 			jQuery( document ).ready( function() {
                 
 
-                var selector = '.uix-cmb__upload-target';
-                var videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
-				var imgReg   = /^.*\.(gif|jpe?g|tiff|png|webp|bmp)$/gi;
-				var placeholderImg = '<svg width="135" style="padding: 50px 40px;border: 1px solid #ddd;pointer-events: none;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 6px 30px 0 rgba(0,0,0,0.1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.55 122.88" enable-background="new 0 0 24 24" transform="scale(0.7) translate(-30 -55)"><path d="M102.55,122.88H0V0h77.66l24.89,26.44L102.55,122.88L102.55,122.88z M25.51,53.72h15.67V43.33H25.51V32.56 l15.67,0V21.85H25.51V11.08h15.67V7.83H8.43v106.23h85.77V32.36H71.52V7.83H56.86v3.29H41.18v10.71l15.68,0V32.6H41.18v10.49h15.68 v24.99c0,7.9-6.46,14.36-14.36,14.36l-2.63,0c-7.9,0-14.36-6.46-14.36-14.36V53.72L25.51,53.72z M36.28,63.07h10.28v4.06 c0,2.23-2.12,4.05-4.71,4.05h-0.86c-2.59,0-4.71-1.83-4.71-4.05V63.07L36.28,63.07L36.28,63.07z"></path></svg>';
+                const selector = '.uix-cmb__upload-target';
+                const videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
+				const imgReg   = /^.*\.(gif|jpe?g|tiff|png|webp|bmp)$/gi;
+				const placeholderImg = '<svg width="135" style="padding: 50px 40px;border: 1px solid #ddd;pointer-events: none;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 6px 30px 0 rgba(0,0,0,0.1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.55 122.88" enable-background="new 0 0 24 24" transform="scale(0.7) translate(-30 -55)"><path d="M102.55,122.88H0V0h77.66l24.89,26.44L102.55,122.88L102.55,122.88z M25.51,53.72h15.67V43.33H25.51V32.56 l15.67,0V21.85H25.51V11.08h15.67V7.83H8.43v106.23h85.77V32.36H71.52V7.83H56.86v3.29H41.18v10.71l15.68,0V32.6H41.18v10.49h15.68 v24.99c0,7.9-6.46,14.36-14.36,14.36l-2.63,0c-7.9,0-14.36-6.46-14.36-14.36V53.72L25.51,53.72z M36.28,63.07h10.28v4.06 c0,2.23-2.12,4.05-4.71,4.05h-0.86c-2.59,0-4.71-1.83-4.71-4.05V63.07L36.28,63.07L36.28,63.07z"></path></svg>';
 
 				
                 //Custom selectors
 				jQuery( selector ).each( function()  {
-					var $this     = jQuery( this ),
-                        uuid      = UixGUID.create(),
+					const $this     = jQuery( this ),
+                        uuid      = UixGUIDCreate(),
 					    pid       = $this.data( 'insert-preview' ).replace(/\{id\}/g, uuid ),
 						tid       = $this.data( 'insert-img' ).replace(/\{id\}/g, uuid ),
 						_closebtn = '.uix-cmb__removebtn';
@@ -482,7 +484,7 @@ var UixCustomMetaboxes = function( obj ) {
 
 					
 					
-					var element = jQuery( '#' + tid ).val();
+					const element = jQuery( '#' + tid ).val();
 					if ( element != '' ) {
                         
                         //image or video preview
@@ -523,7 +525,7 @@ var UixCustomMetaboxes = function( obj ) {
                     $this.off( 'click.UixUpload' ).on( 'click.UixUpload', function( e ) {
                         e.preventDefault();
 
-                        var upload_frame, 
+                        let upload_frame, 
                             attachment,
                             $thisClick = jQuery( this );
 
@@ -553,7 +555,7 @@ var UixCustomMetaboxes = function( obj ) {
 								imgReg.lastIndex = 0;	
 
                             
-								var element = attachment.url;
+								const element = attachment.url;
 						
 								//image or video preview
 								if ( videoReg.test( element ) ) {
@@ -630,32 +632,41 @@ var UixCustomMetaboxes = function( obj ) {
 				jQuery( selector ).each(function(){
 
 					
-					var $this       = jQuery( this ),
+					const $this     = jQuery( this ),
 						$addButton  = $this.find( '.uix-cmb__custom-attributes-field__addbtn' ), //The add button selector ID or class
 						wrapperID   = '#' + $this.data( 'append-id' ), //The field wrapper ID or class 
-					    x           = 1,
 						maxField    = max,
 						fieldHTML   = $this.data( 'tmpl' );
-
+					
+					let x = 1;
+					
+					
 					//Prevent duplicate function assigned
 					$addButton.off( 'click.UixCustomMetaboxes_customAttrs_add' ).on( 'click.UixCustomMetaboxes_customAttrs_add', function( e ) {
 						e.preventDefault();
                         
-                        var $btn = jQuery( this );
+                        const $btn = jQuery( this );
                       
 						if( x < maxField ){ 
 							x++;
 
-                            var uuid = UixGUID.create();
+                            const uuid = UixGUIDCreate();
                             
 							jQuery( wrapperID ).append( fieldHTML.replace(/\{id\}/g, uuid ) );
                             jQuery.when( jQuery( wrapperID ).length > 0 ).then( function() {
                                 
-                                //Initialize Select of Toggle
+                                
                                 if ( typeof $btn.data( 'type' ) !== typeof undefined ) {
+									
+									//Initialize Select of Toggle
                                    jQuery( '.uix-cmb__text--div--toggle__simple-sel' ).UixToggleSimpleSelectInit({ type: $btn.data( 'type' ) });
-                                }
-                                UixCustomMetaboxesInit.toggleSelect();
+									
+                                } else {
+									
+									//Initialize Select of Toggle (include parent category)
+									jQuery( '.uix-cmb__wrapper.uix-cmb__custom-attributes-field.uix-cmb__custom-attributes-field--customlevel' ).UixToggleSelectInit();
+								}
+                                
                                 
                                 
 
@@ -671,7 +682,12 @@ var UixCustomMetaboxes = function( obj ) {
                             });
                             
 						}
-                        
+						
+						
+						//Fold all items
+						jQuery( '.uix-cmb__text--div--toggle__trigger' ).parent().removeClass( 'active' );
+						jQuery( '.uix-cmb__text--div--toggle__trigger' ).removeClass( 'active' );
+
                         
 						
 						return false;
@@ -688,7 +704,7 @@ var UixCustomMetaboxes = function( obj ) {
                         e.stopImmediatePropagation();
                         
                         if ( confirm( uix_custom_metaboxes_lang.delete_confirm_text ) ) {
-                            var $li = jQuery( this ).closest( '.uix-cmb__text--div' );
+                            const $li = jQuery( this ).closest( '.uix-cmb__text--div' );
 
                             if ( jQuery( '.uix-cmb__custom-attributes-field .uix-cmb__text--div' ).length == 1 ) {
                                 $li.find( 'input' ).val( '' );
@@ -754,7 +770,7 @@ var UixCustomMetaboxes = function( obj ) {
 
 
 //--------
-var UixCustomMetaboxesInit = new UixCustomMetaboxes();
+const UixCustomMetaboxesInit = new UixCustomMetaboxes();
 UixCustomMetaboxesInit.getInstance(); 
 
 
@@ -780,13 +796,13 @@ UixCustomMetaboxesInit.getInstance();
 		
 		if ( typeof(tinymce) !== 'undefined' ) {
 			
-			tinymce.PluginManager.add('customCode', function(editor) {
+			tinymce.PluginManager.add('uix_cmb_customcode', function(editor) {
 				function showDialog() {
-					var win = editor.windowManager.open({
-						title: "Source code",
+					const win = editor.windowManager.open({
+						title: uix_custom_metaboxes_lang.ed_sourcecode_title,
 						body: {
 							type: 'textbox',
-							name: 'customCode',
+							name: 'uix_cmb_customcode',
 							multiline: true,
 							minWidth: editor.getParam("code_dialog_width", 600),
 							minHeight: editor.getParam("code_dialog_height", Math.min(tinymce.DOM.getViewPort().h - 200, 500)),
@@ -801,7 +817,7 @@ UixCustomMetaboxesInit.getInstance();
 
 							if(editor.readonly != true){
 								editor.undoManager.transact(function() {
-									editor.setContent(e.data.customCode);
+									editor.setContent(e.data.uix_cmb_customcode);
 								});
 							}
 
@@ -814,24 +830,24 @@ UixCustomMetaboxesInit.getInstance();
 
 					// Gecko has a major performance issue with textarea
 					// contents so we need to set it when all reflows are done
-					win.find('#customCode').value(editor.getContent({source_view: true}));
+					win.find('#uix_cmb_customcode').value(editor.getContent({source_view: true}));
 
 					//disable source code editing while in readonly mode
 					if(editor.readonly){
-						var id = win.find('#customCode')[0]._id;
-						$(win.find('#customCode')[0]._elmCache[id]).prop('readonly', true);
+						const id = win.find('#uix_cmb_customcode')[0]._id;
+						$(win.find('#uix_cmb_customcode')[0]._elmCache[id]).prop('readonly', true);
 					}
 
 					//This was an attempt to disable the "save" button but nothing I've tried is working. 
 					//So far we are good because the user cannot modify the source code anyway
-					/*for (var property in win.find('#code')[0].rootControl.controlIdLookup) {
+					/*for (let property in win.find('#code')[0].rootControl.controlIdLookup) {
 						if (win.find('#code')[0].rootControl.controlIdLookup.hasOwnProperty(property)) {
-							var realProperty = win.find('#code')[0].rootControl.controlIdLookup[property];
-							var element = $($(realProperty._elmCache[realProperty._id])[0].children[0]);
+							const realProperty = win.find('#code')[0].rootControl.controlIdLookup[property];
+							const element = $($(realProperty._elmCache[realProperty._id])[0].children[0]);
 							if(element.prop('type') == 'button'){
 								$(element).prop('disabled', true);
-								console.log(element.attr('disabled'));
-								console.log(element.prop('disabled'));
+								//console.log(element.attr('disabled'));
+								//console.log(element.prop('disabled'));
 							}
 						}
 					}*/
@@ -839,16 +855,16 @@ UixCustomMetaboxesInit.getInstance();
 
 				editor.addCommand("mceCustomCodeEditor", showDialog);
 
-				editor.addButton('customCode', {
+				editor.addButton('uix_cmb_customcode', {
 					icon: 'code',
-					tooltip: 'Source code',
+					tooltip: uix_custom_metaboxes_lang.ed_sourcecode_title,
 					onclick: showDialog,
-					classes:'customCode'
+					classes:'uix_cmb_customcode'
 				});
 
-				editor.addMenuItem('customCode', {
+				editor.addMenuItem('uix_cmb_customcode', {
 					icon: 'code',
-					text: 'Source code',
+					text: uix_custom_metaboxes_lang.ed_sourcecode_title,
 					context: 'tools',
 					onclick: showDialog
 				});
@@ -869,28 +885,28 @@ UixCustomMetaboxesInit.getInstance();
  * @param  {string} toolbar       - Toolbar of editor.
  * @param  {number} height        - Set editor height.
  * @return {void}                 - The constructor.
- */
+ */	
 ( function ( $ ) {
 	'use strict';
     $.fn.UixMCEEditor = function( options ) {
+		
  
         // This is the easiest way to have default options.
-        var settings = $.extend({
+        const settings = $.extend({
 			speed    : 0.25,
 			bg       : { enable: true, xPos: '50%' }
         }, options );
  
         this.each( function() {
 	
-            var id       = settings.id, 
+            const id       = settings.id, 
                 toolbar  = settings.toolbar, 
                 height   = settings.height;
 			
-			
+	
             if( typeof id !== typeof undefined ) {
 				
-				var vid = id.toString().replace( '-editor', '' );
-                
+				
 				tinyMCE.execCommand( 'mceRemoveEditor', true, id );
 				tinymce.init({
 					//tinyMCE Image Displaying Correctly, but not Updating src
@@ -905,14 +921,28 @@ UixCustomMetaboxesInit.getInstance();
 					height : height,
 					menubar: false,
 					extended_valid_elements: "a[*],svg[*],defs[*],pattern[*],desc[*],metadata[*],g[*],mask[*],path[*],line[*],marker[*],rect[*],circle[*],ellipse[*],polygon[*],polyline[*],linearGradient[*],radialGradient[*],stop[*],image[*],view[*],text[*],textPath[*],title[*],tspan[*],glyph[*],symbol[*],switch[*],use[*]",
-					plugins: 'textcolor image media hr customCode colorpicker lists fullscreen',		
+					plugins: 'textcolor image media hr uix_cmb_customcode colorpicker lists fullscreen',		
 				    toolbar: toolbar,
 					setup:function( ed ) {
+						
+					   //Avoid formatting all contents of <textarea> 
+					   const $sync = jQuery( 'textarea#' + id + '-sync' );
+					   ed.on( 'change', function(e) {
+						   
+						   //Dynamically filter content in TinyMCE
+						   var newvalue = ed.getContent()
+														 .replace(/\r?\n/gm, '' )
+														 .replace(/\.\.\/wp-content\/uploads\//g, uix_custom_metaboxes_lang.upload_dir_url );
+
+						   
+						   
+						   $sync.val( newvalue ).trigger( 'change' );
+					   });
 						
 						
                         //Add media button
 						function uix_mce_insertImage() {
-							var upload_frame;
+							let upload_frame;
 							if( upload_frame ){
 								upload_frame.open();
 								return;
@@ -925,13 +955,13 @@ UixCustomMetaboxesInit.getInstance();
 								multiple: false
 							} );
 							upload_frame.on( 'select',function() {
-								var attachment;
+								let attachment;
 								attachment = upload_frame.state().get( 'selection' ).first().toJSON();
 								
 								//
-								var videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
-								var imgReg   = /^.*\.(gif|jpe?g|tiff|png|webp|bmp)$/gi;
-								var placeholderImg = '<svg width="135" x="0px" y="0px" viewBox="0 0 102.55 122.88" transform="scale(0.7) translate(-30 -55)"><path fill="#333" d="M102.55,122.88H0V0h77.66l24.89,26.44L102.55,122.88L102.55,122.88z M25.51,53.72h15.67V43.33H25.51V32.56 l15.67,0V21.85H25.51V11.08h15.67V7.83H8.43v106.23h85.77V32.36H71.52V7.83H56.86v3.29H41.18v10.71l15.68,0V32.6H41.18v10.49h15.68 v24.99c0,7.9-6.46,14.36-14.36,14.36l-2.63,0c-7.9,0-14.36-6.46-14.36-14.36V53.72L25.51,53.72z M36.28,63.07h10.28v4.06 c0,2.23-2.12,4.05-4.71,4.05h-0.86c-2.59,0-4.71-1.83-4.71-4.05V63.07L36.28,63.07L36.28,63.07z"/></svg>';
+								const videoReg = /^.*\.(avi|AVI|wmv|WMV|flv|FLV|mpg|MPG|mp4|MP4)$/gi;
+								const imgReg   = /^.*\.(gif|jpe?g|tiff|png|webp|bmp)$/gi;
+								const placeholderImg = '<svg width="135" x="0px" y="0px" viewBox="0 0 102.55 122.88" transform="scale(0.7) translate(-30 -55)"><path fill="#333" d="M102.55,122.88H0V0h77.66l24.89,26.44L102.55,122.88L102.55,122.88z M25.51,53.72h15.67V43.33H25.51V32.56 l15.67,0V21.85H25.51V11.08h15.67V7.83H8.43v106.23h85.77V32.36H71.52V7.83H56.86v3.29H41.18v10.71l15.68,0V32.6H41.18v10.49h15.68 v24.99c0,7.9-6.46,14.36-14.36,14.36l-2.63,0c-7.9,0-14.36-6.46-14.36-14.36V53.72L25.51,53.72z M36.28,63.07h10.28v4.06 c0,2.23-2.12,4.05-4.71,4.05h-0.86c-2.59,0-4.71-1.83-4.71-4.05V63.07L36.28,63.07L36.28,63.07z"/></svg>';
 								
 								
 								//The RegExp object keeps track of the lastIndex where a match occurred, so on 
@@ -940,7 +970,7 @@ UixCustomMetaboxesInit.getInstance();
 								imgReg.lastIndex = 0;	
 								
 								
-								var element = attachment.url;
+								const element = attachment.url;
 								
 								//image or video preview
 								if ( videoReg.test( element ) ) {
@@ -972,11 +1002,12 @@ UixCustomMetaboxesInit.getInstance();
 							tooltip: uix_custom_metaboxes_lang.ed_link_title,
 							onclick: function (e) {
 								
-								var urlRegex     = /<a href="(.*?)"/g,
+								const urlRegex     = /<a href="(.*?)"/g,
 									urlMatch     = '',
 									selectedtxt  = ed.selection.getContent(),
-									curlabel     = selectedtxt.replace(/<a\b[^>]*>/i, '' ).replace(/<\/a>/i, '' ),
-									curlinkURL   = '';
+									curlabel     = selectedtxt.replace(/<a\b[^>]*>/i, '' ).replace(/<\/a>/i, '' );
+								
+								let	curlinkURL   = '';
 								
 								while( urlMatch = urlRegex.exec( selectedtxt ) ){
 									curlinkURL = urlMatch[1];
@@ -1016,7 +1047,7 @@ UixCustomMetaboxesInit.getInstance();
 									],
 									onsubmit: function( e ) {
 										
-										var curtxt      = ( e.data.link_text != '' ) ? e.data.link_text : e.data.link_url,
+										const curtxt      = ( e.data.link_text != '' ) ? e.data.link_text : e.data.link_url,
 											target      = ( e.data.link_target ) ? 'target="_blank"' : '';
 										
 										ed.insertContent( '<a href="' + e.data.link_url + '" ' + target + '>' + curtxt + '</a>');
@@ -1032,7 +1063,7 @@ UixCustomMetaboxesInit.getInstance();
 							tooltip: uix_custom_metaboxes_lang.ed_unlink_title,
 							onclick: function (e) {
 								
-								var selectedtxt  = ed.selection.getContent();
+								const selectedtxt  = ed.selection.getContent();
 								selectedtxt = selectedtxt.replace(/<a\b[^>]*>/i, '' ).replace(/<\/a>/i, '' );
 								ed.insertContent(  selectedtxt );
 								
@@ -1101,7 +1132,11 @@ UixCustomMetaboxesInit.getInstance();
 									],
 									onsubmit: function( e ) {
 										
-										ed.insertContent( '<pre class="brush: ' + e.data.lang + ';"">' + e.data.content + '</pre>');
+										var _content = e.data.content.replace(/(\r)*\n/g, "<br>" );
+
+										ed.insertContent( '<pre data-language="' + e.data.lang + '" class="' + e.data.lang + ' brush: ' + e.data.lang + ';">' + _content + '</pre>');
+										
+										
 									}
 								});
 							}
@@ -1130,7 +1165,7 @@ UixCustomMetaboxesInit.getInstance();
     $.fn.UixEditorInit = function( options ) {
  
         // This is the easiest way to have default options.
-        var settings = $.extend({
+        const settings = $.extend({
             id      : '', 
             toolbar : '', 
             height  : '',
@@ -1139,7 +1174,7 @@ UixCustomMetaboxesInit.getInstance();
  
         this.each( function() {
 	
-            var $this    = $( this ),
+            const $this    = $( this ),
                 id       = settings.id, 
                 toolbar  = settings.toolbar, 
                 height   = settings.height;
@@ -1150,7 +1185,7 @@ UixCustomMetaboxesInit.getInstance();
             }
 			
             if ( $this.attr( 'aria-init' ) == 0 ) {
-                var _textarea = $this.find( 'textarea' );
+                const _textarea = $this.find( 'textarea' );
                 $( document ).UixMCEEditor({
                     id      : _textarea.attr( 'id' ), 
                     toolbar : _textarea.data( 'editor-toolbar' ), 
@@ -1172,7 +1207,7 @@ UixCustomMetaboxesInit.getInstance();
 
 /*! 
  * ************************************
- * Initialize Select of Toggle
+ * Initialize Select of Toggle (include parent category)
  *************************************
  */	
 
@@ -1181,8 +1216,8 @@ UixCustomMetaboxesInit.getInstance();
     $.fn.UixToggleSelectInit = function( options ) {
  
         // This is the easiest way to have default options.
-        var settings = $.extend({
-            wrapper           : '.uix-cmb__text--div--toggle',
+        const settings = $.extend({
+            wrapper           : '.uix-cmb__text--div--toggle.uix-cmb__text--div--toggle-customlevel',
             wrapperChild      : '.uix-cmb__text--div--toggle--child',
             fieldSelect       : '.uix-cmb__text--div--toggle__sel', 
             fieldId           : '.uix-cmb__text--div--toggle__id',
@@ -1194,127 +1229,531 @@ UixCustomMetaboxesInit.getInstance();
         this.each( function() {
             
             
-	
-            $( this ).find( settings.wrapper ).each( function()  {
-                
-                var $this = $( this );
-             
-                //Get the root & child container styles
-                var el = '';
-                var elChild = '';
-                var elArr = $this[0].classList;
-                var $sel = $this.find( settings.fieldSelect );
-    
 
-                if ( elArr && elArr.length ) {
-                    elArr.forEach( function( element ) {
-                        if ( element.indexOf( '--child' ) < 0 ) {
-                            el += '.' + element;
-                        } else {
-                           elChild += '.' + element;
-                        }
+			// Step (1)
+			// Add position attribute to each list
+			//---------------
+			const listItemsPosition = [];
+			const $listItemsContainer = $( settings.wrapper ).first().closest( 'td' );
+			$( settings.wrapper ).each( function( i )  {
+				$( this ).attr('data-position', i);
 
-                    });    
-                }
+				listItemsPosition.push({
+					"id": $( this ).find( settings.fieldId ).val(),
+					"position": i
+				});
+			});	
 
 
-                //get child options value
-                var childVal = [];
-                $( el ).closest( 'td' ).find( elChild ).each( function() {
-
-                    var _val = $( this ).find( settings.fieldId ).val();
-                    if ( _val != '' && typeof _val !== typeof undefined ) {
-                        childVal.push( _val );
-                    }
-                });     
+			//console.log( 'items position: ', listItemsPosition );
 
 
 
-                //push options
-                var options = '<option value="">'+uix_custom_metaboxes_lang.select_empty_text+'</option>';
-                $( el ).closest( 'td' ).find( el ).each( function() {
-
-                    var _id = $( this ).find( settings.fieldId ).val(),
-                        _val = $( this ).find( settings.fieldTitle ).val();
-
-                    if ( _id != '' && typeof _id !== typeof undefined ) {
-                        options += '<option value="'+_id+'">'+_val+'</option>';
-                    }
-
-                });     
+			// Step (2)
+			// Traverse all the item IDs in the form as `all options` of select
+			//---------------
+			const formData = $( 'form#post' ).serializeArray();
+			const variableData = Object.assign([], formData);
+			//console.log('orginal data: ', formData);
 
 
-                $sel.html( options ).promise().done( function(){
-                    var curFieldID = $this.find( settings.fieldId ).val(),
-                        defaultVal = $this.find( settings.fieldDefaultValue ).val();
+			// Step (3)
+			// Extract the selected options, filter other form types, and create a new array
+			//---------------
 
-                    //init options
-                    $sel.find( '> option' ).each( function() {
+			// Traverse all titles
+			let _titles = [];
 
-                        var $option = $( this ),
-                            curOptionVal = $option.attr( 'value' );
-
-                        //remove current option
-                        if ( curFieldID == this.value ) {
-                            $option.remove();
-                        }
-
-                    }); 
+			formData.forEach(function(item, index){
+				if ( item.name.indexOf( '_attrs_title[]' ) >= 0 ) {
+					_titles.push(item.value);
+				}
+			});
 
 
-                    setTimeout( function() {
-                        $( el ).closest( 'td' ).find( settings.fieldSelect ).each( function() {
-                            var _sel = $( this );
+			// Get the default parent ID (if it exists)
+			let _parentIDs = [];
 
-                            //remove child options
-                            childVal.forEach( function( element ) {
-                                _sel.find( '> option[value="'+element+'"]' ).remove();
-                            }); 
-
-
-                        });                  
-                    }, 100 );
+			formData.forEach(function(item, index){
+				if ( item.name.indexOf( '_attrs_parent[]' ) >= 0 ) {
+					_parentIDs.push(item.value);
+				}
+			});
 
 
-                    //set default value for select
-                    $sel.val( defaultVal );    
+			//
+			let selectAllIDsRes = [];
+
+			formData.forEach(function(item, index){
+				if ( item.name.indexOf( '_attrs_id[]' ) >= 0 ) {
+					selectAllIDsRes.push(
+					   {  
+						  "id": item.value
+					   }
+					);
+				}
+			});
 
 
-                    //remove options when it has child
-                    $( el ).closest( 'td' ).find( el ).each( function() {
-
-                        if ( $( this ).find( settings.fieldId ).val() == defaultVal ) {
-                            $( this ).find( settings.fieldSelect + '> option' ).each( function() {
-                                if ( $( this ).attr( 'value' ) != '' ) {
-                                    $( this ).remove();
-                                }
-
-                            });  
-                        }
-                    });  
+			selectAllIDsRes.forEach(function(item, index){
+				selectAllIDsRes[index].name = _titles[index];
+				selectAllIDsRes[index].parent = _parentIDs[index];
+			});
 
 
-                    //Store temporary default value
-                    $sel.off( 'change.UixToggleSelect' ).on( 'change.UixToggleSelect', function() {
+			//console.log('variable all data', selectAllIDsRes);
 
-                        var childClassName = settings.wrapperChild.replace( '.', '' );
-                        $this.find( settings.fieldDefaultValue ).val( $( this ).val() );
-                        if ( $( this ).val() != '' ) {
-                            $( this ).closest( settings.wrapper ).addClass( childClassName );
-                        } else {
-                            $( this ).closest( settings.wrapper ).removeClass( childClassName );
-                        }
-
-
-                    }); 
+			/*
+			Target data structure (selectAllIDsRes): 
+			[
+				{id: "1", name: "Title 1", parent: ""},
+				{id: "2", name: "Title 2", parent: ""},
+				{id: "3", name: "Title 3", parent: "5"},
+				{id: "4", name: "Title 4", parent: "2"},
+				{id: "5", name: "Title 5", parent: ""},
+				{id: "6", name: "Title 6", parent: "5"},
+				{id: "7", name: "Title 7", parent: ""},
+				{id: "8", name: "Title 8", parent: "5"},
+				{id: "9", name: "Title 9", parent: ""}
+			]
+			*/
 
 
 
-                });//end $sel.html 
-                
+			// Step (4)
+			// If there is already a parent, option cannot appear in the root list
+			//---------------
+			const filterData = function(allData) {
 
-            });//end each $( this ).find( settings.wrapper )
+				let newData = Object.assign([], allData);
+				allData.forEach(function(item, k){
+					for (let i = 0; i < newData.length; i++) {
+						if (newData[i].parent != '') {
+							newData.splice(i, 1);
+						}
+					}
+				});
 
+				return newData;
+			};
+
+			const variableDefaultResDataFilter = filterData(selectAllIDsRes);
+			//console.log('variable data (new)(default): ', variableDefaultResDataFilter);
+
+			/*
+			Target data structure (variableDefaultResDataFilter): 
+			[
+				{id: "1", name: "Title 1", parent: ""},
+				{id: "2", name: "Title 2", parent: ""},
+				{id: "5", name: "Title 5", parent: ""},
+				{id: "7", name: "Title 7", parent: ""},
+				{id: "9", name: "Title 9", parent: ""}
+			]
+			*/
+
+
+
+
+			// Step (5)
+			// Construct the select HTML structure and initialize it (do not trigger in the change event)
+			//---------------
+
+			// Update appearance for each item
+			const updateAppearance = function( data, stylesAndOrderUpdate ) {
+
+				// ++++++++++++++++++++++++++++
+				// sort
+				// ++++++++++++++++++++++++++++
+
+				//get the grouped data by parent id
+				const groupDataSortByParentID = [];
+				data.forEach(function(item1, i){
+					data.forEach(function(item2, j){
+						if ( item1.id === item2.parent ) groupDataSortByParentID.push({
+							"id": item2.id, 
+							"name": item2.name, 
+							"parent": item2.parent
+						});
+					});
+
+				});
+				//console.log('groupDataSortByParentID: ', groupDataSortByParentID);
+				/*
+				Target data structure (groupDataSortByParentID): 
+				[
+					{id: "4", name: "Title 4", parent: "2"},
+					{id: "3", name: "Title 3", parent: "5"},
+					{id: "6", name: "Title 6", parent: "5"},
+					{id: "8", name: "Title 8", parent: "5"}
+				]
+				*/
+
+
+				//combine all data
+				const variableResDataSortAll = [];
+				let allDataWithoutParentIds = Object.assign([], data);
+
+
+				//delete json
+				groupDataSortByParentID.forEach(function(childItem, k){
+					for (let i = 0; i < allDataWithoutParentIds.length; i++) {
+						if (allDataWithoutParentIds[i].id == childItem.id) {
+							allDataWithoutParentIds.splice(i, 1);
+						}
+					}
+				});
+
+
+				//console.log('allDataWithoutParentIds: ', allDataWithoutParentIds);
+
+				/*
+				Target data structure (allDataWithoutParentIds): 
+				[
+					{id: "1", name: "Title 1", parent: ""},
+					{id: "2", name: "Title 2", parent: ""},
+					{id: "5", name: "Title 5", parent: ""},
+					{id: "7", name: "Title 7", parent: ""},
+					{id: "9", name: "Title 9", parent: ""}
+				]
+				*/
+
+
+				allDataWithoutParentIds.forEach(function(item, i){
+
+					variableResDataSortAll.push(item);
+
+					groupDataSortByParentID.forEach(function(childItem, i){
+						if ( childItem.parent === item.id ) {
+							variableResDataSortAll.push( childItem );
+						}
+					});
+
+
+				});
+
+				//console.log('variable all data (sort list): ', variableResDataSortAll);
+
+				
+				
+				/*
+				Target data structure (variableResDataSortAll): 
+				[
+					{id: "1", name: "Title 1", parent: ""},
+					{id: "2", name: "Title 2", parent: ""},
+					{id: "4", name: "Title 4", parent: "2"},
+					{id: "5", name: "Title 5", parent: ""},
+					{id: "3", name: "Title 3", parent: "5"},
+					{id: "6", name: "Title 6", parent: "5"},
+					{id: "8", name: "Title 8", parent: "5"},
+					{id: "7", name: "Title 7", parent: ""},
+					{id: "9", name: "Title 9", parent: ""}	
+				]
+				*/	
+				
+
+
+
+				// Change the order of html elements through the `data-position` attribute
+				const listItemsNewPosition = Object.assign([], listItemsPosition);
+				listItemsNewPosition.forEach(function(oldItem, i){
+					variableResDataSortAll.forEach(function(newItem, j){
+						if ( oldItem.id === newItem.id ) {
+							oldItem.position = j;
+						}
+					});
+
+				});
+
+				//console.log( 'items position (new): ', listItemsNewPosition);
+
+				/*
+				Target data structure (listItemsNewPosition): 
+				[
+					{id: "1", position: 0},
+					{id: "2", position: 1},
+					{id: "3", position: 4},
+					{id: "4", position: 2},
+					{id: "5", position: 3},
+					{id: "6", position: 5},
+					{id: "7", position: 7},
+					{id: "8", position: 6},
+					{id: "9", position: 8}
+				]	
+
+				*/	
+
+
+				// Update the new `data-position` attribute to the HTML element
+				listItemsNewPosition.forEach(function(item, i){
+					const $wrapper = $( settings.fieldId + '[value="'+item.id+'"]').closest( settings.wrapper );
+					$wrapper.attr( 'data-position', item.position );
+				});
+
+
+				// Sort HTML elements based on data attribute value
+				if ( stylesAndOrderUpdate ) {
+					
+					const listItems = [];
+					$( settings.wrapper ).each( function( i )  {
+						listItems.push( $( this ) );
+					});	
+
+					listItems.sort(function (a, b) {
+						return parseFloat( $(b).attr('data-position') ) < parseFloat( $(a).attr('data-position') ) ? 1 : -1;
+					});
+
+
+					listItems.forEach(function(item, i){
+						item.appendTo( $listItemsContainer );
+					});
+					
+					
+
+					//Initialize Editor
+					setTimeout(function() {
+						UixCustomMetaboxesInit.editor( true );   
+					}, 100);
+					
+				}//endif stylesAndOrderUpdate
+
+
+
+
+				
+				// ++++++++++++++++++++++++++++
+				// styles
+				// ++++++++++++++++++++++++++++
+				if ( stylesAndOrderUpdate ) {
+					
+					data.forEach(function(item, index){
+
+						const pid = item.parent;
+						const $wrapper = $( settings.fieldId + '[value="'+item.id+'"]').closest( settings.wrapper );
+						const childClassName = settings.wrapperChild.replace( '.', '' );
+						if ( pid != '' ) {
+							$wrapper.addClass( childClassName );
+						} else {
+							$wrapper.removeClass( childClassName );
+						}	
+
+					});
+					
+				}//endif stylesAndOrderUpdate
+
+				
+				
+		
+				// ++++++++++++++++++++++++++++
+				// The data stored in PHP uses the reserved method
+				// ++++++++++++++++++++++++++++
+				
+				// reversed method --> allDataWithoutParentIds
+				const allDataWithoutParentIdsReversed = Object.assign([], allDataWithoutParentIds);
+				const variableResDataSortAllReversed = [];
+				allDataWithoutParentIdsReversed.reverse();
+				
+				allDataWithoutParentIdsReversed.forEach(function(item, i){
+
+					variableResDataSortAllReversed.push(item);
+
+			
+					// Loop through an array backward
+					const groupDataSortByParentIDReversed = groupDataSortByParentID.slice().reverse();		
+					groupDataSortByParentIDReversed.forEach(function(childItem, i){
+						if ( childItem.parent === item.id ) {
+							variableResDataSortAllReversed.push( childItem );
+						}
+					});
+
+
+				});
+				
+				//console.log('variable all data (sort list)(reversed): ', variableResDataSortAllReversed);
+				
+				
+				
+				
+				//Repackage all the data of the form fields and save it to the database of the PHP 
+				const createPHPData = function( data ) {
+					const phpData = [];
+					data.forEach(function(item, j){
+						const $wrapper = $( settings.fieldId + '[value="'+item.id+'"]').closest( settings.wrapper );
+						const fieldData = $wrapper.find( '*' ).serializeArray();
+						
+
+						// Traverse all field to match PHP array
+						const phpDataItem = {};
+						fieldData.forEach(function(item, index){
+							if ( item.name.indexOf( '_attrs_title[]' ) >= 0 ) phpDataItem.name = item.value;
+							if ( item.name.indexOf( '_attrs_id[]' ) >= 0 ) phpDataItem.id = item.value;
+							if ( item.name.indexOf( '_attrs_parent[]' ) >= 0 ) phpDataItem.parent = item.value;
+							if ( item.name.indexOf( '_attrs_desc[]' ) >= 0 ) phpDataItem.desc = item.value;
+							if ( item.name.indexOf( '_attrs_classname[]' ) >= 0 ) phpDataItem.classname = item.value;
+							if ( item.name.indexOf( '_attrs_value_sync[]' ) >= 0 ) phpDataItem.value = item.value;
+						});
+
+						
+						phpData.push( phpDataItem );
+
+					});	
+			
+					return JSON.stringify( phpData );
+				};
+				
+				console.log( '"Multiple Content Area" data: ', variableResDataSortAllReversed, '"Multiple Content Area" data(reversed): ', variableResDataSortAll );
+				
+				
+				$listItemsContainer.find( 'textarea.uix-cmb__custom-attributes-field__resultData' ).val( createPHPData(variableResDataSortAllReversed) );
+
+				$listItemsContainer.find( 'textarea.uix-cmb__custom-attributes-field__resultReverseData' ).val( createPHPData(variableResDataSortAll) );
+				
+				
+
+			};
+
+
+			// Generate HTML code of select control
+			const selectBuilder = function( data, parentID, removeID ) {
+				let html_code = '<select class="uix-cmb__text--fullwidth uix-cmb__text--div--toggle__sel">';
+				html_code += '<option value=""> - </option>';
+				data.forEach(function(item, index){
+					const selected = parentID ? (item.id === parentID ? 'selected' : '') : '';
+
+					// If the current option and ID overlap, remove the current option
+					if ( removeID && removeID != item.id ) {
+						html_code += '<option value="' + item.id + '" '+selected+'>' + item.name + '</option>';
+					}
+
+				});
+
+				html_code += '</select>';	
+
+				return html_code;
+			};
+
+
+			// Update select controls and push to each list
+			const updateSelects = function(dataFilter, dataAll) {
+
+
+				// Get items with parent ID
+				const hasParentIDs = [];
+				for (let i = 0;i < dataAll.length; i++) {
+					for (let j = 0;j < dataAll.length; j++) {
+						//console.log( dataAll[i].id + '==== ' + dataAll[j].parent);
+						if ( dataAll[i].id == dataAll[j].parent ) {
+							hasParentIDs.push( dataAll[j].parent );
+						}
+					}
+				}
+
+				const hasParentIDsRes = [];
+				for (let i = 0; i < hasParentIDs.length; i++) {
+					if (hasParentIDsRes.indexOf(hasParentIDs[i]) === -1) {
+						hasParentIDsRes.push(hasParentIDs[i]);
+					}
+				}
+
+
+
+				//
+				$( settings.wrapper ).each( function()  {
+
+					const $wrapper = $( this );
+					const _cid = $wrapper.find( settings.fieldId ).val();
+					const _pid = $wrapper.find( settings.fieldDefaultValue ).val();
+					let _code = selectBuilder( dataFilter, false, _cid );
+
+
+					// If there is a parent ID, the parent option is empty 
+					for (let k = 0; k < hasParentIDsRes.length; k++) {
+						if (hasParentIDsRes[k] === _cid ) {
+							let _codeEmpty = '<select class="uix-cmb__text--fullwidth uix-cmb__text--div--toggle__sel">';
+							_codeEmpty += '<option value=""> - </option>';
+							_codeEmpty += '</select>';	
+							_code = _codeEmpty;	
+
+							break;
+						}
+					}
+
+
+					//
+					$wrapper.find( '.uix-cmb__text--div--toggle__toggleSelect__append' ).html( _code ).promise().done( function(){
+
+						//init default value for select control
+						$wrapper.find( '.uix-cmb__text--div--toggle__toggleSelect__append > select' ).val( _pid );
+
+					});
+				});	
+
+
+				//update appearance for each item (include styles & order HTML elements)
+				updateAppearance( dataAll, true );
+
+
+
+			};
+
+			updateSelects( variableDefaultResDataFilter, selectAllIDsRes );
+
+
+			
+			
+
+			// Step (6)
+			// Change event, change json structure (do not trigger dom)
+			//---------------
+			const updateData = function(data, curID, targetValue) {
+
+				//console.log('data: ', data);
+				for (let i = 0; i < data.length; i++) {
+					if (data[i]['id'] == curID) {
+						data[i].parent = targetValue;
+					}
+				}
+				return data;
+			};
+
+			//
+			$( document ).off( 'change.UixToggleSelect' ).on( 'change.UixToggleSelect', settings.wrapper + ' .uix-cmb__text--div--toggle__toggleSelect__append > select', function() {
+
+				const parentID = $( this ).val();
+				const $wrapper = $( this ).closest( settings.wrapper );
+				const curID = $wrapper.find( settings.fieldId ).val();
+				const resData = updateData( selectAllIDsRes, curID, parentID );
+				let variableResData = Object.assign([], resData);
+
+				$wrapper.find( settings.fieldDefaultValue ).val( parentID );
+
+		
+				//console.clear();
+				//console.log('variable all data (changed by select): ', resData);
+
+
+				//filter data
+				const variableResDataFilter = filterData(variableResData);
+				//console.log('variable data (new): ', variableResDataFilter);
+
+				//update options
+				updateSelects( variableResDataFilter, resData );
+
+
+
+			}); 
+
+
+			
+			//
+			$( document ).off( 'change.UixInputTextarea' ).on( 'change.UixInputTextarea', settings.wrapper + ' .uix-cmb__text--div--toggle__title, ' + settings.wrapper + ' .uix-cmb__text--div--toggle__classname, ' + settings.wrapper + ' .uix-cmb__text--div--toggle__textarea, ' + settings.wrapper + ' textarea[data-enter-value="true"]', function() {
+
+				//update appearance for each item
+				updateAppearance( selectAllIDsRes, false );
+
+			}); 
+
+			
+			
             
 		});
  
@@ -1330,23 +1769,23 @@ UixCustomMetaboxesInit.getInstance();
  * Initialize Simple Select of Toggle
  *************************************
  */	
-
 ( function ( $ ) {
 	'use strict';
     $.fn.UixToggleSimpleSelectInit = function( options ) {
  
         // This is the easiest way to have default options.
-        var settings = $.extend({ 
+        const settings = $.extend({ 
             type              : 'file',
-            wrapper           : '.uix-cmb__text--div--toggle',
+            wrapper           : '.uix-cmb__text--div--toggle:not(.uix-cmb__text--div--toggle-customlevel)',
             trigger           : '.uix-cmb__text--div--toggle__trigger'
         }, options );
  
         this.each( function( index ) {
             
-            var $this = $( this ),
-                $selInput = $this.prev( '[type="hidden"]' ),
-                defaultVal = $selInput.val();
+            const $this = $( this ),
+                $selInput = $this.prev( '[type="hidden"]' );
+			
+            let defaultVal = $selInput.val();
             
             
             if ( defaultVal == '' ) {
@@ -1354,8 +1793,8 @@ UixCustomMetaboxesInit.getInstance();
             }
             
             //Get the root container style
-            var el = '';
-            var elArr = $this[0].classList;
+            let el = '';
+            const elArr = $this[0].classList;
 
             if ( elArr && elArr.length ) {
                 elArr.forEach( function( element ) {
@@ -1365,7 +1804,7 @@ UixCustomMetaboxesInit.getInstance();
             
             
             //Determine if it is the last element
-            var last = ( index == $( el ).length - 1 ) ? true : false;
+            const last = ( index == $( el ).length - 1 ) ? true : false;
             
             
             if ( settings.type == 'html' && last ) {
@@ -1418,42 +1857,13 @@ UixCustomMetaboxesInit.getInstance();
  * @return {String}                        - The globally-unique identifiers.
  *************************************
  */	
-var UixGUID = UixGUID || ( () => {
-    function t() {
-        do {
-            var x = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,
-            function(t) {
-                var x = 16 * Math.random() | 0;
-                return ("x" == t ? x: 3 & x | 8).toString(16)
-            })
-        } while (! t . register ( x ));
-        return x;
-    }
-
-    return t.version = "1.4.2",
-    t.create = function() {
-        return t();
-    },
-    t._list = {},
-    Object.defineProperty(t, "list", {
-        get: function() {
-            var x = [];
-            for (var r in t._list) x.push(r);
-            return x;
-        },
-        set: function(x) {
-            t._list = {};
-            for (var r = 0; r < x.length; r++) t._list[x[r]] = 1;
-        }
-    }),
-    t.exists = function(x) {
-        return !! t._list[x];
-    },
-    t.register = function(x) {
-        return ! t.exists(x) && (t._list[x] = 1, !0);
-    },
-	t
-})();
+function UixGUIDCreate() {
+	return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+		const r = Math.random() * 16 | 0,
+			  v = c == 'x' ? r : (r & 0x3 | 0x8);
+		return v.toString(16);
+	});
+}
 
 
 
@@ -1475,13 +1885,13 @@ var UixGUID = UixGUID || ( () => {
  */	
 function UixGetRealIds( targetID ) {
 	
-	var result = '';
+	let result = '';
 	if ( typeof targetID !== typeof undefined && targetID != '' ) {
 
 		targetID = targetID.replace(/,\s*$/, '' );
-		var ids = targetID.split( ',' );
+		const ids = targetID.split( ',' );
 
-		for ( var i = 0; i < ids.length; i++ ) {
+		for ( let i = 0; i < ids.length; i++ ) {
 
 			if ( ids[i] != '' ) {
 				result += '[name="' + ids[i] + '"],';

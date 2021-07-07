@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Shortcodes 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2020-10-16 02:27+0000\n"
+"POT-Creation-Date: 2021-07-06 14:56+0000\n"
 "POT-Revision-Date: Sun Jun 11 2017 15:21:32 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,53 +23,159 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-shortcodes.php:460 uix-shortcodes.php:581 uix-shortcodes.php:582
-msgid "Settings"
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:76
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:245
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:412
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:77
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:252
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:426
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:600
+msgid "$"
 msgstr ""
 
-#: uix-shortcodes.php:461 uix-shortcodes.php:572 uix-shortcodes.php:573
-#: helper/settings.php:63
-msgid "How to use?"
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:111
+msgid "&rarr;"
 msgstr ""
 
-#: uix-shortcodes.php:560 helper/settings.php:44
-msgid "Uix Shortcodes Settings"
+#: helper/tabs/usage.php:49
+msgid "&tab=custom-css\">Add custom stylesheets by clicking here</a>"
 msgstr ""
 
-#. Name of the plugin
-#: uix-shortcodes.php:561 includes/admin/block-init.php:28
-#: shortcodes/editor/tinymce-plugin-lang.php:17
-msgid "Uix Shortcodes"
+#: includes/uixscform/functions/google-map.php:95
+msgid "+"
 msgstr ""
 
-#: uix-shortcodes.php:589 uix-shortcodes.php:590
-msgid "Custom CSS"
+#: shortcodes/templates/default/frontpage-init.php:324
+msgid ",&nbsp;"
 msgstr ""
 
-#: uix-shortcodes.php:597 uix-shortcodes.php:598
-msgid "Helper"
+#: includes/admin/uix-custom-metaboxes/init.php:234
+#: includes/uixscform/functions/google-map.php:96
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:131
+msgid "-"
 msgstr ""
 
-#: uix-shortcodes.php:1030
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:41
+msgid "- All -"
+msgstr ""
+
+#: helper/tabs/custom-css.php:97
+#, php-format
+msgid ""
+"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
+"uix-shortcodes-custom.css</strong> and <strong>uix-shortcodes-custom-rtl."
+"css</strong> to your templates directory ( <code>/wp-content/themes/{your-"
+"theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> )."
+" You can connect to your site via an FTP client, make the changes and then "
+"upload the file back to the server. Once you have created an existing CSS "
+"file, Uix Shortcodes will use it as a default style sheet instead of the <a "
+"href=\"%1$s\" target=\"_blank\">%2$s</a> and <a href=\"%3$s\" "
+"target=\"_blank\">%4$s</a> to your WordPress Theme. Of course, Uix "
+"Shortcodes's function of \"Custom CSS\" is still valid."
+msgstr ""
+
+#: helper/tabs/custom-css.php:112
+#, php-format
+msgid ""
+"- Making a new javascrpt (.js) document which name to <strong>uix-shortcodes-"
+"custom.js</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/js/</code> ). Once you have created an existing JS file, Uix "
+"Shortcodes will use it as a default script instead of the \"<a href=\"%1$s\" "
+"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
+msgstr ""
+
+#: shortcodes/templates/default/config.php:236
+msgid "1/2 1/2"
+msgstr ""
+
+#: shortcodes/templates/default/config.php:228
+msgid "1/3 1/3 1/3"
+msgstr ""
+
+#: shortcodes/templates/default/config.php:244
+msgid "1/3 2/3"
+msgstr ""
+
+#: shortcodes/templates/default/config.php:220
+msgid "1/4 1/4 1/4 1/4"
+msgstr ""
+
+#: shortcodes/templates/default/config.php:260
+msgid "1/4 3/4"
+msgstr ""
+
+#: shortcodes/templates/default/config.php:252
+msgid "2/3 1/3"
+msgstr ""
+
+#: shortcodes/templates/default/config.php:268
+msgid "3/4 1/4"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:87
+#, php-format
+msgid ""
+"<a href=\"%1$s\" target=\"_blank\">How to \n"
+"Get an API Key?</a> If left blank, the default Key will be used, but it will "
+"have a traffic excess problem that will not display properly."
+msgstr ""
+
+#: helper/tabs/general-settings.php:67
+#, php-format
+msgid ""
+"<a href=\"%1$s\" target=\"_blank\">How to \n"
+"Get an API Key?</a> If left blank, the default Key will be used, but it will "
+"have a traffic excess problem that will not display properly. <br><strong>"
+"You can also specify the Key separately when using the map module.</strong>"
+msgstr ""
+
+#: helper/tabs/documentation.php:25
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\" rel=\"noopener\">Check Out Here</a>"
+msgstr ""
+
+#: uix-shortcodes.php:1023
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
 "</div>"
 msgstr ""
 
-#: helper/settings.php:35
-msgid "You do not have sufficient permissions to access this page."
+#: includes/uixscform/init.php:820
+msgid ""
+"<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
+"shortcode does not support live preview, please check out it directly on "
+"front end page.</p></div>"
 msgstr ""
 
-#: helper/settings.php:58
-msgid "About"
+#: helper/tabs/usage.php:20
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">1. After activating your theme, you can "
+"see a prompt pointed out as absolutely critical. Go to <strong>\"Appearance -"
+"> Install Plugins\"</strong>.\n"
+"Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-"
+"content/plugins/) And upload files there.)</h4>"
 msgstr ""
 
-#: helper/settings.php:68
-msgid "Documentation"
+#: helper/tabs/usage.php:34
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">2-2. For Gutenberg. We should now be able "
+"to see our block in the <strong>Add Block</strong> menu.</h4>"
 msgstr ""
 
-#: helper/settings.php:74
-msgid "Credits"
+#: helper/tabs/usage.php:25
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">2. Go to your WordPress admin panel, edit "
+"or create a new post (or page). You’ll see our tiny little button in the "
+"toolbar, preceded by a separator:</h4>"
+msgstr ""
+
+#: helper/tabs/usage.php:44
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">3. You can overview the original styles to "
+"overwrite it. It will be on creating new styles to your website, without "
+"modifying original .css files. Go to \"Uix Shortcodes\" in the WordPress "
+"Administration Screens, then link to a specific tab like \"Custom CSS\".</h4>"
 msgstr ""
 
 #: helper/settings.php:79
@@ -80,126 +186,26 @@ msgstr ""
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
-#: includes/admin/block-init.php:29
+#: helper/tabs/about.php:62
+msgid ""
+"<strong>If you like this plug-in, you can check out my free and high-quality "
+"themes with Uix Shortcodes for you to download.</strong> <h4><a href=\"https:"
+"//uiux.cc/\" target=\"_blank\">Click here to check out</a></h4>"
+msgstr ""
+
+#: includes/admin/block-init.php:31
 msgid "[ / ] Click here to add shortode"
 msgstr ""
 
-#: includes/admin/block-init.php:116
-msgid "Choose Shortcode You Want"
-msgstr ""
-
-#: includes/uixscform/init.php:110
-#: includes/admin/uix-custom-metaboxes/init.php:125
-msgid "Select Files"
-msgstr ""
-
-#: includes/uixscform/init.php:111
-#: includes/admin/uix-custom-metaboxes/init.php:126
-#: includes/uixscform/components/ui-wrapper.php:46
-msgid "Insert"
-msgstr ""
-
-#: includes/uixscform/init.php:112
-#: includes/admin/uix-custom-metaboxes/init.php:127
-msgid "Insert Image"
-msgstr ""
-
-#: includes/uixscform/init.php:113
-#: includes/admin/uix-custom-metaboxes/init.php:128
-msgid "Remove link"
-msgstr ""
-
-#: includes/uixscform/init.php:114
-#: includes/admin/uix-custom-metaboxes/init.php:129
-msgid "Insert/Edit link"
-msgstr ""
-
-#: includes/uixscform/init.php:115
-#: includes/admin/uix-custom-metaboxes/init.php:130
-msgid "URL"
-msgstr ""
-
-#: includes/uixscform/init.php:116
-#: includes/admin/uix-custom-metaboxes/init.php:131
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:109
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:106
-msgid "Link Text"
-msgstr ""
-
-#: includes/uixscform/init.php:117
-#: includes/admin/uix-custom-metaboxes/init.php:132
-msgid "Open link in a new tab"
-msgstr ""
-
-#: includes/uixscform/init.php:118
-#: includes/admin/uix-custom-metaboxes/init.php:133
-msgid "Syntax Highlight Code"
-msgstr ""
-
-#: includes/uixscform/init.php:119
-#: includes/admin/uix-custom-metaboxes/init.php:134
-#: shortcodes/templates/default/modules/uix_sc_module_code.php:41
-msgid "Language"
-msgstr ""
-
-#: includes/uixscform/init.php:120
-msgid "Use keyboard shortcuts (CTRL+V) to quickly paste text into the editor."
-msgstr ""
-
-#: includes/uixscform/init.php:816
+#: helper/tabs/about.php:19
 msgid ""
-"<div class=\"uixscform-form-container\"><p class=\"info info-warning\">This "
-"shortcode does not support live preview, please check out it directly on "
-"front end page.</p></div>"
+"A variety of optional styles are available for Uix ShortCodes. Go to **\"Uix "
+"ShortCodes -> Settings -> General Settings\"**, you can choose the "
+"shortcodes style you want."
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:13
-#: shortcodes/templates/default/config.php:15
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:709
-msgid "Hello Form"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:14
-#: shortcodes/templates/default/config.php:22
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:430
-msgid "Column Form"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:15
-#: includes/admin/uix-custom-metaboxes/init.php:2183
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:139
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:595
-msgid "Text"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:16
-#: shortcodes/templates/default/config.php:11
-msgid "Demo"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:18
-#: shortcodes/templates/default/config.php:72
-msgid "Content"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:19
-#: shortcodes/templates/default/config.php:76
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:189
-msgid "Recent Posts"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:20
-msgid "Pricing"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:21
-#: shortcodes/templates/default/config.php:83
-msgid "Pricing 3 Column"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:22
-#: shortcodes/templates/default/config.php:90
-msgid "Pricing 4 Column"
+#: helper/settings.php:58
+msgid "About"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:23
@@ -208,25 +214,666 @@ msgstr ""
 msgid "Accordion"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:24
-#: shortcodes/templates/default/config.php:105
-#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:157
-msgid "Tabs"
+#: helper/tabs/about.php:47
+msgid "accordion"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:25
-msgid "Team"
+#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:97
+msgid "Accordion Title"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:26
-#: shortcodes/templates/default/config.php:121
-msgid "Team Full Width"
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:182
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:350
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:518
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:190
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:364
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:539
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:713
+msgid "Active"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:27
-#: shortcodes/templates/default/config.php:129
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:329
-msgid "Team Grid"
+#: helper/tabs/custom-css.php:128
+msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:80
+msgid "Add Files"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:37
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:95
+msgid "Add New"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:81
+msgid "Add Text"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:162
+msgid "Alignment"
+msgstr ""
+
+#: shortcodes/templates/default/frontpage-init.php:856
+msgid "All"
+msgstr ""
+
+#: helper/tabs/general-settings.php:61
+msgid "API Key"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:235
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:36
+#: shortcodes/templates/default/config.php:175
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:153
+msgid "Audio"
+msgstr ""
+
+#: helper/tabs/about.php:46
+msgid "audio"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:41
+msgid "Audio URL"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:50
+#: shortcodes/templates/default/config.php:183
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:225
+msgid "Author Card"
+msgstr ""
+
+#: helper/tabs/about.php:55
+msgid "author card"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:75
+msgid "Author Name"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:56
+msgid "Author Picture"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:185
+msgid "Auto"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:64
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:64
+msgid "Automatically Transition"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:113
+msgid "Autoplay"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:125
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:167
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:59
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:143
+msgid "Avatar URL"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:151
+msgid "Background Attachment"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:147
+msgid "Background Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:118
+msgid "Background Image"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:124
+msgid "Background Position"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:98
+msgid "Background Repeat"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:176
+msgid "Background Size"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:184
+msgid "Bar Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:73
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:94
+msgid "Bar Size"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:87
+msgid "Biographical Info"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:159
+msgid "Border"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:191
+msgid "Border Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:201
+msgid "Border Style"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:176
+msgid "Border Width"
+msgstr ""
+
+#: includes/admin/block-init.php:30
+msgid ""
+"Bring an amazing set of beautiful and useful elements to your site that lets "
+"you do nifty things with very little effort."
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:41
+#: shortcodes/templates/default/config.php:307
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:281
+msgid "Button"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:134
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:303
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:470
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:142
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:317
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:491
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:665
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:65
+#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:77
+msgid "Button Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:451
+msgid "Button Color(name)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:107
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:276
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:443
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:115
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:290
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:464
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:638
+msgid "Button Label"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:117
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:286
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:453
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:125
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:300
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:474
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:648
+msgid "Button Link"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:91
+msgid "Button Size"
+msgstr ""
+
+#: helper/tabs/about.php:35
+msgid "buttons"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:278
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:445
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:292
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:466
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:640
+msgid "BUY"
+msgstr ""
+
+#: includes/uixscform/components/ui-wrapper.php:51
+msgid "Cancel"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:133
+msgid "Categories"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:132
+msgid "Categories with hyperlinks)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:206
+msgid "Category"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:133
+msgid "Center"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:524
+msgid "Checkbox"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:128
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:198
+msgid "Choose Demo Icon"
+msgstr ""
+
+#: includes/uixscform/controls/icon.php:23
+#: includes/uixscform/controls/icon.php:55
+msgid "Choose Icon"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:41
+msgid "Choose Layout"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:41
+msgid "Choose Line Style"
+msgstr ""
+
+#: includes/admin/block-init.php:118
+msgid "Choose Shortcode You Want"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:216
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:146
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:234
+msgid "Choose Social Icon 1"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:239
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:171
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:257
+msgid "Choose Social Icon 2"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:262
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:196
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:280
+msgid "Choose Social Icon 3"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:44
+#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:51
+msgid "Choose Style"
+msgstr ""
+
+#: helper/tabs/general-settings.php:112
+msgid "Choose The Shortcodes Style"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:56
+msgid "Choose Title Style"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:43
+msgid "Choose Type of Button"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:93
+msgid "Class Name"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:88
+msgid "Class Prefix"
+msgstr ""
+
+#: includes/uixscform/controls/list-clone.php:38
+msgid "click here to add an item"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:71
+#, php-format
+msgid ""
+"Click on the exact location you'd like coordinates for. Right-click on the "
+"pin and select \"What's here?\" <a href=\"%1$s\" target=\"_blank\" "
+"rel=\"nofollow\">Get Latitude Longitude</a>"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:167
+msgid "click on the set more attributes"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:31
+#: shortcodes/templates/default/config.php:152
+msgid "Client"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_client.php:151
+msgid "Clients"
+msgstr ""
+
+#: helper/tabs/custom-css.php:161 helper/tabs/custom-css.php:201
+msgid "Close"
+msgstr ""
+
+#: helper/tabs/about.php:50
+msgid "code with highlighter"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:60
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:433
+#: shortcodes/templates/default/modules/uix_sc_module_icon.php:42
+msgid "Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:513
+msgid "Color Picker"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:37
+#: shortcodes/templates/default/config.php:214
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:52
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:51
+#: shortcodes/templates/default/modules/uix_sc_module_client.php:51
+msgid "Column"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:14
+#: shortcodes/templates/default/config.php:22
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:430
+msgid "Column Form"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:83
+msgid "Column One Fourth"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:82
+msgid "Column One Half"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:83
+msgid "Column One Third"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:82
+msgid "Column Three Fourth"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:81
+msgid "Column Three Fourth (last)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:81
+msgid "Column Two Third"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:80
+msgid "Column Two Third (last)"
+msgstr ""
+
+#: helper/tabs/about.php:34
+msgid "columns"
+msgstr ""
+
+#: shortcodes/templates/default/frontpage-init.php:1562
+msgid "Comments are closed."
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:45
+#: shortcodes/templates/default/config.php:347
+#: shortcodes/templates/default/modules/uix_sc_module_contact_form.php:68
+msgid "Contact Form"
+msgstr ""
+
+#: helper/tabs/about.php:52
+msgid "contact form(use commenting form template)"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:186
+msgid "Contain"
+msgstr ""
+
+#: helper/tabs/about.php:30
+msgid "container"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:48
+#: shortcodes/templates/default/config.php:54
+#: shortcodes/templates/default/config.php:59
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:304
+msgid "Container/Parallax"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:18
+#: shortcodes/templates/default/config.php:72
+msgid "Content"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:333
+msgid "Content here..."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:272
+msgid "Content Padding (px)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_video.php:56
+msgid ""
+"Copy the video's URL from your web browser's address bar while viewing the "
+"video, paste it. <br>e.g., <strong>https://www.youtube.com/watch?"
+"v=abc</strong>"
+msgstr ""
+
+#: includes/uixscform/components/ui-wrapper.php:51
+msgid "Copy to clipboard"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:184
+msgid "Cover"
+msgstr ""
+
+#: helper/settings.php:74
+msgid "Credits"
+msgstr ""
+
+#: helper/tabs/custom-css.php:156 helper/tabs/custom-css.php:169
+msgid "CSS file root directory:"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:74
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:243
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:410
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:75
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:250
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:424
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:598
+msgid "Currency"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:77
+msgid "Custom Content"
+msgstr ""
+
+#: uix-shortcodes.php:582 uix-shortcodes.php:583
+msgid "Custom CSS"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:129
+msgid "Day"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:141
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:130
+msgid "Delay Between Images"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:16
+#: shortcodes/templates/default/config.php:11
+msgid "Demo"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:90
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:94
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:263
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:430
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:72
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:102
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:277
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:451
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:625
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:238
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:261
+msgid "Description"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:313
+msgid "Description Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:247
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:117
+msgid "Destination URL"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:217
+msgid "Destination URL and can be left blank, e.g., http://your.site.com"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_client.php:99
+msgid "Destination URL, e.g., http://your.clientsite.com"
+msgstr ""
+
+#: helper/tabs/documentation.php:20
+msgid ""
+"Detailed parameters introduction and shortcode examples can refer to the "
+"online documentation."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:51
+msgid "Direction"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_video.php:83
+msgid "Display Height"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_video.php:69
+msgid "Display Width"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:282
+msgid "Displayed Text"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:259
+msgid "Displayed Units"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:40
+#: shortcodes/templates/default/config.php:299
+#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:129
+msgid "Dividing Line"
+msgstr ""
+
+#: helper/tabs/about.php:48
+msgid "dividing line"
+msgstr ""
+
+#: helper/settings.php:68
+msgid "Documentation"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:99
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:99
+msgid "Draggable"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:99
+#, php-format
+msgid "e.g., %1$s"
+msgstr ""
+
+#: helper/tabs/credits.php:20
+msgid "Easy Pie Chart"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:280
+msgid "Editor"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:49
+msgid "Effect"
+msgstr ""
+
+#: helper/tabs/general-settings.php:122
+msgid "Elegant (default)"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:88
+msgid "Enable Lightbox for this gallery?"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:64
+msgid "Enable SoundCloud"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:210
+msgid ""
+"Enter some details for the customer giving this testimonial., E.g., Thank "
+"you from the bottom of our hearts."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:131
+msgid "Excerpt"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:568
+msgid "expand"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:56
+msgid "Fade"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:157
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:296
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:165
+msgid ""
+"Feature Description<br>Another Feature Description<br><s>Invalid Feature "
+"Description</s>"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:326
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:340
+msgid ""
+"Feature Description<br>Another Feature Description<br>Another Feature "
+"Description<br><s>Invalid Feature Description</s>"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:493
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:514
+msgid ""
+"Feature Description<br>Another Feature Description<br>Another Feature "
+"Description<br><s>Invalid Feature Description</s><br>Another Feature "
+"Description"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:688
+msgid ""
+"Feature Description<br>Another Feature Description<br>Another Feature "
+"Description<br><s>Invalid Feature Description</s><br>Another Feature "
+"Description<br>Another Feature Description"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_features_col3.php:69
+#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:68
+#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:140
+msgid "Feature Title"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:135
+msgid "Featured image"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:136
+msgid "Featured image URL"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:28
@@ -252,86 +899,79 @@ msgstr ""
 msgid "Features 3 Column"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:31
-#: shortcodes/templates/default/config.php:152
-msgid "Client"
+#: helper/tabs/about.php:41
+msgid "features boxes"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:32
-#: shortcodes/templates/default/config.php:191
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:259
-msgid "Image Slider"
+#: includes/admin/uix-custom-metaboxes/init.php:604
+#: includes/admin/uix-custom-metaboxes/controls/radio.php:156
+msgid "Field Title"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:33
-#: shortcodes/templates/default/config.php:198
-#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:159
-msgid "Timeline"
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:74
+msgid "Files"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:34
-#: shortcodes/templates/default/config.php:160
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:254
-msgid "Testimonials Carousel"
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:129
+#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:61
+msgid "Fillet Radius"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:35
-#: shortcodes/templates/default/config.php:167
-#: shortcodes/templates/default/modules/uix_sc_module_video.php:127
-msgid "Video"
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:100
+msgid "Filterable by Category"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:36
-#: shortcodes/templates/default/config.php:175
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:153
-msgid "Audio"
+#: includes/uixscform/controls/image.php:160
+msgid "Fixed"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:37
-#: shortcodes/templates/default/config.php:214
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:52
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:51
-#: shortcodes/templates/default/modules/uix_sc_module_client.php:51
-msgid "Column"
+#: helper/tabs/general-settings.php:96
+msgid "Flaticon"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:38
-#: shortcodes/templates/default/config.php:285
-msgid "Web Elements"
+#: helper/tabs/credits.php:21
+msgid "Flaticon icon font: Essential Set"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:39
-#: shortcodes/templates/default/config.php:291
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:388
-msgid "Special Heading"
+#: helper/tabs/general-settings.php:89 helper/tabs/credits.php:16
+msgid "Font Awesome"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:40
-#: shortcodes/templates/default/config.php:299
-#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:129
-msgid "Dividing Line"
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:297
+msgid "Font Size"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:41
-#: shortcodes/templates/default/config.php:307
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:281
-msgid "Button"
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:230
+msgid "Font-Size for Button"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:42
-#: shortcodes/templates/default/config.php:315
-#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:134
-msgid "Share Buttons"
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:137
+msgid "Format slug"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:43
-#: shortcodes/templates/default/config.php:323
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:125
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:195
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:155
-#: shortcodes/templates/default/modules/uix_sc_module_icon.php:83
-#: shortcodes/templates/default/modules/uix_sc_module_icon.php:125
-msgid "Icon"
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:44
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:45
+msgid "free"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:172
+msgid "Full Preview (Optional)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:378
+msgid "General Settings"
+msgstr ""
+
+#: includes/uixscform/components/ui-wrapper.php:44
+msgid "Generate shortcode"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:86
+msgid "Get all posts related to particular category name."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:86
+msgid "Google API key"
 msgstr ""
 
 #: shortcodes/editor/tinymce-plugin-lang.php:44
@@ -340,970 +980,12 @@ msgstr ""
 msgid "Google Map"
 msgstr ""
 
-#: shortcodes/editor/tinymce-plugin-lang.php:45
-#: shortcodes/templates/default/config.php:347
-#: shortcodes/templates/default/modules/uix_sc_module_contact_form.php:68
-msgid "Contact Form"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:46
-#: shortcodes/templates/default/config.php:361
-#: shortcodes/templates/default/config.php:365
-#: shortcodes/templates/default/modules/uix_sc_module_code.php:118
-msgid "Source Code"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:47
-#: shortcodes/templates/default/config.php:113
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:284
-msgid "Portfolio"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:48
-#: shortcodes/templates/default/config.php:54
-#: shortcodes/templates/default/config.php:59
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:304
-msgid "Container/Parallax"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:49
-#: shortcodes/templates/default/config.php:331
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:292
-msgid "Progress Bar"
-msgstr ""
-
-#: shortcodes/editor/tinymce-plugin-lang.php:50
-#: shortcodes/templates/default/config.php:183
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:225
-msgid "Author Card"
-msgstr ""
-
-#: helper/tabs/general-settings.php:31 helper/tabs/custom-css.php:26
-msgid "Settings saved."
-msgstr ""
-
 #: helper/tabs/general-settings.php:54
 msgid "Google Map Settings"
 msgstr ""
 
-#: helper/tabs/general-settings.php:61
-msgid "API Key"
-msgstr ""
-
-#: helper/tabs/general-settings.php:67
-#, php-format
-msgid ""
-"<a href=\"%1$s\" target=\"_blank\">How to \n"
-"Get an API Key?</a> If left blank, the default Key will be used, but it will "
-"have a traffic excess problem that will not display properly. <br><strong>"
-"You can also specify the Key separately when using the map module.</strong>"
-msgstr ""
-
-#: helper/tabs/general-settings.php:82
-msgid "Icon Types"
-msgstr ""
-
-#: helper/tabs/general-settings.php:89 helper/tabs/credits.php:16
-msgid "Font Awesome"
-msgstr ""
-
-#: helper/tabs/general-settings.php:96
-msgid "Flaticon"
-msgstr ""
-
-#: helper/tabs/general-settings.php:112
-msgid "Choose The Shortcodes Style"
-msgstr ""
-
-#: helper/tabs/general-settings.php:122
-msgid "Elegant (default)"
-msgstr ""
-
-#: helper/tabs/general-settings.php:130
-msgid "Slant"
-msgstr ""
-
-#: helper/tabs/general-settings.php:139
-msgid "Rich"
-msgstr ""
-
-#: helper/tabs/documentation.php:16
-msgid "Online Documentation"
-msgstr ""
-
-#: helper/tabs/documentation.php:20
-msgid ""
-"Detailed parameters introduction and shortcode examples can refer to the "
-"online documentation."
-msgstr ""
-
-#: helper/tabs/documentation.php:25
-#, php-format
-msgid "<a href=\"%s\" target=\"_blank\" rel=\"noopener\">Check Out Here</a>"
-msgstr ""
-
-#: helper/tabs/usage.php:20
-msgid ""
-"<h4 class=\"uix-bg-custom-title\">1. After activating your theme, you can "
-"see a prompt pointed out as absolutely critical. Go to <strong>\"Appearance -"
-"> Install Plugins\"</strong>.\n"
-"Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-"
-"content/plugins/) And upload files there.)</h4>"
-msgstr ""
-
-#: helper/tabs/usage.php:25
-msgid ""
-"<h4 class=\"uix-bg-custom-title\">2. Go to your WordPress admin panel, edit "
-"or create a new post (or page). You’ll see our tiny little button in the "
-"toolbar, preceded by a separator:</h4>"
-msgstr ""
-
-#: helper/tabs/usage.php:34
-msgid ""
-"<h4 class=\"uix-bg-custom-title\">2-2. For Gutenberg. We should now be able "
-"to see our block in the <strong>Add Block</strong> menu.</h4>"
-msgstr ""
-
-#: helper/tabs/usage.php:44
-msgid ""
-"<h4 class=\"uix-bg-custom-title\">3. You can overview the original styles to "
-"overwrite it. It will be on creating new styles to your website, without "
-"modifying original .css files. Go to \"Uix Shortcodes\" in the WordPress "
-"Administration Screens, then link to a specific tab like \"Custom CSS\".</h4>"
-msgstr ""
-
-#: helper/tabs/usage.php:49
-msgid "&tab=custom-css\">Add custom stylesheets by clicking here</a>"
-msgstr ""
-
-#: helper/tabs/custom-css.php:90
-msgid "You have already used custom stylesheet files."
-msgstr ""
-
-#: helper/tabs/custom-css.php:97
-#, php-format
-msgid ""
-"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
-"uix-shortcodes-custom.css</strong> and <strong>uix-shortcodes-custom-rtl."
-"css</strong> to your templates directory ( <code>/wp-content/themes/{your-"
-"theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> )."
-" You can connect to your site via an FTP client, make the changes and then "
-"upload the file back to the server. Once you have created an existing CSS "
-"file, Uix Shortcodes will use it as a default style sheet instead of the <a "
-"href=\"%1$s\" target=\"_blank\">%2$s</a> and <a href=\"%3$s\" "
-"target=\"_blank\">%4$s</a> to your WordPress Theme. Of course, Uix "
-"Shortcodes's function of \"Custom CSS\" is still valid."
-msgstr ""
-
-#: helper/tabs/custom-css.php:106
-msgid "You have already used custom JavaScript files."
-msgstr ""
-
-#: helper/tabs/custom-css.php:112
-#, php-format
-msgid ""
-"- Making a new javascrpt (.js) document which name to <strong>uix-shortcodes-"
-"custom.js</strong> to your templates directory ( <code>/wp-"
-"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
-"/assets/js/</code> ). Once you have created an existing JS file, Uix "
-"Shortcodes will use it as a default script instead of the \"<a href=\"%1$s\" "
-"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
-msgstr ""
-
-#: helper/tabs/custom-css.php:125
-msgid "Paste your CSS code"
-msgstr ""
-
-#: helper/tabs/custom-css.php:127
-msgid ""
-"You could add new styles code to your website, without modifying original ."
-"css files."
-msgstr ""
-
-#: helper/tabs/custom-css.php:128
-msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
-msgstr ""
-
-#: helper/tabs/custom-css.php:156 helper/tabs/custom-css.php:169
-msgid "CSS file root directory:"
-msgstr ""
-
-#: helper/tabs/custom-css.php:161 helper/tabs/custom-css.php:201
-msgid "Close"
-msgstr ""
-
-#: helper/tabs/custom-css.php:196 helper/tabs/custom-css.php:211
-msgid "RTL CSS file root directory:"
-msgstr ""
-
-#: helper/tabs/credits.php:11
-msgid ""
-"I would like to give special thanks to credits. The following is a guide to "
-"the list of credits for this plugin:"
-msgstr ""
-
-#: helper/tabs/credits.php:17
-msgid "jQuery Accessible Tabs"
-msgstr ""
-
-#: helper/tabs/credits.php:18
-msgid "prettyPhoto"
-msgstr ""
-
-#: helper/tabs/credits.php:19
-msgid "SyntaxHighlighter"
-msgstr ""
-
-#: helper/tabs/credits.php:21
-msgid "Muuri"
-msgstr ""
-
-#: helper/tabs/credits.php:22
-msgid "Easy Pie Chart"
-msgstr ""
-
-#: helper/tabs/credits.php:23
-msgid "Flaticon icon font: Essential Set"
-msgstr ""
-
-#: helper/tabs/credits.php:24
-msgid "jQuery Templates plugin"
-msgstr ""
-
-#: helper/tabs/about.php:11
-msgid ""
-"Uix Shortcodes brings an amazing set of beautiful and useful elements to "
-"your site that lets you do nifty things with very little effort. It makes it "
-"easy and quick to add the shortcode you need to achieve the page layout or "
-"function you desire. It provides easy to use over 26+ shortcodes. The "
-"content elements are the heart of any page builder. These are the elements "
-"shortcodes that come with theme. You may customize the shortcode by "
-"changing/adding the parameters. <strong>\"Content Shortcode\"</strong>, "
-"<strong>\"Column Shortcode\"</strong>, <strong>\"Web Elements "
-"Shortcode\"</strong>, <strong>\"Container Shortcode\"</strong>, and so on. "
-"They could be used together. <strong style=\"color:red\">It is compatible "
-"with Gutenberg.</strong>"
-msgstr ""
-
-#: helper/tabs/about.php:15
-msgid ""
-"The Uix Shortcodes consists of several core features that are key to support "
-"multi-style switch. According to current progress, some styles can be "
-"summarized as follows: <strong>Elegant (default), Slant, Rich.</strong>"
-msgstr ""
-
-#: helper/tabs/about.php:19
-msgid ""
-"A variety of optional styles are available for Uix ShortCodes. Go to **\"Uix "
-"ShortCodes -> Settings -> General Settings\"**, you can choose the "
-"shortcodes style you want."
-msgstr ""
-
-#: helper/tabs/about.php:24
-msgid "Included Modules "
-msgstr ""
-
-#: helper/tabs/about.php:27
-msgid "The currently available default elements:"
-msgstr ""
-
-#: helper/tabs/about.php:30
-msgid "container"
-msgstr ""
-
-#: helper/tabs/about.php:31
-msgid "parallax"
-msgstr ""
-
-#: helper/tabs/about.php:32
-msgid "image slider"
-msgstr ""
-
-#: helper/tabs/about.php:33
-msgid "timeline"
-msgstr ""
-
-#: helper/tabs/about.php:34
-msgid "columns"
-msgstr ""
-
-#: helper/tabs/about.php:35
-msgid "buttons"
-msgstr ""
-
-#: helper/tabs/about.php:36
-msgid "progress bar"
-msgstr ""
-
 #: helper/tabs/about.php:37
 msgid "google maps"
-msgstr ""
-
-#: helper/tabs/about.php:38
-msgid "special heading"
-msgstr ""
-
-#: helper/tabs/about.php:39
-msgid "pricing table"
-msgstr ""
-
-#: helper/tabs/about.php:40
-msgid "icons"
-msgstr ""
-
-#: helper/tabs/about.php:41
-msgid "features boxes"
-msgstr ""
-
-#: helper/tabs/about.php:42
-msgid "testimonials carousel"
-msgstr ""
-
-#: helper/tabs/about.php:43
-msgid "team"
-msgstr ""
-
-#: helper/tabs/about.php:44
-msgid "list of clients"
-msgstr ""
-
-#: helper/tabs/about.php:45
-msgid "responsive video"
-msgstr ""
-
-#: helper/tabs/about.php:46
-msgid "audio"
-msgstr ""
-
-#: helper/tabs/about.php:47
-msgid "accordion"
-msgstr ""
-
-#: helper/tabs/about.php:48
-msgid "dividing line"
-msgstr ""
-
-#: helper/tabs/about.php:49
-msgid "tabs"
-msgstr ""
-
-#: helper/tabs/about.php:50
-msgid "code with highlighter"
-msgstr ""
-
-#: helper/tabs/about.php:51
-msgid "share buttons"
-msgstr ""
-
-#: helper/tabs/about.php:52
-msgid "contact form(use commenting form template)"
-msgstr ""
-
-#: helper/tabs/about.php:53
-msgid "portfolio(support lightbox)"
-msgstr ""
-
-#: helper/tabs/about.php:54
-msgid "recent posts with custom template"
-msgstr ""
-
-#: helper/tabs/about.php:55
-msgid "author card"
-msgstr ""
-
-#: helper/tabs/about.php:62
-msgid ""
-"<strong>If you like this plug-in, you can check out my free and high-quality "
-"themes with Uix Shortcodes for you to download.</strong> <h4><a href=\"https:"
-"//uiux.cc/\" target=\"_blank\">Click here to check out</a></h4>"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:135
-#: includes/admin/uix-custom-metaboxes/init.php:1864
-#: includes/uixscform/functions/google-map.php:96
-msgid "-"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:136
-msgid "Are you sure you want to delete?"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:177
-msgid "Group Title"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:398
-#: includes/admin/uix-custom-metaboxes/init.php:1451
-msgid "Field Title"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1045
-#: includes/admin/uix-custom-metaboxes/init.php:1618
-#: includes/admin/uix-custom-metaboxes/init.php:1827
-#: includes/admin/uix-custom-metaboxes/init.php:2187
-#: includes/admin/uix-custom-metaboxes/init.php:2192
-msgid "Remove"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1046
-#: includes/admin/uix-custom-metaboxes/init.php:2193
-msgid "Select image or video"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1616
-#: includes/admin/uix-custom-metaboxes/init.php:1821
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:378
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:61
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:43
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:218
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:392
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:566
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:227
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:229
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:44
-msgid "Title"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1617
-#: includes/admin/uix-custom-metaboxes/init.php:1822
-msgid "Value"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1619
-#: includes/admin/uix-custom-metaboxes/init.php:1828
-msgid "Add New"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1823
-msgid "Subtitle"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1824
-msgid "ID"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1825
-msgid "Level"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1826
-msgid "Class Name"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1982
-msgid "Untitled"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:2182
-msgid "Files"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:2185
-msgid "Custom Content"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:2186
-msgid "Upload Your Files"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:2188
-msgid "Add Files"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:2189
-msgid "Add Text"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:2196
-msgid "Enable Lightbox for this gallery?"
-msgstr ""
-
-#: includes/uixscform/fontawesome/font-awesome-custom.php:473
-#: includes/uixscform/flaticon/font-flaticon-custom.php:513
-msgid "Social:"
-msgstr ""
-
-#: includes/uixscform/controls/icon.php:23
-#: includes/uixscform/controls/icon.php:55
-msgid "Choose Icon"
-msgstr ""
-
-#: includes/uixscform/controls/list-clone.php:38
-msgid "click here to add an item"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:28
-msgid "Remove image"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:29
-msgid "Upload"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:98
-msgid "Background Repeat"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:105
-msgid "No Repeat"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:106
-msgid "Tile"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:107
-msgid "Tile Horizontally"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:108
-msgid "Tile Vertically"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:124
-msgid "Background Position"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:132
-msgid "Left"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:133
-msgid "Center"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:134
-msgid "Right"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:151
-msgid "Background Attachment"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:159
-msgid "Scroll"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:160
-msgid "Fixed"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:176
-msgid "Background Size"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:184
-msgid "Cover"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:185
-msgid "Auto"
-msgstr ""
-
-#: includes/uixscform/controls/image.php:186
-msgid "Contain"
-msgstr ""
-
-#: includes/uixscform/controls/toggle.php:52
-msgid "More Options"
-msgstr ""
-
-#: includes/uixscform/components/ui-wrapper.php:44
-msgid "Generate shortcode"
-msgstr ""
-
-#: includes/uixscform/components/ui-wrapper.php:51
-msgid "Copy to clipboard"
-msgstr ""
-
-#: includes/uixscform/components/ui-wrapper.php:51
-msgid "Cancel"
-msgstr ""
-
-#: includes/uixscform/components/ui-wrapper.php:51
-msgid "Preview"
-msgstr ""
-
-#: includes/uixscform/components/ui-form.php:56
-msgid "Section"
-msgstr ""
-
-#: includes/uixscform/functions/google-map.php:95
-msgid "+"
-msgstr ""
-
-#: shortcodes/templates/default/config.php:11
-msgid ""
-"Just development mode display, please configure \"uix-shortcodes.php\" file."
-msgstr ""
-
-#: shortcodes/templates/default/config.php:220
-msgid "1/4 1/4 1/4 1/4"
-msgstr ""
-
-#: shortcodes/templates/default/config.php:228
-msgid "1/3 1/3 1/3"
-msgstr ""
-
-#: shortcodes/templates/default/config.php:236
-msgid "1/2 1/2"
-msgstr ""
-
-#: shortcodes/templates/default/config.php:244
-msgid "1/3 2/3"
-msgstr ""
-
-#: shortcodes/templates/default/config.php:252
-msgid "2/3 1/3"
-msgstr ""
-
-#: shortcodes/templates/default/config.php:260
-msgid "1/4 3/4"
-msgstr ""
-
-#: shortcodes/templates/default/config.php:268
-msgid "3/4 1/4"
-msgstr ""
-
-#: shortcodes/templates/default/frontpage-init.php:324
-msgid ",&nbsp;"
-msgstr ""
-
-#: shortcodes/templates/default/frontpage-init.php:331
-#, php-format
-msgid "View all posts in %s"
-msgstr ""
-
-#: shortcodes/templates/default/frontpage-init.php:902
-msgid "All"
-msgstr ""
-
-#: shortcodes/templates/default/frontpage-init.php:1608
-msgid "Comments are closed."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:49
-msgid "Effect"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:55
-msgid "Slide"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:56
-msgid "Fade"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:57
-msgid "Scale"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:64
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:64
-msgid "Automatically Transition"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:75
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:75
-msgid "Show Paging Navigation"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:87
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:87
-msgid "Show Arrow Navigation"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:99
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:99
-msgid "Draggable"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:113
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:114
-msgid "Speed of Images Appereance"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:128
-#, php-format
-msgid ""
-"Using the CSS animation/transition duration from Uix Shortcodes stylesheets. "
-"<br>You can find this code <code>.uix-sc-slideshow { ... }</code> <br><a "
-"target=\"_blank\" href=\"%1$s\">click here to set speed</a>"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:141
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:130
-msgid "Delay Between Images"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:159
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:128
-#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:81
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:108
-#: shortcodes/templates/default/modules/uix_sc_module_features_col3.php:52
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:150
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:568
-#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:51
-#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:123
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:126
-#: shortcodes/templates/default/modules/uix_sc_module_client.php:72
-#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:84
-#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:62
-msgid "List Item"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:176
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:141
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:211
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:335
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:584
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:205
-msgid "Image URL"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:187
-msgid "Slider title"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:202
-msgid "Slider introduction"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:217
-msgid "Destination URL and can be left blank, e.g., http://your.site.com"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:49
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:264
-#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:49
-#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:49
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:49
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:49
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:49
-msgid "Padding (px)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:50
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:50
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:265
-#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:50
-#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:50
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:50
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:50
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:50
-msgid ""
-"Use the input fields below to customize the padding of your column shortcode."
-" Measurement units is pixels (px)."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:80
-msgid "Column Two Third (last)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:110
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:111
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:111
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:112
-#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:113
-#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:114
-#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:111
-#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:112
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:113
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:114
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:115
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:116
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:113
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:114
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:115
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:111
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:112
-msgid "Some content for this column."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:41
-msgid "- All -"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:56
-msgid "Number of posts to show"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:70
-msgid "Order By"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:85
-msgid "Select Category"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:86
-msgid "Get all posts related to particular category name."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:97
-msgid "Loop Template"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:123
-msgid ""
-"Use this template to display content on your website. You can use the "
-"following placeholders in the post list item templates, which will be "
-"replaced by the actual values when the content is displayed"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:125
-msgid "Permalink"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:127
-msgid "Month"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:128
-msgid "Month display in English"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:129
-msgid "Day"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:130
-msgid "Year"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:131
-msgid "Excerpt"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:132
-msgid "Categories with hyperlinks)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:133
-msgid "Categories"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:134
-msgid "HTML attributes of categories"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:135
-msgid "Featured image"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:136
-msgid "Featured image URL"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:137
-msgid "Format slug"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:152
-msgid "Output text before the &lt;a&gt; of the link"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:163
-msgid "Output text after the &lt;/a&gt; of the link"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:67
-msgid "Radius of Fillet Image"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:88
-msgid "Class Prefix"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:89
-msgid ""
-"Prefix string attached to the classes of all elements generated by the "
-"portfolio, the default value is &quot;<strong>uix-sc-portfolio__</strong>"
-"&quot;."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:100
-msgid "Filterable by Category"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:111
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:144
-msgid "Open link in new tab"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:112
-msgid "This option is valid when you use destination URL."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:145
-msgid "Thumbnail"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:155
-msgid "Full Preview (Optional)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:171
-msgid "Project Title"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:189
-msgid "Category"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:199
-msgid "The description of this project."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:219
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:188
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:408
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:610
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:206
-msgid "set up links with toggle"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:230
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:117
-msgid "Destination URL"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:53
-#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:66
-msgid "Transition Effect"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:68
-msgid "Open The First One Automatically"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:97
-msgid "Accordion Title"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:111
-msgid "This is content of the accordion."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:49
-msgid "Padding"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:81
-msgid "Column Three Fourth (last)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:51
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:66
-msgid "Radius of Fillet Avatar"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:66
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:81
-msgid "Height of Grid"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:81
@@ -1311,238 +993,31 @@ msgstr ""
 msgid "Gray Avatar"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:93
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:108
-msgid ""
-"Set height of grid so that it will fit its avatar photo. Browsers use a "
-"default stylesheet to render if the value is <strong>\"0\"</strong>."
+#: includes/admin/uix-custom-metaboxes/init.php:282
+msgid "Group Title"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:125
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:167
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:59
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:143
-msgid "Avatar URL"
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:101
+msgid "Heading Color"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:140
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:182
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:158
-msgid "Name"
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:90
+msgid "Height"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:158
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:200
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:176
-msgid "Position"
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:66
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:81
+msgid "Height of Grid"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:168
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:186
-msgid "The Introduction of this member."
+#: shortcodes/editor/tinymce-plugin-lang.php:13
+#: shortcodes/templates/default/config.php:15
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:709
+msgid "Hello Form"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:206
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:135
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:224
-msgid "Your Social Network Page URL 1"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:216
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:146
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:234
-msgid "Choose Social Icon 1"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:229
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:160
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:247
-msgid "Your Social Network Page URL 2"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:239
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:171
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:257
-msgid "Choose Social Icon 2"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:252
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:185
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:270
-msgid "Your Social Network Page URL 3"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:262
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:196
-#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:280
-msgid "Choose Social Icon 3"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:311
-msgid "Team Normal"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:44
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:45
-msgid "free"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:52
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:221
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:388
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:53
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:228
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:402
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:576
-msgid "Price"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:62
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:231
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:398
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:63
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:238
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:412
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:586
-msgid "Price Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:74
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:243
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:410
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:75
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:250
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:424
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:598
-msgid "Currency"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:76
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:245
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:412
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:77
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:252
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:426
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:600
-msgid "$"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:84
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:253
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:420
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:92
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:267
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:441
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:615
-msgid "Period"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:86
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:255
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:422
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:94
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:269
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:443
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:617
-msgid "per month"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:94
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:263
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:430
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:72
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:102
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:277
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:451
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:625
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:238
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:261
-msgid "Description"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:96
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:265
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:432
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:104
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:279
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:453
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:627
-msgid "Some description text here."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:107
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:276
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:443
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:115
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:290
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:464
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:638
-msgid "Button Label"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:109
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:117
-msgid "TRY FOR FREE"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:117
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:286
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:453
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:125
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:300
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:474
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:648
-msgid "Button Link"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:134
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:303
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:470
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:142
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:317
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:491
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:665
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:65
-#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:77
-msgid "Button Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:146
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:315
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:482
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:154
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:329
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:503
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:677
-msgid "Open in new tab"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:157
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:296
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:165
-msgid ""
-"Feature Description<br>Another Feature Description<br><s>Invalid Feature "
-"Description</s>"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:170
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:339
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:507
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:178
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:353
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:528
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:701
-msgid "Type one word or sentence per line when press \"ENTER\"."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:182
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:350
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:518
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:190
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:364
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:539
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:713
-msgid "Active"
+#: uix-shortcodes.php:590 uix-shortcodes.php:591
+msgid "Helper"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:192
@@ -1555,185 +1030,129 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:213
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:220
-msgid "premium"
+#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:78
+msgid "Highlight"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:278
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:445
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:292
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:466
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:640
-msgid "BUY"
+#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:50
+msgid "Highlight Color"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:326
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:340
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:57
+msgid "Horizontal"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:78
+msgid "Hover Color"
+msgstr ""
+
+#: uix-shortcodes.php:454 uix-shortcodes.php:565 uix-shortcodes.php:566
+#: helper/settings.php:63
+msgid "How to use?"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:134
+msgid "HTML attributes of categories"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:120
+msgid "http://"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://uiux.cc"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://uiux.cc/wp-plugins/uix-shortcodes/"
+msgstr ""
+
+#: helper/tabs/credits.php:11
 msgid ""
-"Feature Description<br>Another Feature Description<br>Another Feature "
-"Description<br><s>Invalid Feature Description</s>"
+"I would like to give special thanks to credits. The following is a guide to "
+"the list of credits for this plugin:"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:380
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:394
-msgid "professional"
+#: shortcodes/editor/tinymce-plugin-lang.php:43
+#: shortcodes/templates/default/config.php:323
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:125
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:195
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:155
+#: shortcodes/templates/default/modules/uix_sc_module_icon.php:83
+#: shortcodes/templates/default/modules/uix_sc_module_icon.php:125
+msgid "Icon"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:493
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:514
-msgid ""
-"Feature Description<br>Another Feature Description<br>Another Feature "
-"Description<br><s>Invalid Feature Description</s><br>Another Feature "
-"Description"
+#: helper/tabs/general-settings.php:82
+msgid "Icon Types"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:553
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:748
-msgid "Table 1"
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:217
+msgid "Icon&apos;s Name"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:559
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:754
-msgid "Table 2"
+#: helper/tabs/about.php:40
+msgid "icons"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:564
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:759
-msgid "Table 3"
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:91
+msgid "ID"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:569
-msgid "Pricing 3 column"
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:131
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:93
+msgid "Image for Text Fill"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:41
-msgid "Choose Line Style"
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:79
+msgid "Image Radio"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:60
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:433
-#: shortcodes/templates/default/modules/uix_sc_module_icon.php:42
-msgid "Color"
+#: shortcodes/editor/tinymce-plugin-lang.php:32
+#: shortcodes/templates/default/config.php:191
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:259
+msgid "Image Slider"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:78
-msgid "Width"
+#: helper/tabs/about.php:32
+msgid "image slider"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:93
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:353
-msgid "Opacity"
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:594
+msgid "Image Title"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_video.php:45
-msgid "Video URL"
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:176
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:141
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:211
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:335
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:584
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:205
+msgid "Image URL"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_video.php:56
-msgid ""
-"Copy the video's URL from your web browser's address bar while viewing the "
-"video, paste it. <br>e.g., <strong>https://www.youtube.com/watch?"
-"v=abc</strong>"
+#: helper/tabs/about.php:24
+msgid "Included Modules "
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_video.php:69
-msgid "Display Width"
+#: includes/uixscform/init.php:111
+#: includes/admin/uix-custom-metaboxes/init.php:225
+#: includes/uixscform/components/ui-wrapper.php:46
+msgid "Insert"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_video.php:83
-msgid "Display Height"
+#: includes/uixscform/init.php:112
+#: includes/admin/uix-custom-metaboxes/init.php:226
+msgid "Insert Image"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_video.php:97
-msgid "Responsive of Display"
+#: includes/uixscform/init.php:114
+#: includes/admin/uix-custom-metaboxes/init.php:228
+msgid "Insert/Edit link"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:41
-msgid "Audio URL"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:52
-msgid ""
-"Just enter the MP3, SoundCloud or Audiomack URL. If you are using SoundCloud "
-"or Audiomack, the following <strong>\"Enable SoundCloud\"</strong> checkbox "
-"should be checked."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:64
-msgid "Enable SoundCloud"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:83
-msgid "Player Width"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:98
-msgid "Player Height"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:113
-msgid "Autoplay"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_audio.php:124
-msgid "Loop"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:101
-msgid "Text2 - 1"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:128
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:198
-msgid "Choose Demo Icon"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:138
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:208
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:332
-msgid "Upload Image"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:149
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:218
-msgid "SLider"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:172
-msgid "Text2 - 2"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:247
-msgid "Text3 - 1"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:263
-msgid "Text3 - 2"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:280
-msgid "Text3 - 3"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:305
-msgid "Text4 - 1"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:321
-msgid "Text4 - 2"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:336
-msgid "Text4 - 3"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:351
-msgid "Text4 - 4"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:378
-msgid "General Settings"
+#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:105
+msgid "It takes that unique url and share it on the social page automagically."
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:383
@@ -1772,397 +1191,46 @@ msgstr ""
 msgid "Item 4_4"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_features_col3.php:69
-#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:68
-#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:140
-msgid "Feature Title"
+#: helper/tabs/credits.php:17
+msgid "jQuery Accessible Tabs"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_features_col3.php:82
-#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:81
-#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:153
+#: helper/tabs/credits.php:22
+msgid "jQuery Templates plugin"
+msgstr ""
+
+#: shortcodes/templates/default/config.php:11
 msgid ""
-"Some description text here. You can add a lot of it or can choose to leave "
-"it blank."
+"Just development mode display, please configure \"uix-shortcodes.php\" file."
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:51
-msgid "Direction"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:57
-msgid "Horizontal"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:58
-msgid "Vertical"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:210
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:52
 msgid ""
-"Enter some details for the customer giving this testimonial., E.g., Thank "
-"you from the bottom of our hearts."
+"Just enter the MP3, SoundCloud or Audiomack URL. If you are using SoundCloud "
+"or Audiomack, the following <strong>\"Enable SoundCloud\"</strong> checkbox "
+"should be checked."
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:67
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:71
-#, php-format
-msgid ""
-"You can custom the boxed width of the container for Uix Shortcodes "
-"stylesheets. <a target=\"_blank\" href=\"%1$s\">click here to custom</a>"
+#: includes/uixscform/init.php:119
+#: includes/admin/uix-custom-metaboxes/init.php:233
+#: shortcodes/templates/default/modules/uix_sc_module_code.php:41
+msgid "Language"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:79
-msgid "Image Radio"
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:164
+msgid "Latitude"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:98
-msgid "Radio Switch"
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:112
+msgid "Layout"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:131
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:93
-msgid "Image for Text Fill"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:140
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:465
-msgid "This is infomation."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:157
-msgid "Text Attr"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:175
-msgid "Text Slug"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:223
-msgid "Radio"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:238
-msgid "Slider"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:280
-msgid "Editor"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:294
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:315
-msgid "Textarea(by default value)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:365
-msgid "Short Text"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:385
-msgid "Short Units Text"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:419
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:621
-msgid "Toggle URL"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:451
-msgid "Button Color(name)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:464
-msgid "Select"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:481
-msgid "Multiple Selector"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:499
-msgid "This is Icon Selector "
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:513
-msgid "Color Picker"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:524
-msgid "Checkbox"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:535
-msgid "Switch"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:594
-msgid "Image Title"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:663
-msgid "Switch Demo"
+#: includes/uixscform/controls/image.php:132
+msgid "Left"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:211
 msgid "Left Block"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:216
-msgid "Right Block"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:568
-msgid "expand"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:688
-msgid ""
-"Feature Description<br>Another Feature Description<br>Another Feature "
-"Description<br><s>Invalid Feature Description</s><br>Another Feature "
-"Description<br>Another Feature Description"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:764
-msgid "Table 4"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:769
-msgid "Pricing 4 column"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:82
-msgid "Column Three Fourth"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:44
-#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:51
-msgid "Choose Style"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:73
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:94
-msgid "Bar Size"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:110
-msgid "Percent"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:125
-msgid "Percentage & Icon Size"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:139
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:229
-msgid "Line Width"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:156
-msgid "Using Icon instead of percentage."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:184
-msgid "Bar Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:197
-msgid "Track color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:208
-msgid "Percentage & Icon Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_bar.php:259
-msgid "Displayed Units"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:41
-msgid "Choose Layout"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:90
-msgid "Height"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:91
-msgid ""
-"The browser automatically calculates the container height if the value is "
-"<strong>\"0\"</strong>."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:106
-msgid "Vertically Center Content"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:118
-msgid "Background Image"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:147
-msgid "Background Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:159
-msgid "Border"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:176
-msgid "Border Width"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:191
-msgid "Border Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:201
-msgid "Border Style"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:222
-msgid "Parallax"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:223
-msgid "Recommended value: -10.00 to 10.00"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:246
-msgid "Wrapper Margin (px)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:247
-msgid ""
-"Use the input fields below to customize the margin of container wrapper."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:272
-msgid "Content Padding (px)"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:273
-msgid ""
-"Use the input fields below to customize the padding of content from "
-"container."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_container.php:333
-msgid "Content here..."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:81
-msgid "Column Two Third"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:45
-msgid "Primary Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:56
-msgid "Author Picture"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:75
-msgid "Author Name"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:77
-msgid "Your Name"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:87
-msgid "Biographical Info"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:89
-msgid ""
-"Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; "
-"Tu vero, inquam, ducas licet, si sequetur; Ab his oratores, ab his "
-"imperatores ac rerum publicarum principes extiterunt. Igitur neque stultorum "
-"quisquam beatus neque sapientium non beatus."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:111
-msgid "&rarr;"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:119
-msgid "Link URL"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:132
-msgid "Social Network 1"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:157
-msgid "Social Network 2"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:182
-msgid "Social Network 3"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_contact_form.php:41
-msgid ""
-"Output a complete commenting form with your theme. Show when you allow the "
-"comments to be displayed."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_code.php:86
-msgid "Source code"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_icon.php:60
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:121
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:331
-msgid "other color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_icon.php:95
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:143
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:42
-msgid "Size"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_client.php:89
-msgid "LOGO URL"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_client.php:99
-msgid "Destination URL, e.g., http://your.clientsite.com"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_client.php:109
-msgid "The Introduction of this client."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_client.php:151
-msgid "Clients"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:100
-msgid "Tab Title"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:114
-msgid "This is content of the tab."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:46
-msgid "Text Here"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:56
-msgid "Choose Title Style"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:101
-msgid "Heading Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:162
-msgid "Alignment"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_heading.php:177
@@ -2170,53 +1238,167 @@ msgstr ""
 msgid "Letter Spacing"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:193
-msgid "Uppercase of Text"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:205
-msgid "Underline"
-msgstr ""
-
 #: shortcodes/templates/default/modules/uix_sc_module_heading.php:244
 msgid "Line Height"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:282
-msgid "Displayed Text"
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:139
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:229
+msgid "Line Width"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:297
-msgid "Font Size"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_heading.php:313
-msgid "Description Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:78
-msgid "Hover Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:92
-msgid "Text Color"
+#: includes/uixscform/init.php:116
+#: includes/admin/uix-custom-metaboxes/init.php:230
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:109
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:106
+msgid "Link Text"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_button.php:108
 msgid "Link to"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:120
-msgid "http://"
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:119
+msgid "Link URL"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:129
-#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:61
-msgid "Fillet Radius"
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:159
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:145
+#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:81
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:108
+#: shortcodes/templates/default/modules/uix_sc_module_features_col3.php:52
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:150
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:568
+#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:51
+#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:123
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:126
+#: shortcodes/templates/default/modules/uix_sc_module_client.php:72
+#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:84
+#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:62
+msgid "List Item"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:167
-msgid "click on the set more attributes"
+#: helper/tabs/about.php:44
+msgid "list of clients"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_client.php:89
+msgid "LOGO URL"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:175
+msgid "Longitude"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:124
+msgid "Loop"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:97
+msgid "Loop Template"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:129
+msgid "Map Height"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:44
+msgid "Map Style"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:107
+msgid "Map Width"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:202
+msgid "Marker"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:203
+msgid ""
+"Markers can display custom images, in which case they are usually referred "
+"to as \"icons.\""
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:119
+msgid "Masonry"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:127
+msgid "Month"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:128
+msgid "Month display in English"
+msgstr ""
+
+#: includes/uixscform/controls/toggle.php:52
+msgid "More Options"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:481
+msgid "Multiple Selector"
+msgstr ""
+
+#: helper/tabs/credits.php:19
+msgid "Muuri"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:140
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:182
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:158
+msgid "Name"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:105
+msgid "No Repeat"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:56
+msgid "Number of posts to show"
+msgstr ""
+
+#: helper/tabs/documentation.php:16
+msgid "Online Documentation"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:93
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:353
+msgid "Opacity"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:146
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:315
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:482
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:154
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:329
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:503
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:677
+msgid "Open in new tab"
+msgstr ""
+
+#: includes/uixscform/init.php:117
+#: includes/admin/uix-custom-metaboxes/init.php:231
+msgid "Open link in a new tab"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:128
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:144
+msgid "Open link in new tab"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:68
+msgid "Open The First One Automatically"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:70
+msgid "Order By"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_icon.php:60
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:121
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:331
+msgid "other color"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_button.php:184
@@ -2231,123 +1413,766 @@ msgstr ""
 msgid "Other Color Text"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:217
-msgid "Icon&apos;s Name"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:218
-msgid "Tips: that will be pure text button if icon does not choose."
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_button.php:230
-msgid "Font-Size for Button"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:50
-msgid "Highlight Color"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:78
-msgid "Highlight"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:99
-#, php-format
-msgid "e.g., %1$s"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:117
-msgid "Project Status Here"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:44
-msgid "Map Style"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:71
-#, php-format
+#: shortcodes/templates/default/modules/uix_sc_module_contact_form.php:41
 msgid ""
-"Click on the exact location you'd like coordinates for. Right-click on the "
-"pin and select \"What's here?\" <a href=\"%1$s\" target=\"_blank\" "
-"rel=\"nofollow\">Get Latitude Longitude</a>"
+"Output a complete commenting form with your theme. Show when you allow the "
+"comments to be displayed."
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:86
-msgid "Google API key"
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:163
+msgid "Output text after the &lt;/a&gt; of the link"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:87
-#, php-format
-msgid ""
-"<a href=\"%1$s\" target=\"_blank\">How to \n"
-"Get an API Key?</a> If left blank, the default Key will be used, but it will "
-"have a traffic excess problem that will not display properly."
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:152
+msgid "Output text before the &lt;a&gt; of the link"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:90
-msgid "Your own Google API key"
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:49
+msgid "Padding"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:107
-msgid "Map Width"
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:49
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:264
+#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:49
+#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:49
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:49
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:49
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:49
+msgid "Padding (px)"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:129
-msgid "Map Height"
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:222
+msgid "Parallax"
+msgstr ""
+
+#: helper/tabs/about.php:31
+msgid "parallax"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:92
+msgid "Parent Category"
+msgstr ""
+
+#: helper/tabs/custom-css.php:125
+msgid "Paste your CSS code"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:86
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:255
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:422
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:94
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:269
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:443
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:617
+msgid "per month"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:110
+msgid "Percent"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:208
+msgid "Percentage & Icon Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:125
+msgid "Percentage & Icon Size"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:84
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:253
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:420
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:92
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:267
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:441
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:615
+msgid "Period"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:125
+msgid "Permalink"
 msgstr ""
 
 #: shortcodes/templates/default/modules/uix_sc_module_map.php:153
 msgid "Place Name"
 msgstr ""
 
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:98
+msgid "Player Height"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_audio.php:83
+msgid "Player Width"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:47
+#: shortcodes/templates/default/config.php:113
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:301
+msgid "Portfolio"
+msgstr ""
+
+#: helper/tabs/about.php:53
+msgid "portfolio(support lightbox)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:158
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:200
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:176
+msgid "Position"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:89
+msgid ""
+"Prefix string attached to the classes of all elements generated by the "
+"portfolio, the default value is &quot;<strong>uix-sc-portfolio__</strong>"
+"&quot;."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:213
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:220
+msgid "premium"
+msgstr ""
+
+#: helper/tabs/credits.php:18
+msgid "prettyPhoto"
+msgstr ""
+
+#: includes/uixscform/components/ui-wrapper.php:51
+msgid "Preview"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:52
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:221
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:388
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:53
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:228
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:402
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:576
+msgid "Price"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:62
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:231
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:398
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:63
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:238
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:412
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:586
+msgid "Price Color"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:20
+msgid "Pricing"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:21
+#: shortcodes/templates/default/config.php:83
+msgid "Pricing 3 Column"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:569
+msgid "Pricing 3 column"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:22
+#: shortcodes/templates/default/config.php:90
+msgid "Pricing 4 Column"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:769
+msgid "Pricing 4 column"
+msgstr ""
+
+#: helper/tabs/about.php:39
+msgid "pricing table"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:45
+msgid "Primary Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:380
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:394
+msgid "professional"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:49
+#: shortcodes/templates/default/config.php:331
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:292
+msgid "Progress Bar"
+msgstr ""
+
+#: helper/tabs/about.php:36
+msgid "progress bar"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:117
+msgid "Project Status Here"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:188
+msgid "Project Title"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:89
+msgid ""
+"Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; "
+"Tu vero, inquam, ducas licet, si sequetur; Ab his oratores, ab his "
+"imperatores ac rerum publicarum principes extiterunt. Igitur neque stultorum "
+"quisquam beatus neque sapientium non beatus."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:223
+msgid "Radio"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:98
+msgid "Radio Switch"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:51
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:66
+msgid "Radius of Fillet Avatar"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:67
+msgid "Radius of Fillet Image"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:19
+#: shortcodes/templates/default/config.php:76
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:189
+msgid "Recent Posts"
+msgstr ""
+
+#: helper/tabs/about.php:54
+msgid "recent posts with custom template"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:223
+msgid "Recommended value: -10.00 to 10.00"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:36
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:94
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:79
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:84
+#: includes/admin/uix-custom-metaboxes/controls/image.php:11
+msgid "Remove"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:28
+msgid "Remove image"
+msgstr ""
+
+#: includes/uixscform/init.php:113
+#: includes/admin/uix-custom-metaboxes/init.php:227
+msgid "Remove link"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_video.php:97
+msgid "Responsive of Display"
+msgstr ""
+
+#: helper/tabs/about.php:45
+msgid "responsive video"
+msgstr ""
+
+#: helper/tabs/general-settings.php:139
+msgid "Rich"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:134
+msgid "Right"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:216
+msgid "Right Block"
+msgstr ""
+
+#: helper/tabs/custom-css.php:196 helper/tabs/custom-css.php:211
+msgid "RTL CSS file root directory:"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:57
+msgid "Scale"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:159
+msgid "Scroll"
+msgstr ""
+
+#: includes/uixscform/components/ui-form.php:56
+msgid "Section"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:464
+msgid "Select"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:85
+msgid "Select Category"
+msgstr ""
+
+#: includes/uixscform/init.php:110
+#: includes/admin/uix-custom-metaboxes/init.php:224
+msgid "Select Files"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:85
+#: includes/admin/uix-custom-metaboxes/controls/image.php:12
+msgid "Select image or video"
+msgstr ""
+
 #: shortcodes/templates/default/modules/uix_sc_module_map.php:155
 msgid "SEO San Francisco, CA, Gough Street, San Francisco, CA"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:164
-msgid "Latitude"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:175
-msgid "Longitude"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:187
-msgid "Zoom"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:202
-msgid "Marker"
-msgstr ""
-
-#: shortcodes/templates/default/modules/uix_sc_module_map.php:203
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:93
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:108
 msgid ""
-"Markers can display custom images, in which case they are usually referred "
-"to as \"icons.\""
+"Set height of grid so that it will fit its avatar photo. Browsers use a "
+"default stylesheet to render if the value is <strong>\"0\"</strong>."
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:43
-msgid "Choose Type of Button"
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:236
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:188
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:408
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:610
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:206
+msgid "set up links with toggle"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:91
-msgid "Button Size"
+#: uix-shortcodes.php:453 uix-shortcodes.php:574 uix-shortcodes.php:575
+msgid "Settings"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:105
-msgid "It takes that unique url and share it on the social page automagically."
+#: helper/tabs/general-settings.php:31 helper/tabs/custom-css.php:26
+msgid "Settings saved."
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:83
-msgid "Column One Fourth"
+#: shortcodes/editor/tinymce-plugin-lang.php:42
+#: shortcodes/templates/default/config.php:315
+#: shortcodes/templates/default/modules/uix_sc_module_share_buttons.php:134
+msgid "Share Buttons"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:83
-msgid "Column One Third"
+#: helper/tabs/about.php:51
+msgid "share buttons"
 msgstr ""
 
-#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:82
-msgid "Column One Half"
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:365
+msgid "Short Text"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:385
+msgid "Short Units Text"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:87
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:87
+msgid "Show Arrow Navigation"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:75
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:75
+msgid "Show Paging Navigation"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_icon.php:95
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:143
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:42
+msgid "Size"
+msgstr ""
+
+#: helper/tabs/general-settings.php:130
+msgid "Slant"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:55
+msgid "Slide"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:149
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:218
+msgid "SLider"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:238
+msgid "Slider"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:202
+msgid "Slider introduction"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:187
+msgid "Slider title"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:132
+msgid "Social Network 1"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:157
+msgid "Social Network 2"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:182
+msgid "Social Network 3"
+msgstr ""
+
+#: includes/uixscform/fontawesome/font-awesome-custom.php:473
+#: includes/uixscform/flaticon/font-flaticon-custom.php:513
+msgid "Social:"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:110
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:111
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:111
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:112
+#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:113
+#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:114
+#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:111
+#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:112
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:113
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:114
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:115
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:116
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:113
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:114
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:115
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:111
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:112
+msgid "Some content for this column."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:96
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:265
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:432
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:104
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:279
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:453
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:627
+msgid "Some description text here."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_features_col3.php:82
+#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:81
+#: shortcodes/templates/default/modules/uix_sc_module_features_col2.php:153
+msgid ""
+"Some description text here. You can add a lot of it or can choose to leave "
+"it blank."
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:46
+#: shortcodes/templates/default/config.php:361
+#: shortcodes/templates/default/config.php:365
+#: shortcodes/templates/default/modules/uix_sc_module_code.php:118
+msgid "Source Code"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_code.php:86
+msgid "Source code"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:39
+#: shortcodes/templates/default/config.php:291
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:388
+msgid "Special Heading"
+msgstr ""
+
+#: helper/tabs/about.php:38
+msgid "special heading"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:113
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:114
+msgid "Speed of Images Appereance"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:118
+msgid "Standard"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:535
+msgid "Switch"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:663
+msgid "Switch Demo"
+msgstr ""
+
+#: includes/uixscform/init.php:118
+#: includes/admin/uix-custom-metaboxes/init.php:232
+msgid "Syntax Highlight Code"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:100
+msgid "Tab Title"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:553
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:748
+msgid "Table 1"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:559
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:754
+msgid "Table 2"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:564
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:759
+msgid "Table 3"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:764
+msgid "Table 4"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:24
+#: shortcodes/templates/default/config.php:105
+#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:157
+msgid "Tabs"
+msgstr ""
+
+#: helper/tabs/about.php:49
+msgid "tabs"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:25
+msgid "Team"
+msgstr ""
+
+#: helper/tabs/about.php:43
+msgid "team"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:26
+#: shortcodes/templates/default/config.php:121
+msgid "Team Full Width"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:27
+#: shortcodes/templates/default/config.php:129
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:329
+msgid "Team Grid"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:311
+msgid "Team Normal"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:34
+#: shortcodes/templates/default/config.php:160
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:254
+msgid "Testimonials Carousel"
+msgstr ""
+
+#: helper/tabs/about.php:42
+msgid "testimonials carousel"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:15
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:75
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:139
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:595
+msgid "Text"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:157
+msgid "Text Attr"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:92
+msgid "Text Color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:46
+msgid "Text Here"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:175
+msgid "Text Slug"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:101
+msgid "Text2 - 1"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:172
+msgid "Text2 - 2"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:247
+msgid "Text3 - 1"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:263
+msgid "Text3 - 2"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:280
+msgid "Text3 - 3"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:305
+msgid "Text4 - 1"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:321
+msgid "Text4 - 2"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:336
+msgid "Text4 - 3"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:351
+msgid "Text4 - 4"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:294
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:315
+msgid "Textarea(by default value)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:91
+msgid ""
+"The browser automatically calculates the container height if the value is "
+"<strong>\"0\"</strong>."
+msgstr ""
+
+#: helper/tabs/about.php:27
+msgid "The currently available default elements:"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:216
+msgid "The description of this project."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_client.php:109
+msgid "The Introduction of this client."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:168
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:186
+msgid "The Introduction of this member."
+msgstr ""
+
+#: helper/tabs/about.php:15
+msgid ""
+"The Uix Shortcodes consists of several core features that are key to support "
+"multi-style switch. According to current progress, some styles can be "
+"summarized as follows: <strong>Elegant (default), Slant, Rich.</strong>"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:111
+msgid "This is content of the accordion."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:114
+msgid "This is content of the tab."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:499
+msgid "This is Icon Selector "
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:140
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:465
+msgid "This is infomation."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:129
+msgid "This option is valid when you use destination URL."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_portfolio_grid.php:162
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:106
+msgid "Tile"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:107
+msgid "Tile Horizontally"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:108
+msgid "Tile Vertically"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:33
+#: shortcodes/templates/default/config.php:198
+#: shortcodes/templates/default/modules/uix_sc_module_timeline.php:159
+msgid "Timeline"
+msgstr ""
+
+#: helper/tabs/about.php:33
+msgid "timeline"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_button.php:218
+msgid "Tips: that will be pure text button if icon does not choose."
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:34
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:88
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:126
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:42
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:211
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:378
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:61
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:43
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:218
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:392
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:566
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:227
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:229
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:44
+msgid "Title"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:419
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:621
+msgid "Toggle URL"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:197
+msgid "Track color"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_accordion.php:53
+#: shortcodes/templates/default/modules/uix_sc_module_tabs.php:66
+msgid "Transition Effect"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:109
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:117
+msgid "TRY FOR FREE"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:170
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:339
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col3.php:507
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:178
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:353
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:528
+#: shortcodes/templates/default/modules/uix_sc_module_pricing_col4.php:701
+msgid "Type one word or sentence per line when press \"ENTER\"."
+msgstr ""
+
+#. Author of the plugin
+msgid "UIUX Lab"
+msgstr ""
+
+#. Name of the plugin
+#: uix-shortcodes.php:554 includes/admin/block-init.php:28
+#: shortcodes/editor/tinymce-plugin-lang.php:17
+msgid "Uix Shortcodes"
 msgstr ""
 
 #. Description of the plugin
@@ -2356,14 +2181,200 @@ msgid ""
 "your site that lets you do nifty things with very little effort."
 msgstr ""
 
-#. URI of the plugin
-msgid "https://uiux.cc/wp-plugins/uix-shortcodes/"
+#: helper/tabs/about.php:11
+msgid ""
+"Uix Shortcodes brings an amazing set of beautiful and useful elements to "
+"your site that lets you do nifty things with very little effort. It makes it "
+"easy and quick to add the shortcode you need to achieve the page layout or "
+"function you desire. It provides easy to use over 26+ shortcodes. The "
+"content elements are the heart of any page builder. These are the elements "
+"shortcodes that come with theme. You may customize the shortcode by "
+"changing/adding the parameters. <strong>\"Content Shortcode\"</strong>, "
+"<strong>\"Column Shortcode\"</strong>, <strong>\"Web Elements "
+"Shortcode\"</strong>, <strong>\"Container Shortcode\"</strong>, and so on. "
+"They could be used together. <strong style=\"color:red\">It is compatible "
+"with Gutenberg.</strong>"
 msgstr ""
 
-#. Author of the plugin
-msgid "UIUX Lab"
+#: uix-shortcodes.php:553 helper/settings.php:44
+msgid "Uix Shortcodes Settings"
 msgstr ""
 
-#. Author URI of the plugin
-msgid "https://uiux.cc"
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:205
+msgid "Underline"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:234
+msgid "Untitled"
+msgstr ""
+
+#: includes/uixscform/controls/image.php:29
+msgid "Upload"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:138
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello2.php:208
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:332
+msgid "Upload Image"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:78
+msgid "Upload Your Files"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_heading.php:193
+msgid "Uppercase of Text"
+msgstr ""
+
+#: includes/uixscform/init.php:115
+#: includes/admin/uix-custom-metaboxes/init.php:229
+msgid "URL"
+msgstr ""
+
+#: includes/uixscform/init.php:120
+msgid "Use keyboard shortcuts (CTRL+V) to quickly paste text into the editor."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:247
+msgid ""
+"Use the input fields below to customize the margin of container wrapper."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:273
+msgid ""
+"Use the input fields below to customize the padding of content from "
+"container."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_3__2_3.php:50
+#: shortcodes/templates/default/modules/uix_sc_module_column_1_4__3_4.php:50
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:265
+#: shortcodes/templates/default/modules/uix_sc_module_column_3_4__1_4.php:50
+#: shortcodes/templates/default/modules/uix_sc_module_column_2_3__1_3.php:50
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_4.php:50
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_3.php:50
+#: shortcodes/templates/default/modules/uix_sc_module_column_average_2.php:50
+msgid ""
+"Use the input fields below to customize the padding of your column shortcode."
+" Measurement units is pixels (px)."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:123
+msgid ""
+"Use this template to display content on your website. You can use the "
+"following placeholders in the post list item templates, which will be "
+"replaced by the actual values when the content is displayed"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_bar.php:156
+msgid "Using Icon instead of percentage."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_imageslider.php:128
+#, php-format
+msgid ""
+"Using the CSS animation/transition duration from Uix Shortcodes stylesheets. "
+"<br>You can find this code <code>.uix-sc-slideshow { ... }</code> <br><a "
+"target=\"_blank\" href=\"%1$s\">click here to set speed</a>"
+msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:35
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:89
+msgid "Value"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_testimonials.php:58
+msgid "Vertical"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:106
+msgid "Vertically Center Content"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:35
+#: shortcodes/templates/default/config.php:167
+#: shortcodes/templates/default/modules/uix_sc_module_video.php:127
+msgid "Video"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_video.php:45
+msgid "Video URL"
+msgstr ""
+
+#: shortcodes/templates/default/frontpage-init.php:331
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: shortcodes/editor/tinymce-plugin-lang.php:38
+#: shortcodes/templates/default/config.php:285
+msgid "Web Elements"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_dividing_line.php:78
+msgid "Width"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:246
+msgid "Wrapper Margin (px)"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_recent_posts.php:130
+msgid "Year"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_sample_hello.php:67
+#: shortcodes/templates/default/modules/uix_sc_module_container.php:71
+#, php-format
+msgid ""
+"You can custom the boxed width of the container for Uix Shortcodes "
+"stylesheets. <a target=\"_blank\" href=\"%1$s\">click here to custom</a>"
+msgstr ""
+
+#: helper/tabs/custom-css.php:127
+msgid ""
+"You could add new styles code to your website, without modifying original ."
+"css files."
+msgstr ""
+
+#: helper/settings.php:35
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: helper/tabs/custom-css.php:106
+msgid "You have already used custom JavaScript files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:90
+msgid "You have already used custom stylesheet files."
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:77
+msgid "Your Name"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:90
+msgid "Your own Google API key"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:206
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:135
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:224
+msgid "Your Social Network Page URL 1"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:229
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:160
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:247
+msgid "Your Social Network Page URL 2"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_team_fullwidth.php:252
+#: shortcodes/templates/default/modules/uix_sc_module_authorcard.php:185
+#: shortcodes/templates/default/modules/uix_sc_module_team_grid.php:270
+msgid "Your Social Network Page URL 3"
+msgstr ""
+
+#: shortcodes/templates/default/modules/uix_sc_module_map.php:187
+msgid "Zoom"
 msgstr ""

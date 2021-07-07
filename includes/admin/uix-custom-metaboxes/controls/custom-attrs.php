@@ -13,9 +13,9 @@
 		foreach( $_data as $value ) {
 		?>
 			<li>
-				<strong><?php echo esc_html( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'name' ] ) ); ?></strong>
+				<strong><?php echo esc_html( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'name' ] ) ); ?></strong>
 				<p>
-					<?php echo UixCmb::kses( Uix_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+					<?php echo UixCmb::kses( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'value' ] ) ); ?>
 				</p>
 			</li>
 		<?php
@@ -122,8 +122,8 @@ class UixCmbFormType_CustomAttrs extends Uix_Custom_Metaboxes {
 									foreach( $project_custom_attrs as $value ) {
 
 										if ( is_array( $value ) && sizeof( $value ) > 0 ) {
-											echo str_replace( '{name}', esc_attr( self::parse_json_data_from_editor( $value[ 'name' ] ) ), 
-														 str_replace( '{value}', esc_attr( self::parse_json_data_from_editor( $value[ 'value' ] ) ),
+											echo str_replace( '{name}', esc_attr( self::parse_jsondata_from_editor( $value[ 'name' ] ) ), 
+														 str_replace( '{value}', esc_attr( self::parse_jsondata_from_editor( $value[ 'value' ] ) ),
 														 $temp 
 														));           
 										}

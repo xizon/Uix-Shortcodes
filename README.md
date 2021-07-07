@@ -67,6 +67,14 @@ The currently available default elements:
 ### Updates
 
 
+##### = 1.9.8 (July 5, 2021) =
+
+* Fix: Fixed the display and escaping problem of the code block in the editor.
+* Tweak: Performance optimization of dynamic forms (use virtual tree to update dom) for Custom Meta Boxes.
+* Tweak: Optimized the escape compatibility issue of the editor control for Custom Meta Boxes.
+
+
+
 ##### = 1.9.7 (March 1, 2021) =
 
 * Fix: Delete SyntaxHighlighter to improve the compatibility of plug-ins.
@@ -546,6 +554,8 @@ The currently available default elements:
 - WP 5.4.*
 - WP 5.5.*
 - WP 5.6.*
+- WP 5.7.*
+
 
 
 ### Frequently Asked Questions
