@@ -555,6 +555,7 @@ The currently available default elements:
 - WP 5.5.*
 - WP 5.6.*
 - WP 5.7.*
+- WP 5.8.*
 
 
 
