@@ -67,6 +67,11 @@ The currently available default elements:
 ### Updates
 
 
+##### = 1.9.9 (November 12, 2022) =
+
+* Tweak: Enhance the functionality of the uix custom metabox.
+
+
 ##### = 1.9.8 (July 5, 2021) =
 
 * Fix: Fixed the display and escaping problem of the code block in the editor.
@@ -558,6 +563,7 @@ The currently available default elements:
 - WP 5.8.*
 - WP 5.9.*
 - WP 6.0.*
+- WP 6.1.*
 
 
 

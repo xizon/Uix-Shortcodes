@@ -2,9 +2,6 @@
 /**
 * Field Type: Editor
 *
-* @print: 
-* echo UixCmb::kses( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_appear_3', true ) );
-*
 */
 class UixCmbFormType_Editor extends Uix_Custom_Metaboxes {
 	

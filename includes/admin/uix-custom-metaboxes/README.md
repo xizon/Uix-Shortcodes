@@ -28,6 +28,9 @@ Provides a compatible solution for some personalized themes that require custom 
 - WP 5.5.*
 - WP 5.6.*
 - WP 5.7.*
+- WP 6.0.*
+- WP 6.1.*
+
 
 
 ## Usage
@@ -51,7 +54,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		array(
 			'config' => array( 
 				'id'         =>  'yourtheme_metaboxes-1', 
-				'title'      =>  esc_html__( '[Demo] Normal Fields', 'your-theme' ),
+				'title'      =>  esc_html__( '[Demo] Normal Fields', 'uix-shortcodes' ),
 				'screen'     =>  'page', // page, post, uix_products, uix-slideshow, ...
 				'context'    =>  'normal',
 				'priority'   =>  'high',
@@ -59,9 +62,9 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'          =>  'cus_page_ex_demoname_1',
 						'type'        =>  'textarea',
-						'title'       =>  esc_html__( 'Textarea', 'your-theme' ),
-						'placeholder' =>  esc_html__( 'Placeholder Text', 'your-theme' ),
-						'desc'        =>  esc_html__( 'Here is the description. It could be left blank. (Support for HTML tags)', 'your-theme' ),
+						'title'       =>  esc_html__( 'Textarea', 'uix-shortcodes' ),
+						'placeholder' =>  esc_html__( 'Placeholder Text', 'uix-shortcodes' ),
+						'desc'        =>  esc_html__( 'Here is the description. It could be left blank. (Support for HTML tags)', 'uix-shortcodes' ),
 						'default'     =>  '',
 						'options'     =>  array( 
 											'rows'  => 5	
@@ -70,23 +73,23 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'cus_page_ex_demoname_2',
 						'type'          =>  'text',
-						'title'         =>  esc_html__( 'Text', 'your-theme' ),
-						'desc_primary'  =>  esc_html__( 'Here is the description. It could be left blank.', 'your-theme' ),
+						'title'         =>  esc_html__( 'Text', 'uix-shortcodes' ),
+						'desc_primary'  =>  esc_html__( 'Here is the description. It could be left blank.', 'uix-shortcodes' ),
 						'default'       =>  '123',
 					),
 
 					array(
 						'id'            =>  'cus_page_ex_demoname_3',
 						'type'          =>  'url',
-						'title'         =>  esc_html__( 'URL', 'your-theme' )
+						'title'         =>  esc_html__( 'URL', 'uix-shortcodes' )
 					),
 
 					array(
 						'id'          =>  'cus_page_ex_demoname_4',
 						'type'        =>  'number',
-						'title'       =>  esc_html__( 'Number', 'your-theme' ),
+						'title'       =>  esc_html__( 'Number', 'uix-shortcodes' ),
 						'options'     =>  array( 
-											'units'  =>  esc_html__( 'px', 'your-theme' )
+											'units'  =>  esc_html__( 'px', 'uix-shortcodes' )
 										  )
 
 					),
@@ -96,14 +99,14 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'          =>  'cus_page_ex_demoname_5',
 						'type'        =>  'radio',
-						'title'       =>  esc_html__( 'Radio', 'your-theme' ),
+						'title'       =>  esc_html__( 'Radio', 'uix-shortcodes' ),
 						'default'     =>  '2',
 						'options'     =>  array( 
 											'radio_type'  => 'normal',
 											'value'       => array(
-												'1'            =>  esc_html__( 'Option: 1', 'your-theme' ),
-												'2'            =>  esc_html__( 'Option: 2 (Default)', 'your-theme' ),
-												'3'            =>  esc_html__( 'Option: 3', 'your-theme' ),	
+												'1'            =>  esc_html__( 'Option: 1', 'uix-shortcodes' ),
+												'2'            =>  esc_html__( 'Option: 2 (Default)', 'uix-shortcodes' ),
+												'3'            =>  esc_html__( 'Option: 3', 'uix-shortcodes' ),	
 											 )
 
 
@@ -114,14 +117,14 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'          =>  'cus_page_ex_demoname_5_2',
 						'type'        =>  'radio',
-						'title'       =>  esc_html__( 'Radio 2', 'your-theme' ),
+						'title'       =>  esc_html__( 'Radio 2', 'uix-shortcodes' ),
 						'options'     =>  array( 
 											'br'          => true,
 											'radio_type'  => 'normal',
 											'value'       => array(
-												'1'            =>  esc_html__( 'Option: 1', 'your-theme' ),
-												'2'            =>  esc_html__( 'Option: 2', 'your-theme' ),
-												'3'            =>  esc_html__( 'Option: 3', 'your-theme' ),	
+												'1'            =>  esc_html__( 'Option: 1', 'uix-shortcodes' ),
+												'2'            =>  esc_html__( 'Option: 2', 'uix-shortcodes' ),
+												'3'            =>  esc_html__( 'Option: 3', 'uix-shortcodes' ),	
 											 )
 
 
@@ -134,17 +137,17 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'cus_page_ex_demoname_6',
 						'type'          =>  'radio',
-						'title'         =>  esc_html__( 'Radio(Associated)', 'your-theme' ),
-						'desc_primary'  =>  esc_html__( 'It is valid to assign height to page title area when the featured image is not empty.', 'your-theme' ),
+						'title'         =>  esc_html__( 'Radio(Associated)', 'uix-shortcodes' ),
+						'desc_primary'  =>  esc_html__( 'It is valid to assign height to page title area when the featured image is not empty.', 'uix-shortcodes' ),
 
 						'default'     =>  'normal',
 						'options'     =>  array( 
 											'radio_type'  => 'normal',
 											'value'       =>  array(
-												'normal'       =>  esc_html__( 'Option: Normal(Default)', 'your-theme' ),
-												'higher'       =>  esc_html__( 'Option: Higher', 'your-theme' ),
-												'full-screen'  =>  esc_html__( 'Option: Full Screen', 'your-theme' ),
-												'cus-height'   =>  esc_html__( 'Option: Custom Height', 'your-theme' ),
+												'normal'       =>  esc_html__( 'Option: Normal(Default)', 'uix-shortcodes' ),
+												'higher'       =>  esc_html__( 'Option: Higher', 'uix-shortcodes' ),
+												'full-screen'  =>  esc_html__( 'Option: Full Screen', 'uix-shortcodes' ),
+												'cus-height'   =>  esc_html__( 'Option: Custom Height', 'uix-shortcodes' ),
 											 ),
 											'toggle'      =>  array(
 												'normal'       =>  '',
@@ -152,7 +155,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 												'full-screen'  =>  array(
                                                                     'id'             =>  'cus_page_ex_demoname_6_opt-full-screen-toggle',
                                                                     'type'           =>  'text',
-                                                                    'title'          =>  esc_html__( 'full-screen', 'your-theme' ),
+                                                                    'title'          =>  esc_html__( 'full-screen', 'uix-shortcodes' ),
                                                                     'desc_primary'   =>  '',
                                                                 ),
 												'cus-height'   =>  array( 
@@ -160,7 +163,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                                                                     'type'     =>  'number',
                                                                     'default'  =>  350,
                                                                     'options'     =>  array( 
-                                                                                        'units'  =>  esc_html__( 'px', 'your-theme' )
+                                                                                        'units'  =>  esc_html__( 'px', 'uix-shortcodes' )
                                                                                       )
                                                                 ),
 											 ),
@@ -172,15 +175,15 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'cus_page_ex_demoname_s6',
 						'type'          =>  'radio',
-						'title'         =>  esc_html__( 'Switch(Associated)', 'your-theme' ),
-						'desc_primary'  =>  esc_html__( 'Can control multiple forms to display or hide.', 'your-theme' ),
+						'title'         =>  esc_html__( 'Switch(Associated)', 'uix-shortcodes' ),
+						'desc_primary'  =>  esc_html__( 'Can control multiple forms to display or hide.', 'uix-shortcodes' ),
 
 						'default'     =>  'my-switch-1',
 						'options'     =>  array( 
 											'radio_type'  => 'switch',
 											'value'       =>  array(
-												'my-switch-1'       =>  esc_html__( 'My Switch 1', 'your-theme' ),
-												'my-switch-2'       =>  esc_html__( 'My Switch 2', 'your-theme' )
+												'my-switch-1'       =>  esc_html__( 'My Switch 1', 'uix-shortcodes' ),
+												'my-switch-2'       =>  esc_html__( 'My Switch 2', 'uix-shortcodes' )
 											 ),
 											'target_ids'      =>  array(
 												'my-switch-1'       =>  '',
@@ -199,7 +202,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'          =>  'cus_page_ex_demoname_7',
 						'type'        =>  'radio',
-						'title'       =>  esc_html__( 'Radio Image', 'your-theme' ),
+						'title'       =>  esc_html__( 'Radio Image', 'uix-shortcodes' ),
 						'default'     =>  'no-sidebar',
 						'options'     =>  array( 
 											'radio_type'  => 'image',
@@ -216,21 +219,21 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'cus_page_ex_demoname_8',
 						'type'          =>  'checkbox',
-						'title'         =>  esc_html__( 'Checkbox', 'your-theme' ),
-						'desc_primary'  =>  esc_html__( 'Here is the description. It could be left blank.', 'your-theme' ),
+						'title'         =>  esc_html__( 'Checkbox', 'uix-shortcodes' ),
+						'desc_primary'  =>  esc_html__( 'Here is the description. It could be left blank.', 'uix-shortcodes' ),
 
 					),
 
 					array(
 						'id'          =>  'cus_page_ex_demoname_9',
 						'type'        =>  'select',
-						'title'       =>  esc_html__( 'Select', 'your-theme' ),
+						'title'       =>  esc_html__( 'Select', 'uix-shortcodes' ),
 						'default'     =>  '3',
 						'options'     =>  array( 
 											'value'       => array(
-												'1'            =>  esc_html__( 'Option: 1', 'your-theme' ),
-												'2'            =>  esc_html__( 'Option: 2', 'your-theme' ),
-												'3'            =>  esc_html__( 'Option: 3 (Default)', 'your-theme' ),	
+												'1'            =>  esc_html__( 'Option: 1', 'uix-shortcodes' ),
+												'2'            =>  esc_html__( 'Option: 2', 'uix-shortcodes' ),
+												'3'            =>  esc_html__( 'Option: 3 (Default)', 'uix-shortcodes' ),	
 											 )
 
 
@@ -241,10 +244,10 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'             =>  'cus_page_ex_demoname_10',
 						'type'           =>  'price',
-						'title'          =>  esc_html__( 'Price', 'your-theme' ),
-						'desc_primary'   =>  esc_html__( 'Here is the description. It could be left blank.', 'your-theme' ),
+						'title'          =>  esc_html__( 'Price', 'uix-shortcodes' ),
+						'desc_primary'   =>  esc_html__( 'Here is the description. It could be left blank.', 'uix-shortcodes' ),
 						'options'        =>  array( 
-											'units'  =>  esc_html__( '$', 'your-theme' )
+											'units'  =>  esc_html__( '$', 'uix-shortcodes' )
 										  )
 
 					),
@@ -252,17 +255,17 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'          =>  'cus_page_ex_demoname_11',
 						'type'        =>  'multi-checkbox',
-						'title'       =>  esc_html__( 'Multi Checkbox', 'your-theme' ),
+						'title'       =>  esc_html__( 'Multi Checkbox', 'uix-shortcodes' ),
 						'default'     =>  array( 'opt-1', 'opt-3' ),
 						'options'     =>  array( 
 											'br'          => true,
 											'value'       => array(
-												'opt-1'            =>  esc_html__( 'Option: 1', 'your-theme' ),
-												'opt-2'            =>  esc_html__( 'Option: 2', 'your-theme' ),
-												'opt-3'            =>  esc_html__( 'Option: 3', 'your-theme' ),	
-												'opt-4'            =>  esc_html__( 'Option: 4', 'your-theme' ),
-												'opt-5'            =>  esc_html__( 'Option: 5', 'your-theme' ),
-												'opt-6'            =>  esc_html__( 'Option: 6', 'your-theme' ),	
+												'opt-1'            =>  esc_html__( 'Option: 1', 'uix-shortcodes' ),
+												'opt-2'            =>  esc_html__( 'Option: 2', 'uix-shortcodes' ),
+												'opt-3'            =>  esc_html__( 'Option: 3', 'uix-shortcodes' ),	
+												'opt-4'            =>  esc_html__( 'Option: 4', 'uix-shortcodes' ),
+												'opt-5'            =>  esc_html__( 'Option: 5', 'uix-shortcodes' ),
+												'opt-6'            =>  esc_html__( 'Option: 6', 'uix-shortcodes' ),	
 											 )
 
 
@@ -281,7 +284,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		array(
 			'config' => array( 
 				'id'         =>  'yourtheme_metaboxes-2', 
-				'title'      =>  esc_html__( '[Demo] Appearance Fields', 'your-theme' ),
+				'title'      =>  esc_html__( '[Demo] Appearance Fields', 'uix-shortcodes' ),
 				'screen'     =>  'page', // page, post, uix_products, uix-slideshow, ...
 				'context'    =>  'normal',
 				'priority'   =>  'high',
@@ -289,22 +292,22 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'          =>  'cus_page_ex_demoname_appear_1',
 						'type'        =>  'image',
-						'title'       =>  esc_html__( 'Image or Video', 'your-theme' ),
-						'placeholder' =>  esc_html__( 'Image or Video URL', 'your-theme' ),
+						'title'       =>  esc_html__( 'Image or Video', 'uix-shortcodes' ),
+						'placeholder' =>  esc_html__( 'Image or Video URL', 'uix-shortcodes' ),
                         'options'     =>  array( 
-                                                'label_controller_up_remove'  => esc_html__( 'Remove', 'your-theme' ),
-                                                'label_controller_up_add'     => esc_html__( 'Select a file', 'your-theme' )
+                                                'label_controller_up_remove'  => esc_html__( 'Remove', 'uix-shortcodes' ),
+                                                'label_controller_up_add'     => esc_html__( 'Select a file', 'uix-shortcodes' )
                                           )
 					),
 					array(
 						'id'       =>  'cus_page_ex_demoname_appear_2',
 						'type'     =>  'color',
-						'title'    =>  esc_html__( 'Color', 'your-theme' ),
+						'title'    =>  esc_html__( 'Color', 'uix-shortcodes' ),
 					),
 					array(
 						'id'       =>  'cus_page_ex_demoname_appear_3',
 						'type'     =>  'editor',
-						'title'    =>  esc_html__( 'Editor', 'your-theme' ),
+						'title'    =>  esc_html__( 'Editor', 'uix-shortcodes' ),
 						'options'     =>  array( 
 											'editor_height'   => 200,
 											'editor_toolbar'  => 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_cmb_link uix_cmb_unlink | removeformat outdent indent superscript subscript hr uix_cmb_image uix_cmb_highlightcode media uix_cmb_customcode fullscreen'
@@ -313,8 +316,8 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'cus_page_ex_demoname_appear_4',
 						'type'          =>  'date',
-						'title'         =>  esc_html__( 'Date', 'your-theme' ),
-						'desc_primary'  =>  Uix_Custom_Metaboxes::kses( __( 'Enter date of your projects. <strong>(optional)</strong>', 'your-theme' ) ),
+						'title'         =>  esc_html__( 'Date', 'uix-shortcodes' ),
+						'desc_primary'  =>  wp_kses_post( __( 'Enter date of your projects. <strong>(optional)</strong>', 'uix-shortcodes' ) ),
 						'options'       =>  array( 
 											'format'  => 'MM dd, yy',
 										  )
@@ -325,13 +328,13 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'cus_page_ex_demoname_attrs',
 						'type'          =>  'custom-attrs',
-						'title'         =>  esc_html__( 'Custom Attributes', 'your-theme' ),
+						'title'         =>  esc_html__( 'Custom Attributes', 'uix-shortcodes' ),
 						'options'       =>  array( 
                                                 'one_column'         => false, //Use only one column as a separate module
-                                                'label_title'        => esc_html__( 'Title', 'your-theme' ),
-                                                'label_value'        => esc_html__( 'Value', 'your-theme' ),
-                                                'label_upbtn_remove' => esc_html__( 'Remove', 'your-theme' ),
-                                                'label_upbtn_add'    => esc_html__( 'Add New', 'your-theme' ),
+                                                'label_title'        => esc_html__( 'Title', 'uix-shortcodes' ),
+                                                'label_value'        => esc_html__( 'Value', 'uix-shortcodes' ),
+                                                'label_upbtn_remove' => esc_html__( 'Remove', 'uix-shortcodes' ),
+                                                'label_upbtn_add'    => esc_html__( 'Add New', 'uix-shortcodes' ),
 
 										  )
 
@@ -344,16 +347,16 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'cus_page_ex_demoname_multicontent',
 						'type'          =>  'multi-content',
-						'title'         =>  esc_html__( 'Multiple Content Area', 'your-theme' ),
+						'title'         =>  esc_html__( 'Multiple Content Area', 'uix-shortcodes' ),
 						'options'       =>  array( 
                                                 'one_column'          => false, //Use only one column as a separate module
-                                                'label_title'         => esc_html__( 'Title', 'your-theme' ),
-                                                'label_value'         => esc_html__( 'Contnet', 'your-theme' ),
-                                                'label_desc'          => esc_html__( 'Description', 'your-theme' ),
-                                                'label_parent'        => esc_html__( 'Parent Category', 'your-theme' ),
-                                                'label_classname'     => esc_html__( 'Class Name', 'your-theme' ),
-                                                'label_upbtn_remove'  => esc_html__( 'Remove', 'your-theme' ),
-                                                'label_upbtn_add'     => esc_html__( 'Add New', 'your-theme' ),
+                                                'label_title'         => esc_html__( 'Title', 'uix-shortcodes' ),
+                                                'label_value'         => esc_html__( 'Contnet', 'uix-shortcodes' ),
+                                                'label_desc'          => esc_html__( 'Description', 'uix-shortcodes' ),
+                                                'label_parent'        => esc_html__( 'Parent Category', 'uix-shortcodes' ),
+                                                'label_classname'     => esc_html__( 'Class Name', 'uix-shortcodes' ),
+                                                'label_upbtn_remove'  => esc_html__( 'Remove', 'uix-shortcodes' ),
+                                                'label_upbtn_add'     => esc_html__( 'Add New', 'uix-shortcodes' ),
                                                 'editor_height_teeny' => 50,
                                                 'editor_toolbar_teeny'=> 'formatselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright uix_cmb_link uix_cmb_unlink removeformat uix_cmb_customcode',
                                                 'editor_height'       => 450,
@@ -371,18 +374,18 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                         'options'       =>  array( 
                                                 'one_column'      => true, //Use only one column as a separate module
                                                 'label_type'      => array( 
-                                                    'file' => esc_html__( 'Files', 'your-theme' ),
-                                                    'html' => esc_html__( 'Text', 'your-theme' )
+                                                    'file' => esc_html__( 'Files', 'uix-shortcodes' ),
+                                                    'html' => esc_html__( 'Text', 'uix-shortcodes' )
 
                                                 ),
-                                                'label_lightbox'              => esc_html__( 'Enable Lightbox for this gallery?', 'your-theme' ),
-                                                'label_controller_up_remove'  => esc_html__( 'Remove', 'your-theme' ),
-                                                'label_controller_up_add'     => esc_html__( 'Select image or video', 'your-theme' ), 
-                                                'label_html'           => esc_html__( 'Custom Content', 'your-theme' ),
-                                                'label_file'           => esc_html__( 'Upload Your Files', 'your-theme' ),
-                                                'label_upbtn_remove'   => esc_html__( 'Remove', 'your-theme' ),
-                                                'label_upbtn_add_file' => esc_html__( 'Add Files', 'your-theme' ),
-                                                'label_upbtn_add_html' => esc_html__( 'Add Text', 'your-theme' ),
+                                                'label_lightbox'              => esc_html__( 'Enable Lightbox for this gallery?', 'uix-shortcodes' ),
+                                                'label_controller_up_remove'  => esc_html__( 'Remove', 'uix-shortcodes' ),
+                                                'label_controller_up_add'     => esc_html__( 'Select image or video', 'uix-shortcodes' ), 
+                                                'label_html'           => esc_html__( 'Custom Content', 'uix-shortcodes' ),
+                                                'label_file'           => esc_html__( 'Upload Your Files', 'uix-shortcodes' ),
+                                                'label_upbtn_remove'   => esc_html__( 'Remove', 'uix-shortcodes' ),
+                                                'label_upbtn_add_file' => esc_html__( 'Add Files', 'uix-shortcodes' ),
+                                                'label_upbtn_add_html' => esc_html__( 'Add Text', 'uix-shortcodes' ),
                                                 'editor_height'        => 300,
                                                 'editor_toolbar'       => 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_cmb_link uix_cmb_unlink | removeformat outdent indent superscript subscript hr uix_cmb_image uix_cmb_highlightcode media uix_cmb_customcode fullscreen'
                                           )
@@ -413,7 +416,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 //--------------------------------------
 //@print: 
     <?php
-    echo Uix_Custom_Metaboxes::kses( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_appear_3', true ) );
+    echo wp_kses_post( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_appear_3', true ) );
     ?>
 
 //--------------------------------------
@@ -440,7 +443,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
             $_echo .= $value.', ';
         endforeach; 
     }
-    echo $_echo;  
+    echo esc_attr( $_echo );  
 
     ?>
 
@@ -451,16 +454,16 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 
     <?php
 
-    $_data = json_decode( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_attrs', true ), true );
+    $_data = get_post_meta( get_the_ID(), 'cus_page_ex_demoname_attrs', true );
 
     if ( is_array( $_data ) && sizeof( $_data ) > 0 ) {
 
         foreach( $_data as $value ) {
         ?>
             <li>
-                <strong><?php echo esc_html( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'name' ] ) ); ?></strong>
+                <strong><?php echo esc_html( $value[ 'name' ] ); ?></strong>
                 <p>
-                    <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'value' ] ) ); ?>
+                    <?php echo wp_kses_post( $value[ 'value' ] ); ?>
                 </p>
             </li>
         <?php
@@ -479,11 +482,11 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 	<div class="slide-wrapper">
 		<?php
 
-			$all_data = json_decode( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multicontent', true ), true );
+			$all_data = get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multicontent', true );
 
 			//
-			$all_data_res = json_decode( $all_data[0]['all_data'], true ); 
-			$all_reverse_data_res = json_decode( $all_data[0]['all_reverse_data'], true ); // Reverse Order of Data
+			$all_data_res = is_array($all_data) ? json_decode( Uix_Custom_Metaboxes::format_json_str( $all_data[0]['all_data'] ), true ) : []; 
+			$all_reverse_data_res = is_array($all_data) ? json_decode( Uix_Custom_Metaboxes::format_json_str( $all_data[0]['all_reverse_data'] ), true ) : []; // Reverse Order of Data
 
 
 			//
@@ -499,15 +502,15 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					if ( is_array( $value ) && sizeof( $value ) > 0 ) {
 
 						//Parent Category
-						$parent = Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'parent' ] );
+						$parent = $value[ 'parent' ];
 
 						?>
-						<section class="slide <?php echo ( !empty($parent) ? 'slide-child' : ''); ?> <?php echo esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'classname' ] ) ); ?>" id="<?php echo esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'id' ] ) ); ?>" data-parent="<?php echo esc_attr( $parent ); ?>">
+						<section class="slide <?php echo ( !empty($parent) ? 'slide-child' : ''); ?> <?php echo esc_attr( $value[ 'classname' ] ); ?>" id="<?php echo esc_attr( $value[ 'id' ] ); ?>" data-parent="<?php echo esc_attr( $parent ); ?>">
 
-							<h3><?php echo esc_html( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'name' ] ) ); ?></h3>
-							<?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::autospace_to_front_from_jsondata( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'desc' ] ) ) ); ?>
+							<h3><?php echo esc_html( $value[ 'name' ] ); ?></h3>
+							<?php echo wp_kses_post( $value[ 'desc' ] ); ?>
 							<hr>
-							<?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'value' ] ) ); ?>
+							<?php echo wp_kses_post( $value[ 'value' ] ); ?>
 
 
 						</section> 
@@ -553,7 +556,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
     <?php
     $lightbox_enable = NULL;
 
-    $_data = json_decode( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multiworks', true ), true );
+    $_data = get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multiworks', true );
 
     if ( is_array( $_data ) && sizeof( $_data ) > 1 ) {
 
@@ -563,7 +566,7 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
 
                 //Exclude lightbox fields
                 if ( array_key_exists( 'lightbox', $value ) ) {
-                    $lightbox_enable = esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'lightbox' ] ) );
+                    $lightbox_enable = esc_attr( $value[ 'lightbox' ] );
                     break;
                 }//endif array_key_exists( 'lightbox', $value )
             }//endif $value
@@ -578,17 +581,17 @@ if ( class_exists( 'Uix_Custom_Metaboxes' ) ) {
                 if ( ! array_key_exists( 'lightbox', $value ) ) {
 
             ?>
-                <div class="uix-portfolio-type-<?php echo esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'type' ] ) ); ?>">
+                <div class="uix-portfolio-type-<?php echo esc_attr( $value[ 'type' ] ); ?>">
 
                     <?php
-                    $img_url = Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'filePath' ] );
+                    $img_url = $value[ 'filePath' ];
 
                     if ( !empty( $img_url ) ) {
                         echo '<img src="'.esc_url( $img_url ).'" alt="" '.( $lightbox_enable == 'on' ? 'class="lightbox"' : '' ).'>';
                     }
                     ?>
 
-                    <?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'value' ] ) ); ?>
+                    <?php echo wp_kses_post( Uix_Custom_Metaboxes::format_json_str( $value[ 'value' ] ) ); ?>
 
                 </div>     
             <?php
@@ -674,6 +677,13 @@ if ( !function_exists( 'mytheme_uix_publish_page' ) ) {
 
 
 ## Updates
+
+
+##### = 2.2 (October 24, 2022) =
+
+* Fix: Fixed some form character escaping issues.
+* Tweak: Data Sanitized, Escaped, and Validated.
+* Tweak: Simplify the process of data storage.
 
 
 

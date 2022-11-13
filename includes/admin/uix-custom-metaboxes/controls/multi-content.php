@@ -2,89 +2,18 @@
 /**
 * Field Type: Multiple Content Area
 *
-* @print: 
-
-<div class="slide-wrapper">
-	<?php
-
-		$all_data = json_decode( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multicontent', true ), true );
-		
-		//
-	    $all_data_res = json_decode( $all_data[0]['all_data'], true ); 
-	    $all_reverse_data_res = json_decode( $all_data[0]['all_reverse_data'], true ); // Reverse Order of Data
-	
-	
-	    //
-	    $_data = $all_data_res; 
-	
-	
-		if ( is_array( $_data ) && sizeof( $_data ) > 0 ) {
-
-			//Parse JSON data from Editor
-			foreach( $_data as $index => $value ) {
-				
-
-				if ( is_array( $value ) && sizeof( $value ) > 0 ) {
-
-					//Parent Category
-	                $parent = Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'parent' ] );
-	
-					?>
-					<section class="slide <?php echo ( !empty($parent) ? 'slide-child' : ''); ?> <?php echo esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'classname' ] ) ); ?>" id="<?php echo esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'id' ] ) ); ?>" data-parent="<?php echo esc_attr( $parent ); ?>">
-
-						<h3><?php echo esc_html( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'name' ] ) ); ?></h3>
-						<?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::autospace_to_front_from_jsondata( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'desc' ] ) ) ); ?>
-						<hr>
-						<?php echo Uix_Custom_Metaboxes::kses( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'value' ] ) ); ?>
-
-
-					</section> 
-	
-	
-
-				<?php
-
-				}//endif $value
-
-
-			}//end foreach   
-
-		}    
-
-
-	?>
-
-</div>
-<script>
-//Move the child element to the previous element
-jQuery( document ).ready( function() {
-	jQuery( '.slide' ).each( function()  {
-		const root = $( this );
-		const rootEl = root.attr( 'id' );
-		jQuery( '.slide' ).each( function()  {
-			if ( rootEl == $( this ).data( 'parent' ) ) jQuery( this ).appendTo( root );
-		});
-		
-	});
-});
-</script>
-
-
-
-*
 */
 class UixCmbFormType_MultiContent extends Uix_Custom_Metaboxes {
 	
 	public static function add( $id = '', $title = '', $desc = '', $default = '', $options = '', $placeholder = '', $desc_primary = '', $enable_table = false ) {
 
-
 		//---
-		$all_data = json_decode( $default, true );
-		
+		$all_data = $default;
+
 		//
-	    $all_data_res = $all_data[0]['all_data'];
-		$all_reverse_data_res = $all_data[0]['all_reverse_data'];
-		$project_custom_attrs = $all_data[0]['list'];
+	    $all_data_res = is_array($all_data) ? $all_data[0]['all_data'] : [];
+		$all_reverse_data_res = is_array($all_data) ? $all_data[0]['all_reverse_data'] : [];
+		$project_custom_attrs = is_array($all_data) ? $all_data[0]['list'] : [];
 		$label_title          = esc_html__( 'Title', 'uix-shortcodes' );
 		$label_value          = esc_html__( 'Value', 'uix-shortcodes' );
 		$label_desc           = esc_html__( 'Description', 'uix-shortcodes' );
@@ -289,12 +218,12 @@ class UixCmbFormType_MultiContent extends Uix_Custom_Metaboxes {
 
 
 											//parent all
-											echo str_replace( '{name}', esc_attr( self::parse_jsondata_from_editor( $value[ 'name' ] ) ), 
-														 str_replace( '{value}', esc_textarea( self::parse_jsondata_from_editor( $value[ 'value' ] ) ),
-														 str_replace( '{id}', esc_attr( self::parse_jsondata_from_editor( $value[ 'id' ] ) ),
-														 str_replace( '{parent}', esc_attr( self::parse_jsondata_from_editor( $value[ 'parent' ] ) ),
-														 str_replace( '{desc}', self::autospace_to_textarea_from_jsondata( self::parse_jsondata_from_editor( $value[ 'desc' ] ) ),
-														 str_replace( '{classname}', esc_attr( self::parse_jsondata_from_editor( $value[ 'classname' ] ) ), 
+											echo str_replace( '{name}', esc_attr( $value[ 'name' ] ), 
+														 str_replace( '{value}', wp_kses_post( $value[ 'value' ] ),
+														 str_replace( '{id}', esc_attr( $value[ 'id' ] ),
+														 str_replace( '{parent}', esc_attr( $value[ 'parent' ] ),
+														 str_replace( '{desc}', esc_html( $value[ 'desc' ] ),
+														 str_replace( '{classname}', esc_attr( $value[ 'classname' ] ), 
 														 $temp 
 														))))));        
 

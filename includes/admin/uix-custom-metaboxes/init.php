@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Uix Custom Metaboxes
  *
  * @class 		: Uix_Custom_Metaboxes
- * @version		: 2.0 (July 5, 2021)
+ * @version		: 2.2 (October 24, 2022)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -24,7 +24,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		* Custom Meta Boxes Version
 		*
 		*/
-		private static $ver = 2.0;	
+		private static $ver = 2.2;	
 		
 		/**
 		* Holds meta box parameters
@@ -189,8 +189,6 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 
         }
 
-		
-		
 
 		/**
 		* The TinyMCE "syntax-highlight-code" and "code" buttons is not included with WP by default
@@ -440,42 +438,46 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 		}
 		
         
-		
-		   
 		/**
-		* Filter JSON data to update_post_meta() 
-        * Fixed php json_decode quotes problem
+		* Format JSON string ( Used for Front-end pages)
 		*
 		*/        
-		public static function json_encode_to_update_post_meta( $arr ){
-			
-            $result = self::unicode_decode( json_encode( $arr ) );
-            
+		public static function format_json_str( $str ){
+
+
             $result = str_replace(
-                                array( '\r\n', '\r', '\n', '&quot;', '&apos;', '&#034;', '&#039;' ),
-                                array( '', '', '', '\u0022', '\u0027', '\u0022', '\u0027' ),
-                            $result );  
-            
+                                array( '&quot;', '&apos;', '&#034;', '&#039;' ),
+                                array( '"', "'", '"', "'" ),
+                            $str );  
+
+
+			//End Of Line
+			//Delete `\r\n`, `\n`, `\r`
+			$result = str_replace( '\\r\\n', "<br>", $result ); 	
+			$result = str_replace( '\\r', "<br>", $result ); 	
+			$result = str_replace( '\\n', "<br>", $result ); 	
+
+            //Converts a number of HTML entities into their special characters.
+            $result = wp_specialchars_decode( $result );
+
 			return $result;
 		}
 		      
-		
+        
+
+
+
 		/**
 		* Parse JSON data from Editor
+        * !!! Compatible with Uix Custom Metaboxes 1.9 and below
 		*
 		*/        
-		public static function parse_jsondata_from_editor( $str ){                       
-			return wp_specialchars_decode( self::unicode_decode( $str ) );
-		}
-        
-        //Compatible with Uix Custom Metaboxes 1.9 and below
+        //
 		public static function parse_json_data_from_editor( $str ){                       
 			return wp_specialchars_decode( self::unicode_decode( $str ) );
 		}
 		
-			
-        
-        
+
 		/**
 		* Decode Unicode strings in PHP
 		*
@@ -487,108 +489,6 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
             return preg_replace_callback('/\\\\u([0-9a-f]{4})/i', array( __CLASS__, 'replace_unicode_escape_sequence' ), $str);
         } 
 		   
-        
-
-
-		/*
-		 * Filter the JSON Data of the Editor in order to save to the database
-		 *
-		 *
-		 */
-		public static function encode_jsondata_for_editor_to_database( $str ) {
-
-			//Spacing (For this to work on a html page you might want to replace the spaces with four &nbsp;)
-			$str = preg_replace( "/\t/", "    ", $str ); 
-			
-			//Escaping for HTML blocks.
-			$str = esc_html( $str );
-
-		    return $str;
-
-		}
-
-		/*
-		 * Filter the JSON Data of the Textarea in order to save to the database
-		 *
-		 *
-		 */
-		public static function encode_jsondata_for_textarea_to_database( $str ) {
-
-			//End Of Line
-			$str = str_replace( PHP_EOL, '<br>', $str );
-			
-			//Spacing (For this to work on a html page you might want to replace the spaces with four &nbsp;)
-			$str = preg_replace( "/\t/", "    ", $str ); 
-			
-			//Escaping for HTML blocks. ( !Required )
-			$str = esc_html( $str ); 
-			
-			
-		    return $str;
-
-		}
-		
-		
-		
-		/*
-		 * Filter the JSON Data of the JSON Result in order to save to the database
-		 * Delete `\r\n`, `\n`, `\r`, `\t`, otherwise JSON cannot be stored in the database
-		 *
-		 */
-		public static function encode_jsondata_for_jsonRes_to_database( $str ) {
-
-			//
-			
-			//End Of Line
-			//Delete `\r\n`, `\n`, `\r`
-			$str = str_replace( '\\\\r\\\\n', "<br>", $str ); 	
-			$str = str_replace( '\\\\r', "<br>", $str ); 	
-			$str = str_replace( '\\\\n', "<br>", $str ); 	
-			
-			//Spacing (For this to work on a html page you might want to replace the spaces with four &nbsp;)
-			//Delete `\t`
-			$str = str_replace( '\\\\t', "&nbsp;&nbsp;&nbsp;&nbsp;", $str ); 	
-
-			
-			//Escaping for HTML blocks. ( !Required )
-			$str = esc_html( $str );
-			
-			
-		    return $str;
-
-		}
-		
-		
-		
-		
-		/*
-		 * Automatically allocate space (including line breaks and spaces) 
-		 * from JSON data to Textarea control
-		 *
-		 *
-		 */
-		public static function autospace_to_textarea_from_jsondata( $str ) {
-
-			$str_encode = esc_textarea( $str );
-			$str_decode = wp_specialchars_decode( $str_encode );
-			
-			$res = preg_replace( "/<br\s*\/?>/", PHP_EOL, $str_decode );
-			
-		    return $res;
-			
-
-		}
-
-		/*
-		 * Automatically allocate space (including line breaks and spaces) 
-		 * from JSON data to Front Pages
-		 *
-		 *
-		 */
-		public static function autospace_to_front_from_jsondata( $str ) {
-		    return preg_replace("/\s/", "&nbsp;", $str);
-		}
-		
 
 		
 		/**
@@ -787,11 +687,11 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 						
 					} elseif ( $type == 'textarea' ) {
 						
-						$post_val = wp_unslash( $_POST[ $id ] );
+						$post_val = sanitize_textarea_field( wp_unslash( $_POST[ $id ] ) );
 						
 					} elseif ( $type == 'editor' ) {
 						
-						$post_val = wp_unslash( $_POST[ $id ] );
+						$post_val = wp_kses_post( wp_unslash( $_POST[ $id ] ) );
 						
 					} elseif ( $type == 'number' || $type == 'price' ) {
 						
@@ -802,14 +702,12 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 						
 						
 						$post_val        = array();
-						$new_values      = $_POST[ $id ];
-				
-						if ( !empty( $new_values ) ) {
-						   foreach( $new_values as $new_value ) {
-							  $post_val[] = $new_value ;
-						   }
-						}
-						
+
+                        if ( isset( $_POST[ $id ] ) && is_array( $_POST[ $id ] ) ) {
+                            foreach( $_POST[ $id ] as $c_value ) {
+                                $post_val[] = sanitize_text_field( $c_value );
+                             }
+                        }
 						
 						
 					} else {
@@ -826,27 +724,29 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 					
 					if ( isset( $_POST[ $id . '_attrs_title' ] ) ) {
 						$custom_attrs          = array();
-						$field_titles = $_POST[ $id . '_attrs_title' ];
-						$field_values  = $_POST[ $id . '_attrs_value' ];
+			
+                        if ( isset( $_POST[ $id . '_attrs_title' ] ) && is_array( $_POST[ $id . '_attrs_title' ] ) ) {
+                            foreach( $_POST[ $id . '_attrs_title' ] as $index => $value ) {	
+                                if ( !empty( $value ) ) {
+                                    
+                                    $title = sanitize_text_field( $_POST[ $id . '_attrs_title' ][ $index ] );
+                                    $content  = sanitize_text_field( $_POST[ $id . '_attrs_value' ][ $index ] );
 
+                                    array_push( $custom_attrs, array(
+                                                                        'name'  => esc_html( $title ),
+                                                                        'value' => esc_html( $content )
+                                                                    ) );		
+                                }
 
-						foreach( $field_titles as $index => $value ) {	
-							if ( !empty( $value ) ) {
-								
-								$title = $field_titles[ $index ];
-								$content = $field_values[ $index ];
-								
-								
-								array_push( $custom_attrs, array(
-																	'name'  => esc_attr( $title ),
-																	'value' => esc_attr( $content )
-																) );		
-							}
+                            }
 
-						}
-
-						$post_val = self::json_encode_to_update_post_meta( $custom_attrs );
+                        }
                         
+
+
+						$post_val = $custom_attrs;
+                  
+
                         
 					}
 
@@ -857,59 +757,59 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 				if ( $type == 'multi-content' ) {
 					
 					if ( isset( $_POST[ $id . '_resultData' ] ) ) {
-						$custom_attrs          = array();
-						$field_ids  = $_POST[ $id . '_attrs_id' ];
-						$field_titles  = $_POST[ $id . '_attrs_title' ];
-						$field_values  = $_POST[ $id . '_attrs_value' ];
-                        $field_descs  = $_POST[ $id . '_attrs_desc' ];
-                        $field_parents  = $_POST[ $id . '_attrs_parent' ];
-                        $field_classnames  = $_POST[ $id . '_attrs_classname' ];
-                        
-                 
-                        //var_dump( self::encode_jsondata_for_jsonRes_to_database( $_POST[ $id . '_resultData' ] ) );
-                        //wp_die();
-                    
-						$parent_all = array();
-						foreach( $field_ids as $index => $value ) {	
-							if ( !empty( $value ) ) {
-                                
-                                $title = $field_titles[ $index ];
-                                $item_id = $field_ids[ $index ];
-                                $parent_id = $field_parents[ $index ];
-                                $desc = $field_descs[ $index ];
-                                $classname = $field_classnames[ $index ];
-                                $content = $field_values[ $index ];
-                          
-								$_item = array(
-												'name'  => esc_attr( $title ),
-												'id' => esc_attr( $item_id ),
-									            'parent' => esc_attr( $parent_id ),
-												'desc' => self::encode_jsondata_for_textarea_to_database( $desc ),
-												'classname' => esc_attr( $classname ),
-									            'value' => self::encode_jsondata_for_editor_to_database( $content )
-											);
-								
-								array_push( $parent_all, $_item );  
+						$custom_attrs = array();
+			
+                        if ( isset( $_POST[ $id . '_attrs_id' ] ) && is_array( $_POST[ $id . '_attrs_id' ] ) ) {
 
 
-							}
+                            $parent_all = array();
+                            foreach( $_POST[ $id . '_attrs_id' ] as $index => $value ) {	
+                                if ( !empty( $value ) ) {
 
-						}
-						
-								
+                                    $item_id = sanitize_text_field( $_POST[ $id . '_attrs_id' ][ $index ] );
+                                    
+                                    //
+                                    $title  = sanitize_text_field( $_POST[ $id . '_attrs_title' ][ $index ] );
+                                    $content  = wp_kses_post( $_POST[ $id . '_attrs_value' ][ $index ] );
+                                    $desc  = sanitize_textarea_field( $_POST[ $id . '_attrs_desc' ][ $index ] );
+                                    $parent_id  = sanitize_title( $_POST[ $id . '_attrs_parent' ][ $index ] );
+                                    $classname  = sanitize_text_field( $_POST[ $id . '_attrs_classname' ][ $index ] );
+                            
+                                    $_item = array(
+                                                    'name'  => esc_attr( $title ),
+                                                    'id' => esc_attr( $item_id ),
+                                                    'parent' => esc_attr( $parent_id ),
+                                                    'desc' => esc_html( $desc ),
+                                                    'classname' => esc_attr( $classname ),
+                                                    'value' => esc_html( $content )
+                                                );
+                                    
+                                    array_push( $parent_all, $_item );  
+
+
+                                }
+
+                            }
+                        }
+
+
 						//---
 						$all_data = array(
-										'all_data'  => self::encode_jsondata_for_jsonRes_to_database( $_POST[ $id . '_resultData' ] ),
-							            'all_reverse_data'  => self::encode_jsondata_for_jsonRes_to_database( $_POST[ $id . '_resultReverseData' ] ),
+										'all_data'  => wp_kses_post( esc_html( $_POST[ $id . '_resultData' ] ) ),
+							            'all_reverse_data'  => wp_kses_post( esc_html( $_POST[ $id . '_resultReverseData' ] ) ),
 										'list'  => $parent_all				
 									);
 						
 						array_push( $custom_attrs, $all_data );  
 
-              
-						$post_val = self::json_encode_to_update_post_meta( $custom_attrs );
-                   
+
+						$post_val = $custom_attrs;
                         
+
+                        // var_dump( $post_val );
+                        // wp_die();	 
+
+                   
 					}
 
 
@@ -922,29 +822,32 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
                     $custom_attrs = array();
 					if ( isset( $_POST[ $id . '_attrs_type' ] ) ) {
 						
-						$field_types  = $_POST[ $id . '_attrs_type' ];
-						$field_values  = $_POST[ $id . '_attrs_value' ];
-                        $field_files  = $_POST[ $id . '_attrs_file' ];
-                        
-                    
-						foreach( $field_types as $index => $value ) {	
-							if ( !empty( $value ) ) {
+	
+                        if ( isset( $_POST[ $id . '_attrs_type' ] ) && is_array( $_POST[ $id . '_attrs_type' ] ) ) {
+                            foreach( $_POST[ $id . '_attrs_type' ] as $index => $value ) {	
+                                if ( !empty( $value ) ) {
+
+                                    $type = sanitize_text_field( $_POST[ $id . '_attrs_type' ][ $index ] );
+                                    $html  = wp_kses_post( $_POST[ $id . '_attrs_value' ][ $index ] );
+                                    $file  = sanitize_text_field( $_POST[ $id . '_attrs_file' ][ $index ] );  
+                                    
+                                    
                                 
-                                $type = $field_types[ $index ];
-                                $html = $field_values[ $index ];
-                                $file = $field_files[ $index ];
-                             
-                                array_push( $custom_attrs, array(
-                                                    'type'  => esc_attr( $type ),
-                                                    'value' => self::encode_jsondata_for_editor_to_database( $html ),
-                                                    'filePath' => esc_url( $file ),
-                                                ) );
-                               
+                                    array_push( $custom_attrs, array(
+                                                        'type'  => esc_attr( $type ),
+                                                        'value' => esc_html( $html ),
+                                                        'filePath' => esc_url( $file ),
+                                                    ) );
+                                
 
-							}
+                                }
 
-						}
-                        
+                            }
+                              
+                        }
+
+
+    
                         
                         
 					}//endif isset( $_POST[ $id . '_attrs_type' ] )
@@ -952,16 +855,15 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
                     
                     //
                     array_push( $custom_attrs, array(
-                                                'lightbox'  => $_POST[ $id . '_lightbox' ]
+                                                'lightbox'  => sanitize_text_field( $_POST[ $id . '_lightbox' ] )
                                             ) );
   
                     
                     //
-                    $post_val = self::json_encode_to_update_post_meta( $custom_attrs );
+                    $post_val = $custom_attrs;
 
 				}     
-                
-                
+
 		
 				update_post_meta( $post_id, $id, $post_val );
 				

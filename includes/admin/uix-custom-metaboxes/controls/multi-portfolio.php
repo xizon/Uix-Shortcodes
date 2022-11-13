@@ -2,65 +2,6 @@
 /**
 * Field Type: Multiple Portfolio Area
 *
-* @print: 
-
-	<?php
-	$lightbox_enable = NULL;
-
-	$_data = json_decode( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_multiworks', true ), true );
-
-	if ( is_array( $_data ) && sizeof( $_data ) > 1 ) {
-
-		//----------
-		foreach( $_data as $index => $value ) {
-			if ( is_array( $value ) && sizeof( $value ) > 0 ) {
-
-				//Exclude lightbox fields
-				if ( array_key_exists( 'lightbox', $value ) ) {
-					$lightbox_enable = esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'lightbox' ] ) );
-					break;
-				}//endif array_key_exists( 'lightbox', $value )
-			}//endif $value
-		}//end foreach      
-
-
-		//----------
-		foreach( $_data as $index => $value ) {
-
-			if ( is_array( $value ) && sizeof( $value ) > 0 ) {
-				//Exclude lightbox fields
-				if ( ! array_key_exists( 'lightbox', $value ) ) {
-
-			?>
-				<div class="uix-portfolio-type-<?php echo esc_attr( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'type' ] ) ); ?>">
-
-					<?php
-					$img_url = Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'filePath' ] );
-
-					if ( !empty( $img_url ) ) {
-						echo '<img src="'.esc_url( $img_url ).'" alt="" '.( $lightbox_enable == 'on' ? 'class="lightbox"' : '' ).'>';
-					}
-					?>
-
-					<?php echo UixCmb::kses( Uix_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'value' ] ) ); ?>
-
-				</div>     
-			<?php
-
-				}//endif array_key_exists( 'lightbox', $value )
-
-			}//endif $value
-
-
-		}//end foreach   
-
-	}    
-
-	?>    
-
-
-
-*
 */
 class UixCmbFormType_MultiPortfolio extends Uix_Custom_Metaboxes {
 	
@@ -69,7 +10,7 @@ class UixCmbFormType_MultiPortfolio extends Uix_Custom_Metaboxes {
 
 
 		//---
-		$project_custom_attrs = json_decode( $default, true );
+		$project_custom_attrs =  $default;
 		$label_type           = array( 
 									'file' => esc_html__( 'Files', 'uix-shortcodes' ),
 									'html' => esc_html__( 'Text', 'uix-shortcodes' )
@@ -236,36 +177,20 @@ class UixCmbFormType_MultiPortfolio extends Uix_Custom_Metaboxes {
 
 					<?php endif; ?>	
 
-
-
 								<?php
-
 								$lightbox_enable = NULL;
-								$item_code = '';
 								if ( is_array( $project_custom_attrs ) && sizeof( $project_custom_attrs ) > 0 ) {
-
 
 									//Parse JSON data from Editor
 									foreach( $project_custom_attrs as $value ) {
-
 										if ( is_array( $value ) && sizeof( $value ) > 0 ) { 
-
 
 											//Exclude lightbox fields
 											if ( array_key_exists( 'lightbox', $value ) ) {
-												$lightbox_enable = esc_attr( self::parse_jsondata_from_editor( $value[ 'lightbox' ] ) );
-											} else {
-												$item_code .= str_replace( '{type}', esc_attr( self::parse_jsondata_from_editor( $value[ 'type' ] ) ),
-															 str_replace( '{id}', uniqid(),
-															 str_replace( '{value}', esc_textarea( self::parse_jsondata_from_editor( $value[ 'value' ] ) ),
-															 str_replace( '{filePath}', esc_textarea( self::parse_jsondata_from_editor( $value[ 'filePath' ] ) ),
-															 $temp 
-															))));    
+												$lightbox_enable = esc_attr( $value[ 'lightbox' ] );
 											}
 
 										}
-
-
 									}//end foreach
 								} 
 								?> 
@@ -285,8 +210,32 @@ class UixCmbFormType_MultiPortfolio extends Uix_Custom_Metaboxes {
 								</div>
 								<?php echo ( empty( $label_lightbox ) || $label_lightbox === false ? '' : '<br>' ); ?>
 
+                                
 
-								<?php echo $item_code; ?>
+								<?php
+								if ( is_array( $project_custom_attrs ) && sizeof( $project_custom_attrs ) > 0 ) {
+
+									//Parse JSON data from Editor
+									foreach( $project_custom_attrs as $value ) {
+
+										if ( is_array( $value ) && sizeof( $value ) > 0 ) { 
+
+											//Exclude lightbox fields
+											if ( ! array_key_exists( 'lightbox', $value ) ) {
+												echo str_replace( '{type}', esc_attr( $value[ 'type' ] ),
+                                                     str_replace( '{id}', uniqid(),
+                                                     str_replace( '{value}', wp_kses_post( $value[ 'value' ] ),
+                                                     str_replace( '{filePath}', esc_textarea( $value[ 'filePath' ] ),
+                                                     $temp 
+                                                ))));    
+											}
+
+										}
+
+
+									}//end foreach
+								} 
+								?> 
 
 
 								<div class="uix-cmb__custom-attributes-field__append__wrapper" id="<?php echo esc_attr( $id ); ?>_append"></div>   

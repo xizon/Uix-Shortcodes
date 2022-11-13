@@ -2,14 +2,14 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 2.0 (July 5, 2021)
+ * @version		: 2.2 (October 24, 2022)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
  *
  *************************************************
  */
-const UixCustomMetaboxes = function( obj ) {
+ const UixCustomMetaboxes = function( obj ) {
 	"use strict";
 
 
@@ -62,7 +62,8 @@ const UixCustomMetaboxes = function( obj ) {
 		expandItem: function( selector ) {
 
 			jQuery( document ).ready( function() {
-                jQuery( document ).off( 'click.UixToggle' ).on( 'click.UixToggle', selector, function() {
+                jQuery( document ).off( 'click.UixToggle' ).on( 'click.UixToggle', selector, function(e) {
+                    e.preventDefault();
                     jQuery( this ).parent().toggleClass( 'active' );
                     jQuery( this ).toggleClass( 'active' );
                 });
@@ -1587,7 +1588,7 @@ UixCustomMetaboxesInit.getInstance();
 							if ( item.name.indexOf( '_attrs_title[]' ) >= 0 ) phpDataItem.name = item.value;
 							if ( item.name.indexOf( '_attrs_id[]' ) >= 0 ) phpDataItem.id = item.value;
 							if ( item.name.indexOf( '_attrs_parent[]' ) >= 0 ) phpDataItem.parent = item.value;
-							if ( item.name.indexOf( '_attrs_desc[]' ) >= 0 ) phpDataItem.desc = item.value;
+							if ( item.name.indexOf( '_attrs_desc[]' ) >= 0 ) phpDataItem.desc = item.value.replace(/ /g, '&nbsp;');
 							if ( item.name.indexOf( '_attrs_classname[]' ) >= 0 ) phpDataItem.classname = item.value;
 							if ( item.name.indexOf( '_attrs_value_sync[]' ) >= 0 ) phpDataItem.value = item.value;
 						});

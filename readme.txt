@@ -5,8 +5,9 @@ Author URI: https://uiux.cc
 Plugin URL: https://wordpress.org/plugins/uix-shortcodes/
 Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
-Tested up to: 6.0
-Stable tag: 1.9.8
+Requires PHP: 5.6
+Tested up to: 6.1
+Stable tag: 1.9.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +120,11 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 1.9.9 (November 12, 2022) =
+
+* Tweak: Enhance the functionality of the uix custom metabox.
+
 
 = 1.9.8 (July 5, 2021) =
 

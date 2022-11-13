@@ -2,18 +2,6 @@
 /**
 * Field Type: Multiple CheckBox
 *
-* @print: 
-
-	$_data = get_post_meta( get_the_ID(), 'cus_page_ex_demoname_11', true );
-	$_echo = '';
-	if ( !empty( $_data ) && is_array( $_data ) ) {
-
-		foreach ( $_data as $value ) :
-			$_echo .= $value.', ';
-		endforeach; 
-	}
-	echo $_echo;
-*
 */
 class UixCmbFormType_MultiCheckbox extends Uix_Custom_Metaboxes {
 	
