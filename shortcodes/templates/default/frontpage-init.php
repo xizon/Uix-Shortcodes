@@ -6,7 +6,62 @@
 
 add_filter( 'widget_text', 'do_shortcode' ); //text widgets.
 add_filter( 'the_excerpt', 'do_shortcode' ); //excerpt.
-add_filter( 'comment_text', 'do_shortcode' ); //comment.
+
+// Only specific shortcodes are excluded from parsing in the comment section
+function uix_sc_exclude_specific_shortcodes_in_comments($comment_text) {
+    $shortcodes_to_exclude = [
+        'uix_hello', 
+        'uix_hello2',
+        'uix_container', 
+        'uix_progress_bar',
+        'uix_icons', 
+        'uix_recent_posts',
+        'uix_pricing', 
+        'uix_pricing_item',
+        'uix_column_wrapper', 
+        'uix_column',
+        'uix_button', 
+        'uix_share_buttons',
+        'uix_toggle', 
+        'uix_toggle_item',
+        'uix_toggle_item_content', 
+        'uix_toggle_group',
+        'uix_video', 
+        'uix_audio',
+        'uix_code', 
+        'uix_portfolio',
+        'uix_portfolio_item', 
+        'uix_team',
+        'uix_team_item', 
+        'uix_features',
+        'uix_features_item', 
+        'uix_client',
+        'uix_client_item', 
+        'uix_testimonials',
+        'uix_testimonials_item', 
+        'uix_map',
+        'uix_heading', 
+        'uix_heading_line',
+        'uix_heading_sub', 
+        'uix_dividing_line',
+        'uix_contact_form', 
+        'uix_authorcard',
+        'uix_imageslider', 
+        'uix_imageslider_item',
+        'uix_timeline', 
+        'uix_timeline_item'
+    ];
+
+    foreach ($shortcodes_to_exclude as $shortcode) {
+        if (shortcode_exists($shortcode)) {
+            remove_shortcode($shortcode);
+        }
+    }
+    $comment_text = do_shortcode($comment_text);
+
+    return $comment_text;
+}
+add_filter('comment_text', 'uix_sc_exclude_specific_shortcodes_in_comments');
 
 
 /*
@@ -48,7 +103,11 @@ add_filter( 'comment_text', 'do_shortcode' ); //comment.
 // 1. Hello ( Demo for development )
 //----------------------------------------------------------------------------------------------------
 
-function uix_sc_fun_hello( $atts, $content = null ){
+function uix_sc_fun_hello( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  '' => '',
 	 ), $atts ) );
@@ -71,7 +130,11 @@ add_shortcode( 'uix_hello', 'uix_sc_fun_hello' );
 //----------------------------------------------------------------------------------------------------
 // 2. Hello2 ( Demo for development )
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_hello2( $atts, $content = null ){
+function uix_sc_fun_hello2( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  '' => '',
 	 ), $atts ) );
@@ -92,7 +155,11 @@ add_shortcode( 'uix_hello2', 'uix_sc_fun_hello2' );
 //----------------------------------------------------------------------------------------------------
 // 3. Container
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_container( $atts, $content = null ){
+function uix_sc_fun_container( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'bgimage' => '',
           'bgimage_repeat' => '',
@@ -154,7 +221,11 @@ add_shortcode( 'uix_container', 'uix_sc_fun_container' );
 //----------------------------------------------------------------------------------------------------
 // 4. Progress Bar
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_progress_bar( $atts, $content = null ){
+function uix_sc_fun_progress_bar( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'barcolor' => '',
           'trackcolor' => '',
@@ -213,7 +284,11 @@ add_shortcode( 'uix_progress_bar', 'uix_sc_fun_progress_bar' );
 //----------------------------------------------------------------------------------------------------
 // 5. Icons
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_icons( $atts, $content = null ){
+function uix_sc_fun_icons( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'size' => '', 
 		'units' => 'px', 
@@ -239,6 +314,10 @@ add_shortcode( 'uix_icons', 'uix_sc_fun_icons' );
 // 6. Recent Posts
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_recent_posts( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'show' => 5, 
 		'before' => '&lt;ul&gt;', 
@@ -376,7 +455,11 @@ add_shortcode( 'uix_recent_posts', 'uix_sc_fun_recent_posts' );
 //----------------------------------------------------------------------------------------------------
 // 7. Pricing
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_pricing( $atts, $content = null ){
+function uix_sc_fun_pricing( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	
    $return_string = '
    <div class="uix-sc-price">
@@ -392,7 +475,11 @@ function uix_sc_fun_pricing( $atts, $content = null ){
 add_shortcode( 'uix_pricing', 'uix_sc_fun_pricing' );
 
 //-----
-function uix_sc_fun_pricing_item( $atts, $content = null ){
+function uix_sc_fun_pricing_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'target' => '_self',
 		  'class' => '',
@@ -442,7 +529,11 @@ add_shortcode( 'uix_pricing_item', 'uix_sc_fun_pricing_item' );
 //----------------------------------------------------------------------------------------------------
 // 8. Column
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_column_wrapper( $atts, $content = null ){
+function uix_sc_fun_column_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'top' => 20,
 		  'bottom' => 20,
@@ -462,7 +553,11 @@ function uix_sc_fun_column_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_column_wrapper', 'uix_sc_fun_column_wrapper' );
 
 //-----
-function uix_sc_fun_column( $atts, $content = null ){
+function uix_sc_fun_column( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'grid' => '',
 		  'last' => 0
@@ -486,6 +581,10 @@ add_shortcode( 'uix_column', 'uix_sc_fun_column' );
 // 9. Button
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_button( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'icon' => '', 
 		'fontsize' => '12px', 
@@ -536,6 +635,10 @@ add_shortcode( 'uix_button', 'uix_sc_fun_button' );
 // 10. Share Buttons
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_share_buttons( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'color' => 1, 
 		'fillet' => '25px',
@@ -601,7 +704,11 @@ add_shortcode( 'uix_share_buttons', 'uix_sc_fun_share_buttons' );
 //----------------------------------------------------------------------------------------------------
 // 11. Accordion & Tabs
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_toggle( $atts, $content = null ){
+function uix_sc_fun_toggle( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'tabs' => 0, 
 		'effect' => 'slide', 
@@ -649,7 +756,11 @@ function uix_sc_fun_toggle( $atts, $content = null ){
 add_shortcode( 'uix_toggle', 'uix_sc_fun_toggle' );
 
 //----
-function uix_sc_fun_toggle_item( $atts, $content = null ){
+function uix_sc_fun_toggle_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 	    'tabs' => 0, 
 		'open' => 'false',
@@ -684,7 +795,11 @@ function uix_sc_fun_toggle_item( $atts, $content = null ){
 add_shortcode( 'uix_toggle_item', 'uix_sc_fun_toggle_item' );
 
 //----
-function uix_sc_fun_toggle_item_con( $atts, $content = null ){
+function uix_sc_fun_toggle_item_con( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'open' => 'false',
 		
@@ -707,7 +822,11 @@ add_shortcode( 'uix_toggle_item_content', 'uix_sc_fun_toggle_item_con' );
 
 
 //----
-function uix_sc_fun_toggle_group( $atts, $content = null ){
+function uix_sc_fun_toggle_group( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	
 	$return_string = '
 	<div class="uix-sc-spoiler__group">
@@ -725,7 +844,11 @@ add_shortcode( 'uix_toggle_group', 'uix_sc_fun_toggle_group' );
 //----------------------------------------------------------------------------------------------------
 // 12. Video
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_video( $atts, $content = null ){
+function uix_sc_fun_video( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'width' => '560', 
 		'height' => '315', 
@@ -748,7 +871,11 @@ add_shortcode( 'uix_video', 'uix_sc_fun_video' );
 //----------------------------------------------------------------------------------------------------
 // 13. Audio
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_audio( $atts, $content = null ){
+function uix_sc_fun_audio( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'url' => '',
 		'autoplay' => 'false',
@@ -783,7 +910,11 @@ add_shortcode( 'uix_audio', 'uix_sc_fun_audio' );
 //----------------------------------------------------------------------------------------------------
 // 14. Code
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_code( $atts, $content = null ){
+function uix_sc_fun_code( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'language' => '',
 	 ), $atts ) );
@@ -807,7 +938,11 @@ add_shortcode( 'uix_code', 'uix_sc_fun_code' );
 //----------------------------------------------------------------------------------------------------
 // 15. Portfolio
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
+function uix_sc_fun_portfolio_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'imagefillet' => '0%',
 		  'classprefix' => 'uix-sc-portfolio__',
@@ -869,7 +1004,11 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_portfolio', 'uix_sc_fun_portfolio_wrapper' );
 
 //-----
-function uix_sc_fun_portfolio_item( $atts, $content = null ){
+function uix_sc_fun_portfolio_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'title' => '',
 		  'type' => '',
@@ -932,7 +1071,11 @@ add_shortcode( 'uix_portfolio_item', 'uix_sc_fun_portfolio_item' );
 //----------------------------------------------------------------------------------------------------
 // 16. Team
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_team_wrapper( $atts, $content = null ){
+function uix_sc_fun_team_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'avatarfillet' => '0%',
 		  'gray' => 'false',
@@ -983,7 +1126,11 @@ function uix_sc_fun_team_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_team', 'uix_sc_fun_team_wrapper' );
 
 //-----
-function uix_sc_fun_team_item( $atts, $content = null ){
+function uix_sc_fun_team_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'name' => '',
 		  'avatar' => '',
@@ -1098,7 +1245,11 @@ add_shortcode( 'uix_team_item', 'uix_sc_fun_team_item' );
 //----------------------------------------------------------------------------------------------------
 // 17. Features
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_features_wrapper( $atts, $content = null ){
+function uix_sc_fun_features_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'col' => 3,
 	 ), $atts ) );
@@ -1142,7 +1293,11 @@ function uix_sc_fun_features_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_features', 'uix_sc_fun_features_wrapper' );
 
 //-----
-function uix_sc_fun_features_item( $atts, $content = null ){
+function uix_sc_fun_features_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array(
 		  'icon' => '',
 		  'col' => 3,
@@ -1204,7 +1359,11 @@ add_shortcode( 'uix_features_item', 'uix_sc_fun_features_item' );
 //----------------------------------------------------------------------------------------------------
 // 18. Client
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_client_wrapper( $atts, $content = null ){
+function uix_sc_fun_client_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	
 
    $return_string = '
@@ -1220,7 +1379,11 @@ function uix_sc_fun_client_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_client', 'uix_sc_fun_client_wrapper' );
 
 //-----
-function uix_sc_fun_client_item( $atts, $content = null ){
+function uix_sc_fun_client_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'logo' => '',
 		  'url' => '',
@@ -1258,7 +1421,11 @@ add_shortcode( 'uix_client_item', 'uix_sc_fun_client_item' );
 //----------------------------------------------------------------------------------------------------
 // 19. Testimonials
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_testimonials_wrapper( $atts, $content = null ){
+function uix_sc_fun_testimonials_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	
 	extract( shortcode_atts( array( 
 		'dir' => 'horizontal',
@@ -1324,7 +1491,11 @@ function uix_sc_fun_testimonials_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_testimonials', 'uix_sc_fun_testimonials_wrapper' );
 
 //-----
-function uix_sc_fun_testimonials_item( $atts, $content = null ){
+function uix_sc_fun_testimonials_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'avatar' => '',
 		  'name' => '',
@@ -1359,6 +1530,10 @@ add_shortcode( 'uix_testimonials_item', 'uix_sc_fun_testimonials_item' );
 // 20. Map
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_map( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'style' => 'normal',
 		'width' => '100%',
@@ -1388,6 +1563,10 @@ add_shortcode( 'uix_map', 'uix_sc_fun_map' );
 // 21. Heading
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_heading( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'style' => 'grand-fill-yellow',
 		'size' => '58.5px',
@@ -1440,6 +1619,10 @@ add_shortcode( 'uix_heading', 'uix_sc_fun_heading' );
 
 //---
 function uix_sc_fun_heading_line( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'line'=> 'false',
 		'width'=> '100%',
@@ -1458,6 +1641,10 @@ add_shortcode( 'uix_heading_line', 'uix_sc_fun_heading_line' );
 
 //---
 function uix_sc_fun_subheading( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'size' => '58.5px',
 		'opacity' => '65',
@@ -1494,6 +1681,10 @@ add_shortcode( 'uix_heading_sub', 'uix_sc_fun_subheading' );
 // 22. Dividing Line
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_dividing_line( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'style' => 'solid',
 		'width' => '100%',
@@ -1537,6 +1728,10 @@ add_shortcode( 'uix_dividing_line', 'uix_sc_fun_dividing_line' );
 // 23. Contact Form
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_contact_form( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	
 	
     // capture output from the widgets
@@ -1576,6 +1771,10 @@ add_shortcode( 'uix_contact_form', 'uix_sc_fun_contact_form' );
 // 24. Author Card
 //----------------------------------------------------------------------------------------------------
 function uix_sc_fun_authorcard( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 	  'name' => '',
 	  'avatar' => '',
@@ -1641,7 +1840,11 @@ add_shortcode( 'uix_authorcard', 'uix_sc_fun_authorcard' );
 //----------------------------------------------------------------------------------------------------
 // 25. Image Slider
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_imageslider_wrapper( $atts, $content = null ){
+function uix_sc_fun_imageslider_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'effect' => 'slide',
 		'target' => 1,
@@ -1710,7 +1913,11 @@ function uix_sc_fun_imageslider_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_imageslider', 'uix_sc_fun_imageslider_wrapper' );
 
 //-----
-function uix_sc_fun_imageslider_item( $atts, $content = null ){
+function uix_sc_fun_imageslider_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		  'image' => '',
 		  'url' => '',
@@ -1754,7 +1961,11 @@ add_shortcode( 'uix_imageslider_item', 'uix_sc_fun_imageslider_item' );
 //----------------------------------------------------------------------------------------------------
 // 26. Timeline
 //----------------------------------------------------------------------------------------------------
-function uix_sc_fun_timeline_wrapper( $atts, $content = null ){
+function uix_sc_fun_timeline_wrapper( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'color' => '#a2bf2f',
 		
@@ -1776,7 +1987,11 @@ function uix_sc_fun_timeline_wrapper( $atts, $content = null ){
 add_shortcode( 'uix_timeline', 'uix_sc_fun_timeline_wrapper' );
 
 //-----
-function uix_sc_fun_timeline_item( $atts, $content = null ){
+function uix_sc_fun_timeline_item( $atts, $content = null ) {
+    if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+        return '';
+    }
+    
 	extract( shortcode_atts( array( 
 		'date' => '',
 		'status' => '',

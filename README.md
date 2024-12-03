@@ -67,6 +67,11 @@ The currently available default elements:
 ### Updates
 
 
+##### = 2.0.0 (December 3, 2024) =
+
+* Fix: Security fixes, assign specific permissions to shortcodes.
+
+
 ##### = 1.9.9 (November 12, 2022) =
 
 * Tweak: Enhance the functionality of the uix custom metabox.
@@ -566,6 +571,7 @@ The currently available default elements:
 - WP 6.1.*
 - WP 6.3.*
 - WP 6.4.*
+- WP 6.7.*
 
 
 ### Frequently Asked Questions
