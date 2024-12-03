@@ -1,4 +1,4 @@
-=== Uix Shortcodes - Compatible with Gutenberg ===
+=== Uix Shortcodes ===
 Contributors: uiuxlab
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYZLU7UZNQ6CE
 Author URI: https://uiux.cc
