@@ -7,63 +7,6 @@
 add_filter( 'widget_text', 'do_shortcode' ); //text widgets.
 add_filter( 'the_excerpt', 'do_shortcode' ); //excerpt.
 
-// Only specific shortcodes are excluded from parsing in the comment section
-function uix_sc_exclude_specific_shortcodes_in_comments($comment_text) {
-    $shortcodes_to_exclude = [
-        'uix_hello', 
-        'uix_hello2',
-        'uix_container', 
-        'uix_progress_bar',
-        'uix_icons', 
-        'uix_recent_posts',
-        'uix_pricing', 
-        'uix_pricing_item',
-        'uix_column_wrapper', 
-        'uix_column',
-        'uix_button', 
-        'uix_share_buttons',
-        'uix_toggle', 
-        'uix_toggle_item',
-        'uix_toggle_item_content', 
-        'uix_toggle_group',
-        'uix_video', 
-        'uix_audio',
-        'uix_code', 
-        'uix_portfolio',
-        'uix_portfolio_item', 
-        'uix_team',
-        'uix_team_item', 
-        'uix_features',
-        'uix_features_item', 
-        'uix_client',
-        'uix_client_item', 
-        'uix_testimonials',
-        'uix_testimonials_item', 
-        'uix_map',
-        'uix_heading', 
-        'uix_heading_line',
-        'uix_heading_sub', 
-        'uix_dividing_line',
-        'uix_contact_form', 
-        'uix_authorcard',
-        'uix_imageslider', 
-        'uix_imageslider_item',
-        'uix_timeline', 
-        'uix_timeline_item'
-    ];
-
-    foreach ($shortcodes_to_exclude as $shortcode) {
-        if (shortcode_exists($shortcode)) {
-            remove_shortcode($shortcode);
-        }
-    }
-    $comment_text = do_shortcode($comment_text);
-
-    return $comment_text;
-}
-add_filter('comment_text', 'uix_sc_exclude_specific_shortcodes_in_comments');
-
-
 /*
 
 	TABLE OF CONTENTS
