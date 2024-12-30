@@ -804,7 +804,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 *
 		 */
 		public static function load_uixscform_ajax_shortcodepreview() {
-            if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+            if ( !current_user_can('edit_posts') ) {
                 echo '';
                 die();
             }
