@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 4.3.5  (July 5, 2021)
+ * @version		: 4.3.7  (December 30, 2024)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '4.3.5';
+		const VERSION    = '4.3.7';
 		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		
@@ -804,6 +804,11 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 		 *
 		 */
 		public static function load_uixscform_ajax_shortcodepreview() {
+            if ( (!is_single() && !is_page()) && !current_user_can('edit_posts') ) {
+                echo '';
+                die();
+            }
+            
 			
 			$output       = '';
 			$previewcode  = isset( $_POST['previewcode'] ) ? $_POST[ 'previewcode' ] : '';
