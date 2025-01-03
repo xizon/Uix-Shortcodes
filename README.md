@@ -66,6 +66,12 @@ The currently available default elements:
 
 ### Updates
 
+
+##### = 2.0.2 (January 3, 2025) =
+
+* Fix: Fixed a possible permission security issue with preview shortcodes.
+
+
 ##### = 2.0.1 (December 30, 2024) =
 
 * Fix: Fixed a possible permission security issue with preview shortcodes.

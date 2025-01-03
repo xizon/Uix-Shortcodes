@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 4.3.7  (December 30, 2024)
+ * @version		: 4.3.8  (January 3, 2025)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '4.3.7';
+		const VERSION    = '4.3.8';
 		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		

@@ -9,14 +9,14 @@ require_once( dirname( dirname( dirname( dirname( dirname( dirname( dirname( __F
 header( 'Content-Type: text/html; charset=utf-8' );
 
 $id            = uniqid(); 
-$map_style     = isset( $_GET[ 'style' ] ) && !empty( $_GET[ 'style' ] ) ? $_GET[ 'style' ] : 'normal';  //Map style
-$map_latitude  = isset( $_GET[ 'latitude' ] ) && !empty( $_GET[ 'latitude' ] ) ? $_GET[ 'latitude' ] : '37.7770776';    //Map latitude              
-$map_longitude = isset( $_GET[ 'longitude' ] ) && !empty( $_GET[ 'longitude' ] ) ? $_GET[ 'longitude' ] : '-122.4414289'; //Map longitude
-$map_zoom      = isset( $_GET[ 'zoom' ] ) && !empty( $_GET[ 'zoom' ] ) ? $_GET[ 'zoom' ] : 14;	 //Map zoom
-$map_name      = isset( $_GET[ 'name' ] ) && !empty( $_GET[ 'name' ] ) ? $_GET[ 'name' ] : '';	 //Map place name
-$map_width     = isset( $_GET[ 'width' ] ) && !empty( $_GET[ 'width' ] ) ? $_GET[ 'width' ] : '100%';	 //Map width
-$map_height    = isset( $_GET[ 'height' ] ) && !empty( $_GET[ 'height' ] ) ? $_GET[ 'height' ] : '285px';	 //Map height
-$map_marker    = isset( $_GET[ 'marker' ] ) && !empty( $_GET[ 'marker' ] ) ? $_GET[ 'marker' ] : UixShortcodes::plug_directory().'includes/uixscform/images/map/map-location.png'; //Map marker 
+$map_style     = isset( $_GET[ 'style' ] ) && !empty( $_GET[ 'style' ] ) ? esc_attr($_GET[ 'style' ]) : 'normal';  //Map style
+$map_latitude  = isset( $_GET[ 'latitude' ] ) && !empty( $_GET[ 'latitude' ] ) ? esc_attr(floatval($_GET[ 'latitude' ])) : '37.7770776';    //Map latitude              
+$map_longitude = isset( $_GET[ 'longitude' ] ) && !empty( $_GET[ 'longitude' ] ) ? esc_attr(floatval($_GET[ 'longitude' ])) : '-122.4414289'; //Map longitude
+$map_zoom      = isset( $_GET[ 'zoom' ] ) && !empty( $_GET[ 'zoom' ] ) ? esc_attr(floatval($_GET[ 'zoom' ])) : 14;	 //Map zoom
+$map_name      = isset( $_GET[ 'name' ] ) && !empty( $_GET[ 'name' ] ) ? esc_attr($_GET[ 'name' ]) : '';	 //Map place name
+$map_width     = isset( $_GET[ 'width' ] ) && !empty( $_GET[ 'width' ] ) ? esc_attr($_GET[ 'width' ]) : '100%';	 //Map width
+$map_height    = isset( $_GET[ 'height' ] ) && !empty( $_GET[ 'height' ] ) ? esc_attr($_GET[ 'height' ]) : '285px';	 //Map height
+$map_marker    = isset( $_GET[ 'marker' ] ) && !empty( $_GET[ 'marker' ] ) ? esc_url($_GET[ 'marker' ]) : UixShortcodes::plug_directory().'includes/uixscform/images/map/map-location.png'; //Map marker 
 
 //API Key
 $api_key = UixSCFormCore::MAPAPI;
