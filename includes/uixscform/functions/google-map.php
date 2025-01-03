@@ -88,12 +88,12 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 <body>
 
 	<!--  Google map show  begin -->
-	<div class="uix-sc-map-output site-google-map" id="uix-sc-map-output-<?php echo $id; ?>">
+	<div class="uix-sc-map-output site-google-map" id="uix-sc-map-output-<?php echo esc_attr($id); ?>">
 
 		<div class="google-map-area">
-			<div id="google-container-<?php echo $id; ?>" style="position: relative; width: <?php echo $map_width;?>; height: <?php echo $map_height;?>;"></div>
-			<div class="google-map-zoom-in" id="google-map-zoom-in-<?php echo $id; ?>"><?php _e( '+', 'uix-shortcodes' ); ?></div>
-			<div class="google-map-zoom-out" id="google-map-zoom-out-<?php echo $id; ?>"><?php _e( '-', 'uix-shortcodes' ); ?></div>
+			<div id="google-container-<?php echo esc_attr($id); ?>" style="position: relative; width: <?php echo esc_attr($map_width);?>; height: <?php echo esc_attr($map_height);?>;"></div>
+			<div class="google-map-zoom-in" id="google-map-zoom-in-<?php echo esc_attr($id); ?>"><?php _e( '+', 'uix-shortcodes' ); ?></div>
+			<div class="google-map-zoom-out" id="google-map-zoom-out-<?php echo esc_attr($id); ?>"><?php _e( '-', 'uix-shortcodes' ); ?></div>
 		</div>	
 
 		<script type="text/javascript">
@@ -102,13 +102,13 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 				
 				/*Set your google maps parameters*/
 				jQuery(document).ready(function($){
-					var latitude = <?php echo $map_latitude;?>,
-						longitude = <?php echo $map_longitude;?>,
-						map_zoom = <?php echo $map_zoom;?>;
+					var latitude = <?php echo esc_attr(floatval($map_latitude));?>,
+						longitude = <?php echo esc_attr(floatval($map_longitude));?>,
+						map_zoom = <?php echo esc_attr(floatval($map_zoom));?>;
 						
 						
 						<?php if ( $map_height == '100%' ) { ?>
-						$( '#google-container-<?php echo $id; ?>' ).css( 'height', $( window ).height() + 'px' );
+						$( '#google-container-<?php echo esc_attr($id); ?>' ).css( 'height', $( window ).height() + 'px' );
 						<?php } ?>
 
 
@@ -116,7 +116,7 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 
 					/*google map custom marker icon - .png fallback for IE11*/
 					var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-					var marker_url = '<?php echo $map_marker;?>';
+					var marker_url = '<?php esc_url($map_marker);?>';
 
 					/*define the basic color of your map, plus a value for saturation and brightness*/
 					var	 main_color = '#e67e22',
@@ -219,7 +219,7 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 					};
 
 					/*inizialize the map*/
-					var map = new google.maps.Map(document.getElementById('google-container-<?php echo $id; ?>'), map_options);
+					var map = new google.maps.Map(document.getElementById('google-container-<?php echo esc_attr($id); ?>'), map_options);
 					/*add a custom marker to the map*/			
 					var marker = new google.maps.Marker({
 						position: new google.maps.LatLng(latitude, longitude),
@@ -233,8 +233,8 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 					/*add custom buttons for the zoom-in/zoom-out on the map*/
 					function CustomZoomControl(controlDiv, map) {
 						/*grap the zoom elements from the DOM and insert them in the map */
-						var controlUIzoomIn= document.getElementById('google-map-zoom-in-<?php echo $id; ?>'),
-							controlUIzoomOut= document.getElementById('google-map-zoom-out-<?php echo $id; ?>');
+						var controlUIzoomIn= document.getElementById('google-map-zoom-in-<?php echo esc_attr($id); ?>'),
+							controlUIzoomOut= document.getElementById('google-map-zoom-out-<?php echo esc_attr($id); ?>');
 							controlDiv.appendChild(controlUIzoomIn);
 							controlDiv.appendChild(controlUIzoomOut);
 
@@ -266,7 +266,7 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 
 	 </div><!-- /.uix-sc-map-output -->
 	
-	 <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?key=<?php echo $map_apikey; ?>&ver=2.0'></script>
+	 <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?key=<?php echo esc_attr($map_apikey); ?>&ver=2.0'></script>
 
 
 </body>
