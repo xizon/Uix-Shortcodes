@@ -102,13 +102,13 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 				
 				/*Set your google maps parameters*/
 				jQuery(document).ready(function($){
-					var latitude = <?php echo esc_attr(floatval($map_latitude));?>,
-						longitude = <?php echo esc_attr(floatval($map_longitude));?>,
-						map_zoom = <?php echo esc_attr(floatval($map_zoom));?>;
+					var latitude = <?php echo esc_js(floatval($map_latitude));?>,
+						longitude = <?php echo esc_js(floatval($map_longitude));?>,
+						map_zoom = <?php echo esc_js(floatval($map_zoom));?>;
 						
 						
 						<?php if ( $map_height == '100%' ) { ?>
-						$( '#google-container-<?php echo esc_attr($id); ?>' ).css( 'height', $( window ).height() + 'px' );
+						$( '#google-container-<?php echo esc_js($id); ?>' ).css( 'height', $( window ).height() + 'px' );
 						<?php } ?>
 
 
@@ -116,7 +116,7 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 
 					/*google map custom marker icon - .png fallback for IE11*/
 					var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-					var marker_url = '<?php esc_url($map_marker);?>';
+					var marker_url = '<?php esc_js($map_marker);?>';
 
 					/*define the basic color of your map, plus a value for saturation and brightness*/
 					var	 main_color = '#e67e22',
@@ -219,7 +219,7 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 					};
 
 					/*inizialize the map*/
-					var map = new google.maps.Map(document.getElementById('google-container-<?php echo esc_attr($id); ?>'), map_options);
+					var map = new google.maps.Map(document.getElementById('google-container-<?php echo esc_js($id); ?>'), map_options);
 					/*add a custom marker to the map*/			
 					var marker = new google.maps.Marker({
 						position: new google.maps.LatLng(latitude, longitude),
@@ -233,8 +233,8 @@ $map_apikey    = isset( $_GET[ 'apikey' ] ) && !empty( $_GET[ 'apikey' ] ) ? $_G
 					/*add custom buttons for the zoom-in/zoom-out on the map*/
 					function CustomZoomControl(controlDiv, map) {
 						/*grap the zoom elements from the DOM and insert them in the map */
-						var controlUIzoomIn= document.getElementById('google-map-zoom-in-<?php echo esc_attr($id); ?>'),
-							controlUIzoomOut= document.getElementById('google-map-zoom-out-<?php echo esc_attr($id); ?>');
+						var controlUIzoomIn= document.getElementById('google-map-zoom-in-<?php echo esc_js($id); ?>'),
+							controlUIzoomOut= document.getElementById('google-map-zoom-out-<?php echo esc_js($id); ?>');
 							controlDiv.appendChild(controlUIzoomIn);
 							controlDiv.appendChild(controlUIzoomOut);
 
