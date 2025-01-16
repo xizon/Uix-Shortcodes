@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     2.0.2
+ * Version:     2.0.3
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -187,6 +187,7 @@ class UixShortcodes {
 			  if ( $currentScreen->base === "post" || 
 				   $currentScreen->base === "widgets" || 
 				   $currentScreen->base === "customize" || 
+                   $currentScreen->base === "site-editor" || // @since wp 6.7+
 				   self::inc_str( $currentScreen->base, '_page_' ) 
 				 ) 
 			  {
@@ -233,6 +234,7 @@ class UixShortcodes {
 			  if ( $currentScreen->base === "post" || 
 				   $currentScreen->base === "widgets" || 
 				   $currentScreen->base === "customize" || 
+                   $currentScreen->base === "site-editor" || // @since wp 6.7+
 				   self::inc_str( $currentScreen->base, '_page_' ) 
 				 ) 
 			  {

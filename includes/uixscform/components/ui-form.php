@@ -234,6 +234,7 @@ class UixSCFormCore_Components_FormScripts extends UixSCFormCore {
 					$currentScreen->base === "post" || 
 					$currentScreen->base === "widgets" || 
 					$currentScreen->base === "customize" || 
+                    $currentScreen->base === "site-editor" || // @since wp 6.7+
 					UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) 
 				) {
 					?>
@@ -263,6 +264,7 @@ class UixSCFormCore_Components_FormScripts extends UixSCFormCore {
 					$currentScreen->base === "post" || 
 					$currentScreen->base === "widgets" || 
 					$currentScreen->base === "customize" || 
+                    $currentScreen->base === "site-editor" || // @since wp 6.7+
 					UixSCFormCore::inc_str( $currentScreen->base, '_page_' ) 
 				) {
 				

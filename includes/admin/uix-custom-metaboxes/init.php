@@ -217,6 +217,7 @@ if ( !class_exists( 'Uix_Custom_Metaboxes' ) ) {
 			  if ( $currentScreen->base === "post" || //page,post,custom post type
 				   $currentScreen->base === "widgets" || 
 				   $currentScreen->base === "customize" || 
+                   $currentScreen->base === "site-editor" || // @since wp 6.7+
 				   self::inc_str( $currentScreen->base, '_page_' ) 
 				 ) 
 			  {

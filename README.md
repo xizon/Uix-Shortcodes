@@ -66,6 +66,10 @@ The currently available default elements:
 
 ### Updates
 
+##### = 2.0.3 (January 16, 2025) =
+
+* Fix: Fixed an issue with the display of shortcodes in "wp-admin/site-editor.php".
+
 
 ##### = 2.0.2 (January 3, 2025) =
 
