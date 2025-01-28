@@ -3,7 +3,7 @@
  * Uix Shortcodes Form
  *
  * @class 		: UixSCForm
- * @version		: 4.3.9  (January 16, 2025)
+ * @version		: 4.3.92  (January 29, 2025)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  *
@@ -17,7 +17,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
 	class UixSCFormCore {
 		
 		const PREFIX     = 'uix';
-		const VERSION    = '4.3.9';
+		const VERSION    = '4.3.92';
 		const MAPAPI     = 'AIzaSyA0kxSY0g5flUWptO4ggXpjhVB-ycdqsDk';
 	
 		
@@ -813,7 +813,7 @@ if ( !class_exists( 'UixSCFormCore' ) ) {
             
 			
 			$output       = '';
-			$previewcode  = isset( $_POST['previewcode'] ) ? $_POST[ 'previewcode' ] : '';
+			$previewcode  = isset( $_POST['previewcode'] ) ? sanitize_text_field($_POST[ 'previewcode' ]) : '';
 			$previewcode  = str_replace( '\\\'', "'", //step 2
 							str_replace( '<br>', '', //step 1
 							$previewcode 

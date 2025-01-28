@@ -66,6 +66,11 @@ The currently available default elements:
 
 ### Updates
 
+##### = 2.0.4 (January 29, 2025) =
+
+* Fix: Apply nonce check and also apply sanitize_text_field on the $previewcode.
+
+
 ##### = 2.0.3 (January 16, 2025) =
 
 * Fix: Fixed an issue with the display of shortcodes in "wp-admin/site-editor.php".

@@ -7,7 +7,7 @@ Tags: shortcode, shortcodes, short code, gutenberg, blocks
 Requires at least: 4.2
 Requires PHP: 5.6
 Tested up to: 6.7.1
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -120,6 +120,11 @@ We should now be able to see our block in the Add Block menu.</h4>
 
 
 == Changelog ==
+
+= 2.0.4 (January 29, 2025) =
+
+* Fix: Apply nonce check and also apply sanitize_text_field on the $previewcode.
+
 
 = 2.0.3 (January 16, 2025) =
 
