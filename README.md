@@ -66,6 +66,11 @@ The currently available default elements:
 
 ### Updates
 
+##### = 2.0.5 (April 1, 2025) =
+
+* Fix: All short codes are protected against XSS attacks. Add eac_attr to the property and esc_html filtering mechanism.
+
+
 ##### = 2.0.4 (January 29, 2025) =
 
 * Fix: Apply nonce check and also apply sanitize_text_field on the $previewcode.

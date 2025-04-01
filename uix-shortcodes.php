@@ -8,7 +8,7 @@
  * Plugin name: Uix Shortcodes
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-shortcodes/
  * Description: Uix Shortcodes brings an amazing set of beautiful and useful elements to your site that lets you do nifty things with very little effort.
- * Version:     2.0.4
+ * Version:     2.0.5
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -1074,9 +1074,7 @@ class UixShortcodes {
 				) ) ) );
 		
 	}
-			
-	
-	
+
 	/*
 	 * Callback function of "do shortcodes"
 	 *
@@ -1121,8 +1119,8 @@ class UixShortcodes {
 		$value = preg_replace( '/<p>([\s]*)<\/div>/', "</div>", $value );
 		
 		$value = str_replace( $searcharray[ 'sc_str' ], $replacearray[ 'sc_str' ], $value );
-		
-	    return  $value;
+
+        return  $value;
 
 	}
 	
@@ -1427,8 +1425,9 @@ class UixShortcodes {
 			$newstr = 'fa fa-'.$str.'';
 		}
 
-		return $newstr;
-
+        // Prevent XSS attacks
+        // such as [xxx name='test" oncontentvisibilityautostatechange=alert(document.cookie) style="display:block;content-visibility:auto']
+		return esc_attr($newstr);
 
 	}
 	

@@ -134,24 +134,25 @@ function uix_sc_fun_container( $atts, $content = null ) {
 	$bgcolor_css = '';
 	$border_css = '';
 	
-	if ( isset( $bgimage ) && !empty( $bgimage ) ) $bgimage_css = 'background:url('.$bgimage.') '.( $parallax > 0 ? '50%' : 'top' ).' '.( $parallax > 0 ? 0 : $bgimage_position ).' '.$bgimage_repeat.' '.( $parallax > 0 ? 'fixed' : $bgimage_attachment ).';-webkit-background-size: '.$bgimage_size.';-moz-background-size: '.$bgimage_size.';background-size: '.$bgimage_size.';';
-	
-		
-	
-	if ( isset( $bgcolor ) && !empty( $bgcolor ) ) $bgcolor_css = 'background-color:'.$bgcolor.';';
+    if ( isset( $bgimage ) && !empty( $bgimage ) ) {
+        $bgimage_css = 'background:url('.esc_url($bgimage).') '.( $parallax > 0 ? '50%' : 'top' ).' '.( $parallax > 0 ? 0 : esc_attr($bgimage_position) ).' '.esc_attr($bgimage_repeat).' '.( $parallax > 0 ? 'fixed' : esc_attr($bgimage_attachment) ).';-webkit-background-size: '.esc_attr($bgimage_size).';-moz-background-size: '.esc_attr($bgimage_size).';background-size: '.esc_attr($bgimage_size).';';
+    }
+    
+    if ( isset( $bgcolor ) && !empty( $bgcolor ) ) {
+        $bgcolor_css = 'background-color:'.esc_attr($bgcolor).';';
+    }
 
-	
-	if ( !empty( $bordercolor ) ) $border_css = 'border-color:'.$bordercolor.';border-width:'.$borderwidth.';border-style:'.$borderstyle.';';
-	
-	if ( isset( $vertical_center ) &&  $vertical_center == 'false' ) {
-		$now_content = $content;
-	} else {
-		$now_content = ''.( $height != 'auto' ? '<div class="uix-sc-container__table" style="height:'.$height.'"><div class="uix-sc-container__content-box">' : '' ).''.$content.''.( $height != 'auto' ? '</div></div>' : '' ).'';
-	}
+    if ( !empty( $bordercolor ) ) {
+        $border_css = 'border-color:'.esc_attr($bordercolor).';border-width:'.esc_attr($borderwidth).';border-style:'.esc_attr($borderstyle).';';
+    }
+    
+    if ( isset( $vertical_center ) && $vertical_center == 'false' ) {
+        $now_content = $content;
+    } else {
+        $now_content = ''.( $height != 'auto' ? '<div class="uix-sc-container__table" style="height:'.esc_attr($height).'"><div class="uix-sc-container__content-box">' : '' ).''.$content.''.( $height != 'auto' ? '</div></div>' : '' ).'';
+    }
 
-  
-   $return_string = '<div id="uix-sc-container__wrapper-'.$id.'" class="uix-sc-container__wrapper" style="margin: '.$margin_top.'px '.$margin_right.'px '.$margin_bottom.'px '.$margin_left.'px;"><div id="uix-sc-container__'.$id.'" data-parallax="'.$parallax.'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container--fullwidth' : 'uix-sc-container--boxed' ).'" style="'.( $height != 'auto' ? 'height:calc('.$height.' + '.($padding_top+$padding_bottom).'px)' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$border_css.'"><div class="uix-sc-container__body" style="padding: '.$padding_top.'px '.$padding_right.'px '.$padding_bottom.'px '.$padding_left.'px;">'.$now_content.'</div></div></div>';	
-	
+    $return_string = '<div id="uix-sc-container__wrapper-'.$id.'" class="uix-sc-container__wrapper" style="margin: '.esc_attr($margin_top).'px '.esc_attr($margin_right).'px '.esc_attr($margin_bottom).'px '.esc_attr($margin_left).'px;"><div id="uix-sc-container__'.$id.'" data-parallax="'.esc_attr($parallax).'" class="uix-sc-parallax uix-sc-container '.( $layout == 'fullwidth' ? 'uix-sc-container--fullwidth' : 'uix-sc-container--boxed' ).'" style="'.( $height != 'auto' ? 'height:calc('.esc_attr($height).' + '.($padding_top+$padding_bottom).'px)' : 'height:auto' ).';'.$bgimage_css.''.$bgcolor_css.''.$border_css.'"><div class="uix-sc-container__body" style="padding: '.esc_attr($padding_top).'px '.esc_attr($padding_right).'px '.esc_attr($padding_bottom).'px '.esc_attr($padding_left).'px;">'.$now_content.'</div></div></div>';    
 
 	
 	return UixShortcodes::do_callback( $return_string );
@@ -188,33 +189,31 @@ function uix_sc_fun_progress_bar( $atts, $content = null ) {
 	$id = uniqid(); 
 	$icon_name = ( isset( $icon ) && !empty( $icon ) )  ? $icon : '';
 
-
-   $return_string = '
-   
+    $return_string = '
         '.( $shape == 'square' ? '
-			<div id="uix-sc-bar__box-'.$id.'" class="uix-sc-bar__box uix-sc-bar__box--square">
-			    <div style="width:'.$size.';">
-					<div class="uix-sc-bar__info">
-						<h3 class="uix-sc-bar__title">'.$title.'</h3>
-						<div class="uix-sc-bar__desc">'.$content.'</div>
-					</div>
-					<div class="uix-sc-bar" data-percent="'.$percent.'" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'" data-icon="'.UixShortcodes::output_icon_class( $icon_name ).'">
-						<span class="uix-sc-bar__percent"></span>
-						<span class="uix-sc-bar__placeholder">0</span>
-						<span class="uix-sc-bar__text"  style="color:'.$preccolor.';font-size:'.$precsize.';">'.( !empty( $icon_name )  ? '<i class="'.UixShortcodes::output_icon_class( $icon_name ).'"></i>' : ''.$percent.''.$units.'' ).'</span>
-					</div>
-				</div>
-			</div><!-- /.uix-sc-bar__box--square -->
-		' : '
-			<div id="uix-sc-bar__box-'.$id.'" class="uix-sc-bar__box uix-sc-bar__box-circular">
-				<div class="uix-sc-bar" data-percent="'.$percent.'" style="width:'.$size.';">
-					<span class="uix-sc-bar__percent" data-linewidth="'.$linewidth.'" data-trackcolor="'.$trackcolor.'" data-barcolor="'.$barcolor.'" data-units="'.$units.'" data-size="'.$size.'"  data-icon="'.UixShortcodes::output_icon_class( $icon_name ).'" style="color:'.$preccolor.';font-size:'.$precsize.';"></span>
-				</div>
-				<h3 class="uix-sc-bar__title">'.$title.'</h3>
-				<div class="uix-sc-bar__desc">'.$content.'</div>
-			</div><!-- /.uix-sc-bar__box-circular -->
-		' ).'
-   ';	
+            <div id="uix-sc-bar__box-'.$id.'" class="uix-sc-bar__box uix-sc-bar__box--square">
+                <div style="width:'.esc_attr($size).';">
+                    <div class="uix-sc-bar__info">
+                        <h3 class="uix-sc-bar__title">'.esc_html($title).'</h3>
+                        <div class="uix-sc-bar__desc">'.$content.'</div>
+                    </div>
+                    <div class="uix-sc-bar" data-percent="'.esc_attr($percent).'" data-linewidth="'.esc_attr($linewidth).'" data-trackcolor="'.esc_attr($trackcolor).'" data-barcolor="'.esc_attr($barcolor).'" data-units="'.esc_attr($units).'" data-size="'.esc_attr($size).'" data-icon="'.UixShortcodes::output_icon_class($icon_name).'">
+                        <span class="uix-sc-bar__percent"></span>
+                        <span class="uix-sc-bar__placeholder">0</span>
+                        <span class="uix-sc-bar__text" style="color:'.esc_attr($preccolor).';font-size:'.esc_attr($precsize).';">'.( !empty($icon_name) ? '<i class="'.UixShortcodes::output_icon_class($icon_name).'"></i>' : esc_html($percent).esc_html($units) ).'</span>
+                    </div>
+                </div>
+            </div>
+        ' : '
+            <div id="uix-sc-bar__box-'.$id.'" class="uix-sc-bar__box uix-sc-bar__box-circular">
+                <div class="uix-sc-bar" data-percent="'.esc_attr($percent).'" style="width:'.esc_attr($size).';">
+                    <span class="uix-sc-bar__percent" data-linewidth="'.esc_attr($linewidth).'" data-trackcolor="'.esc_attr($trackcolor).'" data-barcolor="'.esc_attr($barcolor).'" data-units="'.esc_attr($units).'" data-size="'.esc_attr($size).'" data-icon="'.UixShortcodes::output_icon_class($icon_name).'" style="color:'.esc_attr($preccolor).';font-size:'.esc_attr($precsize).';"></span>
+                </div>
+                <h3 class="uix-sc-bar__title">'.esc_html($title).'</h3>
+                <div class="uix-sc-bar__desc">'.$content.'</div>
+            </div>
+        ').'
+    ';    
 		
 	
 	return UixShortcodes::do_callback( $return_string );
@@ -239,12 +238,10 @@ function uix_sc_fun_icons( $atts, $content = null ) {
 		'name' => '',
 	 ), $atts ) );
 	   
-	 $sizeclass = ( empty( $size ) ) ? '' : "font-size:{$size}{$units};";
-	 $colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
-	 
-	
-	
-	$return_string = '<i class="'.UixShortcodes::output_icon_class( $name ).'" style="'.$sizeclass.' '.$colorclass.'"></i>';
+     $sizeclass = ( empty( $size ) ) ? '' : "font-size:".esc_attr($size).esc_attr($units).";";
+     $colorclass = ( empty( $color ) ) ? '' : "color:".esc_attr($color).";";
+     
+     $return_string = '<i class="'.UixShortcodes::output_icon_class(esc_attr($name)).'" style="'.$sizeclass.' '.$colorclass.'"></i>';
 	
 
    
@@ -442,26 +439,26 @@ function uix_sc_fun_pricing_item( $atts, $content = null ) {
    $price_currency = UixShortcodes::get_unit_txt( UixShortcodes::get_subtags( 'uix_pricing_item_price', $content ) );
  
    $return_string = '
-   <div class="'.$col_num.' '.$col_last.' uix-sc-price__border-hover" data-bcolor="'.UixShortcodes::color_transform( $bcolor ).'" data-tcolor="'.$imcolor.'" id="uix-sc-col--js-'.$id.'">
-       <div class="uix-sc-price__bg-hover uix-sc-price__init-height">
-	       <div class="uix-sc-price__border '.$class.'">
-				<div class="uix-sc-price__level">'.UixShortcodes::get_subtags( 'uix_pricing_item_level', $content ).'</div>
-				<div class="uix-sc-price__num" style="color:'.$imcolor.'"><span class="uix-sc-price__currency">'.$price_currency.'</span><span class="uix-sc-price__num-text">'.$price_num.'</span><span class="uix-sc-price__period">'.$period.'</span></div>
-				
-				<div class="uix-sc-price__excerpt">
-					'.UixShortcodes::get_subtags( 'uix_pricing_item_desc', $content ).'
-				</div>
-				<a href="'.$url.'" target="'.$target.'" class="uix-sc-btn uix-sc-btn--'.$bcolor.'">'.UixShortcodes::get_subtags( 'uix_pricing_item_button', $content ).'</a>
-				
-				<div class="uix-sc-price__hr"></div>
-				<div class="uix-sc-price__detail">
-					'.UixShortcodes::get_subtags( 'uix_pricing_item_detail', $content ).'
-				</div>
-		   </div>
-		   
-		</div>
-	</div>          
-   ';
+    <div class="'.$col_num.' '.$col_last.' uix-sc-price__border-hover" data-bcolor="'.UixShortcodes::color_transform(esc_attr($bcolor)).'" data-tcolor="'.esc_attr($imcolor).'" id="uix-sc-col--js-'.$id.'">
+        <div class="uix-sc-price__bg-hover uix-sc-price__init-height">
+            <div class="uix-sc-price__border '.esc_attr($class).'">
+                <div class="uix-sc-price__level">'.UixShortcodes::get_subtags( 'uix_pricing_item_level', $content ).'</div>
+                <div class="uix-sc-price__num" style="color:'.esc_attr($imcolor).'"><span class="uix-sc-price__currency">'.$price_currency.'</span><span class="uix-sc-price__num-text">'.$price_num.'</span><span class="uix-sc-price__period">'.esc_html($period).'</span></div>
+                
+                <div class="uix-sc-price__excerpt">
+                    '.UixShortcodes::get_subtags( 'uix_pricing_item_desc', $content ).'
+                </div>
+                <a href="'.esc_url($url).'" target="'.esc_attr($target).'" class="uix-sc-btn uix-sc-btn--'.esc_attr($bcolor).'">'.UixShortcodes::get_subtags( 'uix_pricing_item_button', $content ).'</a>
+                
+                <div class="uix-sc-price__hr"></div>
+                <div class="uix-sc-price__detail">
+                    '.UixShortcodes::get_subtags( 'uix_pricing_item_detail', $content ).'
+                </div>
+           </div>
+           
+        </div>
+    </div>          
+    ';
 
    return UixShortcodes::do_callback( $return_string );
 }
@@ -484,11 +481,11 @@ function uix_sc_fun_column_wrapper( $atts, $content = null ) {
 		  'right' => 0
 	 ), $atts ) );
 	
-   $return_string = '
-   <div class="uix-sc-row" style="padding: '.$top.'px '.$right.'px '.$bottom.'px '.$left.'px;">
-		  '.$content.'
-	</div><!-- /.uix-sc-row -->                                   
-   ';
+     $return_string = '
+     <div class="uix-sc-row" style="padding: '.esc_attr($top).'px '.esc_attr($right).'px '.esc_attr($bottom).'px '.esc_attr($left).'px;">
+            '.$content.'
+     </div><!-- /.uix-sc-row -->                                   
+     ';
  
    
    return UixShortcodes::do_callback( $return_string );
@@ -509,10 +506,11 @@ function uix_sc_fun_column( $atts, $content = null ) {
 
    $col_last = ( $last == 1 ) ? 'uix-sc-col--last' : '';
   
+   
    $return_string = '
-   <div class="uix-sc-col--'.$grid.'  '.$col_last.'">
+   <div class="uix-sc-col--'.esc_attr($grid).'  '.$col_last.'">
        '.$content.'
-	</div>                  
+   </div>                  
    ';
 
    return UixShortcodes::do_callback( $return_string );
@@ -549,23 +547,20 @@ function uix_sc_fun_button( $atts, $content = null ) {
 	if ($paddingspacing == 2) $sizeclass = 'uix-sc-btn--small';
 	if ($paddingspacing == 3) $sizeclass = 'uix-sc-btn--small-small';
     
-	//target
-	$targetcode = ( $target == 1 ) ? ' target="_blank"' : '';
-	
-	//icon
-	$iconshow = ( !empty( $icon ) ) ? '<i class="'.UixShortcodes::output_icon_class( $icon ).'"></i>' : '';
-	
-	//button common css
-	$commoncss = 'font-size:'.$fontsize.';letter-spacing:'.$letterspacing.';-webkit-border-radius: '.$fillet.'; -moz-border-radius: '.$fillet.'; border-radius: '.$fillet.';color:'.$txtcolor.';';
-		
-	//button background
-	
-	$bg_custom_color = ( UixShortcodes::inc_str( $bgcolor, 'rgb' ) || UixShortcodes::inc_str( $bgcolor, '#' ) ) ? 'uix-sc-btn--none '.$sizeclass.'" style="background:'.$bgcolor.';'.$commoncss.'"' : 'uix-sc-btn--'.$bgcolor.' '.$sizeclass.'" style="'.$commoncss.'"';
-	
-	
-   $return_string = '<a class="uix-sc-btn '.$bg_custom_color.' '.$targetcode.' href="'.$url.'" data-hover="'.$hovercolor.'" data-default-bg="'.$defaultbgcolor.'">'.$iconshow.''.$content.'</a>';	
-		
-		
+    //target
+    $targetcode = ( $target == 1 ) ? ' target="_blank"' : '';
+    
+    //icon
+    $iconshow = ( !empty( $icon ) ) ? '<i class="'.UixShortcodes::output_icon_class(esc_attr($icon)).'"></i>' : '';
+    
+    //button common css
+    $commoncss = 'font-size:'.esc_attr($fontsize).';letter-spacing:'.esc_attr($letterspacing).';-webkit-border-radius: '.esc_attr($fillet).'; -moz-border-radius: '.esc_attr($fillet).'; border-radius: '.esc_attr($fillet).';color:'.esc_attr($txtcolor).';';
+        
+    //button background
+    $bg_custom_color = ( UixShortcodes::inc_str( $bgcolor, 'rgb' ) || UixShortcodes::inc_str( $bgcolor, '#' ) ) ? 'uix-sc-btn--none '.$sizeclass.'" style="background:'.esc_attr($bgcolor).';'.$commoncss.'"' : 'uix-sc-btn--'.esc_attr($bgcolor).' '.$sizeclass.'" style="'.$commoncss.'"';
+    
+    $return_string = '<a class="uix-sc-btn '.$bg_custom_color.' '.$targetcode.' href="'.esc_url($url).'" data-hover="'.esc_attr($hovercolor).'" data-default-bg="'.esc_attr($defaultbgcolor).'">'.$iconshow.''.$content.'</a>';    
+      
 	
 	return UixShortcodes::do_callback( $return_string );
 }
@@ -605,37 +600,34 @@ function uix_sc_fun_share_buttons( $atts, $content = null ) {
 	
 	
 	
-	$fillet_show = 'style="-webkit-border-radius: '.$fillet.'; -moz-border-radius: '.$fillet.'; border-radius: '.$fillet.'"';
-	$targetcode = 'target="_blank"';
-	
-	$img = '';
-	$thumbnail = '';
-	if ( has_post_thumbnail() ) {
-		// Display post thumbnail
-		ob_start();
-			the_post_thumbnail(); 
-			$thumbnail = ob_get_contents();
-		ob_end_clean(); 
-	
+    $fillet_show = 'style="-webkit-border-radius: '.esc_attr($fillet).'; -moz-border-radius: '.esc_attr($fillet).'; border-radius: '.esc_attr($fillet).';"';
+    $targetcode = 'target="_blank"';
+    
+    $img = '';
+    $thumbnail = '';
+    if ( has_post_thumbnail() ) {
+        ob_start();
+            the_post_thumbnail(); 
+            $thumbnail = ob_get_contents();
+        ob_end_clean(); 
+    
         preg_match_all( "/[img|IMG].*?src=['|\"](.*?(?:[.gif|.jpg]))['|\"].*?[\/]?>/", $thumbnail, $match );
-		$img = '&media='.$match[1][0];
-		
-	}
-	
-	$btn_fb = ( UixShortcodes::inc_str( $show, 'facebook' ) ) ? '<a class="'.$bcolor.' facebook" '.$targetcode.' href="//www.facebook.com/sharer/sharer.php?u='.UixShortcodes::page_uri().'"><i class="fa fa-facebook '.$bsize.'" '.$fillet_show.'></i></a>' : '';
-	$btn_twitter = ( UixShortcodes::inc_str( $show, 'twitter' ) ) ? '<a class="'.$bcolor.' twitter" '.$targetcode.' href="//twitter.com/intent/tweet?url='.UixShortcodes::page_uri().'&text='.esc_attr( get_the_title() ).'"><i class="fa fa-twitter '.$bsize.'" '.$fillet_show.'></i></a>' : '';
-	$btn_google = ( UixShortcodes::inc_str( $show, 'google' ) ) ? '<a class="'.$bcolor.' google-plus" '.$targetcode.' href="//plus.google.com/share?url='.UixShortcodes::page_uri().'"><i class="fa fa-google-plus '.$bsize.'" '.$fillet_show.'></i></a>' : '';
-	$btn_pin = ( UixShortcodes::inc_str( $show, 'pinterest' ) ) ? '<a class="'.$bcolor.' pinterest" '.$targetcode.' href="//www.pinterest.com/pin/create/button/?url='.UixShortcodes::page_uri().''.$img.'&description='.esc_attr( get_the_title() ).'"><i class="fa fa-pinterest-p '.$bsize.'" '.$fillet_show.'></i></a>' : '';
-	
-   $return_string = '
-   <div class="uix-sc-share">
-		'.$btn_fb.'
-		'.$btn_twitter.'
-		'.$btn_google.'
-		'.$btn_pin.'
-   </div>
-   ';	
-		
+        $img = '&media='.esc_url($match[1][0]);
+    }
+    
+    $btn_fb = ( UixShortcodes::inc_str( $show, 'facebook' ) ) ? '<a class="'.$bcolor.' facebook" '.$targetcode.' href="//www.facebook.com/sharer/sharer.php?u='.UixShortcodes::page_uri().'"><i class="fa fa-facebook '.$bsize.'" '.$fillet_show.'></i></a>' : '';
+    $btn_twitter = ( UixShortcodes::inc_str( $show, 'twitter' ) ) ? '<a class="'.$bcolor.' twitter" '.$targetcode.' href="//twitter.com/intent/tweet?url='.UixShortcodes::page_uri().'&text='.esc_attr( get_the_title() ).'"><i class="fa fa-twitter '.$bsize.'" '.$fillet_show.'></i></a>' : '';
+    $btn_google = ( UixShortcodes::inc_str( $show, 'google' ) ) ? '<a class="'.$bcolor.' google-plus" '.$targetcode.' href="//plus.google.com/share?url='.UixShortcodes::page_uri().'"><i class="fa fa-google-plus '.$bsize.'" '.$fillet_show.'></i></a>' : '';
+    $btn_pin = ( UixShortcodes::inc_str( $show, 'pinterest' ) ) ? '<a class="'.$bcolor.' pinterest" '.$targetcode.' href="//www.pinterest.com/pin/create/button/?url='.UixShortcodes::page_uri().''.$img.'&description='.esc_attr( get_the_title() ).'"><i class="fa fa-pinterest-p '.$bsize.'" '.$fillet_show.'></i></a>' : '';
+    
+    $return_string = '
+    <div class="uix-sc-share">
+        '.$btn_fb.'
+        '.$btn_twitter.'
+        '.$btn_google.'
+        '.$btn_pin.'
+    </div>
+    ';    
 		
 	
 	return UixShortcodes::do_callback( $return_string );
@@ -685,13 +677,13 @@ function uix_sc_fun_toggle( $atts, $content = null ) {
 	}
 	
 	
-   $return_string = '
-   <div class="uix-sc-accordion__box">
-	   <div class="uix-sc-accordion'.$tabclass.'" data-effect="'.$transeffect.'">
-			  '.$content.'
-		</div><!-- /.uix-sc-accordion, .uix-sc-tabs -->
-	</div><!-- /.uix-sc-accordion__box -->                              
-   ';
+    $return_string = '
+    <div class="uix-sc-accordion__box">
+        <div class="uix-sc-accordion'.$tabclass.'" data-effect="'.esc_attr($transeffect).'">
+               '.$content.'
+        </div><!-- /.uix-sc-accordion, .uix-sc-tabs -->
+    </div><!-- /.uix-sc-accordion__box -->                              
+    ';
  
    
    return UixShortcodes::do_callback( $return_string );
@@ -799,11 +791,11 @@ function uix_sc_fun_video( $atts, $content = null ) {
 		'url' => '',
 	 ), $atts ) );
 	 
-	 if ( $responsive == 'true' ) {
-		 $return_string = '<div class="uix-sc-media">'.wp_oembed_get( $url ).'</div>';
-	 } else {
-		 $return_string = wp_oembed_get( $url, array( 'width'=>$width, 'height'=>$height ) );
-	 }
+     if ( $responsive == 'true' ) {
+        $return_string = '<div class="uix-sc-media">'.wp_oembed_get(esc_url($url)).'</div>';
+    } else {
+        $return_string = wp_oembed_get(esc_url($url), array('width'=>esc_attr($width), 'height'=>esc_attr($height)));
+    }
 	
    
    return UixShortcodes::do_callback( $return_string );
@@ -828,19 +820,18 @@ function uix_sc_fun_audio( $atts, $content = null ) {
 		'loop' => 'false',
 	 ), $atts ) );
 	
-	$return_string = '<div style="width:'.$width.';">'.wp_audio_shortcode( array(
-			'src'      => $url,
-			'loop'     => ( $loop == 'true' ) ? 1 : 0,
-			'autoplay' => ( $autoplay == 'true' ) ? 1 : 0,
-			'preload' => 'none'
-			) ).'</div>';
-	
-	if ( $soundcloud == 'true' ) {
-		$return_string = '<div style="width:'.$width.';height:'.$height.'px">'.preg_replace( '/(width|height)=\"\d*\"\s/', '', wp_oembed_get( $url ) ).'</div>';
-		$return_string = str_replace( 'scrolling', 'style="width:100%;height:'.$height.'px" scrolling', $return_string );
-	}
+     $return_string = '<div style="width:'.esc_attr($width).';">'.wp_audio_shortcode( array(
+        'src'      => esc_url($url),
+        'loop'     => ( $loop == 'true' ) ? 1 : 0,
+        'autoplay' => ( $autoplay == 'true' ) ? 1 : 0,
+        'preload' => 'none'
+        ) ).'</div>';
 
-  
+    if ( $soundcloud == 'true' ) {
+        $return_string = '<div style="width:'.esc_attr($width).';height:'.esc_attr($height).'px">'.preg_replace( '/(width|height)=\"\d*\"\s/', '', wp_oembed_get(esc_url($url)) ).'</div>';
+        $return_string = str_replace( 'scrolling', 'style="width:100%;height:'.esc_attr($height).'px" scrolling', $return_string );
+    }
+    
 
    return UixShortcodes::do_callback( $return_string );
    
@@ -862,15 +853,14 @@ function uix_sc_fun_code( $atts, $content = null ) {
 		'language' => '',
 	 ), $atts ) );
 	 
+     $_code = '<pre class="brush: '.esc_attr($language).';">'.$content.'</pre>';
 
-	$_code = '<pre class="brush: '.$language.';">'.$content.'</pre>';
-
-	$return_string = str_replace( ']', '&#93;', 
-					 str_replace( '[', '&#91;',
-					 str_replace( 'class="brush: ', 'data-language="'.$language.'" class="'.$language.' brush:',
-					 $_code
-					 ) ) );
-	
+     $return_string = str_replace( ']', '&#93;', 
+                      str_replace( '[', '&#91;',
+                      str_replace( 'class="brush: ', 'data-language="'.esc_attr($language).'" class="'.esc_attr($language).' brush:',
+                      $_code
+                      ) ) );
+     
 	
    return UixShortcodes::do_callback( $return_string );
    
@@ -896,52 +886,47 @@ function uix_sc_fun_portfolio_wrapper( $atts, $content = null ) {
 	 ), $atts ) );
 	 
 	
-   $id = uniqid(); 
-   $col_class = '';
-    switch ( $col ) {
-        case 4:
-            $col_class = $classprefix.'col--4';
-            break;
-        case 3:
-            $col_class = $classprefix.'col--3';
-            break;
-        case 2:
-            $col_class = $classprefix.'col--2';
-            break;
-    }
-
-	
-   $return_string = '
-   <div class="uix-sc-portfolio__wrapper" data-show-type="'.esc_attr( $layout ).''.(esc_attr( ( $filterable == 1 ? '|filter' : '' ) )).'" data-filter-id="'.(esc_attr( ( $filterable == 1 ? '#nav-filters-'.$classprefix.'cat-list-'.$id : '' ) )).'">
-	   <div class="'.$classprefix.'tiles '.$col_class.'">
-			  '.$content.'
-		</div><!-- /.'.$classprefix.'tiles -->   
-	</div><!-- /.uix-sc-portfolio__wrapper --> 
-   ';
-  
-   
-   $return_string = UixShortcodes::do_callback( $return_string );
-   $return_string = str_replace( '{imagefillet}', 'style="-webkit-border-radius: '.$imagefillet.'; -moz-border-radius: '.$imagefillet.'; border-radius: '.$imagefillet.';"', $return_string );
-   $return_string = str_replace( '{classprefix}', $classprefix, $return_string );
-  
-   //Display categories on page
-   $catlist = '';
-   
-   if ( $filterable == 1 ) {
-	   $catlist = '
-		<div class="'.$classprefix.'cat-list uix-sc-filterable" data-classprefix="'.$classprefix.'" id="nav-filters-'.$classprefix.'cat-list-'.$id.'">
-			<ul>
-				<li class="current-cat"><a href="javascript:void(0)" data-normal="1" data-group="all">'.__( 'All', 'uix-shortcodes' ).'</a></li>
-				'.UixShortcodes::cat_list( $return_string, $classprefix ).'
-			</ul>
-		</div> <!-- /.'.$classprefix.'cat-list -->
-	   ';  
-   }
-   
-
-  
-
-   return $catlist.$return_string;
+     $id = uniqid(); 
+     $col_class = '';
+     switch ( $col ) {
+         case 4:
+             $col_class = esc_attr($classprefix).'col--4';
+             break;
+         case 3:
+             $col_class = esc_attr($classprefix).'col--3';
+             break;
+         case 2:
+             $col_class = esc_attr($classprefix).'col--2';
+             break;
+     }
+ 
+     $return_string = '
+     <div class="uix-sc-portfolio__wrapper" data-show-type="'.esc_attr($layout).''.( $filterable == 1 ? '|filter' : '' ).'" data-filter-id="'.( $filterable == 1 ? '#nav-filters-'.esc_attr($classprefix).'cat-list-'.$id : '' ).'">
+         <div class="'.esc_attr($classprefix).'tiles '.$col_class.'">
+                '.$content.'
+         </div><!-- /.'.esc_attr($classprefix).'tiles -->   
+     </div><!-- /.uix-sc-portfolio__wrapper --> 
+     ';
+    
+     $return_string = UixShortcodes::do_callback( $return_string );
+     $return_string = str_replace( '{imagefillet}', 'style="-webkit-border-radius: '.esc_attr($imagefillet).'; -moz-border-radius: '.esc_attr($imagefillet).'; border-radius: '.esc_attr($imagefillet).';"', $return_string );
+     $return_string = str_replace( '{classprefix}', esc_attr($classprefix), $return_string );
+    
+     //Display categories on page
+     $catlist = '';
+     
+     if ( $filterable == 1 ) {
+         $catlist = '
+         <div class="'.esc_attr($classprefix).'cat-list uix-sc-filterable" data-classprefix="'.esc_attr($classprefix).'" id="nav-filters-'.esc_attr($classprefix).'cat-list-'.$id.'">
+             <ul>
+                 <li class="current-cat"><a href="javascript:void(0)" data-normal="1" data-group="all">'.__( 'All', 'uix-shortcodes' ).'</a></li>
+                 '.UixShortcodes::cat_list( $return_string, esc_attr($classprefix) ).'
+             </ul>
+         </div> <!-- /.'.esc_attr($classprefix).'cat-list -->
+         ';  
+     }
+ 
+     return $catlist.$return_string;
    
 }
 add_shortcode( 'uix_portfolio', 'uix_sc_fun_portfolio_wrapper' );
@@ -983,24 +968,24 @@ function uix_sc_fun_portfolio_item( $atts, $content = null ) {
     
 
    $return_string = '
-        <div class="{classprefix}item" data-groups=\'["'.UixShortcodes::transform_slug( $type ).'"]\'>
+        <div class="{classprefix}item" data-groups=\'["'.UixShortcodes::transform_slug(esc_attr($type)).'"]\'>
             <span class="{classprefix}image" {imagefillet}>
-                <a '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'">
-                <img src="'.esc_url( $image ).'" alt="" {imagefillet}>
+                <a '.$targetcode.' href="'.esc_url($fullimgURL).'" title="'.esc_attr($title).'">
+                <img src="'.esc_url($image).'" alt="" {imagefillet}>
                 </a>
             </span>
-            <h3><a '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'">'.$title.'</a></h3>
-			'.( !empty( $type ) ? '<div class="{classprefix}type">'.$type.'</div>' : '' ).'
+            <h3><a '.$targetcode.' href="'.esc_url($fullimgURL).'" title="'.esc_attr($title).'">'.esc_html($title).'</a></h3>
+            '.( !empty( $type ) ? '<div class="{classprefix}type">'.esc_html($type).'</div>' : '' ).'
             <div class="{classprefix}content">
                 '.str_replace( '[uix_portfolio_item_desc]', '',
                   str_replace( '[/uix_portfolio_item_desc]', '',
                    $content
                    ) ).'
-				<a class="{classprefix}link" '.$targetcode.' href="'.$fullimgURL.'" title="'.esc_attr( $title ).'"></a>
+                <a class="{classprefix}link" '.$targetcode.' href="'.esc_url($fullimgURL).'" title="'.esc_attr($title).'"></a>
             </div>
-    
         </div><!-- /.{classprefix}item -->          
-   ';
+    ';
+
 
   
   
@@ -1055,7 +1040,7 @@ function uix_sc_fun_team_wrapper( $atts, $content = null ) {
    
    
    $return_string = UixShortcodes::do_callback( $return_string );
-   $return_string = str_replace( '{avatarfillet}', 'style="-webkit-border-radius: '.$avatarfillet.'; -moz-border-radius: '.$avatarfillet.'; border-radius: '.$avatarfillet.';"', $return_string );
+   $return_string = str_replace( '{avatarfillet}', 'style="-webkit-border-radius: '.esc_attr($avatarfillet).'; -moz-border-radius: '.esc_attr($avatarfillet).'; border-radius: '.esc_attr($avatarfillet).';"', $return_string );
    $return_string = str_replace( '{avatarheight}', $cus_height, $return_string );
    
    
@@ -1084,55 +1069,49 @@ function uix_sc_fun_team_item( $atts, $content = null ) {
 		  'social_3' => ''
 	 ), $atts ) );
 	 
-
-	 
-   $avatarURL = ( !empty( $avatar ) ) ? $avatar : UixSCFormCore::photo_placeholder();
-   
-   $social_arr_1 = explode( '|', $social_1 );
-   $social_arr_2 = explode( '|', $social_2 );
-   $social_arr_3 = explode( '|', $social_3 );
-   
-   $social_url_1 = ( !empty( $social_arr_1[1] ) ) ? $social_arr_1[1] : '#';
-   $social_url_2 = ( !empty( $social_arr_2[1] ) ) ? $social_arr_2[1] : '#';
-   $social_url_3 = ( !empty( $social_arr_3[1] ) ) ? $social_arr_3[1] : '#';
-   
-   $social_icon_1 = ( !empty( $social_arr_1[0] ) ) ? $social_arr_1[0] : 'link';
-   $social_icon_2 = ( !empty( $social_arr_2[0] ) ) ? $social_arr_2[0] : 'link';
-   $social_icon_3 = ( !empty( $social_arr_3[0] ) ) ? $social_arr_3[0] : 'link'; 
-   
-   
-   $social_out_1 = ( !empty( $social_arr_1[1] ) ) ? '<a href=\''.$social_url_1.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_1 ).'\'></i></a>' : '';
-   $social_out_2 = ( !empty( $social_arr_2[1] ) ) ? '<a href=\''.$social_url_2.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_2 ).'\'></i></a>' : '';
-   $social_out_3 = ( !empty( $social_arr_3[1] ) ) ? '<a href=\''.$social_url_3.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class( $social_icon_3 ).'\'></i></a>' : '';
-
-
-   if ( $col == 'fullwidth' ) {
-	   $return_string = '
-		<div class="uix-sc-card__item">
-		  <div class="uix-sc-card__item__left uix-sc-filter--gray">
-					<div class="uix-sc-card__item__left-imgbox" {avatarheight}>
-						<img src="'.esc_url( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
-					</div>
-		  </div>
-		  <div class="uix-sc-card__item__body">
-			<h3 class="uix-sc-card__item__heading">'.$name.'</h3>
-			<div class="uix-sc-card__item__social">
-			   '.( !empty( $position )  ? '<em>'.$position.'</em>' : '' ).'
-				&nbsp;&nbsp;
-				'.$social_out_1.'
-				'.$social_out_2.'
-				'.$social_out_3.'									
-			
-			</div>
-			'.str_replace( '[uix_team_item_desc]', '<div class="uix-sc-card__item__desc">',
+     $avatarURL = ( !empty( $avatar ) ) ? $avatar : UixSCFormCore::photo_placeholder();
+    
+     $social_arr_1 = explode( '|', $social_1 );
+     $social_arr_2 = explode( '|', $social_2 );
+     $social_arr_3 = explode( '|', $social_3 );
+     
+     $social_url_1 = ( !empty( $social_arr_1[1] ) ) ? esc_url($social_arr_1[1]) : '#';
+     $social_url_2 = ( !empty( $social_arr_2[1] ) ) ? esc_url($social_arr_2[1]) : '#';
+     $social_url_3 = ( !empty( $social_arr_3[1] ) ) ? esc_url($social_arr_3[1]) : '#';
+     
+     $social_icon_1 = ( !empty( $social_arr_1[0] ) ) ? esc_attr($social_arr_1[0]) : 'link';
+     $social_icon_2 = ( !empty( $social_arr_2[0] ) ) ? esc_attr($social_arr_2[0]) : 'link';
+     $social_icon_3 = ( !empty( $social_arr_3[0] ) ) ? esc_attr($social_arr_3[0]) : 'link'; 
+     
+     $social_out_1 = ( !empty( $social_arr_1[1] ) ) ? '<a href=\''.$social_url_1.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class($social_icon_1).'\'></i></a>' : '';
+     $social_out_2 = ( !empty( $social_arr_2[1] ) ) ? '<a href=\''.$social_url_2.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class($social_icon_2).'\'></i></a>' : '';
+     $social_out_3 = ( !empty( $social_arr_3[1] ) ) ? '<a href=\''.$social_url_3.'\' target=\'_blank\'><i class=\''.UixShortcodes::output_icon_class($social_icon_3).'\'></i></a>' : '';
+ 
+     if ( $col == 'fullwidth' ) {
+         $return_string = '
+         <div class="uix-sc-card__item">
+             <div class="uix-sc-card__item__left uix-sc-filter--gray">
+                 <div class="uix-sc-card__item__left-imgbox" {avatarheight}>
+                     <img src="'.esc_url($avatarURL).'" alt="'.esc_attr($name).'" {avatarfillet}>
+                 </div>
+             </div>
+             <div class="uix-sc-card__item__body">
+                 <h3 class="uix-sc-card__item__heading">'.esc_html($name).'</h3>
+                 <div class="uix-sc-card__item__social">
+                     '.( !empty( $position ) ? '<em>'.esc_html($position).'</em>' : '' ).'
+                     &nbsp;&nbsp;
+                     '.$social_out_1.'
+                     '.$social_out_2.'
+                     '.$social_out_3.'                                    
+                 </div>
+			    '.str_replace( '[uix_team_item_desc]', '<div class="uix-sc-card__item__desc">',
 				   str_replace( '[/uix_team_item_desc]', '</div>',
 			   $content
 			   ) ).'
-		  </div>
-		</div>               
-	   ';
-   
-   }
+             </div>
+         </div>               
+         ';
+     }
    
    if ( $col == 4 || $col == 3 || $col == 2 ) {
 	   
@@ -1150,31 +1129,29 @@ function uix_sc_fun_team_item( $atts, $content = null ) {
 				break;
 		}
 
-	   $return_string = '
-		<div class="uix-sc-gallery__tiles '.$col_class.' uix-sc-filter--gray">
-			<div class="uix-sc-gallery__tiles-imgbox" {avatarheight}>
-				<img src="'.esc_url( $avatarURL ).'" alt="'.esc_attr( $name ).'" {avatarfillet}>
-				'.( !empty( $position )  ? '<span class="uix-sc-gallery__tiles-position">'.$position.'</span>' : '' ).'
-			</div>
-			<div class="uix-sc-gallery__tiles-info">
-				<h3 class="uix-sc-gallery__tiles-title">'.$name.'</h3>	
-				<div class="uix-sc-gallery__tiles-desc">
-							'.str_replace( '[uix_team_item_desc]', '<div class=\'uix-sc-gallery__tiles-desc-p\'>',
-							  str_replace( '[/uix_team_item_desc]', '</div>',
-							   $content
-							   ) ).'
-				</div>
-				<div class="uix-sc-gallery__tiles-social">
-					&nbsp;&nbsp;
-					'.$social_out_1.'
-					'.$social_out_2.'
-					'.$social_out_3.'									
-				
-				</div>
-				
-			</div>
-		</div>            
-	   ';
+        $return_string = '
+        <div class="uix-sc-gallery__tiles '.$col_class.' uix-sc-filter--gray">
+            <div class="uix-sc-gallery__tiles-imgbox" {avatarheight}>
+                <img src="'.esc_url($avatarURL).'" alt="'.esc_attr($name).'" {avatarfillet}>
+                '.( !empty( $position ) ? '<span class="uix-sc-gallery__tiles-position">'.esc_html($position).'</span>' : '' ).'
+            </div>
+            <div class="uix-sc-gallery__tiles-info">
+                <h3 class="uix-sc-gallery__tiles-title">'.esc_html($name).'</h3>    
+                <div class="uix-sc-gallery__tiles-desc">
+                    '.str_replace( '[uix_team_item_desc]', '<div class=\'uix-sc-gallery__tiles-desc-p\'>',
+                        str_replace( '[/uix_team_item_desc]', '</div>',
+                        $content
+                        ) ).'
+                </div>
+                <div class="uix-sc-gallery__tiles-social">
+                    &nbsp;&nbsp;
+                    '.$social_out_1.'
+                    '.$social_out_2.'
+                    '.$social_out_3.'                                    
+                </div>
+            </div>
+        </div>            
+        ';
    
    }
   
@@ -1270,26 +1247,22 @@ function uix_sc_fun_features_item( $atts, $content = null ) {
    }
    
    if ( $col == 3 ) {
-	   
-		$content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature__title">',
-				   str_replace( '[/uix_features_item_title]', '</h3>',
-				   str_replace( '[uix_features_item_desc]', '<div class="uix-sc-feature__desc">',
-				   str_replace( '[/uix_features_item_desc]', '</div>',
-			   $content
-			   ) ) ) ); 
-		   
-	   
-	   $return_string = '
-		<div class="uix-sc-col--4 '.$col_last.'">
-			<div class="uix-sc-feature__li">
-				  <p class="uix-sc-feature__icon"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class( $icon ) : 'fa fa-check' ).'"></i></p>
-				  '.$content.'
-			 </div>
-		</div>          
-	   ';
-   
-   }
-  
+        $content = str_replace( '[uix_features_item_title]', '<h3 class="uix-sc-feature__title">',
+                str_replace( '[/uix_features_item_title]', '</h3>',
+                str_replace( '[uix_features_item_desc]', '<div class="uix-sc-feature__desc">',
+                str_replace( '[/uix_features_item_desc]', '</div>',
+            $content
+            ) ) ) ); 
+        
+        $return_string = '
+        <div class="uix-sc-col--4 '.$col_last.'">
+            <div class="uix-sc-feature__li">
+                <p class="uix-sc-feature__icon"><i class="'.( !empty( $icon ) ? UixShortcodes::output_icon_class(esc_attr($icon)) : 'fa fa-check' ).'"></i></p>
+                '.$content.'
+            </div>
+        </div>          
+        ';
+    }
 
    return UixShortcodes::do_callback( $return_string );
 }
@@ -1351,8 +1324,6 @@ function uix_sc_fun_client_item( $atts, $content = null ) {
 			'.$desc.'	
 		</div>																	                                                          
    ';
-  
-  
 
    return UixShortcodes::do_callback( $return_string );
 }
@@ -1385,47 +1356,40 @@ function uix_sc_fun_testimonials_wrapper( $atts, $content = null ) {
 	$testimonials_id = 'testimonials-' . uniqid();
 
 
-   $return_string = '
-   <div class="uix-sc-testimonials__wrapper">
-	   <div class="uix-sc-testimonials" id="uix-testimonials-'.$testimonials_id.'">
-			<div class="uix-sc-testimonials__container">
-			
-			   <div data-uix-sc-hybridcontent-slider="1" role="slider" class="uix-sc-hybridcontent-slider"
-				  data-draggable="'.$draggable.'"
-				  data-draggable-cursor="move"	 
-				  data-dir="'.$dir.'"
-				  data-auto="'.$auto.'"
-				  data-loop="false"
-				  data-speed="'.$speed.'"
-				  data-timing="'.$timing.'" 
-				  data-pagination="#uix-sc-hybridcontent-slider__pagination-'.$testimonials_id.'" 
-				  data-next="#uix-sc-hybridcontent-slider__controls-'.$testimonials_id.' .uix-sc-hybridcontent-slider__controls--next" 
-				  data-prev="#uix-sc-hybridcontent-slider__controls-'.$testimonials_id.' .uix-sc-hybridcontent-slider__controls--prev">
-				   <div class="uix-sc-hybridcontent-slider__items">
-					   '.$content.'
-				   </div>
-				  <!-- /.uix-sc-hybridcontent-slider__items -->
+    $return_string = '
+    <div class="uix-sc-testimonials__wrapper">
+        <div class="uix-sc-testimonials" id="uix-testimonials-'.$testimonials_id.'">
+            <div class="uix-sc-testimonials__container">
+                <div data-uix-sc-hybridcontent-slider="1" role="slider" class="uix-sc-hybridcontent-slider"
+                    data-draggable="'.esc_attr($draggable).'"
+                    data-draggable-cursor="move"     
+                    data-dir="'.esc_attr($dir).'"
+                    data-auto="'.esc_attr($auto).'"
+                    data-loop="false"
+                    data-speed="'.esc_attr($speed).'"
+                    data-timing="'.esc_attr($timing).'" 
+                    data-pagination="#uix-sc-hybridcontent-slider__pagination-'.$testimonials_id.'" 
+                    data-next="#uix-sc-hybridcontent-slider__controls-'.$testimonials_id.' .uix-sc-hybridcontent-slider__controls--next" 
+                    data-prev="#uix-sc-hybridcontent-slider__controls-'.$testimonials_id.' .uix-sc-hybridcontent-slider__controls--prev">
+                    <div class="uix-sc-hybridcontent-slider__items">
+                        '.$content.'
+                    </div>
+                    <!-- /.uix-sc-hybridcontent-slider__items -->
+                </div>
+                <!-- /.uix-sc-hybridcontent-slider -->
 
-				</div>
-			   <!-- /.uix-sc-hybridcontent-slider -->
+                <div class="uix-sc-hybridcontent-slider__pagination" id="uix-sc-hybridcontent-slider__pagination-'.$testimonials_id.'" style="'.($paging == 'false' ? 'display:none' : '').'"></div>
+                <!-- /.uix-sc-hybridcontent-slider__pagination -->
 
-
-
-				<div class="uix-sc-hybridcontent-slider__pagination" id="uix-sc-hybridcontent-slider__pagination-'.$testimonials_id.'" style="'.($paging == 'false' ? 'display:none' : '').'"></div>
-				<!-- /.uix-sc-hybridcontent-slider__pagination -->
-
-
-				<div class="uix-sc-hybridcontent-slider__controls" id="uix-sc-hybridcontent-slider__controls-'.$testimonials_id.'" style="'.($arrows == 'false' ? 'display:none' : '').'">
-					<a data-normal="1" href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-					<a data-normal="1" href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-				</div>
-				<!-- /.uix-sc-hybridcontent-slider__controls -->    
-			   
-
-			</div><!-- .uix-sc-testimonials__container -->
-		</div><!-- /.uix-sc-testimonials -->
-	</div>
-   ';
+                <div class="uix-sc-hybridcontent-slider__controls" id="uix-sc-hybridcontent-slider__controls-'.$testimonials_id.'" style="'.($arrows == 'false' ? 'display:none' : '').'">
+                    <a data-normal="1" href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                    <a data-normal="1" href="javascript:void(0);" class="uix-sc-hybridcontent-slider__controls--next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+                <!-- /.uix-sc-hybridcontent-slider__controls -->    
+            </div><!-- .uix-sc-testimonials__container -->
+        </div><!-- /.uix-sc-testimonials -->
+    </div>
+    ';
    
 
    return UixShortcodes::do_callback( $return_string );
@@ -1446,22 +1410,22 @@ function uix_sc_fun_testimonials_item( $atts, $content = null ) {
 	 ), $atts ) );
 	 
 
-    $desc = str_replace( '[uix_testimonials_item_desc]', '<div class="uix-sc-testimonials__content">',
-               str_replace( '[/uix_testimonials_item_desc]', '</div>',
-           $content
-           ) ); 
-       
-   
-   $return_string = '
-	   <div class="uix-sc-hybridcontent-slider__item">
-           '.$desc.'
-		   <div class="uix-sc-testimonials__signature">
-		       '.( !empty( $avatar )  ? '<img class="uix-sc-testimonials--avatar" src="'.esc_url( $avatar ).'" alt="'.$name.'" />': '<span class="uix-sc-testimonials--no-avatar"></span>' ).'
-		       <strong '.( !empty( $avatar )  ? '': 'class="uix-sc-testimonials__pure-text"' ).'>'.$name.'</strong> - '.$position.'
-		   </div>	
-	   </div>	  
-   ';
-  
+     $desc = str_replace( '[uix_testimonials_item_desc]', '<div class="uix-sc-testimonials__content">',
+     str_replace( '[/uix_testimonials_item_desc]', '</div>',
+        $content
+        ) ); 
+
+
+    $return_string = '
+        <div class="uix-sc-hybridcontent-slider__item">
+        '.$desc.'
+        <div class="uix-sc-testimonials__signature">
+            '.( !empty( $avatar )  ? '<img class="uix-sc-testimonials--avatar" src="'.esc_url( $avatar ).'" alt="'.esc_attr($name).'" />': '<span class="uix-sc-testimonials--no-avatar"></span>' ).'
+            <strong '.( !empty( $avatar )  ? '': 'class="uix-sc-testimonials__pure-text"' ).'>'.esc_html($name).'</strong> - '.esc_html($position).'
+        </div>	
+        </div>	  
+        ';
+
   
 
    return UixShortcodes::do_callback( $return_string );
@@ -1522,8 +1486,8 @@ function uix_sc_fun_heading( $atts, $content = null ) {
 	 ), $atts ) );
 	
 	
-	$colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
-	$fillcss = ( !empty( $fillbg ) ) ? 'style="background: -webkit-linear-gradient(transparent, transparent), url('.$fillbg.') repeat;background: -o-linear-gradient(transparent, transparent);-webkit-background-clip: text;-webkit-text-fill-color: transparent;-moz-background-clip: text;-moz-text-fill-color: transparent;"' : '';
+	$colorclass = ( empty( $color ) ) ? '' : "color:".esc_attr($color).";";
+	$fillcss = ( !empty( $fillbg ) ) ? 'style="background: -webkit-linear-gradient(transparent, transparent), url('.esc_url($fillbg).') repeat;background: -o-linear-gradient(transparent, transparent);-webkit-background-clip: text;-webkit-text-fill-color: transparent;-moz-background-clip: text;-moz-text-fill-color: transparent;"' : '';
 	
 	
 	$transform = ( $uppercase == 'true' ) ? 'uppercase' : 'none';
@@ -1534,7 +1498,7 @@ function uix_sc_fun_heading( $atts, $content = null ) {
 	
 	
 	
-	$textcss = 'style="'.$colorclass.'font-size:'.$size.';text-transform:'.$transform.';letter-spacing:'.$spacing.';"';
+	$textcss = 'style="'.$colorclass.'font-size:'.esc_attr($size).';text-transform:'.$transform.';letter-spacing:'.esc_attr($spacing).';"';
 	
 	if ( $style == 'grand-fill-yellow' ) {
 	   $return_string = '
@@ -1573,7 +1537,7 @@ function uix_sc_fun_heading_line( $atts, $content = null ) {
 		
 	 ), $atts ) );
 	
-	$hr = ( $line == 'true' ) ? '<hr class="uix-sc-hr" style="width:'.$width.';border-width:'.$height.';">' : '';
+	$hr = ( $line == 'true' ) ? '<hr class="uix-sc-hr" style="width:'.esc_attr($width).';border-width:'.esc_attr($height).';">' : '';
 	
 	$return_string = $hr;
 	
@@ -1598,14 +1562,14 @@ function uix_sc_fun_subheading( $atts, $content = null ) {
 		
 	 ), $atts ) );
 	 
-	$colorclass = ( empty( $color ) ) ? '' : "color:{$color};";
+	$colorclass = ( empty( $color ) ) ? '' : "color:".esc_attr($color).";";
 	$transform = ( $uppercase == 'true' ) ? 'uppercase' : 'none';
 	$alignment = '';
 	if ( $align == 'center' ) $alignment = 'uix-sc-tc';
 	if ( $align == 'left' ) $alignment = 'uix-sc-tl';
 	if ( $align == 'right' ) $alignment = 'uix-sc-tr';
 	
-	$textcss = 'style="'.$colorclass.'font-size:'.$size.';filter:alpha(opacity='.$opacity.');-moz-opacity:'.($opacity/100).';opacity: '.($opacity/100).';letter-spacing:'.$spacing.';text-transform:'.$transform.';"';
+	$textcss = 'style="'.$colorclass.'font-size:'.esc_attr($size).';filter:alpha(opacity='.esc_attr($opacity).');-moz-opacity:'.(esc_attr($opacity)/100).';opacity: '.(esc_attr($opacity)/100).';letter-spacing:'.esc_attr($spacing).';text-transform:'.$transform.';"';
 	
    $return_string = '
 	 <div class="uix-sc-subheading '.$alignment.'" '.$textcss.'>
@@ -1638,7 +1602,7 @@ function uix_sc_fun_dividing_line( $atts, $content = null ) {
 	 ), $atts ) );
 	
 	
-	$textcss = 'style="width:'.$width.';filter:alpha(opacity='.$opacity.');-moz-opacity:'.($opacity/100).';opacity: '.($opacity/100).';';
+	$textcss = 'style="width:'.esc_attr($width).';filter:alpha(opacity='.esc_attr($opacity).');-moz-opacity:'.(esc_attr($opacity)/100).';opacity: '.(esc_attr($opacity)/100).';';
 									
 	if ( $style == 'solid' ) $return_string = '<div class="uix-sc-separator--base uix-sc-separator--solid" '.$textcss.''.( $color == 'light' ? 'border-color:#fff': '' ).'"></div>';
 	if ( $style == 'double' ) $return_string = '<div class="uix-sc-separator--base uix-sc-separator--double" '.$textcss.''.( $color == 'light' ? 'border-color:#fff': '' ).'"></div>';
@@ -1752,11 +1716,11 @@ function uix_sc_fun_authorcard( $atts, $content = null ) {
 
 
    $return_string = '
-   <div class="uix-sc-authorcard-wrapper" data-primary-color="'.$primarycolor.'">
-		<div class="uix-authorcard" style="border-top-color: '.$primarycolor.';">
+   <div class="uix-sc-authorcard-wrapper" data-primary-color="'.esc_attr($primarycolor).'">
+		<div class="uix-authorcard" style="border-top-color: '.esc_attr($primarycolor).';">
 			<div class="uix-authorcard__top">
 				<div class="uix-authorcard__text">
-					<h3 class="uix-authorcard__title">'.$name.'
+					<h3 class="uix-authorcard__title">'.esc_html($name).'
 					'.$social_out_1.'
 					'.$social_out_2.'
 					'.$social_out_3.'
@@ -1765,7 +1729,7 @@ function uix_sc_fun_authorcard( $atts, $content = null ) {
 				<div class="uix-authorcard__pic"><img src="'.esc_url( $avatarURL ).'" alt="'.esc_attr( $name ).'"></div>
 			</div>
 			<div class="uix-authorcard__middle">'.$content.'</div> 
-			<a class="uix-authorcard__final" href="'.$btnurl.'" rel="author">'.$btnlabel.'</a> 
+			<a class="uix-authorcard__final" href="'.esc_url($btnurl).'" rel="author">'.esc_html($btnlabel).'</a> 
 		</div>
 	</div>
    ';
@@ -1812,13 +1776,13 @@ function uix_sc_fun_imageslider_wrapper( $atts, $content = null ) {
 			<div class="uix-sc-imageslider__container">
 			
 				<div role="banner" class="uix-sc-slideshow__wrapper">
-				   <div data-uix-sc-slideshow="1" class="uix-sc-slideshow__outline uix-sc-slideshow uix-sc-slideshow--eff-'.$effect.'" 
-					  data-draggable="'.$draggable.'"
+				   <div data-uix-sc-slideshow="1" class="uix-sc-slideshow__outline uix-sc-slideshow uix-sc-slideshow--eff-'.esc_attr($effect).'" 
+					  data-draggable="'.esc_attr($draggable).'"
 					  data-draggable-cursor="move"	   
-					  data-auto="'.$auto.'"
+					  data-auto="'.esc_attr($auto).'"
 					  data-loop="true"
-					  data-speed="'.$speed.'"
-					  data-timing="'.$timing.'" 
+					  data-speed="'.esc_attr($speed).'"
+					  data-timing="'.esc_attr($timing).'" 
 					  data-count-total="false"
 					  data-count-now="false"
 					  data-controls-pagination=".my-a-slider-pagination-'.$slider_id.'" 
@@ -1946,11 +1910,11 @@ function uix_sc_fun_timeline_item( $atts, $content = null ) {
    $return_string = ' 
 	<div'.( $highlight == 'true' ? ' class="uix-sc-timeline__complete"' : '' ).'>
 		<div class="uix-sc-timestamp">
-		<span class="uix-sc-timeline__date">'.$date.'<span>
+		<span class="uix-sc-timeline__date">'.esc_html($date).'<span>
 		</div>
 		<div class="uix-sc-timeline__status" '.( $highlight == 'true' ? 'style="border-color:{color};"' : '' ).'>
 		<span class="uix-sc-timeline__status-dot" '.( $highlight == 'true' ? 'style="background-color:{color};"' : '' ).'></span>
-		<span class="uix-sc-timeline__status-title" '.( $highlight == 'true' ? 'style="color:{color};"' : '' ).'>'.$status.'</span>
+		<span class="uix-sc-timeline__status-title" '.( $highlight == 'true' ? 'style="color:{color};"' : '' ).'>'.esc_html($status).'</span>
 		</div>
 	</div>															                                                          
    ';
