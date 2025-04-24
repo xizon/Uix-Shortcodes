@@ -596,7 +596,7 @@ The currently available default elements:
 - WP 6.3.*
 - WP 6.4.*
 - WP 6.7.*
-
+- WP 6.8.*
 
 ### Frequently Asked Questions
 
